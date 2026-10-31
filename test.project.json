@@ -1,0 +1,34 @@
+{
+  "name": "BlacksmithTest",
+  "tree": {
+    "$className": "DataModel",
+    "ReplicatedStorage": {
+      "$className": "ReplicatedStorage",
+      "Blacksmith": { "$path": "src/shared" },
+      "BlacksmithTests": {
+        "$className": "Folder",
+        "lib": { "$path": "tests/lib" },
+        "fixtures": { "$path": "tests/fixtures" },
+        "golden": { "$path": "tests/golden" }
+      }
+    },
+    "ServerScriptService": {
+      "$className": "ServerScriptService",
+      "BlacksmithServer": { "$path": "src/server" },
+      "BlacksmithTestServer": { "$path": "tests/studio/bridge/server" }
+    },
+    "StarterPlayer": {
+      "$className": "StarterPlayer",
+      "$properties": { "EnableMouseLockOption": false },
+      "StarterPlayerScripts": {
+        "$className": "StarterPlayerScripts",
+        "BlacksmithClient": { "$path": "src/client" },
+        "BlacksmithTestClient": { "$path": "tests/studio/bridge/client" }
+      }
+    },
+    "Workspace": {
+      "$className": "Workspace",
+      "$properties": { "StreamingEnabled": false }
+    }
+  }
+}

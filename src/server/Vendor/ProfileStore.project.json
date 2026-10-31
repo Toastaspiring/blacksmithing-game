@@ -1,0 +1,4 @@
+{
+  "name": "ProfileStore",
+  "tree": { "$path": "../../../vendor/ProfileStore/ProfileStore.luau" }
+}

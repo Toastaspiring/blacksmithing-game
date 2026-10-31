@@ -1,0 +1,3 @@
+--!strict
+-- Studio test bridge, server side (SPEC §14.10, E-S8.6); mapped only by test.project.json. M0 stub: M7 builds the
+-- BindableFunction ServerStorage.BlacksmithTest.Bridge and its commands.

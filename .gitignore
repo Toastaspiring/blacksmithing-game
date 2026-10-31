@@ -1,0 +1,14 @@
+# Build outputs of `rojo build` and Studio lock files, at the repo root only: docs/spec keeps its evidence copies.
+/*.rbxl
+/*.rbxlx
+/*.rbxm
+/*.rbxmx
+/*.lock
+
+# Rewritten by scripts/verify on every run (SPEC §14.4).
+/sourcemap.json
+/test.sourcemap.json
+
+# Local tool configs (written by lune setup and the Claude app), not project files.
+/.vscode/
+/.claude/

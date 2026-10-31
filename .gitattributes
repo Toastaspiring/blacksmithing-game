@@ -1,0 +1,8 @@
+# LF everywhere so goldens, hashes and the purity scans see the same bytes on every checkout
+# (this machine has core.autocrlf=true).
+* text=auto eol=lf
+*.rbxm binary
+*.rbxl binary
+*.png binary
+*.jpg binary
+*.exe binary

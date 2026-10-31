@@ -1,6 +1,6 @@
 # Blacksmithing Game — Technical Specification (Phase 1 MVP)
 
-> Roblox · Rojo 7.7.0-rc.1 · Luau --!strict · ProfileStore · Spec v1.0 for designer review · 2026-10-31
+> Roblox · Rojo 7.7.0 · Luau --!strict · ProfileStore · Spec v1.0 for designer review · 2026-10-31
 
 ---
 
@@ -225,9 +225,9 @@ tree is self-contained: `test.project.json` (S8 §14) repeats these nodes and `$
 Place settings: `StreamingEnabled = false` (S7 has no streaming code), `EnableMouseLockOption = false` (S6).
 ```toml
 [tools]   # aftman.toml
-rojo = "rojo-rbx/rojo@7.7.0-rc.1"
+rojo = "rojo-rbx/rojo@7.7.0"         # = the Studio plugin; 7.7.0 serves MessagePack, rc.1 served JSON
 lune = "lune-org/lune@0.8.9"
-luau-lsp = "JohnnyMorganz/luau-lsp@1.67.0"   # >= 1.67.0: named --definitions, sourcemap-aware string requires
+luau-lsp = "JohnnyMorganz/luau-lsp@1.70.1"   # >= 1.67.0: named --definitions, sourcemap-aware string requires
 ```
 README commands: `aftman install`, `rojo serve`, `rojo build default.project.json -o Blacksmith.rbxlx`,
 `rojo sourcemap default.project.json --include-non-scripts -o sourcemap.json`, `lune run tests/run`,
@@ -3400,7 +3400,7 @@ Dump.canonical(v: any): string       -- sorted keys, %.17g, −0 → 0;  Golden.
 
 ### 14.4 Static analysis and meta rules
 
-`aftman.toml` pins lune 0.8.9, rojo 7.7.0-rc.1, luau-lsp ≥ 1.67.0; `globalTypes.None.d.luau` (pinned tag's
+`aftman.toml` pins lune 0.8.9, rojo 7.7.0, luau-lsp ≥ 1.67.0 (1.70.1); `globalTypes.None.d.luau` (pinned tag's
 `scripts/` folder) is committed; `.luaurc` is strict.
 
 ```

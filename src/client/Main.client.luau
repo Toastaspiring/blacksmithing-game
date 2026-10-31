@@ -1,0 +1,3 @@
+--!strict
+-- Client composition root (SPEC §1.3 L4, §1.5). M0 stub so the Rojo tree has its client entry point; M8 wires
+-- Net/Client, S6's controllers and S7's Smithy/*.

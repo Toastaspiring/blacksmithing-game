@@ -1,0 +1,3 @@
+--!strict
+-- Studio test bridge, client side (SPEC §14.10, E-S8.6); mapped only by test.project.json. M0 stub: M7 adds call,
+-- rawFire and awaitPush, M8 the UI commands.

@@ -1,0 +1,4 @@
+--!strict
+-- Server composition root (SPEC §1.3 L4, §1.5). M0 stub so the Rojo tree has its server entry point; M7 builds the
+-- boot sequence (Remotes.assertPresent → Validate.validateAll → WorldBuilder → PlotService → DataService → ... →
+-- Router.bind → PlayerAdded / PlayerRemoving / BindToClose).
