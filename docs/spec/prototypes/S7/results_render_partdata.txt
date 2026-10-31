@@ -1,0 +1,7 @@
+PASS arming sword bounds via PartData + Quat.toMatrix  (-0.55, 0.15, -0.15) .. (0.55, 4.30, 0.15) max err 0.0e+00
+PASS toMatrix(k*q) == toMatrix(q)  max diff 1.1e-16
+PASS orthonormal columns, det +1 (20,000 random q)  orth 1.1e-15 det 1.2e-15
+PASS size below MIN_DIM -> BadSize
+PASS 25 parts -> TooManyParts
+PASS no parts -> Empty
+0 failures

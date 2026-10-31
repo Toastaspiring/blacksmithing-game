@@ -1,0 +1,2 @@
+10 transform numbers per part: raw doubles avg 183.6 chars (max 193); quantized avg 70.4 chars
+=> part record ~285 B raw vs ~171 B quantized (keys/ids/punctuation ~101 B)

@@ -1,0 +1,43 @@
+{
+  "name": "BlacksmithingGame",
+  "tree": {
+    "$className": "DataModel",
+
+    "ReplicatedStorage": {
+      "$className": "ReplicatedStorage",
+      "Blacksmith": {
+        "$path": "src/shared",
+        "Remotes": {
+          "$className": "Folder",
+          "Profile": { "$className": "RemoteEvent" },
+          "Blueprint": { "$className": "RemoteEvent" },
+          "Craft": { "$className": "RemoteEvent" },
+          "Showcase": { "$className": "RemoteEvent" }
+        }
+      }
+    },
+
+    "StarterPlayer": {
+      "$className": "StarterPlayer",
+      "StarterPlayerScripts": {
+        "$className": "StarterPlayerScripts",
+        "BlacksmithClient": {
+          "$path": "src/client"
+        }
+      }
+    },
+
+    "ServerScriptService": {
+      "$className": "ServerScriptService",
+      "BlacksmithServer": {
+        "$path": "src/server",
+        "Vendor": {
+          "$className": "Folder",
+          "ProfileStore": {
+            "$path": "vendor/ProfileStore/ProfileStore.luau"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+
+### PrecisionTrace bots (N=150 per row; longsword unless noted)
+| bot / config                       |  mean |   p10 |   p50 |   p90 |  pass  | flagged|
+|---|---|---|---|---|---|---|
+| perfect Iron/Normal                | 1.000 | 1.000 | 1.000 | 1.000 | 100.0% | 100.0% | A 1.00 P 1.00 C 1.00 PT_TooPrecise 100.0%, PT_TooSmooth 100.0%
+| perfectNoisy Iron/Normal           | 0.983 | 0.981 | 0.984 | 0.985 | 100.0% |   0.0% | A 0.98 P 1.00 C 1.00 
+| sparse200 Iron/Normal              | 0.996 | 0.995 | 0.995 | 1.000 | 100.0% | 100.0% | A 1.00 P 1.00 C 1.00 PT_TooPrecise 100.0%
+| elite Iron/Normal                  | 0.956 | 0.943 | 0.956 | 0.967 | 100.0% |   0.0% | A 0.95 P 1.00 C 0.99 
+| good Iron/Normal                   | 0.869 | 0.831 | 0.871 | 0.903 | 100.0% |   0.0% | A 0.84 P 0.99 C 0.98 
+| poor Iron/Normal                   | 0.603 | 0.485 | 0.611 | 0.712 |  86.7% |   0.0% | A 0.61 P 0.81 C 0.90 
+| perfect Iron/Hard                  | 1.000 | 1.000 | 1.000 | 1.000 | 100.0% | 100.0% | A 1.00 P 1.00 C 1.00 PT_TooPrecise 100.0%, PT_TooSmooth 100.0%
+| perfectNoisy Iron/Hard             | 0.977 | 0.973 | 0.977 | 0.980 | 100.0% |   0.0% | A 0.97 P 1.00 C 1.00 
+| sparse200 Iron/Hard                | 0.997 | 0.995 | 0.999 | 0.999 | 100.0% | 100.0% | A 1.00 P 1.00 C 1.00 PT_TooPrecise 100.0%
+| elite Iron/Hard                    | 0.939 | 0.922 | 0.942 | 0.954 | 100.0% |   0.0% | A 0.93 P 1.00 C 0.99 
+| good Iron/Hard                     | 0.824 | 0.783 | 0.828 | 0.872 | 100.0% |   0.0% | A 0.79 P 0.97 C 0.98 
+| poor Iron/Hard                     | 0.483 | 0.355 | 0.478 | 0.606 |  42.7% |   0.0% | A 0.53 P 0.67 C 0.84 
+| perfect Steel/Hard                 | 1.000 | 1.000 | 1.000 | 1.000 | 100.0% | 100.0% | A 1.00 P 1.00 C 1.00 PT_TooPrecise 100.0%, PT_TooSmooth 100.0%
+| perfectNoisy Steel/Hard            | 0.972 | 0.968 | 0.972 | 0.975 | 100.0% |   0.0% | A 0.96 P 1.00 C 1.00 
+| sparse200 Steel/Hard               | 0.997 | 0.994 | 0.999 | 0.999 | 100.0% | 100.0% | A 1.00 P 1.00 C 1.00 PT_TooPrecise 100.0%
+| elite Steel/Hard                   | 0.929 | 0.907 | 0.930 | 0.949 | 100.0% |   0.0% | A 0.91 P 1.00 C 0.99 
+| good Steel/Hard                    | 0.801 | 0.749 | 0.807 | 0.852 | 100.0% |   0.0% | A 0.76 P 0.97 C 0.98 
+| poor Steel/Hard                    | 0.441 | 0.313 | 0.438 | 0.557 |  26.7% |   0.0% | A 0.51 P 0.64 C 0.80 
+| elite flamberge complex Steel/Hard | 0.880 | 0.858 | 0.880 | 0.904 | 100.0% |   0.0% | A 0.84 P 1.00 C 0.99 
+| good flamberge complex Steel/Hard  | 0.671 | 0.597 | 0.675 | 0.738 | 100.0% |   0.0% | A 0.65 P 0.92 C 0.92 
+| poor flamberge complex Steel/Hard  | 0.277 | 0.197 | 0.274 | 0.358 |   0.0% |   0.0% | A 0.40 P 0.53 C 0.62 

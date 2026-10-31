@@ -1,0 +1,139 @@
+<roblox version="4">
+  <Item class="ReplicatedStorage" referent="0">
+    <Properties>
+      <string name="Name">ReplicatedStorage</string>
+    </Properties>
+    <Item class="Folder" referent="1">
+      <Properties>
+        <string name="Name">Blacksmith</string>
+      </Properties>
+      <Item class="Folder" referent="2">
+        <Properties>
+          <string name="Name">Definitions</string>
+        </Properties>
+        <Item class="ModuleScript" referent="3">
+          <Properties>
+            <string name="Name">Protocol</string>
+            <string name="Source"><![CDATA[--!strict
+return {}
+]]></string>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="Folder" referent="4">
+        <Properties>
+          <string name="Name">Net</string>
+        </Properties>
+        <Item class="ModuleScript" referent="5">
+          <Properties>
+            <string name="Name">Protocol</string>
+            <string name="Source"><![CDATA[--!strict
+return {}
+]]></string>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="Folder" referent="6">
+        <Properties>
+          <string name="Name">Remotes</string>
+        </Properties>
+        <Item class="RemoteEvent" referent="7">
+          <Properties>
+            <string name="Name">Blueprint</string>
+          </Properties>
+        </Item>
+        <Item class="RemoteEvent" referent="8">
+          <Properties>
+            <string name="Name">Craft</string>
+          </Properties>
+        </Item>
+        <Item class="RemoteEvent" referent="9">
+          <Properties>
+            <string name="Name">Profile</string>
+          </Properties>
+        </Item>
+        <Item class="RemoteEvent" referent="10">
+          <Properties>
+            <string name="Name">Showcase</string>
+          </Properties>
+        </Item>
+      </Item>
+    </Item>
+  </Item>
+  <Item class="ServerScriptService" referent="11">
+    <Properties>
+      <string name="Name">ServerScriptService</string>
+    </Properties>
+    <Item class="Folder" referent="12">
+      <Properties>
+        <string name="Name">BlacksmithServer</string>
+      </Properties>
+      <Item class="Folder" referent="13">
+        <Properties>
+          <string name="Name">Craft</string>
+        </Properties>
+        <Item class="ModuleScript" referent="14">
+          <Properties>
+            <string name="Name">SessionMachine</string>
+            <string name="Source"><![CDATA[--!strict
+return {}
+]]></string>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="ModuleScript" referent="15">
+        <Properties>
+          <string name="Name">DataService</string>
+          <string name="Source"><![CDATA[--!strict
+return {}
+]]></string>
+        </Properties>
+      </Item>
+      <Item class="Script" referent="16">
+        <Properties>
+          <string name="Name">Main</string>
+          <token name="RunContext">0</token>
+          <string name="Source"><![CDATA[--!strict
+print("server")
+]]></string>
+        </Properties>
+      </Item>
+      <Item class="Folder" referent="17">
+        <Properties>
+          <string name="Name">Vendor</string>
+        </Properties>
+        <Item class="ModuleScript" referent="18">
+          <Properties>
+            <string name="Name">ProfileStore</string>
+            <string name="Source"><![CDATA[-- stub of vendored ProfileStore
+return {}
+]]></string>
+          </Properties>
+        </Item>
+      </Item>
+    </Item>
+  </Item>
+  <Item class="StarterPlayer" referent="19">
+    <Properties>
+      <string name="Name">StarterPlayer</string>
+    </Properties>
+    <Item class="StarterPlayerScripts" referent="20">
+      <Properties>
+        <string name="Name">StarterPlayerScripts</string>
+      </Properties>
+      <Item class="Folder" referent="21">
+        <Properties>
+          <string name="Name">BlacksmithClient</string>
+        </Properties>
+        <Item class="LocalScript" referent="22">
+          <Properties>
+            <string name="Name">Main</string>
+            <string name="Source"><![CDATA[--!strict
+print("client")
+]]></string>
+          </Properties>
+        </Item>
+      </Item>
+    </Item>
+  </Item>
+</roblox>

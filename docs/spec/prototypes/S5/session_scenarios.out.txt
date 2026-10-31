@@ -1,0 +1,3 @@
+compliant worst-case session = 450.5 s (SESSION_MAX 600 s)
+nominal session (4 s result card, 200 ms RTT, D = 15/10.8/20 s) = 67.4 s
+session scenarios: 50 passed, 0 failed

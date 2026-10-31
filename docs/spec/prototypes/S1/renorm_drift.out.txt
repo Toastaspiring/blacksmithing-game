@@ -1,0 +1,1 @@
+unit quaternions: 200000; second q/|q| changes bits in 66468 (33.2%); still changing after 10 passes: 2062; max |n2-1| of inputs 5.55e-16 (threshold 1e-9)

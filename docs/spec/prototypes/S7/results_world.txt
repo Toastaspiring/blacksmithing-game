@@ -1,0 +1,73 @@
+==================== 1. ring layout ====================
+R= 70.0  adjacent-plot gap=  1.31  plaza radius (front-edge midpoint)= 50.0  back-corner radius= 92.20
+R= 76.0  adjacent-plot gap=  5.91  plaza radius (front-edge midpoint)= 56.0  back-corner radius= 98.06
+R= 80.0  adjacent-plot gap=  8.97  plaza radius (front-edge midpoint)= 60.0  back-corner radius=101.98
+R= 84.0  adjacent-plot gap= 12.03  plaza radius (front-edge midpoint)= 64.0  back-corner radius=105.91
+R= 86.0  adjacent-plot gap= 13.56  plaza radius (front-edge midpoint)= 66.0  back-corner radius=107.87
+R= 88.0  adjacent-plot gap= 15.09  plaza radius (front-edge midpoint)= 68.0  back-corner radius=109.84
+R= 92.0  adjacent-plot gap= 18.15  plaza radius (front-edge midpoint)= 72.0  back-corner radius=113.77
+chosen PLOT_RING_RADIUS = 86
+back-corner radius 107.87 -> boundary wall radius = ceil(+8) = 116, ground disc diameter = 240
+  plot 1 centre (0.00, 0.00, 86.00) yaw   0.0  look (-0.00, -0.00, -1.00)
+  plot 2 centre (60.81, 0.00, 60.81) yaw  45.0  look (-0.71, -0.00, -0.71)
+  plot 3 centre (86.00, 0.00, 0.00) yaw  90.0  look (-1.00, -0.00, -0.00)
+  plot 4 centre (60.81, 0.00, -60.81) yaw 135.0  look (-0.71, -0.00, 0.71)
+  plot 5 centre (0.00, 0.00, -86.00) yaw 180.0  look (-0.00, -0.00, 1.00)
+  plot 6 centre (-60.81, 0.00, -60.81) yaw 225.0  look (0.71, -0.00, 0.71)
+  plot 7 centre (-86.00, 0.00, -0.00) yaw 270.0  look (1.00, -0.00, 0.00)
+  plot 8 centre (-60.81, 0.00, 60.81) yaw 315.0  look (0.71, -0.00, -0.71)
+front-edge-midpoint to neighbour front-edge-midpoint: 50.5 studs (3.2 s at WalkSpeed 16)
+plaza centre to plot front edge: 66.0 studs (4.1 s)
+==================== 2. part budget ====================
+  Ground                   1
+  Floor                    2
+  Walls                    4
+  Frame                   10
+  Roof                     7
+  Chimney                  2
+  Sign                     3
+  Lanterns                 6
+  Decor                   14
+  Spawn                    1
+  Station:Furnace          6
+  Station:Anvil            7
+  Station:Grindstone       6
+  Station:DraftingTable    9
+  Displays                24
+  plot static total: 102 parts (CanCollide 57, CanQuery 57, decor/no-collide 45)
+==================== 3. bounds ====================
+  plot-local extents x[-20.00, 20.00] y[-1.00, 21.10] z[-20.00, 20.00]
+==================== 4. unintended overlaps between collidable parts ====================
+  unexpected overlaps (cross-component, 0.02 tolerance): 0
+==================== 5. stand points (character clearance 2 x 5.2 x 1.4) ====================
+  Furnace        stand (-9.00, 0.50, 6.50)  blocked by: none
+  Anvil          stand (0.00, 0.50, 5.50)  blocked by: none
+  Grindstone     stand (9.00, 0.50, 8.10)  blocked by: none
+  DraftingTable  stand (-11.50, 0.50, -0.00)  blocked by: none
+  HomeSpawn pad centre (0.00, 0.40, -4.00) size (4.00, 0.20, 4.00) top y 0.500 (floor top 0.500) collide false query false
+  Spawn          spawn (0.00, 0.50, -4.00) blocked by: none
+==================== 6. station camera framings ====================
+  Furnace        eye (-3.50, 5.70, 0.50) -> at (-9.00, 2.90, 9.50) fov 50 | eye clearance 5.20 (GalleryFloor) | blocked by: none
+                 NDC smith head (0.24, 0.40) chest (0.23, -0.02) work (0.02, -0.01) | smith occludes work point: false | eye-target dist 10.91
+  Anvil          eye (4.20, 5.90, 1.80) -> at (0.00, 3.40, 8.00) fov 45 | eye clearance 5.40 (GalleryFloor) | blocked by: none
+                 NDC smith head (0.35, 0.43) chest (0.32, -0.23) work (0.00, 0.03) | smith occludes work point: false | eye-target dist 7.89
+  Grindstone     eye (14.80, 5.90, 6.90) -> at (9.00, 3.40, 9.20) fov 50 | eye clearance 1.20 (RightWall) | blocked by: none
+                 NDC smith head (0.22, 0.54) chest (0.20, -0.02) work (0.01, -0.09) | smith occludes work point: false | eye-target dist 6.72
+  DraftingTable  eye (-10.30, 9.10, -0.00) -> at (-13.80, 3.60, 0.00) fov 40 | eye clearance 4.95 (TieBeam) | blocked by: none
+                 NDC smith head (-0.00, -0.78) chest (-0.00, -1.02) work (-0.00, -0.02) | smith occludes work point: false | eye-target dist 6.52
+==================== 7. prompts ====================
+  min prompt-to-prompt distance 5.00 (Stand1 / Stand2)
+  Anvil prompt (0.00, 3.80, 7.80), distance from stand (root height) 2.44
+  DraftingTable prompt (-13.10, 4.00, -0.00), distance from stand (root height) 1.89
+  visitor at z=-14 (outside front posts) -> stand prompt distance 3.91
+==================== 8. stand spacing ====================
+  centre-to-centre pitch: 5.0 5.0 7.0 5.0 5.0 ; gap between caps = pitch - 2.3
+  central aisle width between stands 3 and 4: 4.7
+  cradle height (plot y) = 2.05; item top for a 6-stud sword = 8.05 (front beam underside 12.5, sign bottom 9.5 at x in [-5,5])
+==================== 9. step transitions (camera path + walk path) ====================
+  Furnace -> Anvil : camera path 7.8 studs, blocked by none | walk 9.1 studs (0.57 s at 16 st/s), blocked by none
+  Anvil -> Grindstone : camera path 11.8 studs, blocked by none | walk 9.4 studs (0.59 s at 16 st/s), blocked by none
+==================== 10. plaza budget ====================
+  ground disc 1 + plaza disc 1 + lamps 32 + trees 24 + boundary 72 (36 x visible+collider, chord 20.22) = 130 parts
+  world static total = 102 x 8 + 130 = 946 parts
+  + displayed items worst case 1200 (incl. 48 hitboxes) + workpieces worst case 192 = 2338 parts

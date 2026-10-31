@@ -1,0 +1,9 @@
+{
+  "name": "BlacksmithProto",
+  "tree": {
+    "$className": "DataModel",
+    "ReplicatedStorage": { "$className": "ReplicatedStorage", "Blacksmith": { "$path": "src/shared" } },
+    "StarterPlayer": { "$className": "StarterPlayer", "StarterPlayerScripts": { "$className": "StarterPlayerScripts", "BlacksmithClient": { "$path": "src/client" } } },
+    "ServerScriptService": { "$className": "ServerScriptService", "BlacksmithServer": { "$path": "src/server" } }
+  }
+}

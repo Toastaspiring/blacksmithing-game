@@ -1,0 +1,50 @@
+== 1. single part: |V_voxel - V_exact| / V_exact over random rotation + sub-voxel offset
+   (k = |err| / (A*h): fit for a tolerance tol_V = k*A*h/V)
+  h=0.05   Block blade 0.16x2.6x0.06  mean   1.35%  max   4.85%  k_max=0.021
+  h=0.05   Block guard 1.0x0.18x0.24  mean   0.97%  max   6.54%  k_max=0.061
+  h=0.05   Ball d0.26                 mean   2.23%  max   8.66%  k_max=0.075
+  h=0.05   Cylinder L0.9 d0.13        mean   2.98%  max  11.96%  k_max=0.073
+  h=0.05   Wedge 0.85x0.4x0.16        mean   1.64%  max  13.14%
+  h=0.05   CornerWedge 0.3^3          mean   3.43%  max  15.28%
+  h=0.025  Block blade 0.16x2.6x0.06  mean   0.22%  max   0.97%  k_max=0.008
+  h=0.025  Block guard 1.0x0.18x0.24  mean   0.20%  max   2.24%  k_max=0.042
+  h=0.025  Ball d0.26                 mean   0.47%  max   2.20%  k_max=0.038
+  h=0.025  Cylinder L0.9 d0.13        mean   0.46%  max   2.95%  k_max=0.036
+  h=0.025  Wedge 0.85x0.4x0.16        mean   0.32%  max   3.06%
+  h=0.025  CornerWedge 0.3^3          mean   0.61%  max   2.95%
+  h=0.0125 Block blade 0.16x2.6x0.06  mean   0.04%  max   0.17%  k_max=0.003
+  h=0.0125 Block guard 1.0x0.18x0.24  mean   0.03%  max   0.10%  k_max=0.004
+  h=0.0125 Ball d0.26                 mean   0.14%  max   0.53%  k_max=0.018
+  h=0.0125 Cylinder L0.9 d0.13        mean   0.11%  max   0.42%  k_max=0.010
+  h=0.0125 Wedge 0.85x0.4x0.16        mean   0.04%  max   0.21%
+  h=0.0125 CornerWedge 0.3^3          mean   0.11%  max   0.43%
+
+== 2. fixture union volume / COM / reach jitter under 40 random sub-voxel translations
+  h=0.05   ArmingSword   V=0.10257 (exact-sum 0.10111) range 49.60%  COMy 0.2162 ±0.1318  reach-range 0.0634  voxelize 0.2 ms
+  h=0.05   MinimalSword  V=0.13920 (exact-sum 0.13740) range 17.24%  COMy 0.0514 ±0.1397  reach-range 0.0471  voxelize 0.2 ms
+  h=0.05   Rapier        V=0.03763 (exact-sum 0.03971) range 59.47%  COMy -0.1365 ±0.4934  reach-range 3.6930  voxelize 0.2 ms
+  h=0.05   Cleaver       V=0.39069 (exact-sum 0.41046) range 34.30%  COMy 0.9658 ±0.0941  reach-range 0.0637  voxelize 0.4 ms
+  h=0.025  ArmingSword   V=0.10120 (exact-sum 0.10111) range 23.10%  COMy 0.2170 ±0.0755  reach-range 0.0278  voxelize 1.2 ms
+  h=0.025  MinimalSword  V=0.13680 (exact-sum 0.13740) range  8.77%  COMy 0.0356 ±0.0678  reach-range 0.0246  voxelize 1.2 ms
+  h=0.025  Rapier        V=0.03789 (exact-sum 0.03971) range 31.55%  COMy -0.0813 ±0.2258  reach-range 0.1162  voxelize 0.9 ms
+  h=0.025  Cleaver       V=0.40302 (exact-sum 0.41046) range 16.49%  COMy 0.9802 ±0.0394  reach-range 0.0284  voxelize 2.7 ms
+  h=0.0125 ArmingSword   V=0.10050 (exact-sum 0.10111) range 11.23%  COMy 0.2180 ±0.0389  reach-range 0.0162  voxelize 10.5 ms
+  h=0.0125 MinimalSword  V=0.13710 (exact-sum 0.13740) range  4.38%  COMy 0.0395 ±0.0355  reach-range 0.0123  voxelize 10.9 ms
+  h=0.0125 Rapier        V=0.03930 (exact-sum 0.03971) range 14.45%  COMy -0.0198 ±0.1154  reach-range 0.0545  voxelize 8.2 ms
+  h=0.0125 Cleaver       V=0.40959 (exact-sum 0.41046) range  8.23%  COMy 0.9880 ±0.0232  reach-range 0.0158  voxelize 20.9 ms
+
+== 3. asymmetry: noise floor on symmetric fixtures, signal on asymmetric ones (h=0.025)
+  ArmingSword   max over 20 x-offsets: grid-centre mirror 0.3883   exact mirror about own plane 0.0000
+  MinimalSword  max over 20 x-offsets: grid-centre mirror 0.3878   exact mirror about own plane 0.0000
+  Rapier        max over 20 x-offsets: grid-centre mirror 0.6674   exact mirror about own plane 0.0104
+  Cleaver       max over 20 x-offsets: grid-centre mirror 0.4960   exact mirror about own plane 0.3572
+
+== 4. fixture reference geometry (fixture frame, h=0.0125, rho_Iron=1, rho_Steel=r)
+  ArmingSword   parts=5  sumV=0.10111 (Iron 0.07544, Steel 0.02566) unionV=0.09303  AABB x[-0.500,0.500] y[-1.160,2.860] z[-0.130,0.130]
+                bladeTopY=2.8599  COMy(r=0.9,1.0,1.1)=0.1313,0.1604,0.1883  COMx=0.0000  mass(r=0.9,1.0,1.1)=0.09105,0.09303,0.09501
+  MinimalSword  parts=4  sumV=0.13740 (Iron 0.13740, Steel 0.00000) unionV=0.13500  AABB x[-0.400,0.400] y[-1.300,2.600] z[-0.150,0.150]
+                bladeTopY=2.6000  COMy(r=0.9,1.0,1.1)=0.0189,0.0189,0.0189  COMx=0.0000  mass(r=0.9,1.0,1.1)=0.13500,0.13500,0.13500
+  Rapier        parts=7  sumV=0.03971 (Iron 0.00000, Steel 0.03971) unionV=0.03687  AABB x[-0.510,0.510] y[-1.180,3.780] z[-0.140,0.140]
+                bladeTopY=3.7800  COMy(r=0.9,1.0,1.1)=-0.1341,-0.1341,-0.1341  COMx=0.0001  mass(r=0.9,1.0,1.1)=0.03318,0.03687,0.04056
+  Cleaver       parts=5  sumV=0.41046 (Iron 0.41046, Steel 0.00000) unionV=0.39206  AABB x[-0.250,0.600] y[-1.100,2.750] z[-0.150,0.150]
+                bladeTopY=2.7500  COMy(r=0.9,1.0,1.1)=0.9619,0.9619,0.9619  COMx=0.1458  mass(r=0.9,1.0,1.1)=0.39206,0.39206,0.39206

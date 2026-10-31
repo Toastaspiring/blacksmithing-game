@@ -1,0 +1,69 @@
+## Resolved parameters (x = 0 | x = 1 for the step's design factors)
+HoldZone.durationMs: IN 15000|18000  IH 15000|18000  SN 15000|18000  SH 15000|18000
+HoldZone.rampMs: IN 3000  IH 3000  SN 3000  SH 3000
+HoldZone.zoneWidth: IN 0.09|0.081  IH 0.0864|0.07776  SN 0.0882|0.07938  SH 0.084672|0.0762048
+HoldZone.driftSpeed: IN 0.21|0.2625  IH 0.2205|0.275625  SN 0.2121|0.265125  SH 0.222705|0.278381
+HoldZone.heatDecay: IN 1  IH 1.05  SN 1  SH 1.05
+HoldZone.fullHeat: IN 2.4  IH 2.4  SN 2.4  SH 2.4
+HoldZone.strokeGain: IN 0.25  IH 0.25  SN 0.25  SH 0.25
+HoldZone.refillMs: IN 250  IH 250  SN 250  SH 250
+HoldZone.fireDecayMs: IN 600  IH 600  SN 600  SH 600
+HoldZone.targetMin: IN 0.4  IH 0.4  SN 0.432  SH 0.432
+HoldZone.targetMax: IN 0.8  IH 0.8  SN 0.832  SH 0.832
+HoldZone.segMinMs: IN 900  IH 810  SN 900  SH 810
+HoldZone.segMaxMs: IN 2200  IH 1980  SN 2200  SH 1980
+HoldZone.holdChance: IN 0.25  IH 0.2  SN 0.25  SH 0.2
+HoldZone.softFrac: IN 0.5  IH 0.5  SN 0.5  SH 0.5
+HoldZone.passThreshold: IN 0.5  IH 0.5  SN 0.5  SH 0.5
+TimingStrike.strikes: IN 12  IH 15  SN 12  SH 15
+TimingStrike.beatMs: IN 900|810  IH 765|689  SN 882|794  SH 750|675
+TimingStrike.windowMs: IN 110|94  IH 103|88  SN 108|92  SH 101|86
+TimingStrike.perfectFrac: IN 0.12  IH 0.096  SN 0.12  SH 0.096
+TimingStrike.edgePoints: IN 0.2  IH 0.1  SN 0.2  SH 0.1
+TimingStrike.tempoJitter: IN 0.08|0.12  IH 0.12|0.18  SN 0.08|0.12  SH 0.12|0.18
+TimingStrike.offsetMin: IN 0.4  IH 0.4  SN 0.4  SH 0.4
+TimingStrike.offsetMax: IN 0.75  IH 0.75  SN 0.75  SH 0.75
+TimingStrike.missPadMs: IN 90  IH 90  SN 90  SH 90
+TimingStrike.tailMs: IN 400  IH 400  SN 400  SH 400
+TimingStrike.passThreshold: IN 0.5  IH 0.5  SN 0.5  SH 0.5
+PrecisionTrace.halfWidth: IN 0.041|0.0369  IH 0.03895|0.035055  SN 0.04018|0.036162  SH 0.038171|0.0343539
+PrecisionTrace.coreFrac: IN 0.1  IH 0.1  SN 0.1  SH 0.1
+PrecisionTrace.pacerSpeed: IN 0.3|0.345  IH 0.315|0.36225  SN 0.303|0.34845  SH 0.31815|0.365872
+PrecisionTrace.paceTol: IN 0.12  IH 0.102  SN 0.12  SH 0.102
+PrecisionTrace.paceFall: IN 0.24  IH 0.204  SN 0.24  SH 0.204
+PrecisionTrace.perturbAmp: IN 0.02|0.03  IH 0.025|0.0375  SN 0.02|0.03  SH 0.025|0.0375
+PrecisionTrace.bumpDensity: IN 1  IH 1.3  SN 1  SH 1.3
+PrecisionTrace.bumpWidth: IN 0.25  IH 0.225  SN 0.25  SH 0.225
+PrecisionTrace.leadInMs: IN 600  IH 600  SN 600  SH 600
+PrecisionTrace.tailMs: IN 400  IH 400  SN 400  SH 400
+PrecisionTrace.wAccuracy: IN 0.7  IH 0.7  SN 0.7  SH 0.7
+PrecisionTrace.passThreshold: IN 0.5  IH 0.5  SN 0.5  SH 0.5
+## TimingStrike grade bands (ms) at x = 0 and x = 1
+Iron/Normal x=0: W 110 core 13.2 M 200 | Perfect (>=0.9) <= 25.3 | Good (>=0.6) <= 61.6 | Ok <= 110 | edge points 0.20
+Iron/Normal x=1: W 94 core 11.3 M 184 | Perfect (>=0.9) <= 21.6 | Good (>=0.6) <= 52.6 | Ok <= 94 | edge points 0.20
+Iron/Hard x=0: W 103 core 10.0 M 193 | Perfect (>=0.9) <= 20.3 | Good (>=0.6) <= 51.3 | Ok <= 103 | edge points 0.10
+Iron/Hard x=1: W 88 core 10.0 M 178 | Perfect (>=0.9) <= 18.7 | Good (>=0.6) <= 44.7 | Ok <= 88 | edge points 0.10
+Steel/Hard x=0: W 101 core 10.0 M 191 | Perfect (>=0.9) <= 20.1 | Good (>=0.6) <= 50.4 | Ok <= 101 | edge points 0.10
+Steel/Hard x=1: W 86 core 10.0 M 176 | Perfect (>=0.9) <= 18.4 | Good (>=0.6) <= 43.8 | Ok <= 86 | edge points 0.10
+## TimingStrike golden: seed 1, Iron/Normal, x = 0
+N 12 W 110 core 13.2 M 200 duration 10971 hash 0xE2D4F2AE; first targets 489 (P 847), 1479 (P 896), 2354 (P 871), 3031 (P 878)
+points: +0->1.0000, +6->1.0000, -15->0.9851, +35->0.8198, +79->0.4562, miss, -81->0.4397 | score 0.8084 meanErrMs 2.18
+## PrecisionTrace golden: arming sword (S2 F1 main chain), seed 1, Iron/Normal, x = 0
+sides 2 (A 3 pts, B 4 pts); source (10912,10158) (34996,10158) (38240,8389) (38142,7799) (34996,6226) (10912,6226)
+path 337 pts, L 3.3526, travel 11180 ms, duration 12180 ms, speed 0.2999, hash 0xF0B5CD03
+fallback: 402 pts, L 4.0083, travel 13380, hash 0x405C00EA
+tilted 30 deg grip gives the same source: true
+## HoldZone golden: seed 1, Iron/Normal, x = 0
+keys 10, first (0, 0.6323) (3000, 0.6323) (5060, 0.4000) (7180, 0.6523) (9060, 0.4000), hash 0x4E2677F2
+taps every 300 ms: score 0.0000 inZone 0.0000
+## HoldZone stroke model: steady temperature vs tap rate (Iron/Normal, full strokes every P ms)
+tap every 1000 ms (1.0/s): T mean 0.335 ripple 0.066
+tap every  600 ms (1.7/s): T mean 0.516 ripple 0.038
+tap every  400 ms (2.5/s): T mean 0.702 ripple 0.023
+tap every  300 ms (3.3/s): T mean 0.854 ripple 0.016
+tap every  250 ms (4.0/s): T mean 0.958 ripple 0.013
+tap every  200 ms (5.0/s): T mean 0.944 ripple 0.008
+tap every  150 ms (6.7/s): T mean 0.930 ripple 0.004
+tap every  100 ms (10.0/s): T mean 0.916 ripple 0.002
+max flow from cold: T(1 s) 0.490 T(2 s) 0.774 T(3 s) 0.885; one stroke from rest raises T by 0.000 peak
+single full stroke from rest: peak T 0.166 at 750 ms

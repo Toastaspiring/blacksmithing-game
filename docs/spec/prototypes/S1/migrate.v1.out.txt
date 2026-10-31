@@ -1,0 +1,3 @@
+migrate-then-reconcile: ok DataVersion 3 RarityAtForge Rare ItemsForged 7
+reconcile-then-migrate: ok DataVersion 3 RarityAtForge nil ItemsForged 0
+future profile: REFUSE: newer data (4) than server (3)

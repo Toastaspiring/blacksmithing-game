@@ -1,0 +1,1 @@
+{bytes=10, fnv1a32=123, version=1}

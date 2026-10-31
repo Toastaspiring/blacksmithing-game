@@ -1,0 +1,31 @@
+## TimingStrike FP (human bots) and TP (cheats)
+Normal Elite@240: flagged 0 / 100000
+Normal Elite@60: flagged 0 / 100000
+Normal Good@60: flagged 0 / 100000
+Normal Average@30: flagged 0 / 100000
+Normal cheats: exact flagged 100.0%; noisy sigma 4 ms flagged 0.0% (mean score 1.000)
+Hard Elite@240: flagged 0 / 100000
+Hard Elite@60: flagged 0 / 100000
+Hard Good@60: flagged 0 / 100000
+Hard Average@30: flagged 0 / 100000
+Hard cheats: exact flagged 100.0%; noisy sigma 4 ms flagged 0.0% (mean score 1.000)
+## PrecisionTrace FP margins (arming sword) and cheats
+Normal Elite@240/520px: flagged 0 / 1000; min mean deviation 0.0030 (threshold 0.0008, x3.8); min mean jerk 0.00381 (threshold 0.0002, x19)
+Normal Elite@60/520px: flagged 0 / 1000; min mean deviation 0.0030 (threshold 0.0008, x3.7); min mean jerk 0.00451 (threshold 0.0002, x23)
+Normal Elite@30/360px: flagged 0 / 1000; min mean deviation 0.0029 (threshold 0.0008, x3.6); min mean jerk 0.00421 (threshold 0.0002, x21)
+Normal Good@60/520px: flagged 0 / 1000; min mean deviation 0.0052 (threshold 0.0008, x6.4); min mean jerk 0.00519 (threshold 0.0002, x26)
+Normal cheats: perfect 1.000 flagged 100% | noisy 0.004 0.987 flagged 0% | sparse 200 ms 0.996 flagged 100%
+Hard Elite@240/520px: flagged 0 / 1000; min mean deviation 0.0030 (threshold 0.0008, x3.8); min mean jerk 0.00384 (threshold 0.0002, x19)
+Hard Elite@60/520px: flagged 0 / 1000; min mean deviation 0.0032 (threshold 0.0008, x4.0); min mean jerk 0.00458 (threshold 0.0002, x23)
+Hard Elite@30/360px: flagged 0 / 1000; min mean deviation 0.0031 (threshold 0.0008, x3.8); min mean jerk 0.00423 (threshold 0.0002, x21)
+Hard Good@60/520px: flagged 0 / 1000; min mean deviation 0.0054 (threshold 0.0008, x6.8); min mean jerk 0.00532 (threshold 0.0002, x27)
+Hard cheats: perfect 1.000 flagged 100% | noisy 0.004 0.985 flagged 0% | sparse 200 ms 0.998 flagged 100%
+## HoldZone: presses per 1 s window (human pump) and cheats
+Normal Elite pump: max presses in any 1 s window 8 (flag at 30); flagged 0 / 500
+Normal Good pump: max presses in any 1 s window 8 (flag at 30); flagged 0 / 500
+Normal Average pump: max presses in any 1 s window 7 (flag at 30); flagged 0 / 500
+Normal Perfect (MPC, exact state): mean 0.985, max presses/s 50, flagged 100 / 100; 30/s autoclicker flags: HZ_InhumanRate
+Hard Elite pump: max presses in any 1 s window 9 (flag at 30); flagged 0 / 500
+Hard Good pump: max presses in any 1 s window 8 (flag at 30); flagged 0 / 500
+Hard Average pump: max presses in any 1 s window 7 (flag at 30); flagged 0 / 500
+Hard Perfect (MPC, exact state): mean 0.974, max presses/s 50, flagged 100 / 100; 30/s autoclicker flags: HZ_InhumanRate

@@ -1,0 +1,29 @@
+== per part ==
+worst-case part 181 B | typical axis-aligned 113 B | typical rotated 126 B
+== blueprint record == overhead (no parts, worst analysis, MVP 3 steps) 625 B; per worst part 178.8 B
+  N= 4  worst   1336 B   typical   1039 B
+  N=12  worst   2763 B   typical   1993 B
+  N=24  worst   4911 B   typical   3425 B
+  N=32  worst   6343 B   typical   4371 B
+  N=48  worst   9207 B   typical   6289 B
+  N=64  worst  12071 B   typical   8194 B
+== item record == overhead (no parts) MVP-worst 1972 B (3 steps, 2 mats, 16 measures); Phase2+-worst 3408 B (8 steps, 7 mats)
+  N= 4  MVP-worst   2683 B   Phase2+-worst   4119 B   typical   2224 B
+  N=12  MVP-worst   4110 B   Phase2+-worst   5546 B   typical   3178 B
+  N=24  MVP-worst   6258 B   Phase2+-worst   7694 B   typical   4610 B
+  N=32  MVP-worst   7690 B   Phase2+-worst   9126 B   typical   5556 B
+  N=48  MVP-worst  10554 B   Phase2+-worst  11990 B   typical   7474 B
+  N=64  MVP-worst  13418 B   Phase2+-worst  14854 B   typical   9379 B
+one worst step record 209 B
+== profile ==
+empty template 748 B
+  bp=40 items=150 parts=48 (MVP item shape, placeholder MAX_PARTS_ABS=48):  1956068 B = 46.6% of 4 MiB
+  bp=40 items=150 parts=48 (Phase 2+ item shape):  2179508 B = 52.0% of 4 MiB
+  bp=30 items=120 parts=64 (if S2 picks 64):  2154928 B = 51.4% of 4 MiB
+  bp=50 items=200 parts=32 (if S2 picks 32):  2157688 B = 51.4% of 4 MiB
+  bp=60 items=250 parts=24 (if S2 picks 24):  2236108 B = 53.3% of 4 MiB
+  typical heavy player (15 bp, 80 items, 12 parts each): 287873 B = 6.9%
+== wire ==
+  worst BlueprintDraft @48 parts 8708 B; @64 parts 11572 B
+  BlueprintSummary 597 B; ItemSummary 249 B; join payload at caps (40+150) 61230 B
+== formula == W0=2790  bpOverhead=625  itemOverhead(MVP)=1972  itemOverhead(Phase2+)=3408  p=178.8

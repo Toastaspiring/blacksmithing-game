@@ -1,0 +1,1 @@
+props: 200000 random crafts, 21296 cap-grid cases, 0 failures

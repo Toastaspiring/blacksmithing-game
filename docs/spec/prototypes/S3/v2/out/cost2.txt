@@ -1,0 +1,2 @@
+HoldZone: generate max 0.036 ms; replay+checks 0.353 ms (1000 records, 18000 ms)
+TimingStrike: generate max 0.025 ms; replay+checks 0.043 ms (309 presses)

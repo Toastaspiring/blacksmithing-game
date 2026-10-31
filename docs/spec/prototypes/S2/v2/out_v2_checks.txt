@@ -1,0 +1,14 @@
+A16 F1 + parts inside blade and guard: cleaned[Enclosed#6,Enclosed#7] bit-identical D/factors: true | mass 0.79243 vs 0.79243
+A17 F2 + 3 exact blade copies: cleaned[Enclosed#5,Enclosed#6,Enclosed#7] bit-identical: false | mass 1.08134 vs 1.08134
+arming blade +0.15: Sm 0.0380 N | Ha 0.1255 N | Sh 0.1889 N
+arming blade +0.20: Sm 0.0388 N | Ha 0.1298 N | Sh 0.2056 H
+arming blade +0.22: Sm 0.0391 N | Ha 0.1334 N | Sh 0.2135 H
+arming blade +0.25: Sm 0.0396 N | Ha 0.1408 N | Sh 0.2314 H
+arming blade +0.30: Sm 0.0405 N | Ha 0.1497 N | Sh 0.2480 H
+F5 blade 0.055 thick: Sm 0.0259 N | Ha 0.1322 N | Sh 0.1116 N
+F5 blade 0.050 thick: Sm 0.0231 N | Ha 0.1658 N | Sh 0.1440 N
+F5 blade 0.047 thick: Sm 0.0214 N | Ha 0.1895 N | Sh 0.1675 N
+F5 blade 0.045 thick: Sm 0.0202 N | Ha 0.2070 H | Sh 0.1831 N
+F5 blade 0.043 thick: Sm 0.0191 N | Ha 0.2263 H | Sh 0.2000 H
+P5 comb: valid=true chains 11 [1.678,0.552,0.552,0.541,0.541,0.532,0.532,0.521,0.521,0.170,0.170] EdgeLength 1.678 (all chains 6.311) | Sm 0.0328 N | Ha 0.1902 N | Sh 0.1202 N
+F5 main chain: 5 points, first (0.080,1.380) last (-0.080,1.380)

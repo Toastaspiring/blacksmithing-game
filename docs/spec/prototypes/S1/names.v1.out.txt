@@ -1,0 +1,16 @@
+"Épée du Roi" -> "Épée du Roi" (11 cp, 13 B)
+"   Big    Sword  " -> "Big Sword" (9 cp, 9 B)
+"<b>Sword</b>" -> ERR BadChar
+"Zero​Width" -> ERR BadChar
+"Emoji 🗡" -> ERR BadChar
+"Tab	Name" -> ERR BadChar
+"épée" -> ERR BadChar
+"Œuvre d'Ætheling" -> "Œuvre d'Ætheling" (16 cp, 18 B)
+"Łódź Blade #2" -> "Łódź Blade #2" (13 cp, 16 B)
+"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" -> "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" (32 cp, 32 B)
+"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" -> ERR TooLong
+"éééééééééééééééééééééééééééééééé" -> "éééééééééééééééééééééééééééééééé" (32 cp, 64 B)
+"..." -> ERR NoAlnum
+"" -> ERR Empty
+"��" -> ERR InvalidUtf8
+"Multiplication × sign" -> ERR BadChar

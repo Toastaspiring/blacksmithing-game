@@ -1,0 +1,34 @@
+
+=== Performance (Lune best of 5; Studio estimate = x2.6) and longest uninterrupted slice ===
+| Fixture | parts | vol / surf / asym probes | overlap cells | raster cells | total ms Lune | x2.6 Studio | longest slice ms Lune | x2.6 |
+|---|---|---|---|---|---|---|---|---|
+| C01 Minimal | 4 | 1496 / 2906 | 0 | 1984 | 6.2 | 16.1 | 0.43 | 1.13 |
+| C02 Arming (Iron) | 6 | 1208 / 2274 | 1352 | 2086 | 5.5 | 14.2 | 0.22 | 0.56 |
+| C02 Arming (Steel) | 6 | 1208 / 2274 | 1352 | 2086 | 5.3 | 13.8 | 0.21 | 0.56 |
+| C04 Rapier (Steel blade) | 7 | 714 / 1808 | 2016 | 1472 | 5.3 | 13.7 | 0.22 | 0.57 |
+| C05 Cleaver | 6 | 4200 / 6136 | 2048 | 7906 | 15.9 | 41.3 | 0.30 | 0.79 |
+| C06 Sabre (Steel) | 10 | 1144 / 2408 | 1352 | 5511 | 7.2 | 18.7 | 0.26 | 0.68 |
+| C07 Dagger | 6 | 545 / 1248 | 1152 | 948 | 3.4 | 8.9 | 0.20 | 0.51 |
+| C08 Greatsword | 6 | 1811 / 3290 | 1800 | 2952 | 7.4 | 19.1 | 0.25 | 0.64 |
+| C09 Ornate (18 parts) | 18 | 1184 / 3480 | 5320 | 2016 | 14.6 | 38.1 | 0.30 | 0.77 |
+| C10 Gamey filler, symmetric | 24 | 1624 / 3926 | 0 | 1984 | 11.7 | 30.5 | 0.34 | 0.88 |
+| C11 Gamey filler, lopsided | 24 | 1624 / 3926 | 0 | 1984 | 11.8 | 30.7 | 0.21 | 0.54 |
+| C12 Arming, blade in 5 overlapping segments | 10 | 1264 / 2452 | 1352 | 2086 | 6.5 | 16.8 | 0.26 | 0.68 |
+| C13 Arming, guard = half + mirror (+CornerWedges) | 9 | 1224 / 2409 | 1352 | 2086 | 6.6 | 17.1 | 0.32 | 0.83 |
+| C14 Arming translated (0, +0.27, +0.05) | 6 | 1208 / 2274 | 1352 | 2086 | 5.4 | 14.1 | 0.29 | 0.75 |
+| C15 Arming rotated 4 deg about Z at the grip | 6 | 1208 / 2274 | 2379 | 3278 | 6.0 | 15.5 | 0.22 | 0.56 |
+| F1 ArmingSword | 5 | 1226 / 2052 | 676 | 1656 | 4.7 | 12.3 | 0.28 | 0.72 |
+| F2 MinimalSword | 4 | 1176 / 2244 | 0 | 1736 | 4.8 | 12.5 | 0.26 | 0.67 |
+| F3 Rapier | 7 | 610 / 1330 | 1282 | 1323 | 5.1 | 13.2 | 0.28 | 0.74 |
+| F4 Cleaver | 5 | 4038 / 4770 | 0 | 6164 | 11.1 | 29.0 | 0.27 | 0.70 |
+| F5 StarterSword | 5 | 1226 / 2052 | 676 | 1656 | 4.7 | 12.3 | 0.17 | 0.45 |
+| P1 24 large overlapping tilted blocks | 24 | 11488 / 1592 | 6940 | 2624 | 26.3 | 68.3 | 0.43 | 1.12 |
+    valid=true err[] cleaned[Enclosed#6,Enclosed#8,Enclosed#11,Enclosed#12,Enclosed#13,Enclosed#15,Enclosed#16,Enclosed#18,Enclosed#21,Enclosed#22,Enclosed#23] T: validate 0.5 surface 13.8 mass 4.0 edge 4.9 factors 3.2 ms
+| P2 24 rotated cylinders | 24 | 8064 / 4272 | 8600 | 5712 | 22.1 | 57.5 | 0.61 | 1.58 |
+    valid=true err[] cleaned[] T: validate 0.1 surface 8.4 mass 2.8 edge 5.8 factors 5.0 ms
+| P3 24 rotated wedges | 24 | 2928 / 3000 | 4608 | 3230 | 20.9 | 54.4 | 0.38 | 1.00 |
+    valid=true err[] cleaned[] T: validate 0.2 surface 9.0 mass 3.8 edge 2.7 factors 5.2 ms
+| P4 24 overlapping balls | 24 | 3264 / 2304 | 7824 | 6552 | 12.2 | 31.8 | 0.26 | 0.68 |
+    valid=true err[] cleaned[] T: validate 0.1 surface 2.7 mass 1.9 edge 3.9 factors 3.6 ms
+| P5 comb blade (sawtooth, 24 parts) | 15 | 1286 / 2292 | 676 | 3312 | 7.1 | 18.3 | 0.24 | 0.62 |
+    valid=true err[] cleaned[] T: validate 0.1 surface 2.3 mass 0.3 edge 1.5 factors 2.9 ms

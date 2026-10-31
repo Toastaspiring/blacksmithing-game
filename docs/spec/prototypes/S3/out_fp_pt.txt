@@ -1,0 +1,10 @@
+
+### false-positive estimate for the inhuman-input flags
+TimingStrike Normal elite: flagged 0 / 1000 (LowVariance 0, ExactHits 0)
+TimingStrike Normal elite240: flagged 0 / 1000 (LowVariance 0, ExactHits 0)
+TimingStrike Normal good: flagged 0 / 1000 (LowVariance 0, ExactHits 0)
+TimingStrike Hard elite: flagged 0 / 1000 (LowVariance 0, ExactHits 0)
+TimingStrike Hard elite240: flagged 0 / 1000 (LowVariance 0, ExactHits 0)
+TimingStrike Hard good: flagged 0 / 1000 (LowVariance 0, ExactHits 0)
+HoldZone elite human: max presses in any 1000 ms window over 300 runs = 2 (flag at >= 30)
+PrecisionTrace elite: flagged 0 / 600; min mean deviation 0.0032 (flag < 0.0008); min mean jerk 0.00469 (flag < 0.00020)

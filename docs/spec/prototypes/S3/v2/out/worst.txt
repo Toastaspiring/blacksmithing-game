@@ -1,0 +1,1 @@
+maxLen 8.550 srcL 8.536 amp 0.198 -> path pts 860 L 8.564 travel 28560 ms (clamped false) duration 29560 ms; samples 1479; generate max 2.53 ms; replay+checks max 2.59 ms

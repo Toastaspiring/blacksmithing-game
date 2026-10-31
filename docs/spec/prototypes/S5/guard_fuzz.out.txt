@@ -1,0 +1,12 @@
+fuzz: 50000 payloads x 6 validators: 0 exceptions, 3876 accepted, 0 errors with control chars, 2.12 us/check
+Submit, Trace cap 14,348 B               ok=true  nil                             0.79 us/check  nodes 5
+Submit, 14,349 B (oversize)              ok=false args.timeline: buffer too large    0.80 us/check  nodes 5
+Submit, timeline as a table              ok=false args.timeline: expected buffer    0.89 us/check  nodes 5
+Blueprint.Save, plain(4), 24 parts       ok=true  nil                           117.26 us/check  nodes 439
+SetSettings (64 uiFlags)                 ok=true  nil                            22.75 us/check  nodes 80
+SetSettings (300 uiFlags: over node cap) ok=false args.uiFlags.TipsHidden.S78: payload too large   80.46 us/check  nodes 316
+ReportDesync                             ok=true  nil                             0.73 us/check  nodes 4
+TeleportHome                             ok=true  nil                             0.08 us/check  nodes 1
+Showcase.Place                           ok=true  nil                             0.58 us/check  nodes 3
+5-deep draft rejected: true args.draft.a.b.c.d: too deep
+hostile key in a path is masked: args.draft.<key>.a.b.c: too deep

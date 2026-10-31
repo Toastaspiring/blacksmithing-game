@@ -1,0 +1,11 @@
+
+### determinism: live session vs server replay vs encode->decode->replay
+| family | runs | live/replay/codec mismatches | replay+checks cost (ms, mean) | timeline bytes (min / mean / max) | max allowed bytes |
+|---|---|---|---|---|---|
+| HoldZone | 60 | 0 | 0.18 | 81 / 87 / 96 | 3084 |
+| TimingStrike | 60 | 0 | 0.01 | 34 / 38 / 42 | 1036 |
+| PrecisionTrace | 60 | 0 | 3.18 | 4646 / 5047 / 5381 | 14348 |
+decode wrong duration -> Duration
+decode wrong family -> Family
+decode HoldZone not alternating -> NotAlternating
+decode past end -> PastEnd

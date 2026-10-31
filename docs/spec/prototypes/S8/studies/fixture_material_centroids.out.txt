@@ -1,0 +1,4 @@
+ArmingSword   Iron: V=0.075443 ybar=-0.21154 xbar=+0.00000   Steel: V=0.025662 ybar=+1.51558 xbar=+0.00000
+MinimalSword  Iron: V=0.137400 ybar=+0.04301 xbar=+0.00000
+Rapier        Steel: V=0.039707 ybar=-0.02225 xbar=+0.00011
+Cleaver       Iron: V=0.410460 ybar=+0.98824 xbar=+0.14855

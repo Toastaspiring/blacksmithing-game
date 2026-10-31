@@ -1,0 +1,32 @@
+
+=== Performance (Lune best of 5; Studio estimate = x2.6) and longest uninterrupted slice ===
+| Fixture | parts | vol / surf / asym probes | overlap cells | raster cells | total ms Lune | x2.6 Studio | longest slice ms Lune | x2.6 |
+|---|---|---|---|---|---|---|---|---|
+| C01 Minimal | 4 | 1496 / 2906 | 0 | 1984 | 6.7 | 17.4 | 1.13 | 2.93 |
+| C02 Arming (Iron) | 6 | 1208 / 2274 | 1352 | 2086 | 6.8 | 17.7 | 0.99 | 2.58 |
+| C02 Arming (Steel) | 6 | 1208 / 2274 | 1352 | 2086 | 6.7 | 17.4 | 1.04 | 2.71 |
+| C04 Rapier (Steel blade) | 7 | 714 / 1808 | 2016 | 1472 | 6.5 | 16.9 | 1.08 | 2.81 |
+| C05 Cleaver | 6 | 4200 / 6136 | 2048 | 7906 | 18.7 | 48.6 | 1.44 | 3.75 |
+| C06 Sabre (Steel) | 10 | 1144 / 2408 | 1352 | 5511 | 9.6 | 24.9 | 1.01 | 2.63 |
+| C07 Dagger | 6 | 545 / 1248 | 1152 | 948 | 4.2 | 11.0 | 1.09 | 2.84 |
+| C08 Greatsword | 6 | 1811 / 3290 | 1800 | 2952 | 8.3 | 21.6 | 1.15 | 2.99 |
+| C09 Ornate (18 parts) | 18 | 1184 / 3480 | 5320 | 2016 | 17.8 | 46.4 | 1.15 | 2.99 |
+| C10 Gamey filler, symmetric | 24 | 1624 / 3926 | 0 | 1984 | 16.8 | 43.8 | 1.19 | 3.09 |
+| C11 Gamey filler, lopsided | 24 | 1624 / 3926 | 0 | 1984 | 17.5 | 45.5 | 1.25 | 3.26 |
+| C12 Arming, blade in 5 overlapping segments | 10 | 1264 / 2452 | 1352 | 2086 | 8.9 | 23.1 | 1.18 | 3.06 |
+| C13 Arming, guard = half + mirror (+CornerWedges) | 9 | 1224 / 2409 | 1352 | 2086 | 7.8 | 20.2 | 0.95 | 2.47 |
+| C14 Arming translated (0, +0.27, +0.05) | 6 | 1208 / 2274 | 1352 | 2086 | 6.4 | 16.6 | 0.83 | 2.17 |
+| C15 Arming rotated 4 deg about Z at the grip | 6 | 1208 / 2274 | 2379 | 3278 | 7.3 | 19.1 | 1.13 | 2.94 |
+| F1 ArmingSword | 5 | 1226 / 2052 | 676 | 1656 | 5.6 | 14.5 | 0.99 | 2.58 |
+| F2 MinimalSword | 4 | 1176 / 2244 | 0 | 1736 | 6.1 | 15.9 | 1.24 | 3.22 |
+| F3 Rapier | 7 | 610 / 1330 | 1282 | 1323 | 4.9 | 12.7 | 1.02 | 2.66 |
+| F4 Cleaver | 5 | 4038 / 4770 | 0 | 6164 | 12.5 | 32.5 | 1.45 | 3.78 |
+| F5 StarterSword | 5 | 1226 / 2052 | 676 | 1656 | 5.7 | 14.8 | 1.24 | 3.23 |
+| P1 24 overlapping hitbox-sized blocks | 24 | 8832 / 6318 | 19200 | 9052 | 85.5 | 222.2 | 2.36 | 6.12 |
+    valid=false err[BladeNotAboveGrip,SlotMissing:Grip] cleaned[Enclosed#6,Enclosed#7,Enclosed#8,Enclosed#9,Enclosed#11,Enclosed#12,Enclosed#13,Enclosed#15,Enclosed#16,Enclosed#18,Enclosed#20,Enclosed#21,Enclosed#22,Enclosed#23] T: validate 0.2 surface 51.3 mass 7.3 edge 19.1 factors 7.6 ms
+| P2 24 rotated cylinders | 24 | 0 / 0 | 0 | 0 | 0.0 | 0.1 | 0.04 | 0.10 |
+    valid=false err[OutOfHitbox#1,OutOfHitbox#2,OutOfHitbox#3,OutOfHitbox#4,OutOfHitbox#5,OutOfHitbox#6,OutOfHitbox#7,OutOfHitbox#8,OutOfHitbox#9,OutOfHitbox#10,OutOfHitbox#11,OutOfHitbox#12,OutOfHitbox#13,OutOfHitbox#22,OutOfHitbox#23,OutOfHitbox#24] cleaned[] T: validate 0.0 surface 0.0 mass 0.0 edge 0.0 factors 0.0 ms
+| P3 24 rotated wedges, chained overlaps | 24 | 0 / 0 | 0 | 0 | 0.1 | 0.2 | 0.10 | 0.25 |
+    valid=false err[OutOfHitbox#2,OutOfHitbox#3,OutOfHitbox#4,OutOfHitbox#5,OutOfHitbox#6,OutOfHitbox#7,OutOfHitbox#9,OutOfHitbox#10,OutOfHitbox#11,OutOfHitbox#12,OutOfHitbox#13,OutOfHitbox#14,OutOfHitbox#19,OutOfHitbox#20,OutOfHitbox#21,OutOfHitbox#22] cleaned[] T: validate 0.0 surface 0.0 mass 0.0 edge 0.0 factors 0.0 ms
+| P4 24 overlapping balls | 24 | 3264 / 3600 | 13790 | 6552 | 21.7 | 56.4 | 1.36 | 3.52 |
+    valid=false err[BladeNotAboveGrip] cleaned[] T: validate 0.1 surface 4.0 mass 3.0 edge 5.1 factors 9.4 ms

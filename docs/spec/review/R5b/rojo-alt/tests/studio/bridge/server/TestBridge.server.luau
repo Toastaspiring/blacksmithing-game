@@ -1,0 +1,2 @@
+--!strict
+print('bridge server')

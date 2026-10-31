@@ -1,0 +1,41 @@
+# S3 final bot table: 60 runs per cell; mean sd [p10 p50 p90] pass% flagged%
+HoldZone Iron/Normal | Elite 0.870 0.067 [0.80 0.87 0.96] 100.0% 1.67% | Good 0.813 0.067 [0.72 0.82 0.89] 100.0% 0.00% | Average 0.617 0.083 [0.51 0.61 0.73]  91.7% 0.00% | Poor 0.500 0.085 [0.39 0.51 0.60]  56.7% 0.00%
+HoldZone Steel/Normal | Elite 0.889 0.050 [0.83 0.89 0.95] 100.0% 0.00% | Good 0.815 0.059 [0.74 0.83 0.88] 100.0% 0.00% | Average 0.620 0.079 [0.53 0.62 0.72]  91.7% 0.00% | Poor 0.475 0.082 [0.38 0.47 0.56]  41.7% 0.00%
+HoldZone Iron/Hard | Elite 0.832 0.079 [0.74 0.85 0.92] 100.0% 0.00% | Good 0.729 0.072 [0.65 0.72 0.84] 100.0% 0.00% | Average 0.542 0.063 [0.46 0.55 0.62]  78.3% 0.00% | Poor 0.434 0.071 [0.36 0.43 0.52]  20.0% 0.00%
+HoldZone Steel/Hard | Elite 0.831 0.063 [0.75 0.84 0.92] 100.0% 0.00% | Good 0.725 0.066 [0.64 0.74 0.80] 100.0% 0.00% | Average 0.539 0.074 [0.43 0.55 0.62]  68.3% 0.00% | Poor 0.414 0.077 [0.32 0.41 0.50]  10.0% 0.00%
+TimingStrike Iron/Normal | Elite 0.861 0.060 [0.78 0.86 0.92] 100.0% 0.00% | Good 0.789 0.093 [0.67 0.81 0.89]  98.3% 0.00% | Average 0.647 0.112 [0.53 0.66 0.78]  91.7% 0.00% | Poor 0.404 0.097 [0.28 0.41 0.53]  20.0% 0.00%
+TimingStrike Steel/Normal | Elite 0.854 0.045 [0.79 0.86 0.91] 100.0% 0.00% | Good 0.782 0.082 [0.66 0.80 0.87] 100.0% 0.00% | Average 0.633 0.124 [0.49 0.65 0.76]  86.7% 0.00% | Poor 0.371 0.099 [0.24 0.39 0.52]  15.0% 0.00%
+TimingStrike Iron/Hard | Elite 0.797 0.058 [0.71 0.80 0.87] 100.0% 0.00% | Good 0.708 0.091 [0.59 0.71 0.82]  98.3% 0.00% | Average 0.547 0.092 [0.42 0.56 0.64]  73.3% 0.00% | Poor 0.317 0.090 [0.20 0.33 0.42]   0.0% 0.00%
+TimingStrike Steel/Hard | Elite 0.804 0.060 [0.73 0.81 0.87] 100.0% 0.00% | Good 0.718 0.090 [0.61 0.72 0.83]  96.7% 0.00% | Average 0.557 0.106 [0.42 0.56 0.68]  70.0% 0.00% | Poor 0.298 0.093 [0.20 0.30 0.41]   0.0% 0.00%
+PrecisionTrace Iron/Normal | Elite 0.959 0.011 [0.95 0.96 0.97] 100.0% 0.00% | Good 0.874 0.025 [0.85 0.87 0.90] 100.0% 0.00% | Average 0.639 0.080 [0.55 0.64 0.75]  95.0% 0.00% | Poor 0.428 0.089 [0.34 0.42 0.54]  21.7% 0.00%
+PrecisionTrace Steel/Normal | Elite 0.955 0.010 [0.94 0.96 0.97] 100.0% 0.00% | Good 0.867 0.025 [0.84 0.87 0.90] 100.0% 0.00% | Average 0.614 0.080 [0.50 0.61 0.71]  93.3% 0.00% | Poor 0.387 0.100 [0.24 0.38 0.50]  13.3% 0.00%
+PrecisionTrace Iron/Hard | Elite 0.951 0.014 [0.93 0.95 0.97] 100.0% 0.00% | Good 0.849 0.029 [0.81 0.85 0.88] 100.0% 0.00% | Average 0.556 0.099 [0.43 0.58 0.66]  71.7% 0.00% | Poor 0.341 0.107 [0.21 0.33 0.46]   5.0% 0.00%
+PrecisionTrace Steel/Hard | Elite 0.947 0.014 [0.93 0.95 0.97] 100.0% 0.00% | Good 0.850 0.032 [0.81 0.86 0.89] 100.0% 0.00% | Average 0.567 0.090 [0.46 0.58 0.67]  71.7% 0.00% | Poor 0.320 0.097 [0.21 0.32 0.45]   5.0% 0.00%
+(main cells 7.9 s)
+# Perfect / Idle
+HoldZone Iron/Normal | Perfect@60 0.9857 min 0.9437 flagged 100% | Idle 0.0000
+HoldZone Steel/Normal | Perfect@60 0.9900 min 0.9348 flagged 100% | Idle 0.0000
+HoldZone Iron/Hard | Perfect@60 0.9642 min 0.8954 flagged 100% | Idle 0.0000
+HoldZone Steel/Hard | Perfect@60 0.9687 min 0.9070 flagged 100% | Idle 0.0000
+TimingStrike Iron/Normal | Perfect@60 1.0000 min 1.0000 flagged 0% | Perfect@30 0.9968 min 0.9829 flagged 0% | Idle 0.0000
+TimingStrike Steel/Normal | Perfect@60 1.0000 min 1.0000 flagged 0% | Perfect@30 0.9959 min 0.9886 flagged 0% | Idle 0.0000
+TimingStrike Iron/Hard | Perfect@60 1.0000 min 1.0000 flagged 0% | Perfect@30 0.9869 min 0.9676 flagged 0% | Idle 0.0000
+TimingStrike Steel/Hard | Perfect@60 1.0000 min 1.0000 flagged 0% | Perfect@30 0.9861 min 0.9724 flagged 0% | Idle 0.0000
+PrecisionTrace Iron/Normal | Perfect@60 1.0000 min 1.0000 flagged 100% | Idle 0.0000
+PrecisionTrace Steel/Normal | Perfect@60 1.0000 min 1.0000 flagged 100% | Idle 0.0000
+PrecisionTrace Iron/Hard | Perfect@60 1.0000 min 1.0000 flagged 100% | Idle 0.0000
+PrecisionTrace Steel/Hard | Perfect@60 1.0000 min 1.0000 flagged 100% | Idle 0.0000
+# Variants: Average@30fps, Good/Average bold design (all factors 1), TimingStrike calibrated offset
+HoldZone Iron/Normal | Avg@30 0.599  87.5% | Good x=1 0.720  99.5% | Average x=1 0.533  65.5% | Avg hold-only 0.000
+HoldZone Steel/Normal | Avg@30 0.572  84.5% | Good x=1 0.719 100.0% | Average x=1 0.516  54.5% | Avg hold-only 0.000
+HoldZone Iron/Hard | Avg@30 0.508  58.0% | Good x=1 0.674  99.5% | Average x=1 0.475  36.0% | Avg hold-only 0.000
+HoldZone Steel/Hard | Avg@30 0.485  41.0% | Good x=1 0.650  99.0% | Average x=1 0.459  26.0% | Avg hold-only 0.000
+TimingStrike Iron/Normal | Avg@30 0.584  78.5% | Good x=1 0.736  98.5% | Average x=1 0.580  72.5% | Elite cal(-28 ms) 0.968 100.0% | Good cal(-30 ms) 0.872 100.0% | Average cal(-35 ms) 0.717  99.0%
+TimingStrike Steel/Normal | Avg@30 0.570  77.0% | Good x=1 0.740  99.5% | Average x=1 0.580  76.0% | Elite cal(-28 ms) 0.964 100.0% | Good cal(-30 ms) 0.867 100.0% | Average cal(-35 ms) 0.709  97.5%
+TimingStrike Iron/Hard | Avg@30 0.497  49.0% | Good x=1 0.665  95.5% | Average x=1 0.491  44.0% | Elite cal(-28 ms) 0.939 100.0% | Good cal(-30 ms) 0.810 100.0% | Average cal(-35 ms) 0.616  88.5%
+TimingStrike Steel/Hard | Avg@30 0.481  45.5% | Good x=1 0.668  91.5% | Average x=1 0.494  51.0% | Elite cal(-28 ms) 0.941 100.0% | Good cal(-30 ms) 0.815 100.0% | Average cal(-35 ms) 0.619  85.0%
+PrecisionTrace Iron/Normal | Avg@30 0.635  93.0% | Good x=1 0.847 100.0% | Average x=1 0.556  74.0%
+PrecisionTrace Steel/Normal | Avg@30 0.629  92.5% | Good x=1 0.839 100.0% | Average x=1 0.536  66.5%
+PrecisionTrace Iron/Hard | Avg@30 0.551  71.5% | Good x=1 0.822 100.0% | Average x=1 0.496  48.5%
+PrecisionTrace Steel/Hard | Avg@30 0.543  67.5% | Good x=1 0.812 100.0% | Average x=1 0.476  41.0%
+(total 35.8 s)

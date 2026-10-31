@@ -1,0 +1,12 @@
+PASS place I1 on 1
+PASS move I1 1->4 (changed 4,1)
+PASS NoChange
+PASS BadSlot 0 / 7 / 1.5 / '1'
+PASS SlotLocked
+PASS NotOwned
+PASS BadItem number
+PASS swap I2 onto 4
+PASS clear 4
+PASS clear empty NoChange
+PASS sanitize -> removed D2,D3,D4,D6,D9,X
+0 failures

@@ -1,0 +1,12 @@
+Craft.Submit (C->S), S3 buffer sizes:
+  HoldZone typical 96 B                                ~    0.22 KB
+  TimingStrike typical 42 B                            ~    0.17 KB
+  PrecisionTrace typical 5,381 B                       ~    5.38 KB
+  PrecisionTrace cap 14,348 B (= MAX_TIMELINE_BYTES)   ~   14.14 KB
+Blueprint.Save (C->S), raw doubles:
+  12 parts                                             ~    2.19 KB
+  24 parts (MAX_PARTS)                                 ~    4.24 KB
+Other S->C:
+  Craft.StartStep reply, PrecisionTrace (256-point source) ~    4.90 KB
+  Craft.StartStep reply, TimingStrike                  ~    0.40 KB
+  Showcase.Inspect reply (S7 InspectView)              ~    0.91 KB

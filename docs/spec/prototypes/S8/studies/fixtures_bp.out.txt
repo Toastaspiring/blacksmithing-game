@@ -1,0 +1,25 @@
+F1 ArmingSword  parts=5  minDim=0.055  hitbox margin=0.040  AABB x[-0.500, 0.500] y[0.040, 4.060] z[-0.130, 0.130]
+  V_sum=0.10111 (Iron 0.075443, Steel 0.025662)  overlap=0.000346 #4∩#5=0.000346 -> V_union=0.10076
+  mass sum=0.7952 union=0.7925 kg | COM sum (0.0000, 1.4260, 0.0000) union (0.0000, 1.4174, 0.0000)
+  grip point (0.0000, 0.7500, 0.0000)  blade top y=4.0599 (axial 3.3099)  reach (Euclidean, from g)=3.3100
+  balanceFromHand sum=0.6760 union=0.6674 (COM_y - g_y)
+F2 MinimalSword  parts=4  minDim=0.080  hitbox margin=0.050  AABB x[-0.400, 0.400] y[0.050, 3.950] z[-0.150, 0.150]
+  V_sum=0.13740 (Iron 0.137400, Steel 0.000000)  overlap=0.000000  -> V_union=0.13740
+  mass sum=1.0813 union=1.0813 kg | COM sum (0.0000, 1.3930, 0.0000) union (0.0000, 1.3930, 0.0000)
+  grip point (0.0000, 0.8500, 0.0000)  blade top y=3.9500 (axial 3.1000)  reach (Euclidean, from g)=3.1019
+  balanceFromHand sum=0.5430 union=0.5430 (COM_y - g_y)
+F3 Rapier  parts=7  minDim=0.035  hitbox margin=0.020  AABB x[-0.510, 0.510] y[0.020, 4.980] z[-0.140, 0.140]
+  V_sum=0.03971 (Iron 0.000000, Steel 0.039707)  overlap=0.000638 #3∩#4=0.000319 #3∩#5=0.000319 -> V_union=0.03907
+  mass sum=0.3117 union=0.3067 kg | COM sum (0.0001, 1.1777, -0.0000) union (0.0001, 1.1767, -0.0000)
+  grip point (0.0000, 0.7500, 0.0000)  blade top y=4.9800 (axial 4.2300)  reach (Euclidean, from g)=4.2302
+  balanceFromHand sum=0.4277 union=0.4267 (COM_y - g_y)
+F4 Cleaver  parts=5  minDim=0.150  hitbox margin=0.100  AABB x[-0.250, 0.600] y[0.100, 3.950] z[-0.150, 0.150]
+  V_sum=0.41046 (Iron 0.410460, Steel 0.000000)  overlap=0.000000  -> V_union=0.41046
+  mass sum=3.2303 union=3.2303 kg | COM sum (0.1485, 2.1882, -0.0000) union (0.1485, 2.1882, -0.0000)
+  grip point (0.0000, 0.7500, 0.0000)  blade top y=3.9500 (axial 3.2000)  reach (Euclidean, from g)=3.2567
+  balanceFromHand sum=1.4382 union=1.4382 (COM_y - g_y)
+F5 StarterSword  parts=5  minDim=0.055  hitbox margin=0.040  AABB x[-0.500, 0.500] y[0.040, 4.060] z[-0.130, 0.130]
+  V_sum=0.10111 (Iron 0.101105, Steel 0.000000)  overlap=0.000346 #4∩#5=0.000346 -> V_union=0.10076
+  mass sum=0.7957 union=0.7930 kg | COM sum (0.0000, 1.4268, 0.0000) union (0.0000, 1.4182, 0.0000)
+  grip point (0.0000, 0.7500, 0.0000)  blade top y=4.0599 (axial 3.3099)  reach (Euclidean, from g)=3.3100
+  balanceFromHand sum=0.6768 union=0.6682 (COM_y - g_y)

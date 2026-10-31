@@ -1,0 +1,30 @@
+feasible threshold triples: 424
+feasible ranges: Uncommon [0.39, 0.57]  Rare [0.70, 0.75]  Epic [0.91, 0.94]
+max-min-margin triple: Uncommon 0.39, Rare 0.71, Epic 0.92 (min margin 0.019)
+target check:
+  avg N iron: C+U >= 90%       margin +0.024 OK
+  avg N iron: U >= 55%         margin +0.336 OK
+  avg N steel: R <= 25%        margin +0.087 OK
+  bad N iron: C >= 70%         margin +0.025 OK
+  good N iron: R >= 55%        margin +0.242 OK
+  exc N iron: R >= 90%         margin +0.100 OK
+  avg H iron: E <= 2%          margin +0.020 OK
+  avg H steel: E <= 2%         margin +0.019 OK
+  good H iron: E >= 5%         margin +0.036 OK
+  good H iron: E <= 45%        margin +0.364 OK
+  exc H iron: E >= 60%         margin +0.284 OK
+  exc 1xH iron: E <= 60%       margin +0.119 OK
+--- with the Defs thresholds
+target check:
+  avg N iron: C+U >= 90%       margin +0.041 OK
+  avg N iron: U >= 55%         margin +0.180 OK
+  avg N steel: R <= 25%        margin +0.115 OK
+  bad N iron: C >= 70%         margin +0.230 OK
+  good N iron: R >= 55%        margin +0.194 OK
+  exc N iron: R >= 90%         margin +0.100 OK
+  avg H iron: E <= 2%          margin +0.020 OK
+  avg H steel: E <= 2%         margin +0.019 OK
+  good H iron: E >= 5%         margin +0.036 OK
+  good H iron: E <= 45%        margin +0.364 OK
+  exc H iron: E >= 60%         margin +0.284 OK
+  exc 1xH iron: E <= 60%       margin +0.119 OK

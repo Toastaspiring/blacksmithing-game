@@ -1,0 +1,6 @@
+clean9      steps >= 1e-9: delta mismatches 0 / 16020, sum mismatches 0 / 176220  (steps with errors: )
+clean12rel  steps >= 1e-9: delta mismatches 0 / 16020, sum mismatches 7 / 176220  (steps with errors: 0.1 0.05 0.25 0.125 0.2 1 0.5)
+cleanAbs12  steps >= 1e-9: delta mismatches 0 / 16020, sum mismatches 0 / 176220  (steps with errors: )
+tiny step 1e-10, delta 3.7e-10 -> cleanAbs12 keeps the raw product 4.0000000000000001e-10 (clean9 gives 0)
+guard: step 5e-324, delta 0.5 -> 0.5 (treated as free, no inf)
+cleanAbs12 max absolute change over 200k values in [-16, 16]: 5.01e-13 stud

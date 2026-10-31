@@ -1,0 +1,9 @@
+{
+  "className": "Folder",
+  "children": [
+    { "name": "Profile", "className": "RemoteEvent" },
+    { "name": "Blueprint", "className": "RemoteEvent" },
+    { "name": "Craft", "className": "RemoteEvent" },
+    { "name": "Showcase", "className": "RemoteEvent" }
+  ]
+}

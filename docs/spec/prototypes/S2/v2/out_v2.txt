@@ -1,0 +1,207 @@
+=== Calibration swords C01-C15 ===
+C01 Minimal                                          valid=true err[] cleaned[] 6.7 ms
+    mass 1.4717 vol 0.18700 balance 0.108 reach 3.103 bladeLen 2.500 grip (0.000,1.000,0.000) axis (0.000,1.000) edge 5.060 (all 5.060, 1 chains) cut 0.30
+    All: PC 4/0.077 Th 0/0.000 As 0/0.000 SC 2.068/0.000 EL 5.06/0.081 Jo 3.574/0.027 MM 1/0.000 Vo 0.187/0.149
+    Blade: PC 1/0.000 Th 0/0.000 As 0/0.000 SC 1.854/0.000 EL 5.06/0.081 Jo 0/0.000 MM 1/0.000 Vo 0.06/0.000
+    Sm 0.1486 N | Ha 0.0000 N | Sh 0.0407 N
+C02 Arming (Iron)                                    valid=true err[] cleaned[] 7.0 ms
+    mass 0.8305 vol 0.10553 balance 0.180 reach 3.420 bladeLen 2.900 grip (0.000,0.880,0.000) axis (0.000,1.000) edge 5.644 (all 5.644, 1 chains) cut 0.77
+    All: PC 4.6/0.123 Th 0.2843/0.284 As 0/0.000 SC 2.26/0.000 EL 5.644/0.264 Jo 5.709/0.129 MM 1/0.000 Vo 0.1055/0.035
+    Blade: PC 1.6/0.000 Th 0.03922/0.039 As 0/0.000 SC 2.281/0.000 EL 5.644/0.264 Jo 1.563/0.000 MM 1/0.000 Vo 0.0324/0.000
+    Sm 0.0355 N | Ha 0.1137 N | Sh 0.1318 N
+C02 Arming (Steel)                                   valid=true err[] cleaned[] 6.7 ms
+    mass 0.8284 vol 0.10553 balance 0.180 reach 3.420 bladeLen 2.900 grip (0.000,0.880,0.000) axis (0.000,1.000) edge 5.644 (all 5.644, 1 chains) cut 0.77
+    All: PC 4.6/0.123 Th 0.2843/0.284 As 0/0.000 SC 2.26/0.000 EL 5.644/0.264 Jo 5.709/0.129 MM 1/0.000 Vo 0.1055/0.035
+    Blade: PC 1.6/0.000 Th 0.03922/0.039 As 0/0.000 SC 2.281/0.000 EL 5.644/0.264 Jo 1.563/0.000 MM 1/0.000 Vo 0.0324/0.000
+    Sm 0.0355 N | Ha 0.1137 N | Sh 0.1318 N
+C04 Rapier (Steel blade)                             valid=true err[] cleaned[] 8.3 ms
+    mass 0.4150 vol 0.05282 balance 0.239 reach 4.130 bladeLen 3.654 grip (0.000,0.770,0.000) axis (0.000,1.000) edge 7.107 (all 7.107, 1 chains) cut 1.00
+    All: PC 5.169/0.167 Th 0.5934/0.593 As 0/0.000 SC 2.499/0.332 EL 7.107/0.721 Jo 6.655/0.174 MM 2/0.333 Vo 0.05282/0.000
+    Blade: PC 1.169/0.000 Th 0.3222/0.322 As 0/0.000 SC 2.63/0.550 EL 7.107/0.721 Jo 0.4657/0.000 MM 1/0.000 Vo 0.01552/0.000
+    Sm 0.0000 N | Ha 0.3368 H | Sh 0.4703 H(Ex)
+C05 Cleaver                                          valid=true err[] cleaned[] 20.7 ms
+    mass 3.7185 vol 0.47249 balance 0.985 reach 3.278 bladeLen 2.670 grip (0.000,0.890,0.000) axis (0.000,1.000) edge 5.972 (all 5.972, 1 chains) cut 0.16
+    All: PC 6/0.231 Th 0/0.000 As 0.2726/0.454 SC 2.24/0.000 EL 5.972/0.366 Jo 8.709/0.272 MM 1/0.000 Vo 0.4725/0.545
+    Blade: PC 3/0.000 Th 0/0.000 As 0.327/0.545 SC 2.048/0.000 EL 5.972/0.366 Jo 3.606/0.029 MM 1/0.000 Vo 0.3974/0.441
+    Sm 0.5451 H(Ex) | Ha 0.1363 N | Sh 0.3466 H
+C06 Sabre (Steel)                                    valid=true err[] cleaned[] 9.4 ms
+    mass 0.6831 vol 0.08695 balance 0.361 reach 3.815 bladeLen 3.272 grip (0.000,0.870,0.000) axis (0.000,1.000) edge 6.480 (all 6.480, 1 chains) cut 0.89
+    All: PC 8.486/0.422 Th 0.3514/0.351 As 0.2569/0.428 SC 2.36/0.100 EL 6.48/0.525 Jo 11.52/0.406 MM 2/0.333 Vo 0.08695/0.010
+    Blade: PC 5.486/0.191 Th 0.1089/0.109 As 0.6682/1.000 SC 2.397/0.162 EL 6.48/0.525 Jo 6.932/0.187 MM 1/0.000 Vo 0.0337/0.000
+    Sm 0.0097 N | Ha 0.2991 H | Sh 0.5948 H(Ex)
+C07 Dagger                                           valid=true err[] cleaned[] 4.7 ms
+    mass 0.3415 vol 0.04339 balance 0.071 reach 1.890 bladeLen 1.540 grip (0.000,0.610,0.000) axis (0.000,1.000) edge 2.968 (all 2.968, 1 chains) cut 0.31
+    All: PC 4.405/0.108 Th 0/0.000 As 0/0.000 SC 1.985/0.000 EL 2.968/0.000 Jo 6.009/0.143 MM 1/0.000 Vo 0.04339/0.000
+    Blade: PC 1.405/0.000 Th 0/0.000 As 0/0.000 SC 1.844/0.000 EL 2.968/0.000 Jo 1.084/0.000 MM 1/0.000 Vo 0.01458/0.000
+    Sm 0.0000 N | Ha 0.0000 N | Sh 0.0000 N
+C08 Greatsword                                       valid=true err[] cleaned[] 9.9 ms
+    mass 1.5152 vol 0.19253 balance 0.326 reach 3.950 bladeLen 3.270 grip (0.000,1.030,0.000) axis (0.000,1.000) edge 6.392 (all 6.392, 1 chains) cut 0.62
+    All: PC 5.2/0.169 Th 0.1882/0.188 As 0/0.000 SC 2.348/0.080 EL 6.392/0.497 Jo 6.953/0.188 MM 1/0.000 Vo 0.1925/0.156
+    Blade: PC 2.2/0.000 Th 0/0.000 As 0/0.000 SC 2.217/0.000 EL 6.392/0.497 Jo 2.891/0.000 MM 1/0.000 Vo 0.072/0.000
+    Sm 0.1563 N | Ha 0.0992 N | Sh 0.2487 H
+C09 Ornate (18 parts)                                valid=true err[] cleaned[] 19.4 ms
+    mass 0.6300 vol 0.08005 balance 0.188 reach 3.320 bladeLen 2.776 grip (0.000,0.880,0.000) axis (0.000,1.000) edge 5.411 (all 5.411, 1 chains) cut 1.00
+    All: PC 10.16/0.551 Th 0.3858/0.386 As 0/0.000 SC 2.604/0.506 EL 5.411/0.191 Jo 20.25/0.821 MM 1/0.000 Vo 0.08005/0.000
+    Blade: PC 3.46/0.035 Th 0.164/0.164 As 0/0.000 SC 2.585/0.474 EL 5.411/0.191 Jo 7.047/0.193 MM 1/0.000 Vo 0.02712/0.000
+    Sm 0.0001 N | Ha 0.3061 H | Sh 0.1904 N
+C10 Gamey filler, symmetric                          valid=true err[] cleaned[Enclosed#21,Enclosed#22,Dust#23,Dust#24] 15.5 ms
+    mass 1.5183 vol 0.19292 balance 0.122 reach 3.103 bladeLen 2.493 grip (0.000,1.000,0.000) axis (0.000,1.000) edge 4.980 (all 4.980, 1 chains) cut 0.27
+    All: PC 6.916/0.301 Th 0/0.000 As 0/0.000 SC 2.139/0.000 EL 4.98/0.056 Jo 8.871/0.280 MM 1/0.000 Vo 0.1927/0.156
+    Blade: PC 2.822/0.000 Th 0/0.000 As 0/0.000 SC 1.935/0.000 EL 4.98/0.056 Jo 2.885/0.000 MM 1/0.000 Vo 0.06365/0.000
+    Sm 0.1565 N | Ha 0.0000 N | Sh 0.0282 N
+C11 Gamey filler, lopsided                           valid=true err[] cleaned[Enclosed#21,Enclosed#22,Dust#23,Dust#24] 14.3 ms
+    mass 1.5168 vol 0.19274 balance 0.124 reach 3.103 bladeLen 2.493 grip (0.000,1.000,0.000) axis (0.000,1.000) edge 5.020 (all 5.020, 1 chains) cut 0.27
+    All: PC 6.916/0.301 Th 0/0.000 As 0.002488/0.004 SC 2.128/0.000 EL 5.02/0.069 Jo 10.04/0.335 MM 1/0.000 Vo 0.1925/0.156
+    Blade: PC 2.822/0.000 Th 0/0.000 As 0.004773/0.008 SC 1.939/0.000 EL 5.02/0.069 Jo 2.885/0.000 MM 1/0.000 Vo 0.06365/0.000
+    Sm 0.1562 N | Ha 0.0012 N | Sh 0.0368 N
+C12 Arming, blade in 5 overlapping segments          valid=true err[] cleaned[] 8.2 ms
+    mass 0.8305 vol 0.10553 balance 0.180 reach 3.420 bladeLen 2.900 grip (0.000,0.880,0.000) axis (0.000,1.000) edge 5.644 (all 5.644, 1 chains) cut 0.77
+    All: PC 8.6/0.431 Th 0.2843/0.284 As 0/0.000 SC 2.263/0.000 EL 5.644/0.264 Jo 9.72/0.320 MM 1/0.000 Vo 0.1055/0.035
+    Blade: PC 5.6/0.200 Th 0.03922/0.039 As 0/0.000 SC 2.289/0.000 EL 5.644/0.264 Jo 5.563/0.122 MM 1/0.000 Vo 0.0324/0.000
+    Sm 0.0355 N | Ha 0.1137 N | Sh 0.1318 N
+C13 Arming, guard = half + mirror (+CornerWedges)    valid=true err[] cleaned[] 7.2 ms
+    mass 0.8428 vol 0.10709 balance 0.175 reach 3.420 bladeLen 2.896 grip (0.000,0.880,0.000) axis (0.000,1.000) edge 5.644 (all 5.644, 1 chains) cut 0.77
+    All: PC 5.984/0.230 Th 0.2831/0.283 As 0/0.000 SC 2.278/0.000 EL 5.644/0.264 Jo 11.17/0.389 MM 1/0.000 Vo 0.1071/0.038
+    Blade: PC 1.6/0.000 Th 0.03922/0.039 As 0/0.000 SC 2.281/0.000 EL 5.644/0.264 Jo 1.563/0.000 MM 1/0.000 Vo 0.0324/0.000
+    Sm 0.0376 N | Ha 0.1133 N | Sh 0.1318 N
+C14 Arming translated (0, +0.27, +0.05)              valid=true err[] cleaned[] 5.4 ms
+    mass 0.8305 vol 0.10553 balance 0.180 reach 3.420 bladeLen 2.900 grip (0.000,1.150,0.050) axis (0.000,1.000) edge 5.644 (all 5.644, 1 chains) cut 0.77
+    All: PC 4.6/0.123 Th 0.2843/0.284 As 0/0.000 SC 2.26/0.000 EL 5.644/0.264 Jo 5.709/0.129 MM 1/0.000 Vo 0.1055/0.035
+    Blade: PC 1.6/0.000 Th 0.03922/0.039 As 0/0.000 SC 2.281/0.000 EL 5.644/0.264 Jo 1.563/0.000 MM 1/0.000 Vo 0.0324/0.000
+    Sm 0.0355 N | Ha 0.1137 N | Sh 0.1318 N
+C15 Arming rotated 4 deg about Z at the grip         valid=true err[] cleaned[] 6.5 ms
+    mass 0.8296 vol 0.10542 balance 0.181 reach 3.420 bladeLen 2.900 grip (0.000,0.880,0.000) axis (-0.070,0.998) edge 5.626 (all 5.626, 1 chains) cut 0.77
+    All: PC 4.6/0.123 Th 0.2824/0.282 As 0.3144/0.524 SC 2.262/0.000 EL 5.626/0.258 Jo 5.709/0.129 MM 1/0.000 Vo 0.1054/0.035
+    Blade: PC 1.6/0.000 Th 0.0392/0.039 As 0.8242/1.000 SC 2.281/0.000 EL 5.626/0.258 Jo 1.563/0.000 MM 1/0.000 Vo 0.0324/0.000
+    Sm 0.0353 N | Ha 0.2701 H | Sh 0.4291 H(Ex)
+
+=== Golden fixtures F1-F5 ===
+F1 ArmingSword                                       valid=true err[] cleaned[] 4.8 ms
+    mass 0.7924 vol 0.10075 balance 0.127 reach 3.310 bladeLen 2.770 grip (0.000,0.750,0.000) axis (0.000,1.000) edge 5.433 (all 5.433, 1 chains) cut 0.72
+    All: PC 4.176/0.090 Th 0.2594/0.259 As 0/0.000 SC 2.2/0.000 EL 5.433/0.198 Jo 5.284/0.109 MM 2/0.333 Vo 0.1008/0.029
+    Blade: PC 1.176/0.000 Th 0.001614/0.002 As 0/0.000 SC 2.258/0.000 EL 5.433/0.198 Jo 0.2483/0.000 MM 1/0.000 Vo 0.02531/0.000
+    Sm 0.0288 N | Ha 0.1037 N | Sh 0.0989 N
+F2 MinimalSword                                      valid=true err[] cleaned[] 5.3 ms
+    mass 1.0813 vol 0.13740 balance -0.057 reach 3.102 bladeLen 2.500 grip (0.000,0.850,0.000) axis (0.000,1.000) edge 4.980 (all 4.980, 1 chains) cut 0.43
+    All: PC 4/0.077 Th 0.04412/0.044 As 0/0.000 SC 2.079/0.000 EL 4.98/0.056 Jo 3.766/0.036 MM 1/0.000 Vo 0.1374/0.080
+    Blade: PC 1/0.000 Th 0/0.000 As 0/0.000 SC 1.991/0.000 EL 4.98/0.056 Jo 0/0.000 MM 1/0.000 Vo 0.0384/0.000
+    Sm 0.0797 N | Ha 0.0176 N | Sh 0.0282 N
+F3 Rapier                                            valid=true err[] cleaned[] 4.4 ms
+    mass 0.3065 vol 0.03904 balance -0.063 reach 4.230 bladeLen 3.740 grip (0.000,0.750,0.000) axis (0.000,1.000) edge 7.409 (all 7.409, 1 chains) cut 1.00
+    All: PC 4.544/0.119 Th 0.9131/0.913 As 0.001199/0.002 SC 2.453/0.255 EL 7.409/0.815 Jo 6.336/0.159 MM 1/0.000 Vo 0.03904/0.000
+    Blade: PC 1.092/0.000 Th 0.7143/0.714 As 0.005451/0.009 SC 2.98/1.000 EL 7.409/0.815 Jo 0.1792/0.000 MM 1/0.000 Vo 0.008698/0.000
+    Sm 0.0000 N | Ha 0.4423 H(Ex) | Sh 0.6104 H(Ma)
+F4 Cleaver                                           valid=true err[] cleaned[] 12.1 ms
+    mass 3.2303 vol 0.41046 balance 0.913 reach 3.257 bladeLen 2.675 grip (0.000,0.750,0.000) axis (0.000,1.000) edge 5.724 (all 5.724, 1 chains) cut 0.13
+    All: PC 5/0.154 Th 0/0.000 As 0.3144/0.524 SC 2/0.000 EL 5.724/0.289 Jo 4.01/0.048 MM 1/0.000 Vo 0.4105/0.459
+    Blade: PC 2/0.000 Th 0/0.000 As 0.3954/0.659 SC 1.778/0.000 EL 5.724/0.289 Jo 1/0.000 MM 1/0.000 Vo 0.3264/0.342
+    Sm 0.4590 H(Ex) | Ha 0.1572 N | Sh 0.3420 H
+F5 StarterSword                                      valid=true err[] cleaned[] 4.9 ms
+    mass 0.7929 vol 0.10075 balance 0.128 reach 3.310 bladeLen 2.770 grip (0.000,0.750,0.000) axis (0.000,1.000) edge 5.433 (all 5.433, 1 chains) cut 0.72
+    All: PC 4.176/0.090 Th 0.2594/0.259 As 0/0.000 SC 2.2/0.000 EL 5.433/0.198 Jo 5.284/0.109 MM 1/0.000 Vo 0.1008/0.029
+    Blade: PC 1.176/0.000 Th 0.001614/0.002 As 0/0.000 SC 2.258/0.000 EL 5.433/0.198 Jo 0.2483/0.000 MM 1/0.000 Vo 0.02531/0.000
+    Sm 0.0288 N | Ha 0.1037 N | Sh 0.0989 N
+
+=== Adversarial A25-A27 (R3-01) ===
+A25 F1 + enclosed 20 deg grip core           valid=true cleaned[Enclosed#6] Smelting dD +0.0000 Hammering dD +0.0000 Sharpening dD +0.0000 | max |dD| 0.0000 (bound 0.01) PASS
+    base: Sm 0.0288 N | Ha 0.1037 N | Sh 0.0989 N
+    fix : Sm 0.0288 N | Ha 0.1037 N | Sh 0.0989 N  physics axis (-0.010,1.000) balance 0.127 reach 3.310 (base 0.127 / 3.310)
+A26 F1 ring grip + 40 deg strap              valid=true cleaned[] Smelting dD +0.0003 Hammering dD +0.0011 Sharpening dD +0.0000 | max |dD| 0.0011 (bound 0.02) PASS
+    base: Sm 0.0468 N | Ha 0.1037 N | Sh 0.0989 N
+    fix : Sm 0.0471 N | Ha 0.1048 N | Sh 0.0989 N  physics axis (-0.643,0.766) balance 0.038 reach 3.310 (base 0.051 / 3.310)
+A27 F1 hilt shifted 0.04 in X                valid=true cleaned[] Sharpening dD +0.0000 | max |dD| 0.0000 (bound 0.02) PASS
+    base: Sm 0.0288 N | Ha 0.1037 N | Sh 0.0989 N
+    fix : Sm 0.0288 N | Ha 0.1537 N | Sh 0.0989 N  physics axis (0.000,1.000) balance 0.127 reach 3.310 (base 0.127 / 3.310)
+
+=== Regression X01-X07 (base F5 unless noted) ===
+X01 2 blade copies at z +-0.003 (vs union blade 0.066) dD Sm +0.0000 Ha +0.0002 Sh +0.0000 | max 0.0002 (bound 0.01) PASS
+X01raw 2 blade copies at z +-0.003 (vs F5)   dD Sm +0.0035 Ha -0.0281 Sh +0.0000 | max 0.0281 (bound 0.05) PASS
+X02 6 blade copies at z = k*0.002 (vs union blade 0.072) dD Sm +0.0000 Ha +0.0005 Sh +0.0000 | max 0.0005 (bound 0.01) PASS
+X03 F4 + 0.0003 st3 fin                      Thinness 0.0000 vs 0.0000 (d +0.0000, bound 0.02) Ham dD +0.0003 PASS
+X04a blade from 4 strips                     edge 5.4330 vs 5.4330 (+0.00 %) chains 1 | Sh dD +0.0000 PASS
+X04b blade from strips, seams at +-0.05 and 0 edge 5.4330 vs 5.4330 (+0.00 %) chains 1 | Sh dD +0.0000 PASS
+X04-5-0.004 5 segments, gaps 0.004           edge 5.4330 vs 5.4330 (+0.00 %) chains 1 | Sh dD +0.0000 PASS
+X04-5-0.006 5 segments, gaps 0.006           edge 5.4330 vs 5.4330 (+0.00 %) chains 1 | Sh dD +0.0000 PASS
+X04-5-0.009 5 segments, gaps 0.009           edge 5.4330 vs 5.4330 (+0.00 %) chains 1 | Sh dD +0.0000 PASS
+X04-10-0.004 10 segments, gaps 0.004         edge 5.4330 vs 5.4330 (+0.00 %) chains 1 | Sh dD +0.0000 PASS
+X04-10-0.006 10 segments, gaps 0.006         edge 5.4330 vs 5.4330 (+0.00 %) chains 1 | Sh dD +0.0000 PASS
+X04-10-0.009 10 segments, gaps 0.009         edge 5.4330 vs 5.4330 (+0.00 %) chains 1 | Sh dD +0.0000 PASS
+X04g0.005 grip nudge 0.005 in X              edge 5.4330 vs 5.4330 (+0.00 %) chains 1 | Sh dD +0.0000 PASS
+X04g0.010 grip nudge 0.010 in X              edge 5.4330 vs 5.4330 (+0.00 %) chains 1 | Sh dD +0.0000 PASS
+X04g0.015 grip nudge 0.015 in X              edge 5.4330 vs 5.4330 (+0.00 %) chains 1 | Sh dD +0.0000 PASS
+X04g0.020 grip nudge 0.020 in X              edge 5.4330 vs 5.4330 (+0.00 %) chains 1 | Sh dD +0.0000 PASS
+X05+0.002 5 segments, gap 0.002              dG Sm -0.0001 Ha +0.0007 Sh +0.0000 | max 0.0007 (bound 0.01) PASS
+X05+0.004 5 segments, gap 0.004              dG Sm -0.0002 Ha +0.0000 Sh +0.0000 | max 0.0002 (bound 0.01) PASS
+X05+0.006 5 segments, gap 0.006              dG Sm -0.0003 Ha +0.0007 Sh +0.0000 | max 0.0007 (bound 0.01) PASS
+X05+0.009 5 segments, gap 0.009              dG Sm -0.0005 Ha +0.0000 Sh +0.0000 | max 0.0005 (bound 0.01) PASS
+X05-0.005 5 segments, overlap 0.005          dG Sm +0.0000 Ha +0.0000 Sh +0.0000 | max 0.0000 (bound 0.01) PASS
+X05-0.020 5 segments, overlap 0.020          dG Sm +0.0000 Ha +0.0007 Sh +0.0000 | max 0.0007 (bound 0.01) PASS
+X05-0.050 5 segments, overlap 0.050          dG Sm +0.0000 Ha +0.0000 Sh +0.0000 | max 0.0000 (bound 0.01) PASS
+X06-0.00 blade offset 0.00 in X              Asym All 0.0000 (oracle 0.0000) Blade 0.0000 (oracle 0.0000) | max err 0.0000 PASS | Ham 0.1037 Sh 0.0989
+X06-0.01 blade offset 0.01 in X              Asym All 0.0000 (oracle 0.0000) Blade 0.0000 (oracle 0.0000) | max err 0.0000 PASS | Ham 0.1037 Sh 0.0991
+X06-0.02 blade offset 0.02 in X              Asym All 0.0099 (oracle 0.0104) Blade 0.0396 (oracle 0.0413) | max err 0.0017 PASS | Ham 0.1087 Sh 0.1187
+X06-0.03 blade offset 0.03 in X              Asym All 0.0379 (oracle 0.0392) Blade 0.1529 (oracle 0.1559) | max err 0.0030 PASS | Ham 0.1227 Sh 0.1756
+X06-0.04 blade offset 0.04 in X              Asym All 0.0695 (oracle 0.0708) Blade 0.2804 (oracle 0.2817) | max err 0.0013 PASS | Ham 0.1385 Sh 0.2391
+X06-0.05 blade offset 0.05 in X              Asym All 0.1011 (oracle 0.1024) Blade 0.4078 (oracle 0.4075) | max err 0.0013 PASS | Ham 0.1543 Sh 0.3030
+X07a laminate 2 x 0.03 plates                dG Sm +0.0000 Ha +0.0004 Sh +0.0000 | max 0.0004 (bound 0.01) mass 0.79293 vs base 0.79293 (+0.000 %) PASS
+X07b laminate 2 x 0.035 plates overlapping 0.01 dG Sm +0.0000 Ha +0.0005 Sh +0.0000 | max 0.0005 (bound 0.01) mass 0.79293 vs base 0.79293 (+0.000 %) PASS
+X07c 4 segments overlapping 0.07             dG Sm +0.0000 Ha +0.0007 Sh +0.0000 | max 0.0007 (bound 0.01) mass 0.79283 vs base 0.79293 (-0.014 %) PASS
+
+=== Validation cases ===
+V-gap: pommel 0.03 below the grip                        valid=false err[Disconnected#1] cleaned[]
+    floating {1} gap 0.0300 dir (-0.000,1.000,-0.000) nearest #2
+V-out: tip wedges raised 1.0 (top at 5.30)               valid=false err[OutOfHitbox#5,OutOfHitbox#6] cleaned[]
+V-nogrip                                                 valid=false err[SlotMissing:Grip] cleaned[]
+V-upside-down                                            valid=false err[BladeNotAboveGrip] cleaned[]
+A22a: only Blade part dust (0.05 cube on the guard)      valid=false err[SlotMissing:Blade] cleaned[Dust#4]
+A22b: only Blade part enclosed in the guard              valid=false err[SlotMissing:Blade] cleaned[Enclosed#4]
+A22c: only Grip part enclosed (grip inside a fat pommel) valid=false err[SlotMissing:Grip] cleaned[Enclosed#6]
+A23: 0.02-thick decorative plate on the blade            valid=true err[] cleaned[]
+A23: 0.02-thick decorative plate on the blade        valid=true err[] cleaned[] 7.3 ms
+    mass 0.8494 vol 0.10793 balance 0.198 reach 3.420 bladeLen 2.900 grip (0.000,0.880,0.000) axis (0.000,1.000) edge 5.644 (all 5.644, 1 chains) cut 0.69
+    All: PC 5.2/0.169 Th 0.2627/0.263 As 0/0.000 SC 2.264/0.000 EL 5.644/0.264 Jo 6.309/0.158 MM 1/0.000 Vo 0.1079/0.039
+    Blade: PC 2.2/0.000 Th 0.03922/0.039 As 0/0.000 SC 2.257/0.000 EL 5.644/0.264 Jo 2.163/0.000 MM 1/0.000 Vo 0.0348/0.000
+    Sm 0.0388 N | Ha 0.1051 N | Sh 0.1318 N
+A24: needle blade 0.02 x 3.0 x 0.02                      valid=true err[] cleaned[]
+A24: needle blade 0.02 x 3.0 x 0.02                  valid=true err[] cleaned[] 3.9 ms
+    mass 0.5926 vol 0.07529 balance -0.304 reach 3.600 bladeLen 3.080 grip (0.000,0.880,0.000) axis (0.000,1.000) edge 6.022 (all 6.022, 1 chains) cut 1.00
+    All: PC 3.3/0.023 Th 1/1.000 As 0/0.000 SC 1.765/0.000 EL 6.022/0.382 Jo 3.456/0.022 MM 1/0.000 Vo 0.07529/0.000
+    Blade: PC 0.3/0.000 Th 1/1.000 As 0/0.000 SC 3.548/1.000 EL 6.022/0.382 Jo 0/0.000 MM 1/0.000 Vo 0.0012/0.000
+    Sm 0.0000 N | Ha 0.4000 H(Ex) | Sh 0.3909 H
+
+=== Invariance ===
+F5 StarterSword                          Y/Z translations: max |dx_f| 0.00166 max |dG| 0.00070 | q->-q (uncanonical) |dx_f| 0.00e+00 |dG| 0.00e+00
+F1 ArmingSword                           Y/Z translations: max |dx_f| 0.00166 max |dG| 0.00070 | q->-q (uncanonical) |dx_f| 0.00e+00 |dG| 0.00e+00
+F3 Rapier                                Y/Z translations: max |dx_f| 0.00000 max |dG| 0.00000 | q->-q (uncanonical) |dx_f| 0.00e+00 |dG| 0.00e+00
+C02 Arming (Iron)                        Y/Z translations: max |dx_f| 0.00000 max |dG| 0.00000 | q->-q (uncanonical) |dx_f| 0.00e+00 |dG| 0.00e+00
+C06 Sabre (Steel)                        Y/Z translations: max |dx_f| 0.00000 max |dG| 0.00000 | q->-q (uncanonical) |dx_f| 0.00e+00 |dG| 0.00e+00
+F5 blade re-segmented flush into 2: max |dx_f| 0.00001 max |dG| 0.00000  (Sm 0.0288 N | Ha 0.1037 N | Sh 0.0989 N)
+F5 blade re-segmented flush into 3: max |dx_f| 0.00001 max |dG| 0.00000  (Sm 0.0288 N | Ha 0.1037 N | Sh 0.0989 N)
+F5 blade re-segmented flush into 7: max |dx_f| 0.00001 max |dG| 0.00000  (Sm 0.0288 N | Ha 0.1037 N | Sh 0.0989 N)
+
+=== Determinism (two runs, bit-identical) ===
+20 fixtures, 0 mismatches
+
+=== Blueprint/Mirror: inside(mirror(p), x) == inside(p, reflect(x)) ===
+10000 point tests, 0 membership mismatches, max |sd - sd'| inside 1.67e-16
+C13 (guard + finials mirrored with Blueprint/Mirror): Asymmetry All 0.000000 Blade 0.000000
+
+=== MIN_DIM = 0.02 checks ===
+M1 F5 blade 0.060 thick (no tip)             mass 0.79017 vol 0.100403 | Th All 0.243 Blade 0.000 | EL 5.3404 | As All 0.0000 | Sm 0.0283 N | Ha 0.0973 N | Sh 0.0844 N
+M1 F5 blade 0.050 thick (no tip)             mass 0.75743 vol 0.096243 | Th All 0.398 Blade 0.082 | EL 5.3404 | As All 0.0000 | Sm 0.0226 N | Ha 0.1591 N | Sh 0.1258 N
+M1 F5 blade 0.040 thick (no tip)             mass 0.72469 vol 0.092083 | Th All 0.629 Blade 0.235 | EL 5.3404 | As All 0.0000 | Sm 0.0168 N | Ha 0.2518 H | Sh 0.2097 H
+M1 F5 blade 0.035 thick (no tip)             mass 0.70832 vol 0.090003 | Th All 0.795 Blade 0.345 | EL 5.3404 | As All 0.0000 | Sm 0.0139 N | Ha 0.3180 H | Sh 0.2677 H
+M1 F5 blade 0.030 thick (no tip)             mass 0.69195 vol 0.087923 | Th All 1.000 Blade 0.490 | EL 5.3404 | As All 0.0000 | Sm 0.0110 N | Ha 0.4000 H(Ex) | Sh 0.2844 H
+M1 F5 blade 0.025 thick (no tip)             mass 0.67558 vol 0.085843 | Th All 1.000 Blade 0.694 | EL 5.3404 | As All 0.0000 | Sm 0.0081 N | Ha 0.4000 H(Ex) | Sh 0.2844 H
+M1 F5 blade 0.020 thick (no tip)             mass 0.65921 vol 0.083763 | Th All 1.000 Blade 1.000 | EL 5.3404 | As All 0.0000 | Sm 0.0052 N | Ha 0.4000 H(Ex) | Sh 0.2844 H
+M2 needle 0.02 x 2.6 x 0.02 at x +0.0000     mass 0.60192 vol 0.076483 | Th All 1.000 Blade 1.000 | EL 5.2216 | As All 0.0000 | Sm 0.0000 N | Ha 0.4000 H(Ex) | Sh 0.2659 H
+M2 needle 0.02 x 2.6 x 0.02 at x +0.0025     mass 0.60192 vol 0.076483 | Th All 1.000 Blade 1.000 | EL 5.2216 | As All 0.0000 | Sm 0.0000 N | Ha 0.4000 H(Ex) | Sh 0.2659 H
+M2 needle 0.02 x 2.6 x 0.02 at x +0.0050     mass 0.60192 vol 0.076483 | Th All 1.000 Blade 1.000 | EL 5.2216 | As All 0.0000 | Sm 0.0000 N | Ha 0.4000 H(Ex) | Sh 0.2659 H
+M2 needle 0.02 x 2.6 x 0.02 at x +0.0075     mass 0.60192 vol 0.076483 | Th All 1.000 Blade 1.000 | EL 5.2000 | As All 0.0000 | Sm 0.0000 N | Ha 0.4000 H(Ex) | Sh 0.2625 H
+M2 needle 0.02 x 2.6 x 0.02 at x +0.0100     mass 0.60192 vol 0.076483 | Th All 1.000 Blade 1.000 | EL 5.2000 | As All 0.0000 | Sm 0.0000 N | Ha 0.4000 H(Ex) | Sh 0.2625 H
+M2 needle 0.02 x 2.6 x 0.02 at x +0.0125     mass 0.60192 vol 0.076483 | Th All 1.000 Blade 1.000 | EL 5.2000 | As All 0.0003 | Sm 0.0000 N | Ha 0.4001 H(Ex) | Sh 0.2725 H
+M2 needle 0.02 x 2.6 x 0.02 at x +0.0150     mass 0.60192 vol 0.076483 | Th All 1.000 Blade 1.000 | EL 5.2216 | As All 0.0011 | Sm 0.0000 N | Ha 0.4006 H(Ex) | Sh 0.3075 H
+M3 blade 0.02 wide x 0.03 thick              mass 0.60601 vol 0.077003 | Th All 1.000 Blade 1.000 | EL 5.2216 | As All 0.0000 | Sm 0.0000 N | Ha 0.4000 H(Ex) | Sh 0.2659 H
+M3 blade 0.03 wide x 0.03 thick              mass 0.61215 vol 0.077783 | Th All 1.000 Blade 0.490 | EL 5.2216 | As All 0.0000 | Sm 0.0000 N | Ha 0.4000 H(Ex) | Sh 0.2659 H
+M3 blade 0.04 wide x 0.03 thick              mass 0.61829 vol 0.078563 | Th All 1.000 Blade 0.490 | EL 5.2216 | As All 0.0000 | Sm 0.0000 N | Ha 0.4000 H(Ex) | Sh 0.2494 H
+M3 blade 0.05 wide x 0.03 thick              mass 0.62443 vol 0.079343 | Th All 1.000 Blade 0.490 | EL 5.2607 | As All 0.0000 | Sm 0.0000 N | Ha 0.4000 H(Ex) | Sh 0.2415 H

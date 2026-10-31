@@ -1,0 +1,11 @@
+| blade | chain pts | chain studs | sides | source pts | E | DP tol | path pts | L (u) | travel N / H (s) | fallback | generate ms (max of 20) | worst-case replay+checks ms |
+| arming | 6 | 5.60 | 2 | 6 | 2.00 | 0.000 | 337 | 3.359 | 11.0 / 10.3 | false | 0.93 | 1.27 (596 samples) |
+| longsword | 5 | 7.27 | 2 | 5 | 2.00 | 0.000 | 431 | 4.293 | 14.1 / 13.0 | false | 0.80 | 1.51 (749 samples) |
+| dagger | 5 | 3.06 | 2 | 5 | 2.00 | 0.000 | 185 | 1.835 | 6.0 / 6.0 | false | 0.49 | 0.57 (347 samples) |
+| sabre | 18 | 3.48 | 1 | 18 | 2.00 | 0.000 | 215 | 2.140 | 7.0 / 6.6 | false | 0.47 | 0.69 (397 samples) |
+| flamberge | 123 | 8.36 | 2 | 123 | 2.00 | 0.000 | 574 | 5.703 | 18.7 / 17.4 | false | 1.20 | 2.06 (981 samples) |
+| tilted | 6 | 5.60 | 2 | 6 | 2.00 | 0.000 | 337 | 3.359 | 11.0 / 10.3 | false | 0.61 | 0.96 (596 samples) |
+| serrated | 71 | 10.34 | 2 | 71 | 1.62 | 0.000 | 595 | 5.900 | 19.4 / 18.9 | false | 1.89 | 1.85 (1013 samples) |
+| saw | 139 | 22.28 | 2 | 5 | 1.00 | 0.128 | 447 | 4.462 | 14.7 / 13.6 | false | 0.85 | 2.04 (777 samples) |
+| zigzag | 256 | 153.04 | 1 | 2 | 1.00 | 0.512 | 209 | 2.073 | 6.8 / 6.3 | false | 0.35 | 0.57 (386 samples) |
+longest: saw source at x=0 pacer 0.300: L 4.461 travel 14.9 s duration 15.9 s, 795 samples, replay+checks 1.70 ms, generate 1.08 ms

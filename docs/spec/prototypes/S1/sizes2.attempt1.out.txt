@@ -1,0 +1,35 @@
+encoder vs Studio probe: 0 / 24 length mismatches (3 same-length last-digit differences)
+  bulk class 1: Lune 72498 chars (Studio 72501, +3), max 25 (Studio 25)
+  bulk class 2: Lune 52513 chars (Studio 52513, +0), max 20 (Studio 20)
+  bulk class 3: Lune 53926 chars (Studio 53927, +1), max 21 (Studio 21)
+  bulk class 4: Lune 56302 chars (Studio 56303, +1), max 22 (Studio 22)
+  bulk class 5: Lune 60529 chars (Studio 60530, +1), max 22 (Studio 22)
+  bulk class 6: Lune 66476 chars (Studio 66479, +3), max 25 (Studio 25)
+longest numbers: pos 25 chars (-0.0000021366226676248005) | quat tiny 25, qw 18 (0.9999999999921103) | size 20 (0.036324661366823635) | raw 25
+== per part ==
+worst-case part 335 B | typical axis-aligned 113 B | typical free-rotated 184 B
+== blueprint record == overhead (no parts, worst analysis, 3 steps) 736 B; per worst part 336.0 B
+  N= 4  worst   2079 B   typical   1114 B
+  N=12  worst   4767 B   typical   2200 B
+  N=24  worst   8799 B   typical   3900 B
+== item record == overhead (no parts) MVP-worst 1669 B (3 steps, 6 stats); Phase2+-worst 3283 B (8 steps, 9 stats)
+  N= 4  MVP-worst   3012 B   Phase2+-worst   4626 B   typical   1946 B
+  N=12  MVP-worst   5700 B   Phase2+-worst   7314 B   typical   3032 B
+  N=24  MVP-worst   9732 B   Phase2+-worst  11346 B   typical   4732 B
+one worst step record (6 flags) 298 B; MVP PrecisionTrace step with its 6 flags 286 B; no flags 201 B
+owner item view (no flags/seeds) @24 worst parts 9438 B
+== profile ==
+empty template 401 B; settings default 232 B, worst 318 B
+  bp=40 items=150 parts=24 (MVP item shape (caps 40/150, MAX_PARTS 24)):  1820598 B = 43.4% of 4 MiB
+  bp=40 items=150 parts=24 (Phase 2+ item shape (8 steps, 9 stats)):  2073938 B = 49.4% of 4 MiB
+  bp=60 items=250 parts=24 (caps 60/250, MVP shape):  2974578 B = 70.9% of 4 MiB
+  bp=80 items=300 parts=24 (caps 80/300, MVP shape):  3639958 B = 86.8% of 4 MiB
+  caps full of typical editor parts (40/150 x 24 parts, 64-B names): 892721 B = 21.3%
+  typical heavy player (15 bp, 80 items, 12 parts each): 280321 B = 6.7%
+== wire ==
+  worst BlueprintDraft @24 parts 8175 B (+ Save envelope: blueprintId 54 B)
+  BlueprintSummary 706 B; ItemSummary 277 B; summaries at caps (40+150) 69790 B
+== formula == W(B,I,P) = 1240 + B*(776 + 336.0*P) + I*(1709 + 336.0*P)   [incl. 40 B map key per record; Phase 2+ item overhead 3323]
+  check: formula at 40/150/24 = 1820600 B (measured above)
+  1000000 B profile: 2 writes/min = 2.00 MB/min (limit 4 MB/min)
+  2000000 B profile: 2 writes/min = 4.00 MB/min (limit 4 MB/min)

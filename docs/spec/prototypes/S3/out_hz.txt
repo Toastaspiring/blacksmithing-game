@@ -1,0 +1,25 @@
+
+### HoldZone bots (N=300 per row)
+| bot / config                       |  mean |   p10 |   p50 |   p90 |  pass  | flagged|
+|---|---|---|---|---|---|---|
+| pwm10 Iron/Normal                  | 1.000 | 1.000 | 1.000 | 1.000 | 100.0% |   0.0% | presses/s 3.9 
+| mpcExact Iron/Normal               | 1.000 | 0.999 | 1.000 | 1.000 | 100.0% |   0.0% | presses/s 4.5 
+| mpcHuman Iron/Normal               | 1.000 | 1.000 | 1.000 | 1.000 | 100.0% |   0.0% | presses/s 2.8 
+| elite Iron/Normal                  | 0.930 | 0.887 | 0.934 | 0.970 | 100.0% |   0.0% | presses/s 1.0 
+| good Iron/Normal                   | 0.819 | 0.750 | 0.820 | 0.886 | 100.0% |   0.0% | presses/s 0.8 
+| poor Iron/Normal                   | 0.656 | 0.589 | 0.662 | 0.726 |  99.3% |   0.0% | presses/s 0.7 
+| pwm10 Iron/Hard                    | 1.000 | 1.000 | 1.000 | 1.000 | 100.0% |   0.0% | presses/s 3.9 
+| mpcExact Iron/Hard                 | 0.991 | 0.980 | 0.993 | 0.999 | 100.0% |   0.0% | presses/s 4.6 
+| mpcHuman Iron/Hard                 | 0.998 | 0.993 | 0.999 | 1.000 | 100.0% |   0.0% | presses/s 2.8 
+| elite Iron/Hard                    | 0.818 | 0.745 | 0.820 | 0.886 | 100.0% |   0.0% | presses/s 1.1 
+| good Iron/Hard                     | 0.691 | 0.620 | 0.692 | 0.759 | 100.0% |   0.0% | presses/s 0.9 
+| poor Iron/Hard                     | 0.567 | 0.496 | 0.573 | 0.632 |  89.3% |   0.0% | presses/s 0.7 
+| pwm10 Steel/Hard                   | 1.000 | 1.000 | 1.000 | 1.000 | 100.0% |   0.0% | presses/s 4.2 
+| mpcExact Steel/Hard                | 0.988 | 0.976 | 0.989 | 0.998 | 100.0% |   0.0% | presses/s 5.0 
+| mpcHuman Steel/Hard                | 0.998 | 0.994 | 0.999 | 1.000 | 100.0% |   0.0% | presses/s 3.1 
+| elite Steel/Hard                   | 0.812 | 0.739 | 0.819 | 0.883 | 100.0% |   0.0% | presses/s 1.1 
+| good Steel/Hard                    | 0.684 | 0.612 | 0.687 | 0.749 | 100.0% |   0.0% | presses/s 0.9 
+| poor Steel/Hard                    | 0.560 | 0.493 | 0.567 | 0.626 |  87.7% |   0.0% | presses/s 0.7 
+| elite complex Steel/Hard           | 0.748 | 0.677 | 0.746 | 0.826 | 100.0% |   0.0% | presses/s 1.1 
+| good complex Steel/Hard            | 0.635 | 0.577 | 0.630 | 0.708 |  99.7% |   0.0% | presses/s 0.9 
+| poor complex Steel/Hard            | 0.517 | 0.464 | 0.517 | 0.573 |  65.3% |   0.0% | presses/s 0.7 

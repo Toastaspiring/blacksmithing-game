@@ -1,0 +1,9 @@
+cases=200000  idempotency failures=0
+branch: round-only=182874  renormalize=17126
+max | |q|^2-1 | of stored quaternions = 9.435e-06  (renormalized branch max 1.725e-06)
+max corner displacement per axis (pos+size+rot quantization) = 9.056e-05 stud
+max orthonormality error of R(q) = 1.332e-15
+tie/edge stress non-idempotent count: 0
+k/1e4 -> round(x*1e4) mismatches (sampled 5.85M values): 0
+k/1e6 -> round(x*1e6) mismatches (all 2M+1 values): 0
+rotation error bound ~ 2.00e-06 rad; over half-diagonal 3.66 stud -> 7.32e-06 stud

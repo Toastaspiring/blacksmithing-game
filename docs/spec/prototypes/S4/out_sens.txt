@@ -1,0 +1,75 @@
+=== sensitivity: Hard drop x0.6
+target check:
+  avg N iron: C+U >= 90%       margin +0.041 OK
+  avg N iron: U >= 55%         margin +0.180 OK
+  avg N steel: R <= 25%        margin +0.115 OK
+  bad N iron: C >= 70%         margin +0.230 OK
+  good N iron: R >= 55%        margin +0.194 OK
+  exc N iron: R >= 90%         margin +0.100 OK
+  avg H iron: E <= 2%          margin +0.017 OK
+  avg H steel: E <= 2%         margin +0.010 OK
+  good H iron: E >= 5%         margin +0.202 OK
+  good H iron: E <= 45%        margin +0.198 OK
+  exc H iron: E >= 60%         margin +0.374 OK
+  exc 1xH iron: E <= 60%       margin -0.004 FAIL
+
+=== sensitivity: Hard drop x1.4
+target check:
+  avg N iron: C+U >= 90%       margin +0.040 OK
+  avg N iron: U >= 55%         margin +0.178 OK
+  avg N steel: R <= 25%        margin +0.122 OK
+  bad N iron: C >= 70%         margin +0.228 OK
+  good N iron: R >= 55%        margin +0.192 OK
+  exc N iron: R >= 90%         margin +0.100 OK
+  avg H iron: E <= 2%          margin +0.020 OK
+  avg H steel: E <= 2%         margin +0.020 OK
+  good H iron: E >= 5%         margin -0.034 FAIL
+  good H iron: E <= 45%        margin +0.434 OK
+  exc H iron: E >= 60%         margin +0.053 OK
+  exc 1xH iron: E <= 60%       margin +0.245 OK
+
+=== sensitivity: fail below 0.20
+target check:
+  avg N iron: C+U >= 90%       margin +0.040 OK
+  avg N iron: U >= 55%         margin +0.293 OK
+  avg N steel: R <= 25%        margin +0.117 OK
+  bad N iron: C >= 70%         margin +0.158 OK
+  good N iron: R >= 55%        margin +0.195 OK
+  exc N iron: R >= 90%         margin +0.100 OK
+  avg H iron: E <= 2%          margin +0.020 OK
+  avg H steel: E <= 2%         margin +0.018 OK
+  good H iron: E >= 5%         margin +0.033 OK
+  good H iron: E <= 45%        margin +0.367 OK
+  exc H iron: E >= 60%         margin +0.279 OK
+  exc 1xH iron: E <= 60%       margin +0.115 OK
+
+=== sensitivity: fail below 0.30
+target check:
+  avg N iron: C+U >= 90%       margin +0.039 OK
+  avg N iron: U >= 55%         margin +0.287 OK
+  avg N steel: R <= 25%        margin +0.111 OK
+  bad N iron: C >= 70%         margin +0.161 OK
+  good N iron: R >= 55%        margin +0.191 OK
+  exc N iron: R >= 90%         margin +0.100 OK
+  avg H iron: E <= 2%          margin +0.020 OK
+  avg H steel: E <= 2%         margin +0.019 OK
+  good H iron: E >= 5%         margin +0.032 OK
+  good H iron: E <= 45%        margin +0.368 OK
+  exc H iron: E >= 60%         margin +0.280 OK
+  exc 1xH iron: E <= 60%       margin +0.125 OK
+
+=== sensitivity: fail below 0.40
+target check:
+  avg N iron: C+U >= 90%       margin +0.042 OK
+  avg N iron: U >= 55%         margin +0.275 OK
+  avg N steel: R <= 25%        margin +0.113 OK
+  bad N iron: C >= 70%         margin +0.179 OK
+  good N iron: R >= 55%        margin +0.195 OK
+  exc N iron: R >= 90%         margin +0.100 OK
+  avg H iron: E <= 2%          margin +0.020 OK
+  avg H steel: E <= 2%         margin +0.019 OK
+  good H iron: E >= 5%         margin +0.031 OK
+  good H iron: E <= 45%        margin +0.369 OK
+  exc H iron: E >= 60%         margin +0.278 OK
+  exc 1xH iron: E <= 60%       margin +0.120 OK
+

@@ -1,0 +1,31 @@
+flood at 500 req/s for 60 s (Roblox per-client remote ceiling ~500/s):
+  Profile.Hello            cap  2  refill  0.03/s  -> accepted    3 / 30000 (0.05/s)
+  Profile.Sync             cap  3  refill  0.10/s  -> accepted    8 / 30000 (0.13/s)
+  Profile.SetSettings      cap  5  refill  0.50/s  -> accepted   34 / 30000 (0.57/s)
+  Blueprint.Get            cap 10  refill  2.00/s  -> accepted  129 / 30000 (2.15/s)
+  Blueprint.Save           cap  4  refill  0.33/s  -> accepted   23 / 30000 (0.38/s)
+  Blueprint.Rename         cap  5  refill  0.50/s  -> accepted   34 / 30000 (0.57/s)
+  Blueprint.Delete         cap  5  refill  0.50/s  -> accepted   34 / 30000 (0.57/s)
+  Craft.Begin              cap  3  refill  0.10/s  -> accepted    8 / 30000 (0.13/s)
+  Craft.StartStep          cap  5  refill  0.50/s  -> accepted   34 / 30000 (0.57/s)
+  Craft.Submit             cap  5  refill  0.50/s  -> accepted   34 / 30000 (0.57/s)
+  Craft.Abandon            cap  3  refill  0.20/s  -> accepted   14 / 30000 (0.23/s)
+  Craft.Resume             cap  3  refill  0.20/s  -> accepted   14 / 30000 (0.23/s)
+  Craft.ReportDesync       cap  3  refill  0.10/s  -> accepted    8 / 30000 (0.13/s)
+  Showcase.Place           cap  6  refill  1.00/s  -> accepted   65 / 30000 (1.08/s)
+  Showcase.Clear           cap  6  refill  1.00/s  -> accepted   65 / 30000 (1.08/s)
+  Showcase.Scrap           cap  5  refill  0.50/s  -> accepted   34 / 30000 (0.57/s)
+  Showcase.Inspect         cap 10  refill  3.00/s  -> accepted  189 / 30000 (3.15/s)
+  Showcase.GetItems        cap 10  refill  2.00/s  -> accepted  129 / 30000 (2.15/s)
+  Showcase.TeleportHome    cap  1  refill  0.33/s  -> accepted   20 / 30000 (0.33/s)
+  (global, all channels)   cap 30  refill 15.00/s  -> accepted  929 / 30000 (15.48/s)
+legit traces:
+  Craft.Begin, 5 back-to-back crafts (8 s steps)           5 / 5 accepted
+  Craft.StartStep, same (+1 desync re-open per step)       30 / 30 accepted
+  Craft.Submit, same                                       15 / 15 accepted
+  Blueprint.Save, Ctrl+S mashed 6x in 2 s                  4 / 6 accepted
+  Blueprint.Save, autosave 60 s + manual every 10 s, 30 min 210 / 210 accepted
+  Showcase.Inspect, browsing 30 stands in 15 s             30 / 30 accepted
+  Showcase.GetItems, 150-item grid, 13 calls of 12 ids in 4 s 13 / 13 accepted
+  Showcase.Place, rearranging 6 slots in 3 s               6 / 6 accepted
+  Showcase.TeleportHome, one click every 3 s for 1 min     20 / 20 accepted

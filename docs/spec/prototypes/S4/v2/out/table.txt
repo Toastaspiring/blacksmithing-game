@@ -1,0 +1,40 @@
+# rarity mix, thresholds U 0.55 R 0.84 E 1.04, T Steel 1.02, gamma 0.15, phi 0.75, cap rule Max, 2000 crafts/row
+| Profile | Plan S/H/Sh | Iron C / U / R / E % | Iron mean Q | Steel C / U / R / E % | Steel mean Q | crafts with a fail % Iron / Steel | cap-bound % Iron / Steel |
+|---|---|---|---:|---|---:|---|---|
+| Elite | N/N/N | 0 / 1 / 99 / 0 | 0.909 | 0 / 0 / 100 / 0 | 0.926 | 0 / 0 | 0 / 0 |
+| Elite | H/N/N | 0 / 0 / 100 / 0 | 0.953 | 0 / 0 / 100 / 0 | 0.970 | 0 / 0 | 0 / 0 |
+| Elite | N/N/H | 0 / 0 / 98 / 2 | 0.990 | 0 / 0 / 87 / 13 | 1.009 | 0 / 0 | 0 / 0 |
+| Elite | N/H/H | 0 / 0 / 38 / 62 | 1.049 | 0 / 0 / 18 / 82 | 1.071 | 0 / 0 | 0 / 0 |
+| Elite | H/N/H | 0 / 0 / 55 / 45 | 1.034 | 0 / 0 / 32 / 68 | 1.053 | 0 / 0 | 0 / 0 |
+| Elite | H/H/H | 0 / 0 / 8 / 92 | 1.093 | 0 / 0 / 3 / 97 | 1.114 | 0 / 0 | 0 / 0 |
+| Good | N/N/N | 0 / 53 / 47 / 0 | 0.835 | 0 / 39 / 61 / 0 | 0.847 | 0 / 0 | 0 / 0 |
+| Good | H/N/N | 0 / 23 / 77 / 0 | 0.869 | 0 / 17 / 83 / 0 | 0.880 | 0 / 0 | 0 / 0 |
+| Good | N/N/H | 0 / 7 / 93 / 0 | 0.901 | 0 / 5 / 95 / 0 | 0.914 | 0 / 0 | 0 / 0 |
+| Good | N/H/H | 0 / 3 / 95 / 2 | 0.943 | 0 / 3 / 92 / 5 | 0.957 | 2 / 2 | 0 / 0 |
+| Good | H/N/H | 0 / 2 / 98 / 0 | 0.935 | 0 / 1 / 99 / 0 | 0.947 | 0 / 0 | 0 / 0 |
+| Good | H/H/H | 0 / 2 / 87 / 11 | 0.978 | 0 / 2 / 79 / 19 | 0.990 | 2 / 2 | 0 / 0 |
+| Average | N/N/N | 12 / 88 / 0 / 0 | 0.635 | 14 / 86 / 0 / 0 | 0.633 | 20 / 26 | 0 / 0 |
+| Average | H/N/N | 11 / 89 / 0 / 0 | 0.646 | 12 / 88 / 0 / 0 | 0.642 | 36 / 45 | 0 / 0 |
+| Average | N/N/H | 13 / 87 / 0 / 0 | 0.650 | 16 / 84 / 0 / 0 | 0.644 | 36 / 44 | 0 / 0 |
+| Average | N/H/H | 13 / 86 / 1 / 0 | 0.656 | 15 / 84 / 1 / 0 | 0.652 | 50 / 57 | 0 / 0 |
+| Average | H/N/H | 11 / 89 / 0 / 0 | 0.661 | 14 / 86 / 0 / 0 | 0.653 | 49 / 58 | 0 / 0 |
+| Average | H/H/H | 13 / 85 / 2 / 0 | 0.668 | 15 / 83 / 2 / 0 | 0.660 | 61 / 68 | 0 / 0 |
+| Poor | N/N/N | 99 / 1 / 0 / 0 | 0.352 | 99 / 1 / 0 / 0 | 0.345 | 99 / 99 | 0 / 0 |
+| Poor | H/N/N | 99 / 1 / 0 / 0 | 0.352 | 99 / 1 / 0 / 0 | 0.345 | 100 / 100 | 0 / 0 |
+| Poor | N/N/H | 99 / 1 / 0 / 0 | 0.349 | 99 / 1 / 0 / 0 | 0.342 | 100 / 100 | 0 / 0 |
+| Poor | N/H/H | 99 / 1 / 0 / 0 | 0.341 | 99 / 1 / 0 / 0 | 0.335 | 100 / 100 | 0 / 0 |
+| Poor | H/N/H | 99 / 1 / 0 / 0 | 0.349 | 99 / 1 / 0 / 0 | 0.343 | 100 / 100 | 0 / 0 |
+| Poor | H/H/H | 99 / 1 / 0 / 0 | 0.341 | 100 / 0 / 0 / 0 | 0.336 | 100 / 100 | 0 / 0 |
+# targets
+  T1   Average, all-Normal Iron: Rare <= 15 % (mostly Common/Uncommon)                   0.0 %  ok (margin +15.0)
+  T2   Good, all-Normal Iron: Rare 30-60 %                                              47.0 %  ok (margin +13.0)
+  T3   Good, all-Hard Iron: Epic 5-25 %                                                 11.4 %  ok (margin +6.4)
+  T4   Good, all-Hard Steel: Epic 5-25 %                                                18.9 %  ok (margin +6.2)
+  T5   Elite, all-Hard Iron: Epic >= 40 %                                               92.0 %  ok (margin +52.0)
+  T6   Elite, all-Hard Steel: Epic >= 40 %                                              97.1 %  ok (margin +57.1)
+  T7   Elite, Sharpening-Hard-only Iron: Epic <= 60 % (one Hard step is no guarantee)    2.1 %  ok (margin +58.0)
+  T8   Elite, Sharpening-Hard-only Steel: Epic <= 60 % (R4b-10)                         12.6 %  ok (margin +47.4)
+  T9   Average, all-Normal Iron: Uncommon or better >= 50 %                             88.2 %  ok (margin +38.2)
+  T10  Poor, all-Normal Iron: Common >= 70 %                                            99.4 %  ok (margin +29.4)
+  T11  Average, all-Normal Steel: Rare <= 25 %                                           0.0 %  ok (margin +25.0)
+required targets PASS, all targets PASS, min required margin 6.2 points; Epic-without-passed-Hard violations: 0

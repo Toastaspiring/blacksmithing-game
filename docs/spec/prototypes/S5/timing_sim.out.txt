@@ -1,0 +1,23 @@
+D = 7000 ms, N = 400000 honest submissions: early false positives 0
+  tolerance  1000 ms: beyond D + tol + A   A(open) 1.8523 %   A(median) 1.8620 %
+  tolerance  1500 ms: beyond D + tol + A   A(open) 1.3045 %   A(median) 1.3050 %
+  tolerance  2500 ms: beyond D + tol + A   A(open) 0.7540 %   A(median) 0.7595 %
+  tolerance  5000 ms: beyond D + tol + A   A(open) 0.0000 %   A(median) 0.0003 %
+  tolerance 10000 ms: beyond D + tol + A   A(open) 0.0000 %   A(median) 0.0000 %
+D = 15000 ms, N = 400000 honest submissions: early false positives 0
+  tolerance  1000 ms: beyond D + tol + A   A(open) 1.7965 %   A(median) 1.8083 %
+  tolerance  1500 ms: beyond D + tol + A   A(open) 1.2677 %   A(median) 1.2712 %
+  tolerance  2500 ms: beyond D + tol + A   A(open) 0.7368 %   A(median) 0.7395 %
+  tolerance  5000 ms: beyond D + tol + A   A(open) 0.0000 %   A(median) 0.0000 %
+  tolerance 10000 ms: beyond D + tol + A   A(open) 0.0000 %   A(median) 0.0000 %
+D = 31000 ms, N = 400000 honest submissions: early false positives 0
+  tolerance  1000 ms: beyond D + tol + A   A(open) 1.8205 %   A(median) 1.8322 %
+  tolerance  1500 ms: beyond D + tol + A   A(open) 1.2780 %   A(median) 1.2828 %
+  tolerance  2500 ms: beyond D + tol + A   A(open) 0.7535 %   A(median) 0.7592 %
+  tolerance  5000 ms: beyond D + tol + A   A(open) 0.0003 %   A(median) 0.0003 %
+  tolerance 10000 ms: beyond D + tol + A   A(open) 0.0000 %   A(median) 0.0000 %
+slow motion k beyond which a step is flagged (LATE_SOFT 1500) / timed out (LATE_HARD 5000):
+  D =  7000 ms: flagged k > 1.229 (ping 100) / 1.357 (ping held at 1 s); timed out k > 1.729 / 1.857
+  D = 11500 ms: flagged k > 1.139 (ping 100) / 1.217 (ping held at 1 s); timed out k > 1.443 / 1.522
+  D = 15000 ms: flagged k > 1.107 (ping 100) / 1.167 (ping held at 1 s); timed out k > 1.340 / 1.400
+  D = 31000 ms: flagged k > 1.052 (ping 100) / 1.081 (ping held at 1 s); timed out k > 1.165 / 1.194

@@ -1,0 +1,12 @@
+{
+  "name": "BlacksmithingGame",
+  "tree": {
+    "$className": "DataModel",
+    "ReplicatedStorage": { "$className": "ReplicatedStorage", "Blacksmith": { "$path": "src/shared" } },
+    "StarterPlayer": { "$className": "StarterPlayer",
+      "$properties": { "EnableMouseLockOption": false },
+      "StarterPlayerScripts": { "$className": "StarterPlayerScripts", "BlacksmithClient": { "$path": "src/client" } } },
+    "ServerScriptService": { "$className": "ServerScriptService", "BlacksmithServer": { "$path": "src/server" } },
+    "Workspace": { "$className": "Workspace", "$properties": { "StreamingEnabled": false } }
+  }
+}

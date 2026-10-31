@@ -1,0 +1,20 @@
+frame Fixed    A25 F1 + enclosed 20 deg grip core       max|dD| 0.0000 (bound 0.01) | Sm 0.0288 N | Ha 0.1037 N | Sh 0.0989 N | Th(All) 0.259 edge 5.433 chains 1
+frame Fixed    A26 F1 ring grip + 40 deg strap          max|dD| 0.0011 (bound 0.02) | Sm 0.0471 N | Ha 0.1048 N | Sh 0.0989 N | Th(All) 0.262 edge 5.433 chains 1
+frame Fixed    A27 F1 hilt shifted 0.04 in X            max|dD| 0.0000 (bound 0.02) | Sm 0.0288 N | Ha 0.1537 N | Sh 0.0989 N | Th(All) 0.259 edge 5.433 chains 1
+frame Fixed    C15 Arming rotated 4 deg about Z at the grip Sm 0.0353 N | Ha 0.2701 H | Sh 0.4291 H | Th(All) 0.282 edge 5.626 chains 1
+frame KeptGrip A25 F1 + enclosed 20 deg grip core       max|dD| 0.0000 (bound 0.01) | Sm 0.0288 N | Ha 0.1037 N | Sh 0.0989 N | Th(All) 0.259 edge 5.433 chains 1
+frame KeptGrip A26 F1 ring grip + 40 deg strap          max|dD| 0.0989 (bound 0.02) | Sm 0.0471 N | Ha 0.0336 N | Sh 0.0000 N | Th(All) 0.084 edge 2.823 chains 1
+frame KeptGrip A27 F1 hilt shifted 0.04 in X            max|dD| 0.0000 (bound 0.02) | Sm 0.0288 N | Ha 0.1537 N | Sh 0.0989 N | Th(All) 0.259 edge 5.433 chains 1
+frame KeptGrip C15 Arming rotated 4 deg about Z at the grip Sm 0.0353 N | Ha 0.2709 H | Sh 0.4291 H | Th(All) 0.284 edge 5.626 chains 1
+thinRef Striking A24: needle blade 0.02 x 3.0 x 0.02      Sm 0.0000 N | Ha 0.4000 H | Sh 0.3909 H | Th(All) 1.000 edge 6.022 chains 1
+thinRef Striking F3 Rapier                                Sm 0.0000 N | Ha 0.4423 H | Sh 0.6104 H | Th(All) 0.913 edge 7.409 chains 1
+thinRef Striking F5 StarterSword                          Sm 0.0288 N | Ha 0.1037 N | Sh 0.0989 N | Th(All) 0.259 edge 5.433 chains 1
+thinRef Striking C02 Arming (Iron)                        Sm 0.0355 N | Ha 0.1137 N | Sh 0.1318 N | Th(All) 0.284 edge 5.644 chains 1
+thinRef Striking C04 Rapier (Steel blade)                 Sm 0.0000 N | Ha 0.3368 H | Sh 0.4703 H | Th(All) 0.593 edge 7.107 chains 1
+thinRef Striking C10 Gamey filler, symmetric              Sm 0.1565 N | Ha 0.0000 N | Sh 0.0282 N | Th(All) 0.000 edge 4.980 chains 1
+thinRef Set      A24: needle blade 0.02 x 3.0 x 0.02      Sm 0.0000 N | Ha 0.0254 N | Sh 0.3909 H | Th(All) 0.063 edge 6.022 chains 1
+thinRef Set      F3 Rapier                                Sm 0.0000 N | Ha 0.4423 H | Sh 0.6104 H | Th(All) 0.913 edge 7.409 chains 1
+thinRef Set      F5 StarterSword                          Sm 0.0288 N | Ha 0.1037 N | Sh 0.0989 N | Th(All) 0.259 edge 5.433 chains 1
+thinRef Set      C02 Arming (Iron)                        Sm 0.0355 N | Ha 0.1137 N | Sh 0.1318 N | Th(All) 0.284 edge 5.644 chains 1
+thinRef Set      C04 Rapier (Steel blade)                 Sm 0.0000 N | Ha 0.3368 H | Sh 0.4703 H | Th(All) 0.593 edge 7.107 chains 1
+thinRef Set      C10 Gamey filler, symmetric              Sm 0.1565 N | Ha 0.0000 N | Sh 0.0282 N | Th(All) 0.000 edge 4.980 chains 1

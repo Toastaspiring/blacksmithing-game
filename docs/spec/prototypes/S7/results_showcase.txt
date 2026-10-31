@@ -1,0 +1,18 @@
+PASS place a on 1 -> Ok {a,_,_,_,_,_}
+PASS place a on 3 moves it {_,_,a,_,_,_} changed {3,1}
+PASS same again -> NoChange
+PASS slot 7 -> BadSlot
+PASS slot 2.5 -> BadSlot
+PASS slot 5 with 4 unlocked -> SlotLocked
+PASS unowned -> NotOwned
+PASS non-string id -> BadItem
+PASS empty id -> BadItem
+PASS 65-char unknown id -> NotOwned
+PASS swap b onto 3 (a leaves the stand) {_,_,b,_,_,_}
+PASS clear 3 -> Ok {_,_,_,_,_,_}
+PASS clear empty -> NoChange
+PASS sanitize {a,_,_,_,c,_} changed {2,3,4,6}
+PASS sanitize pads to length {a,_,_,_,_,_}
+PASS name mixed -> Iron-Steel Sword
+PASS name steel -> Steel Sword
+0 failures

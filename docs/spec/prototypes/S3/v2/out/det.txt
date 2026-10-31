@@ -1,0 +1,14 @@
+HoldZone: 150 runs, mismatches 0, timeline bytes min 198 mean 295 max 408
+TimingStrike: 150 runs, mismatches 0, timeline bytes min 34 mean 39 max 48
+PrecisionTrace: 150 runs, mismatches 0, timeline bytes min 2322 mean 3663 max 4240
+PT decode 1551 records (10869 B): 0.124 ms
+malformed:
+  not a buffer   -> NotBuffer ok
+  short          -> Short ok
+  version        -> Version ok
+  family         -> Family ok
+  duration       -> Duration ok
+  not alternating -> NotAlternating ok
+  past end       -> PastEnd ok
+  not increasing -> NotIncreasing ok
+  out of panel   -> OutOfPanel ok

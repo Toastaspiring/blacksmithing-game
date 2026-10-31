@@ -1,0 +1,14 @@
+arming sword (S2 fixture): AABB min (-0.55, 0.15, -0.15) max (0.55, 4.30, 0.15) size (1.10, 4.15, 0.30)
+Blade-slot AABB min (-0.10, 1.40, -0.03) max (0.10, 4.30, 0.03)
+right tip wedge: top edge midpoint (local (0,+hy,+hz)) -> (-0.00, 4.30, -0.00) (expect x = 0, y = 4.30)
+BaseCenter anchor (0.00, 0.15, 0.00)  -> item top above cradle = 4.15 studs
+on a stand: item spans plot y 2.05 .. 6.20
+InspectHitbox size (1.70, 4.75, 0.90)
+max item (= S2 hitbox 1.6 x 5 x 0.6): top at plot y 7.05, InspectHitbox (2.20, 5.60, 1.20)
+  results card 16:9    FOV 30, margin 1.08: camera distance 4.85 studs
+  inspect panel 4:3    FOV 30, margin 1.08: camera distance 6.42 studs
+  inventory tile 1:1   FOV 30, margin 1.08: camera distance 8.51 studs
+FLAT_X det = 1.0 ; blueprint Y -> (1.00, 0.00, 0.00), Z -> (0.00, 1.00, 0.00), X -> (0.00, 0.00, 1.00)
+lying on the anvil face (top y 3.0 station-local): Center pivot at y = 3.0 + 0.150; overhang beyond the 2.4-stud face: 1.75 studs
+VIEW_H (Rz -90) det = 1.0 ; blueprint Y -> (1.00, 0.00, 0.00) (screen right), Z -> (0.00, 0.00, 1.00) (to camera)
+budget: 8 plots x 6 slots x PARTS_MAX 24 = 1152 item parts (+48 hitboxes); workpieces 8 x 24 = 192

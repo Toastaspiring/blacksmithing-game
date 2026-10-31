@@ -1,0 +1,3 @@
+ProfileStore vendored from https://github.com/MadStudioRoblox/ProfileStore
+commit 45c9847cbcf1fc260369c50eb335aba7c35aecdd
+fetched 2026-10-31

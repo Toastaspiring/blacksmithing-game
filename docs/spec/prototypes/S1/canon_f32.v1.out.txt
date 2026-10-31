@@ -1,0 +1,1 @@
+float32 round trip: position mismatches 0 / 200000 ; quaternion mismatches 3113 / 200000 (max component change 1.0e-06)

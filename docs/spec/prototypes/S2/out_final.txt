@@ -1,0 +1,364 @@
+=== Validation / cleaning ===
+Minimal 4-part (Iron)                          parts= 4 errors=[] cleaned=[] gjkPairs=3 gjkIters=12
+Arming sword (Iron)                            parts= 6 errors=[] cleaned=[] gjkPairs=6 gjkIters=18
+Arming sword (Steel)                           parts= 6 errors=[] cleaned=[] gjkPairs=6 gjkIters=18
+Rapier (Steel blade)                           parts= 7 errors=[] cleaned=[] gjkPairs=7 gjkIters=19
+Cleaver (Iron)                                 parts= 6 errors=[] cleaned=[] gjkPairs=7 gjkIters=30
+Curved sabre (Steel)                           parts=10 errors=[] cleaned=[] gjkPairs=10 gjkIters=26
+Dagger (Iron)                                  parts= 6 errors=[] cleaned=[] gjkPairs=6 gjkIters=17
+Greatsword (Iron)                              parts= 6 errors=[] cleaned=[] gjkPairs=6 gjkIters=17
+Ornate (Iron, 18 parts)                        parts=18 errors=[] cleaned=[] gjkPairs=28 gjkIters=88
+Gamey filler, symmetric (24 parts)             parts=24 errors=[] cleaned=[Hidden1(enclosed),Hidden2(enclosed),Dust1(dust),Dust2(dust)] gjkPairs=25 gjkIters=93
+Gamey filler, lopsided (24 parts)              parts=24 errors=[] cleaned=[Hidden1(enclosed),Hidden2(enclosed),Dust1(dust),Dust2(dust)] gjkPairs=29 gjkIters=99
+Arming, blade in 5 segments                    parts=10 errors=[] cleaned=[] gjkPairs=10 gjkIters=25
+Arming, guard = half + mirror (+CornerWedges)  parts= 9 errors=[] cleaned=[] gjkPairs=11 gjkIters=37
+Arming translated (+0.13,+0.27,+0.05)          parts= 6 errors=[] cleaned=[] gjkPairs=6 gjkIters=18
+Arming rotated 4deg about Z at grip            parts= 6 errors=[] cleaned=[] gjkPairs=6 gjkIters=21
+
+=== Mass properties ===
+sword                                              vol    mass    comY   gripY  guardY     bal   reach  bladeL   I_grip
+Minimal 4-part (Iron)                           0.1870  1.4717   1.708   1.000   1.600   0.108   3.103   2.500   2.2643
+Arming sword (Iron)                             0.1061  0.8350   1.577   0.880   1.400   0.177   3.420   2.900   1.2208
+Arming sword (Steel)                            0.1061  0.8329   1.577   0.880   1.400   0.177   3.420   2.900   1.2177
+Rapier (Steel blade)                            0.0531  0.4174   1.487   0.770   1.246   0.242   4.130   3.654   0.8076
+Cleaver (Iron)                                  0.4731  3.7236   2.393   0.890   1.410   0.983   3.278   2.670  12.0811
+Curved sabre (Steel)                            0.0868  0.6818   1.736   0.870   1.380   0.356   3.815   3.272   1.4539
+Dagger (Iron)                                   0.0438  0.3446   1.030   0.610   0.960   0.070   1.890   1.540   0.1752
+Greatsword (Iron)                               0.1933  1.5214   2.035   1.030   1.710   0.325   3.950   3.270   3.7930
+Ornate (Iron, 18 parts)                         0.0803  0.6322   1.582   0.880   1.424   0.158   3.320   2.776   0.9395
+Gamey filler, symmetric (24 parts)              0.1931  1.5196   1.729   1.000   1.607   0.122   3.103   2.493   2.3851
+Gamey filler, lopsided (24 parts)               0.1931  1.5196   1.731   1.000   1.607   0.124   3.103   2.493   2.3978
+Arming, blade in 5 segments                     0.1061  0.8354   1.578   0.880   1.400   0.178   3.420   2.900   1.2220
+Arming, guard = half + mirror (+CornerWedges)   0.1076  0.8471   1.576   0.880   1.404   0.173   3.420   2.896   1.2283
+Arming translated (+0.13,+0.27,+0.05)           0.1061  0.8350   1.847   1.150   1.670   0.177   3.420   2.900   1.2208
+Arming rotated 4deg about Z at grip             0.1061  0.8350   1.576   0.880   1.399   0.177   3.420   2.893   1.2208
+
+=== Raw factors (set All for Volume/Thin/Asym/SC; Blade set in brackets) ===
+sword                                                V    thin  tauMean        L   asym[blade]     SC[blade]    edge   nEff joints  mats
+Minimal 4-part (Iron)                           0.1870   0.000   0.1877    3.900  0.000[0.000]  2.063[1.854]   5.020   4.00   3.57     1
+Arming sword (Iron)                             0.1061   0.316   0.1273    4.150  0.000[0.000]  2.247[2.280]   5.604   4.60   5.71     1
+Arming sword (Steel)                            0.1061   0.316   0.1273    4.150  0.000[0.000]  2.247[2.280]   5.604   4.60   5.71     1
+Rapier (Steel blade)                            0.0531   0.567   0.1021    4.780  0.000[0.000]  2.496[2.628]   7.067   5.19   6.53     2
+Cleaver (Iron)                                  0.4731   0.000   0.1547    3.880  0.277[0.330]  2.232[2.047]   5.968   6.00   8.47     1
+Curved sabre (Steel)                            0.0868   0.373   0.1104    4.492  0.264[0.687]  2.381[2.419]   6.480   8.49  11.52     2
+Dagger (Iron)                                   0.0438   0.000   0.1034    2.400  0.000[0.000]  1.983[1.817]   2.966   4.40   5.83     1
+Greatsword (Iron)                               0.1933   0.230   0.1437    4.880  0.000[0.000]  2.331[2.199]   6.397   5.20   6.73     1
+Ornate (Iron, 18 parts)                         0.0803   0.353   0.1128    4.110  0.000[0.000]  2.474[2.364]   5.371  11.57  24.16     1
+Gamey filler, symmetric (24 parts)              0.1928   0.037   0.1894    3.900  0.000[0.000]  2.113[1.906]   4.940   6.92   8.87     1
+Gamey filler, lopsided (24 parts)               0.1928   0.037   0.1882    3.900  0.028[0.057]  2.098[1.910]   4.980   6.92  10.04     1
+Arming, blade in 5 segments                     0.1061   0.315   0.1312    4.150  0.000[0.000]  2.265[2.319]   5.604   8.60   9.72     1
+Arming, guard = half + mirror (+CornerWedges)   0.1076   0.313   0.1327    4.150  0.000[0.000]  2.265[2.280]   5.604   5.98  11.17     1
+Arming translated (+0.13,+0.27,+0.05)           0.1061   0.316   0.1273    4.150  0.000[0.000]  2.245[2.277]   5.604   4.60   5.71     1
+Arming rotated 4deg about Z at grip             0.1061   0.314   0.1273    4.140  0.000[0.000]  2.245[2.277]   5.601   4.60   5.71     1
+
+=== Normalized factors x (All | Blade) ===
+sword                                             Vol   Thin   Asym     SC   Edge |  AsymB    SCB  EdgeB |  Parts  Joint    Mix
+Minimal 4-part (Iron)                           0.149  0.000  0.000  0.000  0.170 |  0.000  0.000  0.170 |  0.077  0.027  0.000
+Arming sword (Iron)                             0.036  0.316  0.000  0.184  0.267 |  0.000  0.226  0.267 |  0.123  0.129  0.000
+Arming sword (Steel)                            0.036  0.316  0.000  0.184  0.267 |  0.000  0.226  0.267 |  0.123  0.129  0.000
+Rapier (Steel blade)                            0.000  0.567  0.000  0.494  0.511 |  0.000  0.660  0.511 |  0.168  0.168  0.333
+Cleaver (Iron)                                  0.546  0.000  0.461  0.165  0.328 |  0.549  0.000  0.328 |  0.231  0.261  0.000
+Curved sabre (Steel)                            0.009  0.373  0.440  0.352  0.413 |  1.000  0.399  0.413 |  0.422  0.406  0.333
+Dagger (Iron)                                   0.000  0.000  0.000  0.000  0.000 |  0.000  0.000  0.000 |  0.108  0.135  0.000
+Greatsword (Iron)                               0.157  0.230  0.000  0.289  0.400 |  0.000  0.123  0.400 |  0.169  0.177  0.000
+Ornate (Iron, 18 parts)                         0.000  0.353  0.000  0.467  0.229 |  0.000  0.330  0.229 |  0.659  1.000  0.000
+Gamey filler, symmetric (24 parts)              0.157  0.037  0.000  0.017  0.157 |  0.000  0.000  0.157 |  0.301  0.280  0.000
+Gamey filler, lopsided (24 parts)               0.157  0.037  0.047  0.000  0.163 |  0.095  0.000  0.163 |  0.301  0.335  0.000
+Arming, blade in 5 segments                     0.036  0.315  0.000  0.206  0.267 |  0.000  0.274  0.267 |  0.431  0.320  0.000
+Arming, guard = half + mirror (+CornerWedges)   0.038  0.313  0.000  0.206  0.267 |  0.000  0.226  0.267 |  0.230  0.389  0.000
+Arming translated (+0.13,+0.27,+0.05)           0.036  0.316  0.000  0.182  0.267 |  0.000  0.221  0.267 |  0.123  0.129  0.000
+Arming rotated 4deg about Z at grip             0.036  0.314  0.000  0.182  0.267 |  0.000  0.221  0.267 |  0.123  0.129  0.000
+
+=== Difficulty per step: G / m / D -> tier (played) ===
+Minimal 4-part (Iron)                         
+    Smelting G=0.149 m=0.00 D=0.149 Normal
+    Hammering G=0.000 m=0.00 D=0.000 Normal
+    Sharpening G=0.085 m=0.00 D=0.085 Normal
+    *Quenching G=0.031 m=0.00 D=0.031 Normal
+    *Assembly G=0.039 m=0.00 D=0.039 Normal
+    *Finishing G=0.000 m=0.00 D=0.000 Normal
+Arming sword (Iron)                           
+    Smelting G=0.036 m=0.00 D=0.036 Normal
+    Hammering G=0.182 m=0.00 D=0.182 Normal
+    Sharpening G=0.179 m=0.00 D=0.179 Normal
+    *Quenching G=0.239 m=0.00 D=0.239 Hard
+    *Assembly G=0.101 m=0.00 D=0.101 Normal
+    *Finishing G=0.184 m=0.00 D=0.184 Normal
+Arming sword (Steel)                          
+    Smelting G=0.036 m=0.10 D=0.133 Normal
+    Hammering G=0.182 m=0.10 D=0.263 Hard
+    Sharpening G=0.179 m=0.10 D=0.261 Hard
+    *Quenching G=0.239 m=0.10 D=0.315 Hard
+    *Assembly G=0.101 m=0.10 D=0.191 Normal
+    *Finishing G=0.184 m=0.10 D=0.266 Hard
+Rapier (Steel blade)                          
+    Smelting G=0.000 m=0.10 D=0.100 Normal
+    Hammering G=0.375 m=0.10 D=0.438 Expert->Hard
+    Sharpening G=0.388 m=0.10 D=0.449 Expert->Hard
+    *Quenching G=0.407 m=0.10 D=0.467 Expert->Hard
+    *Assembly G=0.201 m=0.10 D=0.281 Hard
+    *Finishing G=0.494 m=0.10 D=0.545 Expert->Hard
+Cleaver (Iron)                                
+    Smelting G=0.546 m=0.00 D=0.546 Expert->Hard
+    Hammering G=0.188 m=0.00 D=0.188 Normal
+    Sharpening G=0.329 m=0.00 D=0.329 Hard
+    *Quenching G=0.092 m=0.00 D=0.092 Normal
+    *Assembly G=0.198 m=0.00 D=0.198 Normal
+    *Finishing G=0.165 m=0.00 D=0.165 Normal
+Curved sabre (Steel)                          
+    Smelting G=0.009 m=0.10 D=0.108 Normal
+    Hammering G=0.387 m=0.10 D=0.448 Expert->Hard
+    Sharpening G=0.586 m=0.10 D=0.628 Master->Hard
+    *Quenching G=0.393 m=0.10 D=0.453 Expert->Hard
+    *Assembly G=0.397 m=0.10 D=0.457 Expert->Hard
+    *Finishing G=0.352 m=0.10 D=0.417 Expert->Hard
+Dagger (Iron)                                 
+    Smelting G=0.000 m=0.00 D=0.000 Normal
+    Hammering G=0.000 m=0.00 D=0.000 Normal
+    Sharpening G=0.000 m=0.00 D=0.000 Normal
+    *Quenching G=0.043 m=0.00 D=0.043 Normal
+    *Assembly G=0.099 m=0.00 D=0.099 Normal
+    *Finishing G=0.000 m=0.00 D=0.000 Normal
+Greatsword (Iron)                             
+    Smelting G=0.157 m=0.00 D=0.157 Normal
+    Hammering G=0.179 m=0.00 D=0.179 Normal
+    Sharpening G=0.224 m=0.00 D=0.224 Hard
+    *Quenching G=0.206 m=0.00 D=0.206 Hard
+    *Assembly G=0.139 m=0.00 D=0.139 Normal
+    *Finishing G=0.289 m=0.00 D=0.289 Hard
+Ornate (Iron, 18 parts)                       
+    Smelting G=0.000 m=0.00 D=0.000 Normal
+    Hammering G=0.281 m=0.00 D=0.281 Hard
+    Sharpening G=0.180 m=0.00 D=0.180 Normal
+    *Quenching G=0.476 m=0.00 D=0.476 Expert->Hard
+    *Assembly G=0.681 m=0.00 D=0.681 Master->Hard
+    *Finishing G=0.467 m=0.00 D=0.467 Expert->Hard
+Gamey filler, symmetric (24 parts)            
+    Smelting G=0.157 m=0.00 D=0.157 Normal
+    Hammering G=0.020 m=0.00 D=0.020 Normal
+    Sharpening G=0.078 m=0.00 D=0.078 Normal
+    *Quenching G=0.143 m=0.00 D=0.143 Normal
+    *Assembly G=0.231 m=0.00 D=0.231 Hard
+    *Finishing G=0.017 m=0.00 D=0.017 Normal
+Gamey filler, lopsided (24 parts)             
+    Smelting G=0.157 m=0.00 D=0.157 Normal
+    Hammering G=0.029 m=0.00 D=0.029 Normal
+    Sharpening G=0.110 m=0.00 D=0.110 Normal
+    *Quenching G=0.143 m=0.00 D=0.143 Normal
+    *Assembly G=0.256 m=0.00 D=0.256 Hard
+    *Finishing G=0.000 m=0.00 D=0.000 Normal
+Arming, blade in 5 segments                   
+    Smelting G=0.036 m=0.00 D=0.036 Normal
+    Hammering G=0.188 m=0.00 D=0.188 Normal
+    Sharpening G=0.188 m=0.00 D=0.188 Normal
+    *Quenching G=0.361 m=0.00 D=0.361 Hard
+    *Assembly G=0.295 m=0.00 D=0.295 Hard
+    *Finishing G=0.206 m=0.00 D=0.206 Hard
+Arming, guard = half + mirror (+CornerWedges) 
+    Smelting G=0.038 m=0.00 D=0.038 Normal
+    Hammering G=0.187 m=0.00 D=0.187 Normal
+    Sharpening G=0.179 m=0.00 D=0.179 Normal
+    *Quenching G=0.280 m=0.00 D=0.280 Hard
+    *Assembly G=0.255 m=0.00 D=0.255 Hard
+    *Finishing G=0.206 m=0.00 D=0.206 Hard
+Arming translated (+0.13,+0.27,+0.05)         
+    Smelting G=0.036 m=0.00 D=0.036 Normal
+    Hammering G=0.181 m=0.00 D=0.181 Normal
+    Sharpening G=0.178 m=0.00 D=0.178 Normal
+    *Quenching G=0.239 m=0.00 D=0.239 Hard
+    *Assembly G=0.101 m=0.00 D=0.101 Normal
+    *Finishing G=0.182 m=0.00 D=0.182 Normal
+Arming rotated 4deg about Z at grip           
+    Smelting G=0.036 m=0.00 D=0.036 Normal
+    Hammering G=0.180 m=0.00 D=0.180 Normal
+    Sharpening G=0.178 m=0.00 D=0.178 Normal
+    *Quenching G=0.238 m=0.00 D=0.238 Hard
+    *Assembly G=0.101 m=0.00 D=0.101 Normal
+    *Finishing G=0.182 m=0.00 D=0.182 Normal
+
+=== Timing (best of 5, ms) ===
+sword                                           valid   surf   mass   edge factor   TOTAL   volS  surfS  edgeC
+Minimal 4-part (Iron)                            0.03   0.64   0.20   0.74   0.82    2.44   1496   2906   1952
+Arming sword (Iron)                              0.04   0.53   0.18   0.93   0.84    2.53   1208   2274   2086
+Arming sword (Steel)                             0.04   0.53   0.17   0.89   0.86    2.49   1208   2274   2086
+Rapier (Steel blade)                             0.04   0.47   0.13   0.60   0.77    1.99    714   1808   1464
+Cleaver (Iron)                                   0.06   1.69   0.61   3.23   1.70    7.30   4200   6136   7847
+Curved sabre (Steel)                             0.04   0.63   0.21   1.53   0.97    3.38   1144   2408   5312
+Dagger (Iron)                                    0.04   0.33   0.09   0.44   0.48    1.38    545   1248    936
+Greatsword (Iron)                                0.04   0.94   0.34   1.38   0.97    3.67   1811   3290   2934
+Ornate (Iron, 18 parts)                          0.10   1.55   0.24   1.43   1.28    4.60   1184   3784   2002
+Gamey filler, symmetric (24 parts)               0.19   1.48   0.27   1.04   1.44    4.43   1656   3926   1952
+Gamey filler, lopsided (24 parts)                0.13   1.48   0.32   1.05   1.32    4.31   1656   3926   1952
+Arming, blade in 5 segments                      0.04   0.61   0.21   0.90   0.79    2.55   1264   2452   2086
+Arming, guard = half + mirror (+CornerWedges)    0.05   0.71   0.19   0.84   0.77    2.57   1224   2409   2086
+Arming translated (+0.13,+0.27,+0.05)            0.03   0.54   0.16   0.80   0.77    2.31   1208   2274   2058
+Arming rotated 4deg about Z at grip              0.04   0.71   0.19   1.14   0.92    3.00   1208   2274   3256
+
+=== Edge chains (blade outline, sharpenable) ===
+Minimal 4-part (Iron)                          total=5.020 loops=1 chains: 4 pts / 5.020
+Arming sword (Iron)                            total=5.604 loops=1 chains: 6 pts / 5.604
+Arming sword (Steel)                           total=5.604 loops=1 chains: 6 pts / 5.604
+Rapier (Steel blade)                           total=7.067 loops=1 chains: 6 pts / 7.067
+Cleaver (Iron)                                 total=5.968 loops=1 chains: 5 pts / 5.968
+Curved sabre (Steel)                           total=6.480 loops=1 chains: 10 pts / 6.480
+Dagger (Iron)                                  total=2.966 loops=1 chains: 6 pts / 2.966
+Greatsword (Iron)                              total=6.397 loops=1 chains: 6 pts / 6.397
+Ornate (Iron, 18 parts)                        total=5.371 loops=1 chains: 6 pts / 5.371
+Gamey filler, symmetric (24 parts)             total=4.940 loops=1 chains: 4 pts / 4.940
+Gamey filler, lopsided (24 parts)              total=4.980 loops=1 chains: 4 pts / 4.980
+Arming, blade in 5 segments                    total=5.604 loops=1 chains: 6 pts / 5.604
+Arming, guard = half + mirror (+CornerWedges)  total=5.604 loops=1 chains: 6 pts / 5.604
+Arming translated (+0.13,+0.27,+0.05)          total=5.604 loops=1 chains: 6 pts / 5.604
+Arming rotated 4deg about Z at grip            total=5.601 loops=1 chains: 6 pts / 5.601
+Arming main chain: (0.100,1.480) (0.100,3.930) (0.010,4.260) (-0.020,4.250) (-0.100,3.930) (-0.100,1.480)
+
+=== MARKDOWN: physics ===
+| Sword | Parts (kept) | Volume st^3 | Mass mu | Balance st | Reach st | Blade len st | I_grip mu*st^2 | ms |
+|---|---|---|---|---|---|---|---|---|
+| Minimal 4-part (Iron) | 4 (4) | 0.1870 | 1.472 | 0.108 | 3.103 | 2.500 | 2.264 | 2.4 |
+| Arming sword (Iron) | 6 (6) | 0.1061 | 0.835 | 0.177 | 3.420 | 2.900 | 1.221 | 2.5 |
+| Arming sword (Steel) | 6 (6) | 0.1061 | 0.833 | 0.177 | 3.420 | 2.900 | 1.218 | 2.5 |
+| Rapier (Steel blade) | 7 (7) | 0.0531 | 0.417 | 0.242 | 4.130 | 3.654 | 0.808 | 2.0 |
+| Cleaver (Iron) | 6 (6) | 0.4731 | 3.724 | 0.983 | 3.278 | 2.670 | 12.081 | 7.3 |
+| Curved sabre (Steel) | 10 (10) | 0.0868 | 0.682 | 0.356 | 3.815 | 3.272 | 1.454 | 3.4 |
+| Dagger (Iron) | 6 (6) | 0.0438 | 0.345 | 0.070 | 1.890 | 1.540 | 0.175 | 1.4 |
+| Greatsword (Iron) | 6 (6) | 0.1933 | 1.521 | 0.325 | 3.950 | 3.270 | 3.793 | 3.7 |
+| Ornate (Iron, 18 parts) | 18 (18) | 0.0803 | 0.632 | 0.158 | 3.320 | 2.776 | 0.939 | 4.6 |
+| Gamey filler, symmetric (24 parts) | 24 (20) | 0.1931 | 1.520 | 0.122 | 3.103 | 2.493 | 2.385 | 4.4 |
+| Gamey filler, lopsided (24 parts) | 24 (20) | 0.1931 | 1.520 | 0.124 | 3.103 | 2.493 | 2.398 | 4.3 |
+| Arming, blade in 5 segments | 10 (10) | 0.1061 | 0.835 | 0.178 | 3.420 | 2.900 | 1.222 | 2.6 |
+| Arming, guard = half + mirror (+CornerWedges) | 9 (9) | 0.1076 | 0.847 | 0.173 | 3.420 | 2.896 | 1.228 | 2.6 |
+| Arming translated (+0.13,+0.27,+0.05) | 6 (6) | 0.1061 | 0.835 | 0.177 | 3.420 | 2.900 | 1.221 | 2.3 |
+| Arming rotated 4deg about Z at grip | 6 (6) | 0.1061 | 0.835 | 0.177 | 3.420 | 2.893 | 1.221 | 3.0 |
+
+=== MARKDOWN: blade profile ===
+| Sword | Grip axis | Blade mean thickness st | Blade width st | Cut index | Edge chains |
+|---|---|---|---|---|---|
+| Minimal 4-part (Iron) | (0.000, 1.000) | 0.100 | 0.230 | 0.30 | 1 |
+| Arming sword (Iron) | (-0.000, 1.000) | 0.060 | 0.186 | 0.77 | 1 |
+| Arming sword (Steel) | (-0.000, 1.000) | 0.060 | 0.186 | 0.77 | 1 |
+| Rapier (Steel blade) | (-0.000, 1.000) | 0.050 | 0.076 | 1.00 | 1 |
+| Cleaver (Iron) | (-0.000, 1.000) | 0.149 | 1.026 | 0.16 | 1 |
+| Curved sabre (Steel) | (-0.000, 1.000) | 0.060 | 0.171 | 0.89 | 1 |
+| Dagger (Iron) | (-0.000, 1.000) | 0.060 | 0.172 | 0.31 | 1 |
+| Greatsword (Iron) | (-0.000, 1.000) | 0.080 | 0.291 | 0.62 | 1 |
+| Ornate (Iron, 18 parts) | (-0.000, 1.000) | 0.045 | 0.223 | 1.00 | 1 |
+| Gamey filler, symmetric (24 parts) | (0.000, 1.000) | 0.106 | 0.231 | 0.27 | 1 |
+| Gamey filler, lopsided (24 parts) | (0.000, 1.000) | 0.106 | 0.231 | 0.27 | 1 |
+| Arming, blade in 5 segments | (-0.000, 1.000) | 0.060 | 0.186 | 0.77 | 1 |
+| Arming, guard = half + mirror (+CornerWedges) | (-0.000, 1.000) | 0.060 | 0.186 | 0.77 | 1 |
+| Arming translated (+0.13,+0.27,+0.05) | (-0.000, 1.000) | 0.060 | 0.186 | 0.77 | 1 |
+| Arming rotated 4deg about Z at grip | (-0.070, 0.998) | 0.060 | 0.186 | 0.76 | 1 |
+
+=== MARKDOWN: factors (raw -> x) ===
+| Sword | Volume | Thinness | Asym (All / Blade) | SC (All / Blade) | Edge st | PartCount | Joints | Mix |
+|---|---|---|---|---|---|---|---|---|
+| Minimal 4-part (Iron) | 0.187 -> 0.15 | 0.00 | 0.000 / 0.000 -> 0.00 / 0.00 | 2.06 / 1.85 -> 0.00 / 0.00 | 5.02 -> 0.17 | 4.0 -> 0.08 | 3.6 -> 0.03 | 1 -> 0.00 |
+| Arming sword (Iron) | 0.106 -> 0.04 | 0.32 | 0.000 / 0.000 -> 0.00 / 0.00 | 2.25 / 2.28 -> 0.18 / 0.23 | 5.60 -> 0.27 | 4.6 -> 0.12 | 5.7 -> 0.13 | 1 -> 0.00 |
+| Arming sword (Steel) | 0.106 -> 0.04 | 0.32 | 0.000 / 0.000 -> 0.00 / 0.00 | 2.25 / 2.28 -> 0.18 / 0.23 | 5.60 -> 0.27 | 4.6 -> 0.12 | 5.7 -> 0.13 | 1 -> 0.00 |
+| Rapier (Steel blade) | 0.053 -> 0.00 | 0.57 | 0.000 / 0.000 -> 0.00 / 0.00 | 2.50 / 2.63 -> 0.49 / 0.66 | 7.07 -> 0.51 | 5.2 -> 0.17 | 6.5 -> 0.17 | 2 -> 0.33 |
+| Cleaver (Iron) | 0.473 -> 0.55 | 0.00 | 0.277 / 0.330 -> 0.46 / 0.55 | 2.23 / 2.05 -> 0.17 / 0.00 | 5.97 -> 0.33 | 6.0 -> 0.23 | 8.5 -> 0.26 | 1 -> 0.00 |
+| Curved sabre (Steel) | 0.087 -> 0.01 | 0.37 | 0.264 / 0.687 -> 0.44 / 1.00 | 2.38 / 2.42 -> 0.35 / 0.40 | 6.48 -> 0.41 | 8.5 -> 0.42 | 11.5 -> 0.41 | 2 -> 0.33 |
+| Dagger (Iron) | 0.044 -> 0.00 | 0.00 | 0.000 / 0.000 -> 0.00 / 0.00 | 1.98 / 1.82 -> 0.00 / 0.00 | 2.97 -> 0.00 | 4.4 -> 0.11 | 5.8 -> 0.13 | 1 -> 0.00 |
+| Greatsword (Iron) | 0.193 -> 0.16 | 0.23 | 0.000 / 0.000 -> 0.00 / 0.00 | 2.33 / 2.20 -> 0.29 / 0.12 | 6.40 -> 0.40 | 5.2 -> 0.17 | 6.7 -> 0.18 | 1 -> 0.00 |
+| Ornate (Iron, 18 parts) | 0.080 -> 0.00 | 0.35 | 0.000 / 0.000 -> 0.00 / 0.00 | 2.47 / 2.36 -> 0.47 / 0.33 | 5.37 -> 0.23 | 11.6 -> 0.66 | 24.2 -> 1.00 | 1 -> 0.00 |
+| Gamey filler, symmetric (24 parts) | 0.193 -> 0.16 | 0.04 | 0.000 / 0.000 -> 0.00 / 0.00 | 2.11 / 1.91 -> 0.02 / 0.00 | 4.94 -> 0.16 | 6.9 -> 0.30 | 8.9 -> 0.28 | 1 -> 0.00 |
+| Gamey filler, lopsided (24 parts) | 0.193 -> 0.16 | 0.04 | 0.028 / 0.057 -> 0.05 / 0.10 | 2.10 / 1.91 -> 0.00 / 0.00 | 4.98 -> 0.16 | 6.9 -> 0.30 | 10.0 -> 0.34 | 1 -> 0.00 |
+| Arming, blade in 5 segments | 0.106 -> 0.04 | 0.31 | 0.000 / 0.000 -> 0.00 / 0.00 | 2.27 / 2.32 -> 0.21 / 0.27 | 5.60 -> 0.27 | 8.6 -> 0.43 | 9.7 -> 0.32 | 1 -> 0.00 |
+| Arming, guard = half + mirror (+CornerWedges) | 0.108 -> 0.04 | 0.31 | 0.000 / 0.000 -> 0.00 / 0.00 | 2.27 / 2.28 -> 0.21 / 0.23 | 5.60 -> 0.27 | 6.0 -> 0.23 | 11.2 -> 0.39 | 1 -> 0.00 |
+| Arming translated (+0.13,+0.27,+0.05) | 0.106 -> 0.04 | 0.32 | 0.000 / 0.000 -> 0.00 / 0.00 | 2.25 / 2.28 -> 0.18 / 0.22 | 5.60 -> 0.27 | 4.6 -> 0.12 | 5.7 -> 0.13 | 1 -> 0.00 |
+| Arming rotated 4deg about Z at grip | 0.106 -> 0.04 | 0.31 | 0.000 / 0.000 -> 0.00 / 0.00 | 2.25 / 2.28 -> 0.18 / 0.22 | 5.60 -> 0.27 | 4.6 -> 0.12 | 5.7 -> 0.13 | 1 -> 0.00 |
+
+=== MARKDOWN: difficulty (G_s / D_s -> played tier) ===
+| Sword | Smelting | Hammering | Sharpening | *Quenching | *Assembly | *Finishing |
+|---|---|---|---|---|---|---|
+| Minimal 4-part (Iron) | 0.149 / 0.149 Normal | 0.000 / 0.000 Normal | 0.085 / 0.085 Normal | 0.031 / 0.031 Normal | 0.039 / 0.039 Normal | 0.000 / 0.000 Normal |
+| Arming sword (Iron) | 0.036 / 0.036 Normal | 0.182 / 0.182 Normal | 0.179 / 0.179 Normal | 0.239 / 0.239 Hard | 0.101 / 0.101 Normal | 0.184 / 0.184 Normal |
+| Arming sword (Steel) | 0.036 / 0.133 Normal | 0.182 / 0.263 Hard | 0.179 / 0.261 Hard | 0.239 / 0.315 Hard | 0.101 / 0.191 Normal | 0.184 / 0.266 Hard |
+| Rapier (Steel blade) | 0.000 / 0.100 Normal | 0.375 / 0.438 Hard (Expert) | 0.388 / 0.449 Hard (Expert) | 0.407 / 0.467 Expert | 0.201 / 0.281 Hard | 0.494 / 0.545 Expert |
+| Cleaver (Iron) | 0.546 / 0.546 Hard (Expert) | 0.188 / 0.188 Normal | 0.329 / 0.329 Hard | 0.092 / 0.092 Normal | 0.198 / 0.198 Normal | 0.165 / 0.165 Normal |
+| Curved sabre (Steel) | 0.009 / 0.108 Normal | 0.387 / 0.448 Hard (Expert) | 0.586 / 0.628 Hard (Master) | 0.393 / 0.453 Expert | 0.397 / 0.457 Expert | 0.352 / 0.417 Expert |
+| Dagger (Iron) | 0.000 / 0.000 Normal | 0.000 / 0.000 Normal | 0.000 / 0.000 Normal | 0.043 / 0.043 Normal | 0.099 / 0.099 Normal | 0.000 / 0.000 Normal |
+| Greatsword (Iron) | 0.157 / 0.157 Normal | 0.179 / 0.179 Normal | 0.224 / 0.224 Hard | 0.206 / 0.206 Hard | 0.139 / 0.139 Normal | 0.289 / 0.289 Hard |
+| Ornate (Iron, 18 parts) | 0.000 / 0.000 Normal | 0.281 / 0.281 Hard | 0.180 / 0.180 Normal | 0.476 / 0.476 Expert | 0.681 / 0.681 Master | 0.467 / 0.467 Expert |
+| Gamey filler, symmetric (24 parts) | 0.157 / 0.157 Normal | 0.020 / 0.020 Normal | 0.078 / 0.078 Normal | 0.143 / 0.143 Normal | 0.231 / 0.231 Hard | 0.017 / 0.017 Normal |
+| Gamey filler, lopsided (24 parts) | 0.157 / 0.157 Normal | 0.029 / 0.029 Normal | 0.110 / 0.110 Normal | 0.143 / 0.143 Normal | 0.256 / 0.256 Hard | 0.000 / 0.000 Normal |
+| Arming, blade in 5 segments | 0.036 / 0.036 Normal | 0.188 / 0.188 Normal | 0.188 / 0.188 Normal | 0.361 / 0.361 Hard | 0.295 / 0.295 Hard | 0.206 / 0.206 Hard |
+| Arming, guard = half + mirror (+CornerWedges) | 0.038 / 0.038 Normal | 0.187 / 0.187 Normal | 0.179 / 0.179 Normal | 0.280 / 0.280 Hard | 0.255 / 0.255 Hard | 0.206 / 0.206 Hard |
+| Arming translated (+0.13,+0.27,+0.05) | 0.036 / 0.036 Normal | 0.181 / 0.181 Normal | 0.178 / 0.178 Normal | 0.239 / 0.239 Hard | 0.101 / 0.101 Normal | 0.182 / 0.182 Normal |
+| Arming rotated 4deg about Z at grip | 0.036 / 0.036 Normal | 0.180 / 0.180 Normal | 0.178 / 0.178 Normal | 0.238 / 0.238 Hard | 0.101 / 0.101 Normal | 0.182 / 0.182 Normal |
+
+=== Mirror tool check (vertex sets) ===
+Block        max vertex mismatch = 0.00e+00   centroid mismatch = 0.00e+00
+Wedge        max vertex mismatch = 0.00e+00   centroid mismatch = 0.00e+00
+CornerWedge  max vertex mismatch = 2.32e-16   centroid mismatch = 1.21e-17
+Z-mirror Block        samples=1368 outside-mirror=0  volume A=0.009361 B=0.009361
+Z-mirror Wedge        samples=684 outside-mirror=0  volume A=0.004680 B=0.004680
+Z-mirror CornerWedge  samples=457 outside-mirror=0  volume A=0.003120 B=0.003120
+Z-mirror Cylinder     samples=672 outside-mirror=0  volume A=0.004570 B=0.004570
+
+=== Contact tolerance checks (CONTACT_TOL = 0.01) ===
+face-face flush                      connected=true  dist~0.0000 iters=1
+face gap 0.005                       connected=true  dist~0.0050 iters=1
+face gap 0.015                       connected=false dist~0.0150 iters=1
+edge on face (45deg) flush           connected=true  dist~0.0000 iters=3
+edge on face gap 0.008               connected=true  dist~0.0080 iters=3
+edge-edge crossed gap 0.012          connected=false dist~0.0120 iters=1
+ball on face flush                   connected=true  dist~0.0082 iters=3
+ball gap 0.02                        connected=false dist~0.0182 iters=4
+cylinder side on face flush          connected=true  dist~0.0004 iters=5
+cylinder rotated 33deg, gap 0.009    connected=true  dist~0.0093 iters=6
+cylinder rotated 33deg, gap 0.012    connected=false dist~0.0120 iters=1
+wedge slope on block edge, gap 0.006 connected=true  dist~0.0085 iters=3
+cornerwedge apex touching face       connected=true  dist~0.0000 iters=2
+overlapping 50%                      connected=true  dist~0.0000 iters=2
+
+=== Validation error cases ===
+pommel detached by 0.03              errors=[DISCONNECTED:Pommel]
+blade beyond hitbox top              errors=[OUT_OF_HITBOX:Blade]
+no grip                              errors=[SLOT_MISSING:Grip,DISCONNECTED:Pommel]
+upside-down                          errors=[BLADE_NOT_ABOVE_GRIP]
+
+=== Aliasing: global cell-centre voxel grid (cell 0.05) vs S2 per-part sampling ===
+exact blade volume = 0.03000
+dz=0.000  global-grid V=0.05000 (+66.7%)   S2 owned blade V=0.03000
+dz=0.005  global-grid V=0.05000 (+66.7%)   S2 owned blade V=0.03000
+dz=0.010  global-grid V=0.02500 (-16.7%)   S2 owned blade V=0.03000
+dz=0.015  global-grid V=0.02500 (-16.7%)   S2 owned blade V=0.03000
+dz=0.020  global-grid V=0.02500 (-16.7%)   S2 owned blade V=0.03000
+dz=0.025  global-grid V=0.02500 (-16.7%)   S2 owned blade V=0.03000
+
+=== SurfaceComplexity raw (S/(6V^2/3)) vs VisibleParts (inverse Simpson of exposed areas) ===
+Minimal 4-part (Iron)                          SC_all=2.063 SC_blade=1.854  Vis_all=3.35 Vis_blade=1.00  exposedA=4.048
+Arming sword (Iron)                            SC_all=2.247 SC_blade=2.280  Vis_all=3.36 Vis_blade=1.21  exposedA=3.022
+Arming sword (Steel)                           SC_all=2.247 SC_blade=2.280  Vis_all=3.36 Vis_blade=1.21  exposedA=3.022
+Rapier (Steel blade)                           SC_all=2.496 SC_blade=2.628  Vis_all=3.77 Vis_blade=1.13  exposedA=2.116
+Cleaver (Iron)                                 SC_all=2.232 SC_blade=2.047  Vis_all=2.60 Vis_blade=1.79  exposedA=8.132
+Curved sabre (Steel)                           SC_all=2.381 SC_blade=2.419  Vis_all=7.67 Vis_blade=5.73  exposedA=2.801
+Dagger (Iron)                                  SC_all=1.983 SC_blade=1.817  Vis_all=3.77 Vis_blade=1.34  exposedA=1.478
+Greatsword (Iron)                              SC_all=2.331 SC_blade=2.199  Vis_all=3.20 Vis_blade=1.18  exposedA=4.676
+Ornate (Iron, 18 parts)                        SC_all=2.474 SC_blade=2.364  Vis_all=10.26 Vis_blade=3.98  exposedA=2.764
+Gamey filler, symmetric (24 parts)             SC_all=2.113 SC_blade=1.906  Vis_all=3.90 Vis_blade=1.24  exposedA=4.232
+Gamey filler, lopsided (24 parts)              SC_all=2.098 SC_blade=1.910  Vis_all=3.83 Vis_blade=1.24  exposedA=4.201
+Arming, blade in 5 segments                    SC_all=2.265 SC_blade=2.319  Vis_all=6.37 Vis_blade=5.90  exposedA=3.047
+Arming, guard = half + mirror (+CornerWedges)  SC_all=2.265 SC_blade=2.280  Vis_all=4.17 Vis_blade=1.21  exposedA=3.075
+Arming translated (+0.13,+0.27,+0.05)          SC_all=2.245 SC_blade=2.277  Vis_all=3.36 Vis_blade=1.21  exposedA=3.020
+Arming rotated 4deg about Z at grip            SC_all=2.245 SC_blade=2.277  Vis_all=3.36 Vis_blade=1.21  exposedA=3.020
+
+=== Edge length vs whole-sword rotation about Z (arming, pivot at grip) ===
+rot  0 deg: edge=5.604 chains=1  asymAll=0.000 thin=0.316 SC=2.247 errors=[]
+rot  1 deg: edge=5.605 chains=1  asymAll=0.000 thin=0.316 SC=2.247 errors=[]
+rot  2 deg: edge=5.598 chains=1  asymAll=0.000 thin=0.315 SC=2.245 errors=[]
+rot  3 deg: edge=5.603 chains=1  asymAll=0.000 thin=0.315 SC=2.245 errors=[]
+rot  5 deg: edge=5.628 chains=1  asymAll=0.000 thin=0.313 SC=2.247 errors=[]
+rot  7 deg: edge=5.647 chains=1  asymAll=0.000 thin=0.310 SC=2.247 errors=[]
+rot  9 deg: edge=5.636 chains=1  asymAll=0.000 thin=0.307 SC=2.245 errors=[]
+
+=== Adversarial worst case: 24 large overlapping parts filling the hitbox ===
+errors=[] volS=7290 (h=0.200) surfS=4014 (h=0.320) edgeCells=11968
+ms: valid 0.5 surf 13.6 mass 2.6 edge 14.1 factors 4.8 TOTAL 35.7
+
+sd() cost: 0.061 us per call (1000000 calls, checksum -23270.774)
+
+=== Determinism (two runs, exact equality) ===
+sabre identical across runs: true

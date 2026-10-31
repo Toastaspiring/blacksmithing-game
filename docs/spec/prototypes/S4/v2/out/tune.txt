@@ -1,0 +1,9 @@
+steelT 1.00 gamma 0.15: 300 feasible triples; U 0.40-0.64, R 0.83-0.85, E 1.02-1.05; best min margin 8.2 at 0.40 / 0.84 / 1.03
+steelT 1.02 gamma 0.15: 225 feasible triples; U 0.40-0.64, R 0.83-0.85, E 1.03-1.05; best min margin 6.2 at 0.40 / 0.84 / 1.04
+steelT 1.03 gamma 0.15: 150 feasible triples; U 0.40-0.64, R 0.83-0.85, E 1.04-1.05; best min margin 2.2 at 0.40 / 0.83 / 1.05
+steelT 1.04 gamma 0.15: 75 feasible triples; U 0.40-0.64, R 0.83-0.85, E 1.05-1.05; best min margin 0.1 at 0.40 / 0.83 / 1.05
+steelT 1.05 gamma 0.15: no feasible triple
+steelT 1.06 gamma 0.15: no feasible triple
+steelT 1.07 gamma 0.15: no feasible triple
+steelT 1.08 gamma 0.15: no feasible triple
+steelT 1.10 gamma 0.15: no feasible triple

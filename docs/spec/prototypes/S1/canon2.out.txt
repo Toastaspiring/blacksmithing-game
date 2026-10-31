@@ -1,0 +1,9 @@
+cases=1000000  rejected=0  idempotency failures=0
+quaternion branch: kept as given=750209  renormalized=249791  hemisphere flips=474555
+max | |q|^2-1 | after one renormalization = 6.661e-16  (threshold 1e-09; kept-branch max 1.000e-09)
+max orthonormality error of R(q) (s = 2/|q|^2) = 1.332e-15
+float32 round trip (sampled 1/10): pos components changed 292308 / 300000 (max 4.77e-07 stud), rot components changed 400000 / 400000 (max 2.98e-08)
+bound edge cases: 0 / 9 wrong
+hook: Ball {0.3,0.5,0.4} -> {0.3,0.3,0.3}; Cylinder {1,0.3,0.2} -> {1,0.2,0.2}
+-0 handling: pos[1] = 0 (1/x = inf), rot = {0, 0, 0, 1}
+17-significant-digit round trip failures over 200000 doubles: 0
