@@ -13,6 +13,9 @@
 -- luau-lsp's --formatter=plain is its luacheck format, which always exits 0 (AnalyzeCli.cpp, also in 1.56.0 and
 -- 1.67.0), so the diagnostics are parsed here: any TypeError or SyntaxError fails, and so do the lints
 -- UnknownGlobal, DeprecatedApi and ImplicitReturn (§14.4); other lints are listed without failing.
+-- The Roblox definitions file must be usable before pass A runs (tests/Meta/GlobalTypes: size, ending, tokens,
+-- brackets, declaration blocks, the globals the project needs), since luau-lsp loads an empty one silently; a file
+-- luau-lsp itself refuses to read also exits 4.
 
 local fs = require("@lune/fs")
 local process = require("@lune/process")
@@ -45,6 +48,7 @@ local function spawn(program: string, args: { string }): Run?
 end
 
 local function main(): never
+	local GlobalTypes = require("../tests/Meta/GlobalTypes")
 	local Requires = require("../tests/Meta/Requires")
 	local Tree = require("../tests/Meta/Tree")
 
@@ -74,6 +78,17 @@ local function main(): never
 	end
 	if not fs.isFile(DEFINITIONS) then
 		finish(4, "MISSING TOOL: " .. DEFINITIONS .. " (see tools/README.md)")
+	end
+	do
+		local okRead, text = pcall(fs.readFile, DEFINITIONS)
+		local why, stats = GlobalTypes.check(if okRead then text else "")
+		if not okRead then
+			why = "cannot be read (" .. (string.match(tostring(text), "^[^\n]*") or "") .. ")"
+		end
+		if why then
+			finish(4, "MISSING TOOL: " .. DEFINITIONS .. " is unusable: " .. why .. "; download it again (tools/README.md)")
+		end
+		print(string.format("[tools] %s: %d bytes, %d declaration blocks", DEFINITIONS, stats.bytes, stats.blocks))
 	end
 	local home = process.env.USERPROFILE or process.env.HOME or ""
 	local typedefs = home .. "/.lune/.typedefs/" .. LUNE_TYPEDEFS_VERSION .. "/process.luau"
@@ -196,6 +211,7 @@ local function main(): never
 				end
 			end
 		end
+		local definitionsRefused = false
 		for _, line in string.split(r.err, "\n") do
 			line = string.gsub(line, "\r$", "")
 			local benign = line == ""
@@ -204,10 +220,17 @@ local function main(): never
 					benign = true
 				end
 			end
+			if string.find(line, GlobalTypes.LUAU_LSP_REJECTS, 1, true) then
+				definitionsRefused = true
+			end
 			if not benign then
 				passErrors += 1
 				print("  stderr  " .. line)
 			end
+		end
+		if definitionsRefused then
+			finish(4, "MISSING TOOL: luau-lsp could not read " .. DEFINITIONS .. " (pass " .. pass.name .. "); download it "
+				.. "again (tools/README.md)")
 		end
 		if not r.ok then
 			passErrors += 1

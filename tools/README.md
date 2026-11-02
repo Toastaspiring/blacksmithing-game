@@ -22,6 +22,14 @@ Build and test tooling (SPEC §1.2, §14.2). Nothing here is synced into the pla
 When the luau-lsp pin in `aftman.toml` changes, download the same file from the new tag's `scripts/` folder, update
 this table, and run `lune run scripts/verify`.
 
+`scripts/verify` refuses an empty, cut or foreign file with exit 4 before luau-lsp runs, because luau-lsp 1.70.1
+loads an empty definitions file silently. The checks are `tests/Meta/GlobalTypes` (planted in
+`tests/Meta/Tools.spec.luau`), in order: at least 100,000 bytes, a final newline, the text tokenizes, brackets
+balance, at least 500 `declare extern type … with` blocks each closed by one `end`, and `declare` lines for the
+globals `game`, `workspace`, `script`, `Enum`, `Instance`, `Vector3`, `CFrame`, `Color3` and `task`. Verify also exits
+4 when luau-lsp prints `Failed to read definitions file`. When the pin changes, check `GlobalTypes.MIN_BLOCKS` (the
+1.70.1 file has 2,238 blocks) and `GlobalTypes.REQUIRED` against the new file.
+
 ## Why luau-lsp 1.70.1 and not 1.67.0
 
 SPEC §14.4 asks for luau-lsp ≥ 1.67.0, and the approved SPEC pinned 1.67.0 itself in §1.4. 1.67.0 cannot run here:

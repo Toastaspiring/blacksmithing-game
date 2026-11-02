@@ -1,6 +1,6 @@
 # Blacksmithing Game — Technical Specification (Phase 1 MVP)
 
-> Roblox · Rojo 7.7.0 · Luau --!strict · ProfileStore · Spec v1.0 for designer review · 2026-10-31
+> Roblox · Rojo 7.7.1 · Luau --!strict · ProfileStore · Spec v1.0 for designer review · 2026-10-31
 
 ---
 
@@ -225,7 +225,7 @@ tree is self-contained: `test.project.json` (S8 §14) repeats these nodes and `$
 Place settings: `StreamingEnabled = false` (S7 has no streaming code), `EnableMouseLockOption = false` (S6).
 ```toml
 [tools]   # aftman.toml
-rojo = "rojo-rbx/rojo@7.7.0"         # = the Studio plugin; 7.7.0 serves MessagePack, rc.1 served JSON
+rojo = "rojo-rbx/rojo@7.7.1"         # = the Studio plugin (rojo plugin install); 7.7.x serves MessagePack, rc.1 served JSON
 lune = "lune-org/lune@0.8.9"
 luau-lsp = "JohnnyMorganz/luau-lsp@1.70.1"   # >= 1.67.0: named --definitions, sourcemap-aware string requires
 ```
@@ -773,7 +773,7 @@ Canonical.draft(raw: unknown): CanonResult<Schema.BlueprintDraft>   -- untrusted
 Canonical.quat(q: Schema.Quat): Schema.Quat                         -- C3–C5 on a quaternion that passed C1–C2
 Canonical.isCanonical(core: Schema.BlueprintCore, opts: { bounds: boolean? }?): boolean
 	-- schema, name, type and parts structurally valid and a fixed point; other keys (a record's id, revision, times,
-	-- analysis; a snapshot's sourceId, sourceRevision) are ignored; bounds = false skips C2's bound tests (stored data)
+	-- analysis; a snapshot's sourceId, sourceRevision) are ignored; bounds = false skips C2's bound tests and the enabled and allowed-slot checks (stored data: a row retired later stays readable)
 Canonical.guid(raw: unknown): string?                               -- upper-cased 8-4-4-4-12 hex, else nil
 
 -- Blueprint/Quat.luau: the only quaternion module (S2 math, S6 display, S7 rendering)
@@ -2108,11 +2108,11 @@ ItemViews.owner(item: IS.ItemRecord): IS.OwnerItemView
 ### 9.5 Quantization of persisted numbers
 
 A derived scalar that is stored and feeds a later computation is quantized once, where it is produced and before
-any threshold, with `Util/Quantize.q(x, SCALAR_SCALE)` = `math.round(x · 1e4) / 1e4` (errors on non-finite; −0 → 0;
-idempotent): G_s, m_s, D_s (S2, before `tierFor`); step scores (S3, before the pass line, `ScoreMismatch` and the
-outcome); T, Q and stats (S4, before the rarity mapping). Transforms and physics stay raw doubles; seeds,
-`durationMs`, times and ids are integers. Persistence and server-only code never quantize. A recompute at the same
-versions is therefore bit-identical.
+any threshold, with `Util/Quantize.q(x, SCALAR_SCALE)` = `math.round(x · 1e4) / 1e4` (errors on non-finite and on
+|round(x · 1e4)| ≥ 2^51, where it stops being idempotent; −0 → 0; idempotent): G_s, m_s, D_s (S2, before `tierFor`);
+step scores (S3, before the pass line, `ScoreMismatch` and the outcome); T, Q and stats (S4, before the rarity
+mapping). Transforms and physics stay raw doubles; seeds, `durationMs`, times and ids are integers. Persistence
+and server-only code never quantize. A recompute at the same versions is therefore bit-identical.
 
 ### 9.6 Versioning, migration and the load pipeline
 
@@ -3400,7 +3400,7 @@ Dump.canonical(v: any): string       -- sorted keys, %.17g, −0 → 0;  Golden.
 
 ### 14.4 Static analysis and meta rules
 
-`aftman.toml` pins lune 0.8.9, rojo 7.7.0, luau-lsp ≥ 1.67.0 (1.70.1); `globalTypes.None.d.luau` (pinned tag's
+`aftman.toml` pins lune 0.8.9, rojo 7.7.1, luau-lsp ≥ 1.67.0 (1.70.1); `globalTypes.None.d.luau` (pinned tag's
 `scripts/` folder) is committed; `.luaurc` is strict.
 
 ```
@@ -3415,7 +3415,7 @@ Any error fails (exit 3); `UnknownGlobal`, `DeprecatedApi` and `ImplicitReturn` 
 | Id | Rule (token scans skip strings and comments) |
 |---|---|
 | T-META-01 | every `.luau` under `src/` and `tests/` starts with `--!strict` |
-| T-META-02 | a `src/shared` file is pure unless line 2 is `-- @roblox-bound` and it is on the `tests/Meta` allowlist (`Net/Remotes`, `Net/Client`, `Util/Signal`, `ItemRender/ItemModelBuilder`); pure files use none of `game workspace script Instance.new Vector3 CFrame Color3 Random.new math.random os.time os.clock tick( DateTime task. wait( print warn` and require no `@roblox-bound` file |
+| T-META-02 | a `src/shared` file is pure unless line 2 is `-- @roblox-bound` and it is on the `tests/Meta` allowlist (`Net/Remotes`, `Net/Client`, `Util/Signal`, `ItemRender/ItemModelBuilder`); pure files use none of `game workspace script Instance.new Vector3 CFrame Color3 Random.new math.random os.time os.clock os.date tick( DateTime task. wait( print warn`, no other Roblox datatype (`Enum Vector2 UDim UDim2 Rect Ray Region3 BrickColor TweenInfo NumberRange NumberSequence ColorSequence PhysicalProperties RaycastParams OverlapParams Font`) and no `init.luau`, and require no `@roblox-bound` file |
 | T-META-03 | `Blueprint/ Physics/ Minigames/ Crafting/ Pipeline Items/ Session/` use no `math.sin cos tan exp log pow atan asin acos` and no `^`, except lines tagged `-- allow-transcendental: <reason>` |
 | T-META-04 | the same folders never accumulate floats while iterating a keyed table |
 | T-META-05, 06 | runner self-test (`tools/runner-selftest/{pass, fail, broken}` exit 0 / 1 / 2); no `:Reconcile(` in `src/` |
@@ -4268,7 +4268,7 @@ Vendored, unchanged.
 | S5 | Re-run `session_scenarios.luau` under §7.6's abort rule for early submits and wrong-session or wrong-step submits (E-S5.2 ran the earlier refuse-and-continue rule). |
 | S5 | Name the pure dispatch-order helper in `Net/` that T-NET-04 tests (§10.3). |
 | S5 | `Minigames.judge` runs synchronously in Submit: if S-PERF-01 measures it above `REPLAY_BUDGET_MS` × 2.6 in the Studio server, S3 adds a checkpoint and CraftService moves it into the AnalysisQueue (with S3). |
-| S5 | Confirm that `rojo serve` applies the Workspace and StarterPlayer `$properties` (verified for `rojo build` only); measure join latency with a capped profile and raise `REPLY_PAGE_BYTES` if paging adds latency (with S8). |
+| S5 | Measure join latency with a capped profile and raise `REPLY_PAGE_BYTES` if paging adds latency (with S8). |
 | S5 | Tune `FLOOD_KICK_DROPS_PER_MIN`, `HARD_STRIKES_KICK`, `LATE_SOFT_MS` and `LATE_HARD_MS` (a 10 000 ms alternative, E-S5.3) from playtest telemetry; re-count AnalyticsService field combinations once flag and rarity ids are final (≈ 1 250 of 8 000, E-S5.9); watch AnalysisQueue wait and slice times (`Perf`) and take the Actor hook if Save or Begin replies take more than a few seconds. |
 | S5 | Configure and test the right-to-be-forgotten deletion template for `PlayerData` / `User_{UserId}` (README checklist, §1.4). |
 | S6 | Define the bridge's read-only UI state query (screen, editor preview summary, minigame view) and the controller actions behind `loadBlueprint` and `openStation` (§12.5, §14.10; with S8). |

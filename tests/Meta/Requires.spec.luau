@@ -2,7 +2,10 @@
 -- T-META-07 (SPEC §14.4) self-test: the require resolver on planted trees. scripts/verify runs the same check on
 -- the real tree with the two sourcemaps rojo writes (exit 2 on a problem); here every failure class it must catch
 -- is planted once: unresolved and case-mismatched requires, init.luau and sourcemap mismatches, a require that
--- crosses a Rojo root, tests/lib → src/, Lune-only modules in a Roblox root, unsupported forms and cycles.
+-- crosses a Rojo root, tests/lib → src/, Lune-only modules in a Roblox root, unsupported forms, dynamic requires in a
+-- Rojo root (a computed argument, and require cast, parenthesized, aliased, passed or shadowed), a src/shared
+-- require that goes up SPEC §1.3 L2's layers, and cycles; and every top-level module of the real src/shared has a
+-- layer.
 
 local Test = require("../lib/Test")
 local A = require("../lib/Assert")
@@ -257,6 +260,111 @@ return Test.suite("Meta/Requires", function(t)
 		expectCaught({ edit = function(f)
 			f["src/shared/A.luau"] = HEADER .. "local M = require(`./{'C'}`)\n"
 		end }, "dynamic require in a Rojo root")
+	end)
+
+	t.it("T-META-07 self-test: cast, parenthesized, aliased, passed and shadowed requires in Rojo roots", function()
+		local plants: { { src: string, how: string } } = {
+			{ src = 'local M = (require :: any)("./C")', how = "require cast to another type" },
+			{ src = 'local M = (require)("./C")', how = "require in parentheses" },
+			{ src = 'local r = require\nlocal M = r("./C")', how = "require used as a value" },
+			{ src = 'local ok, M = pcall(require, "./C")', how = "require used as a value" },
+			{ src = "local t = { load = require }", how = "require used as a value" },
+			{ src = "local M = require { './C' }", how = "called with a table" },
+			{ src = "local function require(p: string): any\n\treturn p\nend", how = "require shadowed" },
+			{ src = "local require = function(p: string): any\n\treturn p\nend", how = "require shadowed" },
+		}
+		for _, plant in plants do
+			expectCaught({ edit = function(f)
+				f["src/shared/A.luau"] = HEADER .. plant.src .. "\nreturn {}\n"
+			end }, "dynamic require in a Rojo root (" .. plant.how)
+		end
+		-- in a Roblox-bound root too: a cast instance require cannot be told from a cast string one
+		expectCaught({ edit = function(f)
+			f["src/server/Helper.luau"] = HEADER .. "local M = (require :: any)(script.Parent.X)\nreturn {}\n"
+		end }, "src/server/Helper.luau:2: dynamic require in a Rojo root (require cast")
+		-- outside every Rojo root it is how tests/run.luau loads the specs, and allowed
+		local outside = run({ edit = function(f)
+			f["tests/Meta/S.spec.luau"] = HEADER .. 'local X = require("../lib/X")\nlocal M = (require :: any)("../lib/Y")\n'
+				.. "return {}\n"
+		end })
+		A.eq(show(outside), "", "a dynamic require outside the Rojo roots")
+		-- not the global require: fields, methods and keys; and instance requires stay out of T-META-07
+		local clean = run({ edit = function(f)
+			f["src/server/Helper.luau"] = HEADER .. "local t = { require = 1, [2] = 2 }\ntype T = { require: number }\n"
+				.. "local x = t.require\nlocal y = t:require()\nlocal M = require(script.Parent.Mod)\nreturn {}\n"
+		end })
+		A.eq(show(clean), "", "fields, methods, keys and instance requires")
+	end)
+
+	t.it("T-META-07: the runner's own loader is a dynamic require, allowed because tests/ is no Rojo root", function()
+		local refs = Requires.extract(Tree.disk().readFile("tests/run.luau"))
+		local dynamic = 0
+		for _, ref in refs do
+			if ref.form == "dynamic" then
+				dynamic += 1
+				A.eq(ref.how, "require cast to another type", "tests/run.luau's (require :: any)(modPath)")
+			end
+		end
+		A.eq(dynamic, 1, "dynamic requires in tests/run.luau")
+	end)
+
+	t.it("T-META-07 self-test: a src/shared require that goes up SPEC §1.3 L2's layers", function()
+		local function layered(f: Files)
+			f["src/shared/Definitions/Limits.luau"] = HEADER .. "return {}\n"
+			f["src/shared/Util/Quantize.luau"] = HEADER .. 'local L = require("../Definitions/Limits")\nreturn {}\n'
+			f["src/shared/Minigames/Params.luau"] = HEADER .. 'local Q = require("../Util/Quantize")\nreturn {}\n'
+			f["src/shared/Crafting/Plan.luau"] = HEADER .. 'local P = require("../Minigames/Params")\nreturn {}\n'
+			f["src/shared/Items/Create.luau"] = HEADER .. 'local P = require("../Crafting/Plan")\nreturn {}\n'
+			f["src/shared/Pipeline.luau"] = HEADER .. 'local P = require("./Crafting/Plan")\nreturn {}\n'
+			f["src/shared/Net/Protocol.luau"] = HEADER .. "return {}\n"
+			f["src/shared/Session/SessionMachine.luau"] = HEADER .. 'local P = require("../Net/Protocol")\nreturn {}\n'
+		end
+		-- downward, within a layer (Minigames and Crafting), within a folder and Session → Net/Protocol: clean
+		local clean = run({ edit = layered })
+		A.eq(show(clean), "", "requires that go down or stay in their layer")
+		local plants: { { file: string, src: string, needle: string } } = {
+			{
+				file = "src/shared/Definitions/Validate.luau",
+				src = 'local Q = require("../Util/Quantize")',
+				needle = 'src/shared/Definitions/Validate.luau:2: require("../Util/Quantize") goes up the layers (SPEC §1.3 '
+					.. "L2): Definitions is layer 1, Util is layer 2",
+			},
+			{
+				file = "src/shared/Net/Guard.luau",
+				src = 'local S = require("../Session/SessionMachine")',
+				needle = "Net is layer 9, Session is layer 10",
+			},
+			{
+				file = "src/shared/Pipeline.luau",
+				src = 'local C = require("./Items/Create")',
+				needle = "Pipeline is layer 6, Items is layer 7",
+			},
+		}
+		for _, plant in plants do
+			expectCaught({ edit = function(f)
+				layered(f)
+				f[plant.file] = HEADER .. plant.src .. "\nreturn {}\n"
+			end }, plant.needle)
+		end
+		A.eq(select(2, Requires.layerOf("src/shared/Blueprint/Canonical.luau")), 3)
+		A.eq(select(2, Requires.layerOf("src/shared/Pipeline.luau")), 6)
+		A.eq(Requires.layerOf("tests/lib/Gen.luau"), nil, "outside src/shared")
+	end)
+
+	t.it("T-META-07: every top-level module of the real src/shared has its L2 layer", function()
+		local disk = Tree.disk()
+		local checked = 0
+		for _, name in disk.readDir("src/shared") do
+			local path = "src/shared/" .. name
+			local top: string? = if disk.isDir(path) then name else string.match(name, "^(.+)%.luau?$")
+			if top == nil then
+				continue -- Remotes.model.json and other non-module files
+			end
+			checked += 1
+			A.truthy(Requires.LAYERS[top] ~= nil, string.format("%s has no L2 layer: add it to Requires.LAYERS "
+				.. "with its SPEC §1.2 / §1.3 entry", path))
+		end
+		A.truthy(checked >= 14, "top-level modules checked: " .. checked)
 	end)
 
 	t.it("T-META-07 self-test: cycles", function()

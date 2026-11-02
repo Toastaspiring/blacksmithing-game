@@ -1,8 +1,9 @@
 --!strict
 -- T-META-05 (SPEC §14.3, §14.4): runner self-test. The roots under tools/runner-selftest/ make the runner exit
 -- 0 (pass), 1 (fail) and 2 (broken: a spec that does not parse, one that returns no suite, a duplicate suite);
--- each harness fault of §14.3 also exits 2. The test library's own contracts follow (Dump, TestRng, Prop,
--- Golden, Assert, Test), since every later suite relies on them.
+-- each harness fault of §14.3 also exits 2. --seed and --bless reach the specs' Prop and Golden instances: a probe
+-- case checks both flags in every run, and child runners bless, then compare, a golden of the probe's own. The test
+-- library's own contracts follow (Dump, TestRng, Prop, Golden, Assert, Test), since every later suite relies on them.
 
 local fs = require("@lune/fs")
 local luau = require("@lune/luau")
@@ -42,6 +43,40 @@ local function expectRun(args: { string }, code: number, needles: { string }, cw
 end
 
 local SELFTEST = "tools/runner-selftest/"
+
+-- The runner's flags as this process received them: a spec runs inside the runner's own Lune process, so
+-- process.args are the runner's arguments (parsed here like tests/run.luau does).
+local function runnerFlags(): { bless: boolean, seed: number? }
+	local bless, seed = false, nil
+	local args = process.args
+	local i = 1
+	while i <= #args do
+		local a = args[i]
+		if a == "--bless" then
+			bless = true
+		elseif a == "--seed" then
+			seed = tonumber(args[i + 1])
+			i += 1
+		elseif a == "--filter" or a == "--root" then
+			i += 1
+		end
+		i += 1
+	end
+	return { bless = bless, seed = seed }
+end
+
+-- The probe case: on every run it checks that this spec's Golden and Prop carry the runner's --bless and --seed;
+-- under BLESS_PROBE_DIR (set by the --bless test below for a child runner) it also checks a golden of its own there.
+local PROBE = "--bless and --seed reach this spec's Golden and Prop instances"
+local BLESS_PROBE_DIR = "BLACKSMITH_BLESS_PROBE_DIR"
+local BLESS_PROBE_TOKEN = "BLACKSMITH_BLESS_PROBE_TOKEN"
+
+local function tempDir(prefix: string): string
+	local temp = process.env.TEMP or process.env.TMPDIR or "/tmp"
+	local dir = string.format("%s/%s-%d-%d", temp, prefix, os.time(), math.floor(os.clock() * 1e6) % 1000000)
+	fs.writeDir(dir)
+	return dir
+end
 
 return Test.suite("Meta/Runner", function(t)
 	-- ── T-META-05: exit codes of the runner ──────────────────────────────────────────────────────────────────
@@ -89,6 +124,59 @@ return Test.suite("Meta/Runner", function(t)
 		expectRun({ "--root", SELFTEST .. "missing" }, 2, { "test root not found" })
 		expectRun({ "--root", "../outside" }, 2, { "must stay inside the repo" })
 		expectRun({}, 2, { "run from the repo root" }, "tools", "../tests/run")
+	end)
+
+	t.it(PROBE, function()
+		local flags = runnerFlags()
+		A.eq(Golden.bless, flags.bless, "this spec's Golden.bless carries the runner's --bless")
+		A.eq(Prop.only, flags.seed, "this spec's Prop.only carries the runner's --seed")
+		local dir = process.env[BLESS_PROBE_DIR]
+		if dir then
+			local savedDir = Golden.dir
+			Golden.dir = dir
+			local ok, err = pcall((Golden.check :: any), "bless_probe", { token = process.env[BLESS_PROBE_TOKEN] or "" })
+			Golden.dir = savedDir
+			if not ok then
+				error(err, 0)
+			end
+		end
+	end)
+
+	t.it("T-META-05 --bless reaches the specs' Golden instance: a child runner blesses, then compares, a golden", function()
+		local dir = tempDir("blacksmith-bless")
+		local ok, err = pcall(function()
+			local file = dir .. "/bless_probe.golden.txt"
+			local function child(bless: boolean, token: string): (number, string)
+				local args = { "run", "tests/run", "--", "--root", "tests/Meta", "--filter", PROBE }
+				if bless then
+					table.insert(args, "--bless")
+				end
+				local result = process.spawn("lune", args, { env = { [BLESS_PROBE_DIR] = dir, [BLESS_PROBE_TOKEN] = token } })
+				return result.code, result.stdout .. result.stderr
+			end
+			-- a plain run with no golden yet fails and writes nothing
+			local code, out = child(false, "first")
+			A.eq(code, 1, "a plain run without the golden exits 1:\n" .. out)
+			A.contains(out, "golden file missing")
+			A.falsy(fs.isFile(file), "a plain run writes no golden")
+			-- --bless: the probe's Golden.check, in the spec's module instance, writes it
+			code, out = child(true, "first")
+			A.eq(code, 0, "the --bless run exits 0:\n" .. out)
+			A.contains(out, "RESULT pass=1 fail=0 skip=0")
+			A.contains(out, "(golden files blessed)")
+			A.eq(fs.readFile(file), Dump.canonical({ token = "first" }) .. "\n", "--bless wrote the probe's golden")
+			-- plain runs compare against it: the same value passes, a changed one fails
+			code, out = child(false, "first")
+			A.eq(code, 0, "a plain run against the blessed golden exits 0:\n" .. out)
+			code, out = child(false, "second")
+			A.eq(code, 1, "a changed value without --bless exits 1:\n" .. out)
+			A.contains(out, "golden mismatch")
+			A.eq(fs.readFile(file), Dump.canonical({ token = "first" }) .. "\n", "and leaves the golden alone")
+		end)
+		fs.removeDir(dir)
+		if not ok then
+			error(err, 0)
+		end
 	end)
 
 	t.it("T-META-05 --list prints the selected cases and runs none", function()

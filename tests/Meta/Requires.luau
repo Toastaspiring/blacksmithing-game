@@ -3,7 +3,7 @@
 -- real tree after writing both sourcemaps and before any spec loads; tests/Meta/Requires.spec.luau runs it on
 -- planted trees. Every string require in a Rojo root must resolve to the same module on disk (Lune 0.8.9 rules)
 -- and in each sourcemap that maps the file (Roblox rules). It fails on unresolved or mismatched requires, a require
--- that crosses a Rojo root, tests/lib → src/, and cycles.
+-- that crosses a Rojo root, tests/lib → src/, a src/shared require that goes up SPEC §1.3 L2's layers, and cycles.
 --
 -- Lune 0.8.9 (verified, E-S8.1 and the M0 probes): "./X" is relative to the requiring file's directory, also from
 -- init.luau; candidates X.luau, X.lua, X/init.luau, X/init.lua; matching is case-insensitive on Windows, so names
@@ -21,7 +21,8 @@ export type View = {
 	readFile: (path: string) -> string,
 }
 export type Problem = { path: string, line: number?, message: string }
-export type RequireRef = { form: "string" | "dynamic", spec: string, line: number }
+-- how: for a dynamic require, what makes it one (a computed argument, or require used as a value)
+export type RequireRef = { form: "string" | "dynamic", spec: string, line: number, how: string? }
 export type Root = { fsPath: string, isFile: boolean, instance: string }
 export type Project = { file: string, json: any }
 export type Sourcemap = { name: string, project: string, json: any }
@@ -76,30 +77,99 @@ local function hasPrefix(path: string, dir: string): boolean
 	return dir == "" or path == dir or string.sub(path, 1, #dir + 1) == dir .. "/"
 end
 
+-- ── layers (SPEC §1.3 L2) ─────────────────────────────────────────────────────────────────────────────────────
+
+-- The L2 layer of each top-level module of src/shared, lowest first (SPEC §1.2, §1.3): a module requires its own
+-- layer and lower ones only; upward calls go through injected callbacks or Signals. Session sits above Net, so
+-- Session/SessionMachine may use Net/Protocol's wire types and no Net module may require Session. A top-level name
+-- missing here is not checked; tests/Meta/Requires.spec.luau fails when the real tree has one.
+local LAYERS: { [string]: number } = {
+	Definitions = 1,
+	Util = 2,
+	Blueprint = 3,
+	Physics = 4,
+	Minigames = 5,
+	Crafting = 5,
+	Pipeline = 6, -- src/shared/Pipeline.luau or a Pipeline/ folder
+	Items = 7,
+	Persistence = 8,
+	EditorCore = 8,
+	Showcase = 8,
+	World = 8,
+	ItemRender = 8,
+	Net = 9,
+	Session = 10,
+}
+Requires.LAYERS = table.freeze(LAYERS)
+
+-- The top-level module of a src/shared file (its folder, or its own name for a file directly in src/shared) and that
+-- module's L2 layer; nil outside src/shared, and a nil layer for a name LAYERS does not list.
+function Requires.layerOf(path: string): (string?, number?)
+	local top = string.match(path, "^src/shared/([^/]+)/") or string.match(path, "^src/shared/([^/]+)%.luau?$")
+	if top == nil then
+		return nil, nil
+	end
+	return top, LAYERS[top]
+end
+
 -- ── requires in a source file ─────────────────────────────────────────────────────────────────────────────────
 
--- String requires (`require("x")`, `require "x"`) and dynamic ones (an interpolated or concatenated string).
--- Instance requires (`require(script.Parent.X)`) are not string requires and are skipped.
+-- String requires (`require("x")`, `require "x"`) and dynamic ones, which T-META-07 cannot check:
+--   a computed argument that starts with a string    require("./" .. name), require(`./{name}`)
+--   require called with a table or a backquote       require {…}, require `…`
+--   require used as a value                          (require :: any)(p) (cast), (require)(p) (parenthesized),
+--                                                    local r = require (aliased), pcall(require, p) (passed)
+--   require shadowed                                 local require = …, local function require(), function require()
+-- Instance requires (`require(script.Parent.X)`, `require(module)`: a call whose argument is not a string) are not
+-- string requires and are skipped; so are a field or method named require (`x.require`, `x:require()`) and a key
+-- of a table constructor or table type (`{ require = f }`, `{ require: T }`).
 function Requires.extract(src: string): { RequireRef }
 	local refs: { RequireRef } = {}
 	local tokens = Lex.lex(src).tokens
+	local brackets: { string } = {}
+	local function isOp(tok: Lex.Token?, text: string): boolean
+		return tok ~= nil and tok.kind == "op" and tok.text == text
+	end
 	for idx, tok in tokens do
+		if tok.kind == "op" and (tok.text == "(" or tok.text == "[" or tok.text == "{") then
+			table.insert(brackets, tok.text)
+		elseif tok.kind == "op" and (tok.text == ")" or tok.text == "]" or tok.text == "}") then
+			table.remove(brackets)
+		end
 		if tok.kind ~= "name" or tok.text ~= "require" then
 			continue
 		end
 		local prev = tokens[idx - 1]
-		if prev and prev.kind == "op" and (prev.text == "." or prev.text == ":") then
+		local a, b, c = tokens[idx + 1], tokens[idx + 2], tokens[idx + 3]
+		if isOp(prev, ".") or isOp(prev, ":") then
 			continue
 		end
-		local a, b, c = tokens[idx + 1], tokens[idx + 2], tokens[idx + 3]
-		if a and a.kind == "string" then
+		if brackets[#brackets] == "{" and (isOp(prev, "{") or isOp(prev, ",") or isOp(prev, ";"))
+			and (isOp(a, "=") or isOp(a, ":"))
+		then
+			continue
+		end
+		local function dynamic(how: string)
+			table.insert(refs, { form = "dynamic", spec = "", line = tok.line, how = how })
+		end
+		if prev and prev.kind == "keyword" and (prev.text == "function" or prev.text == "local") then
+			dynamic("require shadowed by a local or a function")
+		elseif a and a.kind == "string" then
 			table.insert(refs, { form = "string", spec = a.text, line = tok.line })
-		elseif a and a.kind == "op" and a.text == "(" and b then
-			if b.kind == "string" and c and c.kind == "op" and c.text == ")" then
+		elseif isOp(a, "(") and b then
+			if b.kind == "string" and isOp(c, ")") then
 				table.insert(refs, { form = "string", spec = b.text, line = tok.line })
 			elseif b.kind == "istring" or b.kind == "string" then
-				table.insert(refs, { form = "dynamic", spec = "", line = tok.line })
+				dynamic("a computed string argument")
 			end
+		elseif a and (a.kind == "istring" or isOp(a, "{")) then
+			dynamic("called with a table or an interpolated string")
+		elseif isOp(a, "::") then
+			dynamic("require cast to another type")
+		elseif isOp(prev, "(") and isOp(a, ")") then
+			dynamic("require in parentheses")
+		else
+			dynamic("require used as a value (aliased or passed)")
 		end
 	end
 	return refs
@@ -434,7 +504,8 @@ function Requires.check(view: View, input: Input): Report
 			end
 			if ref.form == "dynamic" then
 				if root then
-					report("dynamic require in a Rojo root: use a string literal so it can be checked")
+					report("dynamic require in a Rojo root (" .. (ref.how or "dynamic") .. "): call require with a string "
+						.. "literal so T-META-07 can check it")
 				end
 				continue
 			end
@@ -474,6 +545,13 @@ function Requires.check(view: View, input: Input): Report
 						if targetRoot then targetRoot.fsPath else target .. " (outside every root)"))
 				end
 				continue
+			end
+			local fromTop, fromLayer = Requires.layerOf(file)
+			local toTop, toLayer = Requires.layerOf(target)
+			if fromLayer and toLayer and toLayer > fromLayer then
+				report(string.format("require(%q) goes up the layers (SPEC §1.3 L2): %s is layer %d, %s is layer %d; "
+					.. "upward calls go through injected callbacks or Signals", spec, fromTop :: string, fromLayer,
+					toTop :: string, toLayer))
 			end
 			for _, map in maps do
 				if rootOf(map.roots, file) == nil then

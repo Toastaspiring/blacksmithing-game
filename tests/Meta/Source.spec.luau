@@ -51,6 +51,9 @@ local function purityOf(view: View, path: string): { Problem }
 			.. table.concat(Rules.ROBLOX_BOUND_ALLOWLIST, ", ") .. ")" } }
 	end
 	local problems = Rules.purity(path, src)
+	if string.match(path, "/init%.luau?$") then
+		table.insert(problems, { path = path, line = 1, message = "pure modules use no init.luau (SPEC §1.3 L3)" })
+	end
 	for _, ref in Requires.extract(src) do
 		if ref.form == "string" then
 			local target = Requires.resolveDisk(view, path, ref.spec)
@@ -161,28 +164,41 @@ return Test.suite("Meta/Source", function(t)
 			'local t = { game:GetService("Players") }', "local t = { x = game }", "local t = { [print] = 1 }",
 			"local function f() return tick() end", "local a; wait(1)", "local n: number = 0 task.wait(n)",
 			"local task = task\ntask.wait(1)", "local function f() local wait = 1 end\nwait(5)",
+			"local m = Enum.Material.Metal", "local u = UDim2.new(0, 1, 0, 1)", 'local d = os.date("%Y")',
+			"local b = BrickColor.new(1)", "local t = TweenInfo.new(1)",
 		}
 		for _, line in plants do
 			expectCaught(Rules.purity(PURE, "--!strict\n" .. line .. "\n"), line, "pure module uses")
 		end
 	end)
 
-	t.it("T-META-02 tick, wait and task: a local in scope is fine, the global and task.<library> are not", function()
-		local plants = {
-			"local wait = wait\nwait(1)", "local tick = tick", "local t = task\nt.spawn(f)",
-			"local ok = pcall(wait, 1)",
-			"local tick = function()\n\treturn tick()\nend", "if x then\n\tlocal wait = 1\nelse\n\twait(5)\nend",
-			"for wait = 1, 2 do end\nwait(5)", "do local tick = 0 end\ntick()", "function wait() end",
-			"repeat local tick = 0 until true\ntick()", "local x: typeof(task) = nil", "local s = `{wait(1)}`",
-			"local f = function(task) return task end\ntask.spawn(f)", "local w = if x then wait else nil",
-		}
-		for _, src in plants do
-			expectCaught(Rules.purity(PURE, "--!strict\n" .. src .. "\n"), src, "pure module uses")
-		end
-		local clean = {
+	t.it("T-META-02 tick( wait( task. are banned as tokens: a local of that name does not exempt them", function()
+		-- SPEC §14.4's literal token list, whatever is in scope
+		local tokens = {
+			"local wait = wait\nwait(1)", "local tick = function()\n\treturn tick()\nend",
+			"if x then\n\tlocal wait = 1\nelse\n\twait(5)\nend", "for wait = 1, 2 do end\nwait(5)",
+			"do local tick = 0 end\ntick()", "function wait() end", "repeat local tick = 0 until true\ntick()",
+			"local s = `{wait(1)}`", "local f = function(task) return task end\ntask.spawn(f)",
 			"local function tick(n: number): number\n\tif n > 0 then\n\t\treturn tick(n - 1)\n\tend\n\treturn n\nend",
 			"local function delayed(wait: number, task: { id: number }): number\n\treturn wait + task.id\nend",
 			"local t = {}\nfor _, task in t do\n\tlocal id = task.id\nend",
+			"local wait = function(ms: number): number\n\treturn ms\nend\nlocal w = wait(5)",
+			"local task = { id = 1 }\nlocal id = task.id", "local tick = function(t: any) end\ntick {}",
+			"local wait = function(s: string) end\nwait 'x'",
+		}
+		for _, src in tokens do
+			expectCaught(Rules.purity(PURE, "--!strict\n" .. src .. "\n"), src, "SPEC §14.4's token list")
+		end
+		-- stricter than the list: the bare Roblox globals as values, when no local of that name is in scope
+		local globals = {
+			"local tick = tick", "local t = task\nt.spawn(f)", "local ok = pcall(wait, 1)", "local x: typeof(task) = nil",
+			"local w = if x then wait else nil",
+		}
+		for _, src in globals do
+			expectCaught(Rules.purity(PURE, "--!strict\n" .. src .. "\n"), src, "the Roblox global as a value")
+		end
+		-- locals of those names used as values, fields, methods and keys use none of the tokens
+		local clean = {
 			"local n = 0\nif n > 0 then\n\tlocal tick = 1\n\tn = tick\nelseif n < 0 then\n\tlocal tick = 2\n"
 				.. "\tn = tick\nelse\n\tlocal tick = 3\n\tn = tick\nend",
 			"repeat\n\tlocal wait = 1\nuntil wait > 0",
@@ -190,6 +206,10 @@ return Test.suite("Meta/Source", function(t)
 			"local wait: number,\n\ttick: number = 1, 2\nlocal sum = wait + tick",
 			"local wait = (function()\n\treturn 1\nend)()\nlocal v = wait",
 			"local session = {}\nfunction session.tick(s) return s end\nfunction session:wait() return self end",
+			"local function count(task: number): number\n\treturn task + 1\nend",
+			"local obj: any = { task = { id = 1 } }\nlocal id = obj.task.id\nlocal ok = obj:wait()\nlocal t = obj.tick(1)",
+			"local t = { tick = 1, wait = 2, task = 3 }\nlocal s = t.tick + t.wait + t.task",
+			"local tick = 0\ntick += 1",
 		}
 		for _, src in clean do
 			expectClean(Rules.purity(PURE, "--!strict\n" .. src .. "\n"), src)
@@ -208,8 +228,8 @@ return Test.suite("Meta/Source", function(t)
 			"local n = obj.game + t.print",
 			"local tick = 0",
 			"tick += 1",
-			"local function wait(ms: number): number return ms end",
-			"local w = wait(5)",
+			"local wait = 5",
+			"local w = wait + 1",
 			"local gameState, scripts, printer = 1, 2, 3",
 			"local m = math.floor(1.5) + math.sqrt(4)",
 			"return { s, n, w, gameState, scripts, printer, m }",
@@ -224,7 +244,9 @@ return Test.suite("Meta/Source", function(t)
 			["src/shared/Net/Client.luau"] = "--!strict\nlocal p = game.Players\nreturn {}\n",
 			["src/shared/Definitions/Uses.luau"] = '--!strict\nlocal R = require("../Net/Remotes")\nreturn {}\n',
 			["src/shared/Definitions/Clean.luau"] = '--!strict\nlocal U = require("./Uses")\nreturn {}\n',
+			["src/shared/Util/Sub/init.luau"] = "--!strict\nreturn {}\n",
 		})
+		expectCaught(purityOf(view, "src/shared/Util/Sub/init.luau"), "a pure init.luau", "no init.luau")
 		expectClean(purityOf(view, "src/shared/Net/Remotes.luau"), "allowlisted and tagged")
 		expectCaught(purityOf(view, "src/shared/Util/Helper.luau"), "tag outside the allowlist", "allowlist")
 		expectCaught(purityOf(view, "src/shared/Net/Client.luau"), "allowlisted but untagged, so pure", "'game'")

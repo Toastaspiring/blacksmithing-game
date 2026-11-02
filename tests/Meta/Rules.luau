@@ -241,7 +241,7 @@ local function blockEnds(tokens: { Token }): ({ [number]: number }, { [number]: 
 end
 Rules.blockEnds = blockEnds
 
--- ── scopes (T-META-02: tick, wait and task are banned as globals and fine as locals) ──────────────────────────
+-- ── scopes (T-META-02: the bare globals tick, wait and task used as values, unless a local is in scope) ───────
 
 -- Keywords an expression list never runs past (then / elseif / else only when their if is a statement).
 local STATEMENT_START: { [string]: boolean } = {
@@ -511,19 +511,24 @@ end
 local BARE_FORBIDDEN = {
 	game = true, workspace = true, script = true, Vector3 = true, CFrame = true, Color3 = true,
 	DateTime = true, print = true, warn = true,
+	-- SPEC §1.3 L3 ("no Roblox datatypes"), beyond §14.4's original token list:
+	Enum = true, Vector2 = true, UDim = true, UDim2 = true, Rect = true, Ray = true, Region3 = true,
+	BrickColor = true, TweenInfo = true, NumberRange = true, NumberSequence = true, ColorSequence = true,
+	PhysicalProperties = true, RaycastParams = true, OverlapParams = true, Font = true,
 }
 local DOTTED_FORBIDDEN: { [string]: { [string]: boolean } } = {
 	Instance = { new = true },
 	Random = { new = true },
 	math = { random = true },
-	os = { time = true, clock = true },
+	os = { time = true, clock = true, date = true },
 }
--- Banned as globals (any use: a call, a field, an alias such as `local w = wait` or `pcall(wait, 1)`), fine as
--- locals in scope; but task.<member of the task library> is banned whatever the locals (`local task = task`).
+-- SPEC §14.4's literal tokens tick( wait( task. are banned as tokens: a local of that name does not exempt them
+-- (`local function tick()` and `local task = {}; task.id` fail too). A call with a table or string argument
+-- (`wait {…}`, `tick "x"`) counts as tick( / wait(. Fields and methods (`self.tick(x)`, `obj:wait()`) and table keys
+-- are not the tokens. Stricter than the list: the bare Roblox globals tick, wait and task used as values (an alias
+-- such as `local w = wait`, `pcall(wait, 1)`, `typeof(task)`) are banned unless a local of that name is in scope.
+local CALL_TOKENS = { tick = true, wait = true }
 local SCOPED_GLOBALS = { tick = true, wait = true, task = true }
-local TASK_LIBRARY = {
-	wait = true, spawn = true, defer = true, delay = true, cancel = true, synchronize = true, desynchronize = true,
-}
 
 -- A name used as a key inside a table constructor or table type: `{ warn = c }`, `{ warn: Color }`.
 local function isTableKey(tokens: { Token }, idx: number, brackets: { string }): boolean
@@ -559,16 +564,15 @@ function Rules.purity(path: string, src: string): { Problem }
 			and DOTTED_FORBIDDEN[name][afterNext.text]
 		then
 			problem(out, path, tok.line, "pure module uses '" .. name .. "." .. afterNext.text .. "'")
-		elseif name == "task" and isOp(nextTok, ".") and afterNext and afterNext.kind == "name"
-			and TASK_LIBRARY[afterNext.text]
-		then
-			problem(out, path, tok.line, "pure module uses 'task." .. afterNext.text .. "'")
+		elseif CALL_TOKENS[name] and isCallOpener(nextTok) then
+			problem(out, path, tok.line, "pure module uses '" .. name .. "(' (SPEC §14.4's token list; a local of that "
+				.. "name does not exempt it)")
+		elseif name == "task" and isOp(nextTok, ".") then
+			problem(out, path, tok.line, "pure module uses 'task.' (SPEC §14.4's token list; a local of that name does "
+				.. "not exempt it)")
 		elseif SCOPED_GLOBALS[name] and not scopes.decl[idx] and not scopes.bound[idx] then
-			local form = if name == "task" and isOp(nextTok, ".") then "task."
-				elseif name ~= "task" and isCallOpener(nextTok) then name .. "("
-				else name
-			problem(out, path, tok.line, "pure module uses '" .. form .. "' (the Roblox global; no local of that name is "
-				.. "in scope)")
+			problem(out, path, tok.line, "pure module uses '" .. name .. "' (the Roblox global as a value; no local of "
+				.. "that name is in scope)")
 		end
 	end
 	return out

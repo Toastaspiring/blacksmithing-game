@@ -1,0 +1,138 @@
+--!strict
+-- Definitions/Materials (SPEC §2.5, E-S1.7, §16.4; rows S1, owner columns difficultyTerm S2 and qualityTier S4).
+-- density is mass units per stud³ with Iron = 7.87 (iron's g/cm³), so mass shows in kg: typical swords weigh about
+-- 0.8–1.5 kg [Decision to confirm] (Q13). Hardness and toughness are integers 0–100 (S4 divides by MATERIAL_SCALE).
+-- MVP: Iron and Steel enabled, free and unlimited. difficultyTerm is 0 for both: materials are free, so a
+-- tier-raising material would be a difficulty slider (Q13); Steel's tighter minigames are S3's material columns and
+-- its +2 % quality is qualityTier 1.02 (≤ 1.04 keeps the Steel rarity targets, E-S4.7).
+-- Bronze, Mithril, Obsidian, Wood and Leather are Phase 2 rows (enabled = false): their difficultyTerm (0 here) and
+-- qualityTier (S4's placeholders, E-S4.1) are re-tuned by their owners when they are enabled.
+-- Draft word bands (blurbs): density Low < 6.0 ≤ Medium < 8.5 ≤ High; hardness, toughness Very low ≤ 15 < Low ≤ 35
+-- < Medium ≤ 60 < High ≤ 80 < Very high.
+
+local Catalog = require("./Catalog")
+local DT = require("./Types")
+
+local ROWS: { DT.MaterialDef } = {
+	{
+		id = "Iron",
+		name = "Iron",
+		order = 1,
+		enabled = true,
+		class = "Metal",
+		blurb = "Reliable baseline, forgiving minigames",
+		density = 7.87,
+		hardness = 45,
+		toughness = 50,
+		color = { 112, 114, 120 },
+		robloxMaterial = "Metal",
+		reflectance = 0.05,
+		allowedSlots = nil,
+		difficultyTerm = 0,
+		qualityTier = 1.00,
+	},
+	{
+		id = "Steel",
+		name = "Steel",
+		order = 2,
+		enabled = true,
+		class = "Metal",
+		blurb = "Better edges, slightly tighter windows",
+		density = 7.85,
+		hardness = 70,
+		toughness = 55,
+		color = { 196, 202, 210 },
+		robloxMaterial = "Metal",
+		reflectance = 0.18,
+		allowedSlots = nil,
+		difficultyTerm = 0,
+		qualityTier = 1.02,
+	},
+	{
+		id = "Bronze",
+		name = "Bronze",
+		order = 3,
+		enabled = false,
+		class = "Metal",
+		blurb = "Heavy and durable, poor edge",
+		density = 8.80,
+		hardness = 30,
+		toughness = 70,
+		color = { 176, 124, 64 },
+		robloxMaterial = "Metal",
+		reflectance = 0.10,
+		allowedSlots = nil,
+		difficultyTerm = 0,
+		qualityTier = 1.05,
+	},
+	{
+		id = "Mithril",
+		name = "Mithril",
+		order = 4,
+		enabled = false,
+		class = "Metal",
+		blurb = "Light and strong, very tight windows",
+		density = 3.20,
+		hardness = 75,
+		toughness = 72,
+		color = { 182, 222, 236 },
+		robloxMaterial = "Foil",
+		reflectance = 0.30,
+		allowedSlots = nil,
+		difficultyTerm = 0,
+		qualityTier = 1.35,
+	},
+	{
+		id = "Obsidian",
+		name = "Obsidian",
+		order = 5,
+		enabled = false,
+		class = "Mineral",
+		blurb = "Brutal edge, shatters on failure",
+		density = 7.20,
+		hardness = 92,
+		toughness = 8,
+		color = { 34, 26, 44 },
+		robloxMaterial = "Glass",
+		reflectance = 0.25,
+		allowedSlots = nil,
+		difficultyTerm = 0,
+		qualityTier = 1.30,
+	},
+	{
+		id = "Wood",
+		name = "Wood",
+		order = 6,
+		enabled = false,
+		class = "Organic",
+		blurb = "Grips, hafts and light armor",
+		density = 0.65,
+		hardness = 25,
+		toughness = 45,
+		color = { 120, 82, 50 },
+		robloxMaterial = "Wood",
+		reflectance = 0,
+		allowedSlots = nil,
+		difficultyTerm = 0,
+		qualityTier = 1.00,
+	},
+	{
+		id = "Leather",
+		name = "Leather",
+		order = 7,
+		enabled = false,
+		class = "Organic",
+		blurb = "Grips, hafts and light armor",
+		density = 0.90,
+		hardness = 20,
+		toughness = 55,
+		color = { 90, 58, 38 },
+		robloxMaterial = "Leather",
+		reflectance = 0,
+		allowedSlots = nil,
+		difficultyTerm = 0,
+		qualityTier = 1.00,
+	},
+}
+
+return Catalog.build(ROWS)
