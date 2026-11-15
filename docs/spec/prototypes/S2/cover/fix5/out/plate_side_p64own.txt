@@ -1,0 +1,25 @@
+disk r 0.8: the prism's side over an edge 0.0786 long, its corners 0.00387 past the true side
+Block       0.075 × 0.02 × 0.5, centred 0.0000 from the middle, δ 1e-06 r: out by up to 0.00087; reads  0.000%, truly 37.937%  <- cleaned
+Block       0.075 × 0.02 × 0.5, centred 0.0000 from the middle, δ 1e-05 r: out by up to 0.00086; reads  0.000%, truly 35.471%  <- cleaned
+Block       0.075 × 0.02 × 0.5, centred 0.0000 from the middle, δ 1e-04 r: out by up to 0.00079; reads  0.000%, truly 27.485%  <- cleaned
+Block       0.047 × 0.02 × 0.5, centred 0.0000 from the middle, δ 1e-06 r: out by up to 0.00035; reads  0.000%, truly 32.931%  <- cleaned
+Block       0.047 × 0.02 × 0.5, centred 0.0000 from the middle, δ 1e-05 r: out by up to 0.00034; reads  0.000%, truly 29.444%  <- cleaned
+Block       0.047 × 0.02 × 0.5, centred 0.0000 from the middle, δ 1e-04 r: out by up to 0.00027; reads  0.000%, truly 18.152%  <- cleaned
+Block       0.031 × 0.02 × 0.5, centred 0.0000 from the middle, δ 1e-06 r: out by up to 0.00015; reads  0.000%, truly 27.851%  <- cleaned
+Block       0.031 × 0.02 × 0.5, centred 0.0000 from the middle, δ 1e-05 r: out by up to 0.00015; reads  0.000%, truly 23.283%  <- cleaned
+Block       0.031 × 0.02 × 0.5, centred 0.0000 from the middle, δ 1e-04 r: out by up to 0.00007; reads  0.000%, truly  8.492%  <- cleaned
+Block       0.031 × 0.02 × 0.5, centred 0.0197 from the middle, δ 1e-06 r: out by up to 0.00078; reads  0.000%, truly 30.615%  <- cleaned
+Block       0.031 × 0.02 × 0.5, centred 0.0197 from the middle, δ 1e-05 r: out by up to 0.00077; reads  0.000%, truly 30.600%  <- cleaned
+Block       0.031 × 0.02 × 0.5, centred 0.0197 from the middle, δ 1e-04 r: out by up to 0.00070; reads  0.000%, truly 23.512%  <- cleaned
+Block       0.031 × 0.02 × 0.5, centred 0.0235 from the middle, δ 1e-06 r: out by up to 0.00096; reads  0.000%, truly 30.799%  <- cleaned
+Block       0.031 × 0.02 × 0.5, centred 0.0235 from the middle, δ 1e-05 r: out by up to 0.00095; reads  0.000%, truly 30.784%  <- cleaned
+Block       0.031 × 0.02 × 0.5, centred 0.0235 from the middle, δ 1e-04 r: out by up to 0.00088; reads  0.000%, truly 27.326%  <- cleaned
+Wedge       0.075 × 0.02 × 0.5, centred 0.0000 from the middle, δ 1e-06 r: out by up to 0.00087; reads  0.000%, truly 42.973%  <- cleaned
+Wedge       0.075 × 0.02 × 0.5, centred 0.0000 from the middle, δ 1e-05 r: out by up to 0.00086; reads  0.000%, truly 40.179%  <- cleaned
+Wedge       0.075 × 0.02 × 0.5, centred 0.0000 from the middle, δ 1e-04 r: out by up to 0.00079; reads  0.000%, truly 31.129%  <- cleaned
+Wedge       0.047 × 0.02 × 0.5, centred 0.0000 from the middle, δ 1e-06 r: out by up to 0.00035; reads  0.000%, truly 39.137%  <- cleaned
+Wedge       0.047 × 0.02 × 0.5, centred 0.0000 from the middle, δ 1e-05 r: out by up to 0.00034; reads  0.000%, truly 34.994%  <- cleaned
+Wedge       0.047 × 0.02 × 0.5, centred 0.0000 from the middle, δ 1e-04 r: out by up to 0.00027; reads  0.000%, truly 21.576%  <- cleaned
+CornerWedge 0.075 × 0.02 × 0.5, centred 0.0000 from the middle, δ 1e-06 r: out by up to 0.00087; reads  0.000%, truly 45.152%  <- cleaned
+CornerWedge 0.075 × 0.02 × 0.5, centred 0.0000 from the middle, δ 1e-05 r: out by up to 0.00086; reads  0.000%, truly 42.186%  <- cleaned
+CornerWedge 0.075 × 0.02 × 0.5, centred 0.0000 from the middle, δ 1e-04 r: out by up to 0.00079; reads  0.000%, truly 32.610%  <- cleaned

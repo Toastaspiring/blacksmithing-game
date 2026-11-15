@@ -1,0 +1,8 @@
+C09                                                |dD| 0.007800 on Sharpening, tier false: Sm 0.0001 N, Ha 0.3170 H, Sh 0.1904 N -> Sm 0.0001 N, Ha 0.3182 H, Sh 0.1826 N
+C09 Ornate (18 parts)                              |dD| 0.007800 on Sharpening, tier false: Sm 0.0001 N, Ha 0.3170 H, Sh 0.1904 N -> Sm 0.0001 N, Ha 0.3182 H, Sh 0.1826 N
+atk chain hidden in C01                            |dD| 0.002000 on Hammering, tier false: Sm 0.1874 N, Ha 0.5068 H, Sh 0.3007 H -> Sm 0.1874 N, Ha 0.5048 H, Sh 0.3007 H
+atk rod r 0.10 sealed in 16 walls, corner gap 0.01 |dD| 0.004900 on Sharpening, tier false: Sm 0.2006 H, Ha 0.7232 H, Sh 0.1660 N -> Sm 0.2006 H, Ha 0.7236 H, Sh 0.1611 N
+atk rod r 0.10 sealed in 16 walls, corner gap 0.01 |dD| 0.004900 on Sharpening, tier false: Sm 0.2006 H, Ha 0.7228 H, Sh 0.1665 N -> Sm 0.2006 H, Ha 0.7232 H, Sh 0.1616 N
+atk a core under 16 ribs, 0.0010 past the lines    |dD| 0.005500 on Hammering, tier false: Sm 0.2302 H, Ha 0.3399 H, Sh 0.1582 N -> Sm 0.2302 H, Ha 0.3344 H, Sh 0.1575 N
+atk a core under 16 ribs, 0.0005 past the lines    |dD| 0.005600 on Hammering, tier false: Sm 0.2296 H, Ha 0.3386 H, Sh 0.1573 N -> Sm 0.2296 H, Ha 0.3330 H, Sh 0.1566 N
+75 designs, 7 move, worst |dD| 0.007800

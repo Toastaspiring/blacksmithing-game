@@ -1,0 +1,5 @@
+design                                         todayV       AV       BV |    today        A        B |   u todayV       u AV       u BV | verdicts
+v2-2 attacks crossings, blade 0.30 x 2.60, c     1.08     0.64     0.60 |     7.56     7.15     7.17 |       7854       6434       4666 | today 11111111111111 A 11101111111111 B 11101111111111
+v2-2 attacks crossings, slits 0.001 wide         1.10     0.65     0.58 |     7.38     7.12     7.10 |       7854       6434       4658 | today 11111111111111 A 11101111111111 B 11101111111111
+v2-2 attacks a step of 1e-5, blade 1 x 2, ch     1.23     0.65     0.67 |     7.50     7.15     7.21 |       8436       6152       4861 | today 11111111111111 A 11101111111111 B 11101111111111
+v2-2 attacks windows between the lines, blad     1.71     1.57     1.36 |     7.39     7.79     7.59 |      14550      15250      11672 | today 111011111111111111111111 A 111111111111111111111111 B 111111111111111111111111

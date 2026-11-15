@@ -1,0 +1,7 @@
+C09 Sm 0.0001 N, Ha 0.3182 H, Sh 0.1826 N
+C09 in 300 orders: 0.0001–0.0001, 0.3182–0.3206, 0.1826–0.1826
+P5 Sm 0.0328 N, Ha 0.1902 N, Sh 0.1202 N
+P5 in 60 orders: 0.0328–0.0328, 0.1853–0.1902, 0.1202–0.1202
+C09 + plate: kept true, truth 20.12%  Sm 0.0009 N, Ha 0.3594 H, Sh 0.2442 H
+C09 + plate, the plate cleaned: Sm 0.0001 N, Ha 0.3182 H, Sh 0.1826 N
+C09 + plate + 5 hidden blocks: Sm 0.0009 N, Ha 0.3594 H, Sh 0.2442 H

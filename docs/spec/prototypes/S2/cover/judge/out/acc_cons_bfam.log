@@ -1,0 +1,5 @@
+ACC bfam every 1 offset 0: 8016 designs, 71309 parts, 27159 differ between the two, 29061 against the truth, 106 s
+  canon         false Enclosed >= 2.5/3/5/7.5/10 %: 12/0/0/0/0 (highest cleaned 2.515%: b_ballRivet C05 d0.10 f-0.95 x0.00 y0.3 t2 part 7 (Ball) read 1.630%)
+                false kept < 1.5/1/0.5/0.25 %: 0/0/0/0 (lowest kept 2.004%: b_fuller w0.4 L2.5 t0.08 c0.050 g0.01 at0.6 one part 4 (Block) read 2.005%)
+  conservative  false Enclosed >= 2.5/3/5/7.5/10 %: 13/1/0/0/0 (highest cleaned 3.863%: b_bead d0.14 gap0.05 t1 part 5 (Ball) read 1.674%)
+                false kept < 1.5/1/0.5/0.25 %: 0/0/0/0 (lowest kept 2.004%: b_fuller w0.4 L2.5 t0.08 c0.050 g0.01 at0.6 one part 4 (Block) read 2.005%)

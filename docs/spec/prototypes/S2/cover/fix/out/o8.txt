@@ -1,0 +1,22 @@
+F3                       Sm 0.0000 N, Ha 0.4423 H, Sh 0.6104 H
+F3 blade as Guard        Sm 0.0000 N, Ha 0.4423 H, Sh 0.0645 N
+F3 + blade exact        Guard Sm 0.0000 N, Ha 0.4423 H, Sh 0.6104 H  |dD| 0.0000 flip false
+F3 + blade 180 Y        Guard Sm 0.0000 N, Ha 0.4423 H, Sh 0.6104 H  |dD| 0.0000 flip false
+F3 + blade permuted     Guard Sm 0.0000 N, Ha 0.4423 H, Sh 0.6104 H  |dD| 0.0000 flip false
+F3 + blade 1e-12 lower  Guard Sm 0.0000 N, Ha 0.4423 H, Sh 0.6104 H  |dD| 0.0000 flip false
+1 Pommel Ball 0.28,0.28,0.28 0,0.16,0
+2 Grip Cylinder 0.9,0.13,0.13 0,0.75,0
+3 Guard Block 0.9,0.08,0.08 0,1.24,0
+4 Guard Ball 0.12,0.12,0.12 -0.45,1.24,0
+5 Guard Ball 0.12,0.12,0.12 0.45,1.24,0
+6 Blade Block 0.07,3.4,0.035 0,2.98,0
+7 Blade Wedge 0.035,0.3,0.07 0,4.83,0
+F3 + a copy of part 3 (Guard) in the Blade: Sm 0.0000 N, Ha 0.4423 H, Sh 0.6770 H
+F3, part 3 relabelled Blade:            Sm 0.0000 N, Ha 0.4423 H, Sh 0.6770 H
+F3 + a copy of part 4 (Guard) in the Blade: Sm 0.0000 N, Ha 0.4426 H, Sh 0.6572 H
+F3, part 4 relabelled Blade:            Sm 0.0000 N, Ha 0.4426 H, Sh 0.6572 H
+F3 + a copy of part 5 (Guard) in the Blade: Sm 0.0000 N, Ha 0.4426 H, Sh 0.6572 H
+F3, part 5 relabelled Blade:            Sm 0.0000 N, Ha 0.4426 H, Sh 0.6572 H
+C08                      Sm 0.1563 N, Ha 0.0992 N, Sh 0.2487 H
+C08 blade as Guard       Sm 0.1563 N, Ha 0.0992 N, Sh 0.0000 N
+C08 + blade 180 Y Guard  Sm 0.1563 N, Ha 0.0992 N, Sh 0.2487 H 0 false 

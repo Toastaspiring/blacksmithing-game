@@ -1,0 +1,36 @@
+wrapRings|C02|n5 extra0.04 gap0.0060	|dD| 0.0001	-	Sm 0.0485 N, Ha 0.1137 N, Sh 0.1318 N	Sm 0.0484 N, Ha 0.1137 N, Sh 0.1318 N
+wrapRings|C06|n5 extra0.04 gap0.0060	|dD| 0.0024	-	Sm 0.0227 N, Ha 0.2556 H, Sh 0.5948 H	Sm 0.0224 N, Ha 0.2580 H, Sh 0.5948 H
+wrapRings|C09|n4 extra0.04 gap0.0040	|dD| 0.0011	-	Sm 0.0104 N, Ha 0.2559 H, Sh 0.1263 N	Sm 0.0106 N, Ha 0.2553 H, Sh 0.1274 N
+pommelInBlock|C09|housing xy30 cap0.0600	|dD| 0.0014	-	Sm 0.0235 N, Ha 0.2750 H, Sh 0.1904 N	Sm 0.0235 N, Ha 0.2764 H, Sh 0.1904 N
+wrapRings|F3|n3 extra0.04 gap0.0040	|dD| 0.0006	-	Sm 0.0000 N, Ha 0.3775 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.3769 H, Sh 0.6104 H
+wrapRings|C09|n3 extra0.04 gap0.0020	|dD| 0.0031	-	Sm 0.0106 N, Ha 0.2447 H, Sh 0.1397 N	Sm 0.0109 N, Ha 0.2416 H, Sh 0.1403 N
+wrapRings|C09|n5 extra0.04 gap0.0020	|dD| 0.0025	-	Sm 0.0104 N, Ha 0.2488 H, Sh 0.1206 N	Sm 0.0108 N, Ha 0.2463 H, Sh 0.1216 N
+pommelInBlock|C09|housing r47 cap0.0600	|dD| 0.0009	-	Sm 0.0235 N, Ha 0.2755 H, Sh 0.1904 N	Sm 0.0235 N, Ha 0.2764 H, Sh 0.1904 N
+rod|C09|guard Cylinder d0.04 poke0.0020	|dD| 0.0005	-	Sm 0.0001 N, Ha 0.3175 H, Sh 0.1904 N	Sm 0.0001 N, Ha 0.3170 H, Sh 0.1904 N
+wrapRings|F3|n3 extra0.04 gap0.0050	|dD| 0.0001	-	Sm 0.0000 N, Ha 0.3771 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.3770 H, Sh 0.6104 H
+wrapRings|F3|n4 extra0.04 gap0.0020	|dD| 0.0120	-	Sm 0.0000 N, Ha 0.3916 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.3796 H, Sh 0.6104 H
+wrapRings|C02|n3 extra0.04 gap0.0100	|dD| 0.0002	-	Sm 0.0488 N, Ha 0.1137 N, Sh 0.1318 N	Sm 0.0486 N, Ha 0.1137 N, Sh 0.1318 N
+wrapRings|C05|n3 extra0.04 gap0.0125	|dD| 0.0004	-	Sm 0.5609 H, Ha 0.1334 N, Sh 0.3466 H	Sm 0.5609 H, Ha 0.1330 N, Sh 0.3466 H
+wrapRings|C06|n3 extra0.04 gap0.0100	|dD| 0.0009	-	Sm 0.0229 N, Ha 0.2556 H, Sh 0.5948 H	Sm 0.0226 N, Ha 0.2565 H, Sh 0.5948 H
+wrapRings|C09|n3 extra0.04 gap0.0030	|dD| 0.0024	-	Sm 0.0105 N, Ha 0.2444 H, Sh 0.1398 N	Sm 0.0108 N, Ha 0.2420 H, Sh 0.1404 N
+wrapRings|C09|n5 extra0.04 gap0.0030	|dD| 0.0013	-	Sm 0.0103 N, Ha 0.2483 H, Sh 0.1206 N	Sm 0.0106 N, Ha 0.2470 H, Sh 0.1213 N
+wrapRings|F3|n4 extra0.04 gap0.0030	|dD| 0.0113	-	Sm 0.0000 N, Ha 0.3910 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.3797 H, Sh 0.6104 H
+wrapRings|C05|n4 extra0.04 gap0.0075	|dD| 0.0004	-	Sm 0.5609 H, Ha 0.1334 N, Sh 0.3466 H	Sm 0.5610 H, Ha 0.1330 N, Sh 0.3466 H
+wrapRings|C06|n4 extra0.04 gap0.0060	|dD| 0.0131	-	Sm 0.0228 N, Ha 0.2696 H, Sh 0.5948 H	Sm 0.0227 N, Ha 0.2565 H, Sh 0.5948 H
+wrapRings|C09|n3 extra0.04 gap0.0040	|dD| 0.0023	-	Sm 0.0105 N, Ha 0.2440 H, Sh 0.1339 N	Sm 0.0108 N, Ha 0.2417 H, Sh 0.1345 N
+wrapRings|C09|n5 extra0.04 gap0.0040	|dD| 0.0010	-	Sm 0.0102 N, Ha 0.2480 H, Sh 0.1208 N	Sm 0.0104 N, Ha 0.2470 H, Sh 0.1215 N
+wrapRings|F3|n4 extra0.04 gap0.0040	|dD| 0.0106	-	Sm 0.0000 N, Ha 0.3904 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.3798 H, Sh 0.6104 H
+cage|r0.10 k6 open0.19 roll0.0	|dD| 0.0407	-	Sm 0.0648 N, Ha 0.1195 N, Sh 0.0000 N	Sm 0.0646 N, Ha 0.1195 N, Sh 0.0407 N
+wrapRings|C02|n4 extra0.04 gap0.0075	|dD| 0.0002	-	Sm 0.0486 N, Ha 0.1137 N, Sh 0.1318 N	Sm 0.0484 N, Ha 0.1137 N, Sh 0.1318 N
+wrapRings|C06|n4 extra0.04 gap0.0075	|dD| 0.0123	-	Sm 0.0228 N, Ha 0.2689 H, Sh 0.5948 H	Sm 0.0225 N, Ha 0.2566 H, Sh 0.5948 H
+wrapRings|C09|n4 extra0.04 gap0.0020	|dD| 0.0100	-	Sm 0.0105 N, Ha 0.2543 H, Sh 0.1260 N	Sm 0.0108 N, Ha 0.2443 H, Sh 0.1271 N
+wrapRings|F3|n5 extra0.04 gap0.0020	|dD| 0.0018	-	Sm 0.0000 N, Ha 0.3842 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.3824 H, Sh 0.6104 H
+cage|r0.10 k6 open0.19 roll22.5	|dD| 0.0396	-	Sm 0.0648 N, Ha 0.1200 N, Sh 0.0000 N	Sm 0.0646 N, Ha 0.1200 N, Sh 0.0396 N
+wrapRings|C02|n5 extra0.04 gap0.0050	|dD| 0.0000	-	Sm 0.0486 N, Ha 0.1137 N, Sh 0.1318 N	Sm 0.0486 N, Ha 0.1137 N, Sh 0.1318 N
+wrapRings|C05|n5 extra0.04 gap0.0060	|dD| 0.0041	-	Sm 0.5608 H, Ha 0.1371 N, Sh 0.3466 H	Sm 0.5609 H, Ha 0.1330 N, Sh 0.3466 H
+wrapRings|C06|n5 extra0.04 gap0.0050	|dD| 0.0016	-	Sm 0.0227 N, Ha 0.2562 H, Sh 0.5948 H	Sm 0.0226 N, Ha 0.2578 H, Sh 0.5948 H
+wrapRings|C09|n4 extra0.04 gap0.0030	|dD| 0.0011	-	Sm 0.0104 N, Ha 0.2562 H, Sh 0.1261 N	Sm 0.0107 N, Ha 0.2552 H, Sh 0.1272 N
+pommelInBlock|C09|housing unrot cap0.0600	|dD| 0.0008	-	Sm 0.0235 N, Ha 0.2772 H, Sh 0.1904 N	Sm 0.0235 N, Ha 0.2764 H, Sh 0.1904 N
+wrapRings|F3|n3 extra0.04 gap0.0030	|dD| 0.0011	-	Sm 0.0000 N, Ha 0.3779 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.3768 H, Sh 0.6104 H
+wrapRings|F3|n5 extra0.04 gap0.0030	|dD| 0.0009	-	Sm 0.0000 N, Ha 0.3835 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.3826 H, Sh 0.6104 H
+35 designs, 0 tier flips, |dD| at most 0.0407

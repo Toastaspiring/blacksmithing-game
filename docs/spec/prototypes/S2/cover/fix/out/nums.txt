@@ -1,0 +1,6 @@
+canonical true
+valid true 
+ball reads 0.446999 %, kept false, units 73258.250
+truth 0.5025 %
+cleaned 5:Enclosed 8:Enclosed 9:Enclosed
+as Pommel: reads 0.446999 %, kept false

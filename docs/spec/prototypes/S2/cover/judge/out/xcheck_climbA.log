@@ -1,0 +1,8 @@
+XCHECK climbA every 1 shard 0/1: 6 designs, 144 parts, 14.6 s
+  model area: largest relative difference between A, B, J 1.37e-14; facet matching worst centroid gap 0
+  |A-B| share: <1e-12 143, <1e-10 1, <1e-9 0, <1e-6 0, <1e-3 0, more 0
+  largest |A-B| 1.94e-12 (A climb_1 2 part 17 (Wedge): A 0.018150016543 B 0.018150016545)
+  brute force on 144 parts (0 over the edge limit; 0 differing parts unsettled for that)
+  parts where A is outside the tie bracket by > 1e-9: 0, worst 0 ()
+  parts where B is outside the tie bracket by > 1e-9: 0, worst 0 ()
+  parts with a tie (bracket wider than 1e-9): 0, widest 0 ()

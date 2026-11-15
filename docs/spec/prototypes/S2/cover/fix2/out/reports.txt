@@ -1,0 +1,20 @@
+pre: the largest single report 5361.625 units (a cap 0.006 proud under a Ball r 0.04, alone)
+     5361.625  a cap 0.006 proud under a Ball r 0.04, alone                    17481.250 units
+     5046.625  V1's sword (h_report.json)                                      19362.500 units
+     3712.000  worst tclimb_1.json #5                                         494430.125 units
+     3584.000  worst tclimb_2.json #6                                         548798.000 units
+     3584.000  past the cap judge judge climb seed 4 best 14613763 units      700255.875 units CAPPED
+     3528.000  worst tclimb_3.json #4                                         588310.375 units
+     1752.125  past the cap judge judge climb seed 1 best 10790351 units      700185.125 units CAPPED
+     1539.125  past the cap judge judge climb seed 2 best 6424674 units       700042.125 units CAPPED
+   over the fixtures, attack and worst designs: 3712.000
+fin: the largest single report 3570.000 units (worst tclimb_1.json #5)
+     3570.000  worst tclimb_1.json #5                                         495062.375 units
+     2058.500  worst tclimb_2.json #6                                         558643.500 units
+     2030.000  past the cap judge judge climb seed 4 best 14613763 units      700255.875 units CAPPED
+     1806.500  worst tclimb_3.json #4                                         590694.500 units
+     1088.000  past the cap A climb_2 1                                       700084.625 units CAPPED
+     1065.000  worst tclimb_2.json #4                                         648832.000 units
+     1056.000  past the cap A climb_3 1                                       700250.625 units CAPPED
+     1040.000  past the cap judge judge climb seed 1 best 10790351 units      700132.500 units CAPPED
+   over the fixtures, attack and worst designs: 3570.000

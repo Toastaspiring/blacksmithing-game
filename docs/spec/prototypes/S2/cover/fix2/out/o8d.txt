@@ -1,0 +1,16 @@
+F3: Sm 0.0000 N, Ha 0.4423 H, Sh 0.6104 H
+   blade relabelled Guard: Sm 0.0000 N, Ha 0.4423 H, Sh 0.0645 N
+   + its blade 1e-12 larger in the Guard: blade kept false, copy kept true: Sm 0.0000 N, Ha 0.4423 H, Sh 0.0645 N
+   + its blade 1e-06 larger in the Guard: blade kept false, copy kept true: Sm 0.0000 N, Ha 0.4423 H, Sh 0.0645 N
+   + its blade 0.0001 larger in the Guard: blade kept false, copy kept true: Sm 0.0000 N, Ha 0.4427 H, Sh 0.0645 N
+C08: Sm 0.1563 N, Ha 0.0992 N, Sh 0.2487 H
+   blade relabelled Guard: Sm 0.1563 N, Ha 0.0992 N, Sh 0.0000 N
+   + its blade 1e-12 larger in the Guard: blade kept false, copy kept true: Sm 0.1563 N, Ha 0.0992 N, Sh 0.0000 N
+   + its blade 1e-06 larger in the Guard: blade kept false, copy kept true: Sm 0.1563 N, Ha 0.0992 N, Sh 0.0000 N
+   + its blade 0.0001 larger in the Guard: blade kept false, copy kept true: Sm 0.1564 N, Ha 0.0987 N, Sh 0.0000 N
+F5: Sm 0.0288 N, Ha 0.1037 N, Sh 0.0989 N | + 4 skins in its guard, labelled Blade: 4 of 4 cleaned: Sm 0.0288 N, Ha 0.1037 N, Sh 0.0989 N
+   its guard relabelled Blade: Sm 0.0288 N, Ha 0.1037 N, Sh 0.2804 H
+F3: Sm 0.0000 N, Ha 0.4423 H, Sh 0.6104 H | + 4 skins in its guard, labelled Blade: 4 of 4 cleaned: Sm 0.0000 N, Ha 0.4423 H, Sh 0.6104 H
+   its guard relabelled Blade: Sm 0.0000 N, Ha 0.4423 H, Sh 0.6770 H
+cage-flip sword: the Ball kept false: Sm 0.0343 N, Ha 0.2020 H, Sh 0.0000 N
+   with the Ball kept (the build before): Sm 0.0359 N, Ha 0.1548 N, Sh 0.0000 N

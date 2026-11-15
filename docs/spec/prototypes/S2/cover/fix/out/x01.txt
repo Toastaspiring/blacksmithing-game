@@ -1,0 +1,38 @@
+X01 2 blade copies at z +-0.003 (vs union blade 0.066) bound,id,kind,base,fixture
+X01raw 2 blade copies at z +-0.003 (vs F5) bound,id,kind,base,fixture
+X02 6 blade copies at z = k*0.002 (vs union blade 0.072) bound,id,kind,base,fixture
+X03 F4 + 0.0003 st3 fin bound,id,kind,base,fixture
+X04a blade from 4 strips bound,id,kind,base,fixture
+X04b blade from strips, seams at +-0.05 and 0 bound,id,kind,base,fixture
+X04-5-0.004 5 segments, gaps 0.004 bound,id,kind,base,fixture
+X04-5-0.006 5 segments, gaps 0.006 bound,id,kind,base,fixture
+X04-5-0.009 5 segments, gaps 0.009 bound,id,kind,base,fixture
+X04-10-0.004 10 segments, gaps 0.004 bound,id,kind,base,fixture
+X04-10-0.006 10 segments, gaps 0.006 bound,id,kind,base,fixture
+X04-10-0.009 10 segments, gaps 0.009 bound,id,kind,base,fixture
+X04g0.005 grip nudge 0.005 in X bound,id,kind,base,fixture
+X04g0.010 grip nudge 0.010 in X bound,id,kind,base,fixture
+X04g0.015 grip nudge 0.015 in X bound,id,kind,base,fixture
+X04g0.020 grip nudge 0.020 in X bound,id,kind,base,fixture
+X05+0.002 5 segments, gap 0.002 bound,id,kind,base,fixture
+X05+0.004 5 segments, gap 0.004 bound,id,kind,base,fixture
+X05+0.006 5 segments, gap 0.006 bound,id,kind,base,fixture
+X05+0.009 5 segments, gap 0.009 bound,id,kind,base,fixture
+X05-0.005 5 segments, overlap 0.005 bound,id,kind,base,fixture
+X05-0.020 5 segments, overlap 0.020 bound,id,kind,base,fixture
+X05-0.050 5 segments, overlap 0.050 bound,id,kind,base,fixture
+X06-0.00 blade offset 0.00 in X bound,id,kind,base,fixture
+X06-0.01 blade offset 0.01 in X bound,id,kind,base,fixture
+X06-0.02 blade offset 0.02 in X bound,id,kind,base,fixture
+X06-0.03 blade offset 0.03 in X bound,id,kind,base,fixture
+X06-0.04 blade offset 0.04 in X bound,id,kind,base,fixture
+X06-0.05 blade offset 0.05 in X bound,id,kind,base,fixture
+X07a laminate 2 x 0.03 plates bound,id,kind,base,fixture
+X07b laminate 2 x 0.035 plates overlapping 0.01 bound,id,kind,base,fixture
+X07c 4 segments overlapping 0.07 bound,id,kind,base,fixture
+X01 2 blade copies at z +-0.003 (vs union blade 0.066) Sm 0.0323 N, Ha 0.0756 N, Sh 0.0989 N  cleaned {}
+   base       Sm 0.0323 N, Ha 0.0754 N, Sh 0.0989 N  |dD| 0.0002 on Hammering
+X01raw 2 blade copies at z +-0.003 (vs F5) Sm 0.0323 N, Ha 0.0756 N, Sh 0.0989 N  cleaned {}
+   base       Sm 0.0288 N, Ha 0.1037 N, Sh 0.0989 N  |dD| 0.0281 on Hammering
+X02 6 blade copies at z = k*0.002 (vs union blade 0.072) Sm 0.0358 N, Ha 0.0526 N, Sh 0.0989 N  cleaned {6 7 8 9 10}
+   base       Sm 0.0358 N, Ha 0.0520 N, Sh 0.0989 N  |dD| 0.0006 on Hammering

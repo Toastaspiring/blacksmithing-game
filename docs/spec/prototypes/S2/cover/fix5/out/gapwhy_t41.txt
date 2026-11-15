@@ -1,0 +1,15 @@
+tclimb_4.json #1 (plain): 15 runs; the median run's longest stretch 0.177 ms (runs' longest 0.107–0.520); that run 1543 stretches, median 0.018 ms, its run 46.61 ms
+   stretch 18: 736 units (the report ending it 260.0), heap 1685 → 1804 KB (no drop)
+   from Analyze:349(spend) < Cover:313(report) < Cover:340(model) < Sampling:716(exposure) < Analyze:392(run)
+   to   Analyze:349(spend) < Cover:313(report) < Cover:340(model) < Sampling:716(exposure) < Analyze:392(run)
+   stretches past 0.25 ms over all runs: 12, of which the heap dropped in 12
+   0.520 ms    736 u (260.0) heap 14670 → 12027  Analyze:349(spend) < Cover:313(report) < Cover:340(model) < Sampling:716(exposure) < Analyze:392(run)  →  Analyze:349(spend) < Cover:313(report) < Cover:340(model) < Sampling:716(exposure) < Analyze:392(run)
+   0.511 ms    736 u (260.0) heap 13684 → 10830  Analyze:349(spend) < Cover:313(report) < Cover:340(model) < Sampling:716(exposure) < Analyze:392(run)  →  Analyze:349(spend) < Cover:313(report) < Cover:340(model) < Sampling:716(exposure) < Analyze:392(run)
+   0.447 ms    736 u (257.4) heap 10831 → 9477  Analyze:349(spend) < Cover:313(report) < Cover:340(model) < Sampling:716(exposure) < Analyze:392(run)  →  Analyze:349(spend) < Cover:709(settle) < Cover:752(piece) < Cover:1091(shown) < Sampling:748(exposure) < Analyze:392(run)
+   0.439 ms    736 u (260.0) heap 18378 → 14125  Analyze:349(spend) < Cover:313(report) < Cover:340(model) < Sampling:716(exposure) < Analyze:392(run)  →  Analyze:349(spend) < Cover:313(report) < Cover:340(model) < Sampling:716(exposure) < Analyze:392(run)
+   0.373 ms    736 u (260.0) heap 14126 → 11529  Analyze:349(spend) < Cover:313(report) < Cover:340(model) < Sampling:716(exposure) < Analyze:392(run)  →  Analyze:349(spend) < Cover:313(report) < Cover:340(model) < Sampling:716(exposure) < Analyze:392(run)
+   0.355 ms    736 u (260.0) heap 11987 → 10387  Analyze:349(spend) < Cover:313(report) < Cover:340(model) < Sampling:716(exposure) < Analyze:392(run)  →  Analyze:349(spend) < Cover:313(report) < Cover:340(model) < Sampling:716(exposure) < Analyze:392(run)
+   0.346 ms    736 u (260.0) heap 17822 → 13683  Analyze:349(spend) < Cover:313(report) < Cover:340(model) < Sampling:716(exposure) < Analyze:392(run)  →  Analyze:349(spend) < Cover:313(report) < Cover:340(model) < Sampling:716(exposure) < Analyze:392(run)
+   0.331 ms    736 u (260.0) heap 18803 → 14669  Analyze:349(spend) < Cover:313(report) < Cover:340(model) < Sampling:716(exposure) < Analyze:392(run)  →  Analyze:349(spend) < Cover:313(report) < Cover:340(model) < Sampling:716(exposure) < Analyze:392(run)
+   0.318 ms    736 u (260.0) heap 11530 → 9972  Analyze:349(spend) < Cover:313(report) < Cover:340(model) < Sampling:716(exposure) < Analyze:392(run)  →  Analyze:349(spend) < Cover:313(report) < Cover:340(model) < Sampling:716(exposure) < Analyze:392(run)
+   0.309 ms    736 u (260.0) heap 11428 → 7817  Analyze:349(spend) < Cover:313(report) < Cover:340(model) < Sampling:716(exposure) < Analyze:392(run)  →  Analyze:349(spend) < Cover:313(report) < Cover:340(model) < Sampling:716(exposure) < Analyze:392(run)

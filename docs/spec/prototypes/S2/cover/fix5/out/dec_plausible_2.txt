@@ -1,0 +1,2 @@
+plausible 2/3: 11129 designs, 207452 round pairs × rank (39664 Cylinder in Cylinder), 38 inside; the build's bounds left 0 tests open (0 caps searched); 0 decisions differ from the always-exact rule; the tree before's bound differs from it on 0 (0 designs)
+

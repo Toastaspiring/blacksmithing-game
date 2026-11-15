@@ -1,0 +1,13 @@
+valid: true  canonical: true
+19 Blade  Cylinder reads   2.396% (kept), truth   0.000%
+20 Blade  Cylinder reads   0.000% (cleaned), truth   0.000%
+21 Blade  Cylinder reads   0.000% (cleaned), truth   0.000%
+22 Blade  Cylinder reads   2.396% (kept), truth   0.000%
+rod 19: the largest distance of its side out of the grip, rings and guard -0.000200
+rod 20: the largest distance of its side out of the grip, rings and guard -0.000200
+rod 21: the largest distance of its side out of the grip, rings and guard -0.000200
+rod 22: the largest distance of its side out of the grip, rings and guard -0.000200
+D C09:             Sm 0.0001 N, Ha 0.3170 H, Sh 0.1904 N
+D build:           Sm 0.0001 N, Ha 0.3174 H, Sh 0.1664 N
+D truth's row:     Sm 0.0001 N, Ha 0.3170 H, Sh 0.1904 N
+|dD| 0.0240 on Sharpening, tier flip false

@@ -1,0 +1,19 @@
+33389 designs, build vs strip
+moved: {'units': 1909}
+
+verdict moved on 0:
+
+anything but the units moved with no verdict moving on 0:
+
+units moved on 1909 (0 up, 1909 down)
+  cylRivet|C09|blade r0.08 tilt20 poke0.0100: 37362.250 -> 33894.750 (-3467.500, -9.28 %)
+  cylRivet|C09|blade r0.08 tilt20 poke-0.0100: 37340.000 -> 33881.500 (-3458.500, -9.26 %)
+  cylRivet|C09|blade r0.08 tilt20 poke0.0050: 36951.500 -> 33634.500 (-3317.000, -8.98 %)
+  cylRivet|C09|blade r0.08 tilt20 poke0.0020: 37406.500 -> 34089.500 (-3317.000, -8.87 %)
+  cylRivet|C09|blade r0.08 tilt20 poke0.0000: 37549.500 -> 34232.500 (-3317.000, -8.83 %)
+  cylRib|F3|blade r0.05 psi11.25 height0.200: 11502.875 -> 11498.625 (-4.250, -0.04 %)
+  cylRib|F3|blade r0.05 psi22.50 height0.200: 11502.875 -> 11498.625 (-4.250, -0.04 %)
+  cylRib|F3|blade r0.05 psi0.00 height0.300: 11498.875 -> 11498.625 (-0.250, -0.00 %)
+  cylRib|F3|blade r0.05 psi11.25 height0.300: 11498.875 -> 11498.625 (-0.250, -0.00 %)
+  cylRib|F3|blade r0.05 psi22.50 height0.300: 11498.875 -> 11498.625 (-0.250, -0.00 %)
+  the heaviest valid: build 104572.875, strip 104572.875

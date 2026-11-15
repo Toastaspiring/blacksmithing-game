@@ -257,13 +257,13 @@ return Test.suite("Meta/Source", function(t)
 
 	-- ── T-META-03 ─────────────────────────────────────────────────────────────────────────────────────────────
 
-	t.it("T-META-03 authoritative modules use no transcendental math or ^", function()
+	t.it("T-META-03 authoritative modules use no transcendental math or ^, and no native code", function()
 		local problems, count = each(disk, { "src/shared" }, Rules.transcendental, Rules.isAuthoritative)
 		A.truthy(count > 0, "no files in scope")
 		expectClean(problems, "T-META-03")
 	end)
 
-	t.it("T-META-03 catches planted transcendental calls and powers", function()
+	t.it("T-META-03 catches planted transcendental calls, powers and native code", function()
 		for _, line in
 			{
 				"local y = math.sin(x)", "local y = math.cos(x)", "local y = math.tan(x)", "local y = math.exp(x)",
@@ -276,13 +276,19 @@ return Test.suite("Meta/Source", function(t)
 		do
 			expectCaught(Rules.transcendental(AUTH, "--!strict\nlocal x, y = 1, 1\n" .. line .. "\n"), line, "uses ")
 		end
+		-- §4.1: no native code, as a directive or on one function
+		expectCaught(Rules.transcendental(AUTH, "--!strict\n--!native\nlocal x = 1\n"), "--!native", "--!native")
+		expectCaught(Rules.transcendental(AUTH, "--!strict\r\n--!native\r\nlocal x = 1\r\n"), "--!native, CRLF", "--!native")
+		expectCaught(Rules.transcendental(AUTH, "--!strict\n@native\nlocal function f() end\n"), "@native", "@native")
+		expectCaught(Rules.transcendental(AUTH, "--!strict\nlocal f = @native function() end\n"), "@native on a value", "@native")
 		local clean = table.concat({
 			"--!strict",
 			"local x = 2",
 			"local a = math.sin(x) -- allow-transcendental: editor display only",
-			'local b = "x^2 math.sin" -- x^2 in a comment',
+			'local b = "x^2 math.sin --!native @native" -- x^2 in a comment, and no --!native here',
 			"local c = math.sqrt(x) * math.abs(-x) + math.floor(x)",
-			"return { a, b, c }",
+			"local native = c + 1",
+			"return { a, b, c, native }",
 		}, "\n")
 		expectClean(Rules.transcendental(AUTH, clean), "allowed, strings, comments, exact ops")
 		for _, path in

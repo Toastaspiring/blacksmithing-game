@@ -1,0 +1,1 @@
+corpus shard 0/3: 447 designs, 6469 parts that hide; rows that differ from the truth's: 0

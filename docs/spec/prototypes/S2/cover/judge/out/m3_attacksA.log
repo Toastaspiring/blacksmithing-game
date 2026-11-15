@@ -1,0 +1,4 @@
+M3 attacksA every 2 offset 0: 670 designs, 41 s
+  today   rows differ from the truth's in 43 designs (parts cleaned that the truth keeps 14, kept that it cleans 29); tier flips 22; worst |dD| 0.7964 (v12/a_hand emu #16)
+  Acanon  rows differ from the truth's in 1 designs (parts cleaned that the truth keeps 0, kept that it cleans 1); tier flips 0; worst |dD| 0.0000 ()
+  cons    rows differ from the truth's in 0 designs (parts cleaned that the truth keeps 0, kept that it cleans 0); tier flips 0; worst |dD| 0.0000 ()

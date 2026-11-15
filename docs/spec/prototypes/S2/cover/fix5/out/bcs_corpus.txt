@@ -1,0 +1,19 @@
+1340 designs, build vs strip
+moved: {'units': 77}
+
+verdict moved on 0:
+
+anything but the units moved with no verdict moving on 0:
+
+units moved on 77 (0 up, 77 down)
+  v12/a_rod emu #11: 10142.625 -> 7491.125 (-2651.500, -26.14 %)
+  v12/a_rod vsTruth #10: 10142.625 -> 7491.125 (-2651.500, -26.14 %)
+  v12/a_rod emu #14: 9751.000 -> 7317.750 (-2433.250, -24.95 %)
+  v12/a_rod vsTruth #13: 9751.000 -> 7317.750 (-2433.250, -24.95 %)
+  v12/a_rod emu #8: 8531.125 -> 6512.500 (-2018.625, -23.66 %)
+  v12/a_flat emu #11: 8874.000 -> 8784.750 (-89.250, -1.01 %)
+  v11/a10_sub emu #4: 3283.500 -> 3208.500 (-75.000, -2.28 %)
+  v11/a11_geo emu #6: 3283.500 -> 3208.500 (-75.000, -2.28 %)
+  v11/a11_geo emu #7: 3283.500 -> 3208.500 (-75.000, -2.28 %)
+  v11/a3_split emu #11: 3283.500 -> 3208.500 (-75.000, -2.28 %)
+  the heaviest valid: build 330993.125, strip 330993.125

@@ -1,0 +1,5 @@
+1340 designs
+R1 vs FIN: differ {'verdict': 0, 'measure': 0, 'mass': 0, 'probes': 0, 'units': 1176}; errors 0
+   verdict moved on 0: []
+   measure moved with no verdict moving on 0: []
+   mass moved with no verdict moving on 0: []

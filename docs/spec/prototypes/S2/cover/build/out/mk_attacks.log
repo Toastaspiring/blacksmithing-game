@@ -1,0 +1,17 @@
+chain hidden in C01                                  target  5 truth   0.0000% kept false build false quick-valid true
+chain visible in C01                                 target  5 truth   5.0000% kept true  build true  quick-valid true
+rod r 0.10 sealed in 16 walls, corner gap 0.0119     target  5 truth   0.0000% kept false build false quick-valid true
+rod r 0.10 sealed in 16 walls, corner gap 0.0118     target  5 truth   0.0000% kept false build false quick-valid true
+rod r 0.20 sealed in 16 walls, corner gap 0.0119     target  5 truth   0.0000% kept false build false quick-valid true
+rod r 0.20 sealed in 16 walls, corner gap 0.0118     target  5 truth   0.0000% kept false build false quick-valid true
+rod r 0.20 sealed in 16 walls, corner gap 0.0116     target  5 truth   0.0000% kept false build false quick-valid true
+rod r 0.20 sealed in 16 walls, corner gap 0.0115     target  5 truth   0.0000% kept false build false quick-valid true
+a core under 16 ribs, 0.0010 past the lines          target  4 truth  11.2526% kept true  build true  quick-valid true
+a core under 16 ribs, 0.0005 past the lines          target  4 truth  11.5243% kept true  build true  quick-valid true
+a core under 8 tiles, 3 hairline crossings           target  4 truth   0.0027% kept false build false quick-valid true
+a core under 9 tiles, 4 hairline crossings           target  4 truth   0.0027% kept false build false quick-valid true
+a bar r 0.15 behind 16 slats                         target  4 truth  40.6699% kept true  build true  quick-valid true
+a bar r 0.25 behind 16 slats                         target  4 truth  41.3699% kept true  build true  quick-valid true
+a Ball d 0.56 in 8 corner blocks                     target  4 truth  47.9750% kept true  build true  quick-valid true
+a rod r 0.10 in an octagon, seams 1e-5               target 13 truth   0.0175% kept false build false quick-valid true
+a rod r 0.09 in an octagon, seams 1e-5               target 13 truth   0.0200% kept false build false quick-valid true

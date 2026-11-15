@@ -1,5 +1,5 @@
 --!strict
--- tests/fixtures/Adversarial.luau — the invalid and edge-case drafts A01–A24 (SPEC §14.7; constructions and expected
+-- tests/fixtures/Adversarial.luau — the invalid and edge-case drafts A01–A24 and A28 (SPEC §14.7; constructions and expected
 -- codes E-S8.4): together one draft per S1 CanonError, S2 ValidationCode and wire code. Each case holds variants;
 -- variant.draft() builds a fresh raw draft on every call (the drafts are untrusted input: some are not even tables),
 -- so the large ones (A15, A18) cost nothing until used. Most are F1 or F2 with one change.
@@ -1002,6 +1002,32 @@ case("A24", "a needle blade of MIN_DIM × 3.0 × MIN_DIM", {
 	},
 })
 
+-- A25–A27 are M3's hidden-grip variants (SPEC §14.7).
+case("A28", "a design past the verdicts' cap", {
+	{
+		key = "A28",
+		what = "24 thin rods in one bundle, 0.004 apart across and 0.01 deep: their verdicts pass VERDICT_WORK_MAX",
+		draft = function(): any
+			local list: { Part } = {}
+			for i = 1, ASSUMED.MAX_PARTS do
+				local slot, y = "Blade", 2.55
+				if i > ASSUMED.SLOT_MAX.Blade + 6 then
+					slot, y = "Grip", 2.45
+				elseif i > ASSUMED.SLOT_MAX.Blade then
+					slot, y = "Guard", 2.5
+				end
+				table.insert(list, P(i, slot, "Cylinder", "Iron", { 0.004 * ((i - 1) % 8), y, 0.01 * ((i - 1) // 8) }, Build.Z90,
+					{ 1.2, ASSUMED.MIN_DIM, ASSUMED.MIN_DIM }))
+			end
+			return core("A28", list)
+		end,
+		canon = canonOk(),
+		validation = invalid({ { code = "TooComplex" } }),
+		save = "Invalid",
+		note = "valid but for the cap: V1–V4 hold, so TooComplex is the only error (SPEC §4.4, §4.9)",
+	},
+})
+
 -- ── index ─────────────────────────────────────────────────────────────────────────────────────────────────────
 
 local BY_ID: { [string]: Case } = {}
@@ -1017,7 +1043,7 @@ end
 
 local Adversarial = {
 	ASSUMED = ASSUMED,
-	order = ORDER, -- {"A01", …, "A24"}
+	order = ORDER, -- {"A01", …, "A24", "A28"}
 	list = CASES,
 	variants = VARIANTS, -- every variant of every case, in case order
 }

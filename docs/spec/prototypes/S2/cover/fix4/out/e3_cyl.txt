@@ -1,0 +1,211 @@
+Cylinder r 0.20, vertex  Block 0.040 x 0.200, top 0.05 over (0.000048) out truth   4.868%  base   2.725%  build   2.725%
+Cylinder r 0.20, vertex  Block 0.040 x 0.200, top 0.10 over (0.000096) out truth   4.903%  base   2.853%  build   2.853%
+Cylinder r 0.20, vertex  Block 0.040 x 0.200, top 0.25 over (0.000240) out truth   4.958%  base   3.237%  build   3.237%
+Cylinder r 0.20, vertex  Block 0.040 x 0.200, top 0.50 over (0.000480) out truth   5.070%  base   3.883%  build   3.883%
+Cylinder r 0.20, vertex  Block 0.040 x 0.200, top 0.75 over (0.000720) out truth   5.173%  base   4.536%  build   4.536%
+Cylinder r 0.20, vertex  Block 0.040 x 0.200, top 1.00 over (0.000960) out truth   5.290%  base   5.195%  build   5.195%
+Cylinder r 0.20, vertex  Block 0.040 x 0.200, top 1.25 over (0.001200) out truth   5.380%  base   5.323%  build   5.323%
+Cylinder r 0.20, vertex  Block 0.100 x 0.200, top 0.05 over (0.000048) out truth  11.705%  base   9.749%  build   9.749%
+Cylinder r 0.20, vertex  Block 0.100 x 0.200, top 0.10 over (0.000096) out truth  11.725%  base   9.864%  build   9.864%
+Cylinder r 0.20, vertex  Block 0.100 x 0.200, top 0.25 over (0.000240) out truth  11.772%  base  10.209%  build  10.209%
+Cylinder r 0.20, vertex  Block 0.100 x 0.200, top 0.50 over (0.000480) out truth  11.897%  base  10.786%  build  10.786%
+Cylinder r 0.20, vertex  Block 0.100 x 0.200, top 0.75 over (0.000720) out truth  11.992%  base  11.366%  build  11.366%
+Cylinder r 0.20, vertex  Block 0.100 x 0.200, top 1.00 over (0.000960) out truth  12.075%  base  11.948%  build  11.948%
+Cylinder r 0.20, vertex  Block 0.100 x 0.200, top 1.25 over (0.001200) out truth  12.155%  base  12.060%  build  12.060%
+Cylinder r 0.20, middle  Block 0.040 x 0.200, top 0.05 over (0.000048) out truth   4.868%  base   4.581%  build   4.581%
+Cylinder r 0.20, middle  Block 0.040 x 0.200, top 0.10 over (0.000096) out truth   4.903%  base   4.603%  build   4.603%
+Cylinder r 0.20, middle  Block 0.040 x 0.200, top 0.25 over (0.000240) out truth   4.958%  base   4.668%  build   4.668%
+Cylinder r 0.20, middle  Block 0.040 x 0.200, top 0.50 over (0.000480) out truth   5.070%  base   4.777%  build   4.777%
+Cylinder r 0.20, middle  Block 0.040 x 0.200, top 0.75 over (0.000720) out truth   5.173%  base   4.886%  build   4.886%
+Cylinder r 0.20, middle  Block 0.040 x 0.200, top 1.00 over (0.000960) out truth   5.290%  base   4.996%  build   4.996%
+Cylinder r 0.20, middle  Block 0.040 x 0.200, top 1.25 over (0.001200) out truth   5.380%  base   5.105%  build   5.105%
+Cylinder r 0.20, middle  Block 0.100 x 0.200, top 0.05 over (0.000048) out truth  11.705%  base  11.590%  build  11.590%
+Cylinder r 0.20, middle  Block 0.100 x 0.200, top 0.10 over (0.000096) out truth  11.725%  base  11.609%  build  11.609%
+Cylinder r 0.20, middle  Block 0.100 x 0.200, top 0.25 over (0.000240) out truth  11.772%  base  11.667%  build  11.667%
+Cylinder r 0.20, middle  Block 0.100 x 0.200, top 0.50 over (0.000480) out truth  11.897%  base  11.763%  build  11.763%
+Cylinder r 0.20, middle  Block 0.100 x 0.200, top 0.75 over (0.000720) out truth  11.992%  base  11.859%  build  11.859%
+Cylinder r 0.20, middle  Block 0.100 x 0.200, top 1.00 over (0.000960) out truth  12.075%  base  11.955%  build  11.955%
+Cylinder r 0.20, middle  Block 0.100 x 0.200, top 1.25 over (0.001200) out truth  12.155%  base  12.051%  build  12.051%
+Cylinder r 0.20, between Block 0.040 x 0.200, top 0.05 over (0.000048) out truth   4.868%  base   2.691%  build   2.691%
+Cylinder r 0.20, between Block 0.040 x 0.200, top 0.10 over (0.000096) out truth   4.903%  base   2.856%  build   2.856%
+Cylinder r 0.20, between Block 0.040 x 0.200, top 0.25 over (0.000240) out truth   4.958%  base   3.351%  build   3.351%
+Cylinder r 0.20, between Block 0.040 x 0.200, top 0.50 over (0.000480) out truth   5.070%  base   4.183%  build   4.183%
+Cylinder r 0.20, between Block 0.040 x 0.200, top 0.75 over (0.000720) out truth   5.173%  base   5.025%  build   5.025%
+Cylinder r 0.20, between Block 0.040 x 0.200, top 1.00 over (0.000960) out truth   5.290%  base   5.158%  build   5.158%
+Cylinder r 0.20, between Block 0.040 x 0.200, top 1.25 over (0.001200) out truth   5.380%  base   5.267%  build   5.267%
+Cylinder r 0.20, between Block 0.100 x 0.200, top 0.05 over (0.000048) out truth  11.710%  base   9.732%  build   9.732%
+Cylinder r 0.20, between Block 0.100 x 0.200, top 0.10 over (0.000096) out truth  11.730%  base   9.879%  build   9.879%
+Cylinder r 0.20, between Block 0.100 x 0.200, top 0.25 over (0.000240) out truth  11.773%  base  10.321%  build  10.321%
+Cylinder r 0.20, between Block 0.100 x 0.200, top 0.50 over (0.000480) out truth  11.893%  base  11.061%  build  11.061%
+Cylinder r 0.20, between Block 0.100 x 0.200, top 0.75 over (0.000720) out truth  11.988%  base  11.804%  build  11.804%
+Cylinder r 0.20, between Block 0.100 x 0.200, top 1.00 over (0.000960) out truth  12.075%  base  11.921%  build  11.921%
+Cylinder r 0.20, between Block 0.100 x 0.200, top 1.25 over (0.001200) out truth  12.170%  base  12.017%  build  12.017%
+Cylinder r 0.30, vertex  Block 0.040 x 0.200, top 0.05 over (0.000072) out truth   4.790%  base   1.516%  build   1.516%  PRICE
+Cylinder r 0.30, vertex  Block 0.040 x 0.200, top 0.10 over (0.000144) out truth   4.810%  base   1.704%  build   1.704%  PRICE
+Cylinder r 0.30, vertex  Block 0.040 x 0.200, top 0.25 over (0.000360) out truth   4.923%  base   2.270%  build   2.270%
+Cylinder r 0.30, vertex  Block 0.040 x 0.200, top 0.50 over (0.000720) out truth   5.070%  base   3.227%  build   3.227%
+Cylinder r 0.30, vertex  Block 0.040 x 0.200, top 0.75 over (0.001080) out truth   5.238%  base   4.198%  build   4.198%
+Cylinder r 0.30, vertex  Block 0.040 x 0.200, top 1.00 over (0.001440) out truth   5.398%  base   5.185%  build   5.185%
+Cylinder r 0.30, vertex  Block 0.040 x 0.200, top 1.25 over (0.001800) out truth   5.565%  base   5.375%  build   5.375%
+Cylinder r 0.30, vertex  Block 0.100 x 0.200, top 0.05 over (0.000072) out truth  11.132%  base   8.163%  build   8.163%
+Cylinder r 0.30, vertex  Block 0.100 x 0.200, top 0.10 over (0.000144) out truth  11.180%  base   8.334%  build   8.334%
+Cylinder r 0.30, vertex  Block 0.100 x 0.200, top 0.25 over (0.000360) out truth  11.265%  base   8.848%  build   8.848%
+Cylinder r 0.30, vertex  Block 0.100 x 0.200, top 0.50 over (0.000720) out truth  11.405%  base   9.710%  build   9.710%
+Cylinder r 0.30, vertex  Block 0.100 x 0.200, top 0.75 over (0.001080) out truth  11.562%  base  10.577%  build  10.577%
+Cylinder r 0.30, vertex  Block 0.100 x 0.200, top 1.00 over (0.001440) out truth  11.690%  base  11.449%  build  11.449%
+Cylinder r 0.30, vertex  Block 0.100 x 0.200, top 1.25 over (0.001800) out truth  11.850%  base  11.617%  build  11.617%
+Cylinder r 0.30, middle  Block 0.040 x 0.200, top 0.05 over (0.000072) out truth   4.790%  base   4.578%  build   4.578%
+Cylinder r 0.30, middle  Block 0.040 x 0.200, top 0.10 over (0.000144) out truth   4.810%  base   4.611%  build   4.611%
+Cylinder r 0.30, middle  Block 0.040 x 0.200, top 0.25 over (0.000360) out truth   4.923%  base   4.709%  build   4.709%
+Cylinder r 0.30, middle  Block 0.040 x 0.200, top 0.50 over (0.000720) out truth   5.070%  base   4.873%  build   4.873%
+Cylinder r 0.30, middle  Block 0.040 x 0.200, top 0.75 over (0.001080) out truth   5.238%  base   5.036%  build   5.036%
+Cylinder r 0.30, middle  Block 0.040 x 0.200, top 1.00 over (0.001440) out truth   5.398%  base   5.200%  build   5.200%
+Cylinder r 0.30, middle  Block 0.040 x 0.200, top 1.25 over (0.001800) out truth   5.565%  base   5.364%  build   5.364%
+Cylinder r 0.30, middle  Block 0.100 x 0.200, top 0.05 over (0.000072) out truth  11.132%  base  11.009%  build  11.009%
+Cylinder r 0.30, middle  Block 0.100 x 0.200, top 0.10 over (0.000144) out truth  11.180%  base  11.038%  build  11.038%
+Cylinder r 0.30, middle  Block 0.100 x 0.200, top 0.25 over (0.000360) out truth  11.265%  base  11.124%  build  11.124%
+Cylinder r 0.30, middle  Block 0.100 x 0.200, top 0.50 over (0.000720) out truth  11.405%  base  11.268%  build  11.268%
+Cylinder r 0.30, middle  Block 0.100 x 0.200, top 0.75 over (0.001080) out truth  11.562%  base  11.412%  build  11.412%
+Cylinder r 0.30, middle  Block 0.100 x 0.200, top 1.00 over (0.001440) out truth  11.690%  base  11.556%  build  11.556%
+Cylinder r 0.30, middle  Block 0.100 x 0.200, top 1.25 over (0.001800) out truth  11.850%  base  11.700%  build  11.700%
+Cylinder r 0.30, between Block 0.040 x 0.200, top 0.05 over (0.000072) out truth   4.790%  base   1.704%  build   1.704%  PRICE
+Cylinder r 0.30, between Block 0.040 x 0.200, top 0.10 over (0.000144) out truth   4.810%  base   1.884%  build   1.884%  PRICE
+Cylinder r 0.30, between Block 0.040 x 0.200, top 0.25 over (0.000360) out truth   4.923%  base   2.472%  build   2.472%
+Cylinder r 0.30, between Block 0.040 x 0.200, top 0.50 over (0.000720) out truth   5.070%  base   3.710%  build   3.710%
+Cylinder r 0.30, between Block 0.040 x 0.200, top 0.75 over (0.001080) out truth   5.238%  base   4.968%  build   4.968%
+Cylinder r 0.30, between Block 0.040 x 0.200, top 1.00 over (0.001440) out truth   5.398%  base   5.168%  build   5.168%
+Cylinder r 0.30, between Block 0.040 x 0.200, top 1.25 over (0.001800) out truth   5.565%  base   5.332%  build   5.332%
+Cylinder r 0.30, between Block 0.100 x 0.200, top 0.05 over (0.000072) out truth  11.138%  base   8.219%  build   8.219%
+Cylinder r 0.30, between Block 0.100 x 0.200, top 0.10 over (0.000144) out truth  11.175%  base   8.439%  build   8.439%
+Cylinder r 0.30, between Block 0.100 x 0.200, top 0.25 over (0.000360) out truth  11.265%  base   9.099%  build   9.099%
+Cylinder r 0.30, between Block 0.100 x 0.200, top 0.50 over (0.000720) out truth  11.400%  base  10.205%  build  10.205%
+Cylinder r 0.30, between Block 0.100 x 0.200, top 0.75 over (0.001080) out truth  11.558%  base  11.318%  build  11.318%
+Cylinder r 0.30, between Block 0.100 x 0.200, top 1.00 over (0.001440) out truth  11.690%  base  11.494%  build  11.494%
+Cylinder r 0.30, between Block 0.100 x 0.200, top 1.25 over (0.001800) out truth  11.845%  base  11.638%  build  11.638%
+Cylinder r 0.80, vertex  Block 0.040 x 0.200, top 0.05 over (0.000192) out truth   4.705%  base   0.000%  build   0.000%  PRICE
+Cylinder r 0.80, vertex  Block 0.040 x 0.200, top 0.10 over (0.000384) out truth   4.795%  base   0.000%  build   0.000%  PRICE
+Cylinder r 0.80, vertex  Block 0.040 x 0.200, top 0.25 over (0.000960) out truth   5.050%  base   0.000%  build   0.000%  PRICE
+Cylinder r 0.80, vertex  Block 0.040 x 0.200, top 0.50 over (0.001920) out truth   5.498%  base   0.048%  build   0.048%  PRICE
+Cylinder r 0.80, vertex  Block 0.040 x 0.200, top 0.75 over (0.002880) out truth   5.925%  base   2.537%  build   2.537%
+Cylinder r 0.80, vertex  Block 0.040 x 0.200, top 1.00 over (0.003840) out truth   6.363%  base   5.132%  build   5.132%
+Cylinder r 0.80, vertex  Block 0.040 x 0.200, top 1.25 over (0.004800) out truth   6.803%  base   5.639%  build   5.639%
+Cylinder r 0.80, vertex  Block 0.100 x 0.200, top 0.05 over (0.000192) out truth  10.490%  base   2.810%  build   2.810%
+Cylinder r 0.80, vertex  Block 0.100 x 0.200, top 0.10 over (0.000384) out truth  10.557%  base   3.249%  build   3.249%
+Cylinder r 0.80, vertex  Block 0.100 x 0.200, top 0.25 over (0.000960) out truth  10.805%  base   4.574%  build   4.574%
+Cylinder r 0.80, vertex  Block 0.100 x 0.200, top 0.50 over (0.001920) out truth  11.185%  base   6.813%  build   6.813%
+Cylinder r 0.80, vertex  Block 0.100 x 0.200, top 0.75 over (0.002880) out truth  11.562%  base   9.089%  build   9.089%
+Cylinder r 0.80, vertex  Block 0.100 x 0.200, top 1.00 over (0.003840) out truth  11.947%  base  11.402%  build  11.402%
+Cylinder r 0.80, vertex  Block 0.100 x 0.200, top 1.25 over (0.004800) out truth  12.335%  base  11.849%  build  11.849%
+Cylinder r 0.80, middle  Block 0.040 x 0.200, top 0.05 over (0.000192) out truth   4.705%  base   4.633%  build   4.633%
+Cylinder r 0.80, middle  Block 0.040 x 0.200, top 0.10 over (0.000384) out truth   4.795%  base   4.720%  build   4.720%
+Cylinder r 0.80, middle  Block 0.040 x 0.200, top 0.25 over (0.000960) out truth   5.050%  base   4.982%  build   4.982%
+Cylinder r 0.80, middle  Block 0.040 x 0.200, top 0.50 over (0.001920) out truth   5.498%  base   5.418%  build   5.418%
+Cylinder r 0.80, middle  Block 0.040 x 0.200, top 0.75 over (0.002880) out truth   5.925%  base   5.855%  build   5.855%
+Cylinder r 0.80, middle  Block 0.040 x 0.200, top 1.00 over (0.003840) out truth   6.363%  base   6.291%  build   6.291%
+Cylinder r 0.80, middle  Block 0.040 x 0.200, top 1.25 over (0.004800) out truth   6.803%  base   6.727%  build   6.727%
+Cylinder r 0.80, middle  Block 0.100 x 0.200, top 0.05 over (0.000192) out truth  10.490%  base  10.077%  build  10.077%
+Cylinder r 0.80, middle  Block 0.100 x 0.200, top 0.10 over (0.000384) out truth  10.557%  base  10.154%  build  10.154%
+Cylinder r 0.80, middle  Block 0.100 x 0.200, top 0.25 over (0.000960) out truth  10.805%  base  10.384%  build  10.384%
+Cylinder r 0.80, middle  Block 0.100 x 0.200, top 0.50 over (0.001920) out truth  11.185%  base  10.768%  build  10.768%
+Cylinder r 0.80, middle  Block 0.100 x 0.200, top 0.75 over (0.002880) out truth  11.562%  base  11.152%  build  11.152%
+Cylinder r 0.80, middle  Block 0.100 x 0.200, top 1.00 over (0.003840) out truth  11.947%  base  11.536%  build  11.536%
+Cylinder r 0.80, middle  Block 0.100 x 0.200, top 1.25 over (0.004800) out truth  12.335%  base  11.920%  build  11.920%
+Cylinder r 0.80, between Block 0.040 x 0.200, top 0.05 over (0.000192) out truth   4.705%  base   0.499%  build   0.499%  PRICE
+Cylinder r 0.80, between Block 0.040 x 0.200, top 0.10 over (0.000384) out truth   4.795%  base   0.969%  build   0.969%  PRICE
+Cylinder r 0.80, between Block 0.040 x 0.200, top 0.25 over (0.000960) out truth   5.050%  base   2.407%  build   2.407%
+Cylinder r 0.80, between Block 0.040 x 0.200, top 0.50 over (0.001920) out truth   5.498%  base   4.887%  build   4.887%
+Cylinder r 0.80, between Block 0.040 x 0.200, top 0.75 over (0.002880) out truth   5.925%  base   5.345%  build   5.345%
+Cylinder r 0.80, between Block 0.040 x 0.200, top 1.00 over (0.003840) out truth   6.363%  base   5.781%  build   5.781%
+Cylinder r 0.80, between Block 0.040 x 0.200, top 1.25 over (0.004800) out truth   6.803%  base   6.217%  build   6.217%
+Cylinder r 0.80, between Block 0.100 x 0.200, top 0.05 over (0.000192) out truth  10.495%  base   3.642%  build   3.642%
+Cylinder r 0.80, between Block 0.100 x 0.200, top 0.10 over (0.000384) out truth  10.573%  base   4.065%  build   4.065%
+Cylinder r 0.80, between Block 0.100 x 0.200, top 0.25 over (0.000960) out truth  10.800%  base   5.340%  build   5.340%
+Cylinder r 0.80, between Block 0.100 x 0.200, top 0.50 over (0.001920) out truth  11.185%  base   7.962%  build   7.962%
+Cylinder r 0.80, between Block 0.100 x 0.200, top 0.75 over (0.002880) out truth  11.568%  base  10.913%  build  10.913%
+Cylinder r 0.80, between Block 0.100 x 0.200, top 1.00 over (0.003840) out truth  11.948%  base  11.381%  build  11.381%
+Cylinder r 0.80, between Block 0.100 x 0.200, top 1.25 over (0.004800) out truth  12.330%  base  11.765%  build  11.765%
+Cylinder r 1.50, vertex  Block 0.040 x 0.200, top 0.05 over (0.000360) out truth   4.748%  base   0.000%  build   0.000%  PRICE
+Cylinder r 1.50, vertex  Block 0.040 x 0.200, top 0.10 over (0.000720) out truth   4.908%  base   0.000%  build   0.000%  PRICE
+Cylinder r 1.50, vertex  Block 0.040 x 0.200, top 0.25 over (0.001800) out truth   5.408%  base   0.000%  build   0.000%  PRICE
+Cylinder r 1.50, vertex  Block 0.040 x 0.200, top 0.50 over (0.003600) out truth   6.218%  base   0.000%  build   0.000%  PRICE
+Cylinder r 1.50, vertex  Block 0.040 x 0.200, top 0.75 over (0.005400) out truth   7.033%  base   0.284%  build   0.284%  PRICE
+Cylinder r 1.50, vertex  Block 0.040 x 0.200, top 1.00 over (0.007200) out truth   7.858%  base   5.057%  build   5.057%
+Cylinder r 1.50, vertex  Block 0.040 x 0.200, top 1.25 over (0.009000) out truth   8.678%  base   6.009%  build   6.009%
+Cylinder r 1.50, vertex  Block 0.100 x 0.200, top 0.05 over (0.000360) out truth  10.365%  base   0.000%  build   0.000%  PRICE
+Cylinder r 1.50, vertex  Block 0.100 x 0.200, top 0.10 over (0.000720) out truth  10.507%  base   0.000%  build   0.000%  PRICE
+Cylinder r 1.50, vertex  Block 0.100 x 0.200, top 0.25 over (0.001800) out truth  10.945%  base   0.000%  build   0.000%  PRICE
+Cylinder r 1.50, vertex  Block 0.100 x 0.200, top 0.50 over (0.003600) out truth  11.667%  base   2.858%  build   2.858%
+Cylinder r 1.50, vertex  Block 0.100 x 0.200, top 0.75 over (0.005400) out truth  12.387%  base   7.031%  build   7.031%
+Cylinder r 1.50, vertex  Block 0.100 x 0.200, top 1.00 over (0.007200) out truth  13.110%  base  11.337%  build  11.337%
+Cylinder r 1.50, vertex  Block 0.100 x 0.200, top 1.25 over (0.009000) out truth  13.825%  base  12.174%  build  12.174%
+Cylinder r 1.50, middle  Block 0.040 x 0.200, top 0.05 over (0.000360) out truth   4.748%  base   4.709%  build   4.709%
+Cylinder r 1.50, middle  Block 0.040 x 0.200, top 0.10 over (0.000720) out truth   4.908%  base   4.873%  build   4.873%
+Cylinder r 1.50, middle  Block 0.040 x 0.200, top 0.25 over (0.001800) out truth   5.408%  base   5.364%  build   5.364%
+Cylinder r 1.50, middle  Block 0.040 x 0.200, top 0.50 over (0.003600) out truth   6.218%  base   6.182%  build   6.182%
+Cylinder r 1.50, middle  Block 0.040 x 0.200, top 0.75 over (0.005400) out truth   7.033%  base   7.000%  build   7.000%
+Cylinder r 1.50, middle  Block 0.040 x 0.200, top 1.00 over (0.007200) out truth   7.858%  base   7.818%  build   7.818%
+Cylinder r 1.50, middle  Block 0.040 x 0.200, top 1.25 over (0.009000) out truth   8.678%  base   8.636%  build   8.636%
+Cylinder r 1.50, middle  Block 0.100 x 0.200, top 0.05 over (0.000360) out truth  10.365%  base  10.144%  build  10.144%
+Cylinder r 1.50, middle  Block 0.100 x 0.200, top 0.10 over (0.000720) out truth  10.507%  base  10.288%  build  10.288%
+Cylinder r 1.50, middle  Block 0.100 x 0.200, top 0.25 over (0.001800) out truth  10.945%  base  10.720%  build  10.720%
+Cylinder r 1.50, middle  Block 0.100 x 0.200, top 0.50 over (0.003600) out truth  11.667%  base  11.440%  build  11.440%
+Cylinder r 1.50, middle  Block 0.100 x 0.200, top 0.75 over (0.005400) out truth  12.387%  base  12.160%  build  12.160%
+Cylinder r 1.50, middle  Block 0.100 x 0.200, top 1.00 over (0.007200) out truth  13.110%  base  12.880%  build  12.880%
+Cylinder r 1.50, middle  Block 0.100 x 0.200, top 1.25 over (0.009000) out truth  13.825%  base  13.600%  build  13.600%
+Cylinder r 1.50, between Block 0.040 x 0.200, top 0.05 over (0.000360) out truth   4.748%  base   0.000%  build   0.000%  PRICE
+Cylinder r 1.50, between Block 0.040 x 0.200, top 0.10 over (0.000720) out truth   4.908%  base   0.000%  build   0.000%  PRICE
+Cylinder r 1.50, between Block 0.040 x 0.200, top 0.25 over (0.001800) out truth   5.408%  base   2.377%  build   2.377%
+Cylinder r 1.50, between Block 0.040 x 0.200, top 0.50 over (0.003600) out truth   6.218%  base   5.285%  build   5.285%
+Cylinder r 1.50, between Block 0.040 x 0.200, top 0.75 over (0.005400) out truth   7.033%  base   6.103%  build   6.103%
+Cylinder r 1.50, between Block 0.040 x 0.200, top 1.00 over (0.007200) out truth   7.858%  base   6.921%  build   6.921%
+Cylinder r 1.50, between Block 0.040 x 0.200, top 1.25 over (0.009000) out truth   8.678%  base   7.739%  build   7.739%
+Cylinder r 1.50, between Block 0.100 x 0.200, top 0.05 over (0.000360) out truth  10.360%  base   2.151%  build   2.151%
+Cylinder r 1.50, between Block 0.100 x 0.200, top 0.10 over (0.000720) out truth  10.508%  base   2.934%  build   2.934%
+Cylinder r 1.50, between Block 0.100 x 0.200, top 0.25 over (0.001800) out truth  10.940%  base   5.314%  build   5.314%
+Cylinder r 1.50, between Block 0.100 x 0.200, top 0.50 over (0.003600) out truth  11.668%  base   9.386%  build   9.386%
+Cylinder r 1.50, between Block 0.100 x 0.200, top 0.75 over (0.005400) out truth  12.383%  base  11.371%  build  11.371%
+Cylinder r 1.50, between Block 0.100 x 0.200, top 1.00 over (0.007200) out truth  13.110%  base  12.091%  build  12.091%
+Cylinder r 1.50, between Block 0.100 x 0.200, top 1.25 over (0.009000) out truth  13.820%  base  12.811%  build  12.811%
+Cylinder r 3.00, vertex  Block 0.040 x 0.200, top 0.05 over (0.000720) out truth   4.895%  base   0.000%  build   0.000%  PRICE
+Cylinder r 3.00, vertex  Block 0.040 x 0.200, top 0.10 over (0.001440) out truth   5.223%  base   0.000%  build   0.000%  PRICE
+Cylinder r 3.00, vertex  Block 0.040 x 0.200, top 0.25 over (0.003600) out truth   6.200%  base   0.000%  build   0.000%  PRICE
+Cylinder r 3.00, vertex  Block 0.040 x 0.200, top 0.50 over (0.007200) out truth   7.835%  base   0.000%  build   0.000%  PRICE
+Cylinder r 3.00, vertex  Block 0.040 x 0.200, top 0.75 over (0.010800) out truth   9.473%  base   0.000%  build   0.000%  PRICE
+Cylinder r 3.00, vertex  Block 0.040 x 0.200, top 1.00 over (0.014400) out truth  11.113%  base   4.898%  build   4.898%
+Cylinder r 3.00, vertex  Block 0.040 x 0.200, top 1.25 over (0.018000) out truth  12.745%  base   6.801%  build   6.801%
+Cylinder r 3.00, vertex  Block 0.100 x 0.200, top 0.05 over (0.000720) out truth  10.398%  base   0.000%  build   0.000%  PRICE
+Cylinder r 3.00, vertex  Block 0.100 x 0.200, top 0.10 over (0.001440) out truth  10.685%  base   0.000%  build   0.000%  PRICE
+Cylinder r 3.00, vertex  Block 0.100 x 0.200, top 0.25 over (0.003600) out truth  11.543%  base   0.000%  build   0.000%  PRICE
+Cylinder r 3.00, vertex  Block 0.100 x 0.200, top 0.50 over (0.007200) out truth  12.983%  base   0.000%  build   0.000%  PRICE
+Cylinder r 3.00, vertex  Block 0.100 x 0.200, top 0.75 over (0.010800) out truth  14.425%  base   2.726%  build   2.726%
+Cylinder r 3.00, vertex  Block 0.100 x 0.200, top 1.00 over (0.014400) out truth  15.868%  base  11.196%  build  11.196%
+Cylinder r 3.00, vertex  Block 0.100 x 0.200, top 1.25 over (0.018000) out truth  17.308%  base  12.871%  build  12.871%
+Cylinder r 3.00, middle  Block 0.040 x 0.200, top 0.05 over (0.000720) out truth   4.895%  base   4.873%  build   4.873%
+Cylinder r 3.00, middle  Block 0.040 x 0.200, top 0.10 over (0.001440) out truth   5.223%  base   5.200%  build   5.200%
+Cylinder r 3.00, middle  Block 0.040 x 0.200, top 0.25 over (0.003600) out truth   6.200%  base   6.182%  build   6.182%
+Cylinder r 3.00, middle  Block 0.040 x 0.200, top 0.50 over (0.007200) out truth   7.835%  base   7.818%  build   7.818%
+Cylinder r 3.00, middle  Block 0.040 x 0.200, top 0.75 over (0.010800) out truth   9.473%  base   9.455%  build   9.455%
+Cylinder r 3.00, middle  Block 0.040 x 0.200, top 1.00 over (0.014400) out truth  11.113%  base  11.091%  build  11.091%
+Cylinder r 3.00, middle  Block 0.040 x 0.200, top 1.25 over (0.018000) out truth  12.745%  base  12.727%  build  12.727%
+Cylinder r 3.00, middle  Block 0.100 x 0.200, top 0.05 over (0.000720) out truth  10.402%  base  10.288%  build  10.288%
+Cylinder r 3.00, middle  Block 0.100 x 0.200, top 0.10 over (0.001440) out truth  10.685%  base  10.576%  build  10.576%
+Cylinder r 3.00, middle  Block 0.100 x 0.200, top 0.25 over (0.003600) out truth  11.547%  base  11.440%  build  11.440%
+Cylinder r 3.00, middle  Block 0.100 x 0.200, top 0.50 over (0.007200) out truth  12.987%  base  12.880%  build  12.880%
+Cylinder r 3.00, middle  Block 0.100 x 0.200, top 0.75 over (0.010800) out truth  14.424%  base  14.320%  build  14.320%
+Cylinder r 3.00, middle  Block 0.100 x 0.200, top 1.00 over (0.014400) out truth  15.867%  base  15.760%  build  15.760%
+Cylinder r 3.00, middle  Block 0.100 x 0.200, top 1.25 over (0.018000) out truth  17.307%  base  17.200%  build  17.200%
+Cylinder r 3.00, between Block 0.040 x 0.200, top 0.05 over (0.000720) out truth   4.895%  base   0.000%  build   0.000%  PRICE
+Cylinder r 3.00, between Block 0.040 x 0.200, top 0.10 over (0.001440) out truth   5.223%  base   0.000%  build   0.000%  PRICE
+Cylinder r 3.00, between Block 0.040 x 0.200, top 0.25 over (0.003600) out truth   6.200%  base   2.314%  build   2.314%
+Cylinder r 3.00, between Block 0.040 x 0.200, top 0.50 over (0.007200) out truth   7.835%  base   6.092%  build   6.092%
+Cylinder r 3.00, between Block 0.040 x 0.200, top 0.75 over (0.010800) out truth   9.473%  base   7.728%  build   7.728%
+Cylinder r 3.00, between Block 0.040 x 0.200, top 1.00 over (0.014400) out truth  11.113%  base   9.364%  build   9.364%
+Cylinder r 3.00, between Block 0.040 x 0.200, top 1.25 over (0.018000) out truth  12.745%  base  11.001%  build  11.001%
+Cylinder r 3.00, between Block 0.100 x 0.200, top 0.05 over (0.000720) out truth  10.398%  base   0.000%  build   0.000%  PRICE
+Cylinder r 3.00, between Block 0.100 x 0.200, top 0.10 over (0.001440) out truth  10.685%  base   0.548%  build   0.548%  PRICE
+Cylinder r 3.00, between Block 0.100 x 0.200, top 0.25 over (0.003600) out truth  11.543%  base   5.258%  build   5.258%
+Cylinder r 3.00, between Block 0.100 x 0.200, top 0.50 over (0.007200) out truth  12.983%  base  11.361%  build  11.361%
+Cylinder r 3.00, between Block 0.100 x 0.200, top 0.75 over (0.010800) out truth  14.425%  base  12.801%  build  12.801%
+Cylinder r 3.00, between Block 0.100 x 0.200, top 1.00 over (0.014400) out truth  15.868%  base  14.241%  build  14.241%
+Cylinder r 3.00, between Block 0.100 x 0.200, top 1.25 over (0.018000) out truth  17.308%  base  15.681%  build  15.681%
+cylinder: 210 designs, verdict moved against the base on 0, cleaned by the build while truly ≥ 2 % on 33 (the most: Cylinder r 3.00, vertex  Block 0.100 x 0.200, top 0.50 over (0.007200) out, truly 12.983%, read 0.000%)

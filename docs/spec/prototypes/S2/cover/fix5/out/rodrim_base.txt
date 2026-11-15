@@ -1,0 +1,3 @@
+R 0.80: 1904 rods wholly inside the disk (truly 0), 200 read 2 % or more (kept); the most 4.813% (ρ 0.03, hx 0.05, α 39.844°, m 3e-05)
+   that rod: reads 4.813%, truth 0.000%
+   [{"id":1,"label":"Cylinder","material":"Iron","pos":[0,2,0],"rot":[0,0.7071067811865476,0,0.7071067811865476],"shape":"Cylinder","size":[0.5,1.6,1.6],"slot":"Guard"},{"id":2,"label":"Cylinder","material":"Iron","pos":[0.49231471732758636,2.5899778515001524,0],"rot":[0,0,-0.3407385187284291,0.9401581047115193],"shape":"Cylinder","size":[0.1,0.06,0.06],"slot":"Blade"}]

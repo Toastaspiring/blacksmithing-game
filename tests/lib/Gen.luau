@@ -459,6 +459,16 @@ local function trySword(rng: Rng, ctx: Context): Core?
 	end
 	local main, mainTop = stack("Blade", "Block", mat(), y, offset, if rng:float() < 0.2 then aboutY(rng) else IDENTITY,
 		{ width, length, thick })
+	-- a finial the offset blade stands over could end up inside it, and Enclosed: this attempt does not count
+	local mainLo, mainHi = Gen.aabb(main)
+	for _, p in parts do
+		if p.shape == "CornerWedge" then
+			local lo, hi = Gen.aabb(p)
+			if lo[1] < mainHi[1] and hi[1] > mainLo[1] then
+				return nil
+			end
+		end
+	end
 	table.insert(parts, main)
 	y = mainTop
 	local left = nBlade - 1
@@ -663,6 +673,22 @@ local function mutate(rng: Rng, ctx: Context, d: any): any
 	return d
 end
 
+-- One well-placed fault, alone in a valid draft: refusals that a pile of random faults reaches only a few times in
+-- FUZZ_N_GARBAGE draws, and on some seeds not at all (FixtureSet/Gen.spec's coverage).
+local function rareFault(rng: Rng, d: any): any
+	local p = d.parts[rng:int(1, #d.parts)]
+	local r = rng:int(1, 3)
+	if r == 1 then -- NonFinite
+		local v = p[rng:pick(VECTOR_FIELDS)]
+		v[rng:int(1, #v)] = rng:pick({ 0 / 0, math.huge, -math.huge })
+	elseif r == 2 then -- OutOfRange
+		p.pos[rng:int(1, 3)] = rng:pick({ 1e20, -1e20 })
+	else -- DisabledId
+		p.material = "Bronze"
+	end
+	return d
+end
+
 function Gen.garbage(rng: Rng, ctx: Context): any
 	local r = rng:int(1, 20)
 	if r <= 3 then
@@ -675,6 +701,9 @@ function Gen.garbage(rng: Rng, ctx: Context): any
 	local d: any = Gen.copy(Gen.validSword(rng, ctx))
 	for _ = 1, rng:int(1, 3) do
 		d = mutate(rng, ctx, d)
+	end
+	if rng:float() < 0.06 then
+		return rareFault(rng, Gen.copy(Gen.validSword(rng, ctx)))
 	end
 	return d
 end

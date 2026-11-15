@@ -1,0 +1,1 @@
+seed 42: 1500 tangles, 10151 parts written another way: verdicts moved 0 (twins swapped or ties at 2 %: 60); kept parts whose measure moves past 1e-9: 91

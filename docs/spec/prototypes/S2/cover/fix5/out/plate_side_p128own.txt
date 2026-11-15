@@ -1,0 +1,7 @@
+disk r 0.8: the prism's side over an edge 0.0393 long, its corners 0.00387 past the true side
+Block       0.037 × 0.02 × 0.5, centred 0.0000 from the middle, δ 1e-06 r: out by up to 0.00022; reads  0.000%, truly 30.063%  <- cleaned
+Block       0.037 × 0.02 × 0.5, centred 0.0000 from the middle, δ 1e-05 r: out by up to 0.00021; reads  0.000%, truly 25.968%  <- cleaned
+Block       0.037 × 0.02 × 0.5, centred 0.0000 from the middle, δ 1e-04 r: out by up to 0.00014; reads  0.000%, truly 12.713%  <- cleaned
+Block       0.024 × 0.02 × 0.5, centred 0.0000 from the middle, δ 1e-06 r: out by up to 0.00009; reads  0.000%, truly 23.974%  <- cleaned
+Block       0.024 × 0.02 × 0.5, centred 0.0000 from the middle, δ 1e-05 r: out by up to 0.00008; reads  0.000%, truly 18.565%  <- cleaned
+Block       0.024 × 0.02 × 0.5, centred 0.0000 from the middle, δ 1e-04 r: out by up to 0.00001; reads  0.000%, truly  1.055%

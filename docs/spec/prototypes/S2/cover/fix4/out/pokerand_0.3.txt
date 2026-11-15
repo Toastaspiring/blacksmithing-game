@@ -1,0 +1,3 @@
+base, Ball r 0.30, seed 1: 394 Blocks, 394 read near 2 % and checked against the truth; 0 cleaned that truly show 2 % or more, 0 kept truly under 2 %
+cap, Ball r 0.30, seed 1: 394 Blocks, 394 read near 2 % and checked against the truth; 0 cleaned that truly show 2 % or more, 0 kept truly under 2 %
+exit 0

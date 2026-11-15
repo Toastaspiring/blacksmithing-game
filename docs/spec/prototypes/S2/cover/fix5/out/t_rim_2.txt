@@ -1,0 +1,6 @@
+empty       15.3 ns a call (     0.0 past the loop's own)
+old         39.4 ns a call (    24.0 past the loop's own)
+bounds      56.3 ns a call (    40.9 past the loop's own)
+search    1207.9 ns a call (  1192.5 past the loop's own)
+v1        1206.4 ns a call (  1191.1 past the loop's own)
+the base's verdict on V1's cluster: 687304.1 units, 43.36 ns a unit

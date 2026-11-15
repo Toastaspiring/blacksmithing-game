@@ -1,0 +1,6 @@
+PROP_BASE_SEED 0x0000002A: RESULT pass=3 fail=0 skip=0 files=9 time=67.49s
+PROP_BASE_SEED 0x600DCAFE: RESULT pass=3 fail=0 skip=0 files=9 time=65.23s
+PROP_BASE_SEED 0x31415926: RESULT pass=3 fail=0 skip=0 files=9 time=65.95s
+PROP_BASE_SEED 0x27182818: RESULT pass=3 fail=0 skip=0 files=9 time=67.59s
+PROP_BASE_SEED 0x55AA55AA: RESULT pass=3 fail=0 skip=0 files=9 time=48.71s
+default seed (the Physics suite): RESULT pass=232 fail=0 skip=0 files=9 time=131.98s

@@ -1,0 +1,11 @@
+a report of 333.625
+[string "src\shared\Physics\Cover.luau"]:725 function settle
+[string "src\shared\Physics\Cover.luau"]:739 function due
+[string "src\shared\Physics\Cover.luau"]:1101 function shown
+[string "tests\Physics\Cover.spec.luau"]:1380
+[string "tests/run"]:214
+
+rule A's tests: 20: caps 0 1, units 28.5; caps 0 1, units 28.5; caps 0 1, units 28.5; caps 0 1, units 28.5; caps 0 1, units 28.5; caps 0 1, units 28.5; caps 0 1, units 28.5; caps 0 1, units 28.5; caps 0 1, units 28.5; caps 0 1, units 28.5; caps 0 1, units 28.5; caps 0 1, units 28.5; caps 0 1, units 28.5; caps 0 1, units 28.5; caps 0 1, units 28.5; caps 0 1, units 28.5; caps 0 1, units 28.5; caps 0 1, units 28.5; caps 0 1, units 28.5; caps 0 1, units 28.5
+reports: 84, the largest 333.625: 256.5 256.5 257.75 256.5 257 259.25 257 257 257 259.5 259.25 257 257.125 256 256 256 264.625 256.625 256 256 256 260.5 262.125 264 257.625 263.5 333.625 264 264 271.25 264 264 271.25 264 264 271.25 264 264 271.25 264 264 271.25 264 264 271.25 264 264 271.25 264 264 271.25 264 264 271.25 264 264 271.25 264 264 271.25 264 264 271.25 264 264 271.25 264 264 271.25 264 264 271.25 264 264 271.25 264 264 271.25 264 264 271.25 264 264 190.75
+reads 0.0002510866027964489 of 0.12515987285608005 for 22151.25 units
+RESULT pass=1 fail=0 skip=0 files=51 time=0.00s

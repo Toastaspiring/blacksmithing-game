@@ -1,0 +1,9 @@
+  250 designs: perm runs 750 (bits differ 0, kept differ 0), mirror runs 500 (verdicts differ 26: twins 0, ties 0, defects 0), 4 s
+  500 designs: perm runs 1500 (bits differ 0, kept differ 0), mirror runs 1000 (verdicts differ 64: twins 0, ties 0, defects 0), 8 s
+  750 designs: perm runs 2250 (bits differ 0, kept differ 0), mirror runs 1500 (verdicts differ 111: twins 0, ties 1, defects 0), 12 s
+  1000 designs: perm runs 3000 (bits differ 0, kept differ 0), mirror runs 2000 (verdicts differ 169: twins 0, ties 1, defects 0), 16 s
+  1250 designs: perm runs 3750 (bits differ 0, kept differ 0), mirror runs 2500 (verdicts differ 197: twins 0, ties 1, defects 0), 20 s
+  1500 designs: perm runs 4500 (bits differ 0, kept differ 0), mirror runs 3000 (verdicts differ 234: twins 0, ties 1, defects 0), 25 s
+  1750 designs: perm runs 5250 (bits differ 0, kept differ 0), mirror runs 3500 (verdicts differ 267: twins 0, ties 1, defects 0), 29 s
+  2000 designs: perm runs 6000 (bits differ 0, kept differ 0), mirror runs 4000 (verdicts differ 294: twins 0, ties 1, defects 0), 33 s
+M4 tangles7 every 2 model cons: 2000 designs, 16958 parts; 6000 permuted runs: shown bits differ in 0, kept rows in 0; 4000 mirror images: verdicts differ on 294 parts (true twins 0, rank order flipped 293, exact ties 1, unexplained 0); 33 s

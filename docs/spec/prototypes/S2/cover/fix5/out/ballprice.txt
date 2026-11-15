@@ -1,0 +1,11 @@
+V2 price R 0.3 seed 42         Block       0.0365 × 0.0592 × 0.0933 (0.000201 stud³): reads 1.9998 %, cleaned; truly 2.3965 %
+V2 price R 0.3 seed 41         Block       0.0609 × 0.0345 × 0.0963 (0.000202 stud³): reads 1.9986 %, cleaned; truly 2.3895 %
+V2 price2 R 0.3 Block          Block       0.0788 × 0.0261 × 0.1008 (0.000207 stud³): reads 1.9997 %, cleaned; truly 2.3547 %
+V2 price2 R 0.3 Wedge          Wedge       0.0688 × 0.1385 × 0.0468 (0.000223 stud³): reads 1.9963 %, cleaned; truly 2.2775 %
+V2 price2 R 0.3 CornerWedge    CornerWedge 0.0675 × 0.0930 × 0.0991 (0.000207 stud³): reads 1.9983 %, cleaned; truly 2.3177 %
+V2 price R 0.2 seed 43         Block       0.0568 × 0.0485 × 0.0736 (0.000203 stud³): reads 1.9993 %, cleaned; truly 2.2317 %
+V2 price R 1 seed 43           Block       0.0361 × 0.0497 × 0.1118 (0.000201 stud³): reads 1.9995 %, cleaned; truly 3.3037 %
+V2 price R 3 seed 43           Block       0.0508 × 0.0281 × 0.1410 (0.000202 stud³): reads 1.9716 %, cleaned; truly 9.6347 %
+V1 pokeball R 0.3 s2           CornerWedge 0.1843 × 0.0679 × 0.0517 (0.000216 stud³): reads 1.9999 %, cleaned; truly 2.1750 %
+V1 pokeball R 0.2 s4           Wedge       0.0334 × 0.0549 × 0.2333 (0.000214 stud³): reads 1.9996 %, cleaned; truly 2.1182 %
+V1 pokeball R 3 s7             CornerWedge 0.1404 × 0.2116 × 0.0206 (0.000204 stud³): reads 1.9620 %, cleaned; truly 5.9400 %

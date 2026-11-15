@@ -1,0 +1,2 @@
+fixtures 0/1: 193 designs, 19372 round pairs × rank (12812 Cylinder in Cylinder), 62 inside; the build's bounds left 0 tests open (0 caps searched); 0 decisions differ from the always-exact rule; the tree before's bound differs from it on 0 (0 designs)
+

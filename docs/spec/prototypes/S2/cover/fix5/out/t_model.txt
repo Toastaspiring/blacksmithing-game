@@ -1,0 +1,3 @@
+Cylinder model:  34 facets,  368.0 units,  39.16 µs, 106.4 ns a unit
+Ball     model: 128 facets, 1216.0 units, 140.50 µs, 115.5 ns a unit
+Block    model:   6 facets,   60.0 units,   5.80 µs,  96.6 ns a unit

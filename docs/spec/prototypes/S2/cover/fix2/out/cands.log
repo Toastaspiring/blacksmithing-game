@@ -1,0 +1,45 @@
+tclimb_1.json #1                                     718454.625 units  INVALID TooComplex
+tclimb_1.json #2                                     676813.875 units  INVALID BladeNotAboveGrip
+tclimb_1.json #3                                     668807.000 units  INVALID BladeNotAboveGrip
+tclimb_1.json #4                                     562261.000 units  INVALID BladeNotAboveGrip
+tclimb_1.json #5                                     495062.375 units  valid 
+tclimb_1.json #6                                     497307.000 units  INVALID BladeNotAboveGrip
+tclimb_2.json #1                                     694047.750 units  INVALID BladeNotAboveGrip
+tclimb_2.json #2                                     687658.875 units  INVALID BladeNotAboveGrip
+tclimb_2.json #3                                     585756.250 units  INVALID BladeNotAboveGrip
+tclimb_2.json #4                                     648832.000 units  valid 
+tclimb_2.json #5                                     494744.000 units  valid 
+tclimb_2.json #6                                     558643.500 units  valid 
+tclimb_3.json #1                                     710760.625 units  INVALID BladeNotAboveGrip,TooComplex
+tclimb_3.json #2                                     662532.750 units  INVALID BladeNotAboveGrip
+tclimb_3.json #3                                     645898.125 units  valid 
+tclimb_3.json #4                                     590694.500 units  valid 
+tclimb_3.json #5                                     661812.625 units  INVALID BladeNotAboveGrip
+tclimb_3.json #6                                     452991.125 units  valid 
+tclimb_4.json #1                                     680325.000 units  valid 
+tclimb_4.json #2                                     705455.125 units  INVALID BladeNotAboveGrip,TooComplex
+tclimb_4.json #3                                     725627.125 units  INVALID TooComplex
+tclimb_4.json #4                                     418624.500 units  valid 
+tclimb_4.json #5                                     431854.000 units  valid 
+tclimb_4.json #6                                     454034.250 units  INVALID BladeNotAboveGrip
+V1 climb_v1_1                                        732904.500 units  INVALID TooComplex
+V1 climb_v1_2                                        782138.375 units  INVALID TooComplex
+V1 climb_v1_3                                        721508.750 units  INVALID TooComplex
+V1 climb_v1_4                                        757587.750 units  INVALID TooComplex
+judge judge climb seed 1 best 10790351 units         8016348.875 units  INVALID BladeNotAboveGrip,TooComplex
+judge judge climb seed 2 best 6424674 units          7390480.500 units  INVALID TooComplex
+judge judge climb seed 3 best 9327966 units          6602769.750 units  INVALID TooComplex
+judge judge climb seed 4 best 14613763 units         8152028.375 units  INVALID BladeNotAboveGrip,TooComplex
+A climb_1 1                                          6323692.375 units  INVALID TooComplex
+A climb_1 2                                          5136882.875 units  INVALID BladeNotAboveGrip,TooComplex
+A climb_2 1                                          5808676.125 units  INVALID TooComplex
+A climb_3 1                                          14995267.500 units  INVALID TooComplex
+A climb_4 1                                          8511494.625 units  INVALID TooComplex
+A climb_4 2                                          5058224.375 units  INVALID BladeNotAboveGrip,TooComplex
+B uclimb uclimb_1 best 2563294 units                 4464767.625 units  INVALID BladeNotAboveGrip,TooComplex
+B uclimb uclimb_2 best 2792974 units                 6108267.875 units  INVALID TooComplex
+B uclimb uclimb_3 best 3135028 units                 3975695.875 units  INVALID TooComplex
+B uclimb uclimb_4 best 2699876 units                 6400184.625 units  INVALID BladeNotAboveGrip,TooComplex
+worst_P climbL_1#1                                   1244053.625 units  INVALID TooComplex
+worst_P climbL_3#1                                   1448261.500 units  INVALID TooComplex
+worst_P climbL_2#1                                   2570958.250 units  INVALID TooComplex

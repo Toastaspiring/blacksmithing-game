@@ -1,0 +1,24 @@
+disk axis (0.000, 0.000, -1.000); vertex Block 0.04 × 0.10 × 0.20, 0.0005 out: reads  0.000%, truth 13.042%  <-
+disk axis (0.000, 0.000, -1.000); vertex Block 0.04 × 0.10 × 0.20, 0.0010 out: reads  0.000%, truth 13.420%  <-
+disk axis (0.000, 0.000, -1.000); vertex Block 0.04 × 0.10 × 0.20, 0.0020 out: reads  0.690%, truth 14.165%  <-
+disk axis (0.000, 0.000, -1.000); vertex Block 0.04 × 0.10 × 0.20, 0.0030 out: reads  7.698%, truth 14.915%
+disk axis (0.000, 0.000, -1.000); vertex Block 0.06 × 0.10 × 0.40, 0.0005 out: reads  0.000%, truth 17.803%  <-
+disk axis (0.000, 0.000, -1.000); vertex Block 0.06 × 0.10 × 0.40, 0.0010 out: reads  0.534%, truth 18.143%  <-
+disk axis (0.000, 0.000, -1.000); vertex Block 0.06 × 0.10 × 0.40, 0.0020 out: reads  6.924%, truth 18.798%
+disk axis (0.000, 0.000, -1.000); vertex Block 0.06 × 0.10 × 0.40, 0.0030 out: reads 13.343%, truth 19.448%
+disk axis (0.000, 0.000, -1.000); vertex Block 0.10 × 0.10 × 0.45, 0.0005 out: reads  7.822%, truth 23.527%
+disk axis (0.000, 0.000, -1.000); vertex Block 0.10 × 0.10 × 0.45, 0.0010 out: reads 10.350%, truth 23.807%
+disk axis (0.000, 0.000, -1.000); vertex Block 0.10 × 0.10 × 0.45, 0.0020 out: reads 15.421%, truth 24.357%
+disk axis (0.000, 0.000, -1.000); vertex Block 0.10 × 0.10 × 0.45, 0.0030 out: reads 20.512%, truth 24.910%
+disk axis (0.000, 0.000, -1.000); middle Block 0.04 × 0.10 × 0.20, 0.0005 out: reads 12.875%, truth 13.042%
+disk axis (0.000, 0.000, -1.000); middle Block 0.04 × 0.10 × 0.20, 0.0010 out: reads 13.250%, truth 13.420%
+disk axis (0.000, 0.000, -1.000); middle Block 0.04 × 0.10 × 0.20, 0.0020 out: reads 14.000%, truth 14.165%
+disk axis (0.000, 0.000, -1.000); middle Block 0.04 × 0.10 × 0.20, 0.0030 out: reads 14.750%, truth 14.915%
+disk axis (0.000, 0.000, -1.000); middle Block 0.06 × 0.10 × 0.40, 0.0005 out: reads 17.471%, truth 17.803%
+disk axis (0.000, 0.000, -1.000); middle Block 0.06 × 0.10 × 0.40, 0.0010 out: reads 17.800%, truth 18.143%
+disk axis (0.000, 0.000, -1.000); middle Block 0.06 × 0.10 × 0.40, 0.0020 out: reads 18.457%, truth 18.798%
+disk axis (0.000, 0.000, -1.000); middle Block 0.06 × 0.10 × 0.40, 0.0030 out: reads 19.114%, truth 19.448%
+disk axis (0.000, 0.000, -1.000); middle Block 0.10 × 0.10 × 0.45, 0.0005 out: reads 22.775%, truth 23.527%
+disk axis (0.000, 0.000, -1.000); middle Block 0.10 × 0.10 × 0.45, 0.0010 out: reads 23.050%, truth 23.807%
+disk axis (0.000, 0.000, -1.000); middle Block 0.10 × 0.10 × 0.45, 0.0020 out: reads 23.600%, truth 24.357%
+disk axis (0.000, 0.000, -1.000); middle Block 0.10 × 0.10 × 0.45, 0.0030 out: reads 24.150%, truth 24.910%

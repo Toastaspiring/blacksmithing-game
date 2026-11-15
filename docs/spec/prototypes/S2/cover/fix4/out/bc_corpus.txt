@@ -1,0 +1,58 @@
+#### 0 1 base,minors
+1340 designs, base vs minors
+moved: {}
+
+verdict moved on 0:
+
+anything but the units moved with no verdict moving on 0:
+
+#### 0 2 base,nocap
+1340 designs, base vs nocap
+moved: {'units': 803}
+
+verdict moved on 0:
+
+anything but the units moved with no verdict moving on 0:
+
+units moved on 803 (0 up, 803 down)
+  v12/a_rod emu #17: 20216.500 -> 15065.250 (-5151.250, -25.48 %)
+  v12/a_rod emu #20: 20216.500 -> 15065.250 (-5151.250, -25.48 %)
+  v12/a_rod emu #22: 20216.500 -> 15065.250 (-5151.250, -25.48 %)
+  v12/a_rod vsTruth #16: 20216.500 -> 15065.250 (-5151.250, -25.48 %)
+  v12/a_rod vsTruth #19: 20216.500 -> 15065.250 (-5151.250, -25.48 %)
+  v11/a20_all emu #8: 4121.000 -> 3881.000 (-240.000, -5.82 %)
+  v12/a20_all emu #8: 4121.000 -> 3881.000 (-240.000, -5.82 %)
+  v22/a20_all emu #8: 4121.000 -> 3881.000 (-240.000, -5.82 %)
+  v11/a12_skin show #12: 4123.250 -> 3883.250 (-240.000, -5.82 %)
+  v11/a12_skin valid #11: 4123.250 -> 3883.250 (-240.000, -5.82 %)
+  the heaviest valid: base 330993.125, nocap 330993.125
+
+#### 2 3 nocap,cap
+1340 designs, nocap vs cap
+moved: {}
+
+verdict moved on 0:
+
+anything but the units moved with no verdict moving on 0:
+
+#### 0 3 base,build
+1340 designs, base vs build
+moved: {'units': 803}
+
+verdict moved on 0:
+
+anything but the units moved with no verdict moving on 0:
+
+units moved on 803 (0 up, 803 down)
+  v12/a_rod emu #17: 20216.500 -> 15065.250 (-5151.250, -25.48 %)
+  v12/a_rod emu #20: 20216.500 -> 15065.250 (-5151.250, -25.48 %)
+  v12/a_rod emu #22: 20216.500 -> 15065.250 (-5151.250, -25.48 %)
+  v12/a_rod vsTruth #16: 20216.500 -> 15065.250 (-5151.250, -25.48 %)
+  v12/a_rod vsTruth #19: 20216.500 -> 15065.250 (-5151.250, -25.48 %)
+  v11/a20_all emu #8: 4121.000 -> 3881.000 (-240.000, -5.82 %)
+  v12/a20_all emu #8: 4121.000 -> 3881.000 (-240.000, -5.82 %)
+  v22/a20_all emu #8: 4121.000 -> 3881.000 (-240.000, -5.82 %)
+  v11/a12_skin show #12: 4123.250 -> 3883.250 (-240.000, -5.82 %)
+  v11/a12_skin valid #11: 4123.250 -> 3883.250 (-240.000, -5.82 %)
+  the heaviest valid: base 330993.125, build 330993.125
+

@@ -1,0 +1,5 @@
+# fix/digest.luau on the plausible set (33,389) and the attack corpus (1,340): the build against the build before, and the slot first in the verdict alone (mutC) against the build before
+plausible, the build: designs 33389 kept rows differ 0 measure differs 12547 : grid 12208 exposedKept 12198 contact 0 mass/COM 4
+plausible, the slot first in the verdict alone: designs 33389 kept rows differ 0 measure differs 33 : grid 30 exposedKept 23 contact 0 mass/COM 4
+corpus, the build: designs 1340 kept rows differ 0 measure differs 1009 : grid 1001 exposedKept 994 contact 0 mass/COM 0
+plausible kept rows, fix/pd.luau against the build before: differ on 0

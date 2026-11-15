@@ -1,0 +1,58 @@
+#### 0 1 base,minors
+193 designs, base vs minors
+moved: {}
+
+verdict moved on 0:
+
+anything but the units moved with no verdict moving on 0:
+
+#### 0 2 base,nocap
+193 designs, base vs nocap
+moved: {'units': 87}
+
+verdict moved on 0:
+
+anything but the units moved with no verdict moving on 0:
+
+units moved on 87 (1 up, 86 down)
+  worst valid tclimb_1.json #5: 370029.250 -> 174411.125 (-195618.125, -52.87 %)
+  worst valid tclimb_3.json #4: 578171.750 -> 518339.500 (-59832.250, -10.35 %)
+  worst valid tclimb_2.json #6: 562398.375 -> 505237.625 (-57160.750, -10.16 %)
+  proto C09 Ornate (18 parts): 21851.250 -> 17511.625 (-4339.625, -19.86 %)
+  attack a Ball d 0.56 in 8 corner blocks: 10252.750 -> 6801.000 (-3451.750, -33.67 %)
+  proto X04b blade from strips, seams at +-0.05 and 0: 3551.875 -> 3311.875 (-240.000, -6.76 %)
+  proto X01 2 blade copies at z +-0.003 (vs union blade 0.066): 3623.750 -> 3383.750 (-240.000, -6.62 %)
+  proto X01raw 2 blade copies at z +-0.003 (vs F5): 3623.750 -> 3383.750 (-240.000, -6.62 %)
+  proto X02 6 blade copies at z = k*0.002 (vs union blade 0.072): 11348.125 -> 11108.125 (-240.000, -2.11 %)
+  worst tooComplex judge judge climb seed 4 best 14613763 units: 700050.500 -> 700066.625 (+16.125, +0.00 %)
+  the heaviest valid: base 687304.125, nocap 687304.125
+
+#### 2 3 nocap,cap
+193 designs, nocap vs cap
+moved: {}
+
+verdict moved on 0:
+
+anything but the units moved with no verdict moving on 0:
+
+#### 0 3 base,build
+193 designs, base vs build
+moved: {'units': 87}
+
+verdict moved on 0:
+
+anything but the units moved with no verdict moving on 0:
+
+units moved on 87 (1 up, 86 down)
+  worst valid tclimb_1.json #5: 370029.250 -> 174411.125 (-195618.125, -52.87 %)
+  worst valid tclimb_3.json #4: 578171.750 -> 518339.500 (-59832.250, -10.35 %)
+  worst valid tclimb_2.json #6: 562398.375 -> 505237.625 (-57160.750, -10.16 %)
+  proto C09 Ornate (18 parts): 21851.250 -> 17511.625 (-4339.625, -19.86 %)
+  attack a Ball d 0.56 in 8 corner blocks: 10252.750 -> 6801.000 (-3451.750, -33.67 %)
+  proto X04b blade from strips, seams at +-0.05 and 0: 3551.875 -> 3311.875 (-240.000, -6.76 %)
+  proto X01 2 blade copies at z +-0.003 (vs union blade 0.066): 3623.750 -> 3383.750 (-240.000, -6.62 %)
+  proto X01raw 2 blade copies at z +-0.003 (vs F5): 3623.750 -> 3383.750 (-240.000, -6.62 %)
+  proto X02 6 blade copies at z = k*0.002 (vs union blade 0.072): 11348.125 -> 11108.125 (-240.000, -2.11 %)
+  worst tooComplex judge judge climb seed 4 best 14613763 units: 700050.500 -> 700066.625 (+16.125, +0.00 %)
+  the heaviest valid: base 687304.125, build 687304.125
+

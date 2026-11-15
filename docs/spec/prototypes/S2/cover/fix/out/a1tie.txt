@@ -1,0 +1,4 @@
+(1,1,1)        spins 180: the lower reading at worst 31.626% (spin 101), both kept in 72
+(1,1,2)        spins 180: the lower reading at worst 31.618% (spin 65), both kept in 57
+(2,1,1)        spins 180: the lower reading at worst 31.618% (spin 157), both kept in 56
+two 45 snaps   spins 180: the lower reading at worst 31.621% (spin 329), both kept in 33

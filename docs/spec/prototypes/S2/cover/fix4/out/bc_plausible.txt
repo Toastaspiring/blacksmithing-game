@@ -1,0 +1,99 @@
+#### 0 1 base,minors
+33389 designs, base vs minors
+moved: {}
+
+verdict moved on 0:
+
+anything but the units moved with no verdict moving on 0:
+
+#### 0 2 base,nocap
+33389 designs, base vs nocap
+moved: {'units': 10254}
+
+verdict moved on 0:
+
+anything but the units moved with no verdict moving on 0:
+
+units moved on 10254 (0 up, 10254 down)
+  ballRivet|C09|bladeZ d0.14 r47 cap0.3000: 54554.500 -> 31904.500 (-22650.000, -41.52 %)
+  ballRivet|C09|bladeZ d0.14 unrot cap0.3000: 54554.500 -> 31904.500 (-22650.000, -41.52 %)
+  ballRivet|C09|bladeZ d0.14 xy30 cap0.3000: 54554.500 -> 31904.500 (-22650.000, -41.52 %)
+  ballRivet|C09|bladeZ d0.14 z45 cap0.3000: 54554.500 -> 31904.500 (-22650.000, -41.52 %)
+  ballRivet|C09|bladeZ d0.14 r47 cap0.2500: 53965.750 -> 31546.750 (-22419.000, -41.54 %)
+  ballRivet|F4|guardZ d0.14 z45 cap0.0050: 9927.375 -> 9687.375 (-240.000, -2.42 %)
+  cylRivet|F1|blade r0.08 tilt0 poke0.0020: 10767.250 -> 10527.250 (-240.000, -2.23 %)
+  cylRivet|F5|blade r0.08 tilt0 poke0.0020: 10767.250 -> 10527.250 (-240.000, -2.23 %)
+  cylRivet|F1|blade r0.08 tilt0 poke-0.0020: 11259.625 -> 11019.625 (-240.000, -2.13 %)
+  cylRivet|F5|blade r0.08 tilt0 poke-0.0020: 11259.625 -> 11019.625 (-240.000, -2.13 %)
+  the heaviest valid: base 109405.000, nocap 105065.375
+
+#### 2 3 nocap,cap
+33389 designs, nocap vs cap
+moved: {'units': 213, 'verdict': 14, 'head': 14, 'exposed': 14, 'contact': 14, 'mass': 14, 'owned': 14, 'probes': 14, 'probeN': 14}
+
+verdict moved on 14:
+  wrapRings|C06|n3 extra0.04 gap0.0100: KEKKKKKKKKKKK -> KKKKKKKKKKKKK parts [2]
+  wrapRings|C06|n4 extra0.04 gap0.0075: KEKKKKKKKKKKKK -> KKKKKKKKKKKKKK parts [2]
+  wrapRings|C06|n5 extra0.01 gap0.0040: KEKKKKKKKKKKKKK -> KKKKKKKKKKKKKKK parts [2]
+  wrapRings|C06|n5 extra0.02 gap0.0040: KEKKKKKKKKKKKKK -> KKKKKKKKKKKKKKK parts [2]
+  wrapRings|C09|n3 extra0.04 gap0.0040: KKEEEEKKKKKKKKKKKKKKK -> KKKEEEKKKKKKKKKKKKKKK parts [3]
+  wrapRings|C09|n4 extra0.04 gap0.0040: KKEEKEKKKKKKKKKKKKKKKK -> KKKEKEKKKKKKKKKKKKKKKK parts [3]
+  wrapRings|C09|n5 extra0.04 gap0.0040: KKEKEKKKKKKKKKKKKKKKKKK -> KKKKEKKKKKKKKKKKKKKKKKK parts [3]
+  wrapRings|F3|n3 extra0.01 gap0.0020: KEKKKKKKKK -> KKKKKKKKKK parts [2]
+  wrapRings|F3|n3 extra0.02 gap0.0020: KEKKKKKKKK -> KKKKKKKKKK parts [2]
+  wrapRings|F3|n3 extra0.04 gap0.0040: KEKKKKKKKK -> KKKKKKKKKK parts [2]
+  wrapRings|F3|n3 extra0.04 gap0.0050: KEKKKKKKKK -> KKKKKKKKKK parts [2]
+  wrapRings|F3|n4 extra0.04 gap0.0040: KEKKKKKKKKK -> KKKKKKKKKKK parts [2]
+  wrapRings|F3|n5 extra0.01 gap0.0010: KEKKKKKKKKKK -> KKKKKKKKKKKK parts [2]
+  wrapRings|F3|n5 extra0.02 gap0.0010: KEKKKKKKKKKK -> KKKKKKKKKKKK parts [2]
+
+anything but the units moved with no verdict moving on 0:
+
+units moved on 213 (92 up, 121 down)
+  wrapRings|C02|n3 extra0.01 gap0.0010: 32189.875 -> 31223.875 (-966.000, -3.00 %)
+  wrapRings|C02|n3 extra0.01 gap0.0020: 32189.875 -> 31223.875 (-966.000, -3.00 %)
+  wrapRings|C02|n3 extra0.01 gap0.0030: 32189.875 -> 31223.875 (-966.000, -3.00 %)
+  wrapRings|C02|n3 extra0.01 gap0.0040: 32189.875 -> 31223.875 (-966.000, -3.00 %)
+  wrapRings|C02|n3 extra0.01 gap0.0050: 32189.875 -> 31223.875 (-966.000, -3.00 %)
+  wrapRings|C06|n5 extra0.04 gap0.0020: 47104.125 -> 48866.625 (+1762.500, +3.74 %)
+  wrapRings|C06|n5 extra0.04 gap0.0030: 47912.125 -> 49674.625 (+1762.500, +3.68 %)
+  wrapRings|C06|n5 extra0.04 gap0.0040: 47912.125 -> 49674.625 (+1762.500, +3.68 %)
+  wrapRings|C06|n5 extra0.04 gap0.0050: 47912.125 -> 49674.625 (+1762.500, +3.68 %)
+  wrapRings|C06|n5 extra0.04 gap0.0060: 47912.125 -> 49674.625 (+1762.500, +3.68 %)
+  the heaviest valid: nocap 105065.375, cap 104572.875
+
+#### 0 3 base,build
+33389 designs, base vs build
+moved: {'units': 10364, 'verdict': 14, 'head': 14, 'exposed': 14, 'contact': 14, 'mass': 14, 'owned': 14, 'probes': 14, 'probeN': 14}
+
+verdict moved on 14:
+  wrapRings|C06|n3 extra0.04 gap0.0100: KEKKKKKKKKKKK -> KKKKKKKKKKKKK parts [2]
+  wrapRings|C06|n4 extra0.04 gap0.0075: KEKKKKKKKKKKKK -> KKKKKKKKKKKKKK parts [2]
+  wrapRings|C06|n5 extra0.01 gap0.0040: KEKKKKKKKKKKKKK -> KKKKKKKKKKKKKKK parts [2]
+  wrapRings|C06|n5 extra0.02 gap0.0040: KEKKKKKKKKKKKKK -> KKKKKKKKKKKKKKK parts [2]
+  wrapRings|C09|n3 extra0.04 gap0.0040: KKEEEEKKKKKKKKKKKKKKK -> KKKEEEKKKKKKKKKKKKKKK parts [3]
+  wrapRings|C09|n4 extra0.04 gap0.0040: KKEEKEKKKKKKKKKKKKKKKK -> KKKEKEKKKKKKKKKKKKKKKK parts [3]
+  wrapRings|C09|n5 extra0.04 gap0.0040: KKEKEKKKKKKKKKKKKKKKKKK -> KKKKEKKKKKKKKKKKKKKKKKK parts [3]
+  wrapRings|F3|n3 extra0.01 gap0.0020: KEKKKKKKKK -> KKKKKKKKKK parts [2]
+  wrapRings|F3|n3 extra0.02 gap0.0020: KEKKKKKKKK -> KKKKKKKKKK parts [2]
+  wrapRings|F3|n3 extra0.04 gap0.0040: KEKKKKKKKK -> KKKKKKKKKK parts [2]
+  wrapRings|F3|n3 extra0.04 gap0.0050: KEKKKKKKKK -> KKKKKKKKKK parts [2]
+  wrapRings|F3|n4 extra0.04 gap0.0040: KEKKKKKKKKK -> KKKKKKKKKKK parts [2]
+  wrapRings|F3|n5 extra0.01 gap0.0010: KEKKKKKKKKKK -> KKKKKKKKKKKK parts [2]
+  wrapRings|F3|n5 extra0.02 gap0.0010: KEKKKKKKKKKK -> KKKKKKKKKKKK parts [2]
+
+anything but the units moved with no verdict moving on 0:
+
+units moved on 10364 (55 up, 10309 down)
+  ballRivet|C09|bladeZ d0.14 r47 cap0.3000: 54554.500 -> 31904.500 (-22650.000, -41.52 %)
+  ballRivet|C09|bladeZ d0.14 unrot cap0.3000: 54554.500 -> 31904.500 (-22650.000, -41.52 %)
+  ballRivet|C09|bladeZ d0.14 xy30 cap0.3000: 54554.500 -> 31904.500 (-22650.000, -41.52 %)
+  ballRivet|C09|bladeZ d0.14 z45 cap0.3000: 54554.500 -> 31904.500 (-22650.000, -41.52 %)
+  ballRivet|C09|bladeZ d0.14 r47 cap0.2500: 53965.750 -> 31546.750 (-22419.000, -41.54 %)
+  wrapRings|C06|n5 extra0.04 gap0.0020: 47104.125 -> 48866.625 (+1762.500, +3.74 %)
+  wrapRings|C06|n5 extra0.04 gap0.0030: 47912.125 -> 49674.625 (+1762.500, +3.68 %)
+  wrapRings|C06|n5 extra0.04 gap0.0040: 47912.125 -> 49674.625 (+1762.500, +3.68 %)
+  wrapRings|C06|n5 extra0.04 gap0.0050: 47912.125 -> 49674.625 (+1762.500, +3.68 %)
+  wrapRings|C06|n5 extra0.04 gap0.0060: 47912.125 -> 49674.625 (+1762.500, +3.68 %)
+  the heaviest valid: base 109405.000, build 104572.875
+

@@ -1,0 +1,36 @@
+--- "src/shared/Physics/Cover.luau"	2026-11-14 18:10:52.644260500 +0100
++++ src/shared/Physics/Cover.luau (the witness)	2026-11-14 18:12:23.281574100 +0100
+@@ -860,15 +860,21 @@
+ 				-- a round facet whose true patch lies in q's true solid as the buried or coincident piece asks (every point of its
+ 				-- hull within EPS_GEOM of it if q ranks higher, else deeper than EPS_GEOM) is hidden whole: q's inscribed
+ 				-- half-spaces leave it out where it lies past them, in the sagitta of q's facets
++				local band = not pm.round -- the witness: a flat facet, or a round one with a vertex buried in q
+ 				if pm.round and q.round then
+ 					local hull = pm.hull[f]
+ 					local inside = true
+-					for j = 1, #hull, 3 do
++					for j = 1, #hull, 6 do
+ 						local s = Shapes.sd(Q, hull[j], hull[j + 1], hull[j + 2])
+-						if (if higher[k] then s > EPS else s >= -EPS) then
+-							inside = false
++						band = band or s < -EPS
++						inside = inside and (if higher[k] then s <= EPS else s < -EPS)
++					end
++					for j = 4, #hull, 6 do
++						if not inside then
+ 							break
+ 						end
++						local s = Shapes.sd(Q, hull[j], hull[j + 1], hull[j + 2])
++						inside = if higher[k] then s <= EPS else s < -EPS
+ 					end
+ 					pending += UNITS_PER_TEST * #hull / 3
+ 					if inside then
+@@ -917,7 +923,7 @@
+ 						end
+ 					end
+ 					shi[i], slo[i] = hi, lo
+-					cA[i] = coincident - (if pm.round then qsag[i] else 0)
++					cA[i] = coincident - (if band then 0 else qsag[i])
+ 					cB[i] = EPS + spread - probe * (px * nx + py * ny + pz * nz)
+ 					pending += UNITS_PER_TEST * (1 + nv)
+ 					if due() then

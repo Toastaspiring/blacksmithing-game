@@ -1,0 +1,451 @@
+wrapRings|C02|n3 extra0.01 gap0.0100	|dD| 0.0002	-	Sm 0.0378 N, Ha 0.1137 N, Sh 0.1318 N	Sm 0.0380 N, Ha 0.1137 N, Sh 0.1318 N
+wrapRings|C02|n3 extra0.04 gap0.0300	|dD| 0.0014	-	Sm 0.0482 N, Ha 0.1137 N, Sh 0.1318 N	Sm 0.0468 N, Ha 0.1137 N, Sh 0.1318 N
+wrapRings|C02|n4 extra0.01 gap0.0200	|dD| 0.0218	-	Sm 0.0377 N, Ha 0.1137 N, Sh 0.1318 N	Sm 0.0368 N, Ha 0.1355 N, Sh 0.1318 N
+wrapRings|C02|n4 extra0.02 gap0.0150	|dD| 0.0207	-	Sm 0.0412 N, Ha 0.1137 N, Sh 0.1318 N	Sm 0.0405 N, Ha 0.1344 N, Sh 0.1318 N
+wrapRings|C02|n4 extra0.04 gap0.0125	|dD| 0.0155	-	Sm 0.0484 N, Ha 0.1137 N, Sh 0.1318 N	Sm 0.0478 N, Ha 0.1292 N, Sh 0.1318 N
+wrapRings|C02|n5 extra0.01 gap0.0100	|dD| 0.0003	-	Sm 0.0377 N, Ha 0.1137 N, Sh 0.1318 N	Sm 0.0374 N, Ha 0.1137 N, Sh 0.1318 N
+wrapRings|C02|n5 extra0.02 gap0.0075	|dD| 0.0003	-	Sm 0.0413 N, Ha 0.1137 N, Sh 0.1318 N	Sm 0.0410 N, Ha 0.1137 N, Sh 0.1318 N
+wrapRings|C02|n5 extra0.04 gap0.0060	|dD| 0.0001	-	Sm 0.0485 N, Ha 0.1137 N, Sh 0.1318 N	Sm 0.0484 N, Ha 0.1137 N, Sh 0.1318 N
+wrapRings|C05|n3 extra0.01 gap0.0125	|dD| 0.0006	-	Sm 0.5481 H, Ha 0.1363 N, Sh 0.3466 H	Sm 0.5480 H, Ha 0.1357 N, Sh 0.3466 H
+wrapRings|C05|n4 extra0.01 gap0.0300	|dD| 0.0029	-	Sm 0.5478 H, Ha 0.1363 N, Sh 0.3466 H	Sm 0.5449 H, Ha 0.1363 N, Sh 0.3466 H
+wrapRings|C05|n4 extra0.02 gap0.0200	|dD| 0.0017	-	Sm 0.5519 H, Ha 0.1351 N, Sh 0.3466 H	Sm 0.5502 H, Ha 0.1352 N, Sh 0.3466 H
+wrapRings|C05|n4 extra0.04 gap0.0150	|dD| 0.0009	-	Sm 0.5605 H, Ha 0.1335 N, Sh 0.3466 H	Sm 0.5596 H, Ha 0.1333 N, Sh 0.3466 H
+wrapRings|C05|n5 extra0.01 gap0.0125	|dD| 0.0022	-	Sm 0.5479 H, Ha 0.1387 N, Sh 0.3466 H	Sm 0.5468 H, Ha 0.1409 N, Sh 0.3466 H
+wrapRings|C05|n5 extra0.02 gap0.0100	|dD| 0.0035	-	Sm 0.5520 H, Ha 0.1385 N, Sh 0.3466 H	Sm 0.5513 H, Ha 0.1350 N, Sh 0.3466 H
+wrapRings|C05|n5 extra0.04 gap0.0075	|dD| 0.0040	-	Sm 0.5607 H, Ha 0.1371 N, Sh 0.3466 H	Sm 0.5605 H, Ha 0.1331 N, Sh 0.3466 H
+wrapRings|C06|n3 extra0.01 gap0.0100	|dD| 0.0043	-	Sm 0.0120 N, Ha 0.2957 H, Sh 0.5948 H	Sm 0.0122 N, Ha 0.2914 H, Sh 0.5948 H
+wrapRings|C06|n3 extra0.04 gap0.0300	|dD| 0.0257	-	Sm 0.0223 N, Ha 0.2745 H, Sh 0.5948 H	Sm 0.0209 N, Ha 0.3002 H, Sh 0.5948 H
+wrapRings|C06|n4 extra0.01 gap0.0200	|dD| 0.0339	-	Sm 0.0119 N, Ha 0.3116 H, Sh 0.5948 H	Sm 0.0109 N, Ha 0.3455 H, Sh 0.5948 H
+wrapRings|C06|n4 extra0.02 gap0.0150	|dD| 0.0391	-	Sm 0.0154 N, Ha 0.2998 H, Sh 0.5948 H	Sm 0.0146 N, Ha 0.3389 H, Sh 0.5948 H
+wrapRings|C06|n4 extra0.04 gap0.0125	|dD| 0.0360	-	Sm 0.0225 N, Ha 0.2881 H, Sh 0.5948 H	Sm 0.0218 N, Ha 0.3241 H, Sh 0.5948 H
+wrapRings|C06|n5 extra0.01 gap0.0100	|dD| 0.0003	-	Sm 0.0119 N, Ha 0.2953 H, Sh 0.5948 H	Sm 0.0116 N, Ha 0.2952 H, Sh 0.5948 H
+wrapRings|C06|n5 extra0.02 gap0.0075	|dD| 0.0042	-	Sm 0.0154 N, Ha 0.2793 H, Sh 0.5948 H	Sm 0.0151 N, Ha 0.2835 H, Sh 0.5948 H
+wrapRings|C06|n5 extra0.04 gap0.0060	|dD| 0.0024	-	Sm 0.0227 N, Ha 0.2556 H, Sh 0.5948 H	Sm 0.0224 N, Ha 0.2580 H, Sh 0.5948 H
+wrapRings|C09|n3 extra0.01 gap0.0030	|dD| 0.0040	-	Sm 0.0018 N, Ha 0.2946 H, Sh 0.1539 N	Sm 0.0023 N, Ha 0.2906 H, Sh 0.1539 N
+wrapRings|C09|n3 extra0.01 gap0.0125	|dD| 0.0130	-	Sm 0.0017 N, Ha 0.3124 H, Sh 0.1561 N	Sm 0.0018 N, Ha 0.3254 H, Sh 0.1651 N
+wrapRings|C09|n3 extra0.02 gap0.0020	|dD| 0.0006	-	Sm 0.0051 N, Ha 0.2547 H, Sh 0.1456 N	Sm 0.0053 N, Ha 0.2543 H, Sh 0.1462 N
+wrapRings|C09|n3 extra0.02 gap0.0100	|dD| 0.0137	-	Sm 0.0050 N, Ha 0.2685 H, Sh 0.1465 N	Sm 0.0047 N, Ha 0.2548 H, Sh 0.1471 N
+wrapRings|C09|n3 extra0.04 gap0.0075	|dD| 0.0012	-	Sm 0.0104 N, Ha 0.2430 H, Sh 0.1342 N	Sm 0.0105 N, Ha 0.2418 H, Sh 0.1348 N
+wrapRings|C09|n4 extra0.01 gap0.0060	|dD| 0.0024	-	Sm 0.0016 N, Ha 0.3097 H, Sh 0.1461 N	Sm 0.0020 N, Ha 0.3073 H, Sh 0.1467 N
+wrapRings|C09|n4 extra0.02 gap0.0050	|dD| 0.0006	-	Sm 0.0049 N, Ha 0.2707 H, Sh 0.1362 N	Sm 0.0049 N, Ha 0.2713 H, Sh 0.1368 N
+wrapRings|C09|n4 extra0.02 gap0.0200	|dD| 0.0233	-	Sm 0.0053 N, Ha 0.2806 H, Sh 0.1417 N	Sm 0.0041 N, Ha 0.3039 H, Sh 0.1598 N
+wrapRings|C09|n4 extra0.04 gap0.0040	|dD| 0.0011	-	Sm 0.0104 N, Ha 0.2559 H, Sh 0.1263 N	Sm 0.0106 N, Ha 0.2553 H, Sh 0.1274 N
+wrapRings|C09|n4 extra0.04 gap0.0150	|dD| 0.0167	-	Sm 0.0098 N, Ha 0.2829 H, Sh 0.1369 N	Sm 0.0100 N, Ha 0.2941 H, Sh 0.1536 N
+wrapRings|C09|n5 extra0.01 gap0.0030	|dD| 0.0051	-	Sm 0.0014 N, Ha 0.3051 H, Sh 0.1338 N	Sm 0.0022 N, Ha 0.3000 H, Sh 0.1343 N
+wrapRings|C09|n5 extra0.01 gap0.0125	|dD| 0.0256	-	Sm 0.0009 N, Ha 0.3057 H, Sh 0.1331 N	Sm 0.0017 N, Ha 0.3305 H, Sh 0.1587 N
+wrapRings|C09|n5 extra0.02 gap0.0020	|dD| 0.0095	-	Sm 0.0038 N, Ha 0.2723 H, Sh 0.1229 N	Sm 0.0052 N, Ha 0.2628 H, Sh 0.1234 N
+wrapRings|C09|n5 extra0.02 gap0.0100	|dD| 0.0102	-	Sm 0.0034 N, Ha 0.2690 H, Sh 0.1185 N	Sm 0.0049 N, Ha 0.2588 H, Sh 0.1190 N
+wrapRings|C09|n5 extra0.04 gap0.0075	|dD| 0.0031	-	Sm 0.0101 N, Ha 0.2455 H, Sh 0.1155 N	Sm 0.0106 N, Ha 0.2424 H, Sh 0.1162 N
+pommelInBlock|C09|housing xy30 cap0.0600	|dD| 0.0014	-	Sm 0.0235 N, Ha 0.2750 H, Sh 0.1904 N	Sm 0.0235 N, Ha 0.2764 H, Sh 0.1904 N
+rod|C09|guard Cylinder d0.06 poke0.0050	|dD| 0.0002	-	Sm 0.0001 N, Ha 0.3172 H, Sh 0.1904 N	Sm 0.0001 N, Ha 0.3170 H, Sh 0.1904 N
+wrapRings|F3|n3 extra0.01 gap0.0060	|dD| 0.0000	-	Sm 0.0000 N, Ha 0.4274 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.4274 H, Sh 0.6104 H
+wrapRings|F3|n3 extra0.02 gap0.0050	|dD| 0.0008	-	Sm 0.0000 N, Ha 0.4101 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.4093 H, Sh 0.6104 H
+wrapRings|F3|n3 extra0.02 gap0.0200	|dD| 0.0213	-	Sm 0.0000 N, Ha 0.4347 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.4560 H, Sh 0.6104 H
+wrapRings|F3|n3 extra0.04 gap0.0040	|dD| 0.0006	-	Sm 0.0000 N, Ha 0.3775 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.3769 H, Sh 0.6104 H
+wrapRings|F3|n3 extra0.04 gap0.0150	|dD| 0.0151	-	Sm 0.0000 N, Ha 0.4152 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.4303 H, Sh 0.6104 H
+wrapRings|F3|n4 extra0.01 gap0.0030	|dD| 0.0126	-	Sm 0.0000 N, Ha 0.4409 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.4283 H, Sh 0.6104 H
+wrapRings|F3|n4 extra0.01 gap0.0125	|dD| 0.0496	-	Sm 0.0000 N, Ha 0.4413 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.4909 H, Sh 0.6104 H
+wrapRings|F3|n4 extra0.02 gap0.0020	|dD| 0.0130	-	Sm 0.0000 N, Ha 0.4233 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.4103 H, Sh 0.6104 H
+wrapRings|F3|n4 extra0.02 gap0.0100	|dD| 0.0070	-	Sm 0.0000 N, Ha 0.4175 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.4105 H, Sh 0.6104 H
+wrapRings|F3|n4 extra0.04 gap0.0075	|dD| 0.0084	-	Sm 0.0000 N, Ha 0.3885 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.3801 H, Sh 0.6104 H
+wrapRings|F3|n5 extra0.01 gap0.0060	|dD| 0.0201	-	Sm 0.0000 N, Ha 0.4492 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.4291 H, Sh 0.6104 H
+wrapRings|F3|n5 extra0.02 gap0.0050	|dD| 0.0206	-	Sm 0.0000 N, Ha 0.4320 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.4114 H, Sh 0.6104 H
+wrapRings|F3|n5 extra0.02 gap0.0200	|dD| 0.0685	-	Sm 0.0000 N, Ha 0.4376 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.5061 H, Sh 0.6104 H
+wrapRings|F3|n5 extra0.04 gap0.0040	|dD| 0.0000	-	Sm 0.0000 N, Ha 0.3827 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.3827 H, Sh 0.6104 H
+wrapRings|F3|n5 extra0.04 gap0.0150	|dD| 0.0527	-	Sm 0.0000 N, Ha 0.4379 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.4906 H, Sh 0.6104 H
+ribBar|r0.06 L2.0 n12 roll0.00 f0.3	|dD| 0.3866	FLIP Sharpening 0.0000 Normal -> 0.3866 Hard	Sm 0.0324 N, Ha 0.5316 H, Sh 0.0000 N	Sm 0.0023 N, Ha 0.6814 H, Sh 0.3866 H
+ribBar|r0.06 L2.0 n12 roll11.25 f0.3	|dD| 0.5000	FLIP Sharpening 0.0000 Normal -> 0.5000 Hard	Sm 0.0324 N, Ha 0.5317 H, Sh 0.0000 N	Sm 0.0023 N, Ha 0.6814 H, Sh 0.5000 H
+ribBar|r0.06 L2.0 n16 roll11.25 f0.3	|dD| 0.5056	FLIP Hammering 0.0386 Normal -> 0.5442 Hard Sharpening 0.0000 Normal -> 0.2022 Hard	Sm 0.0366 N, Ha 0.0386 N, Sh 0.0000 N	Sm 0.0065 N, Ha 0.5442 H, Sh 0.2022 H
+ribBar|r0.06 L3.0 n12 roll15.00 f0.3	|dD| 0.5000	FLIP Sharpening 0.0000 Normal -> 0.5000 Hard	Sm 0.0548 N, Ha 0.6909 H, Sh 0.0000 N	Sm 0.0089 N, Ha 0.6892 H, Sh 0.5000 H
+ribBar|r0.06 L3.0 n16 roll0.00 f0.3	|dD| 0.3782	FLIP Sharpening 0.0000 Normal -> 0.3782 Hard	Sm 0.0613 N, Ha 0.3507 H, Sh 0.0000 N	Sm 0.0154 N, Ha 0.6646 H, Sh 0.3782 H
+ribBar|r0.06 L3.0 n16 roll11.25 f0.3	|dD| 0.3803	FLIP Sharpening 0.0000 Normal -> 0.3803 Hard	Sm 0.0612 N, Ha 0.4675 H, Sh 0.0000 N	Sm 0.0154 N, Ha 0.6765 H, Sh 0.3803 H
+ribBar|r0.10 L2.0 n16 roll11.25 f0.3	|dD| 0.2289	FLIP Sharpening 0.0000 Normal -> 0.2289 Hard	Sm 0.1121 N, Ha 0.5893 H, Sh 0.0000 N	Sm 0.0283 N, Ha 0.6744 H, Sh 0.2289 H
+ribBar|r0.10 L3.0 n16 roll0.00 f0.3	|dD| 0.3546	FLIP Sharpening 0.0000 Normal -> 0.2000 Hard	Sm 0.1647 N, Ha 0.3320 H, Sh 0.0000 N	Sm 0.0372 N, Ha 0.6866 H, Sh 0.2000 H
+ribBar|r0.10 L3.0 n16 roll11.25 f0.3	|dD| 0.2240	FLIP Sharpening 0.0049 Normal -> 0.2289 Hard	Sm 0.1647 N, Ha 0.6176 H, Sh 0.0049 N	Sm 0.0372 N, Ha 0.6866 H, Sh 0.2289 H
+wrapRings|C02|n3 extra0.01 gap0.0125	|dD| 0.0062	-	Sm 0.0378 N, Ha 0.1137 N, Sh 0.1318 N	Sm 0.0379 N, Ha 0.1199 N, Sh 0.1318 N
+wrapRings|C02|n3 extra0.02 gap0.0100	|dD| 0.0001	-	Sm 0.0415 N, Ha 0.1137 N, Sh 0.1318 N	Sm 0.0414 N, Ha 0.1137 N, Sh 0.1318 N
+wrapRings|C02|n4 extra0.01 gap0.0300	|dD| 0.0209	-	Sm 0.0376 N, Ha 0.1137 N, Sh 0.1318 N	Sm 0.0358 N, Ha 0.1346 N, Sh 0.1318 N
+wrapRings|C02|n4 extra0.02 gap0.0200	|dD| 0.0203	-	Sm 0.0411 N, Ha 0.1137 N, Sh 0.1318 N	Sm 0.0399 N, Ha 0.1340 N, Sh 0.1318 N
+wrapRings|C02|n4 extra0.04 gap0.0150	|dD| 0.0154	-	Sm 0.0483 N, Ha 0.1137 N, Sh 0.1318 N	Sm 0.0475 N, Ha 0.1291 N, Sh 0.1318 N
+wrapRings|C02|n5 extra0.01 gap0.0125	|dD| 0.0389	-	Sm 0.0377 N, Ha 0.1137 N, Sh 0.1318 N	Sm 0.0371 N, Ha 0.1526 N, Sh 0.1318 N
+wrapRings|C02|n5 extra0.02 gap0.0100	|dD| 0.0005	-	Sm 0.0412 N, Ha 0.1137 N, Sh 0.1318 N	Sm 0.0407 N, Ha 0.1137 N, Sh 0.1318 N
+wrapRings|C02|n5 extra0.04 gap0.0075	|dD| 0.0003	-	Sm 0.0484 N, Ha 0.1137 N, Sh 0.1318 N	Sm 0.0481 N, Ha 0.1137 N, Sh 0.1318 N
+wrapRings|C05|n3 extra0.01 gap0.0150	|dD| 0.0006	-	Sm 0.5481 H, Ha 0.1363 N, Sh 0.3466 H	Sm 0.5477 H, Ha 0.1357 N, Sh 0.3466 H
+wrapRings|C05|n3 extra0.02 gap0.0125	|dD| 0.0003	-	Sm 0.5524 H, Ha 0.1351 N, Sh 0.3466 H	Sm 0.5521 H, Ha 0.1348 N, Sh 0.3466 H
+wrapRings|C05|n4 extra0.01 gap0.0075	|dD| 0.0006	-	Sm 0.5481 H, Ha 0.1363 N, Sh 0.3466 H	Sm 0.5481 H, Ha 0.1357 N, Sh 0.3466 H
+wrapRings|C05|n4 extra0.02 gap0.0300	|dD| 0.0031	-	Sm 0.5517 H, Ha 0.1351 N, Sh 0.3466 H	Sm 0.5486 H, Ha 0.1355 N, Sh 0.3466 H
+wrapRings|C05|n4 extra0.04 gap0.0200	|dD| 0.0015	-	Sm 0.5602 H, Ha 0.1335 N, Sh 0.3466 H	Sm 0.5587 H, Ha 0.1335 N, Sh 0.3466 H
+wrapRings|C05|n5 extra0.01 gap0.0150	|dD| 0.0019	-	Sm 0.5479 H, Ha 0.1387 N, Sh 0.3466 H	Sm 0.5463 H, Ha 0.1406 N, Sh 0.3466 H
+wrapRings|C05|n5 extra0.02 gap0.0125	|dD| 0.0034	-	Sm 0.5520 H, Ha 0.1385 N, Sh 0.3466 H	Sm 0.5508 H, Ha 0.1419 N, Sh 0.3466 H
+wrapRings|C05|n5 extra0.04 gap0.0100	|dD| 0.0039	-	Sm 0.5605 H, Ha 0.1371 N, Sh 0.3466 H	Sm 0.5599 H, Ha 0.1332 N, Sh 0.3466 H
+wrapRings|C06|n3 extra0.01 gap0.0125	|dD| 0.0276	-	Sm 0.0120 N, Ha 0.2983 H, Sh 0.5948 H	Sm 0.0120 N, Ha 0.3259 H, Sh 0.5948 H
+wrapRings|C06|n3 extra0.02 gap0.0100	|dD| 0.0031	-	Sm 0.0157 N, Ha 0.2762 H, Sh 0.5948 H	Sm 0.0155 N, Ha 0.2793 H, Sh 0.5948 H
+wrapRings|C06|n4 extra0.01 gap0.0060	|dD| 0.0217	-	Sm 0.0120 N, Ha 0.3149 H, Sh 0.5948 H	Sm 0.0123 N, Ha 0.2932 H, Sh 0.5948 H
+wrapRings|C06|n4 extra0.02 gap0.0200	|dD| 0.0423	-	Sm 0.0153 N, Ha 0.2970 H, Sh 0.5948 H	Sm 0.0141 N, Ha 0.3393 H, Sh 0.5948 H
+wrapRings|C06|n4 extra0.04 gap0.0150	|dD| 0.0375	-	Sm 0.0224 N, Ha 0.2870 H, Sh 0.5948 H	Sm 0.0215 N, Ha 0.3245 H, Sh 0.5948 H
+wrapRings|C06|n5 extra0.01 gap0.0125	|dD| 0.0640	-	Sm 0.0119 N, Ha 0.3005 H, Sh 0.5948 H	Sm 0.0112 N, Ha 0.3645 H, Sh 0.5948 H
+wrapRings|C06|n5 extra0.02 gap0.0100	|dD| 0.0062	-	Sm 0.0154 N, Ha 0.2775 H, Sh 0.5948 H	Sm 0.0148 N, Ha 0.2837 H, Sh 0.5948 H
+wrapRings|C06|n5 extra0.04 gap0.0075	|dD| 0.0025	-	Sm 0.0226 N, Ha 0.2557 H, Sh 0.5948 H	Sm 0.0222 N, Ha 0.2582 H, Sh 0.5948 H
+wrapRings|C09|n3 extra0.01 gap0.0040	|dD| 0.0036	-	Sm 0.0018 N, Ha 0.2943 H, Sh 0.1479 N	Sm 0.0023 N, Ha 0.2907 H, Sh 0.1479 N
+wrapRings|C09|n3 extra0.01 gap0.0150	|dD| 0.0140	-	Sm 0.0017 N, Ha 0.3115 H, Sh 0.1562 N	Sm 0.0017 N, Ha 0.3255 H, Sh 0.1653 N
+wrapRings|C09|n3 extra0.02 gap0.0030	|dD| 0.0009	-	Sm 0.0050 N, Ha 0.2544 H, Sh 0.1457 N	Sm 0.0053 N, Ha 0.2535 H, Sh 0.1463 N
+wrapRings|C09|n3 extra0.02 gap0.0125	|dD| 0.0157	-	Sm 0.0049 N, Ha 0.2743 H, Sh 0.1487 N	Sm 0.0047 N, Ha 0.2900 H, Sh 0.1582 N
+wrapRings|C09|n3 extra0.04 gap0.0020	|dD| 0.0031	-	Sm 0.0106 N, Ha 0.2447 H, Sh 0.1397 N	Sm 0.0109 N, Ha 0.2416 H, Sh 0.1403 N
+wrapRings|C09|n3 extra0.04 gap0.0100	|dD| 0.0159	-	Sm 0.0103 N, Ha 0.2578 H, Sh 0.1406 N	Sm 0.0103 N, Ha 0.2419 H, Sh 0.1412 N
+wrapRings|C09|n4 extra0.01 gap0.0075	|dD| 0.0018	-	Sm 0.0016 N, Ha 0.3092 H, Sh 0.1463 N	Sm 0.0019 N, Ha 0.3074 H, Sh 0.1469 N
+wrapRings|C09|n4 extra0.02 gap0.0060	|dD| 0.0010	-	Sm 0.0048 N, Ha 0.2704 H, Sh 0.1364 N	Sm 0.0048 N, Ha 0.2714 H, Sh 0.1369 N
+wrapRings|C09|n4 extra0.04 gap0.0050	|dD| 0.0011	-	Sm 0.0103 N, Ha 0.2557 H, Sh 0.1264 N	Sm 0.0104 N, Ha 0.2553 H, Sh 0.1275 N
+wrapRings|C09|n4 extra0.04 gap0.0200	|dD| 0.0195	-	Sm 0.0104 N, Ha 0.2750 H, Sh 0.1375 N	Sm 0.0094 N, Ha 0.2945 H, Sh 0.1542 N
+wrapRings|C09|n5 extra0.01 gap0.0040	|dD| 0.0047	-	Sm 0.0014 N, Ha 0.3048 H, Sh 0.1339 N	Sm 0.0020 N, Ha 0.3001 H, Sh 0.1345 N
+wrapRings|C09|n5 extra0.01 gap0.0150	|dD| 0.0258	-	Sm 0.0008 N, Ha 0.3049 H, Sh 0.1398 N	Sm 0.0014 N, Ha 0.3307 H, Sh 0.1654 N
+wrapRings|C09|n5 extra0.02 gap0.0030	|dD| 0.0092	-	Sm 0.0037 N, Ha 0.2720 H, Sh 0.1231 N	Sm 0.0051 N, Ha 0.2628 H, Sh 0.1236 N
+wrapRings|C09|n5 extra0.02 gap0.0125	|dD| 0.0256	-	Sm 0.0032 N, Ha 0.2749 H, Sh 0.1245 N	Sm 0.0046 N, Ha 0.2955 H, Sh 0.1501 N
+wrapRings|C09|n5 extra0.04 gap0.0020	|dD| 0.0025	-	Sm 0.0104 N, Ha 0.2488 H, Sh 0.1206 N	Sm 0.0108 N, Ha 0.2463 H, Sh 0.1216 N
+wrapRings|C09|n5 extra0.04 gap0.0100	|dD| 0.0022	-	Sm 0.0098 N, Ha 0.2448 H, Sh 0.1159 N	Sm 0.0102 N, Ha 0.2426 H, Sh 0.1167 N
+pommelInBlock|C09|housing r47 cap0.0600	|dD| 0.0009	-	Sm 0.0235 N, Ha 0.2755 H, Sh 0.1904 N	Sm 0.0235 N, Ha 0.2764 H, Sh 0.1904 N
+rod|C09|guard Cylinder d0.04 poke0.0020	|dD| 0.0005	-	Sm 0.0001 N, Ha 0.3175 H, Sh 0.1904 N	Sm 0.0001 N, Ha 0.3170 H, Sh 0.1904 N
+cylRivet|F2|guard r0.03 tilt20 poke0.0000	|dD| 0.0000	-	Sm 0.0797 N, Ha 0.0176 N, Sh 0.0282 N	Sm 0.0797 N, Ha 0.0176 N, Sh 0.0282 N
+wrapRings|F3|n3 extra0.01 gap0.0075	|dD| 0.0008	-	Sm 0.0000 N, Ha 0.4266 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.4274 H, Sh 0.6104 H
+wrapRings|F3|n3 extra0.02 gap0.0060	|dD| 0.0003	-	Sm 0.0000 N, Ha 0.4096 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.4093 H, Sh 0.6104 H
+wrapRings|F3|n3 extra0.04 gap0.0050	|dD| 0.0001	-	Sm 0.0000 N, Ha 0.3771 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.3770 H, Sh 0.6104 H
+wrapRings|F3|n3 extra0.04 gap0.0200	|dD| 0.0175	-	Sm 0.0000 N, Ha 0.4133 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.4308 H, Sh 0.6104 H
+wrapRings|F3|n4 extra0.01 gap0.0040	|dD| 0.0118	-	Sm 0.0000 N, Ha 0.4401 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.4283 H, Sh 0.6104 H
+wrapRings|F3|n4 extra0.01 gap0.0150	|dD| 0.0292	-	Sm 0.0000 N, Ha 0.4618 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.4910 H, Sh 0.6104 H
+wrapRings|F3|n4 extra0.02 gap0.0030	|dD| 0.0123	-	Sm 0.0000 N, Ha 0.4226 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.4103 H, Sh 0.6104 H
+wrapRings|F3|n4 extra0.02 gap0.0125	|dD| 0.0494	-	Sm 0.0000 N, Ha 0.4308 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.4802 H, Sh 0.6104 H
+wrapRings|F3|n4 extra0.04 gap0.0020	|dD| 0.0120	-	Sm 0.0000 N, Ha 0.3916 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.3796 H, Sh 0.6104 H
+wrapRings|F3|n4 extra0.04 gap0.0100	|dD| 0.0067	-	Sm 0.0000 N, Ha 0.3871 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.3804 H, Sh 0.6104 H
+wrapRings|F3|n5 extra0.01 gap0.0075	|dD| 0.0185	-	Sm 0.0000 N, Ha 0.4476 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.4291 H, Sh 0.6104 H
+wrapRings|F3|n5 extra0.02 gap0.0060	|dD| 0.0197	-	Sm 0.0000 N, Ha 0.4311 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.4114 H, Sh 0.6104 H
+wrapRings|F3|n5 extra0.04 gap0.0050	|dD| 0.0196	-	Sm 0.0000 N, Ha 0.4024 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.3828 H, Sh 0.6104 H
+wrapRings|F3|n5 extra0.04 gap0.0200	|dD| 0.0578	-	Sm 0.0000 N, Ha 0.4343 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.4921 H, Sh 0.6104 H
+ribBar|r0.06 L2.0 n8 roll22.50 f0.5	|dD| 0.1782	-	Sm 0.0317 N, Ha 0.2944 H, Sh 0.0000 N	Sm 0.0015 N, Ha 0.4726 H, Sh 0.0000 N
+ribBar|r0.06 L2.0 n12 roll0.00 f0.5	|dD| 0.3866	FLIP Sharpening 0.0000 Normal -> 0.3866 Hard	Sm 0.0324 N, Ha 0.5316 H, Sh 0.0000 N	Sm 0.0023 N, Ha 0.6814 H, Sh 0.3866 H
+ribBar|r0.06 L2.0 n12 roll11.25 f0.5	|dD| 0.5000	FLIP Sharpening 0.0000 Normal -> 0.5000 Hard	Sm 0.0324 N, Ha 0.5317 H, Sh 0.0000 N	Sm 0.0023 N, Ha 0.6814 H, Sh 0.5000 H
+ribBar|r0.06 L2.0 n16 roll11.25 f0.5	|dD| 0.5056	FLIP Hammering 0.0386 Normal -> 0.5442 Hard Sharpening 0.0000 Normal -> 0.2022 Hard	Sm 0.0366 N, Ha 0.0386 N, Sh 0.0000 N	Sm 0.0065 N, Ha 0.5442 H, Sh 0.2022 H
+ribBar|r0.06 L3.0 n8 roll0.00 f0.5	|dD| 0.1762	-	Sm 0.0537 N, Ha 0.4024 H, Sh 0.0000 N	Sm 0.0078 N, Ha 0.5786 H, Sh 0.0000 N
+ribBar|r0.06 L3.0 n8 roll11.25 f0.5	|dD| 0.2280	-	Sm 0.0537 N, Ha 0.3506 H, Sh 0.0000 N	Sm 0.0078 N, Ha 0.5786 H, Sh 0.0000 N
+ribBar|r0.06 L3.0 n12 roll15.00 f0.5	|dD| 0.5000	FLIP Sharpening 0.0000 Normal -> 0.5000 Hard	Sm 0.0548 N, Ha 0.6909 H, Sh 0.0000 N	Sm 0.0089 N, Ha 0.6892 H, Sh 0.5000 H
+ribBar|r0.06 L3.0 n16 roll0.00 f0.5	|dD| 0.3782	FLIP Sharpening 0.0000 Normal -> 0.3782 Hard	Sm 0.0613 N, Ha 0.3507 H, Sh 0.0000 N	Sm 0.0154 N, Ha 0.6646 H, Sh 0.3782 H
+ribBar|r0.06 L3.0 n16 roll11.25 f0.5	|dD| 0.3803	FLIP Sharpening 0.0000 Normal -> 0.3803 Hard	Sm 0.0612 N, Ha 0.4675 H, Sh 0.0000 N	Sm 0.0154 N, Ha 0.6765 H, Sh 0.3803 H
+ribBar|r0.10 L2.0 n16 roll11.25 f0.5	|dD| 0.2488	FLIP Sharpening 0.0000 Normal -> 0.2265 Hard	Sm 0.1139 N, Ha 0.4277 H, Sh 0.0000 N	Sm 0.0300 N, Ha 0.6765 H, Sh 0.2265 H
+ribBar|r0.10 L3.0 n16 roll0.00 f0.5	|dD| 0.5556	FLIP Hammering 0.1321 Normal -> 0.6877 Hard Sharpening 0.0000 Normal -> 0.2000 Hard	Sm 0.1672 N, Ha 0.1321 N, Sh 0.0000 N	Sm 0.0398 N, Ha 0.6877 H, Sh 0.2000 H
+ribBar|r0.10 L3.0 n16 roll11.25 f0.5	|dD| 0.2855	FLIP Sharpening 0.0110 Normal -> 0.2265 Hard	Sm 0.1673 N, Ha 0.4022 H, Sh 0.0110 N	Sm 0.0398 N, Ha 0.6877 H, Sh 0.2265 H
+wrapRings|C02|n3 extra0.01 gap0.0150	|dD| 0.0060	-	Sm 0.0378 N, Ha 0.1137 N, Sh 0.1318 N	Sm 0.0377 N, Ha 0.1197 N, Sh 0.1318 N
+wrapRings|C02|n3 extra0.02 gap0.0125	|dD| 0.0027	-	Sm 0.0415 N, Ha 0.1137 N, Sh 0.1318 N	Sm 0.0412 N, Ha 0.1164 N, Sh 0.1318 N
+wrapRings|C02|n3 extra0.04 gap0.0100	|dD| 0.0002	-	Sm 0.0488 N, Ha 0.1137 N, Sh 0.1318 N	Sm 0.0486 N, Ha 0.1137 N, Sh 0.1318 N
+wrapRings|C02|n4 extra0.01 gap0.0075	|dD| 0.0001	-	Sm 0.0378 N, Ha 0.1137 N, Sh 0.1318 N	Sm 0.0379 N, Ha 0.1137 N, Sh 0.1318 N
+wrapRings|C02|n4 extra0.02 gap0.0300	|dD| 0.0196	-	Sm 0.0409 N, Ha 0.1137 N, Sh 0.1318 N	Sm 0.0389 N, Ha 0.1333 N, Sh 0.1318 N
+wrapRings|C02|n4 extra0.04 gap0.0200	|dD| 0.0153	-	Sm 0.0481 N, Ha 0.1137 N, Sh 0.1318 N	Sm 0.0468 N, Ha 0.1290 N, Sh 0.1318 N
+wrapRings|C02|n5 extra0.01 gap0.0150	|dD| 0.0386	-	Sm 0.0377 N, Ha 0.1137 N, Sh 0.1318 N	Sm 0.0368 N, Ha 0.1523 N, Sh 0.1318 N
+wrapRings|C02|n5 extra0.02 gap0.0125	|dD| 0.0391	-	Sm 0.0411 N, Ha 0.1137 N, Sh 0.1318 N	Sm 0.0403 N, Ha 0.1528 N, Sh 0.1318 N
+wrapRings|C02|n5 extra0.04 gap0.0100	|dD| 0.0006	-	Sm 0.0483 N, Ha 0.1137 N, Sh 0.1318 N	Sm 0.0477 N, Ha 0.1137 N, Sh 0.1318 N
+wrapRings|C05|n3 extra0.01 gap0.0200	|dD| 0.0008	-	Sm 0.5481 H, Ha 0.1363 N, Sh 0.3466 H	Sm 0.5473 H, Ha 0.1358 N, Sh 0.3466 H
+wrapRings|C05|n3 extra0.02 gap0.0150	|dD| 0.0005	-	Sm 0.5523 H, Ha 0.1351 N, Sh 0.3466 H	Sm 0.5518 H, Ha 0.1349 N, Sh 0.3466 H
+wrapRings|C05|n3 extra0.04 gap0.0125	|dD| 0.0004	-	Sm 0.5609 H, Ha 0.1334 N, Sh 0.3466 H	Sm 0.5609 H, Ha 0.1330 N, Sh 0.3466 H
+wrapRings|C05|n4 extra0.01 gap0.0100	|dD| 0.0006	-	Sm 0.5480 H, Ha 0.1363 N, Sh 0.3466 H	Sm 0.5477 H, Ha 0.1357 N, Sh 0.3466 H
+wrapRings|C05|n4 extra0.02 gap0.0075	|dD| 0.0003	-	Sm 0.5523 H, Ha 0.1351 N, Sh 0.3466 H	Sm 0.5522 H, Ha 0.1348 N, Sh 0.3466 H
+wrapRings|C05|n4 extra0.04 gap0.0300	|dD| 0.0029	-	Sm 0.5597 H, Ha 0.1336 N, Sh 0.3466 H	Sm 0.5568 H, Ha 0.1338 N, Sh 0.3466 H
+wrapRings|C05|n5 extra0.01 gap0.0200	|dD| 0.0025	-	Sm 0.5478 H, Ha 0.1387 N, Sh 0.3466 H	Sm 0.5453 H, Ha 0.1401 N, Sh 0.3466 H
+wrapRings|C05|n5 extra0.02 gap0.0150	|dD| 0.0031	-	Sm 0.5519 H, Ha 0.1386 N, Sh 0.3466 H	Sm 0.5502 H, Ha 0.1417 N, Sh 0.3466 H
+wrapRings|C05|n5 extra0.04 gap0.0125	|dD| 0.0062	-	Sm 0.5603 H, Ha 0.1372 N, Sh 0.3466 H	Sm 0.5593 H, Ha 0.1434 N, Sh 0.3466 H
+cylRivet|C06|guard r0.03 tilt20 poke0.0010	|dD| 0.0002	-	Sm 0.0097 N, Ha 0.2993 H, Sh 0.5948 H	Sm 0.0097 N, Ha 0.2991 H, Sh 0.5948 H
+wrapRings|C06|n3 extra0.01 gap0.0150	|dD| 0.0286	-	Sm 0.0120 N, Ha 0.2973 H, Sh 0.5948 H	Sm 0.0119 N, Ha 0.3259 H, Sh 0.5948 H
+wrapRings|C06|n3 extra0.02 gap0.0125	|dD| 0.0361	-	Sm 0.0156 N, Ha 0.2812 H, Sh 0.5948 H	Sm 0.0153 N, Ha 0.3173 H, Sh 0.5948 H
+wrapRings|C06|n3 extra0.04 gap0.0100	|dD| 0.0009	-	Sm 0.0229 N, Ha 0.2556 H, Sh 0.5948 H	Sm 0.0226 N, Ha 0.2565 H, Sh 0.5948 H
+wrapRings|C06|n4 extra0.01 gap0.0075	|dD| 0.0207	-	Sm 0.0120 N, Ha 0.3139 H, Sh 0.5948 H	Sm 0.0121 N, Ha 0.2932 H, Sh 0.5948 H
+wrapRings|C06|n4 extra0.02 gap0.0060	|dD| 0.0145	-	Sm 0.0156 N, Ha 0.2957 H, Sh 0.5948 H	Sm 0.0155 N, Ha 0.2812 H, Sh 0.5948 H
+wrapRings|C06|n4 extra0.04 gap0.0200	|dD| 0.0405	-	Sm 0.0222 N, Ha 0.2848 H, Sh 0.5948 H	Sm 0.0209 N, Ha 0.3253 H, Sh 0.5948 H
+wrapRings|C06|n5 extra0.01 gap0.0150	|dD| 0.0663	-	Sm 0.0119 N, Ha 0.2984 H, Sh 0.5948 H	Sm 0.0109 N, Ha 0.3647 H, Sh 0.5948 H
+wrapRings|C06|n5 extra0.02 gap0.0125	|dD| 0.0724	-	Sm 0.0153 N, Ha 0.2877 H, Sh 0.5948 H	Sm 0.0144 N, Ha 0.3601 H, Sh 0.5948 H
+wrapRings|C06|n5 extra0.04 gap0.0100	|dD| 0.0028	-	Sm 0.0224 N, Ha 0.2558 H, Sh 0.5948 H	Sm 0.0217 N, Ha 0.2586 H, Sh 0.5948 H
+wrapRings|C09|n3 extra0.01 gap0.0050	|dD| 0.0033	-	Sm 0.0018 N, Ha 0.2940 H, Sh 0.1480 N	Sm 0.0022 N, Ha 0.2907 H, Sh 0.1480 N
+wrapRings|C09|n3 extra0.01 gap0.0200	|dD| 0.0159	-	Sm 0.0017 N, Ha 0.3099 H, Sh 0.1566 N	Sm 0.0014 N, Ha 0.3258 H, Sh 0.1656 N
+wrapRings|C09|n3 extra0.02 gap0.0040	|dD| 0.0006	-	Sm 0.0050 N, Ha 0.2541 H, Sh 0.1398 N	Sm 0.0051 N, Ha 0.2544 H, Sh 0.1404 N
+wrapRings|C09|n3 extra0.02 gap0.0150	|dD| 0.0166	-	Sm 0.0049 N, Ha 0.2736 H, Sh 0.1489 N	Sm 0.0045 N, Ha 0.2902 H, Sh 0.1584 N
+wrapRings|C09|n3 extra0.04 gap0.0030	|dD| 0.0024	-	Sm 0.0105 N, Ha 0.2444 H, Sh 0.1398 N	Sm 0.0108 N, Ha 0.2420 H, Sh 0.1404 N
+wrapRings|C09|n3 extra0.04 gap0.0125	|dD| 0.0133	-	Sm 0.0103 N, Ha 0.2725 H, Sh 0.1451 N	Sm 0.0101 N, Ha 0.2858 H, Sh 0.1547 N
+wrapRings|C09|n4 extra0.01 gap0.0020	|dD| 0.0054	-	Sm 0.0015 N, Ha 0.2960 H, Sh 0.1362 N	Sm 0.0023 N, Ha 0.2906 H, Sh 0.1368 N
+wrapRings|C09|n4 extra0.01 gap0.0100	|dD| 0.0049	-	Sm 0.0015 N, Ha 0.3079 H, Sh 0.1466 N	Sm 0.0022 N, Ha 0.3030 H, Sh 0.1471 N
+wrapRings|C09|n4 extra0.02 gap0.0075	|dD| 0.0015	-	Sm 0.0047 N, Ha 0.2699 H, Sh 0.1365 N	Sm 0.0047 N, Ha 0.2714 H, Sh 0.1371 N
+wrapRings|C09|n4 extra0.04 gap0.0060	|dD| 0.0011	-	Sm 0.0102 N, Ha 0.2554 H, Sh 0.1265 N	Sm 0.0103 N, Ha 0.2554 H, Sh 0.1276 N
+wrapRings|C09|n5 extra0.01 gap0.0050	|dD| 0.0043	-	Sm 0.0013 N, Ha 0.3045 H, Sh 0.1341 N	Sm 0.0019 N, Ha 0.3002 H, Sh 0.1347 N
+wrapRings|C09|n5 extra0.01 gap0.0200	|dD| 0.0328	-	Sm 0.0017 N, Ha 0.3085 H, Sh 0.1490 N	Sm 0.0014 N, Ha 0.3413 H, Sh 0.1747 N
+wrapRings|C09|n5 extra0.02 gap0.0040	|dD| 0.0089	-	Sm 0.0036 N, Ha 0.2718 H, Sh 0.1233 N	Sm 0.0050 N, Ha 0.2629 H, Sh 0.1238 N
+wrapRings|C09|n5 extra0.02 gap0.0150	|dD| 0.0256	-	Sm 0.0030 N, Ha 0.2743 H, Sh 0.1313 N	Sm 0.0042 N, Ha 0.2958 H, Sh 0.1569 N
+wrapRings|C09|n5 extra0.04 gap0.0030	|dD| 0.0013	-	Sm 0.0103 N, Ha 0.2483 H, Sh 0.1206 N	Sm 0.0106 N, Ha 0.2470 H, Sh 0.1213 N
+wrapRings|C09|n5 extra0.04 gap0.0125	|dD| 0.0243	-	Sm 0.0095 N, Ha 0.2620 H, Sh 0.1317 N	Sm 0.0098 N, Ha 0.2863 H, Sh 0.1528 N
+rod|C09|guard Cylinder d0.04 poke0.0050	|dD| 0.0004	-	Sm 0.0001 N, Ha 0.3174 H, Sh 0.1904 N	Sm 0.0001 N, Ha 0.3170 H, Sh 0.1904 N
+cylRivet|F2|guard r0.03 tilt20 poke0.0005	|dD| 0.0000	-	Sm 0.0797 N, Ha 0.0176 N, Sh 0.0282 N	Sm 0.0797 N, Ha 0.0176 N, Sh 0.0282 N
+wrapRings|F3|n3 extra0.01 gap0.0100	|dD| 0.0204	-	Sm 0.0000 N, Ha 0.4478 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.4274 H, Sh 0.6104 H
+wrapRings|F3|n3 extra0.02 gap0.0075	|dD| 0.0004	-	Sm 0.0000 N, Ha 0.4089 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.4093 H, Sh 0.6104 H
+wrapRings|F3|n3 extra0.04 gap0.0060	|dD| 0.0003	-	Sm 0.0000 N, Ha 0.3767 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.3770 H, Sh 0.6104 H
+wrapRings|F3|n4 extra0.01 gap0.0050	|dD| 0.0109	-	Sm 0.0000 N, Ha 0.4392 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.4283 H, Sh 0.6104 H
+wrapRings|F3|n4 extra0.01 gap0.0200	|dD| 0.0335	-	Sm 0.0000 N, Ha 0.4577 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.4912 H, Sh 0.6104 H
+wrapRings|F3|n4 extra0.02 gap0.0040	|dD| 0.0116	-	Sm 0.0000 N, Ha 0.4219 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.4103 H, Sh 0.6104 H
+wrapRings|F3|n4 extra0.02 gap0.0150	|dD| 0.0297	-	Sm 0.0000 N, Ha 0.4508 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.4805 H, Sh 0.6104 H
+wrapRings|F3|n4 extra0.04 gap0.0030	|dD| 0.0113	-	Sm 0.0000 N, Ha 0.3910 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.3797 H, Sh 0.6104 H
+wrapRings|F3|n4 extra0.04 gap0.0125	|dD| 0.0421	-	Sm 0.0000 N, Ha 0.4178 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.4599 H, Sh 0.6104 H
+wrapRings|F3|n5 extra0.01 gap0.0020	|dD| 0.0019	-	Sm 0.0000 N, Ha 0.4311 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.4292 H, Sh 0.6104 H
+wrapRings|F3|n5 extra0.01 gap0.0100	|dD| 0.0158	-	Sm 0.0000 N, Ha 0.4449 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.4291 H, Sh 0.6104 H
+wrapRings|F3|n5 extra0.02 gap0.0075	|dD| 0.0181	-	Sm 0.0000 N, Ha 0.4296 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.4115 H, Sh 0.6104 H
+wrapRings|F3|n5 extra0.04 gap0.0060	|dD| 0.0186	-	Sm 0.0000 N, Ha 0.4016 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.3830 H, Sh 0.6104 H
+ribBar|r0.06 L2.0 n4 roll45.00 f0.7	|dD| 0.1949	-	Sm 0.0364 N, Ha 0.3171 H, Sh 0.0000 N	Sm 0.0063 N, Ha 0.5120 H, Sh 0.0000 N
+ribBar|r0.06 L2.0 n6 roll0.00 f0.7	|dD| 0.4303	FLIP Hammering 0.1282 Normal -> 0.5585 Hard	Sm 0.0364 N, Ha 0.1282 N, Sh 0.0000 N	Sm 0.0063 N, Ha 0.5585 H, Sh 0.0000 N
+ribBar|r0.06 L2.0 n6 roll11.25 f0.7	|dD| 0.3971	FLIP Hammering 0.1614 Normal -> 0.5585 Hard	Sm 0.0364 N, Ha 0.1614 N, Sh 0.0000 N	Sm 0.0063 N, Ha 0.5585 H, Sh 0.0000 N
+ribBar|r0.06 L2.0 n8 roll22.50 f0.7	|dD| 0.2171	-	Sm 0.0364 N, Ha 0.3390 H, Sh 0.0000 N	Sm 0.0063 N, Ha 0.5561 H, Sh 0.0000 N
+ribBar|r0.06 L2.0 n12 roll0.00 f0.7	|dD| 0.3978	FLIP Sharpening 0.0000 Normal -> 0.3673 Hard	Sm 0.0365 N, Ha 0.2878 H, Sh 0.0000 N	Sm 0.0063 N, Ha 0.6856 H, Sh 0.3673 H
+ribBar|r0.06 L2.0 n12 roll11.25 f0.7	|dD| 0.4944	FLIP Sharpening 0.0000 Normal -> 0.4944 Hard	Sm 0.0364 N, Ha 0.2398 H, Sh 0.0000 N	Sm 0.0063 N, Ha 0.6856 H, Sh 0.4944 H
+ribBar|r0.06 L2.0 n16 roll11.25 f0.7	|dD| 0.5056	FLIP Hammering 0.0386 Normal -> 0.5442 Hard Sharpening 0.0000 Normal -> 0.2022 Hard	Sm 0.0366 N, Ha 0.0386 N, Sh 0.0000 N	Sm 0.0065 N, Ha 0.5442 H, Sh 0.2022 H
+ribBar|r0.06 L3.0 n4 roll0.00 f0.7	|dD| 0.4607	FLIP Hammering 0.1864 Normal -> 0.6471 Hard	Sm 0.0609 N, Ha 0.1864 N, Sh 0.0000 N	Sm 0.0151 N, Ha 0.6471 H, Sh 0.0000 N
+ribBar|r0.06 L3.0 n4 roll11.25 f0.7	|dD| 0.3814	-	Sm 0.0609 N, Ha 0.2657 H, Sh 0.0000 N	Sm 0.0151 N, Ha 0.6471 H, Sh 0.0000 N
+ribBar|r0.06 L3.0 n6 roll30.00 f0.7	|dD| 0.2330	-	Sm 0.0609 N, Ha 0.4152 H, Sh 0.0000 N	Sm 0.0151 N, Ha 0.6482 H, Sh 0.0000 N
+ribBar|r0.06 L3.0 n8 roll0.00 f0.7	|dD| 0.2022	-	Sm 0.0609 N, Ha 0.4536 H, Sh 0.0000 N	Sm 0.0151 N, Ha 0.6558 H, Sh 0.0000 N
+ribBar|r0.06 L3.0 n8 roll11.25 f0.7	|dD| 0.2896	-	Sm 0.0609 N, Ha 0.3662 H, Sh 0.0000 N	Sm 0.0151 N, Ha 0.6558 H, Sh 0.0000 N
+ribBar|r0.06 L3.0 n12 roll15.00 f0.7	|dD| 0.5000	FLIP Sharpening 0.0000 Normal -> 0.5000 Hard	Sm 0.0609 N, Ha 0.5593 H, Sh 0.0000 N	Sm 0.0151 N, Ha 0.6916 H, Sh 0.5000 H
+ribBar|r0.06 L3.0 n16 roll0.00 f0.7	|dD| 0.3782	FLIP Sharpening 0.0000 Normal -> 0.3782 Hard	Sm 0.0613 N, Ha 0.3507 H, Sh 0.0000 N	Sm 0.0154 N, Ha 0.6646 H, Sh 0.3782 H
+ribBar|r0.06 L3.0 n16 roll11.25 f0.7	|dD| 0.3803	FLIP Sharpening 0.0000 Normal -> 0.3803 Hard	Sm 0.0612 N, Ha 0.4675 H, Sh 0.0000 N	Sm 0.0154 N, Ha 0.6765 H, Sh 0.3803 H
+ribBar|r0.10 L2.0 n8 roll22.50 f0.7	|dD| 0.5658	FLIP Hammering 0.0519 Normal -> 0.6177 Hard	Sm 0.1211 N, Ha 0.0519 N, Sh 0.0000 N	Sm 0.0375 N, Ha 0.6177 H, Sh 0.0000 N
+ribBar|r0.10 L2.0 n12 roll0.00 f0.7	|dD| 0.5693	FLIP Hammering 0.1128 Normal -> 0.6821 Hard Sharpening 0.0000 Normal -> 0.4477 Hard	Sm 0.1213 N, Ha 0.1128 N, Sh 0.0000 N	Sm 0.0375 N, Ha 0.6821 H, Sh 0.4477 H
+ribBar|r0.10 L2.0 n12 roll11.25 f0.7	|dD| 0.5000	FLIP Hammering 0.1907 Normal -> 0.6821 Hard Sharpening 0.0000 Normal -> 0.5000 Hard	Sm 0.1212 N, Ha 0.1907 N, Sh 0.0000 N	Sm 0.0375 N, Ha 0.6821 H, Sh 0.5000 H
+ribBar|r0.10 L2.0 n16 roll11.25 f0.7	|dD| 0.2548	FLIP Sharpening 0.0000 Normal -> 0.2174 Hard	Sm 0.1212 N, Ha 0.4279 H, Sh 0.0000 N	Sm 0.0374 N, Ha 0.6827 H, Sh 0.2174 H
+ribBar|r0.10 L3.0 n8 roll0.00 f0.7	|dD| 0.5246	FLIP Hammering 0.1663 Normal -> 0.6909 Hard	Sm 0.1784 N, Ha 0.1663 N, Sh 0.0000 N	Sm 0.0511 N, Ha 0.6909 H, Sh 0.0000 N
+ribBar|r0.10 L3.0 n8 roll11.25 f0.7	|dD| 0.5962	FLIP Hammering 0.0947 Normal -> 0.6909 Hard	Sm 0.1784 N, Ha 0.0947 N, Sh 0.0000 N	Sm 0.0511 N, Ha 0.6909 H, Sh 0.0000 N
+ribBar|r0.10 L3.0 n12 roll15.00 f0.7	|dD| 0.5000	FLIP Sharpening 0.0000 Normal -> 0.5000 Hard	Sm 0.1785 N, Ha 0.2785 H, Sh 0.0000 N	Sm 0.0511 N, Ha 0.6910 H, Sh 0.5000 H
+ribBar|r0.10 L3.0 n16 roll0.00 f0.7	|dD| 0.4947	FLIP Hammering 0.1962 Normal -> 0.6909 Hard Sharpening 0.0000 Normal -> 0.2000 Hard	Sm 0.1786 N, Ha 0.1962 N, Sh 0.0000 N	Sm 0.0511 N, Ha 0.6909 H, Sh 0.2000 H
+ribBar|r0.10 L3.0 n16 roll11.25 f0.7	|dD| 0.2766	FLIP Sharpening 0.0239 Normal -> 0.2174 Hard	Sm 0.1785 N, Ha 0.4143 H, Sh 0.0239 N	Sm 0.0511 N, Ha 0.6909 H, Sh 0.2174 H
+ribBar|r0.16 L2.0 n12 roll0.00 f0.7	|dD| 0.6461	FLIP Smelting 0.3000 Hard -> 0.0855 Normal Hammering 0.0321 Normal -> 0.6782 Hard Sharpening 0.0000 Normal -> 0.5000 Hard	Sm 0.3000 H, Ha 0.0321 N, Sh 0.0000 N	Sm 0.0855 N, Ha 0.6782 H, Sh 0.5000 H
+ribBar|r0.16 L2.0 n12 roll11.25 f0.7	|dD| 0.6451	FLIP Smelting 0.3000 Hard -> 0.0855 Normal Hammering 0.0331 Normal -> 0.6782 Hard Sharpening 0.0000 Normal -> 0.5000 Hard	Sm 0.3000 H, Ha 0.0331 N, Sh 0.0000 N	Sm 0.0855 N, Ha 0.6782 H, Sh 0.5000 H
+ribBar|r0.16 L2.0 n16 roll11.25 f0.7	|dD| 0.5026	FLIP Smelting 0.3000 Hard -> 0.0855 Normal Hammering 0.1764 Normal -> 0.6790 Hard Sharpening 0.0000 Normal -> 0.2481 Hard	Sm 0.3000 H, Ha 0.1764 N, Sh 0.0000 N	Sm 0.0855 N, Ha 0.6790 H, Sh 0.2481 H
+ribBar|r0.16 L3.0 n12 roll15.00 f0.7	|dD| 0.6423	FLIP Smelting 0.4328 Hard -> 0.1065 Normal Hammering 0.0466 Normal -> 0.6889 Hard Sharpening 0.0000 Normal -> 0.5000 Hard	Sm 0.4328 H, Ha 0.0466 N, Sh 0.0000 N	Sm 0.1065 N, Ha 0.6889 H, Sh 0.5000 H
+ribBar|r0.16 L3.0 n16 roll0.00 f0.7	|dD| 0.6536	FLIP Smelting 0.4328 Hard -> 0.1065 Normal Hammering 0.0349 Normal -> 0.6885 Hard Sharpening 0.0000 Normal -> 0.2000 Hard	Sm 0.4328 H, Ha 0.0349 N, Sh 0.0000 N	Sm 0.1065 N, Ha 0.6885 H, Sh 0.2000 H
+ribBar|r0.16 L3.0 n16 roll11.25 f0.7	|dD| 0.3541	FLIP Smelting 0.4326 Hard -> 0.1065 Normal Sharpening 0.0000 Normal -> 0.2481 Hard	Sm 0.4326 H, Ha 0.3344 H, Sh 0.0000 N	Sm 0.1065 N, Ha 0.6885 H, Sh 0.2481 H
+wrapRings|C02|n3 extra0.01 gap0.0200	|dD| 0.0056	-	Sm 0.0378 N, Ha 0.1137 N, Sh 0.1318 N	Sm 0.0374 N, Ha 0.1193 N, Sh 0.1318 N
+wrapRings|C02|n3 extra0.02 gap0.0150	|dD| 0.0025	-	Sm 0.0414 N, Ha 0.1137 N, Sh 0.1318 N	Sm 0.0410 N, Ha 0.1162 N, Sh 0.1318 N
+wrapRings|C02|n3 extra0.04 gap0.0125	|dD| 0.0004	-	Sm 0.0487 N, Ha 0.1137 N, Sh 0.1318 N	Sm 0.0483 N, Ha 0.1137 N, Sh 0.1318 N
+wrapRings|C02|n4 extra0.01 gap0.0100	|dD| 0.0001	-	Sm 0.0378 N, Ha 0.1137 N, Sh 0.1318 N	Sm 0.0377 N, Ha 0.1137 N, Sh 0.1318 N
+wrapRings|C02|n4 extra0.02 gap0.0075	|dD| 0.0001	-	Sm 0.0414 N, Ha 0.1137 N, Sh 0.1318 N	Sm 0.0413 N, Ha 0.1137 N, Sh 0.1318 N
+wrapRings|C02|n4 extra0.04 gap0.0300	|dD| 0.0151	-	Sm 0.0476 N, Ha 0.1137 N, Sh 0.1318 N	Sm 0.0455 N, Ha 0.1288 N, Sh 0.1318 N
+wrapRings|C02|n5 extra0.01 gap0.0050	|dD| 0.0002	-	Sm 0.0378 N, Ha 0.1137 N, Sh 0.1318 N	Sm 0.0380 N, Ha 0.1137 N, Sh 0.1318 N
+wrapRings|C02|n5 extra0.01 gap0.0200	|dD| 0.0381	-	Sm 0.0376 N, Ha 0.1137 N, Sh 0.1318 N	Sm 0.0361 N, Ha 0.1518 N, Sh 0.1318 N
+wrapRings|C02|n5 extra0.02 gap0.0150	|dD| 0.0389	-	Sm 0.0411 N, Ha 0.1137 N, Sh 0.1318 N	Sm 0.0399 N, Ha 0.1526 N, Sh 0.1318 N
+wrapRings|C02|n5 extra0.04 gap0.0125	|dD| 0.0377	-	Sm 0.0481 N, Ha 0.1137 N, Sh 0.1318 N	Sm 0.0472 N, Ha 0.1514 N, Sh 0.1318 N
+wrapRings|C05|n3 extra0.01 gap0.0300	|dD| 0.0017	-	Sm 0.5480 H, Ha 0.1363 N, Sh 0.3466 H	Sm 0.5463 H, Ha 0.1360 N, Sh 0.3466 H
+wrapRings|C05|n3 extra0.02 gap0.0200	|dD| 0.0009	-	Sm 0.5522 H, Ha 0.1351 N, Sh 0.3466 H	Sm 0.5513 H, Ha 0.1350 N, Sh 0.3466 H
+wrapRings|C05|n3 extra0.04 gap0.0150	|dD| 0.0003	-	Sm 0.5608 H, Ha 0.1334 N, Sh 0.3466 H	Sm 0.5605 H, Ha 0.1331 N, Sh 0.3466 H
+wrapRings|C05|n4 extra0.01 gap0.0125	|dD| 0.0006	-	Sm 0.5480 H, Ha 0.1363 N, Sh 0.3466 H	Sm 0.5474 H, Ha 0.1358 N, Sh 0.3466 H
+wrapRings|C05|n4 extra0.02 gap0.0100	|dD| 0.0004	-	Sm 0.5522 H, Ha 0.1351 N, Sh 0.3466 H	Sm 0.5518 H, Ha 0.1349 N, Sh 0.3466 H
+wrapRings|C05|n4 extra0.04 gap0.0075	|dD| 0.0004	-	Sm 0.5609 H, Ha 0.1334 N, Sh 0.3466 H	Sm 0.5610 H, Ha 0.1330 N, Sh 0.3466 H
+wrapRings|C05|n5 extra0.01 gap0.0060	|dD| 0.0029	-	Sm 0.5480 H, Ha 0.1386 N, Sh 0.3466 H	Sm 0.5480 H, Ha 0.1357 N, Sh 0.3466 H
+wrapRings|C05|n5 extra0.02 gap0.0200	|dD| 0.0027	-	Sm 0.5517 H, Ha 0.1386 N, Sh 0.3466 H	Sm 0.5492 H, Ha 0.1413 N, Sh 0.3466 H
+wrapRings|C05|n5 extra0.04 gap0.0150	|dD| 0.0060	-	Sm 0.5602 H, Ha 0.1372 N, Sh 0.3466 H	Sm 0.5587 H, Ha 0.1432 N, Sh 0.3466 H
+cylRivet|C06|guard r0.03 tilt20 poke0.0020	|dD| 0.0001	-	Sm 0.0097 N, Ha 0.2992 H, Sh 0.5948 H	Sm 0.0097 N, Ha 0.2991 H, Sh 0.5948 H
+wrapRings|C06|n3 extra0.01 gap0.0200	|dD| 0.0140	-	Sm 0.0120 N, Ha 0.3121 H, Sh 0.5948 H	Sm 0.0116 N, Ha 0.3261 H, Sh 0.5948 H
+wrapRings|C06|n3 extra0.02 gap0.0150	|dD| 0.0371	-	Sm 0.0156 N, Ha 0.2803 H, Sh 0.5948 H	Sm 0.0151 N, Ha 0.3174 H, Sh 0.5948 H
+wrapRings|C06|n3 extra0.04 gap0.0125	|dD| 0.0347	-	Sm 0.0229 N, Ha 0.2637 H, Sh 0.5948 H	Sm 0.0224 N, Ha 0.2984 H, Sh 0.5948 H
+wrapRings|C06|n4 extra0.01 gap0.0100	|dD| 0.0191	-	Sm 0.0120 N, Ha 0.3124 H, Sh 0.5948 H	Sm 0.0119 N, Ha 0.2933 H, Sh 0.5948 H
+wrapRings|C06|n4 extra0.02 gap0.0075	|dD| 0.0136	-	Sm 0.0155 N, Ha 0.2949 H, Sh 0.5948 H	Sm 0.0154 N, Ha 0.2813 H, Sh 0.5948 H
+wrapRings|C06|n4 extra0.04 gap0.0060	|dD| 0.0131	-	Sm 0.0228 N, Ha 0.2696 H, Sh 0.5948 H	Sm 0.0227 N, Ha 0.2565 H, Sh 0.5948 H
+wrapRings|C06|n5 extra0.01 gap0.0050	|dD| 0.0045	-	Sm 0.0120 N, Ha 0.2995 H, Sh 0.5948 H	Sm 0.0122 N, Ha 0.2950 H, Sh 0.5948 H
+wrapRings|C06|n5 extra0.01 gap0.0200	|dD| 0.0370	-	Sm 0.0118 N, Ha 0.3281 H, Sh 0.5948 H	Sm 0.0103 N, Ha 0.3651 H, Sh 0.5948 H
+wrapRings|C06|n5 extra0.02 gap0.0150	|dD| 0.0746	-	Sm 0.0152 N, Ha 0.2858 H, Sh 0.5948 H	Sm 0.0141 N, Ha 0.3604 H, Sh 0.5948 H
+wrapRings|C06|n5 extra0.04 gap0.0125	|dD| 0.0695	-	Sm 0.0223 N, Ha 0.2803 H, Sh 0.5948 H	Sm 0.0213 N, Ha 0.3498 H, Sh 0.5948 H
+wrapRings|C09|n3 extra0.01 gap0.0060	|dD| 0.0028	-	Sm 0.0018 N, Ha 0.2936 H, Sh 0.1480 N	Sm 0.0022 N, Ha 0.2908 H, Sh 0.1480 N
+wrapRings|C09|n3 extra0.02 gap0.0050	|dD| 0.0007	-	Sm 0.0050 N, Ha 0.2539 H, Sh 0.1398 N	Sm 0.0051 N, Ha 0.2545 H, Sh 0.1405 N
+wrapRings|C09|n3 extra0.02 gap0.0200	|dD| 0.0193	-	Sm 0.0048 N, Ha 0.2721 H, Sh 0.1493 N	Sm 0.0041 N, Ha 0.2914 H, Sh 0.1588 N
+wrapRings|C09|n3 extra0.04 gap0.0040	|dD| 0.0023	-	Sm 0.0105 N, Ha 0.2440 H, Sh 0.1339 N	Sm 0.0108 N, Ha 0.2417 H, Sh 0.1345 N
+wrapRings|C09|n3 extra0.04 gap0.0150	|dD| 0.0141	-	Sm 0.0102 N, Ha 0.2718 H, Sh 0.1453 N	Sm 0.0099 N, Ha 0.2859 H, Sh 0.1549 N
+wrapRings|C09|n4 extra0.01 gap0.0030	|dD| 0.0050	-	Sm 0.0015 N, Ha 0.3123 H, Sh 0.1458 N	Sm 0.0022 N, Ha 0.3073 H, Sh 0.1464 N
+wrapRings|C09|n4 extra0.01 gap0.0125	|dD| 0.0258	-	Sm 0.0014 N, Ha 0.3115 H, Sh 0.1494 N	Sm 0.0020 N, Ha 0.3373 H, Sh 0.1671 N
+wrapRings|C09|n4 extra0.02 gap0.0020	|dD| 0.0095	-	Sm 0.0039 N, Ha 0.2625 H, Sh 0.1259 N	Sm 0.0053 N, Ha 0.2530 H, Sh 0.1265 N
+wrapRings|C09|n4 extra0.02 gap0.0100	|dD| 0.0009	-	Sm 0.0048 N, Ha 0.2678 H, Sh 0.1369 N	Sm 0.0051 N, Ha 0.2669 H, Sh 0.1374 N
+wrapRings|C09|n4 extra0.04 gap0.0075	|dD| 0.0012	-	Sm 0.0101 N, Ha 0.2549 H, Sh 0.1267 N	Sm 0.0102 N, Ha 0.2555 H, Sh 0.1279 N
+wrapRings|C09|n5 extra0.01 gap0.0060	|dD| 0.0039	-	Sm 0.0012 N, Ha 0.3041 H, Sh 0.1343 N	Sm 0.0018 N, Ha 0.3002 H, Sh 0.1348 N
+wrapRings|C09|n5 extra0.02 gap0.0050	|dD| 0.0085	-	Sm 0.0036 N, Ha 0.2715 H, Sh 0.1235 N	Sm 0.0049 N, Ha 0.2630 H, Sh 0.1240 N
+wrapRings|C09|n5 extra0.02 gap0.0200	|dD| 0.0281	-	Sm 0.0039 N, Ha 0.2788 H, Sh 0.1410 N	Sm 0.0043 N, Ha 0.3069 H, Sh 0.1667 N
+wrapRings|C09|n5 extra0.04 gap0.0040	|dD| 0.0010	-	Sm 0.0102 N, Ha 0.2480 H, Sh 0.1208 N	Sm 0.0104 N, Ha 0.2470 H, Sh 0.1215 N
+wrapRings|C09|n5 extra0.04 gap0.0150	|dD| 0.0251	-	Sm 0.0093 N, Ha 0.2817 H, Sh 0.1385 N	Sm 0.0094 N, Ha 0.3068 H, Sh 0.1596 N
+cylRivet|F2|guard r0.03 tilt20 poke0.0010	|dD| 0.0000	-	Sm 0.0797 N, Ha 0.0176 N, Sh 0.0282 N	Sm 0.0797 N, Ha 0.0176 N, Sh 0.0282 N
+wrapRings|F3|n3 extra0.01 gap0.0030	|dD| 0.0017	-	Sm 0.0000 N, Ha 0.4291 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.4274 H, Sh 0.6104 H
+wrapRings|F3|n3 extra0.01 gap0.0125	|dD| 0.0172	-	Sm 0.0000 N, Ha 0.4518 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.4690 H, Sh 0.6104 H
+wrapRings|F3|n3 extra0.02 gap0.0100	|dD| 0.0201	-	Sm 0.0000 N, Ha 0.4295 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.4094 H, Sh 0.6104 H
+wrapRings|F3|n3 extra0.04 gap0.0075	|dD| 0.0009	-	Sm 0.0000 N, Ha 0.3762 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.3771 H, Sh 0.6104 H
+wrapRings|F3|n4 extra0.01 gap0.0060	|dD| 0.0101	-	Sm 0.0000 N, Ha 0.4384 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.4283 H, Sh 0.6104 H
+wrapRings|F3|n4 extra0.02 gap0.0050	|dD| 0.0108	-	Sm 0.0000 N, Ha 0.4211 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.4103 H, Sh 0.6104 H
+wrapRings|F3|n4 extra0.02 gap0.0200	|dD| 0.0338	-	Sm 0.0000 N, Ha 0.4471 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.4809 H, Sh 0.6104 H
+wrapRings|F3|n4 extra0.04 gap0.0040	|dD| 0.0106	-	Sm 0.0000 N, Ha 0.3904 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.3798 H, Sh 0.6104 H
+wrapRings|F3|n4 extra0.04 gap0.0150	|dD| 0.0234	-	Sm 0.0000 N, Ha 0.4369 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.4603 H, Sh 0.6104 H
+wrapRings|F3|n5 extra0.01 gap0.0030	|dD| 0.0008	-	Sm 0.0000 N, Ha 0.4300 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.4292 H, Sh 0.6104 H
+wrapRings|F3|n5 extra0.01 gap0.0125	|dD| 0.0588	-	Sm 0.0000 N, Ha 0.4541 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.5129 H, Sh 0.6104 H
+wrapRings|F3|n5 extra0.02 gap0.0020	|dD| 0.0019	-	Sm 0.0000 N, Ha 0.4132 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.4113 H, Sh 0.6104 H
+wrapRings|F3|n5 extra0.02 gap0.0100	|dD| 0.0156	-	Sm 0.0000 N, Ha 0.4272 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.4116 H, Sh 0.6104 H
+wrapRings|F3|n5 extra0.04 gap0.0075	|dD| 0.0173	-	Sm 0.0000 N, Ha 0.4005 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.3832 H, Sh 0.6104 H
+ribBar|r0.06 L2.0 n12 roll15.00 f0.3	|dD| 0.5000	FLIP Sharpening 0.0000 Normal -> 0.5000 Hard	Sm 0.0324 N, Ha 0.5324 H, Sh 0.0000 N	Sm 0.0023 N, Ha 0.6814 H, Sh 0.5000 H
+ribBar|r0.06 L2.0 n16 roll0.00 f0.3	|dD| 0.4558	FLIP Hammering 0.0777 Normal -> 0.5335 Hard Sharpening 0.0000 Normal -> 0.2000 Hard	Sm 0.0367 N, Ha 0.0777 N, Sh 0.0000 N	Sm 0.0065 N, Ha 0.5335 H, Sh 0.2000 H
+ribBar|r0.06 L2.0 n16 roll11.25 f0.3	|dD| 0.5056	FLIP Hammering 0.0386 Normal -> 0.5442 Hard Sharpening 0.0000 Normal -> 0.2022 Hard	Sm 0.0366 N, Ha 0.0386 N, Sh 0.0000 N	Sm 0.0065 N, Ha 0.5442 H, Sh 0.2022 H
+ribBar|r0.06 L3.0 n12 roll0.00 f0.3	|dD| 0.3866	FLIP Sharpening 0.0000 Normal -> 0.3866 Hard	Sm 0.0548 N, Ha 0.6909 H, Sh 0.0000 N	Sm 0.0089 N, Ha 0.6892 H, Sh 0.3866 H
+ribBar|r0.06 L3.0 n12 roll11.25 f0.3	|dD| 0.5000	FLIP Sharpening 0.0000 Normal -> 0.5000 Hard	Sm 0.0548 N, Ha 0.6909 H, Sh 0.0000 N	Sm 0.0089 N, Ha 0.6892 H, Sh 0.5000 H
+ribBar|r0.06 L3.0 n16 roll11.25 f0.3	|dD| 0.3803	FLIP Sharpening 0.0000 Normal -> 0.3803 Hard	Sm 0.0612 N, Ha 0.4675 H, Sh 0.0000 N	Sm 0.0154 N, Ha 0.6765 H, Sh 0.3803 H
+ribBar|r0.10 L2.0 n16 roll0.00 f0.3	|dD| 0.3490	FLIP Sharpening 0.0000 Normal -> 0.2000 Hard	Sm 0.1122 N, Ha 0.3254 H, Sh 0.0000 N	Sm 0.0284 N, Ha 0.6744 H, Sh 0.2000 H
+ribBar|r0.10 L2.0 n16 roll11.25 f0.3	|dD| 0.2289	FLIP Sharpening 0.0000 Normal -> 0.2289 Hard	Sm 0.1121 N, Ha 0.5893 H, Sh 0.0000 N	Sm 0.0283 N, Ha 0.6744 H, Sh 0.2289 H
+ribBar|r0.10 L3.0 n16 roll11.25 f0.3	|dD| 0.2240	FLIP Sharpening 0.0049 Normal -> 0.2289 Hard	Sm 0.1647 N, Ha 0.6176 H, Sh 0.0049 N	Sm 0.0372 N, Ha 0.6866 H, Sh 0.2289 H
+cage|r0.10 k6 open0.19 roll0.0	|dD| 0.0407	-	Sm 0.0648 N, Ha 0.1195 N, Sh 0.0000 N	Sm 0.0646 N, Ha 0.1195 N, Sh 0.0407 N
+wrapRings|C02|n3 extra0.01 gap0.0300	|dD| 0.0050	-	Sm 0.0377 N, Ha 0.1137 N, Sh 0.1318 N	Sm 0.0368 N, Ha 0.1187 N, Sh 0.1318 N
+wrapRings|C02|n3 extra0.02 gap0.0200	|dD| 0.0022	-	Sm 0.0414 N, Ha 0.1137 N, Sh 0.1318 N	Sm 0.0407 N, Ha 0.1159 N, Sh 0.1318 N
+wrapRings|C02|n3 extra0.04 gap0.0150	|dD| 0.0006	-	Sm 0.0487 N, Ha 0.1137 N, Sh 0.1318 N	Sm 0.0481 N, Ha 0.1137 N, Sh 0.1318 N
+wrapRings|C02|n4 extra0.01 gap0.0125	|dD| 0.0225	-	Sm 0.0378 N, Ha 0.1137 N, Sh 0.1318 N	Sm 0.0375 N, Ha 0.1362 N, Sh 0.1318 N
+wrapRings|C02|n4 extra0.02 gap0.0100	|dD| 0.0003	-	Sm 0.0413 N, Ha 0.1137 N, Sh 0.1318 N	Sm 0.0410 N, Ha 0.1137 N, Sh 0.1318 N
+wrapRings|C02|n4 extra0.04 gap0.0075	|dD| 0.0002	-	Sm 0.0486 N, Ha 0.1137 N, Sh 0.1318 N	Sm 0.0484 N, Ha 0.1137 N, Sh 0.1318 N
+wrapRings|C02|n5 extra0.01 gap0.0060	|dD| 0.0001	-	Sm 0.0378 N, Ha 0.1137 N, Sh 0.1318 N	Sm 0.0379 N, Ha 0.1137 N, Sh 0.1318 N
+wrapRings|C02|n5 extra0.02 gap0.0050	|dD| 0.0000	-	Sm 0.0414 N, Ha 0.1137 N, Sh 0.1318 N	Sm 0.0414 N, Ha 0.1137 N, Sh 0.1318 N
+wrapRings|C02|n5 extra0.02 gap0.0200	|dD| 0.0385	-	Sm 0.0409 N, Ha 0.1137 N, Sh 0.1318 N	Sm 0.0392 N, Ha 0.1522 N, Sh 0.1318 N
+wrapRings|C02|n5 extra0.04 gap0.0150	|dD| 0.0376	-	Sm 0.0480 N, Ha 0.1137 N, Sh 0.1318 N	Sm 0.0468 N, Ha 0.1513 N, Sh 0.1318 N
+wrapRings|C05|n3 extra0.02 gap0.0300	|dD| 0.0019	-	Sm 0.5521 H, Ha 0.1351 N, Sh 0.3466 H	Sm 0.5502 H, Ha 0.1352 N, Sh 0.3466 H
+wrapRings|C05|n3 extra0.04 gap0.0200	|dD| 0.0007	-	Sm 0.5606 H, Ha 0.1335 N, Sh 0.3466 H	Sm 0.5599 H, Ha 0.1332 N, Sh 0.3466 H
+wrapRings|C05|n4 extra0.01 gap0.0150	|dD| 0.0010	-	Sm 0.5480 H, Ha 0.1363 N, Sh 0.3466 H	Sm 0.5470 H, Ha 0.1359 N, Sh 0.3466 H
+wrapRings|C05|n4 extra0.02 gap0.0125	|dD| 0.0007	-	Sm 0.5521 H, Ha 0.1351 N, Sh 0.3466 H	Sm 0.5514 H, Ha 0.1350 N, Sh 0.3466 H
+wrapRings|C05|n4 extra0.04 gap0.0100	|dD| 0.0003	-	Sm 0.5607 H, Ha 0.1334 N, Sh 0.3466 H	Sm 0.5605 H, Ha 0.1331 N, Sh 0.3466 H
+wrapRings|C05|n5 extra0.01 gap0.0075	|dD| 0.0029	-	Sm 0.5480 H, Ha 0.1386 N, Sh 0.3466 H	Sm 0.5477 H, Ha 0.1357 N, Sh 0.3466 H
+wrapRings|C05|n5 extra0.02 gap0.0060	|dD| 0.0037	-	Sm 0.5522 H, Ha 0.1385 N, Sh 0.3466 H	Sm 0.5521 H, Ha 0.1348 N, Sh 0.3466 H
+wrapRings|C05|n5 extra0.04 gap0.0200	|dD| 0.0056	-	Sm 0.5598 H, Ha 0.1373 N, Sh 0.3466 H	Sm 0.5574 H, Ha 0.1429 N, Sh 0.3466 H
+wrapRings|C06|n3 extra0.01 gap0.0300	|dD| 0.0185	-	Sm 0.0119 N, Ha 0.3079 H, Sh 0.5948 H	Sm 0.0109 N, Ha 0.3264 H, Sh 0.5948 H
+wrapRings|C06|n3 extra0.02 gap0.0200	|dD| 0.0226	-	Sm 0.0155 N, Ha 0.2951 H, Sh 0.5948 H	Sm 0.0148 N, Ha 0.3177 H, Sh 0.5948 H
+wrapRings|C06|n3 extra0.04 gap0.0150	|dD| 0.0358	-	Sm 0.0228 N, Ha 0.2629 H, Sh 0.5948 H	Sm 0.0222 N, Ha 0.2987 H, Sh 0.5948 H
+wrapRings|C06|n4 extra0.01 gap0.0125	|dD| 0.0288	-	Sm 0.0120 N, Ha 0.3163 H, Sh 0.5948 H	Sm 0.0116 N, Ha 0.3451 H, Sh 0.5948 H
+wrapRings|C06|n4 extra0.02 gap0.0100	|dD| 0.0120	-	Sm 0.0155 N, Ha 0.2935 H, Sh 0.5948 H	Sm 0.0151 N, Ha 0.2815 H, Sh 0.5948 H
+wrapRings|C06|n4 extra0.04 gap0.0075	|dD| 0.0123	-	Sm 0.0228 N, Ha 0.2689 H, Sh 0.5948 H	Sm 0.0225 N, Ha 0.2566 H, Sh 0.5948 H
+wrapRings|C06|n5 extra0.01 gap0.0060	|dD| 0.0036	-	Sm 0.0120 N, Ha 0.2986 H, Sh 0.5948 H	Sm 0.0121 N, Ha 0.2950 H, Sh 0.5948 H
+wrapRings|C06|n5 extra0.02 gap0.0050	|dD| 0.0021	-	Sm 0.0155 N, Ha 0.2812 H, Sh 0.5948 H	Sm 0.0155 N, Ha 0.2833 H, Sh 0.5948 H
+wrapRings|C06|n5 extra0.02 gap0.0200	|dD| 0.0458	-	Sm 0.0151 N, Ha 0.3153 H, Sh 0.5948 H	Sm 0.0134 N, Ha 0.3611 H, Sh 0.5948 H
+wrapRings|C06|n5 extra0.04 gap0.0150	|dD| 0.0717	-	Sm 0.0221 N, Ha 0.2788 H, Sh 0.5948 H	Sm 0.0209 N, Ha 0.3505 H, Sh 0.5948 H
+wrapRings|C09|n3 extra0.01 gap0.0075	|dD| 0.0023	-	Sm 0.0018 N, Ha 0.2932 H, Sh 0.1481 N	Sm 0.0021 N, Ha 0.2909 H, Sh 0.1481 N
+wrapRings|C09|n3 extra0.02 gap0.0060	|dD| 0.0006	-	Sm 0.0050 N, Ha 0.2536 H, Sh 0.1399 N	Sm 0.0051 N, Ha 0.2537 H, Sh 0.1405 N
+wrapRings|C09|n3 extra0.04 gap0.0050	|dD| 0.0020	-	Sm 0.0105 N, Ha 0.2437 H, Sh 0.1340 N	Sm 0.0107 N, Ha 0.2417 H, Sh 0.1346 N
+wrapRings|C09|n3 extra0.04 gap0.0200	|dD| 0.0156	-	Sm 0.0101 N, Ha 0.2702 H, Sh 0.1457 N	Sm 0.0095 N, Ha 0.2858 H, Sh 0.1553 N
+wrapRings|C09|n4 extra0.01 gap0.0040	|dD| 0.0047	-	Sm 0.0015 N, Ha 0.3120 H, Sh 0.1459 N	Sm 0.0022 N, Ha 0.3073 H, Sh 0.1465 N
+wrapRings|C09|n4 extra0.01 gap0.0150	|dD| 0.0177	-	Sm 0.0014 N, Ha 0.3271 H, Sh 0.1497 N	Sm 0.0018 N, Ha 0.3374 H, Sh 0.1674 N
+wrapRings|C09|n4 extra0.02 gap0.0030	|dD| 0.0092	-	Sm 0.0038 N, Ha 0.2796 H, Sh 0.1360 N	Sm 0.0052 N, Ha 0.2704 H, Sh 0.1366 N
+wrapRings|C09|n4 extra0.02 gap0.0125	|dD| 0.0298	-	Sm 0.0047 N, Ha 0.2736 H, Sh 0.1410 N	Sm 0.0048 N, Ha 0.3034 H, Sh 0.1589 N
+wrapRings|C09|n4 extra0.04 gap0.0020	|dD| 0.0100	-	Sm 0.0105 N, Ha 0.2543 H, Sh 0.1260 N	Sm 0.0108 N, Ha 0.2443 H, Sh 0.1271 N
+wrapRings|C09|n4 extra0.04 gap0.0100	|dD| 0.0022	-	Sm 0.0102 N, Ha 0.2526 H, Sh 0.1271 N	Sm 0.0106 N, Ha 0.2504 H, Sh 0.1282 N
+wrapRings|C09|n5 extra0.01 gap0.0075	|dD| 0.0069	-	Sm 0.0013 N, Ha 0.3028 H, Sh 0.1285 N	Sm 0.0022 N, Ha 0.2959 H, Sh 0.1291 N
+wrapRings|C09|n5 extra0.02 gap0.0060	|dD| 0.0081	-	Sm 0.0035 N, Ha 0.2712 H, Sh 0.1237 N	Sm 0.0047 N, Ha 0.2631 H, Sh 0.1242 N
+wrapRings|C09|n5 extra0.04 gap0.0050	|dD| 0.0007	-	Sm 0.0101 N, Ha 0.2478 H, Sh 0.1210 N	Sm 0.0102 N, Ha 0.2471 H, Sh 0.1217 N
+wrapRings|C09|n5 extra0.04 gap0.0200	|dD| 0.0313	-	Sm 0.0102 N, Ha 0.2703 H, Sh 0.1396 N	Sm 0.0094 N, Ha 0.3016 H, Sh 0.1609 N
+wrapRings|F3|n3 extra0.01 gap0.0040	|dD| 0.0011	-	Sm 0.0000 N, Ha 0.4285 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.4274 H, Sh 0.6104 H
+wrapRings|F3|n3 extra0.01 gap0.0150	|dD| 0.0185	-	Sm 0.0000 N, Ha 0.4505 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.4690 H, Sh 0.6104 H
+wrapRings|F3|n3 extra0.02 gap0.0030	|dD| 0.0018	-	Sm 0.0000 N, Ha 0.4111 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.4093 H, Sh 0.6104 H
+wrapRings|F3|n3 extra0.02 gap0.0125	|dD| 0.0174	-	Sm 0.0000 N, Ha 0.4383 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.4557 H, Sh 0.6104 H
+wrapRings|F3|n3 extra0.04 gap0.0100	|dD| 0.0183	-	Sm 0.0000 N, Ha 0.3956 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.3773 H, Sh 0.6104 H
+wrapRings|F3|n4 extra0.01 gap0.0075	|dD| 0.0090	-	Sm 0.0000 N, Ha 0.4372 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.4282 H, Sh 0.6104 H
+wrapRings|F3|n4 extra0.02 gap0.0060	|dD| 0.0100	-	Sm 0.0000 N, Ha 0.4204 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.4104 H, Sh 0.6104 H
+wrapRings|F3|n4 extra0.04 gap0.0050	|dD| 0.0100	-	Sm 0.0000 N, Ha 0.3899 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.3799 H, Sh 0.6104 H
+wrapRings|F3|n4 extra0.04 gap0.0200	|dD| 0.0270	-	Sm 0.0000 N, Ha 0.4342 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.4612 H, Sh 0.6104 H
+wrapRings|F3|n5 extra0.01 gap0.0040	|dD| 0.0003	-	Sm 0.0000 N, Ha 0.4289 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.4292 H, Sh 0.6104 H
+wrapRings|F3|n5 extra0.01 gap0.0150	|dD| 0.0628	-	Sm 0.0000 N, Ha 0.4503 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.5131 H, Sh 0.6104 H
+wrapRings|F3|n5 extra0.02 gap0.0030	|dD| 0.0009	-	Sm 0.0000 N, Ha 0.4122 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.4113 H, Sh 0.6104 H
+wrapRings|F3|n5 extra0.02 gap0.0125	|dD| 0.0592	-	Sm 0.0000 N, Ha 0.4457 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.5049 H, Sh 0.6104 H
+wrapRings|F3|n5 extra0.04 gap0.0020	|dD| 0.0018	-	Sm 0.0000 N, Ha 0.3842 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.3824 H, Sh 0.6104 H
+wrapRings|F3|n5 extra0.04 gap0.0100	|dD| 0.0152	-	Sm 0.0000 N, Ha 0.3987 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.3835 H, Sh 0.6104 H
+ribBar|r0.06 L2.0 n8 roll0.00 f0.5	|dD| 0.1575	-	Sm 0.0317 N, Ha 0.3149 H, Sh 0.0000 N	Sm 0.0015 N, Ha 0.4724 H, Sh 0.0000 N
+ribBar|r0.06 L2.0 n8 roll11.25 f0.5	|dD| 0.2342	-	Sm 0.0317 N, Ha 0.2385 H, Sh 0.0000 N	Sm 0.0015 N, Ha 0.4727 H, Sh 0.0000 N
+ribBar|r0.06 L2.0 n12 roll15.00 f0.5	|dD| 0.5000	FLIP Sharpening 0.0000 Normal -> 0.5000 Hard	Sm 0.0324 N, Ha 0.5324 H, Sh 0.0000 N	Sm 0.0023 N, Ha 0.6814 H, Sh 0.5000 H
+ribBar|r0.06 L2.0 n16 roll0.00 f0.5	|dD| 0.4558	FLIP Hammering 0.0777 Normal -> 0.5335 Hard Sharpening 0.0000 Normal -> 0.2000 Hard	Sm 0.0367 N, Ha 0.0777 N, Sh 0.0000 N	Sm 0.0065 N, Ha 0.5335 H, Sh 0.2000 H
+ribBar|r0.06 L2.0 n16 roll11.25 f0.5	|dD| 0.5056	FLIP Hammering 0.0386 Normal -> 0.5442 Hard Sharpening 0.0000 Normal -> 0.2022 Hard	Sm 0.0366 N, Ha 0.0386 N, Sh 0.0000 N	Sm 0.0065 N, Ha 0.5442 H, Sh 0.2022 H
+ribBar|r0.06 L3.0 n8 roll22.50 f0.5	|dD| 0.0584	-	Sm 0.0537 N, Ha 0.5202 H, Sh 0.0000 N	Sm 0.0078 N, Ha 0.5786 H, Sh 0.0000 N
+ribBar|r0.06 L3.0 n12 roll0.00 f0.5	|dD| 0.3866	FLIP Sharpening 0.0000 Normal -> 0.3866 Hard	Sm 0.0548 N, Ha 0.6909 H, Sh 0.0000 N	Sm 0.0089 N, Ha 0.6892 H, Sh 0.3866 H
+ribBar|r0.06 L3.0 n12 roll11.25 f0.5	|dD| 0.5000	FLIP Sharpening 0.0000 Normal -> 0.5000 Hard	Sm 0.0548 N, Ha 0.6909 H, Sh 0.0000 N	Sm 0.0089 N, Ha 0.6892 H, Sh 0.5000 H
+ribBar|r0.06 L3.0 n16 roll11.25 f0.5	|dD| 0.3803	FLIP Sharpening 0.0000 Normal -> 0.3803 Hard	Sm 0.0612 N, Ha 0.4675 H, Sh 0.0000 N	Sm 0.0154 N, Ha 0.6765 H, Sh 0.3803 H
+ribBar|r0.10 L2.0 n16 roll0.00 f0.5	|dD| 0.5227	FLIP Hammering 0.1538 Normal -> 0.6765 Hard Sharpening 0.0000 Normal -> 0.2000 Hard	Sm 0.1138 N, Ha 0.1538 N, Sh 0.0000 N	Sm 0.0300 N, Ha 0.6765 H, Sh 0.2000 H
+ribBar|r0.10 L2.0 n16 roll11.25 f0.5	|dD| 0.2488	FLIP Sharpening 0.0000 Normal -> 0.2265 Hard	Sm 0.1139 N, Ha 0.4277 H, Sh 0.0000 N	Sm 0.0300 N, Ha 0.6765 H, Sh 0.2265 H
+ribBar|r0.10 L3.0 n16 roll11.25 f0.5	|dD| 0.2855	FLIP Sharpening 0.0110 Normal -> 0.2265 Hard	Sm 0.1673 N, Ha 0.4022 H, Sh 0.0110 N	Sm 0.0398 N, Ha 0.6877 H, Sh 0.2265 H
+cage|r0.10 k6 open0.19 roll22.5	|dD| 0.0396	-	Sm 0.0648 N, Ha 0.1200 N, Sh 0.0000 N	Sm 0.0646 N, Ha 0.1200 N, Sh 0.0396 N
+wrapRings|C02|n3 extra0.02 gap0.0300	|dD| 0.0017	-	Sm 0.0412 N, Ha 0.1137 N, Sh 0.1318 N	Sm 0.0399 N, Ha 0.1154 N, Sh 0.1318 N
+wrapRings|C02|n3 extra0.04 gap0.0200	|dD| 0.0008	-	Sm 0.0485 N, Ha 0.1137 N, Sh 0.1318 N	Sm 0.0477 N, Ha 0.1137 N, Sh 0.1318 N
+wrapRings|C02|n4 extra0.01 gap0.0150	|dD| 0.0216	-	Sm 0.0377 N, Ha 0.1144 N, Sh 0.1318 N	Sm 0.0372 N, Ha 0.1360 N, Sh 0.1318 N
+wrapRings|C02|n4 extra0.02 gap0.0125	|dD| 0.0209	-	Sm 0.0413 N, Ha 0.1137 N, Sh 0.1318 N	Sm 0.0407 N, Ha 0.1346 N, Sh 0.1318 N
+wrapRings|C02|n4 extra0.04 gap0.0100	|dD| 0.0004	-	Sm 0.0485 N, Ha 0.1137 N, Sh 0.1318 N	Sm 0.0481 N, Ha 0.1137 N, Sh 0.1318 N
+wrapRings|C02|n5 extra0.01 gap0.0075	|dD| 0.0001	-	Sm 0.0378 N, Ha 0.1137 N, Sh 0.1318 N	Sm 0.0377 N, Ha 0.1137 N, Sh 0.1318 N
+wrapRings|C02|n5 extra0.02 gap0.0060	|dD| 0.0001	-	Sm 0.0413 N, Ha 0.1137 N, Sh 0.1318 N	Sm 0.0412 N, Ha 0.1137 N, Sh 0.1318 N
+wrapRings|C02|n5 extra0.04 gap0.0050	|dD| 0.0000	-	Sm 0.0486 N, Ha 0.1137 N, Sh 0.1318 N	Sm 0.0486 N, Ha 0.1137 N, Sh 0.1318 N
+wrapRings|C02|n5 extra0.04 gap0.0200	|dD| 0.0375	-	Sm 0.0477 N, Ha 0.1137 N, Sh 0.1318 N	Sm 0.0459 N, Ha 0.1512 N, Sh 0.1318 N
+wrapRings|C05|n3 extra0.04 gap0.0300	|dD| 0.0016	-	Sm 0.5603 H, Ha 0.1335 N, Sh 0.3466 H	Sm 0.5587 H, Ha 0.1335 N, Sh 0.3466 H
+wrapRings|C05|n4 extra0.01 gap0.0200	|dD| 0.0016	-	Sm 0.5479 H, Ha 0.1363 N, Sh 0.3466 H	Sm 0.5463 H, Ha 0.1360 N, Sh 0.3466 H
+wrapRings|C05|n4 extra0.02 gap0.0150	|dD| 0.0011	-	Sm 0.5521 H, Ha 0.1351 N, Sh 0.3466 H	Sm 0.5510 H, Ha 0.1350 N, Sh 0.3466 H
+wrapRings|C05|n4 extra0.04 gap0.0125	|dD| 0.0005	-	Sm 0.5606 H, Ha 0.1335 N, Sh 0.3466 H	Sm 0.5601 H, Ha 0.1332 N, Sh 0.3466 H
+wrapRings|C05|n5 extra0.01 gap0.0100	|dD| 0.0029	-	Sm 0.5479 H, Ha 0.1387 N, Sh 0.3466 H	Sm 0.5473 H, Ha 0.1358 N, Sh 0.3466 H
+wrapRings|C05|n5 extra0.02 gap0.0075	|dD| 0.0036	-	Sm 0.5521 H, Ha 0.1385 N, Sh 0.3466 H	Sm 0.5518 H, Ha 0.1349 N, Sh 0.3466 H
+wrapRings|C05|n5 extra0.04 gap0.0060	|dD| 0.0041	-	Sm 0.5608 H, Ha 0.1371 N, Sh 0.3466 H	Sm 0.5609 H, Ha 0.1330 N, Sh 0.3466 H
+cylRivet|C06|guard r0.03 tilt20 poke-0.0020	|dD| 0.0001	-	Sm 0.0097 N, Ha 0.2992 H, Sh 0.5948 H	Sm 0.0097 N, Ha 0.2991 H, Sh 0.5948 H
+wrapRings|C06|n3 extra0.02 gap0.0300	|dD| 0.0268	-	Sm 0.0154 N, Ha 0.2914 H, Sh 0.5948 H	Sm 0.0141 N, Ha 0.3182 H, Sh 0.5948 H
+wrapRings|C06|n3 extra0.04 gap0.0200	|dD| 0.0377	-	Sm 0.0226 N, Ha 0.2615 H, Sh 0.5948 H	Sm 0.0217 N, Ha 0.2992 H, Sh 0.5948 H
+wrapRings|C06|n4 extra0.01 gap0.0150	|dD| 0.0306	-	Sm 0.0119 N, Ha 0.3147 H, Sh 0.5948 H	Sm 0.0114 N, Ha 0.3453 H, Sh 0.5948 H
+wrapRings|C06|n4 extra0.02 gap0.0125	|dD| 0.0375	-	Sm 0.0154 N, Ha 0.3011 H, Sh 0.5948 H	Sm 0.0149 N, Ha 0.3386 H, Sh 0.5948 H
+wrapRings|C06|n4 extra0.04 gap0.0100	|dD| 0.0109	-	Sm 0.0226 N, Ha 0.2678 H, Sh 0.5948 H	Sm 0.0222 N, Ha 0.2569 H, Sh 0.5948 H
+wrapRings|C06|n5 extra0.01 gap0.0075	|dD| 0.0023	-	Sm 0.0120 N, Ha 0.2974 H, Sh 0.5948 H	Sm 0.0119 N, Ha 0.2951 H, Sh 0.5948 H
+wrapRings|C06|n5 extra0.02 gap0.0060	|dD| 0.0029	-	Sm 0.0155 N, Ha 0.2804 H, Sh 0.5948 H	Sm 0.0153 N, Ha 0.2833 H, Sh 0.5948 H
+wrapRings|C06|n5 extra0.04 gap0.0050	|dD| 0.0016	-	Sm 0.0227 N, Ha 0.2562 H, Sh 0.5948 H	Sm 0.0226 N, Ha 0.2578 H, Sh 0.5948 H
+wrapRings|C06|n5 extra0.04 gap0.0200	|dD| 0.0758	-	Sm 0.0218 N, Ha 0.2759 H, Sh 0.5948 H	Sm 0.0200 N, Ha 0.3517 H, Sh 0.5948 H
+cylRivet|C09|guard r0.03 tilt20 poke0.0050	|dD| 0.0011	-	Sm 0.0001 N, Ha 0.3181 H, Sh 0.1904 N	Sm 0.0001 N, Ha 0.3170 H, Sh 0.1904 N
+wrapRings|C09|n3 extra0.01 gap0.0020	|dD| 0.0044	-	Sm 0.0018 N, Ha 0.2950 H, Sh 0.1538 N	Sm 0.0024 N, Ha 0.2906 H, Sh 0.1538 N
+wrapRings|C09|n3 extra0.01 gap0.0100	|dD| 0.0177	-	Sm 0.0018 N, Ha 0.3087 H, Sh 0.1546 N	Sm 0.0019 N, Ha 0.2910 H, Sh 0.1546 N
+wrapRings|C09|n3 extra0.02 gap0.0075	|dD| 0.0015	-	Sm 0.0050 N, Ha 0.2531 H, Sh 0.1400 N	Sm 0.0049 N, Ha 0.2546 H, Sh 0.1407 N
+wrapRings|C09|n3 extra0.04 gap0.0060	|dD| 0.0013	-	Sm 0.0105 N, Ha 0.2434 H, Sh 0.1340 N	Sm 0.0106 N, Ha 0.2421 H, Sh 0.1346 N
+wrapRings|C09|n4 extra0.01 gap0.0050	|dD| 0.0028	-	Sm 0.0016 N, Ha 0.3101 H, Sh 0.1460 N	Sm 0.0021 N, Ha 0.3073 H, Sh 0.1466 N
+wrapRings|C09|n4 extra0.01 gap0.0200	|dD| 0.0194	-	Sm 0.0021 N, Ha 0.3182 H, Sh 0.1500 N	Sm 0.0014 N, Ha 0.3376 H, Sh 0.1678 N
+wrapRings|C09|n4 extra0.02 gap0.0040	|dD| 0.0089	-	Sm 0.0038 N, Ha 0.2793 H, Sh 0.1361 N	Sm 0.0051 N, Ha 0.2704 H, Sh 0.1367 N
+wrapRings|C09|n4 extra0.02 gap0.0150	|dD| 0.0180	-	Sm 0.0046 N, Ha 0.2889 H, Sh 0.1413 N	Sm 0.0046 N, Ha 0.3035 H, Sh 0.1593 N
+wrapRings|C09|n4 extra0.04 gap0.0030	|dD| 0.0011	-	Sm 0.0104 N, Ha 0.2562 H, Sh 0.1261 N	Sm 0.0107 N, Ha 0.2552 H, Sh 0.1272 N
+wrapRings|C09|n4 extra0.04 gap0.0125	|dD| 0.0260	-	Sm 0.0100 N, Ha 0.2679 H, Sh 0.1365 N	Sm 0.0103 N, Ha 0.2939 H, Sh 0.1532 N
+wrapRings|C09|n5 extra0.01 gap0.0020	|dD| 0.0054	-	Sm 0.0015 N, Ha 0.3054 H, Sh 0.1336 N	Sm 0.0023 N, Ha 0.3000 H, Sh 0.1342 N
+wrapRings|C09|n5 extra0.01 gap0.0100	|dD| 0.0059	-	Sm 0.0011 N, Ha 0.3020 H, Sh 0.1289 N	Sm 0.0020 N, Ha 0.2961 H, Sh 0.1295 N
+wrapRings|C09|n5 extra0.02 gap0.0075	|dD| 0.0110	-	Sm 0.0035 N, Ha 0.2696 H, Sh 0.1180 N	Sm 0.0052 N, Ha 0.2586 H, Sh 0.1185 N
+wrapRings|C09|n5 extra0.04 gap0.0060	|dD| 0.0007	-	Sm 0.0100 N, Ha 0.2475 H, Sh 0.1212 N	Sm 0.0101 N, Ha 0.2472 H, Sh 0.1219 N
+pommelInBlock|C09|housing unrot cap0.0600	|dD| 0.0008	-	Sm 0.0235 N, Ha 0.2772 H, Sh 0.1904 N	Sm 0.0235 N, Ha 0.2764 H, Sh 0.1904 N
+wrapRings|F3|n3 extra0.01 gap0.0050	|dD| 0.0006	-	Sm 0.0000 N, Ha 0.4280 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.4274 H, Sh 0.6104 H
+wrapRings|F3|n3 extra0.01 gap0.0200	|dD| 0.0213	-	Sm 0.0000 N, Ha 0.4478 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.4691 H, Sh 0.6104 H
+wrapRings|F3|n3 extra0.02 gap0.0040	|dD| 0.0013	-	Sm 0.0000 N, Ha 0.4106 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.4093 H, Sh 0.6104 H
+wrapRings|F3|n3 extra0.02 gap0.0150	|dD| 0.0187	-	Sm 0.0000 N, Ha 0.4371 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.4558 H, Sh 0.6104 H
+wrapRings|F3|n3 extra0.04 gap0.0030	|dD| 0.0011	-	Sm 0.0000 N, Ha 0.3779 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.3768 H, Sh 0.6104 H
+wrapRings|F3|n3 extra0.04 gap0.0125	|dD| 0.0140	-	Sm 0.0000 N, Ha 0.4161 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.4301 H, Sh 0.6104 H
+wrapRings|F3|n4 extra0.01 gap0.0020	|dD| 0.0134	-	Sm 0.0000 N, Ha 0.4417 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.4283 H, Sh 0.6104 H
+wrapRings|F3|n4 extra0.01 gap0.0100	|dD| 0.0070	-	Sm 0.0000 N, Ha 0.4352 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.4282 H, Sh 0.6104 H
+wrapRings|F3|n4 extra0.02 gap0.0075	|dD| 0.0089	-	Sm 0.0000 N, Ha 0.4193 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.4104 H, Sh 0.6104 H
+wrapRings|F3|n4 extra0.04 gap0.0060	|dD| 0.0093	-	Sm 0.0000 N, Ha 0.3893 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.3800 H, Sh 0.6104 H
+wrapRings|F3|n5 extra0.01 gap0.0050	|dD| 0.0211	-	Sm 0.0000 N, Ha 0.4503 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.4292 H, Sh 0.6104 H
+wrapRings|F3|n5 extra0.01 gap0.0200	|dD| 0.0686	-	Sm 0.0000 N, Ha 0.4449 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.5135 H, Sh 0.6104 H
+wrapRings|F3|n5 extra0.02 gap0.0040	|dD| 0.0001	-	Sm 0.0000 N, Ha 0.4112 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.4113 H, Sh 0.6104 H
+wrapRings|F3|n5 extra0.02 gap0.0150	|dD| 0.0628	-	Sm 0.0000 N, Ha 0.4425 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.5053 H, Sh 0.6104 H
+wrapRings|F3|n5 extra0.04 gap0.0030	|dD| 0.0009	-	Sm 0.0000 N, Ha 0.3835 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.3826 H, Sh 0.6104 H
+wrapRings|F3|n5 extra0.04 gap0.0125	|dD| 0.0483	-	Sm 0.0000 N, Ha 0.4416 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.4899 H, Sh 0.6104 H
+ribBar|r0.06 L2.0 n4 roll0.00 f0.7	|dD| 0.4634	FLIP Hammering 0.0480 Normal -> 0.5114 Hard	Sm 0.0364 N, Ha 0.0480 N, Sh 0.0000 N	Sm 0.0063 N, Ha 0.5114 H, Sh 0.0000 N
+ribBar|r0.06 L2.0 n4 roll11.25 f0.7	|dD| 0.3971	FLIP Hammering 0.1143 Normal -> 0.5114 Hard	Sm 0.0364 N, Ha 0.1143 N, Sh 0.0000 N	Sm 0.0063 N, Ha 0.5114 H, Sh 0.0000 N
+ribBar|r0.06 L2.0 n6 roll30.00 f0.7	|dD| 0.3832	FLIP Hammering 0.1753 Normal -> 0.5585 Hard	Sm 0.0364 N, Ha 0.1753 N, Sh 0.0000 N	Sm 0.0063 N, Ha 0.5585 H, Sh 0.0000 N
+ribBar|r0.06 L2.0 n8 roll0.00 f0.7	|dD| 0.2146	-	Sm 0.0364 N, Ha 0.3415 H, Sh 0.0000 N	Sm 0.0063 N, Ha 0.5561 H, Sh 0.0000 N
+ribBar|r0.06 L2.0 n8 roll11.25 f0.7	|dD| 0.3115	-	Sm 0.0364 N, Ha 0.2446 H, Sh 0.0000 N	Sm 0.0063 N, Ha 0.5561 H, Sh 0.0000 N
+ribBar|r0.06 L2.0 n12 roll15.00 f0.7	|dD| 0.5000	FLIP Sharpening 0.0000 Normal -> 0.5000 Hard	Sm 0.0364 N, Ha 0.2524 H, Sh 0.0000 N	Sm 0.0063 N, Ha 0.6856 H, Sh 0.5000 H
+ribBar|r0.06 L2.0 n16 roll0.00 f0.7	|dD| 0.4558	FLIP Hammering 0.0777 Normal -> 0.5335 Hard Sharpening 0.0000 Normal -> 0.2000 Hard	Sm 0.0367 N, Ha 0.0777 N, Sh 0.0000 N	Sm 0.0065 N, Ha 0.5335 H, Sh 0.2000 H
+ribBar|r0.06 L2.0 n16 roll11.25 f0.7	|dD| 0.5056	FLIP Hammering 0.0386 Normal -> 0.5442 Hard Sharpening 0.0000 Normal -> 0.2022 Hard	Sm 0.0366 N, Ha 0.0386 N, Sh 0.0000 N	Sm 0.0065 N, Ha 0.5442 H, Sh 0.2022 H
+ribBar|r0.06 L3.0 n4 roll45.00 f0.7	|dD| 0.2607	-	Sm 0.0609 N, Ha 0.3864 H, Sh 0.0000 N	Sm 0.0151 N, Ha 0.6471 H, Sh 0.0000 N
+ribBar|r0.06 L3.0 n6 roll0.00 f0.7	|dD| 0.3545	-	Sm 0.0609 N, Ha 0.2937 H, Sh 0.0000 N	Sm 0.0151 N, Ha 0.6482 H, Sh 0.0000 N
+ribBar|r0.06 L3.0 n6 roll11.25 f0.7	|dD| 0.3000	-	Sm 0.0609 N, Ha 0.3482 H, Sh 0.0000 N	Sm 0.0151 N, Ha 0.6482 H, Sh 0.0000 N
+ribBar|r0.06 L3.0 n8 roll22.50 f0.7	|dD| 0.1700	-	Sm 0.0609 N, Ha 0.4858 H, Sh 0.0000 N	Sm 0.0151 N, Ha 0.6558 H, Sh 0.0000 N
+ribBar|r0.06 L3.0 n12 roll0.00 f0.7	|dD| 0.3673	FLIP Sharpening 0.0000 Normal -> 0.3673 Hard	Sm 0.0610 N, Ha 0.6629 H, Sh 0.0000 N	Sm 0.0151 N, Ha 0.6916 H, Sh 0.3673 H
+ribBar|r0.06 L3.0 n12 roll11.25 f0.7	|dD| 0.4944	FLIP Sharpening 0.0000 Normal -> 0.4944 Hard	Sm 0.0610 N, Ha 0.5829 H, Sh 0.0000 N	Sm 0.0151 N, Ha 0.6916 H, Sh 0.4944 H
+ribBar|r0.06 L3.0 n16 roll11.25 f0.7	|dD| 0.3803	FLIP Sharpening 0.0000 Normal -> 0.3803 Hard	Sm 0.0612 N, Ha 0.4675 H, Sh 0.0000 N	Sm 0.0154 N, Ha 0.6765 H, Sh 0.3803 H
+ribBar|r0.10 L2.0 n8 roll0.00 f0.7	|dD| 0.5659	FLIP Hammering 0.0518 Normal -> 0.6177 Hard	Sm 0.1211 N, Ha 0.0518 N, Sh 0.0000 N	Sm 0.0375 N, Ha 0.6177 H, Sh 0.0000 N
+ribBar|r0.10 L2.0 n8 roll11.25 f0.7	|dD| 0.5531	FLIP Hammering 0.0646 Normal -> 0.6177 Hard	Sm 0.1211 N, Ha 0.0646 N, Sh 0.0000 N	Sm 0.0375 N, Ha 0.6177 H, Sh 0.0000 N
+ribBar|r0.10 L2.0 n12 roll15.00 f0.7	|dD| 0.5417	FLIP Hammering 0.1404 Normal -> 0.6821 Hard Sharpening 0.0000 Normal -> 0.5000 Hard	Sm 0.1212 N, Ha 0.1404 N, Sh 0.0000 N	Sm 0.0375 N, Ha 0.6821 H, Sh 0.5000 H
+ribBar|r0.10 L2.0 n16 roll0.00 f0.7	|dD| 0.5226	FLIP Hammering 0.1601 Normal -> 0.6827 Hard Sharpening 0.0000 Normal -> 0.2000 Hard	Sm 0.1213 N, Ha 0.1601 N, Sh 0.0000 N	Sm 0.0374 N, Ha 0.6827 H, Sh 0.2000 H
+ribBar|r0.10 L2.0 n16 roll11.25 f0.7	|dD| 0.2548	FLIP Sharpening 0.0000 Normal -> 0.2174 Hard	Sm 0.1212 N, Ha 0.4279 H, Sh 0.0000 N	Sm 0.0374 N, Ha 0.6827 H, Sh 0.2174 H
+ribBar|r0.10 L3.0 n8 roll22.50 f0.7	|dD| 0.5215	FLIP Hammering 0.1694 Normal -> 0.6909 Hard	Sm 0.1784 N, Ha 0.1694 N, Sh 0.0000 N	Sm 0.0511 N, Ha 0.6909 H, Sh 0.0000 N
+ribBar|r0.10 L3.0 n12 roll0.00 f0.7	|dD| 0.4477	FLIP Sharpening 0.0000 Normal -> 0.4477 Hard	Sm 0.1786 N, Ha 0.2815 H, Sh 0.0000 N	Sm 0.0511 N, Ha 0.6910 H, Sh 0.4477 H
+ribBar|r0.10 L3.0 n12 roll11.25 f0.7	|dD| 0.5000	FLIP Sharpening 0.0000 Normal -> 0.5000 Hard	Sm 0.1785 N, Ha 0.3387 H, Sh 0.0000 N	Sm 0.0511 N, Ha 0.6910 H, Sh 0.5000 H
+ribBar|r0.10 L3.0 n16 roll11.25 f0.7	|dD| 0.2766	FLIP Sharpening 0.0239 Normal -> 0.2174 Hard	Sm 0.1785 N, Ha 0.4143 H, Sh 0.0239 N	Sm 0.0511 N, Ha 0.6909 H, Sh 0.2174 H
+ribBar|r0.16 L2.0 n12 roll15.00 f0.7	|dD| 0.6442	FLIP Smelting 0.3000 Hard -> 0.0855 Normal Hammering 0.0340 Normal -> 0.6782 Hard Sharpening 0.0000 Normal -> 0.5000 Hard	Sm 0.3000 H, Ha 0.0340 N, Sh 0.0000 N	Sm 0.0855 N, Ha 0.6782 H, Sh 0.5000 H
+ribBar|r0.16 L2.0 n16 roll0.00 f0.7	|dD| 0.6589	FLIP Smelting 0.3001 Hard -> 0.0855 Normal Hammering 0.0201 Normal -> 0.6790 Hard Sharpening 0.0000 Normal -> 0.2000 Hard	Sm 0.3001 H, Ha 0.0201 N, Sh 0.0000 N	Sm 0.0855 N, Ha 0.6790 H, Sh 0.2000 H
+ribBar|r0.16 L2.0 n16 roll11.25 f0.7	|dD| 0.5026	FLIP Smelting 0.3000 Hard -> 0.0855 Normal Hammering 0.1764 Normal -> 0.6790 Hard Sharpening 0.0000 Normal -> 0.2481 Hard	Sm 0.3000 H, Ha 0.1764 N, Sh 0.0000 N	Sm 0.0855 N, Ha 0.6790 H, Sh 0.2481 H
+ribBar|r0.16 L3.0 n12 roll0.00 f0.7	|dD| 0.6425	FLIP Smelting 0.4327 Hard -> 0.1065 Normal Hammering 0.0464 Normal -> 0.6889 Hard Sharpening 0.0000 Normal -> 0.5000 Hard	Sm 0.4327 H, Ha 0.0464 N, Sh 0.0000 N	Sm 0.1065 N, Ha 0.6889 H, Sh 0.5000 H
+ribBar|r0.16 L3.0 n12 roll11.25 f0.7	|dD| 0.6247	FLIP Smelting 0.4327 Hard -> 0.1065 Normal Hammering 0.0642 Normal -> 0.6889 Hard Sharpening 0.0000 Normal -> 0.5000 Hard	Sm 0.4327 H, Ha 0.0642 N, Sh 0.0000 N	Sm 0.1065 N, Ha 0.6889 H, Sh 0.5000 H
+ribBar|r0.16 L3.0 n16 roll11.25 f0.7	|dD| 0.3541	FLIP Smelting 0.4326 Hard -> 0.1065 Normal Sharpening 0.0000 Normal -> 0.2481 Hard	Sm 0.4326 H, Ha 0.3344 H, Sh 0.0000 N	Sm 0.1065 N, Ha 0.6885 H, Sh 0.2481 H
+450 designs, 84 tier flips, |dD| at most 0.6589

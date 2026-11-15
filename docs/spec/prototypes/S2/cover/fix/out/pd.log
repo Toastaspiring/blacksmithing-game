@@ -1,0 +1,42 @@
+designs 33389
+  8924 wrapRings|C09|n5 extra0.04 gap0.0020                         parts  23 units 113704.875  k%4=0
+  8923 wrapRings|C09|n5 extra0.04 gap0.0010                         parts  23 units 113668.875  k%4=3
+  8884 wrapRings|C09|n4 extra0.04 gap0.0010                         parts  22 units 107991.750  k%4=0
+  8885 wrapRings|C09|n4 extra0.04 gap0.0020                         parts  22 units 107947.750  k%4=1
+  8851 wrapRings|C09|n3 extra0.04 gap0.0075                         parts  21 units 103201.625  k%4=3
+  8848 wrapRings|C09|n3 extra0.04 gap0.0040                         parts  21 units 103201.625  k%4=0
+  8849 wrapRings|C09|n3 extra0.04 gap0.0050                         parts  21 units 103165.625  k%4=1
+  8850 wrapRings|C09|n3 extra0.04 gap0.0060                         parts  21 units 103161.625  k%4=2
+  8846 wrapRings|C09|n3 extra0.04 gap0.0020                         parts  21 units 103157.625  k%4=2
+  8845 wrapRings|C09|n3 extra0.04 gap0.0010                         parts  21 units 103153.625  k%4=1
+  8847 wrapRings|C09|n3 extra0.04 gap0.0030                         parts  21 units 103137.625  k%4=3
+  8886 wrapRings|C09|n4 extra0.04 gap0.0030                         parts  22 units 100207.875  k%4=2
+  8887 wrapRings|C09|n4 extra0.04 gap0.0040                         parts  22 units 98178.625  k%4=3
+  8852 wrapRings|C09|n3 extra0.04 gap0.0100                         parts  21 units 97891.875  k%4=0
+  8925 wrapRings|C09|n5 extra0.04 gap0.0030                         parts  23 units 97720.125  k%4=1
+  8888 wrapRings|C09|n4 extra0.04 gap0.0050                         parts  22 units 96923.625  k%4=0
+  8889 wrapRings|C09|n4 extra0.04 gap0.0060                         parts  22 units 96632.875  k%4=1
+  8890 wrapRings|C09|n4 extra0.04 gap0.0075                         parts  22 units 96401.125  k%4=2
+  8926 wrapRings|C09|n5 extra0.04 gap0.0040                         parts  23 units 93557.625  k%4=2
+  8927 wrapRings|C09|n5 extra0.04 gap0.0050                         parts  23 units 90851.625  k%4=3
+every 4th: heaviest 113704.875; 20 parts or more: 1083 designs, heaviest 113704.875
+parts   5 designs   1690 max units      4146
+parts   6 designs   5970 max units      7896
+parts   7 designs   4957 max units     11365
+parts   8 designs   3484 max units     33496
+parts   9 designs   1989 max units     32808
+parts  10 designs    749 max units     46254
+parts  11 designs   7058 max units     51051
+parts  12 designs    487 max units     56262
+parts  13 designs   4180 max units     34747
+parts  14 designs    135 max units     39861
+parts  15 designs     43 max units     46701
+parts  16 designs     96 max units     21704
+parts  17 designs     98 max units     16812
+parts  18 designs     48 max units     28162
+parts  19 designs   1322 max units     41652
+parts  20 designs    519 max units     47723
+parts  21 designs    438 max units    103202
+parts  22 designs     63 max units    107992
+parts  23 designs     39 max units    113705
+parts  24 designs     24 max units     23073

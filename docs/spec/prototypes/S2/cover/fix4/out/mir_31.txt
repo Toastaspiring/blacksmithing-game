@@ -1,0 +1,1 @@
+seed 31: 400 tangles, 4680 part images, 10 verdicts differ: round copies coinciding 10, rule A at ±EPS 0, at 2 % 0, other 0

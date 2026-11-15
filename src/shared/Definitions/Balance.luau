@@ -23,6 +23,8 @@ export type GeometryBalance = {
 	NS_MAX: number,
 	N_SURF_WORK: number,
 	N_SUB_WORK: number,
+	COVER_BALL_GRID: number,
+	VERDICT_WORK_MAX: number,
 	H_LADDER: { number },
 	MAX_EXACT: number,
 	H_OVERLAP: number,
@@ -59,7 +61,9 @@ local Geometry: GeometryBalance = {
 	H_SURF = 0.04, -- stud; surface-sample spacing
 	NS_MAX = 64, -- surface samples per edge, at most
 	N_SURF_WORK = 40000, -- surface samples × (1 + candidate parts)
-	N_SUB_WORK = 24000, -- boundary corner + 4 × 4 sub-grid tests per pass
+	N_SUB_WORK = 24000, -- boundary corner + 4 × 4 sub-grid tests of the measure
+	COVER_BALL_GRID = 4, -- steps per octahedron edge; a Ball's verdict model, 128 triangles (a Cylinder's is a 32-gon)
+	VERDICT_WORK_MAX = 700000, -- work units of Cover; the verdicts' cap: past it the design is TooComplex, no verdict moves
 	H_LADDER = { 1, 1.25, 1.5, 2, 2.5, 3, 4, 5, 6, 8, 10, 12, 16 }, -- × spacing; deterministic coarsening
 	MAX_EXACT = 3, -- parts; exact clipping up to 3 higher overlapping parts
 	H_OVERLAP = 0.0125, -- stud; refined overlap sampling otherwise
@@ -68,7 +72,7 @@ local Geometry: GeometryBalance = {
 	N_OVERLAP_WORK = 40000, -- refined overlap cells × (1 + higher parts)
 	GJK_MAX_ITER = 48, -- iterations; mean 3.1, max 9 measured
 	AXIS_ELONGATION = 1.5, -- ratio; physics grip axis eligibility
-	AXIS_MAX_TILT_COS = 0.7071, -- cos; a grip axis tilted > 45° falls back to +Y
+	AXIS_MAX_TILT_COS = 0.7071, -- cos; a grip part tilted > 45° from +Y has no vote
 	EDGE_CELL = 0.02, -- stud; blade raster cell
 	RASTER_TOL = 0.005, -- stud; dilation = CONTACT_TOL / 2 (seams never open)
 	EDGE_MAX_CELLS = 12000, -- cells; raster budget

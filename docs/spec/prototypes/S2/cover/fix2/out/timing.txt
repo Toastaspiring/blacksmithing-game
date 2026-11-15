@@ -1,0 +1,35 @@
+F5                           | pre     2033.1 u ok  verdict   0.25 exposure   1.39 run   1.73 | fin     2033.1 u ok  verdict   0.36 exposure   1.42 run   1.82
+C05                          | pre     1164.8 u ok  verdict   0.18 exposure   4.95 run   6.12 | fin     1164.8 u ok  verdict   0.22 exposure   5.10 run   6.23
+C09                          | pre    22008.4 u ok  verdict   2.39 exposure   7.13 run   8.33 | fin    21954.4 u ok  verdict   1.64 exposure   7.58 run   8.73
+X01                          | pre     3623.8 u ok  verdict   0.43 exposure   4.52 run   5.85 | fin     3623.8 u ok  verdict   0.41 exposure   4.54 run   6.05
+P1                           | pre   330993.1 u ok  verdict  11.27 exposure  19.59 run  22.99 | fin   330993.1 u ok  verdict  11.83 exposure  19.43 run  23.89
+P2                           | pre    26211.5 u ok  verdict   1.68 exposure   8.74 run  11.91 | fin    26422.2 u ok  verdict   2.19 exposure   9.07 run  11.83
+P4                           | pre   166944.5 u ok  verdict   8.82 exposure  10.55 run  13.12 | fin   175198.5 u ok  verdict  10.32 exposure  13.31 run  14.65
+valid V1 cluster: 24 Balls d | pre   672368.5 u ok  verdict  25.15 exposure  28.44 run  29.94 | fin   691271.9 u ok  verdict  31.72 exposure  34.01 run  36.33
+valid tclimb_4.json #1       | pre   662259.2 u ok  verdict  21.48 exposure  28.26 run  30.84 | fin   680325.0 u ok  verdict  24.03 exposure  30.74 run  34.41
+valid tclimb_2.json #4       | pre   643925.9 u ok  verdict  19.23 exposure  31.35 run  34.90 | fin   648832.0 u ok  verdict  20.49 exposure  32.89 run  35.62
+valid tclimb_3.json #3       | pre   644545.1 u ok  verdict  19.42 exposure  30.02 run  31.84 | fin   645898.1 u ok  verdict  20.66 exposure  30.85 run  33.53
+valid tclimb_3.json #4       | pre   588310.4 u ok  verdict  18.33 exposure  25.74 run  28.87 | fin   590694.5 u ok  verdict  19.25 exposure  26.74 run  30.58
+valid tclimb_2.json #6       | pre   548798.0 u ok  verdict  16.55 exposure  24.92 run  29.00 | fin   558643.5 u ok  verdict  18.20 exposure  25.99 run  31.25
+valid tclimb_2.json #5       | pre   504263.9 u ok  verdict  17.54 exposure  26.83 run  36.27 | fin   494744.0 u ok  verdict  17.70 exposure  27.85 run  36.78
+valid tclimb_3.json #6       | pre   452991.1 u ok  verdict  15.92 exposure  24.06 run  37.03 | fin   452991.1 u ok  verdict  16.49 exposure  25.10 run  37.95
+valid tclimb_4.json #4       | pre   418624.5 u ok  verdict  14.79 exposure  22.63 run  31.98 | fin   418624.5 u ok  verdict  15.65 exposure  23.42 run  33.55
+valid tclimb_4.json #5       | pre   431854.0 u ok  verdict  14.63 exposure  23.72 run  34.81 | fin   431854.0 u ok  verdict  15.40 exposure  24.76 run  35.58
+valid tclimb_1.json #5       | pre   494430.1 u ok  verdict  13.45 exposure  18.92 run  20.35 | fin   495062.4 u ok  verdict  13.98 exposure  19.87 run  21.48
+past judge judge climb seed  | pre   700185.1 u CAP verdict   0.00 exposure   0.00 run  13.59 | fin   700132.5 u CAP verdict   0.00 exposure   0.00 run  15.33
+past judge judge climb seed  | pre   700042.1 u CAP verdict   0.00 exposure   0.00 run  22.66 | fin   700007.6 u CAP verdict   0.00 exposure   0.00 run  25.81
+past judge judge climb seed  | pre   700279.8 u CAP verdict   0.00 exposure   0.00 run  15.55 | fin   700098.2 u CAP verdict   0.00 exposure   0.00 run  16.56
+past judge judge climb seed  | pre   700255.9 u CAP verdict   0.00 exposure   0.00 run  11.65 | fin   700255.9 u CAP verdict   0.00 exposure   0.00 run  12.81
+past A climb_1 1             | pre   700093.1 u CAP verdict   0.00 exposure   0.00 run  20.45 | fin   700243.5 u CAP verdict   0.00 exposure   0.00 run  21.62
+past A climb_1 2             | pre   700455.6 u CAP verdict   0.00 exposure   0.00 run  20.92 | fin   700118.6 u CAP verdict   0.00 exposure   0.00 run  21.41
+past A climb_2 1             | pre   700100.6 u CAP verdict   0.00 exposure   0.00 run  13.86 | fin   700084.6 u CAP verdict   0.00 exposure   0.00 run  15.09
+past A climb_3 1             | pre   700117.4 u CAP verdict   0.00 exposure   0.00 run  11.55 | fin   700250.6 u CAP verdict   0.00 exposure   0.00 run  13.05
+past A climb_4 1             | pre   700001.9 u CAP verdict   0.00 exposure   0.00 run  18.89 | fin   700020.6 u CAP verdict   0.00 exposure   0.00 run  20.50
+past A climb_4 2             | pre   700044.2 u CAP verdict   0.00 exposure   0.00 run  10.72 | fin   700045.9 u CAP verdict   0.00 exposure   0.00 run  10.86
+past B uclimb uclimb_1 best  | pre   700163.2 u CAP verdict   0.00 exposure   0.00 run  22.04 | fin   700242.2 u CAP verdict   0.00 exposure   0.00 run  24.36
+past B uclimb uclimb_2 best  | pre   700183.1 u CAP verdict   0.00 exposure   0.00 run  21.84 | fin   700127.2 u CAP verdict   0.00 exposure   0.00 run  22.68
+past B uclimb uclimb_3 best  | pre   700339.9 u CAP verdict   0.00 exposure   0.00 run  22.49 | fin   700042.8 u CAP verdict   0.00 exposure   0.00 run  27.01
+past B uclimb uclimb_4 best  | pre   700191.5 u CAP verdict   0.00 exposure   0.00 run  19.28 | fin   700044.4 u CAP verdict   0.00 exposure   0.00 run  19.51
+past worst_P climbL_1#1      | pre   700355.1 u CAP verdict   0.00 exposure   0.00 run  19.99 | fin   700047.6 u CAP verdict   0.00 exposure   0.00 run  21.58
+past worst_P climbL_3#1      | pre   700073.6 u CAP verdict   0.00 exposure   0.00 run  21.27 | fin   700192.6 u CAP verdict   0.00 exposure   0.00 run  23.96
+past worst_P climbL_2#1      | pre   700233.4 u CAP verdict   0.00 exposure   0.00 run  17.61 | fin   700084.1 u CAP verdict   0.00 exposure   0.00 run  18.63

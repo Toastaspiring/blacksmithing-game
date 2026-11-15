@@ -1,0 +1,1 @@
+seed 51: 300 tangles (5 with twins), 4 orders each: designs whose result moves with the order 0 (units or totals 0) (2.7 s)

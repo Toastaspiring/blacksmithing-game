@@ -1,0 +1,46 @@
+42,43c42,43
+< local Balance = require("../Definitions/Balance")
+< local Shapes = require("./Shapes")
+---
+> local Balance = require("../repo/src/shared/Definitions/Balance")
+> local Shapes = require("../repo/src/shared/Physics/Shapes")
+98a99
+> 	sag: { number }, -- per half-space: how far the true solid reaches past it (0 on a polyhedron)
+323a325,343
+> 	-- the true solid's support along each half-space's normal, less the half-space's own offset (about the centre): 0 on a
+> 	-- polyhedron and a cap, the sagitta on a round model's facets (Ball r; Cylinder hx·|n·u| + r·sqrt(1 − (n·u)²))
+> 	local sag: { number } = table.create(m.np, 0)
+> 	if code == CYLINDER or code == BALL then
+> 		for i = 1, m.np do
+> 			local pl = m.planes
+> 			local nx, ny, nz = pl[4 * i - 3], pl[4 * i - 2], pl[4 * i - 1]
+> 			local own = pl[4 * i] - (nx * P.cx + ny * P.cy + nz * P.cz)
+> 			local h
+> 			if code == BALL then
+> 				h = P.r
+> 			else
+> 				local a = math.abs(nx * P.ux + ny * P.uy + nz * P.uz)
+> 				h = P.hx * a + P.r * sqrt(math.max(0, 1 - a * a))
+> 			end
+> 			sag[i] = math.max(0, h - own)
+> 		end
+> 	end
+> 	m.sag = sag
+621a642
+> 		local fsag = if pm.np == pm.n then pm.sag[f] else 0 -- a round model's facet f is its half-space f
+648a670
+> 				local qsag = q.sag
+660c682
+< 						dx, dy, dz = dx + DELTA * nx, dy + DELTA * ny, dz + DELTA * nz
+---
+> 						dx, dy, dz = dx + (DELTA + fsag) * nx, dy + (DELTA + fsag) * ny, dz + (DELTA + fsag) * nz
+675c697
+< 					local base = d - (px * ox + py * oy + pz * oz)
+---
+> 					local base = d + qsag[i] - (px * ox + py * oy + pz * oz)
+690,691c712,713
+< 					cA[i] = coincident
+< 					cB[i] = EPS - DELTA * lw[i]
+---
+> 					cA[i] = coincident - qsag[i] -- buried or coincident: the hider's own (inscribed) half-space
+> 					cB[i] = EPS - (DELTA + fsag) * lw[i] -- the probe: the half-space moved out to the true solid's support

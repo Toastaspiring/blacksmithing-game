@@ -1,0 +1,5 @@
+OK  on the tree before, 'tilted rods and pucks in a Cylinder': expected to fail, did fail
+OK  on the tree before, 'pucks wholly inside a round guard': expected to fail, did fail
+OK  on the tree before, 'round parts a hair inside and a hair out': expected to pass, did pass
+OK  on the tree before, '(e) a flat face against a Ball': expected to pass, did pass
+OK  on the tree before, 'Sampling.ranked: the larger': expected to pass, did pass

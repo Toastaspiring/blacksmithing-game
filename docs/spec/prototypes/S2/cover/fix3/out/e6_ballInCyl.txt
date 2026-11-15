@@ -1,0 +1,353 @@
+Ball r 0.037 out of Cyl R 0.15 by 0.0002, at 0.0°                 truth   0.310%  base   0.047%  build   0.000%
+Ball r 0.037 out of Cyl R 0.15 by 0.0002, at 5.6°                 truth   0.302%  base   0.408%  build   0.000%
+Ball r 0.037 out of Cyl R 0.15 by 0.0002, at 2.8°                 truth   0.305%  base   0.271%  build   0.000%
+Ball r 0.037 out of Cyl R 0.15 by 0.0002, at 30.0°                truth   0.307%  base   0.071%  build   0.000%
+Ball r 0.037 out of Cyl R 0.15 by 0.0005, at 0.0°                 truth   0.770%  base   0.295%  build   0.000%
+Ball r 0.037 out of Cyl R 0.15 by 0.0005, at 5.6°                 truth   0.768%  base   0.748%  build   0.076%
+Ball r 0.037 out of Cyl R 0.15 by 0.0005, at 2.8°                 truth   0.773%  base   0.591%  build   0.025%
+Ball r 0.037 out of Cyl R 0.15 by 0.0005, at 30.0°                truth   0.773%  base   0.262%  build   0.000%
+Ball r 0.037 out of Cyl R 0.15 by 0.0010, at 0.0°                 truth   1.525%  base   1.101%  build   0.089%
+Ball r 0.037 out of Cyl R 0.15 by 0.0010, at 5.6°                 truth   1.540%  base   1.344%  build   0.495%
+Ball r 0.037 out of Cyl R 0.15 by 0.0010, at 2.8°                 truth   1.540%  base   1.177%  build   0.344%
+Ball r 0.037 out of Cyl R 0.15 by 0.0010, at 30.0°                truth   1.540%  base   0.846%  build   0.109%
+Ball r 0.037 out of Cyl R 0.15 by 0.0020, at 0.0°                 truth   3.080%  base   2.665%  build   1.882% CLEANED
+Ball r 0.037 out of Cyl R 0.15 by 0.0020, at 5.6°                 truth   3.053%  base   2.608%  build   1.691% CLEANED
+Ball r 0.037 out of Cyl R 0.15 by 0.0020, at 2.8°                 truth   3.058%  base   2.634%  build   1.982% CLEANED
+Ball r 0.037 out of Cyl R 0.15 by 0.0020, at 30.0°                truth   3.055%  base   2.277%  build   1.244% CLEANED
+Ball r 0.037 out of Cyl R 0.15 by 0.0040, at 0.0°                 truth   6.100%  base   5.599%  build   4.521%
+Ball r 0.037 out of Cyl R 0.15 by 0.0040, at 5.6°                 truth   6.087%  base   5.225%  build   4.231%
+Ball r 0.037 out of Cyl R 0.15 by 0.0040, at 2.8°                 truth   6.097%  base   5.469%  build   4.404%
+Ball r 0.037 out of Cyl R 0.15 by 0.0040, at 30.0°                truth   6.092%  base   5.212%  build   4.108%
+Ball r 0.037 out of Cyl R 0.15 by 0.0080, at 0.0°                 truth  12.060%  base  11.510%  build  10.494%
+Ball r 0.037 out of Cyl R 0.15 by 0.0080, at 5.6°                 truth  12.075%  base  11.382%  build  10.280%
+Ball r 0.037 out of Cyl R 0.15 by 0.0080, at 2.8°                 truth  12.050%  base  11.429%  build  10.392%
+Ball r 0.037 out of Cyl R 0.15 by 0.0080, at 30.0°                truth  12.052%  base  11.391%  build  10.344%
+Ball r 0.037 out of Cyl R 0.15 by 0.0160, at 0.0°                 truth  23.682%  base  22.798%  build  21.688%
+Ball r 0.037 out of Cyl R 0.15 by 0.0160, at 5.6°                 truth  23.692%  base  23.158%  build  22.034%
+Ball r 0.037 out of Cyl R 0.15 by 0.0160, at 2.8°                 truth  23.690%  base  23.013%  build  21.895%
+Ball r 0.037 out of Cyl R 0.15 by 0.0160, at 30.0°                truth  23.692%  base  23.535%  build  22.468%
+Ball r 0.037 out of Cyl R 0.15 by 0.0300, at 0.0°                 truth  43.150%  base  42.780%  build  42.041%
+Ball r 0.037 out of Cyl R 0.15 by 0.0300, at 5.6°                 truth  43.000%  base  42.838%  build  42.278%
+Ball r 0.037 out of Cyl R 0.15 by 0.0300, at 2.8°                 truth  43.225%  base  42.870%  build  42.131%
+Ball r 0.037 out of Cyl R 0.15 by 0.0300, at 30.0°                truth  43.075%  base  42.419%  build  41.937%
+Ball r 0.060 out of Cyl R 0.15 by 0.0002, at 0.0°                 truth   0.210%  base   0.018%  build   0.000%
+Ball r 0.060 out of Cyl R 0.15 by 0.0002, at 5.6°                 truth   0.215%  base   0.116%  build   0.000%
+Ball r 0.060 out of Cyl R 0.15 by 0.0002, at 2.8°                 truth   0.212%  base   0.079%  build   0.000%
+Ball r 0.060 out of Cyl R 0.15 by 0.0002, at 30.0°                truth   0.217%  base   0.000%  build   0.000%
+Ball r 0.060 out of Cyl R 0.15 by 0.0005, at 0.0°                 truth   0.537%  base   0.115%  build   0.000%
+Ball r 0.060 out of Cyl R 0.15 by 0.0005, at 5.6°                 truth   0.535%  base   0.252%  build   0.013%
+Ball r 0.060 out of Cyl R 0.15 by 0.0005, at 2.8°                 truth   0.540%  base   0.196%  build   0.003%
+Ball r 0.060 out of Cyl R 0.15 by 0.0005, at 30.0°                truth   0.535%  base   0.026%  build   0.000%
+Ball r 0.060 out of Cyl R 0.15 by 0.0010, at 0.0°                 truth   1.062%  base   0.461%  build   0.035%
+Ball r 0.060 out of Cyl R 0.15 by 0.0010, at 5.6°                 truth   1.082%  base   0.581%  build   0.146%
+Ball r 0.060 out of Cyl R 0.15 by 0.0010, at 2.8°                 truth   1.070%  base   0.508%  build   0.104%
+Ball r 0.060 out of Cyl R 0.15 by 0.0010, at 30.0°                truth   1.072%  base   0.180%  build   0.002%
+Ball r 0.060 out of Cyl R 0.15 by 0.0020, at 0.0°                 truth   2.135%  base   1.520%  build   0.746% baseCLEANED CLEANED
+Ball r 0.060 out of Cyl R 0.15 by 0.0020, at 5.6°                 truth   2.137%  base   1.327%  build   0.781% baseCLEANED CLEANED
+Ball r 0.060 out of Cyl R 0.15 by 0.0020, at 2.8°                 truth   2.145%  base   1.454%  build   0.733% baseCLEANED CLEANED
+Ball r 0.060 out of Cyl R 0.15 by 0.0020, at 30.0°                truth   2.135%  base   0.966%  build   0.341% baseCLEANED CLEANED
+Ball r 0.060 out of Cyl R 0.15 by 0.0040, at 0.0°                 truth   4.255%  base   3.387%  build   2.731%
+Ball r 0.060 out of Cyl R 0.15 by 0.0040, at 5.6°                 truth   4.233%  base   3.255%  build   2.591%
+Ball r 0.060 out of Cyl R 0.15 by 0.0040, at 2.8°                 truth   4.240%  base   3.311%  build   2.670%
+Ball r 0.060 out of Cyl R 0.15 by 0.0040, at 30.0°                truth   4.233%  base   2.955%  build   2.189%
+Ball r 0.060 out of Cyl R 0.15 by 0.0080, at 0.0°                 truth   8.380%  base   7.189%  build   6.437%
+Ball r 0.060 out of Cyl R 0.15 by 0.0080, at 5.6°                 truth   8.380%  base   7.500%  build   6.734%
+Ball r 0.060 out of Cyl R 0.15 by 0.0080, at 2.8°                 truth   8.383%  base   7.366%  build   6.561%
+Ball r 0.060 out of Cyl R 0.15 by 0.0080, at 30.0°                truth   8.380%  base   7.364%  build   6.630%
+Ball r 0.060 out of Cyl R 0.15 by 0.0160, at 0.0°                 truth  16.328%  base  15.111%  build  14.414%
+Ball r 0.060 out of Cyl R 0.15 by 0.0160, at 5.6°                 truth  16.315%  base  15.037%  build  14.352%
+Ball r 0.060 out of Cyl R 0.15 by 0.0160, at 2.8°                 truth  16.323%  base  15.081%  build  14.389%
+Ball r 0.060 out of Cyl R 0.15 by 0.0160, at 30.0°                truth  16.340%  base  15.217%  build  14.484%
+Ball r 0.060 out of Cyl R 0.15 by 0.0300, at 0.0°                 truth  29.443%  base  28.824%  build  28.138%
+Ball r 0.060 out of Cyl R 0.15 by 0.0300, at 5.6°                 truth  29.458%  base  28.777%  build  28.042%
+Ball r 0.060 out of Cyl R 0.15 by 0.0300, at 2.8°                 truth  29.448%  base  28.823%  build  28.097%
+Ball r 0.060 out of Cyl R 0.15 by 0.0300, at 30.0°                truth  29.435%  base  28.902%  build  28.209%
+Ball r 0.090 out of Cyl R 0.15 by 0.0002, at 0.0°                 truth   0.180%  base   0.008%  build   0.000%
+Ball r 0.090 out of Cyl R 0.15 by 0.0002, at 5.6°                 truth   0.173%  base   0.031%  build   0.000%
+Ball r 0.090 out of Cyl R 0.15 by 0.0002, at 2.8°                 truth   0.175%  base   0.022%  build   0.000%
+Ball r 0.090 out of Cyl R 0.15 by 0.0002, at 30.0°                truth   0.173%  base   0.000%  build   0.000%
+Ball r 0.090 out of Cyl R 0.15 by 0.0005, at 0.0°                 truth   0.428%  base   0.051%  build   0.000%
+Ball r 0.090 out of Cyl R 0.15 by 0.0005, at 5.6°                 truth   0.448%  base   0.080%  build   0.001%
+Ball r 0.090 out of Cyl R 0.15 by 0.0005, at 2.8°                 truth   0.440%  base   0.066%  build   0.000%
+Ball r 0.090 out of Cyl R 0.15 by 0.0005, at 30.0°                truth   0.435%  base   0.000%  build   0.000%
+Ball r 0.090 out of Cyl R 0.15 by 0.0010, at 0.0°                 truth   0.865%  base   0.205%  build   0.015%
+Ball r 0.090 out of Cyl R 0.15 by 0.0010, at 5.6°                 truth   0.878%  base   0.231%  build   0.041%
+Ball r 0.090 out of Cyl R 0.15 by 0.0010, at 2.8°                 truth   0.873%  base   0.205%  build   0.031%
+Ball r 0.090 out of Cyl R 0.15 by 0.0010, at 30.0°                truth   0.875%  base   0.031%  build   0.000%
+Ball r 0.090 out of Cyl R 0.15 by 0.0020, at 0.0°                 truth   1.735%  base   0.812%  build   0.333%
+Ball r 0.090 out of Cyl R 0.15 by 0.0020, at 5.6°                 truth   1.723%  base   0.755%  build   0.353%
+Ball r 0.090 out of Cyl R 0.15 by 0.0020, at 2.8°                 truth   1.738%  base   0.787%  build   0.326%
+Ball r 0.090 out of Cyl R 0.15 by 0.0020, at 30.0°                truth   1.740%  base   0.362%  build   0.084%
+Ball r 0.090 out of Cyl R 0.15 by 0.0040, at 0.0°                 truth   3.427%  base   2.227%  build   1.721% CLEANED
+Ball r 0.090 out of Cyl R 0.15 by 0.0040, at 5.6°                 truth   3.437%  base   2.226%  build   1.683% CLEANED
+Ball r 0.090 out of Cyl R 0.15 by 0.0040, at 2.8°                 truth   3.440%  base   2.237%  build   1.723% CLEANED
+Ball r 0.090 out of Cyl R 0.15 by 0.0040, at 30.0°                truth   3.430%  base   1.746%  build   1.201% baseCLEANED CLEANED
+Ball r 0.090 out of Cyl R 0.15 by 0.0080, at 0.0°                 truth   6.702%  base   5.146%  build   4.563%
+Ball r 0.090 out of Cyl R 0.15 by 0.0080, at 5.6°                 truth   6.725%  base   5.163%  build   4.564%
+Ball r 0.090 out of Cyl R 0.15 by 0.0080, at 2.8°                 truth   6.722%  base   5.141%  build   4.561%
+Ball r 0.090 out of Cyl R 0.15 by 0.0080, at 30.0°                truth   6.697%  base   5.045%  build   4.410%
+Ball r 0.090 out of Cyl R 0.15 by 0.0160, at 0.0°                 truth  12.910%  base  11.350%  build  10.839%
+Ball r 0.090 out of Cyl R 0.15 by 0.0160, at 5.6°                 truth  12.915%  base  11.369%  build  10.868%
+Ball r 0.090 out of Cyl R 0.15 by 0.0160, at 2.8°                 truth  12.923%  base  11.354%  build  10.845%
+Ball r 0.090 out of Cyl R 0.15 by 0.0160, at 30.0°                truth  12.933%  base  11.515%  build  10.994%
+Ball r 0.090 out of Cyl R 0.15 by 0.0300, at 0.0°                 truth  22.797%  base  21.245%  build  20.673%
+Ball r 0.090 out of Cyl R 0.15 by 0.0300, at 5.6°                 truth  22.795%  base  21.289%  build  20.748%
+Ball r 0.090 out of Cyl R 0.15 by 0.0300, at 2.8°                 truth  22.775%  base  21.250%  build  20.661%
+Ball r 0.090 out of Cyl R 0.15 by 0.0300, at 30.0°                truth  22.780%  base  21.660%  build  21.108%
+Ball r 0.045 out of Cyl R 0.30 by 0.0002, at 0.0°                 truth   0.240%  base   0.033%  build   0.000%
+Ball r 0.045 out of Cyl R 0.30 by 0.0002, at 5.6°                 truth   0.248%  base   0.921%  build   0.000%
+Ball r 0.045 out of Cyl R 0.30 by 0.0002, at 2.8°                 truth   0.240%  base   0.622%  build   0.000%
+Ball r 0.045 out of Cyl R 0.30 by 0.0002, at 30.0°                truth   0.243%  base   0.348%  build   0.000%
+Ball r 0.045 out of Cyl R 0.30 by 0.0005, at 0.0°                 truth   0.598%  base   0.205%  build   0.000%
+Ball r 0.045 out of Cyl R 0.30 by 0.0005, at 5.6°                 truth   0.608%  base   1.220%  build   0.041%
+Ball r 0.045 out of Cyl R 0.30 by 0.0005, at 2.8°                 truth   0.608%  base   0.911%  build   0.000%
+Ball r 0.045 out of Cyl R 0.30 by 0.0005, at 30.0°                truth   0.598%  base   0.630%  build   0.000%
+Ball r 0.045 out of Cyl R 0.30 by 0.0010, at 0.0°                 truth   1.205%  base   0.811%  build   0.000%
+Ball r 0.045 out of Cyl R 0.30 by 0.0010, at 5.6°                 truth   1.198%  base   1.738%  build   0.316%
+Ball r 0.045 out of Cyl R 0.30 by 0.0010, at 2.8°                 truth   1.200%  base   1.413%  build   0.115%
+Ball r 0.045 out of Cyl R 0.30 by 0.0010, at 30.0°                truth   1.203%  base   1.220%  build   0.023%
+Ball r 0.045 out of Cyl R 0.30 by 0.0020, at 0.0°                 truth   2.402%  base   2.176%  build   0.246% CLEANED
+Ball r 0.045 out of Cyl R 0.30 by 0.0020, at 5.6°                 truth   2.402%  base   2.794%  build   1.276% CLEANED
+Ball r 0.045 out of Cyl R 0.30 by 0.0020, at 2.8°                 truth   2.400%  base   2.466%  build   0.964% CLEANED
+Ball r 0.045 out of Cyl R 0.30 by 0.0020, at 30.0°                truth   2.402%  base   2.377%  build   0.691% CLEANED
+Ball r 0.045 out of Cyl R 0.30 by 0.0040, at 0.0°                 truth   4.815%  base   4.608%  build   2.843%
+Ball r 0.045 out of Cyl R 0.30 by 0.0040, at 5.6°                 truth   4.790%  base   4.902%  build   3.371%
+Ball r 0.045 out of Cyl R 0.30 by 0.0040, at 2.8°                 truth   4.805%  base   4.629%  build   3.055%
+Ball r 0.045 out of Cyl R 0.30 by 0.0040, at 30.0°                truth   4.797%  base   4.623%  build   2.999%
+Ball r 0.045 out of Cyl R 0.30 by 0.0080, at 0.0°                 truth   9.563%  base   9.619%  build   7.811%
+Ball r 0.045 out of Cyl R 0.30 by 0.0080, at 5.6°                 truth   9.550%  base   9.348%  build   7.736%
+Ball r 0.045 out of Cyl R 0.30 by 0.0080, at 2.8°                 truth   9.548%  base   9.461%  build   7.668%
+Ball r 0.045 out of Cyl R 0.30 by 0.0080, at 30.0°                truth   9.565%  base   9.199%  build   7.464%
+Ball r 0.045 out of Cyl R 0.30 by 0.0160, at 0.0°                 truth  18.958%  base  18.846%  build  17.147%
+Ball r 0.045 out of Cyl R 0.30 by 0.0160, at 5.6°                 truth  18.970%  base  18.333%  build  16.644%
+Ball r 0.045 out of Cyl R 0.30 by 0.0160, at 2.8°                 truth  18.955%  base  18.671%  build  16.990%
+Ball r 0.045 out of Cyl R 0.30 by 0.0160, at 30.0°                truth  18.963%  base  18.929%  build  17.126%
+Ball r 0.045 out of Cyl R 0.30 by 0.0300, at 0.0°                 truth  35.025%  base  35.163%  build  34.039%
+Ball r 0.045 out of Cyl R 0.30 by 0.0300, at 5.6°                 truth  35.050%  base  34.802%  build  33.638%
+Ball r 0.045 out of Cyl R 0.30 by 0.0300, at 2.8°                 truth  34.950%  base  34.975%  build  33.836%
+Ball r 0.045 out of Cyl R 0.30 by 0.0300, at 30.0°                truth  35.275%  base  35.220%  build  33.722%
+Ball r 0.075 out of Cyl R 0.30 by 0.0002, at 0.0°                 truth   0.152%  base   0.012%  build   0.000%
+Ball r 0.075 out of Cyl R 0.30 by 0.0002, at 5.6°                 truth   0.155%  base   0.305%  build   0.000%
+Ball r 0.075 out of Cyl R 0.30 by 0.0002, at 2.8°                 truth   0.155%  base   0.189%  build   0.000%
+Ball r 0.075 out of Cyl R 0.30 by 0.0002, at 30.0°                truth   0.150%  base   0.034%  build   0.000%
+Ball r 0.075 out of Cyl R 0.30 by 0.0005, at 0.0°                 truth   0.387%  base   0.074%  build   0.000%
+Ball r 0.075 out of Cyl R 0.30 by 0.0005, at 5.6°                 truth   0.385%  base   0.464%  build   0.004%
+Ball r 0.075 out of Cyl R 0.30 by 0.0005, at 2.8°                 truth   0.382%  base   0.318%  build   0.000%
+Ball r 0.075 out of Cyl R 0.30 by 0.0005, at 30.0°                truth   0.377%  base   0.095%  build   0.000%
+Ball r 0.075 out of Cyl R 0.30 by 0.0010, at 0.0°                 truth   0.770%  base   0.295%  build   0.000%
+Ball r 0.075 out of Cyl R 0.30 by 0.0010, at 5.6°                 truth   0.768%  base   0.748%  build   0.076%
+Ball r 0.075 out of Cyl R 0.30 by 0.0010, at 2.8°                 truth   0.773%  base   0.591%  build   0.025%
+Ball r 0.075 out of Cyl R 0.30 by 0.0010, at 30.0°                truth   0.773%  base   0.262%  build   0.000%
+Ball r 0.075 out of Cyl R 0.30 by 0.0020, at 0.0°                 truth   1.525%  base   1.101%  build   0.089%
+Ball r 0.075 out of Cyl R 0.30 by 0.0020, at 5.6°                 truth   1.540%  base   1.344%  build   0.495%
+Ball r 0.075 out of Cyl R 0.30 by 0.0020, at 2.8°                 truth   1.540%  base   1.177%  build   0.344%
+Ball r 0.075 out of Cyl R 0.30 by 0.0020, at 30.0°                truth   1.540%  base   0.846%  build   0.109%
+Ball r 0.075 out of Cyl R 0.30 by 0.0040, at 0.0°                 truth   3.080%  base   2.665%  build   1.882% CLEANED
+Ball r 0.075 out of Cyl R 0.30 by 0.0040, at 5.6°                 truth   3.053%  base   2.608%  build   1.691% CLEANED
+Ball r 0.075 out of Cyl R 0.30 by 0.0040, at 2.8°                 truth   3.058%  base   2.634%  build   1.982% CLEANED
+Ball r 0.075 out of Cyl R 0.30 by 0.0040, at 30.0°                truth   3.055%  base   2.277%  build   1.244% CLEANED
+Ball r 0.075 out of Cyl R 0.30 by 0.0080, at 0.0°                 truth   6.100%  base   5.599%  build   4.521%
+Ball r 0.075 out of Cyl R 0.30 by 0.0080, at 5.6°                 truth   6.087%  base   5.225%  build   4.231%
+Ball r 0.075 out of Cyl R 0.30 by 0.0080, at 2.8°                 truth   6.097%  base   5.469%  build   4.404%
+Ball r 0.075 out of Cyl R 0.30 by 0.0080, at 30.0°                truth   6.092%  base   5.212%  build   4.108%
+Ball r 0.075 out of Cyl R 0.30 by 0.0160, at 0.0°                 truth  12.060%  base  11.510%  build  10.494%
+Ball r 0.075 out of Cyl R 0.30 by 0.0160, at 5.6°                 truth  12.075%  base  11.382%  build  10.280%
+Ball r 0.075 out of Cyl R 0.30 by 0.0160, at 2.8°                 truth  12.050%  base  11.429%  build  10.392%
+Ball r 0.075 out of Cyl R 0.30 by 0.0160, at 30.0°                truth  12.052%  base  11.391%  build  10.344%
+Ball r 0.075 out of Cyl R 0.30 by 0.0300, at 0.0°                 truth  22.247%  base  21.287%  build  20.208%
+Ball r 0.075 out of Cyl R 0.30 by 0.0300, at 5.6°                 truth  22.240%  base  21.625%  build  20.516%
+Ball r 0.075 out of Cyl R 0.30 by 0.0300, at 2.8°                 truth  22.255%  base  21.489%  build  20.389%
+Ball r 0.075 out of Cyl R 0.30 by 0.0300, at 30.0°                truth  22.265%  base  22.066%  build  20.931%
+Ball r 0.120 out of Cyl R 0.30 by 0.0002, at 0.0°                 truth   0.108%  base   0.005%  build   0.000%
+Ball r 0.120 out of Cyl R 0.30 by 0.0002, at 5.6°                 truth   0.105%  base   0.082%  build   0.000%
+Ball r 0.120 out of Cyl R 0.30 by 0.0002, at 2.8°                 truth   0.108%  base   0.052%  build   0.000%
+Ball r 0.120 out of Cyl R 0.30 by 0.0002, at 30.0°                truth   0.108%  base   0.000%  build   0.000%
+Ball r 0.120 out of Cyl R 0.30 by 0.0005, at 0.0°                 truth   0.270%  base   0.029%  build   0.000%
+Ball r 0.120 out of Cyl R 0.30 by 0.0005, at 5.6°                 truth   0.267%  base   0.135%  build   0.000%
+Ball r 0.120 out of Cyl R 0.30 by 0.0005, at 2.8°                 truth   0.265%  base   0.095%  build   0.000%
+Ball r 0.120 out of Cyl R 0.30 by 0.0005, at 30.0°                truth   0.265%  base   0.001%  build   0.000%
+Ball r 0.120 out of Cyl R 0.30 by 0.0010, at 0.0°                 truth   0.537%  base   0.115%  build   0.000%
+Ball r 0.120 out of Cyl R 0.30 by 0.0010, at 5.6°                 truth   0.535%  base   0.252%  build   0.013%
+Ball r 0.120 out of Cyl R 0.30 by 0.0010, at 2.8°                 truth   0.540%  base   0.196%  build   0.003%
+Ball r 0.120 out of Cyl R 0.30 by 0.0010, at 30.0°                truth   0.535%  base   0.026%  build   0.000%
+Ball r 0.120 out of Cyl R 0.30 by 0.0020, at 0.0°                 truth   1.062%  base   0.461%  build   0.035%
+Ball r 0.120 out of Cyl R 0.30 by 0.0020, at 5.6°                 truth   1.082%  base   0.581%  build   0.146%
+Ball r 0.120 out of Cyl R 0.30 by 0.0020, at 2.8°                 truth   1.070%  base   0.508%  build   0.104%
+Ball r 0.120 out of Cyl R 0.30 by 0.0020, at 30.0°                truth   1.072%  base   0.180%  build   0.002%
+Ball r 0.120 out of Cyl R 0.30 by 0.0040, at 0.0°                 truth   2.135%  base   1.520%  build   0.746% baseCLEANED CLEANED
+Ball r 0.120 out of Cyl R 0.30 by 0.0040, at 5.6°                 truth   2.137%  base   1.327%  build   0.781% baseCLEANED CLEANED
+Ball r 0.120 out of Cyl R 0.30 by 0.0040, at 2.8°                 truth   2.145%  base   1.454%  build   0.733% baseCLEANED CLEANED
+Ball r 0.120 out of Cyl R 0.30 by 0.0040, at 30.0°                truth   2.135%  base   0.966%  build   0.341% baseCLEANED CLEANED
+Ball r 0.120 out of Cyl R 0.30 by 0.0080, at 0.0°                 truth   4.255%  base   3.387%  build   2.732%
+Ball r 0.120 out of Cyl R 0.30 by 0.0080, at 5.6°                 truth   4.233%  base   3.255%  build   2.591%
+Ball r 0.120 out of Cyl R 0.30 by 0.0080, at 2.8°                 truth   4.240%  base   3.311%  build   2.670%
+Ball r 0.120 out of Cyl R 0.30 by 0.0080, at 30.0°                truth   4.233%  base   2.955%  build   2.189%
+Ball r 0.120 out of Cyl R 0.30 by 0.0160, at 0.0°                 truth   8.380%  base   7.189%  build   6.437%
+Ball r 0.120 out of Cyl R 0.30 by 0.0160, at 5.6°                 truth   8.380%  base   7.500%  build   6.734%
+Ball r 0.120 out of Cyl R 0.30 by 0.0160, at 2.8°                 truth   8.383%  base   7.366%  build   6.561%
+Ball r 0.120 out of Cyl R 0.30 by 0.0160, at 30.0°                truth   8.380%  base   7.364%  build   6.630%
+Ball r 0.120 out of Cyl R 0.30 by 0.0300, at 0.0°                 truth  15.368%  base  14.171%  build  13.477%
+Ball r 0.120 out of Cyl R 0.30 by 0.0300, at 5.6°                 truth  15.365%  base  14.108%  build  13.431%
+Ball r 0.120 out of Cyl R 0.30 by 0.0300, at 2.8°                 truth  15.373%  base  14.146%  build  13.459%
+Ball r 0.120 out of Cyl R 0.30 by 0.0300, at 30.0°                truth  15.353%  base  14.228%  build  13.507%
+Ball r 0.180 out of Cyl R 0.30 by 0.0002, at 0.0°                 truth   0.080%  base   0.002%  build   0.000%
+Ball r 0.180 out of Cyl R 0.30 by 0.0002, at 5.6°                 truth   0.092%  base   0.019%  build   0.000%
+Ball r 0.180 out of Cyl R 0.30 by 0.0002, at 2.8°                 truth   0.090%  base   0.013%  build   0.000%
+Ball r 0.180 out of Cyl R 0.30 by 0.0002, at 30.0°                truth   0.090%  base   0.000%  build   0.000%
+Ball r 0.180 out of Cyl R 0.30 by 0.0005, at 0.0°                 truth   0.218%  base   0.013%  build   0.000%
+Ball r 0.180 out of Cyl R 0.30 by 0.0005, at 5.6°                 truth   0.228%  base   0.037%  build   0.000%
+Ball r 0.180 out of Cyl R 0.30 by 0.0005, at 2.8°                 truth   0.218%  base   0.028%  build   0.000%
+Ball r 0.180 out of Cyl R 0.30 by 0.0005, at 30.0°                truth   0.223%  base   0.000%  build   0.000%
+Ball r 0.180 out of Cyl R 0.30 by 0.0010, at 0.0°                 truth   0.428%  base   0.051%  build   0.000%
+Ball r 0.180 out of Cyl R 0.30 by 0.0010, at 5.6°                 truth   0.448%  base   0.080%  build   0.001%
+Ball r 0.180 out of Cyl R 0.30 by 0.0010, at 2.8°                 truth   0.440%  base   0.066%  build   0.000%
+Ball r 0.180 out of Cyl R 0.30 by 0.0010, at 30.0°                truth   0.435%  base   0.000%  build   0.000%
+Ball r 0.180 out of Cyl R 0.30 by 0.0020, at 0.0°                 truth   0.865%  base   0.205%  build   0.015%
+Ball r 0.180 out of Cyl R 0.30 by 0.0020, at 5.6°                 truth   0.878%  base   0.231%  build   0.041%
+Ball r 0.180 out of Cyl R 0.30 by 0.0020, at 2.8°                 truth   0.873%  base   0.205%  build   0.031%
+Ball r 0.180 out of Cyl R 0.30 by 0.0020, at 30.0°                truth   0.875%  base   0.031%  build   0.000%
+Ball r 0.180 out of Cyl R 0.30 by 0.0040, at 0.0°                 truth   1.735%  base   0.812%  build   0.333%
+Ball r 0.180 out of Cyl R 0.30 by 0.0040, at 5.6°                 truth   1.723%  base   0.755%  build   0.353%
+Ball r 0.180 out of Cyl R 0.30 by 0.0040, at 2.8°                 truth   1.738%  base   0.787%  build   0.326%
+Ball r 0.180 out of Cyl R 0.30 by 0.0040, at 30.0°                truth   1.740%  base   0.362%  build   0.084%
+Ball r 0.180 out of Cyl R 0.30 by 0.0080, at 0.0°                 truth   3.427%  base   2.228%  build   1.721% CLEANED
+Ball r 0.180 out of Cyl R 0.30 by 0.0080, at 5.6°                 truth   3.437%  base   2.226%  build   1.683% CLEANED
+Ball r 0.180 out of Cyl R 0.30 by 0.0080, at 2.8°                 truth   3.440%  base   2.237%  build   1.723% CLEANED
+Ball r 0.180 out of Cyl R 0.30 by 0.0080, at 30.0°                truth   3.430%  base   1.746%  build   1.201% baseCLEANED CLEANED
+Ball r 0.180 out of Cyl R 0.30 by 0.0160, at 0.0°                 truth   6.702%  base   5.146%  build   4.563%
+Ball r 0.180 out of Cyl R 0.30 by 0.0160, at 5.6°                 truth   6.725%  base   5.163%  build   4.564%
+Ball r 0.180 out of Cyl R 0.30 by 0.0160, at 2.8°                 truth   6.722%  base   5.141%  build   4.561%
+Ball r 0.180 out of Cyl R 0.30 by 0.0160, at 30.0°                truth   6.697%  base   5.045%  build   4.410%
+Ball r 0.180 out of Cyl R 0.30 by 0.0300, at 0.0°                 truth  12.143%  base  10.678%  build  10.174%
+Ball r 0.180 out of Cyl R 0.30 by 0.0300, at 5.6°                 truth  12.150%  base  10.680%  build  10.118%
+Ball r 0.180 out of Cyl R 0.30 by 0.0300, at 2.8°                 truth  12.165%  base  10.683%  build  10.179%
+Ball r 0.180 out of Cyl R 0.30 by 0.0300, at 30.0°                truth  12.150%  base  10.829%  build  10.317%
+Ball r 0.120 out of Cyl R 0.80 by 0.0002, at 0.0°                 truth   0.090%  base   0.005%  build   0.000%
+Ball r 0.120 out of Cyl R 0.80 by 0.0002, at 5.6°                 truth   0.090%  base   0.800%  build   0.000%
+Ball r 0.120 out of Cyl R 0.80 by 0.0002, at 2.8°                 truth   0.093%  base   0.504%  build   0.000%
+Ball r 0.120 out of Cyl R 0.80 by 0.0002, at 30.0°                truth   0.088%  base   0.255%  build   0.000%
+Ball r 0.120 out of Cyl R 0.80 by 0.0005, at 0.0°                 truth   0.230%  base   0.029%  build   0.000%
+Ball r 0.120 out of Cyl R 0.80 by 0.0005, at 5.6°                 truth   0.222%  base   0.909%  build   0.000%
+Ball r 0.120 out of Cyl R 0.80 by 0.0005, at 2.8°                 truth   0.227%  base   0.610%  build   0.000%
+Ball r 0.120 out of Cyl R 0.80 by 0.0005, at 30.0°                truth   0.222%  base   0.338%  build   0.000%
+Ball r 0.120 out of Cyl R 0.80 by 0.0010, at 0.0°                 truth   0.445%  base   0.115%  build   0.000%
+Ball r 0.120 out of Cyl R 0.80 by 0.0010, at 5.6°                 truth   0.457%  base   1.095%  build   0.013%
+Ball r 0.120 out of Cyl R 0.80 by 0.0010, at 2.8°                 truth   0.455%  base   0.790%  build   0.000%
+Ball r 0.120 out of Cyl R 0.80 by 0.0010, at 30.0°                truth   0.447%  base   0.502%  build   0.000%
+Ball r 0.120 out of Cyl R 0.80 by 0.0020, at 0.0°                 truth   0.907%  base   0.461%  build   0.000%
+Ball r 0.120 out of Cyl R 0.80 by 0.0020, at 5.6°                 truth   0.895%  base   1.476%  build   0.146%
+Ball r 0.120 out of Cyl R 0.80 by 0.0020, at 2.8°                 truth   0.900%  base   1.159%  build   0.025%
+Ball r 0.120 out of Cyl R 0.80 by 0.0020, at 30.0°                truth   0.897%  base   0.922%  build   0.000%
+Ball r 0.120 out of Cyl R 0.80 by 0.0040, at 0.0°                 truth   1.810%  base   1.520%  build   0.002%
+Ball r 0.120 out of Cyl R 0.80 by 0.0040, at 5.6°                 truth   1.805%  base   2.269%  build   0.781% baseKEPT
+Ball r 0.120 out of Cyl R 0.80 by 0.0040, at 2.8°                 truth   1.805%  base   1.938%  build   0.484%
+Ball r 0.120 out of Cyl R 0.80 by 0.0040, at 30.0°                truth   1.800%  base   1.805%  build   0.241%
+Ball r 0.120 out of Cyl R 0.80 by 0.0080, at 0.0°                 truth   3.608%  base   3.387%  build   1.893% CLEANED
+Ball r 0.120 out of Cyl R 0.80 by 0.0080, at 5.6°                 truth   3.608%  base   3.836%  build   2.327%
+Ball r 0.120 out of Cyl R 0.80 by 0.0080, at 2.8°                 truth   3.603%  base   3.528%  build   2.245%
+Ball r 0.120 out of Cyl R 0.80 by 0.0080, at 30.0°                truth   3.598%  base   3.490%  build   1.868% CLEANED
+Ball r 0.120 out of Cyl R 0.80 by 0.0160, at 0.0°                 truth   7.183%  base   7.111%  build   5.286%
+Ball r 0.120 out of Cyl R 0.80 by 0.0160, at 5.6°                 truth   7.180%  base   7.116%  build   5.507%
+Ball r 0.120 out of Cyl R 0.80 by 0.0160, at 2.8°                 truth   7.190%  base   6.993%  build   5.259%
+Ball r 0.120 out of Cyl R 0.80 by 0.0160, at 30.0°                truth   7.203%  base   6.848%  build   5.255%
+Ball r 0.120 out of Cyl R 0.80 by 0.0300, at 0.0°                 truth  13.398%  base  13.381%  build  11.737%
+Ball r 0.120 out of Cyl R 0.80 by 0.0300, at 5.6°                 truth  13.383%  base  12.936%  build  11.353%
+Ball r 0.120 out of Cyl R 0.80 by 0.0300, at 2.8°                 truth  13.390%  base  13.278%  build  11.609%
+Ball r 0.120 out of Cyl R 0.80 by 0.0300, at 30.0°                truth  13.405%  base  13.145%  build  11.461%
+Ball r 0.200 out of Cyl R 0.80 by 0.0002, at 0.0°                 truth   0.060%  base   0.002%  build   0.000%
+Ball r 0.200 out of Cyl R 0.80 by 0.0002, at 5.6°                 truth   0.060%  base   0.249%  build   0.000%
+Ball r 0.200 out of Cyl R 0.80 by 0.0002, at 2.8°                 truth   0.060%  base   0.145%  build   0.000%
+Ball r 0.200 out of Cyl R 0.80 by 0.0002, at 30.0°                truth   0.055%  base   0.018%  build   0.000%
+Ball r 0.200 out of Cyl R 0.80 by 0.0005, at 0.0°                 truth   0.150%  base   0.010%  build   0.000%
+Ball r 0.200 out of Cyl R 0.80 by 0.0005, at 5.6°                 truth   0.145%  base   0.299%  build   0.000%
+Ball r 0.200 out of Cyl R 0.80 by 0.0005, at 2.8°                 truth   0.148%  base   0.184%  build   0.000%
+Ball r 0.200 out of Cyl R 0.80 by 0.0005, at 30.0°                truth   0.143%  base   0.033%  build   0.000%
+Ball r 0.200 out of Cyl R 0.80 by 0.0010, at 0.0°                 truth   0.292%  base   0.041%  build   0.000%
+Ball r 0.200 out of Cyl R 0.80 by 0.0010, at 5.6°                 truth   0.290%  base   0.394%  build   0.000%
+Ball r 0.200 out of Cyl R 0.80 by 0.0010, at 2.8°                 truth   0.288%  base   0.260%  build   0.000%
+Ball r 0.200 out of Cyl R 0.80 by 0.0010, at 30.0°                truth   0.290%  base   0.066%  build   0.000%
+Ball r 0.200 out of Cyl R 0.80 by 0.0020, at 0.0°                 truth   0.572%  base   0.166%  build   0.000%
+Ball r 0.200 out of Cyl R 0.80 by 0.0020, at 5.6°                 truth   0.585%  base   0.605%  build   0.028%
+Ball r 0.200 out of Cyl R 0.80 by 0.0020, at 2.8°                 truth   0.575%  base   0.450%  build   0.002%
+Ball r 0.200 out of Cyl R 0.80 by 0.0020, at 30.0°                truth   0.575%  base   0.168%  build   0.000%
+Ball r 0.200 out of Cyl R 0.80 by 0.0040, at 0.0°                 truth   1.147%  base   0.664%  build   0.001%
+Ball r 0.200 out of Cyl R 0.80 by 0.0040, at 5.6°                 truth   1.155%  base   1.042%  build   0.240%
+Ball r 0.200 out of Cyl R 0.80 by 0.0040, at 2.8°                 truth   1.155%  base   0.879%  build   0.138%
+Ball r 0.200 out of Cyl R 0.80 by 0.0040, at 30.0°                truth   1.150%  base   0.513%  build   0.016%
+Ball r 0.200 out of Cyl R 0.80 by 0.0080, at 0.0°                 truth   2.295%  base   1.920%  build   0.707% baseCLEANED CLEANED
+Ball r 0.200 out of Cyl R 0.80 by 0.0080, at 5.6°                 truth   2.305%  base   1.974%  build   1.075% baseCLEANED CLEANED
+Ball r 0.200 out of Cyl R 0.80 by 0.0080, at 2.8°                 truth   2.300%  base   1.889%  build   0.911% baseCLEANED CLEANED
+Ball r 0.200 out of Cyl R 0.80 by 0.0080, at 30.0°                truth   2.297%  base   1.563%  build   0.546% baseCLEANED CLEANED
+Ball r 0.200 out of Cyl R 0.80 by 0.0160, at 0.0°                 truth   4.588%  base   4.118%  build   3.060%
+Ball r 0.200 out of Cyl R 0.80 by 0.0160, at 5.6°                 truth   4.580%  base   3.871%  build   2.972%
+Ball r 0.200 out of Cyl R 0.80 by 0.0160, at 2.8°                 truth   4.578%  base   4.012%  build   3.005%
+Ball r 0.200 out of Cyl R 0.80 by 0.0160, at 30.0°                truth   4.585%  base   3.702%  build   2.669%
+Ball r 0.200 out of Cyl R 0.80 by 0.0300, at 0.0°                 truth   8.542%  base   8.067%  build   6.957%
+Ball r 0.200 out of Cyl R 0.80 by 0.0300, at 5.6°                 truth   8.537%  base   7.785%  build   6.589%
+Ball r 0.200 out of Cyl R 0.80 by 0.0300, at 2.8°                 truth   8.522%  base   7.922%  build   6.823%
+Ball r 0.200 out of Cyl R 0.80 by 0.0300, at 30.0°                truth   8.517%  base   7.727%  build   6.595%
+Ball r 0.320 out of Cyl R 0.80 by 0.0002, at 0.0°                 truth   0.037%  base   0.001%  build   0.000%
+Ball r 0.320 out of Cyl R 0.80 by 0.0002, at 5.6°                 truth   0.040%  base   0.064%  build   0.000%
+Ball r 0.320 out of Cyl R 0.80 by 0.0002, at 2.8°                 truth   0.040%  base   0.038%  build   0.000%
+Ball r 0.320 out of Cyl R 0.80 by 0.0002, at 30.0°                truth   0.040%  base   0.000%  build   0.000%
+Ball r 0.320 out of Cyl R 0.80 by 0.0005, at 0.0°                 truth   0.105%  base   0.004%  build   0.000%
+Ball r 0.320 out of Cyl R 0.80 by 0.0005, at 5.6°                 truth   0.103%  base   0.080%  build   0.000%
+Ball r 0.320 out of Cyl R 0.80 by 0.0005, at 2.8°                 truth   0.103%  base   0.051%  build   0.000%
+Ball r 0.320 out of Cyl R 0.80 by 0.0005, at 30.0°                truth   0.098%  base   0.000%  build   0.000%
+Ball r 0.320 out of Cyl R 0.80 by 0.0010, at 0.0°                 truth   0.203%  base   0.016%  build   0.000%
+Ball r 0.320 out of Cyl R 0.80 by 0.0010, at 5.6°                 truth   0.205%  base   0.112%  build   0.000%
+Ball r 0.320 out of Cyl R 0.80 by 0.0010, at 2.8°                 truth   0.205%  base   0.076%  build   0.000%
+Ball r 0.320 out of Cyl R 0.80 by 0.0010, at 30.0°                truth   0.210%  base   0.000%  build   0.000%
+Ball r 0.320 out of Cyl R 0.80 by 0.0020, at 0.0°                 truth   0.405%  base   0.065%  build   0.000%
+Ball r 0.320 out of Cyl R 0.80 by 0.0020, at 5.6°                 truth   0.410%  base   0.189%  build   0.002%
+Ball r 0.320 out of Cyl R 0.80 by 0.0020, at 2.8°                 truth   0.405%  base   0.141%  build   0.000%
+Ball r 0.320 out of Cyl R 0.80 by 0.0020, at 30.0°                truth   0.403%  base   0.010%  build   0.000%
+Ball r 0.320 out of Cyl R 0.80 by 0.0040, at 0.0°                 truth   0.812%  base   0.259%  build   0.000%
+Ball r 0.320 out of Cyl R 0.80 by 0.0040, at 5.6°                 truth   0.800%  base   0.406%  build   0.062%
+Ball r 0.320 out of Cyl R 0.80 by 0.0040, at 2.8°                 truth   0.795%  base   0.333%  build   0.036%
+Ball r 0.320 out of Cyl R 0.80 by 0.0040, at 30.0°                truth   0.805%  base   0.084%  build   0.000%
+Ball r 0.320 out of Cyl R 0.80 by 0.0080, at 0.0°                 truth   1.612%  base   0.993%  build   0.276%
+Ball r 0.320 out of Cyl R 0.80 by 0.0080, at 5.6°                 truth   1.600%  base   0.943%  build   0.425%
+Ball r 0.320 out of Cyl R 0.80 by 0.0080, at 2.8°                 truth   1.602%  base   0.939%  build   0.350%
+Ball r 0.320 out of Cyl R 0.80 by 0.0080, at 30.0°                truth   1.605%  base   0.514%  build   0.092%
+Ball r 0.320 out of Cyl R 0.80 by 0.0160, at 0.0°                 truth   3.182%  base   2.485%  build   1.796% CLEANED
+Ball r 0.320 out of Cyl R 0.80 by 0.0160, at 5.6°                 truth   3.197%  base   2.306%  build   1.567% CLEANED
+Ball r 0.320 out of Cyl R 0.80 by 0.0160, at 2.8°                 truth   3.195%  base   2.429%  build   1.733% CLEANED
+Ball r 0.320 out of Cyl R 0.80 by 0.0160, at 30.0°                truth   3.195%  base   1.916%  build   1.222% baseCLEANED CLEANED
+Ball r 0.320 out of Cyl R 0.80 by 0.0300, at 0.0°                 truth   5.947%  base   4.878%  build   4.209%
+Ball r 0.320 out of Cyl R 0.80 by 0.0300, at 5.6°                 truth   5.927%  base   4.898%  build   4.136%
+Ball r 0.320 out of Cyl R 0.80 by 0.0300, at 2.8°                 truth   5.920%  base   4.856%  build   4.145%
+Ball r 0.320 out of Cyl R 0.80 by 0.0300, at 30.0°                truth   5.940%  base   4.769%  build   3.954%
+Ball r 0.480 out of Cyl R 0.80 by 0.0002, at 0.0°                 truth   0.031%  base   0.000%  build   0.000%
+Ball r 0.480 out of Cyl R 0.80 by 0.0002, at 5.6°                 truth   0.033%  base   0.014%  build   0.000%
+Ball r 0.480 out of Cyl R 0.80 by 0.0002, at 2.8°                 truth   0.035%  base   0.008%  build   0.000%
+Ball r 0.480 out of Cyl R 0.80 by 0.0002, at 30.0°                truth   0.041%  base   0.000%  build   0.000%
+Ball r 0.480 out of Cyl R 0.80 by 0.0005, at 0.0°                 truth   0.082%  base   0.002%  build   0.000%
+Ball r 0.480 out of Cyl R 0.80 by 0.0005, at 5.6°                 truth   0.084%  base   0.019%  build   0.000%
+Ball r 0.480 out of Cyl R 0.80 by 0.0005, at 2.8°                 truth   0.084%  base   0.012%  build   0.000%
+Ball r 0.480 out of Cyl R 0.80 by 0.0005, at 30.0°                truth   0.085%  base   0.000%  build   0.000%
+Ball r 0.480 out of Cyl R 0.80 by 0.0010, at 0.0°                 truth   0.163%  base   0.007%  build   0.000%
+Ball r 0.480 out of Cyl R 0.80 by 0.0010, at 5.6°                 truth   0.167%  base   0.029%  build   0.000%
+Ball r 0.480 out of Cyl R 0.80 by 0.0010, at 2.8°                 truth   0.167%  base   0.021%  build   0.000%
+Ball r 0.480 out of Cyl R 0.80 by 0.0010, at 30.0°                truth   0.171%  base   0.000%  build   0.000%
+Ball r 0.480 out of Cyl R 0.80 by 0.0020, at 0.0°                 truth   0.328%  base   0.029%  build   0.000%
+Ball r 0.480 out of Cyl R 0.80 by 0.0020, at 5.6°                 truth   0.326%  base   0.057%  build   0.000%
+Ball r 0.480 out of Cyl R 0.80 by 0.0020, at 2.8°                 truth   0.328%  base   0.045%  build   0.000%
+Ball r 0.480 out of Cyl R 0.80 by 0.0020, at 30.0°                truth   0.334%  base   0.000%  build   0.000%
+Ball r 0.480 out of Cyl R 0.80 by 0.0040, at 0.0°                 truth   0.661%  base   0.115%  build   0.000%
+Ball r 0.480 out of Cyl R 0.80 by 0.0040, at 5.6°                 truth   0.657%  base   0.144%  build   0.013%
+Ball r 0.480 out of Cyl R 0.80 by 0.0040, at 2.8°                 truth   0.655%  base   0.123%  build   0.008%
+Ball r 0.480 out of Cyl R 0.80 by 0.0040, at 30.0°                truth   0.659%  base   0.006%  build   0.000%
+Ball r 0.480 out of Cyl R 0.80 by 0.0080, at 0.0°                 truth   1.300%  base   0.461%  build   0.123%
+Ball r 0.480 out of Cyl R 0.80 by 0.0080, at 5.6°                 truth   1.308%  base   0.465%  build   0.152%
+Ball r 0.480 out of Cyl R 0.80 by 0.0080, at 2.8°                 truth   1.308%  base   0.453%  build   0.130%
+Ball r 0.480 out of Cyl R 0.80 by 0.0080, at 30.0°                truth   1.309%  base   0.149%  build   0.007%
+Ball r 0.480 out of Cyl R 0.80 by 0.0160, at 0.0°                 truth   2.588%  base   1.530%  build   1.011% baseCLEANED CLEANED
+Ball r 0.480 out of Cyl R 0.80 by 0.0160, at 5.6°                 truth   2.584%  base   1.478%  build   0.934% baseCLEANED CLEANED
+Ball r 0.480 out of Cyl R 0.80 by 0.0160, at 2.8°                 truth   2.594%  base   1.528%  build   0.989% baseCLEANED CLEANED
+Ball r 0.480 out of Cyl R 0.80 by 0.0160, at 30.0°                truth   2.586%  base   1.009%  build   0.519% baseCLEANED CLEANED
+Ball r 0.480 out of Cyl R 0.80 by 0.0300, at 0.0°                 truth   4.777%  base   3.348%  build   2.834%
+Ball r 0.480 out of Cyl R 0.80 by 0.0300, at 5.6°                 truth   4.793%  base   3.366%  build   2.860%
+Ball r 0.480 out of Cyl R 0.80 by 0.0300, at 2.8°                 truth   4.783%  base   3.349%  build   2.842%
+Ball r 0.480 out of Cyl R 0.80 by 0.0300, at 30.0°                truth   4.775%  base   3.072%  build   2.464%
+ballInCyl: 352 designs; kept that truly show under 2 %: base 1, build 0; cleaned that truly show 2 % or more: base 19, build 42 (the build's most: Ball r 0.120 out of Cyl R 0.80 by 0.0080, at 0.0°, truly 3.608%, read 1.893%)

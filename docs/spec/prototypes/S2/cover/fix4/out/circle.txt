@@ -1,0 +1,15 @@
+h -0.990 r: hidden 0.027656575166, 32-gon 0.027656575166 (2.63e-15 off; the circle 0.027567664031), its corners 0.000473 r past the sphere; 3093.2 units
+h -0.900 r: hidden 0.073864014034, 32-gon 0.073864014034 (3.76e-16 off; the circle 0.073626553925), its corners 0.001263 r past the sphere; 3103.2 units
+h -0.500 r: hidden 0.223633981635, 32-gon 0.223633981635 (6.21e-16 off; the circle 0.222915036824), its corners 0.003817 r past the sphere; 3116.2 units
+h -0.100 r: hidden 0.282634271902, 32-gon 0.282634271902 (1.96e-16 off; the circle 0.281725651299), its corners 0.004822 r past the sphere; 3125.2 units
+h +0.000 r: hidden 0.283655430772, 32-gon 0.283655430772 (1.96e-16 off; the circle 0.282743527319), its corners 0.004839 r past the sphere; 2613.2 units
+h +0.100 r: hidden 0.280818878355, 32-gon 0.280818878355 (3.95e-16 off; the circle 0.279916093930), its corners 0.004791 r past the sphere; 2613.2 units
+h +0.300 r: hidden 0.258126459022, 32-gon 0.258126459022 (2.15e-16 off; the circle 0.257296626825), its corners 0.004404 r past the sphere; 2607.2 units
+h +0.500 r: hidden 0.212741620355, 32-gon 0.212741620355 (2.61e-16 off; the circle 0.212057692613), its corners 0.003631 r past the sphere; 2604.2 units
+h +0.700 r: hidden 0.144664362355, 32-gon 0.144664362355 (1.92e-16 off; the circle 0.144199291295), its corners 0.002471 r past the sphere; 2600.2 units
+h +0.900 r: hidden 0.053894685021, 32-gon 0.053894685021 (2.06e-15 off; the circle 0.053721422872), its corners 0.000921 r past the sphere; 2587.2 units
+h +0.950 r: hidden 0.027656575166, 32-gon 0.027656575166 (9.41e-15 off; the circle 0.027567664031), its corners 0.000473 r past the sphere; 2581.2 units
+h +0.990 r: hidden 0.005644928413, 32-gon 0.005644928413 (3.63e-14 off; the circle 0.005626780938), its corners 0.000097 r past the sphere; 1483.2 units
+h +0.999 r: hidden 0.000567215932, 32-gon 0.000567215932 (4.97e-13 off; the circle 0.000565392430), its corners 0.000010 r past the sphere; 1479.2 units
+worst relative difference from the circumscribed 32-gon: 4.97e-13; through the centre sec(π/32) − 1 = 0.004839
+exit 0

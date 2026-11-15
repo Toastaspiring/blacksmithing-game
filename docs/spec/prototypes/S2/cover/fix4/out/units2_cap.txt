@@ -1,0 +1,76 @@
+P1                                                                 330993.125
+C09                                                                 17511.625
+F3                                                                  10973.250
+F5                                                                   1793.125
+P1                                                                 330993.125
+P2                                                                  27108.250
+P3                                                                   8354.375
+P4                                                                 172903.000
+P5                                                                   2733.250
+A28                                                               1083868.625
+h_bundle (24 rods 0.12)                                            471161.125
+pastcap_32                                                         770936.375
+pastcap_33                                                         761148.625
+pastcap_34                                                         826151.875
+valid 1 V1 cluster: 24 Balls d 0.54, x 0.25·sin(1.3 i), y 0       687304.125
+valid 2 tclimb_4.json #1                                           638320.375
+valid 3 tclimb_3.json #3                                           655541.875
+valid 4 tclimb_2.json #4                                           644775.375
+valid 5 tclimb_3.json #4                                           518339.500
+valid 6 tclimb_2.json #6                                           505237.625
+valid 7 tclimb_2.json #5                                           494567.875
+valid 8 tclimb_3.json #6                                           452991.125
+valid 9 tclimb_4.json #5                                           431854.000
+valid 10 tclimb_4.json #4                                          418624.500
+valid 11 tclimb_1.json #5                                          174411.125
+tooComplex 1 judge judge climb seed 1 best 10790351 units         8058844.500
+tooComplex 2 judge judge climb seed 2 best 6424674 units          7424660.750
+tooComplex 3 judge judge climb seed 3 best 9327966 units          7046254.625
+tooComplex 4 judge judge climb seed 4 best 14613763 units         4314772.125
+tooComplex 5 A climb_1 1                                          6359620.250
+tooComplex 6 A climb_1 2                                          5162819.750
+tooComplex 7 A climb_2 1                                          5843994.750
+tooComplex 8 A climb_3 1                                         14960461.125
+tooComplex 9 A climb_4 1                                          8465792.375
+tooComplex 10 A climb_4 2                                         5073075.875
+tooComplex 11 B uclimb uclimb_1 best 2563294 units                4465691.875
+tooComplex 12 B uclimb uclimb_2 best 2792974 units                6152561.750
+tooComplex 13 B uclimb uclimb_3 best 3135028 units                4007213.250
+tooComplex 14 B uclimb uclimb_4 best 2699876 units                6467480.375
+tooComplex 15 worst_P climbL_1#1                                  1234316.250
+tooComplex 16 worst_P climbL_3#1                                  1465748.125
+tooComplex 17 worst_P climbL_2#1                                  2554918.375
+mirror images (canonical), the cap lifted
+P1                                         330993.125  X   329189.625 (-0.54 %)  Z   329189.625 (-0.54 %)
+C09                                         17511.625  X    17511.625 (+0.00 %)  Z    17511.625 (+0.00 %)
+P4                                         172903.000  X   178928.875 (+3.49 %)  Z   172903.000 (+0.00 %)
+valid 1 V1 cluster: 24 Balls d 0.54, x 0   687304.125  X   664222.125 (-3.36 %)  Z   687304.125 (+0.00 %)
+valid 2 tclimb_4.json #1                   638320.375  X   685384.500 (+7.37 %)  Z   629583.500 (-1.37 %)
+valid 3 tclimb_3.json #3                   655541.875  X   655596.375 (+0.01 %)  Z   475890.000 (-27.41 %)
+valid 4 tclimb_2.json #4                   644775.375  X   650558.500 (+0.90 %)  Z   631448.125 (-2.07 %)
+valid 5 tclimb_3.json #4                   518339.500  X   510749.750 (-1.46 %)  Z   510228.375 (-1.56 %)
+valid 6 tclimb_2.json #6                   505237.625  X   531099.250 (+5.12 %)  Z   518317.625 (+2.59 %)
+valid 7 tclimb_2.json #5                   494567.875  X   497943.875 (+0.68 %)  Z   497943.875 (+0.68 %)
+valid 8 tclimb_3.json #6                   452991.125  X   453316.000 (+0.07 %)  Z   453107.125 (+0.03 %)
+valid 9 tclimb_4.json #5                   431854.000  X   431743.750 (-0.03 %)  Z   431695.500 (-0.04 %)
+valid 10 tclimb_4.json #4                  418624.500  X   420339.250 (+0.41 %)  Z   420339.250 (+0.41 %)
+valid 11 tclimb_1.json #5                  174411.125  X   177721.875 (+1.90 %)  Z   169434.000 (-2.85 %)
+every Block described another way, the cap lifted
+valid 1 V1 cluster: 24 Balls d 0.54, x 0.25�   687304.125 ->   687304.125 (+0.00 %)
+valid 2 tclimb_4.json #1                       638320.375 ->   638320.375 (+0.00 %)
+valid 3 tclimb_3.json #3                       655541.875 ->   652278.500 (-0.50 %)
+valid 4 tclimb_2.json #4                       644775.375 ->   643606.250 (-0.18 %)
+valid 5 tclimb_3.json #4                       518339.500 ->   494973.625 (-4.51 %)
+valid 6 tclimb_2.json #6                       505237.625 ->   521753.750 (+3.27 %)
+valid 7 tclimb_2.json #5                       494567.875 ->   495112.000 (+0.11 %)
+valid 8 tclimb_3.json #6                       452991.125 ->   453621.375 (+0.14 %)
+valid 9 tclimb_4.json #5                       431854.000 ->   430984.875 (-0.20 %)
+valid 10 tclimb_4.json #4                      418624.500 ->   418497.500 (-0.03 %)
+valid 11 tclimb_1.json #5                      174411.125 ->   174662.125 (+0.14 %)
+P1 24 large overlapping tilted blocks          330993.125 ->   320332.250 (-3.22 %)
+P3 24 rotated wedges                             8354.375 ->     8354.375 (+0.00 %)
+C09 Ornate (18 parts)                           17511.625 ->    21248.250 (+21.34 %)
+C05 Cleaver                                      1164.750 ->     9194.750 (+689.42 %)
+F1                                               1793.125 ->     3510.500 (+95.78 %)
+F5                                               1793.125 ->     3510.500 (+95.78 %)
+exit 0

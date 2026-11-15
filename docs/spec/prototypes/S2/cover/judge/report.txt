@@ -1,0 +1,266 @@
+===== decision
+A
+===== summary
+I pick A, the subtraction reading. I reject B, the boundary-integral reading. A should ship with canonical (world-fixed) frames for round parts, the baseline resolution (a 32-gon for each Cylinder, grid 4 for each Ball), one zero-cost change I call the "conservative probe", and a work cap that marks the design invalid. Everything in this verdict comes from runs I did myself in C:\Users\louis\AppData\Local\Temp\claude\C--Users-louis-Documents-RANDOM-ROBLOX\93ae48b4-72b9-4dc1-aa5d-451af1abf9a0\scratchpad\m2x-judge.
+
+Correctness. On the shared baseline model, A and B agree to within 2.6e-13 of a part's area on every natural corpus: 223,862 parts in all. My own brute force agrees with both. It builds the model separately from the task text, clips in 3D and takes the exact union area by slabs. The two readings differ only on near-degenerate geometry, and there B is the one that is wrong. B treats two edge lines within LINE_TOL = 2e-8 as one line, and that rule is not transitive. Take three edge lines spaced g apart, with LINE_TOL/2 < g ≤ LINE_TOL, and pieces taken in the order inner, middle, outer: B drops every copy of the shared edge. Its Green's-theorem sum then loses that edge's whole term, ½·(a × b), an error the size of the facet. I built this into valid C01 swords:
+- A truly hidden filler (true share 0.000 %) reads 5.625 % under B and is kept: |dD| 0.388 with a tier flip.
+- A part that truly shows 5.000 % reads 0 under B and is cleaned: |dD| 0.371 with a tier flip.
+- A reads 0.000 % and 5.000 %, exactly right.
+On 8,000 fuzz designs of overlapping, near-touching parts (55,911 parts), A always stays within the brute force's ±1e-11 rounding bracket. B falls outside it on 491 parts, by up to 2.73 % of a part.
+
+Accuracy against the truth (VisibleOracle), on the 1,340 recorded attack designs:
+- Today's reading disagrees with the truth on 84 designs, with 48 tier flips and a worst |dD| of 0.796.
+- A with canonical frames disagrees on 2 records of the same invalid design (no D can be computed for it).
+- A with canonical frames and the conservative probe disagrees on none.
+
+Cost, measured alone on a quiet machine, median of 15 runs:
+- Real designs cost about what they cost today. Verdict at most 1.67 ms and whole exposure at most 7.74 ms (C09). P1: 15.2 / 23.3 ms; P4: 8.1 / 10.7 ms.
+- Hostile designs cost 10–70× today's on the same designs. The worst verdict I measured is 273 ms Lune (my climb, 14.6M units, canonical model), with 278–309 ms on A's own climb, about 0.8 s in Studio. Today's worst verdict is 30.4 ms. So a cap is mandatory.
+
+Model:
+- Canonical frames are required. With frames tied to each part, a round part's copy spun or turned about its own axis is truly hidden but reads 41.8 % / 50.4 %. With canonical frames T-PHY-09 passes and A's quick suite goes to 533 pass / 28 fail / 14 skip, the 28 failures being pins of the old reading.
+- Every inscribed polyhedral model, the finer one included, has a "sealed-filler window". A round filler sealed by flat walls, at a gap just under HIDE_OFFSET (within one sagitta), truly shows 0 % but reads 5.1–9.5 %, with |dD| up to 0.44 and tier flips. Here the sagitta is how far an inscribed facet sits inside the true curved surface.
+- The conservative probe closes that window at no cost: a round part's facets probe HIDE_OFFSET plus their sagitta, and a round hider's planes move out to the true surface for the probe test only. Every sealed rod then reads 0.000 %. False kept on the plausible designs drops from 3 to 0. False Enclosed stays the same on the plausible designs (121 at ≥ 2.5 %, none at ≥ 3 %) and gains one on the 12 test families (a bead at 3.86 %).
+- The finer model costs 2–6× (P4: 51 ms, 1.22M units) and does not close the window.
+
+Cap: VERDICT_WORK_MAX = 500,000 units. Above it the exposure stops and Analyze returns the design as invalid with a new error code, TooComplex; the cap never changes a verdict. The slowest design at the cap that a climb on time could find takes 23.8 ms Lune for the verdict and 34.7 ms for the whole exposure. Real designs stay at least 2× below the cap (P1 251k units, C09 15k).
+
+Code size: A is 742 + 43 lines (631 + 39 lines of code). B is 897 + 46 lines (789 + 42). Today's reading is 372 lines (338 of code).
+===== crossCheck
+ALL PATHS BELOW are under C:\Users\louis\AppData\Local\Temp\claude\C--Users-louis-Documents-RANDOM-ROBLOX\93ae48b4-72b9-4dc1-aa5d-451af1abf9a0\scratchpad\m2x-judge (the judge folder).
+
+Method (xcheck.luau, jlib.luau, JBrute.luau, tangles.luau; logs out\xcheck_<set>.log, rows that differ with their parts in out\xcheck_<set>.jsonl):
+- A and B are read in place from their folders, with the full reading (no early stop), the baseline model, and the same Prepared parts, rank, flags and candidates.
+- J is my brute force. It builds the baseline model again from the task text (Shapes.faces/planes; the 32-gon prism from COS/SIN; the octahedron with grid 4, normalized). It clips each facet in 3D by each hider's moved half-spaces and integrates the union exactly with vertical slabs: every vertex and every edge crossing is an event.
+- Where any two of A, B, J differ by more than 1e-9 of a part's area, every facet is settled against a bracket. J is re-run with all moved half-spaces moved out and then in by 1e-11. A reading inside the bracket is right up to an exact tie (the hide test's boundary lies on the facet within rounding). Outside it, the reading is wrong.
+- Model areas of A, B and J agree to 1.4e-14 relative. Facet centroids match to 4.4e-16. So it is the same model.
+
+Natural corpora: A = B = J. Largest |A−B| per part, and largest |A−J| and |B−J|, all within 2.61e-13:
+- fixtures (77 designs, 641 parts): 2.45e-14
+- protoA's recorded attack corpus (1,340 designs, 19,430 parts): 3.9e-14
+- PlausibleDesigns, every 4th (8,088 designs, 77,205 parts): 2.4e-13
+- the verifiers' 12 families via b_sets.luau, every 4th (16,028 designs, 142,771 parts): ≤1e-9 except 2 parts, see below
+- worst_P (11 designs, 264 parts), attacks.json (4, 66), the 45 climbed designs (1,080), A's climbs (6, 144), B's climbs (4, 96), A's worst accuracy designs (51, 748), B's (22, 222): ≤1.9e-12
+Total: 223,862 parts.
+
+The only natural-corpus differences: 2 parts, b_chamfer C09 Wedge a0.02 b0.12 sink0.005 turn7/turn8. |A−B| = 3.54e-8; J = A, and B is outside the bracket. Cause: B merges two distinct lines within 2e-8 of each other.
+
+Fuzz of tangles (seeds 7 and 11, 8,000 designs, 55,911 parts): overlapping parts of all 5 shapes with offsets 0, ±1e-9…±1e-5, ±1.5e-8, ±3e-8, ±EPS, ±2·EPS, HIDE_OFFSET±EPS, coincident faces, exact copies, turned round copies, Dust, sheets.
+- |A−B| > 1e-9 on 916 parts.
+- 811 parts are exact ties: the bracket is wide, up to 0.459 of a part, because a hider face parallel to the facet sits exactly at EPS or HIDE_OFFSET + EPS, so rounding decides. A and B are inside the bracket on all of them.
+- A is outside the bracket on 0 parts.
+- B is outside it on 491 parts, worst 0.0273 of the part. Example: tangle 11#3863 part 10, Block: A 0.829306 = J, B 0.856556.
+
+Who is right, and why. A is exact everywhere. B's rule treats edges within LINE_TOL / ANGLE_TOL as one line ("earlier piece keeps it; opposite sides both drop it"), and that relation is not transitive. With lines c, c+g, c+2g, LINE_TOL/2 < g ≤ LINE_TOL, and pieces taken in the order inner, middle, outer:
+- the inner edge is covered by the outer piece (general clipping);
+- the middle edge is covered by the inner piece (rule);
+- the outer edge is covered by the middle piece (rule).
+So no copy of the boundary survives, and Green's sum loses ½(a×b) of it: the size of the facet, not of the gap.
+
+Deliberate constructions:
+- chain.luau, Block 2×1×2: target truly 4.9999 % (A 4.999998 %, J 4.999998 %), B 0.000 %. The error appears for g in 1.2e-8…2e-8 only. With the outer piece ranked first, B is right.
+- chain2.luau: hidden filler truly 0 %, B 5.625 % at g 1.5e-8 and 1.9e-8 (and at 1e-8 at scale 0.1).
+- B's other small errors, ≤3.5e-8, come from treating lines up to 2e-8 apart as one.
+
+Exactness of A on the other models (xcheck_model.luau; out\m1model_*.log). J runs on A's own model geometry. A's canonical, fine (canonical + sagitta 0.002) and canonical + conservative models all agree with J to 2.61e-13 on fixtures, attacks (every 2nd/4th), families (every 16th/32nd) and plausible (every 8th/16th). On tangles (every 2nd/4th) the only differences are exact ties: 186, 84 and 96 parts, all inside the bracket.
+
+Point lattice: J.facetLattice, a literal 3D per-point test on the model, confirmed the facet I first disputed (tangle 7#3 part 3, facet 6). It was an exact δ+EPS tie: lattice 0.01644, A and B 0.016432; the brute force's own rounding picked the other side.
+===== costRemeasured
+Alone on the machine (no other Lune process; Studio, Riot and Voicemod idle at about 1 core in total). Lune 0.8.9, os.clock, median of 15 runs. The variants were interleaved run by run in one process. For each reading I ran Sampling.exposure in full and a copy cut after the verdict ("verdict"), with requires pointed back at each reading's own repo.
+- Variants: mkvariants.py → v\. Scripts: cost.luau, cost_models.luau, cost_cons.luau. Logs: out\m5_*.log, out\m5models_*.log, out\m5cons_*.log, all under C:\Users\louis\AppData\Local\Temp\claude\C--Users-louis-Documents-RANDOM-ROBLOX\93ae48b4-72b9-4dc1-aa5d-451af1abf9a0\scratchpad\m2x-judge.
+- Figures are ms Lune, verdict / whole exposure.
+
+Real designs. Today / A baseline / B:
+- F1–F5: ≤0.44/3.31, ≤0.98/3.34, ≤0.59/3.44
+- C01–C15: ≤1.20/7.03, ≤1.67/7.74, ≤1.20/7.56 (C09). C05: 0.54/4.96, 0.15/5.14, 0.22/5.39
+- A22–A27 + bases: ≤0.29/2.08, ≤0.38/2.27, ≤0.32/2.31
+- X01–X07: ≤1.90/5.18, ≤0.92/4.41, ≤0.62/4.48
+
+P1–P5. Today / A / B, verdict | exposure:
+| | Today | A | B |
+|---|---|---|---|
+| P1 | 11.80 \| 18.95 | 14.91 \| 22.94 | 21.26 \| 29.92 |
+| P2 | 1.31 \| 8.93 | 3.34 \| 11.13 (canonical 1.41) | 2.92 \| 10.73 |
+| P3 | 0.83 \| 8.21 | 0.76 \| 8.72 | 0.73 \| 8.48 |
+| P4 | 1.06 \| 3.53 | 8.31 \| 10.93 | 4.25 \| 6.56 |
+| P5 | 0.31 \| 2.45 | 0.40 \| 2.34 | 0.43 \| 2.51 |
+Units for P1 / P4: today 106,658 / 11,301; A 251,378 / 128,507; B 293,001 / 41,840.
+
+worst_P.json, 11 designs:
+- verdict: today 5.7–30.2 ms, A 3.8–74.6, B 2.8–51.2
+- exposure: today 15.4–40.4, A 14.0–85.0, B 12.4–63.8
+- climbL_2#1: today 30.1 | 37.0, A 74.6 | 85.0, B 48.7 | 57.6
+
+The 45 climbed designs (d_climb_1..6, d_hand, worst_P_clamped):
+- today: verdict ≤25.2, exposure ≤39.0
+- A: verdict ≤150.3, exposure ≤165.2 (d_hand rods; d_climb_3#4 101 | 115)
+- B: verdict ≤113.9, exposure ≤121.9 (d_climb_4#4)
+
+attacks.json: all three readings ≤1.71 | 7.79.
+
+Each prototype's worst designs:
+- A's 6 climbs: A 155–309 | 166–322, B 57–110 | 69–121, today 13–20 | 24–33.
+- B's 4 climbs: A 136–218 | 140–224, B 168–186 | 177–193, today 6–11 | 15–18.
+
+My 4 climbs (canonical units, see attacksTried). Today / A baseline / B:
+- seed 1: 7.1 / 128 / 25.7
+- seed 2: 5.7 / 239 / 151
+- seed 3: 16.9 / 200 / 91
+- seed 4: 3.6 / 165 / 48
+On the canonical model, A: 231 / 243 / 208 / 273 ms verdict, with exposure up to 277. On canonical + conservative: 225 / 245 / 195 / 178.
+
+Model options for A (base / canonical / fine):
+- Canonical costs about the same as the baseline: F1 0.19 vs 0.18, C09 2.12 vs 1.44, P2 3.43 vs 1.41, worst_P within ±5 %, A's climb_3 306 vs 278.
+- Fine is 2–3× on real designs (F1 0.54, C09 2.96), P4 51.2 ms (1.22M units), B's climbs 245–542 ms.
+- Canonical + conservative probe costs the same as canonical: fixtures equal to ±0.3 ms, worst_P equal, my climbs equal or lower (seed 4 178 vs 273).
+
+Worst case found overall: 309 ms verdict on the baseline (A's climb_3, 16.5M units) and 273–278 ms on the canonical model. That is about 0.7–0.8 s in Studio at 2.6×, against today's worst of 30.4 ms in my measurement (30.7 in the SPEC). B's worst is 186 ms (its own climb).
+
+ns per unit (A, quiet):
+- 47–63 at ≥100k units: P4 63, P1 61, worst_P 47–58, the time-climb designs 48–49
+- 19–40 on the hostile multi-million designs
+- 110–350 on small designs, where fixed overhead dominates
+
+Uncounted work, measured with the instrumented copy proto\CoverI.luau (prof_cover.luau): the subtract list scan, per-(facet, hider) box tests and measure() vertices come to ≤13 % of units on the heavy designs. The rest of the spread is polygon allocation and model building.
+===== attacksTried
+All files are under C:\Users\louis\AppData\Local\Temp\claude\C--Users-louis-Documents-RANDOM-ROBLOX\93ae48b4-72b9-4dc1-aa5d-451af1abf9a0\scratchpad\m2x-judge. M3 goes through the emulator (docs/spec/prototypes/S2/verdict/analyze_build.luau, protoB's copy with FORCE.kept; harness m3j.luau).
+
+1. B's collinear rule, in valid C01 swords (atk_chain_sword.luau → out\atk_chain_sword_s0.2.json; unit cases chain.luau and chain2.luau → out\chain_design.json, out\chain2_design_s1.json).
+- Hidden filler, 0.4×0.2×0.4 at the tip: truth 0.0000 %; A (all models) 0.0000 %, cleaned; B 5.6250 %, kept. B's row vs the truth's: |dD| 0.3883, tier flips (Smithing H→N, Hammering N→H).
+- Visible part: truth 5.0000 %; A 5.0000 %, kept; B 0 %, cleaned: |dD| 0.3714, tier flip. Today's reading is right on both.
+
+2. Near-degenerate fuzz (tangles.luau, 8,000 designs): EPS ties, δ+EPS ties, hairlines and gaps from 1e-9 to 1e-5, offsets at LINE_TOL scale, coincident faces of equal and unequal rank, zero-area pieces, exact copies and turned copies, Dust. Results are in crossCheck: A exact, ties aside; B wrong on 491 parts.
+
+3. The model's own channel (atk_model.luau → out\atk_model.log, out\atk_model_all.json). A rod sealed in 16 flat walls, turned 5.625°, beside C01's blade; valid designs.
+- r 0.10: corner gap 0.0119 → 8.06 %, kept, |dD| 0.238 TIER. 0.0118 → 5.95 %, 0.238 TIER. 0.0116 → 1.72 %, cleaned.
+- r 0.20: corner gap 0.0119 / 0.0118 / 0.0116 / 0.0115 → 9.53 / 8.43 / 6.22 / 5.12 %, kept, |dD| 0.414–0.439. 0.0112 → 1.80 %.
+- Truth 0.000 % throughout.
+- The same for A baseline, canonical and fine, and for B: fine keeps 32 sides below r 0.415. Today's reading cleans them all.
+- With the conservative probe (proto\CoverC.luau): 0.000 % on every one.
+- A Ball inside C02's grip at gaps 1e-5…2e-3 reads ≤0.137 % in every reading, all cleaned, which is correct.
+
+4. Turned round copies (T-PHY-09 designs): baseline A and B read 41.807 % (spun Cylinder) and 50.387 % / 51.218 % (turned Ball), true 0 % / 100 %. Canonical, fine and conservative read exactly 0 / 100. A's quick suite passes T-PHY-09 with canonical frames.
+
+5. Conservative probe vs canonical, against the truth (atk_cons.luau, acc_cons.luau → out\acc_cons_*.log):
+- PlausibleDesigns, every 4th (77,205 parts): false Enclosed (FE) 121/0/0/0/0 for both, highest 2.945 %; false kept (FK) 3 → 0 (lowest kept true share 1.290 % → 2.002 %).
+- 12 families, every 8th (71,309 parts): FE 12/0 → 13/1, the new one a Ball bead read 1.674 % that is truly 3.863 %; FK 0 for both.
+- Attack corpus, M3 (m3_attacks.luau, all 1,340 designs; out\m3_attacksA*.log):
+  - today: 84 designs differ from the truth's row (25 FE, 59 FK parts), 48 tier flips, worst |dD| 0.796 (a_hand).
+  - canonical: 2 records differ, the same invalid design (rod in a 12-wall tube), 0 flips.
+  - conservative: 0 differ.
+
+6. Invariance (m4j.luau → out\m4_*.log):
+- A canonical, tangles (4,000 designs): 12,000 permuted runs bit-identical (kept, cleaned, full shown; copy classes compared as a class). Of 8,000 X/Z mirror images, 548 verdicts differ: 545 are rank-order flips (Sampling.ranked uses cz directly, so under the Z mirror near-twins swap the coincident face) and 3 are exact ties; 0 unexplained.
+- Attack corpus, every 2nd: 2,010 permutations and 1,340 mirror images, 0 differences. Fixtures 0.
+- The conservative probe gives the same pattern: 293 rank flips and 1 tie on 2,000 tangles; 0 on the attacks.
+
+7. Exactness of A on canonical, fine and conservative: see crossCheck. Closed forms for strips and hairlines are in A's pins_check, which I did not re-run.
+
+8. Cost climbs on A's canonical units (jclimb.luau; 4 seeds × 10,000 evaluations, all finished; valid canonical designs only, Analyze.quick with connectivity, Canonical.isCanonical; d_climb's families and moves plus ball clusters, grilles of crossing strips, ball piles and rod lattices). Logs and designs: out\jclimb_1..4.log/.json; best designs in out\judge_worst.json.
+- seed 1 (families only): 10,790,352 units, 13 Cylinders + 11 Blocks; 231 ms verdict.
+- seed 2 (started from A's and B's climbs): 6,424,674, 10 Balls + 13 Cylinders; 243 ms.
+- seed 3 (from worst_P and the climbed set): 9,327,966, 22 Cylinders; 208 ms.
+- seed 4 (grille, balls, lattice): 14,613,764, 14 Balls + 9 CornerWedges; 273 ms (≈ 710 ms Studio).
+A's climb_3 remains the most units overall: 16.5M on the baseline, 14.4M on canonical, 278 ms.
+
+9. Time under a 500k cap (jclimb_time.luau, 4,000 evaluations, on wall time; out\jtime_5.log, .json). Best: 492,978 units, 23.8 ms verdict / 34.7 ms exposure quiet. It looked like 49 ms in the climb, under load and with the bias of picking the slowest of noisy runs.
+
+10. A's quick suite in a copy (repoA\; out\quickA*.log):
+- as delivered: pass 532 / fail 29 / skip 14, the same 29 failures as A listed
+- with canonical frames: 533/28/14 (T-PHY-09 fixed)
+- with canonical + conservative: 533/28/14, the same 28 pins
+
+The three cases the rule admits (sealed cavity, flush layers, k sheets) were not met as new findings.
+===== modelChoice
+Choose canonical (world-fixed) frames at the baseline resolution, plus the conservative probe.
+
+Canonical frames:
+- A Ball's octahedron lies on the world axes.
+- A Cylinder keeps its 32-gon, its circle starting from the world axis most across its own (A's canon code).
+- The model of a spun or turned round copy then coincides with its original's. T-PHY-09 passes, with no cost: P2 is even cheaper, 1.41 against 3.43 ms.
+- The model of a mirror image is the mirror of the model, up to ulps of the COS/SIN table. Mirror tests show no verdict change except the rank flips and ties described in findings.
+
+Resolution: Cylinder 32-gon from Sampling's COS/SIN, Ball octahedron with grid 4 (128 triangles).
+
+Conservative probe:
+- Each half-space keeps sag = h_true(n) − (d − n·c), where h_true is r for a Ball and hx|n·u| + r·sqrt(1 − (n·u)²) for a Cylinder; sag is 0 on polyhedra and caps.
+- Probe piece: n_q·x ≤ d_q + sag_q + EPS − (HIDE_OFFSET + sag_f)·(n_q·n_f).
+- Buried/coincident piece: unchanged, on the inscribed half-spaces.
+- Every sealed rod: 0.000 %. Attack corpus: 0 rows differing from the truth. Plausible false kept 3 → 0.
+- It adds one false Enclosed (a bead at 3.86 %), costs nothing, and the quick suite is unchanged.
+
+Not the finer model:
+- A's fine costs 2–3× on real designs and P4 51 ms (1.22M units, invalid under the cap); the 4 B climbs take 245–542 ms.
+- It removes the plausible band only partly (false Enclosed 192, max 2.82 %, per A).
+- It does not close the sealed-filler window, because cylinders stay at 32 sides below r 0.415.
+- B's 64-gon + grid-8 model narrows the window 4× but costs about 2.4× in units on real designs and about 1 s on hostile designs.
+
+If the lead declines the conservative probe, canonical alone still beats today on accuracy:
+- Attack corpus: 0 tier flips against 48.
+- But it leaves the sealed-filler window open (|dD| up to 0.44, tier flips at r 0.1) as a documented, adversarial-only channel.
+===== capProposal
+VERDICT_WORK_MAX = 500,000 Cover work units per exposure call, in Balance.Geometry (a §16 row). Units are counted the way A counts them today, for now: 1 unit = 2 vertex-against-line tests, plus 4 per model facet. They are summed over all parts' verdicts in part order. Each part's units depend only on that part and its hiders, so the total, and whether it exceeds the cap, do not depend on order.
+
+Mechanism:
+- Cover.shown takes the remaining budget and returns (shown, work, over), stopping between polygons once its work passes the budget.
+- Sampling.exposure subtracts each part's work. When the budget runs out it returns at once with capped = true and no kept row.
+- Analyze stage 3: if exposure.capped, return validation { ok = false, errors = { {code = "TooComplex"} } } with no partId, and measure nothing (measureInvalid cannot apply: no verdict exists).
+- Save stores the design as invalid. The editor (S6) shows "too complex to analyse" with no part highlighted. E_INVALID_BLUEPRINT carries the detail code TooComplex.
+- No verdict is ever changed by the cap, so hidden parts can only make their own design visibly invalid. That keeps the hidden-part channel closed.
+
+Time at the cap (quiet Lune):
+- The slowest design a 4,000-evaluation climb on time under the cap found: 492,978 units, 23.8 ms verdict, 34.7 ms whole exposure; about 62 / 90 ms in Studio at 2.6×.
+- Quiet ns per unit at 100k units or more is 47–63, so a design at the cap should take about 24–32 ms for the verdict, against today's worst of 30.4 ms.
+
+Real designs never reach it:
+- F, C and X fixtures ≤ 14,856 units (C09; 34× under the cap).
+- PlausibleDesigns maximum 141,709 (A's survey).
+- P4 130k units.
+- P1 251k (2× under), the heaviest fixture; it stays valid, so Reference.spec P1–P5 still run.
+
+It invalidates:
+- 3 of worst_P's 11 designs: climbL_1#1 (990k units), climbL_3#1 (1.27M), climbL_2#1 (2.2M).
+- About 13 of the 45 climbed designs: d_hand ×5, d_climb_2#1, #3, d_climb_3#4, #5, d_climb_4#4, d_climb_5#5, d_climb_1#2, P.11#1.
+- All 14 designs from the prototypes' and my climbs (4.5–16.5M units).
+
+Units are permutation-invariant. A mirror image can differ by a few units, so validity can differ only for designs within a few units of the cap.
+
+Before freezing the value:
+- Add the uncounted work to the accounting (findings).
+- Re-run a climb on time under the cap.
+- Set the cap so that the slowest design at the cap stays at or below about 30 ms Lune for the verdict.
+- T-PERF-01 asserts it, and S-PERF-01 measures it in Studio.
+
+If a hard 75 ms Studio total is required for hostile designs, use 400,000 instead: about 19–25 ms verdict, P1 still 1.6× under.
+===== findings
+- major | B's collinear rule is not transitive. Three piece-edge lines g apart, with LINE_TOL/2 < g ≤ LINE_TOL and the pieces taken inner, middle, outer, leave no surviving copy of the shared boundary edge. B's Green's-theorem sum then misses ½·(a×b) of that edge, an error the size of the facet. This opens the hidden-part channel both ways.
+   evidence: Valid C01 swords: a hidden filler (truth 0.000 %) reads 5.625 % under B and is kept, |dD| 0.388 with a tier flip; a part that truly shows 5.000 % reads 0 and is cleaned, |dD| 0.371 with a tier flip. A and the truth are exact on both. On 8,000 fuzz designs B is outside the brute force's rounding bracket on 491 parts (max 2.73 % of a part); A on 0. Files: C:\Users\louis\AppData\Local\Temp\claude\C--Users-louis-Documents-RANDOM-ROBLOX\93ae48b4-72b9-4dc1-aa5d-451af1abf9a0\scratchpad\m2x-judge\atk_chain_sword.luau, \chain.luau, \chain2.luau, \out\atk_chain_sword_s0.2.json, \out\xcheck_tangles7.log, \out\xcheck_tangles11.log.
+   fix: No small fix exists. Green's theorem needs one globally consistent boundary, and tolerance-based edge merging cannot guarantee that in floating point. Reject B; A's per-polygon areas keep every rounding error local.
+- major | In the baseline model each round part's polygon follows its own turn. A geometric copy spun or turned about its own symmetry axis therefore does not coincide with the original on the model, and reads as showing even though it is truly hidden.
+   evidence: Spun Cylinder: 41.807 %, kept (true 0); turned Ball: 51.218 % (true 0); the originals read 58.4 % and 50.4 % (true 100). The same for A and B. Sampling › T-PHY-09 fails. Canonical frames read 0 / 100, and A's quick suite goes from 532 pass / 29 fail to 533/28/14. Logs: C:\Users\louis\AppData\Local\Temp\claude\C--Users-louis-Documents-RANDOM-ROBLOX\93ae48b4-72b9-4dc1-aa5d-451af1abf9a0\scratchpad\m2x-judge\out\atk_model.log and \out\quickA_canon.log.
+   fix: Make A's canon frames the only model: a Ball on the world axes; a Cylinder's circle starts from the world axis most across its own. Drop the part-frame model.
+- major | Every inscribed polyhedral model, the finer one included, has a window one sagitta wide just under HIDE_OFFSET. A round filler sealed by flat walls in that window is truly hidden, but its model facets sit deeper than its true surface, so their probes fall short and it reads as showing.
+   evidence: Rod in 16 flat walls, valid designs. r 0.10, corner gap 0.0118–0.0119: reads 5.9–8.1 %, kept, |dD| 0.238 with a tier flip. r 0.20, corner gap 0.0115–0.0119: reads 5.1–9.5 %, |dD| 0.41–0.44. Truth 0 %. The same for the baseline, canonical and fine models and for B; today's reading cleans them. File: C:\Users\louis\AppData\Local\Temp\claude\C--Users-louis-Documents-RANDOM-ROBLOX\93ae48b4-72b9-4dc1-aa5d-451af1abf9a0\scratchpad\m2x-judge\out\atk_model.log.
+   fix: Conservative probe: proto\CoverC.luau, 22 lines over A's Cover (diff in out\coverC.diff). Each half-space carries sag = the true solid's support minus its own offset (0 on polyhedra and caps). A round target's facet probes HIDE_OFFSET + its sag. A round hider's half-spaces move out by their sag for the probe piece only; the buried/coincident piece keeps the inscribed half-space, so coincident copies still count once. Results: every sealed rod 0.000 %; plausible false kept 3 → 0; attack corpus 0 rows differing from the truth; exact on its model (2.6e-13); invariant; same cost; quick suite unchanged (533/28). Price: one extra false Enclosed in the 12 families (a bead truly 3.86 %).
+- major | Without a cap, the exact reading's worst-case cost is far above today's. Today's reading has no budget to fall back on, so nothing else bounds it.
+   evidence: Measured alone, median of 15. A's verdict reaches 309 ms on the baseline (A's climb_3, 16.5M units) and 273 ms on canonical (my seed 4, 14.6M units), about 0.7–0.8 s in Studio. The whole exposure reaches 322 ms. Today's worst verdict is 30.4 ms; B's worst is 186 ms. Tables: C:\Users\louis\AppData\Local\Temp\claude\C--Users-louis-Documents-RANDOM-ROBLOX\93ae48b4-72b9-4dc1-aa5d-451af1abf9a0\scratchpad\m2x-judge\out\m5_*.log, \out\m5cons_*.log.
+   fix: Add VERDICT_WORK_MAX (see capProposal). Past it the design is invalid with TooComplex; no verdict ever changes.
+- minor | A's work units do not track time evenly. The scan of the shown list in subtract, the per-(facet, hider) box test, measure(), polygon allocations and model building are uncounted or undercounted.
+   evidence: Quiet ns per unit: 47–63 on designs of 100k units or more; 19–40 on hostile multi-million designs; 110–350 on small designs. Instrumented counts (proto\CoverI.luau, prof_cover.luau): the scan is 218k on A's climb_3 against 14.4M units. Under load, 128 ns/unit was seen at 898k units.
+   fix: Count the scan at 1 unit per 8 polygons, the box tests at 1 unit per 8, each new polygon at 1 + vertices/2, and model building at 10 units per facet as B does. Recalibrate TESTS_PER_UNIT and check checkpoint gaps ≤ CHECKPOINT_GAP_LUNE_MS (not measured here; B saw 0.8–1.1 ms gaps on its climbs). Set the cap from a climb on time under the cap.
+- minor | Mirror invariance near the cap: a design and its mirror image can differ in units by a few (fragmentation follows rounding), so a design within a few units of the cap can be valid while its image is not.
+   evidence: protoA measured it; I found no counterexample. Units are bit-invariant under permutation.
+   fix: Accept and document in §17.2. Keep test designs well away from the cap.
+- minor | Under the Z mirror, near-twins stacked in z swap which of them keeps a coincident face, because Sampling.ranked uses cz directly (|cx| comes before cx, but there is no |cz|). This is a property of the rank, not of the reading.
+   evidence: 545 of 8,000 tangle mirror images (Z mostly); 0 on the attack corpus. File: C:\Users\louis\AppData\Local\Temp\claude\C--Users-louis-Documents-RANDOM-ROBLOX\93ae48b4-72b9-4dc1-aa5d-451af1abf9a0\scratchpad\m2x-judge\out\m4_tangles7_canon.log.
+   fix: Optional and separate from this port: rank by |cz| before cz, then re-bless the goldens. Otherwise document it.
+- minor | Exact EPS and HIDE_OFFSET+EPS ties are decided by rounding, in any implementation and in the truth.
+   evidence: 811 fuzz parts (bracket up to 0.459 of a part); 3 mirror verdict flips in 8,000 tie-heavy images.
+   fix: None needed; state in §17.2 that a face exactly on the hide test's boundary is decided by the bits.
+- minor | The Ball grid-4 model leaves an error band near 2 %.
+   evidence: False Enclosed up to 2.945 % (plausible) and 2.515 % (12 families) on canonical; 3.863 % (one bead) with the conservative probe. False kept down to 1.290 % on canonical, 2.002 % with the conservative probe. A's finer model costs 2–6× (P4: 51 ms, 1.22M units, over the cap) and leaves the sealed window open.
+   fix: Keep grid 4. Revisit Balls only if playtests meet beads at 2.5–4 %.
+- minor | A's Cover carries options that are no longer needed: sag/fine, the circle() bisection, BALL_STEPS/CYL_STEPS, and the part-frame model (about 100 lines).
+   evidence: Cover.luau is 742 lines (631 of code).
+   fix: Drop them in the port; canonical becomes unconditional.

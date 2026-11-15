@@ -30,24 +30,32 @@ tests/
 ├── Meta/                  T-META-01…08: source rules, require resolver (§1.3 L2 layer order included), runner
 │                          self-test, project check; GlobalTypes and Tools.spec check the luau-lsp definitions file
 ├── Definitions/           T-DEF-00…07 (all 19 modules), T-BAL-01/02 (BalanceGuard)
-├── Util/, Blueprint/      T-UTIL-01; T-BP-01…05, 12, 13 and T-UD-01 (SaveLoad)
-├── fixtures/              Build (shared record helpers), Blueprints (F1–F5), Adversarial (A01–A24): a Rojo root,
+├── Util/, Blueprint/      T-UTIL-01; T-BP-01…05, 11–14 and T-UD-01 (SaveLoad)
+├── Physics/               T-PHY, T-VAL; Reference.spec compares M2 with S2's prototype (SPEC §4.1); Cover.spec holds
+│                          §4.4's verdict exact on its model (CoverBrute, CoverAttacks), Verdict.spec to closed forms,
+│                          VerdictPrecision.spec (VisibleOracle, PlausibleDesigns) to the truth
+├── ItemRender/            RenderPlan and ItemModelBuilder (on a fake Roblox), and S-PAR-01's own logic
+├── fixtures/              Build (shared record helpers), Blueprints (F1–F5), Adversarial (A01–A24, A28): a Rojo root,
 │                          so Studio tests load them too
 ├── FixtureSet/            the fixture and Gen specs (not tests/Fixtures, which is tests/fixtures on a
 │                          case-insensitive file system)
-├── golden/                balance_fingerprint, definition_ids (`--bless` rewrites them: review the diff)
-└── studio/                Studio bridge (test place only), e2e snippets, reference
+├── golden/                balance_fingerprint, definition_ids, world_build_list (`--bless` rewrites them: review the diff)
+└── studio/                Studio bridge (test place only), e2e snippets (first: e2e/S-PAR-01), reference
 scripts/verify.luau        the local gate: sourcemaps → T-META-07 → luau-lsp → tests
 tools/                     Roblox definitions for luau-lsp, runner self-test roots (tools/README.md)
 docs/spec/
 ├── SPEC-evidence.md       evidence appendix (E-Sx.y): calibration tables, simulations, proofs
-├── prototypes/S1…S8/      throwaway Lune prototypes behind the spec's numbers (not game code)
+├── prototypes/S1…S8/      throwaway Lune prototypes behind the spec's numbers (not game code); tests/Physics/Reference
+│                          compares the build with S2/v2, the reference §4.1 names; S2/verdict is E-S2.11's study,
+│                          S2/cover E-S2.12's (the exact verdict, its cap, worst_designs.luau for T-PERF-01)
 └── review/                review findings, the lead's verdicts and rulings (RULINGS.md)
 vendor/ProfileStore/       vendored ProfileStore (MadStudioRoblox, commit 45c9847, Apache-2.0, never edited)
 ```
 
 The `src/` folders follow SPEC §1.2's module map. M1 filled `src/shared/Definitions/` (all 19 modules, `Manifest`
-and `Validate` included), `Util/Quantize` and `Blueprint/{Schema, Canonical, Quat, Names, Views}`. `Main.server`,
+and `Validate` included), `Util/Quantize` and `Blueprint/{Schema, Canonical, Quat, Names, Views}`. M2 added
+`Physics/{Shapes, Gjk, Cover, Sampling, MassProps, Analyze}` (validation, the exact Enclosed verdict and mass properties; `Analyze` gains edges and steps
+in M3), `Blueprint/{Mirror, WorkSet}` and a minimal `ItemRender/{RenderPlan, ItemModelBuilder}`. `Main.server`,
 `Main.client` and `Net/Remotes` are still the M0 stubs, the other folders hold `.gitkeep` files, and
 `tests/studio/bridge/` holds the two bridge stubs. Later milestones fill them.
 
@@ -93,11 +101,17 @@ Build checklist (SPEC §1.4):
    scope `global`, and test it with a dummy account.
 3. Studio API access only on the separate test experience (SPEC §14).
 4. After the first `rojo serve`, check that Workspace.StreamingEnabled and StarterPlayer.EnableMouseLockOption are false.
+5. Before the first publish: the test scenarios sync `test.project.json` into the game's own place (SPEC §14.10), so
+   reconnect Rojo to `rojo serve` (port 34872) and delete `ReplicatedStorage.BlacksmithTests`,
+   `ServerScriptService.BlacksmithTestServer` and `StarterPlayer.StarterPlayerScripts.BlacksmithTestClient` by hand.
 
 ## Status
 
 **Build phase.** M0 (toolchain, project files, runner, test library, verify, T-META-01…08 on stubs) is built. M1,
 the data contracts (SPEC §18), is built: `Definitions/*` with `Manifest` and `Validate`, `Util/Quantize`,
 `Blueprint/{Schema, Canonical, Quat, Names, Views}`, and the fixtures F1–F5 and A01–A24. T-DEF, T-UTIL,
-T-BP-01…05/12/13, T-UD-01 and T-BAL-01/02 pass, and `lune run scripts/verify` is green. Next: M2, the geometry
-core and engine parity.
+T-BP-01…05/12/13, T-UD-01 and T-BAL-01/02 pass. M2, the geometry core, is built and passes its Lune exit tests:
+T-PHY, T-VAL and T-BP-11/14, with `lune run scripts/verify` green. Its Enclosed verdict is exact on a polyhedral model of
+each part, capped at `VERDICT_WORK_MAX` (SPEC §4.4, E-S2.12). S-PAR-01 (`tests/studio/e2e/S-PAR-01.luau`), engine
+parity of the five shapes, passed in 3 fresh Play sessions of the test place (SPEC §14.10) on 2026-11-14. Next: M3,
+difficulty.

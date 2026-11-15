@@ -1,0 +1,45 @@
+#### fin,witness
+33389 designs, fin vs witness
+moved: {'units': 2403, 'verdict': 4, 'head': 4, 'exposed': 4, 'contact': 4, 'probes': 4, 'probeN': 4}
+
+verdict moved on 4:
+  ballRivet|F3|guardX d0.10 unrot cap0.3000: KKKKKKKK -> KKKKKKKE parts [8]
+  ballRivet|F3|guardX d0.10 z45 cap0.3000: KKKKKKKK -> KKKKKKKE parts [8]
+  ballRivet|F3|guardX d0.10 xy30 cap0.3000: KKKKKKKK -> KKKKKKKE parts [8]
+  ballRivet|F3|guardX d0.10 r47 cap0.3000: KKKKKKKK -> KKKKKKKE parts [8]
+
+anything but the units moved with no verdict moving on 0:
+
+units moved on 2403 (2356 up, 47 down)
+  rod|C09|grip Cylinder d0.04 poke0.0100: 19175.250 -> 18770.125 (-405.125, -2.11 %)
+  ballRivet|F3|guardX d0.10 r47 cap0.2000: 23769.625 -> 23445.875 (-323.750, -1.36 %)
+  ballRivet|F3|guardX d0.10 unrot cap0.2000: 23769.625 -> 23445.875 (-323.750, -1.36 %)
+  ballRivet|F3|guardX d0.10 xy30 cap0.2000: 23769.625 -> 23445.875 (-323.750, -1.36 %)
+  ballRivet|F3|guardX d0.10 z45 cap0.2000: 23769.625 -> 23445.875 (-323.750, -1.36 %)
+  ballRivet|F3|guardX d0.10 z45 cap0.1250: 21301.375 -> 27758.750 (+6457.375, +30.31 %)
+  ballRivet|F3|guardX d0.10 r47 cap0.3000: 21153.375 -> 32636.000 (+11482.625, +54.28 %)
+  ballRivet|F3|guardX d0.10 unrot cap0.3000: 21153.375 -> 32636.000 (+11482.625, +54.28 %)
+  ballRivet|F3|guardX d0.10 xy30 cap0.3000: 21153.375 -> 32636.000 (+11482.625, +54.28 %)
+  ballRivet|F3|guardX d0.10 z45 cap0.3000: 21153.375 -> 32636.000 (+11482.625, +54.28 %)
+  the heaviest valid: fin 104572.875, witness 104616.375
+
+#### fin,vertices
+33389 designs, fin vs vertices
+moved: {'units': 19837}
+
+verdict moved on 0:
+
+anything but the units moved with no verdict moving on 0:
+
+units moved on 19837 (0 up, 19837 down)
+  ballRivet|F3|guardX d0.10 r47 cap0.2000: 23769.625 -> 19768.125 (-4001.500, -16.83 %)
+  ballRivet|F3|guardX d0.10 unrot cap0.2000: 23769.625 -> 19768.125 (-4001.500, -16.83 %)
+  ballRivet|F3|guardX d0.10 xy30 cap0.2000: 23769.625 -> 19768.125 (-4001.500, -16.83 %)
+  ballRivet|F3|guardX d0.10 z45 cap0.2000: 23769.625 -> 19768.125 (-4001.500, -16.83 %)
+  wrapRings|C09|n5 extra0.04 gap0.0010: 104572.875 -> 101248.875 (-3324.000, -3.18 %)
+  ballRivet|C05|guardZ d0.14 z45 cap0.0750: 6043.125 -> 6041.625 (-1.500, -0.02 %)
+  ballRivet|C05|guardZ d0.14 r47 cap0.0600: 6149.500 -> 6148.000 (-1.500, -0.02 %)
+  ballRivet|C05|guardZ d0.14 unrot cap0.0600: 6149.500 -> 6148.000 (-1.500, -0.02 %)
+  ballRivet|C05|guardZ d0.14 xy30 cap0.0600: 6149.500 -> 6148.000 (-1.500, -0.02 %)
+  ballRivet|C05|guardZ d0.14 z45 cap0.0600: 6149.500 -> 6148.000 (-1.500, -0.02 %)
+  the heaviest valid: fin 104572.875, vertices 101248.875

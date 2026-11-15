@@ -1,0 +1,1 @@
+seed 1: 300 designs, 3285 parts checked, 0 past the edge limit; outside a tie the worst 2.5e-15 of a part (design 266 part 12 (Cylinder)); 0 settled by the bracket (up to 0), 0 facets outside it

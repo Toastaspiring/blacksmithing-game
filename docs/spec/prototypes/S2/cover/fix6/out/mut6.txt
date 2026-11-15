@@ -1,0 +1,83 @@
+SURVIVED V1 584 HAND rim: cutoff 1e-6 (V1's) | RESULT pass=2 fail=0; RESULT pass=1 fail=0
+SURVIVED V1 584 HAND rim: cutoff 1e-4 | RESULT pass=2 fail=0; RESULT pass=1 fail=0
+KILLED   V1 584 HAND rim: cutoff 1e-3 | RESULT pass=1 fail=1; RESULT pass=1 fail=0
+         FAIL  Physics/Cover › (a) exact on its model, against a brute force: tilted rods in a turned Cylinder, and near its axis (472.9 ms) :: r 0.10 turned 90° and leaned 0.03°, shifted 0.000, -1.0e-07 out, higher false: 0.0024268362497526378 outside [0, 0]: expected truthy, got false
+KILLED   V1 584 HAND rim: cutoff 0.03 | RESULT pass=1 fail=1; RESULT pass=1 fail=0
+         FAIL  Physics/Cover › (a) exact on its model, against a brute force: tilted rods in a turned Cylinder, and near its axis (519.3 ms) :: r 0.10 turned 90° and leaned 0.03°, shifted 0.000, -1.0e-07 out, higher false: 0.0024268362497526378 outside [0, 0]: expected truthy, got false
+SURVIVED V1 584 HAND rim: cutoff 1e-12 | RESULT pass=2 fail=0; RESULT pass=1 fail=0
+SURVIVED V1 595 HAND rim: 30 halvings | RESULT pass=2 fail=0; RESULT pass=1 fail=0
+SURVIVED V1 595 HAND rim: 20 halvings | RESULT pass=2 fail=0; RESULT pass=1 fail=0
+SURVIVED V1 595 HAND rim: 15 halvings | RESULT pass=2 fail=0; RESULT pass=1 fail=0
+KILLED   V1 621 HAND bounds: upper 1e-3 high (more open) | RESULT pass=0 fail=2; RESULT pass=1 fail=0
+         FAIL  Physics/Cover › (a) exact on its model, against a brute force: tilted rods and pucks in a Cylinder, a hair inside and out, both ranks (966.8 ms) :: checked 720, held 360, caps searched 554: expected truthy, got false
+         FAIL  Physics/Cover › (a) exact on its model, against a brute force: tilted rods in a turned Cylinder, and near its axis (980.7 ms) :: checked 480 and 240, held 240 and 120, caps searched 394 and 222: expected truthy, got false
+KILLED   V1 626 HAND bounds: lower from the point away from p | RESULT pass=0 fail=2; RESULT pass=1 fail=0
+         FAIL  Physics/Cover › (a) exact on its model, against a brute force: tilted rods and pucks in a Cylinder, a hair inside and out, both ranks (972.0 ms) :: the readings' units: expected 709562, got 722610
+         FAIL  Physics/Cover › (a) exact on its model, against a brute force: tilted rods in a turned Cylinder, and near its axis (938.4 ms) :: the readings' units 485779 and 230259: expected truthy, got false
+KILLED   V1 626 HAND bounds: lower from a turned point | RESULT pass=0 fail=2; RESULT pass=1 fail=0
+         FAIL  Physics/Cover › (a) exact on its model, against a brute force: tilted rods and pucks in a Cylinder, a hair inside and out, both ranks (929.5 ms) :: the readings' units: expected 709562, got 722610
+         FAIL  Physics/Cover › (a) exact on its model, against a brute force: tilted rods in a turned Cylinder, and near its axis (986.3 ms) :: the readings' units 485779 and 230259: expected truthy, got false
+SURVIVED V1 625 HAND bounds: divide by pl = 0 | RESULT pass=2 fail=0; RESULT pass=1 fail=0
+KILLED   V1 631 HAND bounds: lower 1e-9 low | RESULT pass=0 fail=2; RESULT pass=1 fail=0
+         FAIL  Physics/Cover › (a) exact on its model, against a brute force: tilted rods and pucks in a Cylinder, a hair inside and out, both ranks (968.6 ms) :: the readings' units: expected 709562, got 711186
+         FAIL  Physics/Cover › (a) exact on its model, against a brute force: tilted rods in a turned Cylinder, and near its axis (941.2 ms) :: the readings' units 478835 and 226899: expected truthy, got false
+KILLED   V1 673 HAND units: the second cap's search uncharged | RESULT pass=0 fail=2; RESULT pass=1 fail=0
+         FAIL  Physics/Cover › (a) exact on its model, against a brute force: tilted rods and pucks in a Cylinder, a hair inside and out, both ranks (945.1 ms) :: checked 720, held 360, caps searched 68: expected truthy, got false
+         FAIL  Physics/Cover › (a) exact on its model, against a brute force: tilted rods in a turned Cylinder, and near its axis (480.2 ms) :: r 0.10 turned 90° and leaned 0.03°, shifted 0.000, -1.0e-07 out, moved 2e-8, higher false: 0 for 28.5 units one way, 0 for 0.5 the other: expected truthy, got false
+KILLED   V1 673 HAND units: one charge for any open | RESULT pass=0 fail=2; RESULT pass=1 fail=0
+         FAIL  Physics/Cover › (a) exact on its model, against a brute force: tilted rods and pucks in a Cylinder, a hair inside and out, both ranks (950.3 ms) :: checked 720, held 360, caps searched 102: expected truthy, got false
+         FAIL  Physics/Cover › (a) exact on its model, against a brute force: tilted rods in a turned Cylinder, and near its axis (942.5 ms) :: checked 480 and 240, held 240 and 120, caps searched 60 and 6: expected truthy, got false
+KILLED   V1 947 HAND rule-A loop: no report | RESULT pass=2 fail=0; RESULT pass=0 fail=1
+         FAIL  Physics/Cover › (f) a run of searched cap rims reports in stretches of SPEND_EVERY and one test (3.6 ms) :: the largest single report: 579.125: expected truthy, got false
+SURVIVED V1 569 <= -> < @24 | RESULT pass=2 fail=0; RESULT pass=1 fail=0
+KILLED   V1 582 * -> / @22 | RESULT pass=1 fail=1; RESULT pass=1 fail=0
+         FAIL  Physics/Cover › (a) exact on its model, against a brute force: tilted rods in a turned Cylinder, and near its axis (9.4 ms) :: r 0.03 turned 2° and leaned 0°, shifted 0.000, -1.0e-07 out, higher false: 0.000765293603629016 outside [0, 0]: expected truthy, got false
+KILLED   V1 582 - -> + @27 | RESULT pass=1 fail=1; RESULT pass=1 fail=0
+         FAIL  Physics/Cover › (a) exact on its model, against a brute force: tilted rods in a turned Cylinder, and near its axis (8.0 ms) :: r 0.03 turned 2° and leaned 0°, shifted 0.000, -1.0e-07 out, higher false: 0.000765293603629016 outside [0, 0]: expected truthy, got false
+SURVIVED V1 584 <= -> < @6 | RESULT pass=2 fail=0; RESULT pass=1 fail=0
+SURVIVED V1 584 literal 1e-8 -> 2e-08 | RESULT pass=2 fail=0; RESULT pass=1 fail=0
+SURVIVED V1 585 * -> / @16 | RESULT pass=2 fail=0; RESULT pass=1 fail=0
+SURVIVED V1 585 + -> - @21 | RESULT pass=2 fail=0; RESULT pass=1 fail=0
+SURVIVED V1 585 drop statement | RESULT pass=2 fail=0; RESULT pass=1 fail=0
+KILLED   V1 589 + -> - @19 | RESULT pass=1 fail=1; RESULT pass=1 fail=0
+         FAIL  Physics/Cover › (a) exact on its model, against a brute force: tilted rods in a turned Cylinder, and near its axis (8.4 ms) :: r 0.03 turned 2° and leaned 0°, shifted 0.000, -1.0e-07 out, higher false: 0.000765293603629016 outside [0, 0]: expected truthy, got false
+SURVIVED V1 594 literal 1 -> 2 | RESULT pass=2 fail=0; RESULT pass=1 fail=0
+SURVIVED V1 597 > -> >= @54 | RESULT pass=2 fail=0; RESULT pass=1 fail=0
+KILLED   V1 619 * -> / @18 | RESULT pass=0 fail=2; RESULT pass=1 fail=0
+         FAIL  Physics/Cover › (a) exact on its model, against a brute force: tilted rods and pucks in a Cylinder, a hair inside and out, both ranks (964.3 ms) :: checked 720, held 360, caps searched 720: expected truthy, got false
+         FAIL  Physics/Cover › (a) exact on its model, against a brute force: tilted rods in a turned Cylinder, and near its axis (1020.9 ms) :: checked 480 and 240, held 240 and 120, caps searched 440 and 240: expected truthy, got false
+SURVIVED V1 622 literal 1 -> 2 | RESULT pass=2 fail=0; RESULT pass=1 fail=0
+SURVIVED V1 624 literal 1 -> 2 | RESULT pass=2 fail=0; RESULT pass=1 fail=0
+SURVIVED V1 625 > -> >= @6 | RESULT pass=2 fail=0; RESULT pass=1 fail=0
+KILLED   V1 625 literal 0 -> 1 | RESULT pass=0 fail=2; RESULT pass=1 fail=0
+         FAIL  Physics/Cover › (a) exact on its model, against a brute force: tilted rods and pucks in a Cylinder, a hair inside and out, both ranks (2.7 ms) :: r 0.03 turned 0° and leaned 0°, shifted 0.000, -1.0e-09 out, moved 2e-8, higher false: 0.000286551704309689 for 2568.75 units one way, 0.0002865517043096069 for 2624.75 the other: expected truthy, got
+         FAIL  Physics/Cover › (a) exact on its model, against a brute force: tilted rods in a turned Cylinder, and near its axis (25.6 ms) :: r 0.03 turned 2° and leaned 0°, shifted 0.000, 1.0e-06 out, moved 2e-8, higher true: 0.0007655428815343596 for 3232 units one way, 0.0007655428815351973 for 3288 the other: expected truthy, got false
+KILLED   V1 626 / -> * @12 | RESULT pass=0 fail=2; RESULT pass=1 fail=0
+         FAIL  Physics/Cover › (a) exact on its model, against a brute force: tilted rods and pucks in a Cylinder, a hair inside and out, both ranks (986.9 ms) :: the readings' units: expected 709562, got 722610
+         FAIL  Physics/Cover › (a) exact on its model, against a brute force: tilted rods in a turned Cylinder, and near its axis (1024.9 ms) :: the readings' units 485779 and 230259: expected truthy, got false
+KILLED   V1 626 / -> * @21 | RESULT pass=0 fail=2; RESULT pass=1 fail=0
+         FAIL  Physics/Cover › (a) exact on its model, against a brute force: tilted rods and pucks in a Cylinder, a hair inside and out, both ranks (1082.2 ms :: the readings' units: expected 709562, got 713986
+         FAIL  Physics/Cover › (a) exact on its model, against a brute force: tilted rods in a turned Cylinder, and near its axis (1000.1 ms) :: the readings' units 480291 and 226227: expected truthy, got false
+KILLED   V1 626 drop statement | RESULT pass=0 fail=2; RESULT pass=1 fail=0
+         FAIL  Physics/Cover › (a) exact on its model, against a brute force: tilted rods and pucks in a Cylinder, a hair inside and out, both ranks (2.5 ms) :: r 0.03 turned 0° and leaned 0°, shifted 0.000, -1.0e-09 out, moved 2e-8, higher false: 0.000286551704309689 for 2568.75 units one way, 0.0002865517043096069 for 2624.75 the other: expected truthy, got
+         FAIL  Physics/Cover › (a) exact on its model, against a brute force: tilted rods in a turned Cylinder, and near its axis (25.6 ms) :: r 0.03 turned 2° and leaned 0°, shifted 0.000, 1.0e-06 out, moved 2e-8, higher true: 0.0007655428815343596 for 3232 units one way, 0.0007655428815351973 for 3288 the other: expected truthy, got false
+KILLED   V1 629 + -> - @19 | RESULT pass=1 fail=1; RESULT pass=1 fail=0
+         FAIL  Physics/Cover › (a) exact on its model, against a brute force: tilted rods in a turned Cylinder, and near its axis (8.0 ms) :: r 0.03 turned 2° and leaned 0°, shifted 0.000, -1.0e-07 out, higher false: 0.000765293603629016 outside [0, 0]: expected truthy, got false
+KILLED   V1 630 + -> - @22 | RESULT pass=0 fail=2; RESULT pass=1 fail=0
+         FAIL  Physics/Cover › (a) exact on its model, against a brute force: tilted rods and pucks in a Cylinder, a hair inside and out, both ranks (961.0 ms) :: the readings' units: expected 709562, got 722610
+         FAIL  Physics/Cover › (a) exact on its model, against a brute force: tilted rods in a turned Cylinder, and near its axis (8.0 ms) :: r 0.03 turned 2° and leaned 0°, shifted 0.000, -1.0e-07 out, higher false: 0.000765293603629016 outside [0, 0]: expected truthy, got false
+SURVIVED V1 658 - -> + @24 | RESULT pass=2 fail=0; RESULT pass=1 fail=0
+KILLED   V1 660 + -> - @26 | RESULT pass=1 fail=1; RESULT pass=1 fail=0
+         FAIL  Physics/Cover › (a) exact on its model, against a brute force: tilted rods in a turned Cylinder, and near its axis (217.8 ms) :: r 0.03 turned 90° and leaned 0.03°, shifted -0.040, -1.0e-09 out, higher true: 0.002178311956616076 outside [0, 0]: expected truthy, got false
+SURVIVED V1 948 literal 0 -> 1 | RESULT pass=2 fail=0; RESULT pass=1 fail=0
+SURVIVED V1 948 drop statement | RESULT pass=2 fail=0; RESULT pass=1 fail=0
+KILLED   V2 units: only the caps actually searched (order-dependent) | RESULT pass=0 fail=2; RESULT pass=1 fail=0
+         FAIL  Physics/Cover › (a) exact on its model, against a brute force: tilted rods and pucks in a Cylinder, a hair inside and out, both ranks (180.4 ms) :: r 0.03 turned 30° and leaned 0°, shifted 0.000, -1.0e-07 out, moved 2e-8, higher false: 0.0008748929855965077 for 2765.625 units one way, 0.0008748929855962909 for 2737.625 the other: expected truthy,
+         FAIL  Physics/Cover › (a) exact on its model, against a brute force: tilted rods in a turned Cylinder, and near its axis (84.7 ms) :: r 0.03 turned 60° and leaned 0°, shifted 0.000, -1.0e-07 out, moved 2e-8, higher false: 0.0014644726315921131 for 2630.75 units one way, 0.0014644726315918022 for 2602.75 the other: expected truthy, g
+KILLED   V2 lower bound always P's local Y (pl ignored) | RESULT pass=0 fail=2; RESULT pass=1 fail=0
+         FAIL  Physics/Cover › (a) exact on its model, against a brute force: tilted rods and pucks in a Cylinder, a hair inside and out, both ranks (2.4 ms) :: r 0.03 turned 0° and leaned 0°, shifted 0.000, -1.0e-09 out, moved 2e-8, higher false: 0.000286551704309689 for 2568.75 units one way, 0.0002865517043096069 for 2624.75 the other: expected truthy, got
+         FAIL  Physics/Cover › (a) exact on its model, against a brute force: tilted rods in a turned Cylinder, and near its axis (26.8 ms) :: r 0.03 turned 2° and leaned 0°, shifted 0.000, 1.0e-06 out, moved 2e-8, higher true: 0.0007655428815343596 for 3232 units one way, 0.0007655428815351973 for 3288 the other: expected truthy, got false
+KILLED   V2 rule A's loop reports removed | RESULT pass=2 fail=0; RESULT pass=0 fail=1
+         FAIL  Physics/Cover › (f) a run of searched cap rims reports in stretches of SPEND_EVERY and one test (4.0 ms) :: the largest single report: 579.125: expected truthy, got false
+SURVIVED V2 parallel cut 1e-8 -> 0 (search at any tilt) | RESULT pass=2 fail=0; RESULT pass=1 fail=0
+killed 23 of 45

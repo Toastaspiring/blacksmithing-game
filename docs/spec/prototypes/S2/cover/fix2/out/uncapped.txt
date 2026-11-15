@@ -1,0 +1,2 @@
+A28: 1066373.625 units; with the cap 700256.000
+tooComplex: 1244054 – 14995268 units uncapped; with the cap each stops at most 255.875 past it

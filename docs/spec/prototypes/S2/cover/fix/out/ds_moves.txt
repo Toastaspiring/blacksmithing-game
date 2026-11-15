@@ -1,0 +1,878 @@
+# fix/dsweep.luau: D before (the build before, V1's emulator) and now, on the 12,547 plausible designs whose measure moved; rows with a tier flip or |dD| >= 0.01
+designs 12547 D moves 7664 tier flips 95 >= 0.01 816 >= 0.05 8 worst 0.1769
+33005	grille|1.0 x 2.8 x 0.08 6 x 8 f0.9	0.176900	Sharpening	false	Sm 0.5003 H, Ha 0.3855 H, Sh 0.0000 N	Sm 0.5003 H, Ha 0.3855 H, Sh 0.1769 N
+32978	grille|1.0 x 2.8 x 0.02 6 x 8 f0.9	0.176900	Sharpening	false	Sm 0.4479 H, Ha 0.3855 H, Sh 0.0000 N	Sm 0.4479 H, Ha 0.3855 H, Sh 0.1769 N
+32996	grille|1.0 x 2.8 x 0.08 4 x 8 f0.9	0.076800	Sharpening	false	Sm 0.5118 H, Ha 0.3855 H, Sh 0.0000 N	Sm 0.5118 H, Ha 0.3855 H, Sh 0.0768 N
+32969	grille|1.0 x 2.8 x 0.02 4 x 8 f0.9	0.076800	Sharpening	false	Sm 0.4594 H, Ha 0.3855 H, Sh 0.0000 N	Sm 0.4594 H, Ha 0.3855 H, Sh 0.0768 N
+32959	grille|1.0 x 2.8 x 0.02 2 x 8 f0.7	0.061100	Hammering	false	Sm 0.5251 H, Ha 0.0735 N, Sh 0.0000 N	Sm 0.5251 H, Ha 0.0124 N, Sh 0.0000 N
+23164	fuller|w0.2 L2.5 t0.02 c0.050 g0.05 at0.5 twin	0.059700	Sharpening	false	Sm 0.0897 N, Ha 0.3218 H, Sh 0.0936 N	Sm 0.0897 N, Ha 0.3486 H, Sh 0.1533 N
+32967	grille|1.0 x 2.8 x 0.02 4 x 8 f0.5	0.057800	Hammering	false	Sm 0.5024 H, Ha 0.2149 H, Sh 0.0000 N	Sm 0.5024 H, Ha 0.2727 H, Sh 0.0000 N
+28278	fuller|w0.8 L2.5 t0.02 c0.030 g0.01 at0.7 twin	0.051500	Hammering	false	Sm 0.2482 H, Ha 0.4644 H, Sh 0.0460 N	Sm 0.2482 H, Ha 0.4129 H, Sh 0.0138 N
+32853	grille|0.6 x 2.8 x 0.02 4 x 2 f0.5	0.045000	Hammering	false	Sm 0.2949 H, Ha 0.1115 N, Sh 0.0000 N	Sm 0.2949 H, Ha 0.0665 N, Sh 0.0000 N
+32976	grille|1.0 x 2.8 x 0.02 6 x 8 f0.5	0.044000	Hammering	false	Sm 0.4907 H, Ha 0.3126 H, Sh 0.0000 N	Sm 0.4907 H, Ha 0.3566 H, Sh 0.0000 N
+31976	ribbed|w1.2 L1.5 k0.02 edges true g0.05 at0.456 pair	0.042800	Hammering	false	Sm 0.2224 H, Ha 0.3040 H, Sh 0.0746 N	Sm 0.2224 H, Ha 0.2612 H, Sh 0.0543 N
+23645	fuller|w0.2 L2.0 t0.02 c0.050 g0.05 at0.2 one	0.041300	Hammering	false	Sm 0.0870 N, Ha 0.1309 N, Sh 0.0018 N	Sm 0.0870 N, Ha 0.0896 N, Sh 0.0018 N
+23134	fuller|w0.2 L2.5 t0.02 c0.050 g0.02 at0.2 one	0.040700	Hammering	false	Sm 0.1171 N, Ha 0.1527 N, Sh 0.0000 N	Sm 0.1171 N, Ha 0.1120 N, Sh 0.0000 N
+23136	fuller|w0.2 L2.5 t0.02 c0.050 g0.02 at0.3 one	0.039400	Hammering	false	Sm 0.1171 N, Ha 0.1528 N, Sh 0.0000 N	Sm 0.1171 N, Ha 0.1134 N, Sh 0.0000 N
+31966	ribbed|w1.2 L1.5 k0.02 edges true g0.02 at0.552 pair	0.039200	Hammering	false	Sm 0.2295 H, Ha 0.2963 H, Sh 0.1021 N	Sm 0.2295 H, Ha 0.2571 H, Sh 0.0845 N
+28366	fuller|w0.8 L2.5 t0.02 c0.050 g0.01 at0.7 twin	0.037300	Hammering	false	Sm 0.3683 H, Ha 0.0914 N, Sh 0.0000 N	Sm 0.3683 H, Ha 0.0541 N, Sh 0.0000 N
+32798	grille|0.6 x 1.2 x 0.02 2 x 8 f0.9	0.037200	Hammering	false	Sm 0.0858 N, Ha 0.2730 H, Sh 0.0000 N	Sm 0.0858 N, Ha 0.3102 H, Sh 0.0000 N
+23135	fuller|w0.2 L2.5 t0.02 c0.050 g0.02 at0.2 twin	0.037100	Sharpening	false	Sm 0.1102 N, Ha 0.5068 H, Sh 0.0432 N	Sm 0.1102 N, Ha 0.4786 H, Sh 0.0061 N
+23137	fuller|w0.2 L2.5 t0.02 c0.050 g0.02 at0.3 twin	0.036800	Sharpening	false	Sm 0.1102 N, Ha 0.5262 H, Sh 0.0432 N	Sm 0.1102 N, Ha 0.4982 H, Sh 0.0064 N
+29070	fuller|w0.8 L2.0 t0.02 c0.030 g0.01 at0.7 twin	0.035900	Hammering	false	Sm 0.2001 H, Ha 0.1801 N, Sh 0.0000 N	Sm 0.2001 H, Ha 0.1442 N, Sh 0.0000 N
+23141	fuller|w0.2 L2.5 t0.02 c0.050 g0.02 at0.5 twin	0.034700	Hammering	true	Sm 0.1103 N, Ha 0.1669 N, Sh 0.0000 N	Sm 0.1103 N, Ha 0.2016 H, Sh 0.0169 N
+28380	fuller|w0.8 L2.5 t0.02 c0.050 g0.02 at0.7 one	0.034000	Hammering	false	Sm 0.3682 H, Ha 0.1586 N, Sh 0.0000 N	Sm 0.3682 H, Ha 0.1246 N, Sh 0.0000 N
+28354	fuller|w0.8 L2.5 t0.02 c0.050 g0.01 at0.1 twin	0.032900	Hammering	false	Sm 0.3681 H, Ha 0.1223 N, Sh 0.0000 N	Sm 0.3681 H, Ha 0.0894 N, Sh 0.0000 N
+28292	fuller|w0.8 L2.5 t0.02 c0.030 g0.02 at0.7 one	0.032200	Sharpening	false	Sm 0.2481 H, Ha 0.4242 H, Sh 0.0998 N	Sm 0.2481 H, Ha 0.4108 H, Sh 0.0676 N
+29169	fuller|w0.8 L2.0 t0.02 c0.050 g0.02 at0.5 twin	0.032100	Hammering	false	Sm 0.2906 H, Ha 0.1510 N, Sh 0.0000 N	Sm 0.2906 H, Ha 0.1189 N, Sh 0.0000 N
+25390	fuller|w0.4 L2.5 t0.02 c0.050 g0.08 at0.0 one	0.030000	Hammering	true	Sm 0.1802 N, Ha 0.2108 H, Sh 0.0000 N	Sm 0.1802 N, Ha 0.1808 N, Sh 0.0000 N
+32897	grille|0.6 x 2.8 x 0.08 6 x 8 f0.9	0.029200	Sharpening	false	Sm 0.3032 H, Ha 0.3855 H, Sh 0.0000 N	Sm 0.3032 H, Ha 0.3855 H, Sh 0.0292 N
+32870	grille|0.6 x 2.8 x 0.02 6 x 8 f0.9	0.029200	Sharpening	false	Sm 0.2563 H, Ha 0.3855 H, Sh 0.0000 N	Sm 0.2563 H, Ha 0.3855 H, Sh 0.0292 N
+32968	grille|1.0 x 2.8 x 0.02 4 x 8 f0.7	0.028800	Hammering	true	Sm 0.5097 H, Ha 0.2054 H, Sh 0.0000 N	Sm 0.5097 H, Ha 0.1766 N, Sh 0.0000 N
+32895	grille|0.6 x 2.8 x 0.08 6 x 8 f0.5	0.028700	Hammering	false	Sm 0.4763 H, Ha 0.1248 N, Sh 0.0000 N	Sm 0.4763 H, Ha 0.0961 N, Sh 0.0000 N
+31978	ribbed|w1.2 L1.5 k0.02 edges true g0.05 at0.552 pair	0.028600	Hammering	false	Sm 0.2224 H, Ha 0.3669 H, Sh 0.0819 N	Sm 0.2224 H, Ha 0.3383 H, Sh 0.0754 N
+23163	fuller|w0.2 L2.5 t0.02 c0.050 g0.05 at0.5 one	0.027500	Hammering	false	Sm 0.1068 N, Ha 0.0928 N, Sh 0.0000 N	Sm 0.1068 N, Ha 0.1203 N, Sh 0.0000 N
+32923	grille|1.0 x 1.2 x 0.02 6 x 8 f0.7	0.027400	Hammering	false	Sm 0.1906 N, Ha 0.0301 N, Sh 0.0000 N	Sm 0.1906 N, Ha 0.0027 N, Sh 0.0000 N
+31962	ribbed|w1.2 L1.5 k0.02 edges true g0.02 at0.360 pair	0.026400	Hammering	true	Sm 0.2296 H, Ha 0.2112 H, Sh 0.0226 N	Sm 0.2296 H, Ha 0.1848 N, Sh 0.0175 N
+23154	fuller|w0.2 L2.5 t0.02 c0.050 g0.03 at0.5 twin	0.025300	Sharpening	false	Sm 0.1034 N, Ha 0.2066 H, Sh 0.0059 N	Sm 0.1034 N, Ha 0.2171 H, Sh 0.0312 N
+32961	grille|1.0 x 2.8 x 0.02 4 x 2 f0.5	0.024800	Hammering	false	Sm 0.5060 H, Ha 0.1602 N, Sh 0.0000 N	Sm 0.5060 H, Ha 0.1850 N, Sh 0.0000 N
+24622	fuller|w0.3 L2.0 t0.02 c0.015 g0.05 at0.3 twin	0.024700	Sharpening	false	Sm 0.0514 N, Ha 0.3470 H, Sh 0.1379 N	Sm 0.0514 N, Ha 0.3584 H, Sh 0.1626 N
+28381	fuller|w0.8 L2.5 t0.02 c0.050 g0.02 at0.7 twin	0.024100	Hammering	false	Sm 0.3614 H, Ha 0.3250 H, Sh 0.0547 N	Sm 0.3614 H, Ha 0.3009 H, Sh 0.0380 N
+23144	fuller|w0.2 L2.5 t0.02 c0.050 g0.02 at0.7 one	0.023200	Hammering	false	Sm 0.1171 N, Ha 0.3151 H, Sh 0.0000 N	Sm 0.1171 N, Ha 0.2919 H, Sh 0.0000 N
+32850	grille|0.6 x 2.8 x 0.02 2 x 8 f0.5	0.023100	Hammering	false	Sm 0.2812 H, Ha 0.1829 N, Sh 0.0000 N	Sm 0.2812 H, Ha 0.1598 N, Sh 0.0000 N
+31974	ribbed|w1.2 L1.5 k0.02 edges true g0.05 at0.360 pair	0.023000	Hammering	false	Sm 0.2224 H, Ha 0.2785 H, Sh 0.0548 N	Sm 0.2224 H, Ha 0.2555 H, Sh 0.0490 N
+30691	fuller|w1.0 L2.0 t0.02 c0.030 g0.03 at0.6 one	0.022900	Hammering	false	Sm 0.2430 H, Ha 0.2595 H, Sh 0.0460 N	Sm 0.2430 H, Ha 0.2366 H, Sh 0.0423 N
+30015	fuller|w1.0 L2.5 t0.02 c0.050 g0.12 at0.2 one	0.022900	Hammering	false	Sm 0.4175 H, Ha 0.2308 H, Sh 0.0073 N	Sm 0.4175 H, Ha 0.2079 H, Sh 0.0073 N
+32977	grille|1.0 x 2.8 x 0.02 6 x 8 f0.7	0.022700	Hammering	false	Sm 0.5008 H, Ha 0.2551 H, Sh 0.0000 N	Sm 0.5008 H, Ha 0.2778 H, Sh 0.0000 N
+32819	grille|0.6 x 1.2 x 0.08 2 x 2 f0.9	0.022600	Hammering	false	Sm 0.1076 N, Ha 0.2678 H, Sh 0.0000 N	Sm 0.1076 N, Ha 0.2904 H, Sh 0.0000 N
+21902	laminate|F5|k0.02 wf2.0 proud0.0200 capfalse	0.022600	Sharpening	true	Sm 0.0664 N, Ha 0.1879 N, Sh 0.1836 N	Sm 0.0664 N, Ha 0.2023 H, Sh 0.2062 H
+11464	laminate|F1|k0.02 wf2.0 proud0.0200 capfalse	0.022600	Sharpening	true	Sm 0.0664 N, Ha 0.1879 N, Sh 0.1836 N	Sm 0.0664 N, Ha 0.2023 H, Sh 0.2062 H
+21903	laminate|F5|k0.02 wf2.0 proud0.0200 captrue	0.022400	Sharpening	true	Sm 0.0672 N, Ha 0.1939 N, Sh 0.1930 N	Sm 0.0672 N, Ha 0.2083 H, Sh 0.2154 H
+11465	laminate|F1|k0.02 wf2.0 proud0.0200 captrue	0.022400	Sharpening	true	Sm 0.0672 N, Ha 0.1939 N, Sh 0.1930 N	Sm 0.0672 N, Ha 0.2083 H, Sh 0.2154 H
+30781	fuller|w1.0 L2.0 t0.02 c0.050 g0.03 at0.6 twin	0.022200	Hammering	false	Sm 0.3523 H, Ha 0.1889 N, Sh 0.0000 N	Sm 0.3523 H, Ha 0.1667 N, Sh 0.0000 N
+29208	fuller|w0.8 L2.0 t0.02 c0.050 g0.08 at0.3 one	0.021800	Hammering	false	Sm 0.2798 H, Ha 0.0850 N, Sh 0.0018 N	Sm 0.2798 H, Ha 0.0632 N, Sh 0.0018 N
+30692	fuller|w1.0 L2.0 t0.02 c0.030 g0.03 at0.6 twin	0.021700	Hammering	false	Sm 0.2382 H, Ha 0.3000 H, Sh 0.0847 N	Sm 0.2382 H, Ha 0.2783 H, Sh 0.0817 N
+28434	fuller|w0.8 L2.5 t0.02 c0.050 g0.12 at0.5 one	0.021600	Hammering	false	Sm 0.3339 H, Ha 0.2327 H, Sh 0.0143 N	Sm 0.3339 H, Ha 0.2111 H, Sh 0.0143 N
+31958	ribbed|w1.2 L1.5 k0.02 edges true g0.02 at0.168 pair	0.021300	Hammering	false	Sm 0.2299 H, Ha 0.2623 H, Sh 0.0398 N	Sm 0.2299 H, Ha 0.2410 H, Sh 0.0395 N
+31956	ribbed|w1.2 L1.5 k0.02 edges true g0.02 at0.072 pair	0.021300	Hammering	false	Sm 0.2299 H, Ha 0.2607 H, Sh 0.0382 N	Sm 0.2299 H, Ha 0.2394 H, Sh 0.0380 N
+30684	fuller|w1.0 L2.0 t0.02 c0.030 g0.03 at0.2 twin	0.021300	Hammering	false	Sm 0.2382 H, Ha 0.2645 H, Sh 0.0508 N	Sm 0.2382 H, Ha 0.2432 H, Sh 0.0490 N
+30766	fuller|w1.0 L2.0 t0.02 c0.050 g0.02 at0.6 twin	0.021200	Hammering	false	Sm 0.3576 H, Ha 0.1926 N, Sh 0.0000 N	Sm 0.3576 H, Ha 0.1714 N, Sh 0.0000 N
+29060	fuller|w0.8 L2.0 t0.02 c0.030 g0.01 at0.2 twin	0.021200	Hammering	false	Sm 0.2001 H, Ha 0.1278 N, Sh 0.0000 N	Sm 0.2001 H, Ha 0.1066 N, Sh 0.0000 N
+28395	fuller|w0.8 L2.5 t0.02 c0.050 g0.03 at0.7 one	0.021200	Hammering	false	Sm 0.3647 H, Ha 0.1571 N, Sh 0.0000 N	Sm 0.3647 H, Ha 0.1359 N, Sh 0.0000 N
+31972	ribbed|w1.2 L1.5 k0.02 edges true g0.05 at0.264 pair	0.021100	Hammering	false	Sm 0.2224 H, Ha 0.2793 H, Sh 0.0503 N	Sm 0.2224 H, Ha 0.2582 H, Sh 0.0464 N
+31964	ribbed|w1.2 L1.5 k0.02 edges true g0.02 at0.456 pair	0.021000	Hammering	false	Sm 0.2295 H, Ha 0.1981 N, Sh 0.0076 N	Sm 0.2295 H, Ha 0.1771 N, Sh 0.0076 N
+30774	fuller|w1.0 L2.0 t0.02 c0.050 g0.03 at0.3 one	0.021000	Hammering	false	Sm 0.3605 H, Ha 0.0775 N, Sh 0.0000 N	Sm 0.3605 H, Ha 0.0565 N, Sh 0.0000 N
+30690	fuller|w1.0 L2.0 t0.02 c0.030 g0.03 at0.5 twin	0.021000	Hammering	false	Sm 0.2379 H, Ha 0.2651 H, Sh 0.0511 N	Sm 0.2379 H, Ha 0.2441 H, Sh 0.0493 N
+30675	fuller|w1.0 L2.0 t0.02 c0.030 g0.02 at0.5 twin	0.021000	Hammering	false	Sm 0.2413 H, Ha 0.2727 H, Sh 0.0579 N	Sm 0.2413 H, Ha 0.2517 H, Sh 0.0561 N
+23640	fuller|w0.2 L2.0 t0.02 c0.050 g0.03 at0.5 twin	0.021000	Sharpening	false	Sm 0.0842 N, Ha 0.1451 N, Sh 0.0325 N	Sm 0.0842 N, Ha 0.1288 N, Sh 0.0115 N
+30669	fuller|w1.0 L2.0 t0.02 c0.030 g0.02 at0.2 twin	0.020900	Hammering	false	Sm 0.2415 H, Ha 0.2718 H, Sh 0.0577 N	Sm 0.2415 H, Ha 0.2509 H, Sh 0.0559 N
+28377	fuller|w0.8 L2.5 t0.02 c0.050 g0.02 at0.5 twin	0.020800	Hammering	false	Sm 0.3611 H, Ha 0.2805 H, Sh 0.0408 N	Sm 0.3611 H, Ha 0.2597 H, Sh 0.0269 N
+29217	fuller|w0.8 L2.0 t0.02 c0.050 g0.08 at0.7 twin	0.020600	Hammering	false	Sm 0.2580 H, Ha 0.2534 H, Sh 0.0000 N	Sm 0.2580 H, Ha 0.2328 H, Sh 0.0000 N
+28407	fuller|w0.8 L2.5 t0.02 c0.050 g0.05 at0.5 twin	0.020600	Hammering	false	Sm 0.3408 H, Ha 0.3100 H, Sh 0.0326 N	Sm 0.3408 H, Ha 0.2894 H, Sh 0.0193 N
+21900	laminate|F5|k0.02 wf2.0 proud0.0150 capfalse	0.020600	Sharpening	true	Sm 0.0657 N, Ha 0.1918 N, Sh 0.1898 N	Sm 0.0657 N, Ha 0.2045 H, Sh 0.2104 H
+11462	laminate|F1|k0.02 wf2.0 proud0.0150 capfalse	0.020600	Sharpening	true	Sm 0.0657 N, Ha 0.1918 N, Sh 0.1898 N	Sm 0.0657 N, Ha 0.2045 H, Sh 0.2104 H
+28422	fuller|w0.8 L2.5 t0.02 c0.050 g0.08 at0.6 one	0.020500	Hammering	false	Sm 0.3475 H, Ha 0.1467 N, Sh 0.0057 N	Sm 0.3475 H, Ha 0.1672 N, Sh 0.0057 N
+29184	fuller|w0.8 L2.0 t0.02 c0.050 g0.03 at0.5 twin	0.020400	Hammering	false	Sm 0.2850 H, Ha 0.1786 N, Sh 0.0000 N	Sm 0.2850 H, Ha 0.1582 N, Sh 0.0000 N
+21901	laminate|F5|k0.02 wf2.0 proud0.0150 captrue	0.020400	Sharpening	true	Sm 0.0664 N, Ha 0.1978 N, Sh 0.1992 N	Sm 0.0664 N, Ha 0.2104 H, Sh 0.2196 H
+11463	laminate|F1|k0.02 wf2.0 proud0.0150 captrue	0.020400	Sharpening	true	Sm 0.0664 N, Ha 0.1978 N, Sh 0.1992 N	Sm 0.0664 N, Ha 0.2104 H, Sh 0.2196 H
+28376	fuller|w0.8 L2.5 t0.02 c0.050 g0.02 at0.5 one	0.020200	Hammering	false	Sm 0.3681 H, Ha 0.1266 N, Sh 0.0000 N	Sm 0.3681 H, Ha 0.1064 N, Sh 0.0000 N
+28282	fuller|w0.8 L2.5 t0.02 c0.030 g0.02 at0.2 one	0.020200	Hammering	false	Sm 0.2481 H, Ha 0.3894 H, Sh 0.0343 N	Sm 0.2481 H, Ha 0.3692 H, Sh 0.0311 N
+30827	fuller|w1.0 L2.0 t0.02 c0.050 g0.12 at0.7 twin	0.020100	Hammering	false	Sm 0.3030 H, Ha 0.2983 H, Sh 0.0152 N	Sm 0.3030 H, Ha 0.2782 H, Sh 0.0073 N
+29993	fuller|w1.0 L2.5 t0.02 c0.050 g0.05 at0.5 twin	0.020100	Hammering	false	Sm 0.4246 H, Ha 0.3050 H, Sh 0.0475 N	Sm 0.4246 H, Ha 0.2849 H, Sh 0.0385 N
+31986	ribbed|w1.2 L1.5 k0.02 edges true g0.08 at0.360 pair	0.020000	Hammering	false	Sm 0.2152 H, Ha 0.3387 H, Sh 0.0774 N	Sm 0.2152 H, Ha 0.3187 H, Sh 0.0754 N
+30826	fuller|w1.0 L2.0 t0.02 c0.050 g0.12 at0.7 one	0.020000	Hammering	false	Sm 0.3358 H, Ha 0.1248 N, Sh 0.0082 N	Sm 0.3358 H, Ha 0.1048 N, Sh 0.0082 N
+32868	grille|0.6 x 2.8 x 0.02 6 x 8 f0.5	0.019900	Hammering	false	Sm 0.2850 H, Ha 0.4108 H, Sh 0.0000 N	Sm 0.2850 H, Ha 0.3909 H, Sh 0.0000 N
+32814	grille|0.6 x 1.2 x 0.02 6 x 8 f0.5	0.019900	Hammering	false	Sm 0.0932 N, Ha 0.0730 N, Sh 0.0000 N	Sm 0.0932 N, Ha 0.0531 N, Sh 0.0000 N
+8383	plateEdge|C09|blade w1.0 k0.6 l1.0 poke0.0750	0.019800	Hammering	false	Sm 0.0046 N, Ha 0.3858 H, Sh 0.2018 H	Sm 0.0046 N, Ha 0.4056 H, Sh 0.2188 H
+29090	fuller|w0.8 L2.0 t0.02 c0.030 g0.03 at0.2 twin	0.019800	Hammering	false	Sm 0.1935 N, Ha 0.3382 H, Sh 0.0864 N	Sm 0.1935 N, Ha 0.3184 H, Sh 0.0857 N
+24056	fuller|w0.3 L2.5 t0.02 c0.030 g0.01 at0.5 one	0.019800	Hammering	false	Sm 0.1106 N, Ha 0.2340 H, Sh 0.0000 N	Sm 0.1106 N, Ha 0.2142 H, Sh 0.0000 N
+8803	bevel|C09|a0.05 b0.05 height0.200	0.019700	Hammering	false	Sm 0.0004 N, Ha 0.3263 H, Sh 0.2006 H	Sm 0.0004 N, Ha 0.3460 H, Sh 0.2183 H
+23631	fuller|w0.2 L2.0 t0.02 c0.050 g0.02 at0.7 twin	0.019600	Sharpening	false	Sm 0.0897 N, Ha 0.4421 H, Sh 0.0907 N	Sm 0.0897 N, Ha 0.4300 H, Sh 0.0711 N
+30806	fuller|w1.0 L2.0 t0.02 c0.050 g0.08 at0.4 one	0.019500	Hammering	false	Sm 0.3468 H, Ha 0.1229 N, Sh 0.0048 N	Sm 0.3468 H, Ha 0.1034 N, Sh 0.0048 N
+29075	fuller|w0.8 L2.0 t0.02 c0.030 g0.02 at0.2 twin	0.019500	Hammering	false	Sm 0.1968 N, Ha 0.2735 H, Sh 0.0229 N	Sm 0.1968 N, Ha 0.2540 H, Sh 0.0222 N
+23149	fuller|w0.2 L2.5 t0.02 c0.050 g0.03 at0.3 one	0.019500	Hammering	false	Sm 0.1137 N, Ha 0.1557 N, Sh 0.0000 N	Sm 0.1137 N, Ha 0.1362 N, Sh 0.0000 N
+23148	fuller|w0.2 L2.5 t0.02 c0.050 g0.03 at0.2 one	0.019500	Hammering	false	Sm 0.1137 N, Ha 0.1556 N, Sh 0.0000 N	Sm 0.1137 N, Ha 0.1361 N, Sh 0.0000 N
+30680	fuller|w1.0 L2.0 t0.02 c0.030 g0.03 at0.0 one	0.019300	Hammering	false	Sm 0.2429 H, Ha 0.2565 H, Sh 0.0428 N	Sm 0.2429 H, Ha 0.2372 H, Sh 0.0426 N
+28297	fuller|w0.8 L2.5 t0.02 c0.030 g0.03 at0.2 one	0.019300	Hammering	false	Sm 0.2460 H, Ha 0.4249 H, Sh 0.0671 N	Sm 0.2460 H, Ha 0.4056 H, Sh 0.0645 N
+31853	ribbed|w0.8 L2.5 k0.02 edges true g0.05 at0.304 one	0.019200	Hammering	false	Sm 0.2240 H, Ha 0.4310 H, Sh 0.0782 N	Sm 0.2240 H, Ha 0.4118 H, Sh 0.0697 N
+23306	fuller|w0.2 L2.5 t0.04 c0.050 g0.02 at0.7 one	0.019200	Hammering	false	Sm 0.1367 N, Ha 0.1820 N, Sh 0.0000 N	Sm 0.1367 N, Ha 0.1628 N, Sh 0.0000 N
+28279	fuller|w0.8 L2.5 t0.02 c0.030 g0.02 at0.0 one	0.019100	Hammering	false	Sm 0.2480 H, Ha 0.2791 H, Sh 0.0337 N	Sm 0.2480 H, Ha 0.2600 H, Sh 0.0317 N
+25477	fuller|w0.4 L2.5 t0.04 c0.015 g0.08 at0.4 twin	0.019100	Sharpening	false	Sm 0.1073 N, Ha 0.3716 H, Sh 0.0806 N	Sm 0.1073 N, Ha 0.3808 H, Sh 0.0997 N
+30667	fuller|w1.0 L2.0 t0.02 c0.030 g0.02 at0.1 twin	0.019000	Hammering	false	Sm 0.2413 H, Ha 0.2716 H, Sh 0.0569 N	Sm 0.2413 H, Ha 0.2526 H, Sh 0.0569 N
+27614	fuller|w0.6 L2.0 t0.02 c0.050 g0.03 at0.5 twin	0.018900	Hammering	false	Sm 0.2184 H, Ha 0.1460 N, Sh 0.0000 N	Sm 0.2184 H, Ha 0.1271 N, Sh 0.0000 N
+29992	fuller|w1.0 L2.5 t0.02 c0.050 g0.05 at0.5 one	0.018800	Hammering	false	Sm 0.4416 H, Ha 0.1747 N, Sh 0.0000 N	Sm 0.4416 H, Ha 0.1559 N, Sh 0.0000 N
+24688	fuller|w0.3 L2.0 t0.02 c0.030 g0.05 at0.3 twin	0.018800	Sharpening	false	Sm 0.0752 N, Ha 0.3230 H, Sh 0.0435 N	Sm 0.0752 N, Ha 0.3351 H, Sh 0.0623 N
+32046	ribbed|w1.2 L1.5 k0.04 edges true g0.05 at0.552 pair	0.018700	Hammering	false	Sm 0.2744 H, Ha 0.1788 N, Sh 0.0000 N	Sm 0.2744 H, Ha 0.1601 N, Sh 0.0000 N
+28309	fuller|w0.8 L2.5 t0.02 c0.030 g0.05 at0.0 one	0.018700	Hammering	false	Sm 0.2419 H, Ha 0.3169 H, Sh 0.0580 N	Sm 0.2419 H, Ha 0.2982 H, Sh 0.0566 N
+31960	ribbed|w1.2 L1.5 k0.02 edges true g0.02 at0.264 pair	0.018600	Hammering	true	Sm 0.2296 H, Ha 0.2021 H, Sh 0.0136 N	Sm 0.2296 H, Ha 0.1835 N, Sh 0.0115 N
+32044	ribbed|w1.2 L1.5 k0.04 edges true g0.05 at0.456 pair	0.018400	Hammering	false	Sm 0.2744 H, Ha 0.1355 N, Sh 0.0000 N	Sm 0.2744 H, Ha 0.1171 N, Sh 0.0000 N
+29168	fuller|w0.8 L2.0 t0.02 c0.050 g0.02 at0.5 one	0.018400	Hammering	false	Sm 0.2961 H, Ha 0.0470 N, Sh 0.0000 N	Sm 0.2961 H, Ha 0.0286 N, Sh 0.0000 N
+24609	fuller|w0.3 L2.0 t0.02 c0.015 g0.03 at0.3 twin	0.018400	Sharpening	false	Sm 0.0547 N, Ha 0.2348 H, Sh 0.1033 N	Sm 0.0547 N, Ha 0.2333 H, Sh 0.1217 N
+32962	grille|1.0 x 2.8 x 0.02 4 x 2 f0.7	0.018300	Hammering	false	Sm 0.5342 H, Ha 0.0356 N, Sh 0.0000 N	Sm 0.5342 H, Ha 0.0173 N, Sh 0.0000 N
+28294	fuller|w0.8 L2.5 t0.02 c0.030 g0.03 at0.0 one	0.018300	Hammering	false	Sm 0.2459 H, Ha 0.3141 H, Sh 0.0671 N	Sm 0.2459 H, Ha 0.2958 H, Sh 0.0651 N
+16414	bevel|F3|a0.05 b0.05 height0.200	0.018200	Hammering	false	Sm 0.0000 N, Ha 0.5176 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.5358 H, Sh 0.6104 H
+28314	fuller|w0.8 L2.5 t0.02 c0.030 g0.05 at0.3 one	0.018100	Hammering	false	Sm 0.2418 H, Ha 0.4280 H, Sh 0.0557 N	Sm 0.2418 H, Ha 0.4099 H, Sh 0.0525 N
+8702	plateTilt|C09|tilt2 poke0.020	0.018000	Sharpening	false	Sm 0.0048 N, Ha 0.3397 H, Sh 0.1955 N	Sm 0.0048 N, Ha 0.3325 H, Sh 0.1775 N
+29973	fuller|w1.0 L2.5 t0.02 c0.050 g0.03 at0.3 one	0.018000	Hammering	false	Sm 0.4484 H, Ha 0.1596 N, Sh 0.0000 N	Sm 0.4484 H, Ha 0.1416 N, Sh 0.0000 N
+28362	fuller|w0.8 L2.5 t0.02 c0.050 g0.01 at0.5 twin	0.018000	Hammering	false	Sm 0.3681 H, Ha 0.0365 N, Sh 0.0000 N	Sm 0.3681 H, Ha 0.0185 N, Sh 0.0000 N
+28295	fuller|w0.8 L2.5 t0.02 c0.030 g0.03 at0.1 one	0.018000	Hammering	false	Sm 0.2460 H, Ha 0.3122 H, Sh 0.0648 N	Sm 0.2460 H, Ha 0.2942 H, Sh 0.0616 N
+8817	bevel|C09|a0.05 b0.08 height0.750	0.017900	Hammering	false	Sm 0.0064 N, Ha 0.3281 H, Sh 0.1762 N	Sm 0.0064 N, Ha 0.3460 H, Sh 0.1906 N
+8694	plateTilt|C09|tilt1 poke0.020	0.017900	Sharpening	false	Sm 0.0050 N, Ha 0.3392 H, Sh 0.1926 N	Sm 0.0050 N, Ha 0.3321 H, Sh 0.1747 N
+32913	grille|1.0 x 1.2 x 0.02 4 x 8 f0.5	0.017900	Hammering	false	Sm 0.1932 N, Ha 0.0400 N, Sh 0.0000 N	Sm 0.1932 N, Ha 0.0221 N, Sh 0.0000 N
+28280	fuller|w0.8 L2.5 t0.02 c0.030 g0.02 at0.1 one	0.017900	Hammering	false	Sm 0.2481 H, Ha 0.2763 H, Sh 0.0314 N	Sm 0.2481 H, Ha 0.2584 H, Sh 0.0282 N
+25942	fuller|w0.4 L2.0 t0.02 c0.015 g0.03 at0.7 twin	0.017700	Sharpening	false	Sm 0.0687 N, Ha 0.3394 H, Sh 0.0752 N	Sm 0.0687 N, Ha 0.3384 H, Sh 0.0929 N
+31940	ribbed|w1.2 L1.5 k0.02 edges false g0.05 at0.360 pair	0.017600	Hammering	false	Sm 0.2156 H, Ha 0.2498 H, Sh 0.0880 N	Sm 0.2156 H, Ha 0.2674 H, Sh 0.0985 N
+28412	fuller|w0.8 L2.5 t0.02 c0.050 g0.08 at0.0 one	0.017500	Hammering	false	Sm 0.3475 H, Ha 0.0968 N, Sh 0.0000 N	Sm 0.3475 H, Ha 0.1143 N, Sh 0.0000 N
+25558	fuller|w0.4 L2.5 t0.04 c0.030 g0.08 at0.4 twin	0.017300	Sharpening	false	Sm 0.1411 N, Ha 0.3616 H, Sh 0.0307 N	Sm 0.1411 N, Ha 0.3730 H, Sh 0.0480 N
+24615	fuller|w0.3 L2.0 t0.02 c0.015 g0.03 at0.6 twin	0.017300	Sharpening	true	Sm 0.0547 N, Ha 0.2011 H, Sh 0.0420 N	Sm 0.0547 N, Ha 0.1992 N, Sh 0.0593 N
+30787	fuller|w1.0 L2.0 t0.02 c0.050 g0.05 at0.2 one	0.017100	Hammering	false	Sm 0.3549 H, Ha 0.0881 N, Sh 0.0000 N	Sm 0.3549 H, Ha 0.0710 N, Sh 0.0000 N
+27603	fuller|w0.6 L2.0 t0.02 c0.050 g0.02 at0.7 twin	0.017100	Hammering	false	Sm 0.2238 H, Ha 0.1606 N, Sh 0.0000 N	Sm 0.2238 H, Ha 0.1435 N, Sh 0.0000 N
+24028	fuller|w0.3 L2.5 t0.02 c0.015 g0.05 at0.3 twin	0.017100	Hammering	false	Sm 0.0626 N, Ha 0.4793 H, Sh 0.2000 H	Sm 0.0626 N, Ha 0.4622 H, Sh 0.2000 H
+30825	fuller|w1.0 L2.0 t0.02 c0.050 g0.12 at0.6 twin	0.016900	Hammering	false	Sm 0.3030 H, Ha 0.3071 H, Sh 0.0199 N	Sm 0.3030 H, Ha 0.2902 H, Sh 0.0148 N
+28299	fuller|w0.8 L2.5 t0.02 c0.030 g0.03 at0.3 one	0.016900	Hammering	false	Sm 0.2460 H, Ha 0.4223 H, Sh 0.0642 N	Sm 0.2460 H, Ha 0.4054 H, Sh 0.0621 N
+28288	fuller|w0.8 L2.5 t0.02 c0.030 g0.02 at0.5 one	0.016900	Hammering	false	Sm 0.2480 H, Ha 0.3141 H, Sh 0.0783 N	Sm 0.2480 H, Ha 0.2972 H, Sh 0.0640 N
+25481	fuller|w0.4 L2.5 t0.04 c0.015 g0.08 at0.6 twin	0.016900	Sharpening	false	Sm 0.1073 N, Ha 0.3716 H, Sh 0.0714 N	Sm 0.1073 N, Ha 0.3791 H, Sh 0.0883 N
+31687	ribbed|w0.8 L1.5 k0.02 edges false g0.02 at0.176 one	0.016800	Hammering	false	Sm 0.1316 N, Ha 0.1103 N, Sh 0.0000 N	Sm 0.1316 N, Ha 0.0935 N, Sh 0.0000 N
+28290	fuller|w0.8 L2.5 t0.02 c0.030 g0.02 at0.6 one	0.016800	Hammering	false	Sm 0.2481 H, Ha 0.2696 H, Sh 0.0252 N	Sm 0.2481 H, Ha 0.2528 H, Sh 0.0252 N
+28286	fuller|w0.8 L2.5 t0.02 c0.030 g0.02 at0.4 one	0.016800	Hammering	false	Sm 0.2481 H, Ha 0.2709 H, Sh 0.0264 N	Sm 0.2481 H, Ha 0.2541 H, Sh 0.0264 N
+27544	fuller|w0.6 L2.0 t0.02 c0.030 g0.05 at0.6 twin	0.016800	Hammering	false	Sm 0.1422 N, Ha 0.2874 H, Sh 0.0366 N	Sm 0.1422 N, Ha 0.3042 H, Sh 0.0499 N
+25932	fuller|w0.4 L2.0 t0.02 c0.015 g0.03 at0.2 twin	0.016800	Sharpening	false	Sm 0.0687 N, Ha 0.2664 H, Sh 0.0853 N	Sm 0.0687 N, Ha 0.2648 H, Sh 0.1021 N
+28284	fuller|w0.8 L2.5 t0.02 c0.030 g0.02 at0.3 one	0.016700	Hammering	false	Sm 0.2481 H, Ha 0.3857 H, Sh 0.0308 N	Sm 0.2481 H, Ha 0.3690 H, Sh 0.0287 N
+28276	fuller|w0.8 L2.5 t0.02 c0.030 g0.01 at0.6 twin	0.016700	Hammering	false	Sm 0.2480 H, Ha 0.2187 H, Sh 0.0000 N	Sm 0.2480 H, Ha 0.2020 H, Sh 0.0000 N
+28272	fuller|w0.8 L2.5 t0.02 c0.030 g0.01 at0.4 twin	0.016700	Hammering	false	Sm 0.2480 H, Ha 0.2187 H, Sh 0.0000 N	Sm 0.2480 H, Ha 0.2020 H, Sh 0.0000 N
+8719	plateTilt|C09|tilt8 poke0.030	0.016600	Sharpening	false	Sm 0.0061 N, Ha 0.3381 H, Sh 0.1787 N	Sm 0.0061 N, Ha 0.3318 H, Sh 0.1621 N
+28268	fuller|w0.8 L2.5 t0.02 c0.030 g0.01 at0.2 twin	0.016600	Hammering	false	Sm 0.2482 H, Ha 0.2182 H, Sh 0.0000 N	Sm 0.2482 H, Ha 0.2016 H, Sh 0.0000 N
+21882	laminate|F5|k0.02 wf1.5 proud0.0200 capfalse	0.016600	Sharpening	false	Sm 0.0491 N, Ha 0.1296 N, Sh 0.1349 N	Sm 0.0491 N, Ha 0.1379 N, Sh 0.1515 N
+11444	laminate|F1|k0.02 wf1.5 proud0.0200 capfalse	0.016600	Sharpening	false	Sm 0.0491 N, Ha 0.1296 N, Sh 0.1349 N	Sm 0.0491 N, Ha 0.1379 N, Sh 0.1515 N
+29183	fuller|w0.8 L2.0 t0.02 c0.050 g0.03 at0.5 one	0.016500	Hammering	false	Sm 0.2933 H, Ha 0.0415 N, Sh 0.0000 N	Sm 0.2933 H, Ha 0.0250 N, Sh 0.0000 N
+8701	plateTilt|C09|tilt2 poke0.015	0.016400	Sharpening	false	Sm 0.0035 N, Ha 0.3171 H, Sh 0.1777 N	Sm 0.0035 N, Ha 0.3110 H, Sh 0.1613 N
+8693	plateTilt|C09|tilt1 poke0.015	0.016400	Sharpening	false	Sm 0.0037 N, Ha 0.3161 H, Sh 0.1748 N	Sm 0.0037 N, Ha 0.3101 H, Sh 0.1584 N
+28410	fuller|w0.8 L2.5 t0.02 c0.050 g0.05 at0.7 one	0.016300	Hammering	false	Sm 0.3578 H, Ha 0.1458 N, Sh 0.0000 N	Sm 0.3578 H, Ha 0.1295 N, Sh 0.0000 N
+31702	ribbed|w0.8 L1.5 k0.02 edges false g0.05 at0.304 pair	0.016200	Hammering	true	Sm 0.1219 N, Ha 0.2057 H, Sh 0.0629 N	Sm 0.1219 N, Ha 0.1895 N, Sh 0.0534 N
+28307	fuller|w0.8 L2.5 t0.02 c0.030 g0.03 at0.7 one	0.016200	Sharpening	false	Sm 0.2460 H, Ha 0.4249 H, Sh 0.0961 N	Sm 0.2460 H, Ha 0.4245 H, Sh 0.0799 N
+27540	fuller|w0.6 L2.0 t0.02 c0.030 g0.05 at0.4 twin	0.016200	Hammering	false	Sm 0.1422 N, Ha 0.2955 H, Sh 0.0386 N	Sm 0.1422 N, Ha 0.3117 H, Sh 0.0512 N
+25562	fuller|w0.4 L2.5 t0.04 c0.030 g0.08 at0.6 twin	0.016100	Sharpening	false	Sm 0.1411 N, Ha 0.4436 H, Sh 0.0223 N	Sm 0.1411 N, Ha 0.4540 H, Sh 0.0384 N
+25396	fuller|w0.4 L2.5 t0.02 c0.050 g0.08 at0.4 twin	0.016100	Sharpening	false	Sm 0.1528 N, Ha 0.4039 H, Sh 0.1216 N	Sm 0.1528 N, Ha 0.4039 H, Sh 0.1377 N
+32529	ribBar|r0.10 L3.0 n16 roll11.25 f0.7	0.016000	Sharpening	false	Sm 0.1785 N, Ha 0.4143 H, Sh 0.0239 N	Sm 0.1785 N, Ha 0.4143 H, Sh 0.0079 N
+32526	ribBar|r0.10 L3.0 n16 roll11.25 f0.7	0.016000	Sharpening	false	Sm 0.1785 N, Ha 0.4143 H, Sh 0.0239 N	Sm 0.1785 N, Ha 0.4143 H, Sh 0.0079 N
+30789	fuller|w1.0 L2.0 t0.02 c0.050 g0.05 at0.3 one	0.016000	Hammering	false	Sm 0.3549 H, Ha 0.0681 N, Sh 0.0000 N	Sm 0.3549 H, Ha 0.0521 N, Sh 0.0000 N
+31847	ribbed|w0.8 L2.5 k0.02 edges true g0.05 at0.112 one	0.015900	Hammering	false	Sm 0.2239 H, Ha 0.4286 H, Sh 0.0749 N	Sm 0.2239 H, Ha 0.4127 H, Sh 0.0717 N
+26006	fuller|w0.4 L2.0 t0.02 c0.030 g0.02 at0.6 one	0.015900	Hammering	false	Sm 0.1106 N, Ha 0.1394 N, Sh 0.0000 N	Sm 0.1106 N, Ha 0.1235 N, Sh 0.0000 N
+21883	laminate|F5|k0.02 wf1.5 proud0.0200 captrue	0.015900	Sharpening	false	Sm 0.0495 N, Ha 0.1345 N, Sh 0.1439 N	Sm 0.0495 N, Ha 0.1423 N, Sh 0.1598 N
+11445	laminate|F1|k0.02 wf1.5 proud0.0200 captrue	0.015900	Sharpening	false	Sm 0.0495 N, Ha 0.1345 N, Sh 0.1439 N	Sm 0.0495 N, Ha 0.1423 N, Sh 0.1598 N
+29202	fuller|w0.8 L2.0 t0.02 c0.050 g0.05 at0.7 one	0.015800	Hammering	false	Sm 0.2879 H, Ha 0.0587 N, Sh 0.0008 N	Sm 0.2879 H, Ha 0.0429 N, Sh 0.0008 N
+28396	fuller|w0.8 L2.5 t0.02 c0.050 g0.03 at0.7 twin	0.015800	Hammering	false	Sm 0.3544 H, Ha 0.3233 H, Sh 0.0519 N	Sm 0.3544 H, Ha 0.3075 H, Sh 0.0428 N
+23048	fuller|w0.2 L2.5 t0.02 c0.015 g0.03 at0.6 twin	0.015800	Sharpening	false	Sm 0.0492 N, Ha 0.2659 H, Sh 0.0756 N	Sm 0.0492 N, Ha 0.2634 H, Sh 0.0914 N
+31833	ribbed|w0.8 L2.5 k0.02 edges true g0.02 at0.048 one	0.015700	Hammering	false	Sm 0.2301 H, Ha 0.2832 H, Sh 0.0502 N	Sm 0.2301 H, Ha 0.2675 H, Sh 0.0469 N
+30796	fuller|w1.0 L2.0 t0.02 c0.050 g0.05 at0.6 twin	0.015700	Hammering	false	Sm 0.3412 H, Ha 0.2268 H, Sh 0.0000 N	Sm 0.3412 H, Ha 0.2111 H, Sh 0.0000 N
+8395	plateEdge|C09|blade w1.0 k0.8 l0.6 poke0.0300	0.015600	Sharpening	false	Sm 0.0005 N, Ha 0.3450 H, Sh 0.2285 H	Sm 0.0005 N, Ha 0.3403 H, Sh 0.2129 H
+31717	ribbed|w0.8 L1.5 k0.02 edges true g0.02 at0.176 one	0.015500	Hammering	false	Sm 0.1385 N, Ha 0.1196 N, Sh 0.0000 N	Sm 0.1385 N, Ha 0.1041 N, Sh 0.0000 N
+32123	ribbed|w1.2 L2.5 k0.02 edges true g0.08 at0.360 one	0.015400	Sharpening	false	Sm 0.3560 H, Ha 0.4621 H, Sh 0.1015 N	Sm 0.3560 H, Ha 0.4621 H, Sh 0.1169 N
+25223	fuller|w0.4 L2.5 t0.02 c0.015 g0.05 at0.5 twin	0.015400	Sharpening	false	Sm 0.0800 N, Ha 0.4112 H, Sh 0.1609 N	Sm 0.0800 N, Ha 0.4094 H, Sh 0.1763 N
+8780	bevel|C09|a0.03 b0.08 height0.150	0.015300	Hammering	true	Sm 0.0002 N, Ha 0.3232 H, Sh 0.1970 N	Sm 0.0002 N, Ha 0.3385 H, Sh 0.2086 H
+32089	ribbed|w1.2 L2.5 k0.02 edges false g0.08 at0.360 one	0.015300	Sharpening	false	Sm 0.3447 H, Ha 0.4742 H, Sh 0.1605 N	Sm 0.3447 H, Ha 0.4742 H, Sh 0.1758 N
+27802	fuller|w0.6 L2.0 t0.04 c0.030 g0.05 at0.6 twin	0.015300	Hammering	false	Sm 0.1802 N, Ha 0.1665 N, Sh 0.0000 N	Sm 0.1802 N, Ha 0.1818 N, Sh 0.0000 N
+26299	fuller|w0.4 L2.0 t0.04 c0.030 g0.12 at0.4 twin	0.015300	Sharpening	false	Sm 0.1013 N, Ha 0.3675 H, Sh 0.0414 N	Sm 0.1013 N, Ha 0.3779 H, Sh 0.0567 N
+30822	fuller|w1.0 L2.0 t0.02 c0.050 g0.12 at0.5 one	0.015200	Hammering	false	Sm 0.3357 H, Ha 0.1312 N, Sh 0.0111 N	Sm 0.3357 H, Ha 0.1160 N, Sh 0.0111 N
+30813	fuller|w1.0 L2.0 t0.02 c0.050 g0.08 at0.7 twin	0.015200	Hammering	false	Sm 0.3249 H, Ha 0.2461 H, Sh 0.0000 N	Sm 0.3249 H, Ha 0.2309 H, Sh 0.0000 N
+30019	fuller|w1.0 L2.5 t0.02 c0.050 g0.12 at0.4 one	0.015200	Hammering	false	Sm 0.4175 H, Ha 0.2326 H, Sh 0.0087 N	Sm 0.4175 H, Ha 0.2174 H, Sh 0.0087 N
+32030	ribbed|w1.2 L1.5 k0.04 edges true g0.02 at0.360 pair	0.015100	Hammering	false	Sm 0.2817 H, Ha 0.0949 N, Sh 0.0000 N	Sm 0.2817 H, Ha 0.0798 N, Sh 0.0000 N
+27536	fuller|w0.6 L2.0 t0.02 c0.030 g0.05 at0.2 twin	0.015100	Hammering	false	Sm 0.1422 N, Ha 0.2964 H, Sh 0.0417 N	Sm 0.1422 N, Ha 0.3115 H, Sh 0.0527 N
+25400	fuller|w0.4 L2.5 t0.02 c0.050 g0.08 at0.6 twin	0.015100	Sharpening	false	Sm 0.1528 N, Ha 0.6261 H, Sh 0.1135 N	Sm 0.1528 N, Ha 0.6261 H, Sh 0.1286 N
+25359	fuller|w0.4 L2.5 t0.02 c0.050 g0.02 at0.6 twin	0.015100	Hammering	false	Sm 0.1939 N, Ha 0.3368 H, Sh 0.0313 N	Sm 0.1939 N, Ha 0.3217 H, Sh 0.0202 N
+21880	laminate|F5|k0.02 wf1.5 proud0.0150 capfalse	0.015100	Sharpening	false	Sm 0.0484 N, Ha 0.1330 N, Sh 0.1416 N	Sm 0.0484 N, Ha 0.1401 N, Sh 0.1567 N
+11442	laminate|F1|k0.02 wf1.5 proud0.0150 capfalse	0.015100	Sharpening	false	Sm 0.0484 N, Ha 0.1330 N, Sh 0.1416 N	Sm 0.0484 N, Ha 0.1401 N, Sh 0.1567 N
+8717	plateTilt|C09|tilt8 poke0.015	0.015000	Sharpening	false	Sm 0.0022 N, Ha 0.3259 H, Sh 0.1955 N	Sm 0.0022 N, Ha 0.3209 H, Sh 0.1805 N
+8709	plateTilt|C09|tilt4 poke0.015	0.015000	Sharpening	false	Sm 0.0031 N, Ha 0.3189 H, Sh 0.1836 N	Sm 0.0031 N, Ha 0.3144 H, Sh 0.1686 N
+8684	plateC09|C09|0.11 x 2.0 x 0.056 at x -0.03	0.015000	Hammering	false	Sm 0.0009 N, Ha 0.3172 H, Sh 0.2064 H	Sm 0.0009 N, Ha 0.3322 H, Sh 0.2176 H
+29066	fuller|w0.8 L2.0 t0.02 c0.030 g0.01 at0.5 twin	0.015000	Hammering	false	Sm 0.1999 N, Ha 0.1215 N, Sh 0.0000 N	Sm 0.1999 N, Ha 0.1065 N, Sh 0.0000 N
+26839	fuller|w0.6 L2.5 t0.02 c0.050 g0.03 at0.5 one	0.015000	Hammering	false	Sm 0.2811 H, Ha 0.0965 N, Sh 0.0000 N	Sm 0.2811 H, Ha 0.0815 N, Sh 0.0000 N
+26820	fuller|w0.6 L2.5 t0.02 c0.050 g0.02 at0.3 one	0.015000	Hammering	false	Sm 0.2845 H, Ha 0.0962 N, Sh 0.0000 N	Sm 0.2845 H, Ha 0.0812 N, Sh 0.0000 N
+25956	fuller|w0.4 L2.0 t0.02 c0.015 g0.05 at0.7 twin	0.015000	Hammering	false	Sm 0.0654 N, Ha 0.4023 H, Sh 0.1822 N	Sm 0.0654 N, Ha 0.3873 H, Sh 0.1736 N
+31845	ribbed|w0.8 L2.5 k0.02 edges true g0.05 at0.048 one	0.014900	Hammering	false	Sm 0.2239 H, Ha 0.4359 H, Sh 0.0743 N	Sm 0.2239 H, Ha 0.4210 H, Sh 0.0722 N
+30671	fuller|w1.0 L2.0 t0.02 c0.030 g0.02 at0.3 twin	0.014700	Hammering	false	Sm 0.2415 H, Ha 0.3000 H, Sh 0.0903 N	Sm 0.2415 H, Ha 0.2853 H, Sh 0.0877 N
+27798	fuller|w0.6 L2.0 t0.04 c0.030 g0.05 at0.4 twin	0.014700	Hammering	false	Sm 0.1802 N, Ha 0.1732 N, Sh 0.0000 N	Sm 0.1802 N, Ha 0.1879 N, Sh 0.0000 N
+30845	fuller|w1.0 L2.0 t0.04 c0.015 g0.02 at0.1 twin	0.014600	Hammering	false	Sm 0.2144 H, Ha 0.2982 H, Sh 0.0761 N	Sm 0.2144 H, Ha 0.3128 H, Sh 0.0761 N
+28266	fuller|w0.8 L2.5 t0.02 c0.030 g0.01 at0.1 twin	0.014600	Hammering	false	Sm 0.2480 H, Ha 0.2158 H, Sh 0.0000 N	Sm 0.2480 H, Ha 0.2012 H, Sh 0.0000 N
+21881	laminate|F5|k0.02 wf1.5 proud0.0150 captrue	0.014600	Sharpening	false	Sm 0.0488 N, Ha 0.1377 N, Sh 0.1504 N	Sm 0.0488 N, Ha 0.1445 N, Sh 0.1650 N
+11443	laminate|F1|k0.02 wf1.5 proud0.0150 captrue	0.014600	Sharpening	false	Sm 0.0488 N, Ha 0.1377 N, Sh 0.1504 N	Sm 0.0488 N, Ha 0.1445 N, Sh 0.1650 N
+8813	bevel|C09|a0.05 b0.08 height0.150	0.014500	Hammering	true	Sm 0.0003 N, Ha 0.3226 H, Sh 0.1957 N	Sm 0.0003 N, Ha 0.3371 H, Sh 0.2063 H
+31835	ribbed|w0.8 L2.5 k0.02 edges true g0.02 at0.112 one	0.014500	Hammering	false	Sm 0.2301 H, Ha 0.2827 H, Sh 0.0497 N	Sm 0.2301 H, Ha 0.2682 H, Sh 0.0476 N
+29995	fuller|w1.0 L2.5 t0.02 c0.050 g0.05 at0.6 twin	0.014500	Hammering	false	Sm 0.4243 H, Ha 0.3359 H, Sh 0.0480 N	Sm 0.4243 H, Ha 0.3214 H, Sh 0.0437 N
+26218	fuller|w0.4 L2.0 t0.04 c0.015 g0.12 at0.4 twin	0.014500	Sharpening	false	Sm 0.0807 N, Ha 0.3323 H, Sh 0.0555 N	Sm 0.0807 N, Ha 0.3401 H, Sh 0.0700 N
+32024	ribbed|w1.2 L1.5 k0.04 edges true g0.02 at0.072 pair	0.014400	Hammering	false	Sm 0.2819 H, Ha 0.1267 N, Sh 0.0000 N	Sm 0.2819 H, Ha 0.1123 N, Sh 0.0000 N
+29219	fuller|w0.8 L2.0 t0.02 c0.050 g0.12 at0.1 one	0.014400	Hammering	false	Sm 0.2689 H, Ha 0.1202 N, Sh 0.0077 N	Sm 0.2689 H, Ha 0.1058 N, Sh 0.0077 N
+29194	fuller|w0.8 L2.0 t0.02 c0.050 g0.05 at0.3 one	0.014300	Hammering	false	Sm 0.2879 H, Ha 0.0606 N, Sh 0.0000 N	Sm 0.2879 H, Ha 0.0463 N, Sh 0.0000 N
+28274	fuller|w0.8 L2.5 t0.02 c0.030 g0.01 at0.5 twin	0.014300	Hammering	false	Sm 0.2480 H, Ha 0.2156 H, Sh 0.0000 N	Sm 0.2480 H, Ha 0.2013 H, Sh 0.0000 N
+26303	fuller|w0.4 L2.0 t0.04 c0.030 g0.12 at0.6 twin	0.014300	Sharpening	false	Sm 0.1013 N, Ha 0.3322 H, Sh 0.0262 N	Sm 0.1013 N, Ha 0.3419 H, Sh 0.0405 N
+8213	plateEdge|C09|blade w0.5 k0.6 l1.0 poke0.0300	0.014200	Hammering	false	Sm 0.0002 N, Ha 0.3436 H, Sh 0.2203 H	Sm 0.0002 N, Ha 0.3578 H, Sh 0.2302 H
+29096	fuller|w0.8 L2.0 t0.02 c0.030 g0.03 at0.5 twin	0.014100	Hammering	false	Sm 0.1933 N, Ha 0.2885 H, Sh 0.0825 N	Sm 0.1933 N, Ha 0.2744 H, Sh 0.0822 N
+27455	fuller|w0.6 L2.0 t0.02 c0.015 g0.05 at0.5 one	0.014100	Hammering	false	Sm 0.0974 N, Ha 0.3761 H, Sh 0.1559 N	Sm 0.0974 N, Ha 0.3620 H, Sh 0.1560 N
+27447	fuller|w0.6 L2.0 t0.02 c0.015 g0.05 at0.0 one	0.014100	Hammering	false	Sm 0.0974 N, Ha 0.4084 H, Sh 0.1559 N	Sm 0.0974 N, Ha 0.3943 H, Sh 0.1560 N
+25205	fuller|w0.4 L2.5 t0.02 c0.015 g0.03 at0.3 twin	0.014100	Sharpening	false	Sm 0.0841 N, Ha 0.4120 H, Sh 0.1485 N	Sm 0.0841 N, Ha 0.4102 H, Sh 0.1626 N
+30972	fuller|w1.0 L2.0 t0.04 c0.030 g0.05 at0.5 twin	0.014000	Hammering	false	Sm 0.2920 H, Ha 0.1992 N, Sh 0.0000 N	Sm 0.2920 H, Ha 0.1852 N, Sh 0.0000 N
+30868	fuller|w1.0 L2.0 t0.04 c0.015 g0.03 at0.5 twin	0.014000	Hammering	false	Sm 0.2127 H, Ha 0.2869 H, Sh 0.0656 N	Sm 0.2127 H, Ha 0.3009 H, Sh 0.0636 N
+28432	fuller|w0.8 L2.5 t0.02 c0.050 g0.12 at0.4 one	0.014000	Hammering	true	Sm 0.3339 H, Ha 0.2013 H, Sh 0.0112 N	Sm 0.3339 H, Ha 0.1873 N, Sh 0.0112 N
+27716	fuller|w0.6 L2.0 t0.04 c0.015 g0.05 at0.6 twin	0.014000	Sharpening	false	Sm 0.1313 N, Ha 0.2924 H, Sh 0.0064 N	Sm 0.1313 N, Ha 0.3050 H, Sh 0.0204 N
+8687	plateC09|C09|0.06 x 1.0 x 0.030 at x -0.07	0.013900	Hammering	false	Sm 0.0003 N, Ha 0.3308 H, Sh 0.1820 N	Sm 0.0003 N, Ha 0.3447 H, Sh 0.1917 N
+32026	ribbed|w1.2 L1.5 k0.04 edges true g0.02 at0.168 pair	0.013900	Hammering	false	Sm 0.2819 H, Ha 0.1282 N, Sh 0.0000 N	Sm 0.2819 H, Ha 0.1143 N, Sh 0.0000 N
+29907	fuller|w1.0 L2.5 t0.02 c0.030 g0.05 at0.7 one	0.013900	Hammering	false	Sm 0.2976 H, Ha 0.4126 H, Sh 0.0646 N	Sm 0.2976 H, Ha 0.3987 H, Sh 0.0655 N
+27435	fuller|w0.6 L2.0 t0.02 c0.015 g0.03 at0.2 one	0.013900	Hammering	false	Sm 0.0991 N, Ha 0.3942 H, Sh 0.1355 N	Sm 0.0991 N, Ha 0.3803 H, Sh 0.1356 N
+27420	fuller|w0.6 L2.0 t0.02 c0.015 g0.02 at0.2 one	0.013900	Hammering	false	Sm 0.0999 N, Ha 0.3440 H, Sh 0.1109 N	Sm 0.0999 N, Ha 0.3301 H, Sh 0.1109 N
+8226	plateEdge|C09|blade w0.5 k0.8 l0.6 poke0.0200	0.013800	Hammering	false	Sm 0.0002 N, Ha 0.2858 H, Sh 0.1583 N	Sm 0.0002 N, Ha 0.2996 H, Sh 0.1679 N
+30847	fuller|w1.0 L2.0 t0.04 c0.015 g0.02 at0.2 twin	0.013800	Hammering	false	Sm 0.2145 H, Ha 0.2989 H, Sh 0.0769 N	Sm 0.2145 H, Ha 0.3127 H, Sh 0.0749 N
+29246	fuller|w0.8 L2.0 t0.04 c0.015 g0.01 at0.7 twin	0.013800	Hammering	false	Sm 0.1771 N, Ha 0.2641 H, Sh 0.0000 N	Sm 0.1771 N, Ha 0.2779 H, Sh 0.0000 N
+27794	fuller|w0.6 L2.0 t0.04 c0.030 g0.05 at0.2 twin	0.013800	Hammering	false	Sm 0.1802 N, Ha 0.1726 N, Sh 0.0000 N	Sm 0.1802 N, Ha 0.1864 N, Sh 0.0000 N
+27445	fuller|w0.6 L2.0 t0.02 c0.015 g0.03 at0.7 one	0.013800	Hammering	false	Sm 0.0990 N, Ha 0.3945 H, Sh 0.1355 N	Sm 0.0990 N, Ha 0.3807 H, Sh 0.1356 N
+27441	fuller|w0.6 L2.0 t0.02 c0.015 g0.03 at0.5 one	0.013800	Hammering	false	Sm 0.0991 N, Ha 0.3623 H, Sh 0.1355 N	Sm 0.0991 N, Ha 0.3485 H, Sh 0.1356 N
+27437	fuller|w0.6 L2.0 t0.02 c0.015 g0.03 at0.3 one	0.013800	Hammering	false	Sm 0.0991 N, Ha 0.3624 H, Sh 0.1355 N	Sm 0.0991 N, Ha 0.3486 H, Sh 0.1356 N
+27432	fuller|w0.6 L2.0 t0.02 c0.015 g0.03 at0.0 one	0.013800	Hammering	false	Sm 0.0991 N, Ha 0.3623 H, Sh 0.1355 N	Sm 0.0991 N, Ha 0.3485 H, Sh 0.1356 N
+27426	fuller|w0.6 L2.0 t0.02 c0.015 g0.02 at0.5 one	0.013800	Hammering	false	Sm 0.0999 N, Ha 0.3703 H, Sh 0.1437 N	Sm 0.0999 N, Ha 0.3565 H, Sh 0.1438 N
+27422	fuller|w0.6 L2.0 t0.02 c0.015 g0.02 at0.3 one	0.013800	Hammering	false	Sm 0.0999 N, Ha 0.3441 H, Sh 0.1110 N	Sm 0.0999 N, Ha 0.3303 H, Sh 0.1112 N
+27417	fuller|w0.6 L2.0 t0.02 c0.015 g0.02 at0.0 one	0.013800	Hammering	false	Sm 0.0999 N, Ha 0.3703 H, Sh 0.1437 N	Sm 0.0999 N, Ha 0.3565 H, Sh 0.1438 N
+26131	fuller|w0.4 L2.0 t0.02 c0.050 g0.08 at0.7 twin	0.013800	Sharpening	false	Sm 0.1239 N, Ha 0.5201 H, Sh 0.0724 N	Sm 0.1239 N, Ha 0.5102 H, Sh 0.0586 N
+25639	fuller|w0.4 L2.5 t0.04 c0.050 g0.08 at0.4 twin	0.013800	Hammering	false	Sm 0.1863 N, Ha 0.3250 H, Sh 0.0000 N	Sm 0.1863 N, Ha 0.3388 H, Sh 0.0130 N
+23528	fuller|w0.2 L2.0 t0.02 c0.015 g0.03 at0.3 twin	0.013800	Sharpening	false	Sm 0.0408 N, Ha 0.2808 H, Sh 0.0575 N	Sm 0.0408 N, Ha 0.2740 H, Sh 0.0437 N
+30968	fuller|w1.0 L2.0 t0.04 c0.030 g0.05 at0.3 twin	0.013700	Hammering	false	Sm 0.2918 H, Ha 0.1970 N, Sh 0.0000 N	Sm 0.2918 H, Ha 0.1833 N, Sh 0.0000 N
+30958	fuller|w1.0 L2.0 t0.04 c0.030 g0.03 at0.6 one	0.013700	Hammering	false	Sm 0.3034 H, Ha 0.1135 N, Sh 0.0000 N	Sm 0.3034 H, Ha 0.0998 N, Sh 0.0000 N
+29257	fuller|w0.8 L2.0 t0.04 c0.015 g0.02 at0.5 twin	0.013700	Hammering	false	Sm 0.1753 N, Ha 0.2361 H, Sh 0.0249 N	Sm 0.1753 N, Ha 0.2498 H, Sh 0.0247 N
+8225	plateEdge|C09|blade w0.5 k0.8 l0.6 poke0.0150	0.013600	Hammering	false	Sm 0.0001 N, Ha 0.2841 H, Sh 0.1595 N	Sm 0.0001 N, Ha 0.2977 H, Sh 0.1688 N
+8199	plateEdge|C09|blade w0.5 k0.6 l0.8 poke0.0300	0.013600	Hammering	false	Sm 0.0002 N, Ha 0.3437 H, Sh 0.2212 H	Sm 0.0002 N, Ha 0.3573 H, Sh 0.2305 H
+31140	fuller|w1.0 L2.0 t0.08 c0.015 g0.05 at0.0 one	0.013600	Hammering	false	Sm 0.3344 H, Ha 0.0422 N, Sh 0.0000 N	Sm 0.3344 H, Ha 0.0558 N, Sh 0.0000 N
+30862	fuller|w1.0 L2.0 t0.04 c0.015 g0.03 at0.2 twin	0.013600	Hammering	false	Sm 0.2128 H, Ha 0.2866 H, Sh 0.0651 N	Sm 0.2128 H, Ha 0.3002 H, Sh 0.0632 N
+29081	fuller|w0.8 L2.0 t0.02 c0.030 g0.02 at0.5 twin	0.013600	Hammering	false	Sm 0.1966 N, Ha 0.2245 H, Sh 0.0189 N	Sm 0.1966 N, Ha 0.2109 H, Sh 0.0187 N
+28402	fuller|w0.8 L2.5 t0.02 c0.050 g0.05 at0.3 one	0.013600	Hammering	false	Sm 0.3578 H, Ha 0.1386 N, Sh 0.0000 N	Sm 0.3578 H, Ha 0.1250 N, Sh 0.0000 N
+8802	bevel|C09|a0.05 b0.05 height0.150	0.013500	Hammering	true	Sm 0.0002 N, Ha 0.3243 H, Sh 0.1986 N	Sm 0.0002 N, Ha 0.3378 H, Sh 0.2076 H
+8801	bevel|C09|a0.05 b0.05 height0.100	0.013500	Hammering	true	Sm 0.0001 N, Ha 0.3250 H, Sh 0.1999 N	Sm 0.0001 N, Ha 0.3385 H, Sh 0.2090 H
+8800	bevel|C09|a0.05 b0.05 height0.075	0.013500	Hammering	false	Sm 0.0001 N, Ha 0.3253 H, Sh 0.2004 H	Sm 0.0001 N, Ha 0.3388 H, Sh 0.2095 H
+8682	plateC09|C09|0.11 x 1.2 x 0.056 at x -0.03	0.013500	Sharpening	false	Sm 0.0005 N, Ha 0.3159 H, Sh 0.1978 N	Sm 0.0005 N, Ha 0.3129 H, Sh 0.1843 N
+31165	fuller|w1.0 L2.0 t0.08 c0.015 g0.08 at0.5 twin	0.013500	Hammering	false	Sm 0.3253 H, Ha 0.0805 N, Sh 0.0000 N	Sm 0.3253 H, Ha 0.0670 N, Sh 0.0000 N
+30677	fuller|w1.0 L2.0 t0.02 c0.030 g0.02 at0.6 twin	0.013500	Hammering	false	Sm 0.2413 H, Ha 0.3000 H, Sh 0.0912 N	Sm 0.2413 H, Ha 0.2865 H, Sh 0.0882 N
+31163	fuller|w1.0 L2.0 t0.08 c0.015 g0.08 at0.4 twin	0.013400	Hammering	false	Sm 0.3253 H, Ha 0.0804 N, Sh 0.0000 N	Sm 0.3253 H, Ha 0.0670 N, Sh 0.0000 N
+31156	fuller|w1.0 L2.0 t0.08 c0.015 g0.08 at0.1 one	0.013400	Hammering	false	Sm 0.3319 H, Ha 0.0361 N, Sh 0.0000 N	Sm 0.3319 H, Ha 0.0495 N, Sh 0.0000 N
+30793	fuller|w1.0 L2.0 t0.02 c0.050 g0.05 at0.5 one	0.013400	Hammering	false	Sm 0.3551 H, Ha 0.0899 N, Sh 0.0000 N	Sm 0.3551 H, Ha 0.0765 N, Sh 0.0000 N
+29272	fuller|w0.8 L2.0 t0.04 c0.015 g0.03 at0.5 twin	0.013400	Hammering	false	Sm 0.1737 N, Ha 0.2979 H, Sh 0.0879 N	Sm 0.1737 N, Ha 0.3113 H, Sh 0.0877 N
+28270	fuller|w0.8 L2.5 t0.02 c0.030 g0.01 at0.3 twin	0.013400	Hammering	false	Sm 0.2482 H, Ha 0.2154 H, Sh 0.0000 N	Sm 0.2482 H, Ha 0.2020 H, Sh 0.0000 N
+25948	fuller|w0.4 L2.0 t0.02 c0.015 g0.05 at0.3 twin	0.013400	Hammering	false	Sm 0.0654 N, Ha 0.4098 H, Sh 0.1916 N	Sm 0.0654 N, Ha 0.3964 H, Sh 0.1856 N
+8631	plateEdge|C09|guard w1.0 k0.6 l1.0 poke0.0150	0.013300	Hammering	false	Sm 0.0007 N, Ha 0.3174 H, Sh 0.1791 N	Sm 0.0007 N, Ha 0.3041 H, Sh 0.1704 N
+8008	cylRib|C09|blade r0.08 psi22.50 height0.020	0.013300	Hammering	false	Sm 0.0346 N, Ha 0.0810 N, Sh 0.0955 N	Sm 0.0346 N, Ha 0.0943 N, Sh 0.0955 N
+31155	fuller|w1.0 L2.0 t0.08 c0.015 g0.08 at0.0 one	0.013300	Hammering	false	Sm 0.3319 H, Ha 0.0469 N, Sh 0.0000 N	Sm 0.3319 H, Ha 0.0602 N, Sh 0.0000 N
+30853	fuller|w1.0 L2.0 t0.04 c0.015 g0.02 at0.5 twin	0.013300	Hammering	false	Sm 0.2144 H, Ha 0.2995 H, Sh 0.0773 N	Sm 0.2144 H, Ha 0.3128 H, Sh 0.0753 N
+30166	fuller|w1.0 L2.5 t0.04 c0.030 g0.05 at0.3 one	0.013300	Hammering	true	Sm 0.3730 H, Ha 0.2021 H, Sh 0.0000 N	Sm 0.3730 H, Ha 0.1888 N, Sh 0.0000 N
+29547	fuller|w0.8 L2.0 t0.08 c0.015 g0.05 at0.3 twin	0.013300	Hammering	false	Sm 0.2688 H, Ha 0.0330 N, Sh 0.0000 N	Sm 0.2688 H, Ha 0.0197 N, Sh 0.0000 N
+26835	fuller|w0.6 L2.5 t0.02 c0.050 g0.03 at0.3 one	0.013300	Hammering	false	Sm 0.2810 H, Ha 0.0898 N, Sh 0.0000 N	Sm 0.2810 H, Ha 0.0765 N, Sh 0.0000 N
+24597	fuller|w0.3 L2.0 t0.02 c0.015 g0.02 at0.4 twin	0.013300	Hammering	false	Sm 0.0564 N, Ha 0.1816 N, Sh 0.0000 N	Sm 0.0564 N, Ha 0.1683 N, Sh 0.0000 N
+24094	fuller|w0.3 L2.5 t0.02 c0.030 g0.05 at0.3 twin	0.013300	Hammering	false	Sm 0.0922 N, Ha 0.5452 H, Sh 0.1357 N	Sm 0.0922 N, Ha 0.5319 H, Sh 0.1239 N
+24084	fuller|w0.3 L2.5 t0.02 c0.030 g0.03 at0.5 one	0.013300	Hammering	false	Sm 0.1065 N, Ha 0.3430 H, Sh 0.0000 N	Sm 0.1065 N, Ha 0.3297 H, Sh 0.0000 N
+8547	plateEdge|C09|guard w0.8 k0.6 l1.0 poke0.0150	0.013200	Hammering	false	Sm 0.0007 N, Ha 0.3176 H, Sh 0.1791 N	Sm 0.0007 N, Ha 0.3044 H, Sh 0.1704 N
+28391	fuller|w0.8 L2.5 t0.02 c0.050 g0.03 at0.5 one	0.013200	Hammering	false	Sm 0.3646 H, Ha 0.1339 N, Sh 0.0000 N	Sm 0.3646 H, Ha 0.1207 N, Sh 0.0000 N
+27712	fuller|w0.6 L2.0 t0.04 c0.015 g0.05 at0.4 twin	0.013200	Sharpening	false	Sm 0.1313 N, Ha 0.2978 H, Sh 0.0085 N	Sm 0.1313 N, Ha 0.3098 H, Sh 0.0217 N
+26060	fuller|w0.4 L2.0 t0.02 c0.030 g0.12 at0.6 twin	0.013200	Hammering	false	Sm 0.0746 N, Ha 0.6150 H, Sh 0.2000 H	Sm 0.0746 N, Ha 0.6282 H, Sh 0.2000 H
+25975	fuller|w0.4 L2.0 t0.02 c0.015 g0.12 at0.4 twin	0.013200	Hammering	false	Sm 0.0539 N, Ha 0.5800 H, Sh 0.2000 H	Sm 0.0539 N, Ha 0.5932 H, Sh 0.2000 H
+24023	fuller|w0.3 L2.5 t0.02 c0.015 g0.03 at0.7 twin	0.013200	Sharpening	false	Sm 0.0667 N, Ha 0.3608 H, Sh 0.1371 N	Sm 0.0667 N, Ha 0.3577 H, Sh 0.1503 N
+31170	fuller|w1.0 L2.0 t0.08 c0.015 g0.12 at0.0 one	0.013100	Hammering	false	Sm 0.3286 H, Ha 0.0466 N, Sh 0.0000 N	Sm 0.3286 H, Ha 0.0597 N, Sh 0.0000 N
+31142	fuller|w1.0 L2.0 t0.08 c0.015 g0.05 at0.1 twin	0.013100	Hammering	false	Sm 0.3302 H, Ha 0.0873 N, Sh 0.0000 N	Sm 0.3302 H, Ha 0.0742 N, Sh 0.0000 N
+29994	fuller|w1.0 L2.5 t0.02 c0.050 g0.05 at0.6 one	0.013100	Hammering	false	Sm 0.4415 H, Ha 0.1755 N, Sh 0.0000 N	Sm 0.4415 H, Ha 0.1624 N, Sh 0.0000 N
+29251	fuller|w0.8 L2.0 t0.04 c0.015 g0.02 at0.2 twin	0.013100	Hammering	false	Sm 0.1754 N, Ha 0.3182 H, Sh 0.0288 N	Sm 0.1754 N, Ha 0.3313 H, Sh 0.0281 N
+28411	fuller|w0.8 L2.5 t0.02 c0.050 g0.05 at0.7 twin	0.013100	Hammering	false	Sm 0.3405 H, Ha 0.3189 H, Sh 0.0370 N	Sm 0.3405 H, Ha 0.3058 H, Sh 0.0307 N
+26222	fuller|w0.4 L2.0 t0.04 c0.015 g0.12 at0.6 twin	0.013100	Sharpening	false	Sm 0.0807 N, Ha 0.3208 H, Sh 0.0384 N	Sm 0.0807 N, Ha 0.3276 H, Sh 0.0515 N
+24226	fuller|w0.3 L2.5 t0.04 c0.015 g0.05 at0.3 twin	0.013100	Hammering	false	Sm 0.0891 N, Ha 0.3080 H, Sh 0.0068 N	Sm 0.0891 N, Ha 0.2949 H, Sh 0.0000 N
+7995	cylRib|C09|blade r0.08 psi11.25 height0.020	0.013000	Hammering	false	Sm 0.0346 N, Ha 0.1265 N, Sh 0.0955 N	Sm 0.0346 N, Ha 0.1395 N, Sh 0.0955 N
+31172	fuller|w1.0 L2.0 t0.08 c0.015 g0.12 at0.2 one	0.013000	Hammering	false	Sm 0.3286 H, Ha 0.0458 N, Sh 0.0000 N	Sm 0.3286 H, Ha 0.0588 N, Sh 0.0000 N
+30025	fuller|w1.0 L2.5 t0.02 c0.050 g0.12 at0.7 one	0.013000	Hammering	false	Sm 0.4175 H, Ha 0.2264 H, Sh 0.0082 N	Sm 0.4175 H, Ha 0.2134 H, Sh 0.0082 N
+28436	fuller|w0.8 L2.5 t0.02 c0.050 g0.12 at0.6 one	0.013000	Hammering	false	Sm 0.3339 H, Ha 0.1945 N, Sh 0.0101 N	Sm 0.3339 H, Ha 0.1815 N, Sh 0.0101 N
+30959	fuller|w1.0 L2.0 t0.04 c0.030 g0.03 at0.6 twin	0.012900	Hammering	false	Sm 0.2985 H, Ha 0.1667 N, Sh 0.0000 N	Sm 0.2985 H, Ha 0.1538 N, Sh 0.0000 N
+29530	fuller|w0.8 L2.0 t0.08 c0.015 g0.03 at0.2 twin	0.012900	Hammering	false	Sm 0.2721 H, Ha 0.0632 N, Sh 0.0000 N	Sm 0.2721 H, Ha 0.0503 N, Sh 0.0000 N
+28446	fuller|w0.8 L2.5 t0.04 c0.015 g0.01 at0.3 twin	0.012900	Hammering	false	Sm 0.2194 H, Ha 0.3105 H, Sh 0.0383 N	Sm 0.2194 H, Ha 0.3234 H, Sh 0.0383 N
+28392	fuller|w0.8 L2.5 t0.02 c0.050 g0.03 at0.5 twin	0.012900	Hammering	false	Sm 0.3542 H, Ha 0.2864 H, Sh 0.0451 N	Sm 0.3542 H, Ha 0.2735 H, Sh 0.0385 N
+26056	fuller|w0.4 L2.0 t0.02 c0.030 g0.12 at0.4 twin	0.012900	Hammering	false	Sm 0.0746 N, Ha 0.6790 H, Sh 0.2000 H	Sm 0.0746 N, Ha 0.6919 H, Sh 0.2000 H
+25643	fuller|w0.4 L2.5 t0.04 c0.050 g0.08 at0.6 twin	0.012900	Hammering	false	Sm 0.1863 N, Ha 0.4217 H, Sh 0.0000 N	Sm 0.1863 N, Ha 0.4346 H, Sh 0.0049 N
+24017	fuller|w0.3 L2.5 t0.02 c0.015 g0.03 at0.4 twin	0.012900	Sharpening	false	Sm 0.0667 N, Ha 0.3816 H, Sh 0.1145 N	Sm 0.0667 N, Ha 0.3785 H, Sh 0.1274 N
+23150	fuller|w0.2 L2.5 t0.02 c0.050 g0.03 at0.3 twin	0.012900	Sharpening	false	Sm 0.1035 N, Ha 0.6625 H, Sh 0.1397 N	Sm 0.1035 N, Ha 0.6501 H, Sh 0.1268 N
+8685	plateC09|C09|0.08 x 2.0 x 0.040 at x -0.05	0.012800	Hammering	false	Sm 0.0004 N, Ha 0.3435 H, Sh 0.2314 H	Sm 0.0004 N, Ha 0.3563 H, Sh 0.2395 H
+8681	plateC09|C09|0.08 x 2.0 x 0.040 at x -0.05	0.012800	Hammering	false	Sm 0.0004 N, Ha 0.3435 H, Sh 0.2314 H	Sm 0.0004 N, Ha 0.3563 H, Sh 0.2395 H
+32815	grille|0.6 x 1.2 x 0.02 6 x 8 f0.7	0.012800	Hammering	false	Sm 0.0935 N, Ha 0.0128 N, Sh 0.0000 N	Sm 0.0935 N, Ha 0.0000 N, Sh 0.0000 N
+31174	fuller|w1.0 L2.0 t0.08 c0.015 g0.12 at0.3 one	0.012800	Hammering	false	Sm 0.3286 H, Ha 0.0466 N, Sh 0.0000 N	Sm 0.3286 H, Ha 0.0594 N, Sh 0.0000 N
+31171	fuller|w1.0 L2.0 t0.08 c0.015 g0.12 at0.1 one	0.012800	Hammering	false	Sm 0.3286 H, Ha 0.0463 N, Sh 0.0000 N	Sm 0.3286 H, Ha 0.0591 N, Sh 0.0000 N
+31158	fuller|w1.0 L2.0 t0.08 c0.015 g0.08 at0.2 one	0.012800	Hammering	false	Sm 0.3319 H, Ha 0.0464 N, Sh 0.0000 N	Sm 0.3319 H, Ha 0.0592 N, Sh 0.0000 N
+30944	fuller|w1.0 L2.0 t0.04 c0.030 g0.02 at0.6 twin	0.012800	Hammering	false	Sm 0.3016 H, Ha 0.1749 N, Sh 0.0000 N	Sm 0.3016 H, Ha 0.1621 N, Sh 0.0000 N
+27459	fuller|w0.6 L2.0 t0.02 c0.015 g0.05 at0.7 one	0.012800	Hammering	false	Sm 0.0973 N, Ha 0.4089 H, Sh 0.1560 N	Sm 0.0973 N, Ha 0.3961 H, Sh 0.1560 N
+27457	fuller|w0.6 L2.0 t0.02 c0.015 g0.05 at0.6 one	0.012800	Hammering	false	Sm 0.0974 N, Ha 0.4081 H, Sh 0.1560 N	Sm 0.0974 N, Ha 0.3953 H, Sh 0.1560 N
+25979	fuller|w0.4 L2.0 t0.02 c0.015 g0.12 at0.6 twin	0.012800	Hammering	false	Sm 0.0539 N, Ha 0.5667 H, Sh 0.2000 H	Sm 0.0539 N, Ha 0.5795 H, Sh 0.2000 H
+25483	fuller|w0.4 L2.5 t0.04 c0.015 g0.08 at0.7 twin	0.012800	Sharpening	false	Sm 0.1073 N, Ha 0.4126 H, Sh 0.0757 N	Sm 0.1073 N, Ha 0.4003 H, Sh 0.0629 N
+24070	fuller|w0.3 L2.5 t0.02 c0.030 g0.02 at0.5 one	0.012800	Hammering	false	Sm 0.1086 N, Ha 0.3522 H, Sh 0.0000 N	Sm 0.1086 N, Ha 0.3394 H, Sh 0.0000 N
+8812	bevel|C09|a0.05 b0.08 height0.100	0.012700	Hammering	true	Sm 0.0002 N, Ha 0.3237 H, Sh 0.1979 N	Sm 0.0002 N, Ha 0.3364 H, Sh 0.2059 H
+8811	bevel|C09|a0.05 b0.08 height0.075	0.012700	Hammering	true	Sm 0.0001 N, Ha 0.3241 H, Sh 0.1987 N	Sm 0.0001 N, Ha 0.3368 H, Sh 0.2067 H
+8550	plateEdge|C09|guard w0.8 k0.6 l1.0 poke0.0500	0.012700	Hammering	false	Sm 0.0022 N, Ha 0.3140 H, Sh 0.1557 N	Sm 0.0022 N, Ha 0.3013 H, Sh 0.1475 N
+8367	plateEdge|C09|blade w1.0 k0.6 l0.8 poke0.0300	0.012700	Hammering	false	Sm 0.0002 N, Ha 0.3344 H, Sh 0.2189 H	Sm 0.0002 N, Ha 0.3471 H, Sh 0.2270 H
+31928	ribbed|w1.2 L1.5 k0.02 edges false g0.02 at0.360 pair	0.012700	Hammering	true	Sm 0.2228 H, Ha 0.1958 N, Sh 0.0705 N	Sm 0.2228 H, Ha 0.2085 H, Sh 0.0754 N
+30790	fuller|w1.0 L2.0 t0.02 c0.050 g0.05 at0.3 twin	0.012700	Hammering	false	Sm 0.3412 H, Ha 0.1669 N, Sh 0.0000 N	Sm 0.3412 H, Ha 0.1542 N, Sh 0.0000 N
+30173	fuller|w1.0 L2.5 t0.04 c0.030 g0.05 at0.6 twin	0.012700	Hammering	false	Sm 0.3626 H, Ha 0.3647 H, Sh 0.0599 N	Sm 0.3626 H, Ha 0.3520 H, Sh 0.0576 N
+30014	fuller|w1.0 L2.5 t0.02 c0.050 g0.12 at0.1 one	0.012700	Hammering	false	Sm 0.4175 H, Ha 0.2316 H, Sh 0.0091 N	Sm 0.4175 H, Ha 0.2189 H, Sh 0.0091 N
+29123	fuller|w0.8 L2.0 t0.02 c0.030 g0.08 at0.4 twin	0.012700	Sharpening	false	Sm 0.1770 N, Ha 0.4229 H, Sh 0.1046 N	Sm 0.1770 N, Ha 0.4247 H, Sh 0.1173 N
+26716	fuller|w0.6 L2.5 t0.02 c0.030 g0.01 at0.1 twin	0.012700	Hammering	false	Sm 0.1922 N, Ha 0.2694 H, Sh 0.0000 N	Sm 0.1922 N, Ha 0.2567 H, Sh 0.0000 N
+8785	bevel|C09|a0.03 b0.08 height1.000	0.012600	Hammering	true	Sm 0.0064 N, Ha 0.3417 H, Sh 0.1980 N	Sm 0.0064 N, Ha 0.3543 H, Sh 0.2057 H
+8784	bevel|C09|a0.03 b0.08 height0.750	0.012600	Hammering	false	Sm 0.0039 N, Ha 0.3293 H, Sh 0.2008 H	Sm 0.0039 N, Ha 0.3419 H, Sh 0.2085 H
+8715	plateTilt|C09|tilt8 poke0.005	0.012600	Hammering	false	Sm 0.0003 N, Ha 0.3138 H, Sh 0.1855 N	Sm 0.0003 N, Ha 0.3264 H, Sh 0.1933 N
+8394	plateEdge|C09|blade w1.0 k0.8 l0.6 poke0.0200	0.012600	Hammering	false	Sm 0.0002 N, Ha 0.2801 H, Sh 0.1547 N	Sm 0.0002 N, Ha 0.2927 H, Sh 0.1628 N
+31175	fuller|w1.0 L2.0 t0.08 c0.015 g0.12 at0.3 twin	0.012600	Hammering	false	Sm 0.3187 H, Ha 0.0831 N, Sh 0.0000 N	Sm 0.3187 H, Ha 0.0957 N, Sh 0.0000 N
+29515	fuller|w0.8 L2.0 t0.08 c0.015 g0.02 at0.2 twin	0.012600	Hammering	false	Sm 0.2738 H, Ha 0.0136 N, Sh 0.0000 N	Sm 0.2738 H, Ha 0.0010 N, Sh 0.0000 N
+29324	fuller|w0.8 L2.0 t0.04 c0.030 g0.01 at0.2 twin	0.012600	Hammering	false	Sm 0.2493 H, Ha 0.0258 N, Sh 0.0000 N	Sm 0.2493 H, Ha 0.0132 N, Sh 0.0000 N
+25920	fuller|w0.4 L2.0 t0.02 c0.015 g0.02 at0.3 twin	0.012600	Hammering	false	Sm 0.0703 N, Ha 0.2461 H, Sh 0.0449 N	Sm 0.0703 N, Ha 0.2335 H, Sh 0.0477 N
+25191	fuller|w0.4 L2.5 t0.02 c0.015 g0.02 at0.3 twin	0.012600	Hammering	false	Sm 0.0862 N, Ha 0.3910 H, Sh 0.1114 N	Sm 0.0862 N, Ha 0.3784 H, Sh 0.1129 N
+8393	plateEdge|C09|blade w1.0 k0.8 l0.6 poke0.0150	0.012500	Hammering	false	Sm 0.0001 N, Ha 0.2846 H, Sh 0.1570 N	Sm 0.0001 N, Ha 0.2971 H, Sh 0.1649 N
+31173	fuller|w1.0 L2.0 t0.08 c0.015 g0.12 at0.2 twin	0.012500	Hammering	false	Sm 0.3187 H, Ha 0.0837 N, Sh 0.0000 N	Sm 0.3187 H, Ha 0.0962 N, Sh 0.0000 N
+27599	fuller|w0.6 L2.0 t0.02 c0.050 g0.02 at0.5 twin	0.012500	Hammering	false	Sm 0.2236 H, Ha 0.1516 N, Sh 0.0000 N	Sm 0.2236 H, Ha 0.1391 N, Sh 0.0000 N
+27438	fuller|w0.6 L2.0 t0.02 c0.015 g0.03 at0.3 twin	0.012500	Sharpening	false	Sm 0.0966 N, Ha 0.4056 H, Sh 0.1546 N	Sm 0.0966 N, Ha 0.4011 H, Sh 0.1671 N
+23638	fuller|w0.2 L2.0 t0.02 c0.050 g0.03 at0.4 twin	0.012500	Hammering	false	Sm 0.0842 N, Ha 0.0984 N, Sh 0.0000 N	Sm 0.0842 N, Ha 0.1109 N, Sh 0.0000 N
+16391	bevel|F3|a0.03 b0.08 height0.150	0.012500	Hammering	false	Sm 0.0000 N, Ha 0.5762 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.5887 H, Sh 0.6104 H
+8634	plateEdge|C09|guard w1.0 k0.6 l1.0 poke0.0500	0.012400	Hammering	false	Sm 0.0022 N, Ha 0.3130 H, Sh 0.1553 N	Sm 0.0022 N, Ha 0.3006 H, Sh 0.1475 N
+8467	plateEdge|C09|guard w0.5 k0.6 l1.0 poke0.0750	0.012400	Hammering	false	Sm 0.0042 N, Ha 0.3017 H, Sh 0.1419 N	Sm 0.0042 N, Ha 0.2893 H, Sh 0.1324 N
+31167	fuller|w1.0 L2.0 t0.08 c0.015 g0.08 at0.6 twin	0.012400	Hammering	false	Sm 0.3253 H, Ha 0.0795 N, Sh 0.0000 N	Sm 0.3253 H, Ha 0.0671 N, Sh 0.0000 N
+30953	fuller|w1.0 L2.0 t0.04 c0.030 g0.03 at0.3 twin	0.012400	Hammering	false	Sm 0.2985 H, Ha 0.1941 N, Sh 0.0000 N	Sm 0.2985 H, Ha 0.1817 N, Sh 0.0000 N
+30938	fuller|w1.0 L2.0 t0.04 c0.030 g0.02 at0.3 twin	0.012400	Hammering	false	Sm 0.3018 H, Ha 0.1736 N, Sh 0.0000 N	Sm 0.3018 H, Ha 0.1612 N, Sh 0.0000 N
+30769	fuller|w1.0 L2.0 t0.02 c0.050 g0.03 at0.0 one	0.012400	Hammering	false	Sm 0.3603 H, Ha 0.0908 N, Sh 0.0000 N	Sm 0.3603 H, Ha 0.0784 N, Sh 0.0000 N
+28746	fuller|w0.8 L2.5 t0.08 c0.015 g0.03 at0.6 twin	0.012400	Hammering	false	Sm 0.3381 H, Ha 0.1300 N, Sh 0.0000 N	Sm 0.3381 H, Ha 0.1176 N, Sh 0.0000 N
+27745	fuller|w0.6 L2.0 t0.04 c0.015 g0.12 at0.7 twin	0.012400	Sharpening	false	Sm 0.1198 N, Ha 0.3798 H, Sh 0.0831 N	Sm 0.1198 N, Ha 0.3858 H, Sh 0.0955 N
+27573	fuller|w0.6 L2.0 t0.02 c0.030 g0.12 at0.7 twin	0.012400	Sharpening	false	Sm 0.1193 N, Ha 0.6568 H, Sh 0.1823 N	Sm 0.1193 N, Ha 0.6568 H, Sh 0.1947 N
+27453	fuller|w0.6 L2.0 t0.02 c0.015 g0.05 at0.4 one	0.012400	Hammering	false	Sm 0.0974 N, Ha 0.4081 H, Sh 0.1560 N	Sm 0.0974 N, Ha 0.3957 H, Sh 0.1565 N
+27451	fuller|w0.6 L2.0 t0.02 c0.015 g0.05 at0.3 one	0.012400	Hammering	false	Sm 0.0974 N, Ha 0.4085 H, Sh 0.1560 N	Sm 0.0974 N, Ha 0.3961 H, Sh 0.1565 N
+25934	fuller|w0.4 L2.0 t0.02 c0.015 g0.03 at0.3 twin	0.012400	Hammering	false	Sm 0.0687 N, Ha 0.2748 H, Sh 0.0973 N	Sm 0.0687 N, Ha 0.2624 H, Sh 0.0973 N
+25918	fuller|w0.4 L2.0 t0.02 c0.015 g0.02 at0.2 twin	0.012400	Hammering	false	Sm 0.0703 N, Ha 0.2462 H, Sh 0.0482 N	Sm 0.0703 N, Ha 0.2338 H, Sh 0.0482 N
+30951	fuller|w1.0 L2.0 t0.04 c0.030 g0.03 at0.2 twin	0.012300	Hammering	false	Sm 0.2985 H, Ha 0.1345 N, Sh 0.0000 N	Sm 0.2985 H, Ha 0.1222 N, Sh 0.0000 N
+29559	fuller|w0.8 L2.0 t0.08 c0.015 g0.08 at0.2 twin	0.012300	Hammering	false	Sm 0.2639 H, Ha 0.0314 N, Sh 0.0000 N	Sm 0.2639 H, Ha 0.0437 N, Sh 0.0000 N
+27430	fuller|w0.6 L2.0 t0.02 c0.015 g0.02 at0.7 one	0.012300	Hammering	false	Sm 0.0999 N, Ha 0.3441 H, Sh 0.1103 N	Sm 0.0999 N, Ha 0.3318 H, Sh 0.1123 N
+8353	plateEdge|C09|blade w1.0 k0.6 l0.6 poke0.0300	0.012200	Hammering	false	Sm 0.0002 N, Ha 0.3370 H, Sh 0.2214 H	Sm 0.0002 N, Ha 0.3492 H, Sh 0.2288 H
+8240	plateEdge|C09|blade w0.5 k0.8 l0.8 poke0.0200	0.012200	Hammering	false	Sm 0.0002 N, Ha 0.2701 H, Sh 0.1405 N	Sm 0.0002 N, Ha 0.2823 H, Sh 0.1478 N
+8239	plateEdge|C09|blade w0.5 k0.8 l0.8 poke0.0150	0.012200	Hammering	false	Sm 0.0001 N, Ha 0.2678 H, Sh 0.1422 N	Sm 0.0001 N, Ha 0.2800 H, Sh 0.1496 N
+31445	ribbed|w0.3 L2.5 k0.02 edges true g0.02 at0.066 one	0.012200	Hammering	false	Sm 0.0640 N, Ha 0.3509 H, Sh 0.0000 N	Sm 0.0640 N, Ha 0.3387 H, Sh 0.0000 N
+31166	fuller|w1.0 L2.0 t0.08 c0.015 g0.08 at0.6 one	0.012200	Hammering	false	Sm 0.3319 H, Ha 0.0377 N, Sh 0.0000 N	Sm 0.3319 H, Ha 0.0499 N, Sh 0.0000 N
+31126	fuller|w1.0 L2.0 t0.08 c0.015 g0.03 at0.1 one	0.012200	Hammering	false	Sm 0.3360 H, Ha 0.0357 N, Sh 0.0000 N	Sm 0.3360 H, Ha 0.0235 N, Sh 0.0000 N
+30780	fuller|w1.0 L2.0 t0.02 c0.050 g0.03 at0.6 one	0.012200	Hammering	false	Sm 0.3605 H, Ha 0.0703 N, Sh 0.0000 N	Sm 0.3605 H, Ha 0.0581 N, Sh 0.0000 N
+29242	fuller|w0.8 L2.0 t0.04 c0.015 g0.01 at0.5 twin	0.012200	Hammering	true	Sm 0.1770 N, Ha 0.1891 N, Sh 0.0000 N	Sm 0.1770 N, Ha 0.2013 H, Sh 0.0000 N
+28731	fuller|w0.8 L2.5 t0.08 c0.015 g0.02 at0.6 twin	0.012200	Hammering	false	Sm 0.3402 H, Ha 0.0711 N, Sh 0.0000 N	Sm 0.3402 H, Ha 0.0589 N, Sh 0.0000 N
+25952	fuller|w0.4 L2.0 t0.02 c0.015 g0.05 at0.5 twin	0.012200	Sharpening	false	Sm 0.0654 N, Ha 0.2831 H, Sh 0.1241 N	Sm 0.0654 N, Ha 0.2777 H, Sh 0.1363 N
+25928	fuller|w0.4 L2.0 t0.02 c0.015 g0.02 at0.7 twin	0.012200	Hammering	false	Sm 0.0703 N, Ha 0.2458 H, Sh 0.0477 N	Sm 0.0703 N, Ha 0.2336 H, Sh 0.0479 N
+8679	plateC09|C09|0.09 x 2.0 x 0.040 at x -0.05	0.012100	Sharpening	false	Sm 0.0006 N, Ha 0.3783 H, Sh 0.2673 H	Sm 0.0006 N, Ha 0.3763 H, Sh 0.2552 H
+8463	plateEdge|C09|guard w0.5 k0.6 l1.0 poke0.0150	0.012100	Hammering	false	Sm 0.0007 N, Ha 0.3167 H, Sh 0.1791 N	Sm 0.0007 N, Ha 0.3046 H, Sh 0.1704 N
+8256	plateEdge|C09|blade w0.5 k0.8 l1.0 poke0.0500	0.012100	Hammering	false	Sm 0.0031 N, Ha 0.2659 H, Sh 0.1173 N	Sm 0.0031 N, Ha 0.2780 H, Sh 0.1236 N
+31837	ribbed|w0.8 L2.5 k0.02 edges true g0.02 at0.176 one	0.012100	Hammering	false	Sm 0.2301 H, Ha 0.3718 H, Sh 0.0262 N	Sm 0.2301 H, Ha 0.3597 H, Sh 0.0262 N
+31127	fuller|w1.0 L2.0 t0.08 c0.015 g0.03 at0.1 twin	0.012100	Hammering	false	Sm 0.3336 H, Ha 0.0578 N, Sh 0.0000 N	Sm 0.3336 H, Ha 0.0457 N, Sh 0.0000 N
+30682	fuller|w1.0 L2.0 t0.02 c0.030 g0.03 at0.1 twin	0.012100	Hammering	false	Sm 0.2382 H, Ha 0.3000 H, Sh 0.0866 N	Sm 0.2382 H, Ha 0.2879 H, Sh 0.0860 N
+29988	fuller|w1.0 L2.5 t0.02 c0.050 g0.05 at0.3 one	0.012100	Hammering	false	Sm 0.4415 H, Ha 0.1517 N, Sh 0.0000 N	Sm 0.4415 H, Ha 0.1396 N, Sh 0.0000 N
+29553	fuller|w0.8 L2.0 t0.08 c0.015 g0.05 at0.6 twin	0.012100	Hammering	false	Sm 0.2689 H, Ha 0.0383 N, Sh 0.0000 N	Sm 0.2689 H, Ha 0.0262 N, Sh 0.0000 N
+29528	fuller|w0.8 L2.0 t0.08 c0.015 g0.03 at0.1 twin	0.012100	Hammering	false	Sm 0.2721 H, Ha 0.0232 N, Sh 0.0000 N	Sm 0.2721 H, Ha 0.0353 N, Sh 0.0000 N
+27448	fuller|w0.6 L2.0 t0.02 c0.015 g0.05 at0.1 one	0.012100	Hammering	false	Sm 0.0974 N, Ha 0.4081 H, Sh 0.1560 N	Sm 0.0974 N, Ha 0.3960 H, Sh 0.1568 N
+25941	fuller|w0.4 L2.0 t0.02 c0.015 g0.03 at0.7 one	0.012100	Hammering	false	Sm 0.0712 N, Ha 0.2462 H, Sh 0.0460 N	Sm 0.0712 N, Ha 0.2341 H, Sh 0.0460 N
+25937	fuller|w0.4 L2.0 t0.02 c0.015 g0.03 at0.5 one	0.012100	Hammering	false	Sm 0.0712 N, Ha 0.2462 H, Sh 0.0460 N	Sm 0.0712 N, Ha 0.2341 H, Sh 0.0460 N
+25933	fuller|w0.4 L2.0 t0.02 c0.015 g0.03 at0.3 one	0.012100	Hammering	false	Sm 0.0712 N, Ha 0.2468 H, Sh 0.0460 N	Sm 0.0712 N, Ha 0.2347 H, Sh 0.0460 N
+25931	fuller|w0.4 L2.0 t0.02 c0.015 g0.03 at0.2 one	0.012100	Hammering	false	Sm 0.0712 N, Ha 0.2462 H, Sh 0.0460 N	Sm 0.0712 N, Ha 0.2341 H, Sh 0.0460 N
+25929	fuller|w0.4 L2.0 t0.02 c0.015 g0.03 at0.0 one	0.012100	Hammering	false	Sm 0.0712 N, Ha 0.2462 H, Sh 0.0460 N	Sm 0.0712 N, Ha 0.2341 H, Sh 0.0460 N
+25923	fuller|w0.4 L2.0 t0.02 c0.015 g0.02 at0.5 one	0.012100	Hammering	false	Sm 0.0720 N, Ha 0.2548 H, Sh 0.0565 N	Sm 0.0720 N, Ha 0.2427 H, Sh 0.0565 N
+25914	fuller|w0.4 L2.0 t0.02 c0.015 g0.02 at0.0 one	0.012100	Hammering	false	Sm 0.0720 N, Ha 0.2548 H, Sh 0.0565 N	Sm 0.0720 N, Ha 0.2427 H, Sh 0.0565 N
+25913	fuller|w0.4 L2.0 t0.02 c0.015 g0.01 at0.7 twin	0.012100	Hammering	false	Sm 0.0720 N, Ha 0.1896 N, Sh 0.0000 N	Sm 0.0720 N, Ha 0.1775 N, Sh 0.0000 N
+24587	fuller|w0.3 L2.0 t0.02 c0.015 g0.01 at0.6 twin	0.012100	Hammering	false	Sm 0.0580 N, Ha 0.1216 N, Sh 0.0000 N	Sm 0.0580 N, Ha 0.1095 N, Sh 0.0000 N
+23151	fuller|w0.2 L2.5 t0.02 c0.050 g0.03 at0.4 one	0.012100	Hammering	false	Sm 0.1137 N, Ha 0.0167 N, Sh 0.0000 N	Sm 0.1137 N, Ha 0.0288 N, Sh 0.0000 N
+23147	fuller|w0.2 L2.5 t0.02 c0.050 g0.03 at0.1 one	0.012100	Hammering	false	Sm 0.1137 N, Ha 0.0167 N, Sh 0.0000 N	Sm 0.1137 N, Ha 0.0288 N, Sh 0.0000 N
+16358	bevel|F3|a0.02 b0.08 height0.150	0.012100	Hammering	false	Sm 0.0000 N, Ha 0.5654 H, Sh 0.6104 H	Sm 0.0000 N, Ha 0.5775 H, Sh 0.6104 H
+32953	grille|1.0 x 2.8 x 0.02 2 x 2 f0.7	0.012000	Hammering	false	Sm 0.5312 H, Ha 0.0641 N, Sh 0.0000 N	Sm 0.5312 H, Ha 0.0521 N, Sh 0.0000 N
+32866	grille|0.6 x 2.8 x 0.02 6 x 4 f0.7	0.012000	Hammering	false	Sm 0.3077 H, Ha 0.0376 N, Sh 0.0000 N	Sm 0.3077 H, Ha 0.0496 N, Sh 0.0000 N
+32032	ribbed|w1.2 L1.5 k0.04 edges true g0.02 at0.456 pair	0.012000	Hammering	false	Sm 0.2815 H, Ha 0.0844 N, Sh 0.0000 N	Sm 0.2815 H, Ha 0.0724 N, Sh 0.0000 N
+31176	fuller|w1.0 L2.0 t0.08 c0.015 g0.12 at0.4 one	0.012000	Hammering	false	Sm 0.3286 H, Ha 0.0470 N, Sh 0.0000 N	Sm 0.3286 H, Ha 0.0590 N, Sh 0.0000 N
+30167	fuller|w1.0 L2.5 t0.04 c0.030 g0.05 at0.3 twin	0.012000	Hammering	false	Sm 0.3626 H, Ha 0.2866 H, Sh 0.0320 N	Sm 0.3626 H, Ha 0.2746 H, Sh 0.0304 N
+30146	fuller|w1.0 L2.5 t0.04 c0.030 g0.03 at0.0 one	0.012000	Hammering	true	Sm 0.3770 H, Ha 0.2084 H, Sh 0.0000 N	Sm 0.3770 H, Ha 0.1964 N, Sh 0.0000 N
+29543	fuller|w0.8 L2.0 t0.08 c0.015 g0.05 at0.1 twin	0.012000	Hammering	false	Sm 0.2689 H, Ha 0.0444 N, Sh 0.0000 N	Sm 0.2689 H, Ha 0.0564 N, Sh 0.0000 N
+28708	fuller|w0.8 L2.5 t0.08 c0.015 g0.01 at0.2 twin	0.012000	Hammering	false	Sm 0.3423 H, Ha 0.0306 N, Sh 0.0000 N	Sm 0.3423 H, Ha 0.0186 N, Sh 0.0000 N
+28569	fuller|w0.8 L2.5 t0.04 c0.030 g0.03 at0.6 one	0.012000	Hammering	false	Sm 0.3074 H, Ha 0.1716 N, Sh 0.0000 N	Sm 0.3074 H, Ha 0.1596 N, Sh 0.0000 N
+27449	fuller|w0.6 L2.0 t0.02 c0.015 g0.05 at0.2 one	0.012000	Hammering	false	Sm 0.0974 N, Ha 0.4085 H, Sh 0.1560 N	Sm 0.0974 N, Ha 0.3965 H, Sh 0.1569 N
+25911	fuller|w0.4 L2.0 t0.02 c0.015 g0.01 at0.6 twin	0.012000	Hammering	false	Sm 0.0720 N, Ha 0.1902 N, Sh 0.0000 N	Sm 0.0720 N, Ha 0.1782 N, Sh 0.0000 N
+24003	fuller|w0.3 L2.5 t0.02 c0.015 g0.02 at0.4 twin	0.012000	Hammering	false	Sm 0.0688 N, Ha 0.3174 H, Sh 0.0557 N	Sm 0.0688 N, Ha 0.3054 H, Sh 0.0572 N
+7982	cylRib|C09|blade r0.08 psi0.00 height0.020	0.011900	Hammering	false	Sm 0.0346 N, Ha 0.0818 N, Sh 0.0955 N	Sm 0.0346 N, Ha 0.0937 N, Sh 0.0955 N
+31164	fuller|w1.0 L2.0 t0.08 c0.015 g0.08 at0.5 one	0.011900	Hammering	false	Sm 0.3319 H, Ha 0.0475 N, Sh 0.0000 N	Sm 0.3319 H, Ha 0.0594 N, Sh 0.0000 N
+30991	fuller|w1.0 L2.0 t0.04 c0.030 g0.08 at0.7 twin	0.011900	Hammering	false	Sm 0.2820 H, Ha 0.2852 H, Sh 0.0044 N	Sm 0.2820 H, Ha 0.2733 H, Sh 0.0004 N
+30809	fuller|w1.0 L2.0 t0.02 c0.050 g0.08 at0.5 twin	0.011900	Hammering	false	Sm 0.3249 H, Ha 0.2594 H, Sh 0.0000 N	Sm 0.3249 H, Ha 0.2475 H, Sh 0.0000 N
+29548	fuller|w0.8 L2.0 t0.08 c0.015 g0.05 at0.4 one	0.011900	Hammering	false	Sm 0.2730 H, Ha 0.0101 N, Sh 0.0000 N	Sm 0.2730 H, Ha 0.0220 N, Sh 0.0000 N
+29354	fuller|w0.8 L2.0 t0.04 c0.030 g0.03 at0.2 twin	0.011900	Hammering	true	Sm 0.2426 H, Ha 0.2060 H, Sh 0.0000 N	Sm 0.2426 H, Ha 0.1941 N, Sh 0.0000 N
+28767	fuller|w0.8 L2.5 t0.08 c0.015 g0.08 at0.2 twin	0.011900	Hammering	false	Sm 0.3278 H, Ha 0.1297 N, Sh 0.0000 N	Sm 0.3278 H, Ha 0.1178 N, Sh 0.0000 N
+27443	fuller|w0.6 L2.0 t0.02 c0.015 g0.03 at0.6 one	0.011900	Hammering	false	Sm 0.0991 N, Ha 0.4083 H, Sh 0.1532 N	Sm 0.0991 N, Ha 0.3964 H, Sh 0.1541 N
+25912	fuller|w0.4 L2.0 t0.02 c0.015 g0.01 at0.7 one	0.011900	Hammering	false	Sm 0.0728 N, Ha 0.1994 N, Sh 0.0000 N	Sm 0.0728 N, Ha 0.1875 N, Sh 0.0000 N
+25910	fuller|w0.4 L2.0 t0.02 c0.015 g0.01 at0.6 one	0.011900	Hammering	false	Sm 0.0728 N, Ha 0.1997 N, Sh 0.0000 N	Sm 0.0728 N, Ha 0.1878 N, Sh 0.0000 N
+25909	fuller|w0.4 L2.0 t0.02 c0.015 g0.01 at0.5 twin	0.011900	Hammering	false	Sm 0.0720 N, Ha 0.1852 N, Sh 0.0000 N	Sm 0.0720 N, Ha 0.1733 N, Sh 0.0000 N
+25907	fuller|w0.4 L2.0 t0.02 c0.015 g0.01 at0.4 twin	0.011900	Hammering	false	Sm 0.0720 N, Ha 0.1881 N, Sh 0.0000 N	Sm 0.0720 N, Ha 0.1762 N, Sh 0.0000 N
+25906	fuller|w0.4 L2.0 t0.02 c0.015 g0.01 at0.4 one	0.011900	Hammering	false	Sm 0.0728 N, Ha 0.1984 N, Sh 0.0000 N	Sm 0.0728 N, Ha 0.1865 N, Sh 0.0000 N
+25904	fuller|w0.4 L2.0 t0.02 c0.015 g0.01 at0.3 one	0.011900	Hammering	false	Sm 0.0728 N, Ha 0.1981 N, Sh 0.0000 N	Sm 0.0728 N, Ha 0.1862 N, Sh 0.0000 N
+23102	fuller|w0.2 L2.5 t0.02 c0.030 g0.03 at0.6 twin	0.011900	Sharpening	false	Sm 0.0725 N, Ha 0.2160 H, Sh 0.0382 N	Sm 0.0725 N, Ha 0.2156 H, Sh 0.0501 N
+8297	plateEdge|C09|blade w0.8 k0.6 l1.0 poke0.0300	0.011800	Hammering	false	Sm 0.0002 N, Ha 0.3300 H, Sh 0.2244 H	Sm 0.0002 N, Ha 0.3418 H, Sh 0.2311 H
+32128	ribbed|w1.2 L2.5 k0.04 edges false g0.02 at0.168 pair	0.011800	Hammering	false	Sm 0.4367 H, Ha 0.3213 H, Sh 0.1244 N	Sm 0.4367 H, Ha 0.3095 H, Sh 0.1222 N
+31633	ribbed|w0.5 L2.5 k0.02 edges true g0.08 at0.150 one	0.011800	Hammering	false	Sm 0.1141 N, Ha 0.4824 H, Sh 0.0370 N	Sm 0.1141 N, Ha 0.4706 H, Sh 0.0288 N
+31161	fuller|w1.0 L2.0 t0.08 c0.015 g0.08 at0.3 twin	0.011800	Hammering	false	Sm 0.3253 H, Ha 0.0795 N, Sh 0.0000 N	Sm 0.3253 H, Ha 0.0677 N, Sh 0.0000 N
+30974	fuller|w1.0 L2.0 t0.04 c0.030 g0.05 at0.6 twin	0.011800	Hammering	false	Sm 0.2918 H, Ha 0.2501 H, Sh 0.0000 N	Sm 0.2918 H, Ha 0.2383 H, Sh 0.0000 N
+30957	fuller|w1.0 L2.0 t0.04 c0.030 g0.03 at0.5 twin	0.011800	Hammering	false	Sm 0.2983 H, Ha 0.1346 N, Sh 0.0000 N	Sm 0.2983 H, Ha 0.1228 N, Sh 0.0000 N
+30802	fuller|w1.0 L2.0 t0.02 c0.050 g0.08 at0.2 one	0.011800	Hammering	false	Sm 0.3468 H, Ha 0.0940 N, Sh 0.0058 N	Sm 0.3468 H, Ha 0.0822 N, Sh 0.0058 N
+30799	fuller|w1.0 L2.0 t0.02 c0.050 g0.08 at0.0 one	0.011800	Hammering	false	Sm 0.3468 H, Ha 0.0846 N, Sh 0.0000 N	Sm 0.3468 H, Ha 0.0728 N, Sh 0.0000 N
+30679	fuller|w1.0 L2.0 t0.02 c0.030 g0.02 at0.7 twin	0.011800	Hammering	false	Sm 0.2415 H, Ha 0.2723 H, Sh 0.0582 N	Sm 0.2415 H, Ha 0.2605 H, Sh 0.0602 N
+30376	fuller|w1.0 L2.5 t0.08 c0.015 g0.12 at0.4 twin	0.011800	Hammering	true	Sm 0.3962 H, Ha 0.2042 H, Sh 0.0000 N	Sm 0.3962 H, Ha 0.1924 N, Sh 0.0000 N
+29545	fuller|w0.8 L2.0 t0.08 c0.015 g0.05 at0.2 twin	0.011800	Hammering	false	Sm 0.2688 H, Ha 0.0225 N, Sh 0.0000 N	Sm 0.2688 H, Ha 0.0343 N, Sh 0.0000 N
+29532	fuller|w0.8 L2.0 t0.08 c0.015 g0.03 at0.3 twin	0.011800	Hammering	false	Sm 0.2721 H, Ha 0.0574 N, Sh 0.0000 N	Sm 0.2721 H, Ha 0.0456 N, Sh 0.0000 N
+29519	fuller|w0.8 L2.0 t0.08 c0.015 g0.02 at0.4 twin	0.011800	Hammering	false	Sm 0.2738 H, Ha 0.0134 N, Sh 0.0000 N	Sm 0.2738 H, Ha 0.0016 N, Sh 0.0000 N
+28573	fuller|w0.8 L2.5 t0.04 c0.030 g0.05 at0.0 one	0.011800	Hammering	false	Sm 0.3033 H, Ha 0.1646 N, Sh 0.0000 N	Sm 0.3033 H, Ha 0.1528 N, Sh 0.0000 N
+28542	fuller|w0.8 L2.5 t0.04 c0.030 g0.01 at0.7 twin	0.011800	Hammering	false	Sm 0.3095 H, Ha 0.1222 N, Sh 0.0000 N	Sm 0.3095 H, Ha 0.1104 N, Sh 0.0000 N
+24583	fuller|w0.3 L2.0 t0.02 c0.015 g0.01 at0.4 twin	0.011800	Hammering	false	Sm 0.0580 N, Ha 0.1213 N, Sh 0.0000 N	Sm 0.0580 N, Ha 0.1095 N, Sh 0.0000 N
+1930	laminate|C02|k0.03 wf2.0 proud-0.0200 capfalse	0.011800	Sharpening	false	Sm 0.0852 N, Ha 0.1781 N, Sh 0.2056 H	Sm 0.0852 N, Ha 0.1893 N, Sh 0.2174 H
+8462	plateEdge|C09|guard w0.5 k0.6 l1.0 poke0.0125	0.011700	Hammering	false	Sm 0.0007 N, Ha 0.3182 H, Sh 0.1813 N	Sm 0.0007 N, Ha 0.3065 H, Sh 0.1730 N
+31739	ribbed|w0.8 L1.5 k0.02 edges true g0.08 at0.240 one	0.011700	Hammering	false	Sm 0.1311 N, Ha 0.1659 N, Sh 0.0011 N	Sm 0.1311 N, Ha 0.1542 N, Sh 0.0011 N
+31159	fuller|w1.0 L2.0 t0.08 c0.015 g0.08 at0.2 twin	0.011700	Hammering	false	Sm 0.3253 H, Ha 0.0787 N, Sh 0.0000 N	Sm 0.3253 H, Ha 0.0670 N, Sh 0.0000 N
+30942	fuller|w1.0 L2.0 t0.04 c0.030 g0.02 at0.5 twin	0.011700	Hammering	false	Sm 0.3016 H, Ha 0.1425 N, Sh 0.0000 N	Sm 0.3016 H, Ha 0.1308 N, Sh 0.0000 N
+30819	fuller|w1.0 L2.0 t0.02 c0.050 g0.12 at0.3 twin	0.011700	Hammering	false	Sm 0.3030 H, Ha 0.2935 H, Sh 0.0105 N	Sm 0.3030 H, Ha 0.2818 H, Sh 0.0105 N
+30688	fuller|w1.0 L2.0 t0.02 c0.030 g0.03 at0.4 twin	0.011700	Hammering	false	Sm 0.2382 H, Ha 0.3000 H, Sh 0.0868 N	Sm 0.2382 H, Ha 0.2883 H, Sh 0.0863 N
+30151	fuller|w1.0 L2.5 t0.04 c0.030 g0.03 at0.3 one	0.011700	Hammering	true	Sm 0.3771 H, Ha 0.2070 H, Sh 0.0000 N	Sm 0.3771 H, Ha 0.1953 N, Sh 0.0000 N
+29542	fuller|w0.8 L2.0 t0.08 c0.015 g0.05 at0.1 one	0.011700	Hammering	false	Sm 0.2730 H, Ha 0.0103 N, Sh 0.0000 N	Sm 0.2730 H, Ha 0.0220 N, Sh 0.0000 N
+29525	fuller|w0.8 L2.0 t0.08 c0.015 g0.02 at0.7 twin	0.011700	Hammering	false	Sm 0.2738 H, Ha 0.0111 N, Sh 0.0000 N	Sm 0.2738 H, Ha 0.0228 N, Sh 0.0000 N
+29199	fuller|w0.8 L2.0 t0.02 c0.050 g0.05 at0.5 twin	0.011700	Hammering	false	Sm 0.2744 H, Ha 0.1948 N, Sh 0.0000 N	Sm 0.2744 H, Ha 0.1831 N, Sh 0.0000 N
+28751	fuller|w0.8 L2.5 t0.08 c0.015 g0.05 at0.1 twin	0.011700	Hammering	false	Sm 0.3340 H, Ha 0.0999 N, Sh 0.0000 N	Sm 0.3340 H, Ha 0.0882 N, Sh 0.0000 N
+28554	fuller|w0.8 L2.5 t0.04 c0.030 g0.02 at0.6 one	0.011700	Hammering	false	Sm 0.3095 H, Ha 0.1398 N, Sh 0.0000 N	Sm 0.3095 H, Ha 0.1281 N, Sh 0.0000 N
+27424	fuller|w0.6 L2.0 t0.02 c0.015 g0.02 at0.4 one	0.011700	Hammering	false	Sm 0.0999 N, Ha 0.3865 H, Sh 0.1254 N	Sm 0.0999 N, Ha 0.3748 H, Sh 0.1263 N
+26824	fuller|w0.6 L2.5 t0.02 c0.050 g0.02 at0.5 one	0.011700	Hammering	false	Sm 0.2844 H, Ha 0.1003 N, Sh 0.0000 N	Sm 0.2844 H, Ha 0.0886 N, Sh 0.0000 N
+25951	fuller|w0.4 L2.0 t0.02 c0.015 g0.05 at0.5 one	0.011700	Hammering	false	Sm 0.0695 N, Ha 0.2609 H, Sh 0.0738 N	Sm 0.0695 N, Ha 0.2492 H, Sh 0.0750 N
+25905	fuller|w0.4 L2.0 t0.02 c0.015 g0.01 at0.3 twin	0.011700	Hammering	false	Sm 0.0720 N, Ha 0.1881 N, Sh 0.0000 N	Sm 0.0720 N, Ha 0.1764 N, Sh 0.0000 N
+25213	fuller|w0.4 L2.5 t0.02 c0.015 g0.03 at0.7 twin	0.011700	Hammering	false	Sm 0.0841 N, Ha 0.4609 H, Sh 0.1416 N	Sm 0.0841 N, Ha 0.4492 H, Sh 0.1416 N
+25203	fuller|w0.4 L2.5 t0.02 c0.015 g0.03 at0.2 twin	0.011700	Hammering	false	Sm 0.0841 N, Ha 0.4065 H, Sh 0.1416 N	Sm 0.0841 N, Ha 0.3948 H, Sh 0.1416 N
+25189	fuller|w0.4 L2.5 t0.02 c0.015 g0.02 at0.2 twin	0.011700	Hammering	false	Sm 0.0862 N, Ha 0.3903 H, Sh 0.1131 N	Sm 0.0862 N, Ha 0.3786 H, Sh 0.1131 N
+24034	fuller|w0.3 L2.5 t0.02 c0.015 g0.05 at0.6 twin	0.011700	Hammering	false	Sm 0.0626 N, Ha 0.4873 H, Sh 0.2000 H	Sm 0.0626 N, Ha 0.4756 H, Sh 0.2000 H
+23989	fuller|w0.3 L2.5 t0.02 c0.015 g0.01 at0.4 twin	0.011700	Hammering	false	Sm 0.0708 N, Ha 0.2445 H, Sh 0.0000 N	Sm 0.0708 N, Ha 0.2328 H, Sh 0.0000 N
+32958	grille|1.0 x 2.8 x 0.02 2 x 8 f0.5	0.011600	Hammering	false	Sm 0.4844 H, Ha 0.2529 H, Sh 0.0000 N	Sm 0.4844 H, Ha 0.2645 H, Sh 0.0000 N
+31182	fuller|w1.0 L2.0 t0.08 c0.015 g0.12 at0.7 one	0.011600	Hammering	false	Sm 0.3286 H, Ha 0.0475 N, Sh 0.0000 N	Sm 0.3286 H, Ha 0.0591 N, Sh 0.0000 N
+31180	fuller|w1.0 L2.0 t0.08 c0.015 g0.12 at0.6 one	0.011600	Hammering	false	Sm 0.3286 H, Ha 0.0473 N, Sh 0.0000 N	Sm 0.3286 H, Ha 0.0589 N, Sh 0.0000 N
+31168	fuller|w1.0 L2.0 t0.08 c0.015 g0.08 at0.7 one	0.011600	Hammering	false	Sm 0.3319 H, Ha 0.0486 N, Sh 0.0000 N	Sm 0.3319 H, Ha 0.0602 N, Sh 0.0000 N
+30936	fuller|w1.0 L2.0 t0.04 c0.030 g0.02 at0.2 twin	0.011600	Hammering	false	Sm 0.3018 H, Ha 0.1419 N, Sh 0.0000 N	Sm 0.3018 H, Ha 0.1303 N, Sh 0.0000 N
+30358	fuller|w1.0 L2.5 t0.08 c0.015 g0.08 at0.2 twin	0.011600	Hammering	false	Sm 0.4045 H, Ha 0.1628 N, Sh 0.0000 N	Sm 0.4045 H, Ha 0.1512 N, Sh 0.0000 N
+28749	fuller|w0.8 L2.5 t0.08 c0.015 g0.05 at0.0 one	0.011600	Hammering	false	Sm 0.3391 H, Ha 0.0678 N, Sh 0.0000 N	Sm 0.3391 H, Ha 0.0562 N, Sh 0.0000 N
+28584	fuller|w0.8 L2.5 t0.04 c0.030 g0.05 at0.6 one	0.011600	Hammering	false	Sm 0.3033 H, Ha 0.1845 N, Sh 0.0000 N	Sm 0.3033 H, Ha 0.1729 N, Sh 0.0000 N
+27917	fuller|w0.6 L2.0 t0.04 c0.050 g0.12 at0.7 twin	0.011600	Hammering	false	Sm 0.2070 H, Ha 0.3289 H, Sh 0.0000 N	Sm 0.2070 H, Ha 0.3405 H, Sh 0.0000 N
+27462	fuller|w0.6 L2.0 t0.02 c0.015 g0.08 at0.1 one	0.011600	Hammering	false	Sm 0.0950 N, Ha 0.4306 H, Sh 0.1888 N	Sm 0.0950 N, Ha 0.4190 H, Sh 0.1908 N
+27439	fuller|w0.6 L2.0 t0.02 c0.015 g0.03 at0.4 one	0.011600	Hammering	false	Sm 0.0991 N, Ha 0.4078 H, Sh 0.1532 N	Sm 0.0991 N, Ha 0.3962 H, Sh 0.1544 N
+27428	fuller|w0.6 L2.0 t0.02 c0.015 g0.02 at0.6 one	0.011600	Hammering	false	Sm 0.0999 N, Ha 0.3865 H, Sh 0.1254 N	Sm 0.0999 N, Ha 0.3749 H, Sh 0.1263 N
+26770	fuller|w0.6 L2.5 t0.02 c0.030 g0.05 at0.6 twin	0.011600	Sharpening	false	Sm 0.1758 N, Ha 0.5222 H, Sh 0.0841 N	Sm 0.1758 N, Ha 0.5264 H, Sh 0.0957 N
+26766	fuller|w0.6 L2.5 t0.02 c0.030 g0.05 at0.4 twin	0.011600	Sharpening	false	Sm 0.1758 N, Ha 0.5202 H, Sh 0.0819 N	Sm 0.1758 N, Ha 0.5264 H, Sh 0.0935 N
+25304	fuller|w0.4 L2.5 t0.02 c0.030 g0.05 at0.5 twin	0.011600	Sharpening	false	Sm 0.1201 N, Ha 0.2328 H, Sh 0.0331 N	Sm 0.1201 N, Ha 0.2339 H, Sh 0.0447 N
+25214	fuller|w0.4 L2.5 t0.02 c0.015 g0.05 at0.0 one	0.011600	Hammering	false	Sm 0.0852 N, Ha 0.4101 H, Sh 0.1429 N	Sm 0.0852 N, Ha 0.3985 H, Sh 0.1431 N
+32047	ribbed|w1.2 L1.5 k0.04 edges true g0.05 at0.552 one	0.011500	Hammering	false	Sm 0.2805 H, Ha 0.0776 N, Sh 0.0000 N	Sm 0.2805 H, Ha 0.0891 N, Sh 0.0000 N
+32034	ribbed|w1.2 L1.5 k0.04 edges true g0.02 at0.552 pair	0.011500	Hammering	false	Sm 0.2815 H, Ha 0.1139 N, Sh 0.0000 N	Sm 0.2815 H, Ha 0.1024 N, Sh 0.0000 N
+31151	fuller|w1.0 L2.0 t0.08 c0.015 g0.05 at0.6 one	0.011500	Hammering	false	Sm 0.3344 H, Ha 0.0334 N, Sh 0.0000 N	Sm 0.3344 H, Ha 0.0449 N, Sh 0.0000 N
+31135	fuller|w1.0 L2.0 t0.08 c0.015 g0.03 at0.5 twin	0.011500	Hammering	false	Sm 0.3335 H, Ha 0.0276 N, Sh 0.0000 N	Sm 0.3335 H, Ha 0.0161 N, Sh 0.0000 N
+31120	fuller|w1.0 L2.0 t0.08 c0.015 g0.02 at0.5 twin	0.011500	Hammering	false	Sm 0.3351 H, Ha 0.0387 N, Sh 0.0000 N	Sm 0.3351 H, Ha 0.0272 N, Sh 0.0000 N
+30818	fuller|w1.0 L2.0 t0.02 c0.050 g0.12 at0.3 one	0.011500	Hammering	false	Sm 0.3358 H, Ha 0.1263 N, Sh 0.0103 N	Sm 0.3358 H, Ha 0.1148 N, Sh 0.0103 N
+30815	fuller|w1.0 L2.0 t0.02 c0.050 g0.12 at0.1 one	0.011500	Hammering	false	Sm 0.3358 H, Ha 0.1249 N, Sh 0.0091 N	Sm 0.3358 H, Ha 0.1134 N, Sh 0.0091 N
+30775	fuller|w1.0 L2.0 t0.02 c0.050 g0.03 at0.3 twin	0.011500	Hammering	false	Sm 0.3523 H, Ha 0.1609 N, Sh 0.0000 N	Sm 0.3523 H, Ha 0.1494 N, Sh 0.0000 N
+30760	fuller|w1.0 L2.0 t0.02 c0.050 g0.02 at0.3 twin	0.011500	Hammering	false	Sm 0.3579 H, Ha 0.1384 N, Sh 0.0000 N	Sm 0.3579 H, Ha 0.1269 N, Sh 0.0000 N
+30374	fuller|w1.0 L2.5 t0.08 c0.015 g0.12 at0.3 twin	0.011500	Hammering	false	Sm 0.3962 H, Ha 0.1740 N, Sh 0.0000 N	Sm 0.3962 H, Ha 0.1625 N, Sh 0.0000 N
+30356	fuller|w1.0 L2.5 t0.08 c0.015 g0.08 at0.1 twin	0.011500	Hammering	false	Sm 0.4045 H, Ha 0.1628 N, Sh 0.0000 N	Sm 0.4045 H, Ha 0.1513 N, Sh 0.0000 N
+28710	fuller|w0.8 L2.5 t0.08 c0.015 g0.01 at0.3 twin	0.011500	Hammering	false	Sm 0.3423 H, Ha 0.0291 N, Sh 0.0000 N	Sm 0.3423 H, Ha 0.0176 N, Sh 0.0000 N
+27708	fuller|w0.6 L2.0 t0.04 c0.015 g0.05 at0.2 twin	0.011500	Sharpening	false	Sm 0.1313 N, Ha 0.2969 H, Sh 0.0118 N	Sm 0.1313 N, Ha 0.3081 H, Sh 0.0233 N
+25946	fuller|w0.4 L2.0 t0.02 c0.015 g0.05 at0.2 twin	0.011500	Sharpening	false	Sm 0.0654 N, Ha 0.3988 H, Sh 0.1741 N	Sm 0.0654 N, Ha 0.3964 H, Sh 0.1856 N
+25212	fuller|w0.4 L2.5 t0.02 c0.015 g0.03 at0.7 one	0.011500	Hammering	false	Sm 0.0872 N, Ha 0.3917 H, Sh 0.1129 N	Sm 0.0872 N, Ha 0.3802 H, Sh 0.1129 N
+23582	fuller|w0.2 L2.0 t0.02 c0.030 g0.03 at0.3 twin	0.011500	Sharpening	false	Sm 0.0595 N, Ha 0.4449 H, Sh 0.0136 N	Sm 0.0595 N, Ha 0.4396 H, Sh 0.0021 N
+23532	fuller|w0.2 L2.0 t0.02 c0.015 g0.03 at0.5 twin	0.011500	Sharpening	false	Sm 0.0408 N, Ha 0.1670 N, Sh 0.0869 N	Sm 0.0408 N, Ha 0.1613 N, Sh 0.0754 N
+8683	plateC09|C09|0.11 x 1.2 x 0.056 at x 0.03	0.011400	Sharpening	false	Sm 0.0005 N, Ha 0.3159 H, Sh 0.1978 N	Sm 0.0005 N, Ha 0.3144 H, Sh 0.1864 N
+31701	ribbed|w0.8 L1.5 k0.02 edges false g0.05 at0.240 one	0.011400	Hammering	false	Sm 0.1280 N, Ha 0.1064 N, Sh 0.0000 N	Sm 0.1280 N, Ha 0.0950 N, Sh 0.0000 N
+31132	fuller|w1.0 L2.0 t0.08 c0.015 g0.03 at0.4 one	0.011400	Hammering	false	Sm 0.3360 H, Ha 0.0349 N, Sh 0.0000 N	Sm 0.3360 H, Ha 0.0235 N, Sh 0.0000 N
+30869	fuller|w1.0 L2.0 t0.04 c0.015 g0.03 at0.6 one	0.011400	Hammering	false	Sm 0.2153 H, Ha 0.2932 H, Sh 0.0716 N	Sm 0.2153 H, Ha 0.3046 H, Sh 0.0670 N
+30794	fuller|w1.0 L2.0 t0.02 c0.050 g0.05 at0.5 twin	0.011400	Hammering	false	Sm 0.3416 H, Ha 0.1995 N, Sh 0.0000 N	Sm 0.3416 H, Ha 0.1881 N, Sh 0.0000 N
+30026	fuller|w1.0 L2.5 t0.02 c0.050 g0.12 at0.7 twin	0.011400	Sharpening	false	Sm 0.3763 H, Ha 0.3682 H, Sh 0.1197 N	Sm 0.3763 H, Ha 0.3682 H, Sh 0.1083 N
+29979	fuller|w1.0 L2.5 t0.02 c0.050 g0.03 at0.6 one	0.011400	Hammering	false	Sm 0.4484 H, Ha 0.1625 N, Sh 0.0000 N	Sm 0.4484 H, Ha 0.1511 N, Sh 0.0000 N
+29541	fuller|w0.8 L2.0 t0.08 c0.015 g0.05 at0.0 one	0.011400	Hammering	false	Sm 0.2730 H, Ha 0.0094 N, Sh 0.0000 N	Sm 0.2730 H, Ha 0.0208 N, Sh 0.0000 N
+28771	fuller|w0.8 L2.5 t0.08 c0.015 g0.08 at0.4 twin	0.011400	Hammering	false	Sm 0.3278 H, Ha 0.1348 N, Sh 0.0000 N	Sm 0.3278 H, Ha 0.1234 N, Sh 0.0000 N
+28761	fuller|w0.8 L2.5 t0.08 c0.015 g0.05 at0.6 twin	0.011400	Hammering	false	Sm 0.3340 H, Ha 0.1039 N, Sh 0.0000 N	Sm 0.3340 H, Ha 0.0925 N, Sh 0.0000 N
+28397	fuller|w0.8 L2.5 t0.02 c0.050 g0.05 at0.0 one	0.011400	Hammering	false	Sm 0.3579 H, Ha 0.0751 N, Sh 0.0000 N	Sm 0.3579 H, Ha 0.0637 N, Sh 0.0000 N
+25202	fuller|w0.4 L2.5 t0.02 c0.015 g0.03 at0.2 one	0.011400	Hammering	false	Sm 0.0872 N, Ha 0.3917 H, Sh 0.1129 N	Sm 0.0872 N, Ha 0.3803 H, Sh 0.1130 N
+25200	fuller|w0.4 L2.5 t0.02 c0.015 g0.03 at0.0 one	0.011400	Hammering	false	Sm 0.0872 N, Ha 0.3917 H, Sh 0.1129 N	Sm 0.0872 N, Ha 0.3803 H, Sh 0.1130 N
+25190	fuller|w0.4 L2.5 t0.02 c0.015 g0.02 at0.3 one	0.011400	Hammering	false	Sm 0.0882 N, Ha 0.3663 H, Sh 0.0755 N	Sm 0.0882 N, Ha 0.3549 H, Sh 0.0755 N
+25188	fuller|w0.4 L2.5 t0.02 c0.015 g0.02 at0.2 one	0.011400	Hammering	false	Sm 0.0882 N, Ha 0.3662 H, Sh 0.0753 N	Sm 0.0882 N, Ha 0.3548 H, Sh 0.0753 N
+25176	fuller|w0.4 L2.5 t0.02 c0.015 g0.01 at0.3 twin	0.011400	Hammering	false	Sm 0.0882 N, Ha 0.3215 H, Sh 0.0140 N	Sm 0.0882 N, Ha 0.3101 H, Sh 0.0140 N
+24589	fuller|w0.3 L2.0 t0.02 c0.015 g0.01 at0.7 twin	0.011400	Hammering	false	Sm 0.0580 N, Ha 0.1217 N, Sh 0.0000 N	Sm 0.0580 N, Ha 0.1103 N, Sh 0.0000 N
+23326	fuller|w0.2 L2.5 t0.04 c0.050 g0.05 at0.5 twin	0.011400	Sharpening	false	Sm 0.1093 N, Ha 0.2894 H, Sh 0.0000 N	Sm 0.1093 N, Ha 0.2942 H, Sh 0.0114 N
+23031	fuller|w0.2 L2.5 t0.02 c0.015 g0.02 at0.4 twin	0.011400	Hammering	false	Sm 0.0513 N, Ha 0.2365 H, Sh 0.0000 N	Sm 0.0513 N, Ha 0.2251 H, Sh 0.0000 N
+1931	laminate|C02|k0.03 wf2.0 proud-0.0200 captrue	0.011400	Sharpening	false	Sm 0.0860 N, Ha 0.1786 N, Sh 0.2090 H	Sm 0.0860 N, Ha 0.1896 N, Sh 0.2204 H
+8814	bevel|C09|a0.05 b0.08 height0.200	0.011300	Hammering	false	Sm 0.0005 N, Ha 0.3801 H, Sh 0.2733 H	Sm 0.0005 N, Ha 0.3914 H, Sh 0.2793 H
+32045	ribbed|w1.2 L1.5 k0.04 edges true g0.05 at0.456 one	0.011300	Hammering	false	Sm 0.2805 H, Ha 0.0690 N, Sh 0.0000 N	Sm 0.2805 H, Ha 0.0803 N, Sh 0.0000 N
+31178	fuller|w1.0 L2.0 t0.08 c0.015 g0.12 at0.5 one	0.011300	Hammering	false	Sm 0.3286 H, Ha 0.0474 N, Sh 0.0000 N	Sm 0.3286 H, Ha 0.0587 N, Sh 0.0000 N
+31177	fuller|w1.0 L2.0 t0.08 c0.015 g0.12 at0.4 twin	0.011300	Hammering	false	Sm 0.3187 H, Ha 0.0839 N, Sh 0.0000 N	Sm 0.3187 H, Ha 0.0952 N, Sh 0.0000 N
+30820	fuller|w1.0 L2.0 t0.02 c0.050 g0.12 at0.4 one	0.011300	Hammering	false	Sm 0.3358 H, Ha 0.1260 N, Sh 0.0107 N	Sm 0.3358 H, Ha 0.1147 N, Sh 0.0107 N
+30816	fuller|w1.0 L2.0 t0.02 c0.050 g0.12 at0.2 one	0.011300	Hammering	false	Sm 0.3358 H, Ha 0.1241 N, Sh 0.0097 N	Sm 0.3358 H, Ha 0.1128 N, Sh 0.0097 N
+30773	fuller|w1.0 L2.0 t0.02 c0.050 g0.03 at0.2 twin	0.011300	Hammering	false	Sm 0.3523 H, Ha 0.1058 N, Sh 0.0000 N	Sm 0.3523 H, Ha 0.0945 N, Sh 0.0000 N
+30360	fuller|w1.0 L2.5 t0.08 c0.015 g0.08 at0.3 twin	0.011300	Hammering	false	Sm 0.4045 H, Ha 0.1632 N, Sh 0.0000 N	Sm 0.4045 H, Ha 0.1519 N, Sh 0.0000 N
+30339	fuller|w1.0 L2.5 t0.08 c0.015 g0.05 at0.0 one	0.011300	Hammering	false	Sm 0.4159 H, Ha 0.1071 N, Sh 0.0000 N	Sm 0.4159 H, Ha 0.0958 N, Sh 0.0000 N
+29989	fuller|w1.0 L2.5 t0.02 c0.050 g0.05 at0.3 twin	0.011300	Hammering	false	Sm 0.4243 H, Ha 0.2549 H, Sh 0.0054 N	Sm 0.4243 H, Ha 0.2436 H, Sh 0.0037 N
+29339	fuller|w0.8 L2.0 t0.04 c0.030 g0.02 at0.2 twin	0.011300	Hammering	false	Sm 0.2459 H, Ha 0.1485 N, Sh 0.0000 N	Sm 0.2459 H, Ha 0.1372 N, Sh 0.0000 N
+28769	fuller|w0.8 L2.5 t0.08 c0.015 g0.08 at0.3 twin	0.011300	Hammering	false	Sm 0.3278 H, Ha 0.1299 N, Sh 0.0000 N	Sm 0.3278 H, Ha 0.1186 N, Sh 0.0000 N
+28735	fuller|w0.8 L2.5 t0.08 c0.015 g0.03 at0.1 one	0.011300	Hammering	false	Sm 0.3412 H, Ha 0.0812 N, Sh 0.0000 N	Sm 0.3412 H, Ha 0.0699 N, Sh 0.0000 N
+25917	fuller|w0.4 L2.0 t0.02 c0.015 g0.02 at0.2 one	0.011300	Hammering	false	Sm 0.0720 N, Ha 0.2262 H, Sh 0.0133 N	Sm 0.0720 N, Ha 0.2149 H, Sh 0.0144 N
+25902	fuller|w0.4 L2.0 t0.02 c0.015 g0.01 at0.2 one	0.011300	Hammering	false	Sm 0.0728 N, Ha 0.1978 N, Sh 0.0000 N	Sm 0.0728 N, Ha 0.1865 N, Sh 0.0000 N
+25900	fuller|w0.4 L2.0 t0.02 c0.015 g0.01 at0.1 one	0.011300	Hammering	false	Sm 0.0728 N, Ha 0.1975 N, Sh 0.0000 N	Sm 0.0728 N, Ha 0.1862 N, Sh 0.0000 N
+25198	fuller|w0.4 L2.5 t0.02 c0.015 g0.02 at0.7 one	0.011300	Hammering	false	Sm 0.0882 N, Ha 0.3668 H, Sh 0.0762 N	Sm 0.0882 N, Ha 0.3555 H, Sh 0.0763 N
+25185	fuller|w0.4 L2.5 t0.02 c0.015 g0.02 at0.0 one	0.011300	Hammering	false	Sm 0.0882 N, Ha 0.4017 H, Sh 0.1243 N	Sm 0.0882 N, Ha 0.3904 H, Sh 0.1244 N
+24611	fuller|w0.3 L2.0 t0.02 c0.015 g0.03 at0.4 twin	0.011300	Hammering	false	Sm 0.0547 N, Ha 0.2671 H, Sh 0.0593 N	Sm 0.0547 N, Ha 0.2558 H, Sh 0.0593 N
+23153	fuller|w0.2 L2.5 t0.02 c0.050 g0.03 at0.5 one	0.011300	Hammering	false	Sm 0.1137 N, Ha 0.0451 N, Sh 0.0000 N	Sm 0.1137 N, Ha 0.0564 N, Sh 0.0000 N
+32143	ribbed|w1.2 L2.5 k0.04 edges false g0.05 at0.264 one	0.011200	Hammering	false	Sm 0.4345 H, Ha 0.2544 H, Sh 0.0822 N	Sm 0.4345 H, Ha 0.2432 H, Sh 0.0792 N
+32126	ribbed|w1.2 L2.5 k0.04 edges false g0.02 at0.072 pair	0.011200	Hammering	false	Sm 0.4367 H, Ha 0.3248 H, Sh 0.1244 N	Sm 0.4367 H, Ha 0.3136 H, Sh 0.1226 N
+32055	ribbed|w1.2 L1.5 k0.04 edges true g0.08 at0.360 one	0.011200	Hammering	false	Sm 0.2769 H, Ha 0.0980 N, Sh 0.0000 N	Sm 0.2769 H, Ha 0.1092 N, Sh 0.0000 N
+31995	ribbed|w1.2 L1.5 k0.04 edges false g0.02 at0.264 one	0.011200	Hammering	false	Sm 0.2756 H, Ha 0.0496 N, Sh 0.0000 N	Sm 0.2756 H, Ha 0.0608 N, Sh 0.0000 N
+31179	fuller|w1.0 L2.0 t0.08 c0.015 g0.12 at0.5 twin	0.011200	Hammering	false	Sm 0.3186 H, Ha 0.0842 N, Sh 0.0000 N	Sm 0.3186 H, Ha 0.0954 N, Sh 0.0000 N
+30817	fuller|w1.0 L2.0 t0.02 c0.050 g0.12 at0.2 twin	0.011200	Hammering	false	Sm 0.3030 H, Ha 0.2930 H, Sh 0.0105 N	Sm 0.3030 H, Ha 0.2818 H, Sh 0.0105 N
+30810	fuller|w1.0 L2.0 t0.02 c0.050 g0.08 at0.6 one	0.011200	Hammering	false	Sm 0.3468 H, Ha 0.0891 N, Sh 0.0067 N	Sm 0.3468 H, Ha 0.0779 N, Sh 0.0067 N
+30800	fuller|w1.0 L2.0 t0.02 c0.050 g0.08 at0.1 one	0.011200	Hammering	false	Sm 0.3468 H, Ha 0.0848 N, Sh 0.0036 N	Sm 0.3468 H, Ha 0.0736 N, Sh 0.0036 N
+30324	fuller|w1.0 L2.5 t0.08 c0.015 g0.03 at0.0 one	0.011200	Hammering	false	Sm 0.4179 H, Ha 0.1204 N, Sh 0.0000 N	Sm 0.4179 H, Ha 0.1092 N, Sh 0.0000 N
+29903	fuller|w1.0 L2.5 t0.02 c0.030 g0.05 at0.5 one	0.011200	Sharpening	false	Sm 0.2977 H, Ha 0.4072 H, Sh 0.1291 N	Sm 0.2977 H, Ha 0.4072 H, Sh 0.1179 N
+29549	fuller|w0.8 L2.0 t0.08 c0.015 g0.05 at0.4 twin	0.011200	Hammering	false	Sm 0.2689 H, Ha 0.0446 N, Sh 0.0000 N	Sm 0.2689 H, Ha 0.0558 N, Sh 0.0000 N
+29266	fuller|w0.8 L2.0 t0.04 c0.015 g0.03 at0.2 twin	0.011200	Hammering	false	Sm 0.1737 N, Ha 0.3804 H, Sh 0.0918 N	Sm 0.1737 N, Ha 0.3916 H, Sh 0.0910 N
+28720	fuller|w0.8 L2.5 t0.08 c0.015 g0.02 at0.1 one	0.011200	Hammering	false	Sm 0.3422 H, Ha 0.0533 N, Sh 0.0000 N	Sm 0.3422 H, Ha 0.0421 N, Sh 0.0000 N
+25919	fuller|w0.4 L2.0 t0.02 c0.015 g0.02 at0.3 one	0.011200	Hammering	false	Sm 0.0720 N, Ha 0.2264 H, Sh 0.0136 N	Sm 0.0720 N, Ha 0.2152 H, Sh 0.0149 N
+25385	fuller|w0.4 L2.5 t0.02 c0.050 g0.05 at0.5 twin	0.011200	Hammering	false	Sm 0.1735 N, Ha 0.2573 H, Sh 0.0400 N	Sm 0.1735 N, Ha 0.2461 H, Sh 0.0352 N
+25180	fuller|w0.4 L2.5 t0.02 c0.015 g0.01 at0.5 twin	0.011200	Hammering	false	Sm 0.0882 N, Ha 0.3194 H, Sh 0.0112 N	Sm 0.0882 N, Ha 0.3082 H, Sh 0.0112 N
+25173	fuller|w0.4 L2.5 t0.02 c0.015 g0.01 at0.2 one	0.011200	Hammering	false	Sm 0.0893 N, Ha 0.3332 H, Sh 0.0284 N	Sm 0.0893 N, Ha 0.3220 H, Sh 0.0284 N
+25171	fuller|w0.4 L2.5 t0.02 c0.015 g0.01 at0.1 one	0.011200	Hammering	false	Sm 0.0893 N, Ha 0.3329 H, Sh 0.0279 N	Sm 0.0893 N, Ha 0.3217 H, Sh 0.0279 N
+30795	fuller|w1.0 L2.0 t0.02 c0.050 g0.05 at0.6 one	0.011100	Hammering	false	Sm 0.3549 H, Ha 0.0761 N, Sh 0.0000 N	Sm 0.3549 H, Ha 0.0650 N, Sh 0.0000 N
+30355	fuller|w1.0 L2.5 t0.08 c0.015 g0.08 at0.1 one	0.011100	Hammering	false	Sm 0.4127 H, Ha 0.1206 N, Sh 0.0000 N	Sm 0.4127 H, Ha 0.1095 N, Sh 0.0000 N
+29544	fuller|w0.8 L2.0 t0.08 c0.015 g0.05 at0.2 one	0.011100	Hammering	false	Sm 0.2729 H, Ha 0.0000 N, Sh 0.0000 N	Sm 0.2729 H, Ha 0.0111 N, Sh 0.0000 N
+29236	fuller|w0.8 L2.0 t0.04 c0.015 g0.01 at0.2 twin	0.011100	Hammering	true	Sm 0.1771 N, Ha 0.1963 N, Sh 0.0000 N	Sm 0.1771 N, Ha 0.2074 H, Sh 0.0000 N
+29109	fuller|w0.8 L2.0 t0.02 c0.030 g0.05 at0.4 twin	0.011100	Hammering	false	Sm 0.1870 N, Ha 0.3314 H, Sh 0.0760 N	Sm 0.1870 N, Ha 0.3425 H, Sh 0.0821 N
+27618	fuller|w0.6 L2.0 t0.02 c0.050 g0.03 at0.7 twin	0.011100	Hammering	false	Sm 0.2178 H, Ha 0.1788 N, Sh 0.0000 N	Sm 0.2178 H, Ha 0.1677 N, Sh 0.0000 N
+27515	fuller|w0.6 L2.0 t0.02 c0.030 g0.02 at0.6 twin	0.011100	Hammering	false	Sm 0.1521 N, Ha 0.2580 H, Sh 0.0079 N	Sm 0.1521 N, Ha 0.2691 H, Sh 0.0135 N
+27461	fuller|w0.6 L2.0 t0.02 c0.015 g0.08 at0.0 one	0.011100	Hammering	false	Sm 0.0950 N, Ha 0.4446 H, Sh 0.1711 N	Sm 0.0950 N, Ha 0.4335 H, Sh 0.1716 N
+25903	fuller|w0.4 L2.0 t0.02 c0.015 g0.01 at0.2 twin	0.011100	Hammering	false	Sm 0.0720 N, Ha 0.1877 N, Sh 0.0000 N	Sm 0.0720 N, Ha 0.1766 N, Sh 0.0000 N
+25179	fuller|w0.4 L2.5 t0.02 c0.015 g0.01 at0.5 one	0.011100	Hammering	false	Sm 0.0893 N, Ha 0.3296 H, Sh 0.0235 N	Sm 0.0893 N, Ha 0.3185 H, Sh 0.0235 N
+25170	fuller|w0.4 L2.5 t0.02 c0.015 g0.01 at0.0 one	0.011100	Hammering	false	Sm 0.0893 N, Ha 0.3296 H, Sh 0.0235 N	Sm 0.0893 N, Ha 0.3185 H, Sh 0.0235 N
+24603	fuller|w0.3 L2.0 t0.02 c0.015 g0.02 at0.7 twin	0.011100	Hammering	true	Sm 0.0564 N, Ha 0.2035 H, Sh 0.0376 N	Sm 0.0564 N, Ha 0.1924 N, Sh 0.0376 N
+24601	fuller|w0.3 L2.0 t0.02 c0.015 g0.02 at0.6 twin	0.011100	Hammering	false	Sm 0.0564 N, Ha 0.1800 N, Sh 0.0000 N	Sm 0.0564 N, Ha 0.1689 N, Sh 0.0000 N
+24581	fuller|w0.3 L2.0 t0.02 c0.015 g0.01 at0.3 twin	0.011100	Hammering	false	Sm 0.0580 N, Ha 0.1207 N, Sh 0.0000 N	Sm 0.0580 N, Ha 0.1096 N, Sh 0.0000 N
+23035	fuller|w0.2 L2.5 t0.02 c0.015 g0.02 at0.6 twin	0.011100	Hammering	false	Sm 0.0513 N, Ha 0.2365 H, Sh 0.0000 N	Sm 0.0513 N, Ha 0.2254 H, Sh 0.0000 N
+8716	plateTilt|C09|tilt8 poke0.010	0.011000	Hammering	false	Sm 0.0010 N, Ha 0.3004 H, Sh 0.1643 N	Sm 0.0010 N, Ha 0.3114 H, Sh 0.1717 N
+8708	plateTilt|C09|tilt4 poke0.010	0.011000	Hammering	false	Sm 0.0018 N, Ha 0.3033 H, Sh 0.1676 N	Sm 0.0018 N, Ha 0.3143 H, Sh 0.1749 N
+8707	plateTilt|C09|tilt4 poke0.005	0.011000	Hammering	false	Sm 0.0005 N, Ha 0.3134 H, Sh 0.1832 N	Sm 0.0005 N, Ha 0.3244 H, Sh 0.1905 N
+8700	plateTilt|C09|tilt2 poke0.010	0.011000	Hammering	false	Sm 0.0022 N, Ha 0.2997 H, Sh 0.1616 N	Sm 0.0022 N, Ha 0.3107 H, Sh 0.1689 N
+8699	plateTilt|C09|tilt2 poke0.005	0.011000	Hammering	false	Sm 0.0009 N, Ha 0.3109 H, Sh 0.1800 N	Sm 0.0009 N, Ha 0.3219 H, Sh 0.1873 N
+8692	plateTilt|C09|tilt1 poke0.010	0.011000	Hammering	false	Sm 0.0024 N, Ha 0.2982 H, Sh 0.1587 N	Sm 0.0024 N, Ha 0.3092 H, Sh 0.1659 N
+8691	plateTilt|C09|tilt1 poke0.005	0.011000	Hammering	false	Sm 0.0011 N, Ha 0.3087 H, Sh 0.1768 N	Sm 0.0011 N, Ha 0.3197 H, Sh 0.1842 N
+31183	fuller|w1.0 L2.0 t0.08 c0.015 g0.12 at0.7 twin	0.011000	Hammering	false	Sm 0.3187 H, Ha 0.0854 N, Sh 0.0000 N	Sm 0.3187 H, Ha 0.0964 N, Sh 0.0000 N
+31157	fuller|w1.0 L2.0 t0.08 c0.015 g0.08 at0.1 twin	0.011000	Hammering	false	Sm 0.3253 H, Ha 0.0780 N, Sh 0.0000 N	Sm 0.3253 H, Ha 0.0670 N, Sh 0.0000 N
+31133	fuller|w1.0 L2.0 t0.08 c0.015 g0.03 at0.4 twin	0.011000	Hammering	false	Sm 0.3336 H, Ha 0.0586 N, Sh 0.0000 N	Sm 0.3336 H, Ha 0.0476 N, Sh 0.0000 N
+30357	fuller|w1.0 L2.5 t0.08 c0.015 g0.08 at0.2 one	0.011000	Hammering	false	Sm 0.4127 H, Ha 0.1200 N, Sh 0.0000 N	Sm 0.4127 H, Ha 0.1090 N, Sh 0.0000 N
+30332	fuller|w1.0 L2.5 t0.08 c0.015 g0.03 at0.4 twin	0.011000	Hammering	false	Sm 0.4148 H, Ha 0.1294 N, Sh 0.0000 N	Sm 0.4148 H, Ha 0.1184 N, Sh 0.0000 N
+30311	fuller|w1.0 L2.5 t0.08 c0.015 g0.02 at0.1 twin	0.011000	Hammering	false	Sm 0.4168 H, Ha 0.1058 N, Sh 0.0000 N	Sm 0.4168 H, Ha 0.0948 N, Sh 0.0000 N
+30156	fuller|w1.0 L2.5 t0.04 c0.030 g0.03 at0.5 twin	0.011000	Hammering	false	Sm 0.3708 H, Ha 0.2122 H, Sh 0.0000 N	Sm 0.3708 H, Ha 0.2012 H, Sh 0.0000 N
+29552	fuller|w0.8 L2.0 t0.08 c0.015 g0.05 at0.6 one	0.011000	Hammering	false	Sm 0.2730 H, Ha 0.0107 N, Sh 0.0000 N	Sm 0.2730 H, Ha 0.0217 N, Sh 0.0000 N
+29536	fuller|w0.8 L2.0 t0.08 c0.015 g0.03 at0.5 twin	0.011000	Hammering	false	Sm 0.2721 H, Ha 0.0571 N, Sh 0.0000 N	Sm 0.2721 H, Ha 0.0461 N, Sh 0.0000 N
+29216	fuller|w0.8 L2.0 t0.02 c0.050 g0.08 at0.7 one	0.011000	Hammering	false	Sm 0.2798 H, Ha 0.0841 N, Sh 0.0079 N	Sm 0.2798 H, Ha 0.0731 N, Sh 0.0079 N
+29178	fuller|w0.8 L2.0 t0.02 c0.050 g0.03 at0.2 twin	0.011000	Hammering	false	Sm 0.2853 H, Ha 0.1918 N, Sh 0.0000 N	Sm 0.2853 H, Ha 0.1808 N, Sh 0.0000 N
+28450	fuller|w0.8 L2.5 t0.04 c0.015 g0.01 at0.5 twin	0.011000	Hammering	false	Sm 0.2194 H, Ha 0.3107 H, Sh 0.0383 N	Sm 0.2194 H, Ha 0.3217 H, Sh 0.0364 N
+28442	fuller|w0.8 L2.5 t0.04 c0.015 g0.01 at0.1 twin	0.011000	Hammering	false	Sm 0.2194 H, Ha 0.3112 H, Sh 0.0387 N	Sm 0.2194 H, Ha 0.3222 H, Sh 0.0370 N
+27467	fuller|w0.6 L2.0 t0.02 c0.015 g0.08 at0.4 one	0.011000	Hammering	false	Sm 0.0950 N, Ha 0.4298 H, Sh 0.1884 N	Sm 0.0950 N, Ha 0.4188 H, Sh 0.1911 N
+27418	fuller|w0.6 L2.0 t0.02 c0.015 g0.02 at0.1 one	0.011000	Hammering	false	Sm 0.0999 N, Ha 0.3869 H, Sh 0.1254 N	Sm 0.0999 N, Ha 0.3759 H, Sh 0.1271 N
+25901	fuller|w0.4 L2.0 t0.02 c0.015 g0.01 at0.1 twin	0.011000	Hammering	false	Sm 0.0720 N, Ha 0.1887 N, Sh 0.0000 N	Sm 0.0720 N, Ha 0.1777 N, Sh 0.0000 N
+25564	fuller|w0.4 L2.5 t0.04 c0.030 g0.08 at0.7 twin	0.011000	Sharpening	false	Sm 0.1411 N, Ha 0.4253 H, Sh 0.0282 N	Sm 0.1411 N, Ha 0.4159 H, Sh 0.0172 N
+24624	fuller|w0.3 L2.0 t0.02 c0.015 g0.05 at0.4 twin	0.011000	Sharpening	false	Sm 0.0514 N, Ha 0.3530 H, Sh 0.1495 N	Sm 0.0514 N, Ha 0.3573 H, Sh 0.1605 N
+23987	fuller|w0.3 L2.5 t0.02 c0.015 g0.01 at0.3 twin	0.011000	Hammering	false	Sm 0.0708 N, Ha 0.2445 H, Sh 0.0000 N	Sm 0.0708 N, Ha 0.2335 H, Sh 0.0000 N
+23985	fuller|w0.3 L2.5 t0.02 c0.015 g0.01 at0.2 twin	0.011000	Hammering	false	Sm 0.0708 N, Ha 0.2752 H, Sh 0.0000 N	Sm 0.0708 N, Ha 0.2642 H, Sh 0.0000 N
+16393	bevel|F3|a0.03 b0.08 height0.300	0.011000	Hammering	false	Sm 0.0000 N, Ha 0.4982 H, Sh 0.6100 H	Sm 0.0000 N, Ha 0.5092 H, Sh 0.6100 H
+9123	rod|C09|grip Block d0.06 poke-0.0020	0.010900	Hammering	false	Sm 0.0001 N, Ha 0.3134 H, Sh 0.1904 N	Sm 0.0001 N, Ha 0.3025 H, Sh 0.1826 N
+33047	tiled|0.6 x 1.2 x 0.02 tiles 4 x 2 hair 0.005	0.010900	Hammering	false	Sm 0.0858 N, Ha 0.3035 H, Sh 0.3000 H	Sm 0.0858 N, Ha 0.2926 H, Sh 0.3000 H
+33046	tiled|0.6 x 1.2 x 0.02 tiles 4 x 2 hair 0.001	0.010900	Hammering	false	Sm 0.0872 N, Ha 0.3070 H, Sh 0.3000 H	Sm 0.0872 N, Ha 0.2961 H, Sh 0.3000 H
+32825	grille|0.6 x 1.2 x 0.08 2 x 8 f0.9	0.010900	Hammering	false	Sm 0.1114 N, Ha 0.2993 H, Sh 0.0000 N	Sm 0.1114 N, Ha 0.3102 H, Sh 0.0000 N
+30823	fuller|w1.0 L2.0 t0.02 c0.050 g0.12 at0.5 twin	0.010900	Hammering	false	Sm 0.3027 H, Ha 0.2973 H, Sh 0.0105 N	Sm 0.3027 H, Ha 0.2864 H, Sh 0.0108 N
+30821	fuller|w1.0 L2.0 t0.02 c0.050 g0.12 at0.4 twin	0.010900	Hammering	false	Sm 0.3030 H, Ha 0.2965 H, Sh 0.0105 N	Sm 0.3030 H, Ha 0.2856 H, Sh 0.0108 N
+30347	fuller|w1.0 L2.5 t0.08 c0.015 g0.05 at0.4 twin	0.010900	Hammering	false	Sm 0.4106 H, Ha 0.1669 N, Sh 0.0000 N	Sm 0.4106 H, Ha 0.1560 N, Sh 0.0000 N
+30177	fuller|w1.0 L2.5 t0.04 c0.030 g0.08 at0.1 one	0.010900	Hammering	false	Sm 0.3668 H, Ha 0.2573 H, Sh 0.0007 N	Sm 0.3668 H, Ha 0.2464 H, Sh 0.0007 N
+30162	fuller|w1.0 L2.5 t0.04 c0.030 g0.05 at0.1 one	0.010900	Hammering	false	Sm 0.3730 H, Ha 0.2203 H, Sh 0.0003 N	Sm 0.3730 H, Ha 0.2094 H, Sh 0.0003 N
+30152	fuller|w1.0 L2.5 t0.04 c0.030 g0.03 at0.3 twin	0.010900	Hammering	false	Sm 0.3710 H, Ha 0.2800 H, Sh 0.0474 N	Sm 0.3710 H, Ha 0.2691 H, Sh 0.0457 N
+30141	fuller|w1.0 L2.5 t0.04 c0.030 g0.02 at0.5 twin	0.010900	Hammering	false	Sm 0.3750 H, Ha 0.2210 H, Sh 0.0000 N	Sm 0.3750 H, Ha 0.2101 H, Sh 0.0000 N
+29563	fuller|w0.8 L2.0 t0.08 c0.015 g0.08 at0.4 twin	0.010900	Hammering	false	Sm 0.2639 H, Ha 0.0538 N, Sh 0.0000 N	Sm 0.2639 H, Ha 0.0647 N, Sh 0.0000 N
+29538	fuller|w0.8 L2.0 t0.08 c0.015 g0.03 at0.6 twin	0.010900	Hammering	false	Sm 0.2721 H, Ha 0.0630 N, Sh 0.0000 N	Sm 0.2721 H, Ha 0.0521 N, Sh 0.0000 N
+29511	fuller|w0.8 L2.0 t0.08 c0.015 g0.02 at0.0 one	0.010900	Hammering	false	Sm 0.2754 H, Ha 0.0031 N, Sh 0.0000 N	Sm 0.2754 H, Ha 0.0140 N, Sh 0.0000 N
+28565	fuller|w0.8 L2.5 t0.04 c0.030 g0.03 at0.4 one	0.010900	Hammering	false	Sm 0.3074 H, Ha 0.1711 N, Sh 0.0000 N	Sm 0.3074 H, Ha 0.1602 N, Sh 0.0000 N
+27530	fuller|w0.6 L2.0 t0.02 c0.030 g0.03 at0.6 twin	0.010900	Hammering	false	Sm 0.1487 N, Ha 0.2577 H, Sh 0.0004 N	Sm 0.1487 N, Ha 0.2686 H, Sh 0.0060 N
+27471	fuller|w0.6 L2.0 t0.02 c0.015 g0.08 at0.6 one	0.010900	Hammering	false	Sm 0.0950 N, Ha 0.4299 H, Sh 0.1879 N	Sm 0.0950 N, Ha 0.4190 H, Sh 0.1907 N
+27433	fuller|w0.6 L2.0 t0.02 c0.015 g0.03 at0.1 one	0.010900	Hammering	false	Sm 0.0991 N, Ha 0.4082 H, Sh 0.1532 N	Sm 0.0991 N, Ha 0.3973 H, Sh 0.1553 N
+25943	fuller|w0.4 L2.0 t0.02 c0.015 g0.05 at0.0 one	0.010900	Hammering	false	Sm 0.0695 N, Ha 0.2615 H, Sh 0.0738 N	Sm 0.0695 N, Ha 0.2506 H, Sh 0.0760 N
+25936	fuller|w0.4 L2.0 t0.02 c0.015 g0.03 at0.4 twin	0.010900	Hammering	false	Sm 0.0687 N, Ha 0.4067 H, Sh 0.1704 N	Sm 0.0687 N, Ha 0.3958 H, Sh 0.1707 N
+24292	fuller|w0.3 L2.5 t0.04 c0.030 g0.05 at0.3 twin	0.010900	Hammering	false	Sm 0.1186 N, Ha 0.3283 H, Sh 0.0000 N	Sm 0.1186 N, Ha 0.3174 H, Sh 0.0000 N
+16361	bevel|F3|a0.02 b0.08 height0.500	0.010900	Hammering	false	Sm 0.0000 N, Ha 0.4624 H, Sh 0.6101 H	Sm 0.0000 N, Ha 0.4733 H, Sh 0.6101 H
+8423	plateEdge|C09|blade w1.0 k0.8 l1.0 poke0.0300	0.010800	Sharpening	false	Sm 0.0008 N, Ha 0.3704 H, Sh 0.2644 H	Sm 0.0008 N, Ha 0.3695 H, Sh 0.2536 H
+8422	plateEdge|C09|blade w1.0 k0.8 l1.0 poke0.0200	0.010800	Hammering	false	Sm 0.0002 N, Ha 0.2483 H, Sh 0.1220 N	Sm 0.0002 N, Ha 0.2591 H, Sh 0.1273 N
+8421	plateEdge|C09|blade w1.0 k0.8 l1.0 poke0.0150	0.010800	Hammering	false	Sm 0.0001 N, Ha 0.2534 H, Sh 0.1241 N	Sm 0.0001 N, Ha 0.2642 H, Sh 0.1296 N
+8201	plateEdge|C09|blade w0.5 k0.6 l0.8 poke0.0750	0.010800	Sharpening	false	Sm 0.0039 N, Ha 0.3918 H, Sh 0.2119 H	Sm 0.0039 N, Ha 0.3903 H, Sh 0.2011 H
+33045	tiled|0.6 x 1.2 x 0.02 tiles 4 x 2 hair 1e-05	0.010800	Hammering	false	Sm 0.0875 N, Ha 0.3078 H, Sh 0.3000 H	Sm 0.0875 N, Ha 0.2970 H, Sh 0.3000 H
+32139	ribbed|w1.2 L2.5 k0.04 edges false g0.05 at0.072 one	0.010800	Hammering	false	Sm 0.4345 H, Ha 0.2634 H, Sh 0.0924 N	Sm 0.4345 H, Ha 0.2526 H, Sh 0.0912 N
+31836	ribbed|w0.8 L2.5 k0.02 edges true g0.02 at0.176 pair	0.010800	Hammering	false	Sm 0.2261 H, Ha 0.4949 H, Sh 0.0807 N	Sm 0.2261 H, Ha 0.4841 H, Sh 0.0797 N
+31150	fuller|w1.0 L2.0 t0.08 c0.015 g0.05 at0.5 twin	0.010800	Hammering	false	Sm 0.3303 H, Ha 0.0600 N, Sh 0.0000 N	Sm 0.3303 H, Ha 0.0492 N, Sh 0.0000 N
+30989	fuller|w1.0 L2.0 t0.04 c0.030 g0.08 at0.6 twin	0.010800	Hammering	false	Sm 0.2820 H, Ha 0.2787 H, Sh 0.0039 N	Sm 0.2820 H, Ha 0.2679 H, Sh 0.0009 N
+30361	fuller|w1.0 L2.5 t0.08 c0.015 g0.08 at0.4 one	0.010800	Hammering	false	Sm 0.4127 H, Ha 0.1203 N, Sh 0.0000 N	Sm 0.4127 H, Ha 0.1095 N, Sh 0.0000 N
+30342	fuller|w1.0 L2.5 t0.08 c0.015 g0.05 at0.2 one	0.010800	Hammering	false	Sm 0.4158 H, Ha 0.1089 N, Sh 0.0000 N	Sm 0.4158 H, Ha 0.0981 N, Sh 0.0000 N
+30137	fuller|w1.0 L2.5 t0.04 c0.030 g0.02 at0.3 twin	0.010800	Hammering	false	Sm 0.3751 H, Ha 0.2568 H, Sh 0.0280 N	Sm 0.3751 H, Ha 0.2460 H, Sh 0.0263 N
+29575	fuller|w0.8 L2.0 t0.08 c0.015 g0.12 at0.3 twin	0.010800	Hammering	false	Sm 0.2573 H, Ha 0.0750 N, Sh 0.0000 N	Sm 0.2573 H, Ha 0.0858 N, Sh 0.0000 N
+28777	fuller|w0.8 L2.5 t0.08 c0.015 g0.08 at0.7 twin	0.010800	Hammering	false	Sm 0.3278 H, Ha 0.1285 N, Sh 0.0000 N	Sm 0.3278 H, Ha 0.1177 N, Sh 0.0000 N
+28739	fuller|w0.8 L2.5 t0.08 c0.015 g0.03 at0.3 one	0.010800	Hammering	false	Sm 0.3412 H, Ha 0.0828 N, Sh 0.0000 N	Sm 0.3412 H, Ha 0.0720 N, Sh 0.0000 N
+27639	fuller|w0.6 L2.0 t0.02 c0.050 g0.08 at0.4 one	0.010800	Hammering	false	Sm 0.2127 H, Ha 0.0566 N, Sh 0.0054 N	Sm 0.2127 H, Ha 0.0674 N, Sh 0.0054 N
+25493	fuller|w0.4 L2.5 t0.04 c0.015 g0.12 at0.6 twin	0.010800	Sharpening	false	Sm 0.0991 N, Ha 0.4617 H, Sh 0.1183 N	Sm 0.0991 N, Ha 0.4536 H, Sh 0.1075 N
+23984	fuller|w0.3 L2.5 t0.02 c0.015 g0.01 at0.2 one	0.010800	Hammering	false	Sm 0.0718 N, Ha 0.2558 H, Sh 0.0000 N	Sm 0.0718 N, Ha 0.2450 H, Sh 0.0000 N
+32155	ribbed|w1.2 L2.5 k0.04 edges false g0.08 at0.264 one	0.010700	Hammering	false	Sm 0.4283 H, Ha 0.2849 H, Sh 0.0969 N	Sm 0.4283 H, Ha 0.2742 H, Sh 0.0945 N
+32131	ribbed|w1.2 L2.5 k0.04 edges false g0.02 at0.264 one	0.010700	Hammering	false	Sm 0.4406 H, Ha 0.2126 H, Sh 0.0640 N	Sm 0.4406 H, Ha 0.2019 H, Sh 0.0610 N
+31998	ribbed|w1.2 L1.5 k0.04 edges false g0.02 at0.456 pair	0.010700	Hammering	false	Sm 0.2731 H, Ha 0.0817 N, Sh 0.0000 N	Sm 0.2731 H, Ha 0.0924 N, Sh 0.0000 N
+31971	ribbed|w1.2 L1.5 k0.02 edges true g0.05 at0.168 one	0.010700	Hammering	false	Sm 0.2285 H, Ha 0.1770 N, Sh 0.0000 N	Sm 0.2285 H, Ha 0.1877 N, Sh 0.0000 N
+31932	ribbed|w1.2 L1.5 k0.02 edges false g0.02 at0.552 pair	0.010700	Hammering	false	Sm 0.2228 H, Ha 0.1743 N, Sh 0.0498 N	Sm 0.2228 H, Ha 0.1850 N, Sh 0.0530 N
+31181	fuller|w1.0 L2.0 t0.08 c0.015 g0.12 at0.6 twin	0.010700	Hammering	false	Sm 0.3187 H, Ha 0.0849 N, Sh 0.0000 N	Sm 0.3187 H, Ha 0.0956 N, Sh 0.0000 N
+31118	fuller|w1.0 L2.0 t0.08 c0.015 g0.02 at0.4 twin	0.010700	Hammering	false	Sm 0.3351 H, Ha 0.0695 N, Sh 0.0000 N	Sm 0.3351 H, Ha 0.0588 N, Sh 0.0000 N
+30317	fuller|w1.0 L2.5 t0.08 c0.015 g0.02 at0.4 twin	0.010700	Hammering	false	Sm 0.4168 H, Ha 0.1417 N, Sh 0.0000 N	Sm 0.4168 H, Ha 0.1310 N, Sh 0.0000 N
+29896	fuller|w1.0 L2.5 t0.02 c0.030 g0.05 at0.1 twin	0.010700	Sharpening	true	Sm 0.2873 H, Ha 0.4708 H, Sh 0.1893 N	Sm 0.2873 H, Ha 0.4708 H, Sh 0.2000 H
+29561	fuller|w0.8 L2.0 t0.08 c0.015 g0.08 at0.3 twin	0.010700	Hammering	false	Sm 0.2639 H, Ha 0.0322 N, Sh 0.0000 N	Sm 0.2639 H, Ha 0.0429 N, Sh 0.0000 N
+29554	fuller|w0.8 L2.0 t0.08 c0.015 g0.05 at0.7 one	0.010700	Hammering	false	Sm 0.2729 H, Ha 0.0002 N, Sh 0.0000 N	Sm 0.2729 H, Ha 0.0109 N, Sh 0.0000 N
+29546	fuller|w0.8 L2.0 t0.08 c0.015 g0.05 at0.3 one	0.010700	Hammering	false	Sm 0.2729 H, Ha 0.0000 N, Sh 0.0000 N	Sm 0.2729 H, Ha 0.0107 N, Sh 0.0000 N
+28755	fuller|w0.8 L2.5 t0.08 c0.015 g0.05 at0.3 twin	0.010700	Hammering	false	Sm 0.3339 H, Ha 0.1011 N, Sh 0.0000 N	Sm 0.3339 H, Ha 0.0904 N, Sh 0.0000 N
+28737	fuller|w0.8 L2.5 t0.08 c0.015 g0.03 at0.2 one	0.010700	Hammering	false	Sm 0.3412 H, Ha 0.0848 N, Sh 0.0000 N	Sm 0.3412 H, Ha 0.0741 N, Sh 0.0000 N
+28727	fuller|w0.8 L2.5 t0.08 c0.015 g0.02 at0.4 twin	0.010700	Hammering	false	Sm 0.3402 H, Ha 0.0716 N, Sh 0.0000 N	Sm 0.3402 H, Ha 0.0609 N, Sh 0.0000 N
+28724	fuller|w0.8 L2.5 t0.08 c0.015 g0.02 at0.3 one	0.010700	Hammering	false	Sm 0.3422 H, Ha 0.0549 N, Sh 0.0000 N	Sm 0.3422 H, Ha 0.0442 N, Sh 0.0000 N
+27511	fuller|w0.6 L2.0 t0.02 c0.030 g0.02 at0.4 twin	0.010700	Hammering	false	Sm 0.1521 N, Ha 0.2692 H, Sh 0.0089 N	Sm 0.1521 N, Ha 0.2799 H, Sh 0.0141 N
+26037	fuller|w0.4 L2.0 t0.02 c0.030 g0.05 at0.7 twin	0.010700	Hammering	false	Sm 0.0975 N, Ha 0.3126 H, Sh 0.0414 N	Sm 0.0975 N, Ha 0.3019 H, Sh 0.0349 N
+25947	fuller|w0.4 L2.0 t0.02 c0.015 g0.05 at0.3 one	0.010700	Hammering	false	Sm 0.0695 N, Ha 0.3081 H, Sh 0.0770 N	Sm 0.0695 N, Ha 0.2974 H, Sh 0.0770 N
+25945	fuller|w0.4 L2.0 t0.02 c0.015 g0.05 at0.2 one	0.010700	Hammering	false	Sm 0.0695 N, Ha 0.3075 H, Sh 0.0767 N	Sm 0.0695 N, Ha 0.2968 H, Sh 0.0767 N
+25908	fuller|w0.4 L2.0 t0.02 c0.015 g0.01 at0.5 one	0.010700	Hammering	false	Sm 0.0728 N, Ha 0.1940 N, Sh 0.0000 N	Sm 0.0728 N, Ha 0.1833 N, Sh 0.0000 N
+25387	fuller|w0.4 L2.5 t0.02 c0.050 g0.05 at0.6 twin	0.010700	Hammering	false	Sm 0.1733 N, Ha 0.3427 H, Sh 0.0381 N	Sm 0.1733 N, Ha 0.3320 H, Sh 0.0331 N
+24160	fuller|w0.3 L2.5 t0.02 c0.050 g0.05 at0.3 twin	0.010700	Sharpening	false	Sm 0.1315 N, Ha 0.5540 H, Sh 0.0757 N	Sm 0.1315 N, Ha 0.5447 H, Sh 0.0650 N
+24024	fuller|w0.3 L2.5 t0.02 c0.015 g0.05 at0.0 one	0.010700	Hammering	false	Sm 0.0677 N, Ha 0.3376 H, Sh 0.0948 N	Sm 0.0677 N, Ha 0.3269 H, Sh 0.0950 N
+24014	fuller|w0.3 L2.5 t0.02 c0.015 g0.03 at0.3 one	0.010700	Hammering	false	Sm 0.0698 N, Ha 0.3385 H, Sh 0.0891 N	Sm 0.0698 N, Ha 0.3278 H, Sh 0.0891 N
+23986	fuller|w0.3 L2.5 t0.02 c0.015 g0.01 at0.3 one	0.010700	Hammering	false	Sm 0.0718 N, Ha 0.2560 H, Sh 0.0000 N	Sm 0.0718 N, Ha 0.2453 H, Sh 0.0000 N
+23983	fuller|w0.3 L2.5 t0.02 c0.015 g0.01 at0.1 one	0.010700	Hammering	false	Sm 0.0718 N, Ha 0.2555 H, Sh 0.0000 N	Sm 0.0718 N, Ha 0.2448 H, Sh 0.0000 N
+30979	fuller|w1.0 L2.0 t0.04 c0.030 g0.08 at0.1 twin	0.010600	Hammering	false	Sm 0.2820 H, Ha 0.2966 H, Sh 0.0021 N	Sm 0.2820 H, Ha 0.2860 H, Sh 0.0000 N
+30758	fuller|w1.0 L2.0 t0.02 c0.050 g0.02 at0.2 twin	0.010600	Hammering	false	Sm 0.3579 H, Ha 0.1090 N, Sh 0.0000 N	Sm 0.3579 H, Ha 0.0984 N, Sh 0.0000 N
+30343	fuller|w1.0 L2.5 t0.08 c0.015 g0.05 at0.2 twin	0.010600	Hammering	false	Sm 0.4106 H, Ha 0.1343 N, Sh 0.0000 N	Sm 0.4106 H, Ha 0.1237 N, Sh 0.0000 N
+30330	fuller|w1.0 L2.5 t0.08 c0.015 g0.03 at0.3 twin	0.010600	Hammering	false	Sm 0.4148 H, Ha 0.1575 N, Sh 0.0000 N	Sm 0.4148 H, Ha 0.1469 N, Sh 0.0000 N
+30315	fuller|w1.0 L2.5 t0.08 c0.015 g0.02 at0.3 twin	0.010600	Hammering	false	Sm 0.4169 H, Ha 0.1398 N, Sh 0.0000 N	Sm 0.4169 H, Ha 0.1292 N, Sh 0.0000 N
+29540	fuller|w0.8 L2.0 t0.08 c0.015 g0.03 at0.7 twin	0.010600	Hammering	false	Sm 0.2721 H, Ha 0.0225 N, Sh 0.0000 N	Sm 0.2721 H, Ha 0.0331 N, Sh 0.0000 N
+29523	fuller|w0.8 L2.0 t0.08 c0.015 g0.02 at0.6 twin	0.010600	Hammering	false	Sm 0.2738 H, Ha 0.0134 N, Sh 0.0000 N	Sm 0.2738 H, Ha 0.0028 N, Sh 0.0000 N
+29520	fuller|w0.8 L2.0 t0.08 c0.015 g0.02 at0.5 one	0.010600	Hammering	false	Sm 0.2754 H, Ha 0.0059 N, Sh 0.0000 N	Sm 0.2754 H, Ha 0.0165 N, Sh 0.0000 N
+29334	fuller|w0.8 L2.0 t0.04 c0.030 g0.01 at0.7 twin	0.010600	Hammering	false	Sm 0.2493 H, Ha 0.0462 N, Sh 0.0000 N	Sm 0.2493 H, Ha 0.0356 N, Sh 0.0000 N
+29094	fuller|w0.8 L2.0 t0.02 c0.030 g0.03 at0.4 twin	0.010600	Hammering	false	Sm 0.1935 N, Ha 0.2567 H, Sh 0.0308 N	Sm 0.1935 N, Ha 0.2673 H, Sh 0.0352 N
+28775	fuller|w0.8 L2.5 t0.08 c0.015 g0.08 at0.6 twin	0.010600	Hammering	false	Sm 0.3278 H, Ha 0.1339 N, Sh 0.0000 N	Sm 0.3278 H, Ha 0.1233 N, Sh 0.0000 N
+28752	fuller|w0.8 L2.5 t0.08 c0.015 g0.05 at0.2 one	0.010600	Hammering	false	Sm 0.3391 H, Ha 0.0695 N, Sh 0.0000 N	Sm 0.3391 H, Ha 0.0589 N, Sh 0.0000 N
+28740	fuller|w0.8 L2.5 t0.08 c0.015 g0.03 at0.3 twin	0.010600	Hammering	false	Sm 0.3381 H, Ha 0.1285 N, Sh 0.0000 N	Sm 0.3381 H, Ha 0.1179 N, Sh 0.0000 N
+28722	fuller|w0.8 L2.5 t0.08 c0.015 g0.02 at0.2 one	0.010600	Hammering	false	Sm 0.3422 H, Ha 0.0569 N, Sh 0.0000 N	Sm 0.3422 H, Ha 0.0463 N, Sh 0.0000 N
+28571	fuller|w0.8 L2.5 t0.04 c0.030 g0.03 at0.7 one	0.010600	Hammering	false	Sm 0.3074 H, Ha 0.1862 N, Sh 0.0000 N	Sm 0.3074 H, Ha 0.1756 N, Sh 0.0000 N
+28558	fuller|w0.8 L2.5 t0.04 c0.030 g0.03 at0.0 one	0.010600	Hammering	false	Sm 0.3073 H, Ha 0.1710 N, Sh 0.0000 N	Sm 0.3073 H, Ha 0.1604 N, Sh 0.0000 N
+28550	fuller|w0.8 L2.5 t0.04 c0.030 g0.02 at0.4 one	0.010600	Hammering	false	Sm 0.3095 H, Ha 0.1393 N, Sh 0.0000 N	Sm 0.3095 H, Ha 0.1287 N, Sh 0.0000 N
+28543	fuller|w0.8 L2.5 t0.04 c0.030 g0.02 at0.0 one	0.010600	Hammering	false	Sm 0.3094 H, Ha 0.1394 N, Sh 0.0000 N	Sm 0.3094 H, Ha 0.1288 N, Sh 0.0000 N
+27526	fuller|w0.6 L2.0 t0.02 c0.030 g0.03 at0.4 twin	0.010600	Hammering	false	Sm 0.1487 N, Ha 0.2633 H, Sh 0.0014 N	Sm 0.1487 N, Ha 0.2739 H, Sh 0.0067 N
+27522	fuller|w0.6 L2.0 t0.02 c0.030 g0.03 at0.2 twin	0.010600	Hammering	false	Sm 0.1487 N, Ha 0.2245 H, Sh 0.0021 N	Sm 0.1487 N, Ha 0.2351 H, Sh 0.0074 N
+25935	fuller|w0.4 L2.0 t0.02 c0.015 g0.03 at0.4 one	0.010600	Hammering	false	Sm 0.0712 N, Ha 0.3090 H, Sh 0.0727 N	Sm 0.0712 N, Ha 0.2984 H, Sh 0.0727 N
+25930	fuller|w0.4 L2.0 t0.02 c0.015 g0.03 at0.1 one	0.010600	Hammering	false	Sm 0.0712 N, Ha 0.3085 H, Sh 0.0719 N	Sm 0.0712 N, Ha 0.2979 H, Sh 0.0719 N
+25574	fuller|w0.4 L2.5 t0.04 c0.030 g0.12 at0.6 twin	0.010600	Sharpening	false	Sm 0.1246 N, Ha 0.4921 H, Sh 0.1073 N	Sm 0.1246 N, Ha 0.4853 H, Sh 0.0967 N
+25175	fuller|w0.4 L2.5 t0.02 c0.015 g0.01 at0.3 one	0.010600	Hammering	false	Sm 0.0893 N, Ha 0.3329 H, Sh 0.0279 N	Sm 0.0893 N, Ha 0.3223 H, Sh 0.0288 N
+24579	fuller|w0.3 L2.0 t0.02 c0.015 g0.01 at0.2 twin	0.010600	Hammering	false	Sm 0.0580 N, Ha 0.1741 N, Sh 0.0000 N	Sm 0.0580 N, Ha 0.1635 N, Sh 0.0000 N
+24016	fuller|w0.3 L2.5 t0.02 c0.015 g0.03 at0.4 one	0.010600	Hammering	false	Sm 0.0698 N, Ha 0.3517 H, Sh 0.0571 N	Sm 0.0698 N, Ha 0.3411 H, Sh 0.0571 N
+24010	fuller|w0.3 L2.5 t0.02 c0.015 g0.03 at0.0 one	0.010600	Hammering	false	Sm 0.0698 N, Ha 0.3184 H, Sh 0.0571 N	Sm 0.0698 N, Ha 0.3078 H, Sh 0.0571 N
+23513	fuller|w0.2 L2.0 t0.02 c0.015 g0.02 at0.2 twin	0.010600	Sharpening	false	Sm 0.0424 N, Ha 0.2700 H, Sh 0.0244 N	Sm 0.0424 N, Ha 0.2741 H, Sh 0.0350 N
+23199	fuller|w0.2 L2.5 t0.04 c0.015 g0.02 at0.7 twin	0.010600	Hammering	false	Sm 0.0709 N, Ha 0.2321 H, Sh 0.0000 N	Sm 0.0709 N, Ha 0.2215 H, Sh 0.0000 N
+9127	rod|C09|grip Block d0.06 poke0.0050	0.010500	Hammering	false	Sm 0.0003 N, Ha 0.3122 H, Sh 0.1904 N	Sm 0.0003 N, Ha 0.3017 H, Sh 0.1826 N
+32189	ribbed|w1.2 L2.5 k0.04 edges true g0.08 at0.264 one	0.010500	Hammering	false	Sm 0.4424 H, Ha 0.2988 H, Sh 0.0345 N	Sm 0.4424 H, Ha 0.2883 H, Sh 0.0315 N
+31782	ribbed|w0.8 L1.5 k0.04 edges true g0.02 at0.368 pair	0.010500	Hammering	false	Sm 0.1711 N, Ha 0.0726 N, Sh 0.0000 N	Sm 0.1711 N, Ha 0.0831 N, Sh 0.0000 N
+31364	ribbed|w0.3 L1.5 k0.02 edges false g0.02 at0.066 pair	0.010500	Sharpening	false	Sm 0.0186 N, Ha 0.1517 N, Sh 0.0429 N	Sm 0.0186 N, Ha 0.1446 N, Sh 0.0324 N
+30359	fuller|w1.0 L2.5 t0.08 c0.015 g0.08 at0.3 one	0.010500	Hammering	false	Sm 0.4127 H, Ha 0.1196 N, Sh 0.0000 N	Sm 0.4127 H, Ha 0.1091 N, Sh 0.0000 N
+29577	fuller|w0.8 L2.0 t0.08 c0.015 g0.12 at0.4 twin	0.010500	Hammering	false	Sm 0.2573 H, Ha 0.0521 N, Sh 0.0000 N	Sm 0.2573 H, Ha 0.0626 N, Sh 0.0000 N
+29539	fuller|w0.8 L2.0 t0.08 c0.015 g0.03 at0.7 one	0.010500	Hammering	false	Sm 0.2746 H, Ha 0.0000 N, Sh 0.0000 N	Sm 0.2746 H, Ha 0.0105 N, Sh 0.0000 N
+29535	fuller|w0.8 L2.0 t0.08 c0.015 g0.03 at0.5 one	0.010500	Hammering	false	Sm 0.2746 H, Ha 0.0000 N, Sh 0.0000 N	Sm 0.2746 H, Ha 0.0105 N, Sh 0.0000 N
+29198	fuller|w0.8 L2.0 t0.02 c0.050 g0.05 at0.5 one	0.010500	Hammering	false	Sm 0.2880 H, Ha 0.0620 N, Sh 0.0000 N	Sm 0.2880 H, Ha 0.0515 N, Sh 0.0000 N
+28773	fuller|w0.8 L2.5 t0.08 c0.015 g0.08 at0.5 twin	0.010500	Hammering	false	Sm 0.3278 H, Ha 0.1338 N, Sh 0.0000 N	Sm 0.3278 H, Ha 0.1233 N, Sh 0.0000 N
+28423	fuller|w0.8 L2.5 t0.02 c0.050 g0.08 at0.6 twin	0.010500	Sharpening	false	Sm 0.3200 H, Ha 0.3256 H, Sh 0.0000 N	Sm 0.3200 H, Ha 0.3345 H, Sh 0.0105 N
+27935	fuller|w0.6 L2.0 t0.08 c0.015 g0.02 at0.1 twin	0.010500	Hammering	false	Sm 0.2124 H, Ha 0.0090 N, Sh 0.0000 N	Sm 0.2124 H, Ha 0.0195 N, Sh 0.0000 N
+26843	fuller|w0.6 L2.5 t0.02 c0.050 g0.03 at0.7 one	0.010500	Hammering	false	Sm 0.2808 H, Ha 0.1250 N, Sh 0.0000 N	Sm 0.2808 H, Ha 0.1145 N, Sh 0.0000 N
+25939	fuller|w0.4 L2.0 t0.02 c0.015 g0.03 at0.6 one	0.010500	Hammering	false	Sm 0.0712 N, Ha 0.3051 H, Sh 0.0730 N	Sm 0.0712 N, Ha 0.2946 H, Sh 0.0732 N
+25462	fuller|w0.4 L2.5 t0.04 c0.015 g0.05 at0.3 twin	0.010500	Sharpening	false	Sm 0.1135 N, Ha 0.3319 H, Sh 0.0249 N	Sm 0.1135 N, Ha 0.3353 H, Sh 0.0354 N
+25286	fuller|w0.4 L2.5 t0.02 c0.030 g0.03 at0.3 twin	0.010500	Sharpening	false	Sm 0.1283 N, Ha 0.2346 H, Sh 0.0088 N	Sm 0.1283 N, Ha 0.2360 H, Sh 0.0193 N
+25177	fuller|w0.4 L2.5 t0.02 c0.015 g0.01 at0.4 one	0.010500	Hammering	false	Sm 0.0893 N, Ha 0.3331 H, Sh 0.0282 N	Sm 0.0893 N, Ha 0.3226 H, Sh 0.0292 N
+23996	fuller|w0.3 L2.5 t0.02 c0.015 g0.02 at0.0 one	0.010500	Hammering	false	Sm 0.0708 N, Ha 0.3292 H, Sh 0.0706 N	Sm 0.0708 N, Ha 0.3187 H, Sh 0.0706 N
+23995	fuller|w0.3 L2.5 t0.02 c0.015 g0.01 at0.7 twin	0.010500	Hammering	false	Sm 0.0708 N, Ha 0.2448 H, Sh 0.0000 N	Sm 0.0708 N, Ha 0.2343 H, Sh 0.0000 N
+23993	fuller|w0.3 L2.5 t0.02 c0.015 g0.01 at0.6 twin	0.010500	Hammering	false	Sm 0.0708 N, Ha 0.2443 H, Sh 0.0000 N	Sm 0.0708 N, Ha 0.2338 H, Sh 0.0000 N
+23627	fuller|w0.2 L2.0 t0.02 c0.050 g0.02 at0.5 twin	0.010500	Hammering	false	Sm 0.0898 N, Ha 0.0988 N, Sh 0.0000 N	Sm 0.0898 N, Ha 0.1093 N, Sh 0.0000 N
+21944	laminate|F5|k0.03 wf2.0 proud-0.0200 capfalse	0.010500	Sharpening	false	Sm 0.0707 N, Ha 0.1409 N, Sh 0.1685 N	Sm 0.0707 N, Ha 0.1473 N, Sh 0.1790 N
+1868	laminate|C02|k0.02 wf1.5 proud0.0200 capfalse	0.010500	Sharpening	false	Sm 0.0583 N, Ha 0.1980 N, Sh 0.2148 H	Sm 0.0583 N, Ha 0.1877 N, Sh 0.2043 H
+11506	laminate|F1|k0.03 wf2.0 proud-0.0200 capfalse	0.010500	Sharpening	false	Sm 0.0707 N, Ha 0.1409 N, Sh 0.1685 N	Sm 0.0707 N, Ha 0.1473 N, Sh 0.1790 N
+8326	plateEdge|C09|blade w0.8 k0.8 l0.8 poke0.0500	0.010400	Hammering	false	Sm 0.0026 N, Ha 0.2868 H, Sh 0.1409 N	Sm 0.0026 N, Ha 0.2972 H, Sh 0.1458 N
+32965	grille|1.0 x 2.8 x 0.02 4 x 4 f0.7	0.010400	Hammering	false	Sm 0.5309 H, Ha 0.0691 N, Sh 0.0000 N	Sm 0.5309 H, Ha 0.0795 N, Sh 0.0000 N
+32956	grille|1.0 x 2.8 x 0.02 2 x 4 f0.7	0.010400	Hammering	false	Sm 0.5306 H, Ha 0.0938 N, Sh 0.0000 N	Sm 0.5306 H, Ha 0.0834 N, Sh 0.0000 N
+32054	ribbed|w1.2 L1.5 k0.04 edges true g0.08 at0.360 pair	0.010400	Hammering	false	Sm 0.2671 H, Ha 0.1775 N, Sh 0.0000 N	Sm 0.2671 H, Ha 0.1671 N, Sh 0.0000 N
+30378	fuller|w1.0 L2.5 t0.08 c0.015 g0.12 at0.5 twin	0.010400	Hammering	false	Sm 0.3961 H, Ha 0.1727 N, Sh 0.0000 N	Sm 0.3961 H, Ha 0.1623 N, Sh 0.0000 N
+30329	fuller|w1.0 L2.5 t0.08 c0.015 g0.03 at0.3 one	0.010400	Hammering	false	Sm 0.4179 H, Ha 0.1186 N, Sh 0.0000 N	Sm 0.4179 H, Ha 0.1082 N, Sh 0.0000 N
+30147	fuller|w1.0 L2.5 t0.04 c0.030 g0.03 at0.1 one	0.010400	Hammering	false	Sm 0.3771 H, Ha 0.1968 N, Sh 0.0000 N	Sm 0.3771 H, Ha 0.1864 N, Sh 0.0000 N
+29534	fuller|w0.8 L2.0 t0.08 c0.015 g0.03 at0.4 twin	0.010400	Hammering	false	Sm 0.2721 H, Ha 0.0219 N, Sh 0.0000 N	Sm 0.2721 H, Ha 0.0323 N, Sh 0.0000 N
+29163	fuller|w0.8 L2.0 t0.02 c0.050 g0.02 at0.2 twin	0.010400	Hammering	false	Sm 0.2908 H, Ha 0.1340 N, Sh 0.0000 N	Sm 0.2908 H, Ha 0.1236 N, Sh 0.0000 N
+28601	fuller|w0.8 L2.5 t0.04 c0.030 g0.08 at0.7 twin	0.010400	Hammering	false	Sm 0.2807 H, Ha 0.3315 H, Sh 0.0409 N	Sm 0.2807 H, Ha 0.3211 H, Sh 0.0379 N
+27507	fuller|w0.6 L2.0 t0.02 c0.030 g0.02 at0.2 twin	0.010400	Hammering	true	Sm 0.1521 N, Ha 0.1924 N, Sh 0.0096 N	Sm 0.1521 N, Ha 0.2028 H, Sh 0.0148 N
+27463	fuller|w0.6 L2.0 t0.02 c0.015 g0.08 at0.2 one	0.010400	Hammering	false	Sm 0.0950 N, Ha 0.4438 H, Sh 0.1707 N	Sm 0.0950 N, Ha 0.4334 H, Sh 0.1722 N
+26888	fuller|w0.6 L2.5 t0.04 c0.015 g0.01 at0.1 twin	0.010400	Hammering	false	Sm 0.1706 N, Ha 0.2548 H, Sh 0.0000 N	Sm 0.1706 N, Ha 0.2652 H, Sh 0.0000 N
+24021	fuller|w0.3 L2.5 t0.02 c0.015 g0.03 at0.6 twin	0.010400	Hammering	false	Sm 0.0667 N, Ha 0.3337 H, Sh 0.0939 N	Sm 0.0667 N, Ha 0.3233 H, Sh 0.0946 N
+24020	fuller|w0.3 L2.5 t0.02 c0.015 g0.03 at0.6 one	0.010400	Hammering	false	Sm 0.0698 N, Ha 0.3182 H, Sh 0.0569 N	Sm 0.0698 N, Ha 0.3078 H, Sh 0.0571 N
+24000	fuller|w0.3 L2.5 t0.02 c0.015 g0.02 at0.3 one	0.010400	Hammering	false	Sm 0.0708 N, Ha 0.3091 H, Sh 0.0391 N	Sm 0.0708 N, Ha 0.2987 H, Sh 0.0391 N
+23994	fuller|w0.3 L2.5 t0.02 c0.015 g0.01 at0.7 one	0.010400	Hammering	false	Sm 0.0718 N, Ha 0.2566 H, Sh 0.0000 N	Sm 0.0718 N, Ha 0.2462 H, Sh 0.0000 N
+23992	fuller|w0.3 L2.5 t0.02 c0.015 g0.01 at0.6 one	0.010400	Hammering	false	Sm 0.0718 N, Ha 0.2564 H, Sh 0.0000 N	Sm 0.0718 N, Ha 0.2460 H, Sh 0.0000 N
+23988	fuller|w0.3 L2.5 t0.02 c0.015 g0.01 at0.4 one	0.010400	Hammering	false	Sm 0.0718 N, Ha 0.2559 H, Sh 0.0000 N	Sm 0.0718 N, Ha 0.2455 H, Sh 0.0000 N
+23586	fuller|w0.2 L2.0 t0.02 c0.030 g0.03 at0.5 twin	0.010400	Sharpening	false	Sm 0.0594 N, Ha 0.0970 N, Sh 0.0365 N	Sm 0.0594 N, Ha 0.0923 N, Sh 0.0261 N
+8310	plateEdge|C09|blade w0.8 k0.8 l0.6 poke0.0200	0.010300	Hammering	false	Sm 0.0002 N, Ha 0.2874 H, Sh 0.1605 N	Sm 0.0002 N, Ha 0.2977 H, Sh 0.1652 N
+32177	ribbed|w1.2 L2.5 k0.04 edges true g0.05 at0.264 one	0.010300	Hammering	false	Sm 0.4486 H, Ha 0.2644 H, Sh 0.0204 N	Sm 0.4486 H, Ha 0.2541 H, Sh 0.0174 N
+31731	ribbed|w0.8 L1.5 k0.02 edges true g0.05 at0.240 one	0.010300	Hammering	false	Sm 0.1348 N, Ha 0.1126 N, Sh 0.0000 N	Sm 0.1348 N, Ha 0.1023 N, Sh 0.0000 N
+31138	fuller|w1.0 L2.0 t0.08 c0.015 g0.03 at0.7 one	0.010300	Hammering	false	Sm 0.3360 H, Ha 0.0472 N, Sh 0.0000 N	Sm 0.3360 H, Ha 0.0369 N, Sh 0.0000 N
+30362	fuller|w1.0 L2.5 t0.08 c0.015 g0.08 at0.4 twin	0.010300	Hammering	false	Sm 0.4045 H, Ha 0.1622 N, Sh 0.0000 N	Sm 0.4045 H, Ha 0.1519 N, Sh 0.0000 N
+30340	fuller|w1.0 L2.5 t0.08 c0.015 g0.05 at0.1 one	0.010300	Hammering	false	Sm 0.4158 H, Ha 0.1227 N, Sh 0.0000 N	Sm 0.4158 H, Ha 0.1124 N, Sh 0.0000 N
+30012	fuller|w1.0 L2.5 t0.02 c0.050 g0.08 at0.7 twin	0.010300	Sharpening	false	Sm 0.4038 H, Ha 0.3446 H, Sh 0.0393 N	Sm 0.4038 H, Ha 0.3505 H, Sh 0.0496 N
+29573	fuller|w0.8 L2.0 t0.08 c0.015 g0.12 at0.2 twin	0.010300	Hammering	false	Sm 0.2573 H, Ha 0.0756 N, Sh 0.0000 N	Sm 0.2573 H, Ha 0.0859 N, Sh 0.0000 N
+29555	fuller|w0.8 L2.0 t0.08 c0.015 g0.05 at0.7 twin	0.010300	Hammering	false	Sm 0.2688 H, Ha 0.0244 N, Sh 0.0000 N	Sm 0.2688 H, Ha 0.0347 N, Sh 0.0000 N
+28725	fuller|w0.8 L2.5 t0.08 c0.015 g0.02 at0.3 twin	0.010300	Hammering	false	Sm 0.3402 H, Ha 0.0724 N, Sh 0.0000 N	Sm 0.3402 H, Ha 0.0621 N, Sh 0.0000 N
+28556	fuller|w0.8 L2.5 t0.04 c0.030 g0.02 at0.7 one	0.010300	Hammering	false	Sm 0.3095 H, Ha 0.1543 N, Sh 0.0000 N	Sm 0.3095 H, Ha 0.1440 N, Sh 0.0000 N
+27465	fuller|w0.6 L2.0 t0.02 c0.015 g0.08 at0.3 one	0.010300	Hammering	false	Sm 0.0950 N, Ha 0.4436 H, Sh 0.1709 N	Sm 0.0950 N, Ha 0.4333 H, Sh 0.1725 N
+26762	fuller|w0.6 L2.5 t0.02 c0.030 g0.05 at0.2 twin	0.010300	Sharpening	false	Sm 0.1758 N, Ha 0.5187 H, Sh 0.0814 N	Sm 0.1758 N, Ha 0.5279 H, Sh 0.0917 N
+26049	fuller|w0.4 L2.0 t0.02 c0.030 g0.08 at0.7 one	0.010300	Hammering	false	Sm 0.1008 N, Ha 0.3389 H, Sh 0.0028 N	Sm 0.1008 N, Ha 0.3492 H, Sh 0.0028 N
+25953	fuller|w0.4 L2.0 t0.02 c0.015 g0.05 at0.6 one	0.010300	Hammering	false	Sm 0.0695 N, Ha 0.3077 H, Sh 0.0769 N	Sm 0.0695 N, Ha 0.2974 H, Sh 0.0777 N
+25949	fuller|w0.4 L2.0 t0.02 c0.015 g0.05 at0.4 one	0.010300	Hammering	false	Sm 0.0695 N, Ha 0.3078 H, Sh 0.0765 N	Sm 0.0695 N, Ha 0.2975 H, Sh 0.0772 N
+25925	fuller|w0.4 L2.0 t0.02 c0.015 g0.02 at0.6 one	0.010300	Hammering	false	Sm 0.0720 N, Ha 0.2818 H, Sh 0.0360 N	Sm 0.0720 N, Ha 0.2715 H, Sh 0.0362 N
+25921	fuller|w0.4 L2.0 t0.02 c0.015 g0.02 at0.4 one	0.010300	Hammering	false	Sm 0.0720 N, Ha 0.2855 H, Sh 0.0355 N	Sm 0.0720 N, Ha 0.2752 H, Sh 0.0357 N
+25915	fuller|w0.4 L2.0 t0.02 c0.015 g0.02 at0.1 one	0.010300	Hammering	false	Sm 0.0720 N, Ha 0.2851 H, Sh 0.0350 N	Sm 0.0720 N, Ha 0.2748 H, Sh 0.0350 N
+25899	fuller|w0.4 L2.0 t0.02 c0.015 g0.01 at0.0 one	0.010300	Hammering	false	Sm 0.0728 N, Ha 0.1940 N, Sh 0.0000 N	Sm 0.0728 N, Ha 0.1837 N, Sh 0.0000 N
+1866	laminate|C02|k0.02 wf1.5 proud0.0150 capfalse	0.010300	Sharpening	false	Sm 0.0577 N, Ha 0.1521 N, Sh 0.1605 N	Sm 0.0577 N, Ha 0.1588 N, Sh 0.1708 N
+8340	plateEdge|C09|blade w0.8 k0.8 l1.0 poke0.0500	0.010200	Hammering	false	Sm 0.0031 N, Ha 0.2745 H, Sh 0.1225 N	Sm 0.0031 N, Ha 0.2847 H, Sh 0.1266 N
+32919	grille|1.0 x 1.2 x 0.02 6 x 4 f0.5	0.010200	Hammering	false	Sm 0.1885 N, Ha 0.0365 N, Sh 0.0000 N	Sm 0.1885 N, Ha 0.0263 N, Sh 0.0000 N
+32141	ribbed|w1.2 L2.5 k0.04 edges false g0.05 at0.168 one	0.010200	Hammering	false	Sm 0.4345 H, Ha 0.2630 H, Sh 0.0920 N	Sm 0.4345 H, Ha 0.2528 H, Sh 0.0914 N
+31924	ribbed|w1.2 L1.5 k0.02 edges false g0.02 at0.168 pair	0.010200	Hammering	true	Sm 0.2231 H, Ha 0.1976 N, Sh 0.0425 N	Sm 0.2231 H, Ha 0.2078 H, Sh 0.0451 N
+31148	fuller|w1.0 L2.0 t0.08 c0.015 g0.05 at0.4 twin	0.010200	Hammering	false	Sm 0.3302 H, Ha 0.0889 N, Sh 0.0000 N	Sm 0.3302 H, Ha 0.0787 N, Sh 0.0000 N
+31129	fuller|w1.0 L2.0 t0.08 c0.015 g0.03 at0.2 twin	0.010200	Hammering	false	Sm 0.3336 H, Ha 0.0258 N, Sh 0.0000 N	Sm 0.3336 H, Ha 0.0156 N, Sh 0.0000 N
+30363	fuller|w1.0 L2.5 t0.08 c0.015 g0.08 at0.5 one	0.010200	Hammering	false	Sm 0.4127 H, Ha 0.1197 N, Sh 0.0000 N	Sm 0.4127 H, Ha 0.1095 N, Sh 0.0000 N
+29175	fuller|w0.8 L2.0 t0.02 c0.050 g0.03 at0.1 one	0.010200	Hammering	false	Sm 0.2935 H, Ha 0.0461 N, Sh 0.0000 N	Sm 0.2935 H, Ha 0.0359 N, Sh 0.0000 N
+29167	fuller|w0.8 L2.0 t0.02 c0.050 g0.02 at0.4 twin	0.010200	Hammering	false	Sm 0.2908 H, Ha 0.1001 N, Sh 0.0000 N	Sm 0.2908 H, Ha 0.0899 N, Sh 0.0000 N
+28781	fuller|w0.8 L2.5 t0.08 c0.015 g0.12 at0.2 twin	0.010200	Hammering	false	Sm 0.3195 H, Ha 0.1600 N, Sh 0.0000 N	Sm 0.3195 H, Ha 0.1702 N, Sh 0.0000 N
+28454	fuller|w0.8 L2.5 t0.04 c0.015 g0.01 at0.7 twin	0.010200	Hammering	false	Sm 0.2194 H, Ha 0.3606 H, Sh 0.0383 N	Sm 0.2194 H, Ha 0.3708 H, Sh 0.0357 N
+25927	fuller|w0.4 L2.0 t0.02 c0.015 g0.02 at0.7 one	0.010200	Hammering	false	Sm 0.0720 N, Ha 0.2259 H, Sh 0.0128 N	Sm 0.0720 N, Ha 0.2157 H, Sh 0.0156 N
+25300	fuller|w0.4 L2.5 t0.02 c0.030 g0.05 at0.3 twin	0.010200	Sharpening	false	Sm 0.1200 N, Ha 0.5366 H, Sh 0.1057 N	Sm 0.1200 N, Ha 0.5393 H, Sh 0.1159 N
+25237	fuller|w0.4 L2.5 t0.02 c0.015 g0.08 at0.6 one	0.010200	Hammering	false	Sm 0.0820 N, Ha 0.4669 H, Sh 0.1910 N	Sm 0.0820 N, Ha 0.4567 H, Sh 0.1915 N
+25226	fuller|w0.4 L2.5 t0.02 c0.015 g0.05 at0.7 one	0.010200	Hammering	false	Sm 0.0851 N, Ha 0.4385 H, Sh 0.1431 N	Sm 0.0851 N, Ha 0.4283 H, Sh 0.1431 N
+25224	fuller|w0.4 L2.5 t0.02 c0.015 g0.05 at0.6 one	0.010200	Hammering	false	Sm 0.0851 N, Ha 0.4385 H, Sh 0.1431 N	Sm 0.0851 N, Ha 0.4283 H, Sh 0.1431 N
+25220	fuller|w0.4 L2.5 t0.02 c0.015 g0.05 at0.4 one	0.010200	Hammering	false	Sm 0.0851 N, Ha 0.4364 H, Sh 0.1431 N	Sm 0.0851 N, Ha 0.4262 H, Sh 0.1431 N
+25218	fuller|w0.4 L2.5 t0.02 c0.015 g0.05 at0.3 one	0.010200	Hammering	false	Sm 0.0851 N, Ha 0.4364 H, Sh 0.1431 N	Sm 0.0851 N, Ha 0.4262 H, Sh 0.1431 N
+24006	fuller|w0.3 L2.5 t0.02 c0.015 g0.02 at0.6 one	0.010200	Hammering	false	Sm 0.0708 N, Ha 0.2912 H, Sh 0.0107 N	Sm 0.0708 N, Ha 0.2810 H, Sh 0.0112 N
+23982	fuller|w0.3 L2.5 t0.02 c0.015 g0.01 at0.0 one	0.010200	Hammering	false	Sm 0.0718 N, Ha 0.2525 H, Sh 0.0000 N	Sm 0.0718 N, Ha 0.2423 H, Sh 0.0000 N
+8617	plateEdge|C09|guard w1.0 k0.6 l0.8 poke0.0150	0.010100	Hammering	false	Sm 0.0005 N, Ha 0.3174 H, Sh 0.1854 N	Sm 0.0005 N, Ha 0.3073 H, Sh 0.1766 N
+8309	plateEdge|C09|blade w0.8 k0.8 l0.6 poke0.0150	0.010100	Hammering	false	Sm 0.0001 N, Ha 0.2881 H, Sh 0.1619 N	Sm 0.0001 N, Ha 0.2982 H, Sh 0.1663 N
+32053	ribbed|w1.2 L1.5 k0.04 edges true g0.08 at0.264 one	0.010100	Hammering	false	Sm 0.2769 H, Ha 0.0880 N, Sh 0.0000 N	Sm 0.2769 H, Ha 0.0981 N, Sh 0.0000 N
+32051	ribbed|w1.2 L1.5 k0.04 edges true g0.08 at0.168 one	0.010100	Hammering	false	Sm 0.2768 H, Ha 0.0800 N, Sh 0.0001 N	Sm 0.2768 H, Ha 0.0901 N, Sh 0.0001 N
+31600	ribbed|w0.5 L2.5 k0.02 edges false g0.05 at0.150 pair	0.010100	Sharpening	false	Sm 0.0986 N, Ha 0.2439 H, Sh 0.1559 N	Sm 0.0986 N, Ha 0.2459 H, Sh 0.1660 N
+31169	fuller|w1.0 L2.0 t0.08 c0.015 g0.08 at0.7 twin	0.010100	Hammering	false	Sm 0.3253 H, Ha 0.0782 N, Sh 0.0000 N	Sm 0.3253 H, Ha 0.0681 N, Sh 0.0000 N
+31137	fuller|w1.0 L2.0 t0.08 c0.015 g0.03 at0.6 twin	0.010100	Hammering	false	Sm 0.3336 H, Ha 0.0541 N, Sh 0.0000 N	Sm 0.3336 H, Ha 0.0440 N, Sh 0.0000 N
+31122	fuller|w1.0 L2.0 t0.08 c0.015 g0.02 at0.6 twin	0.010100	Hammering	false	Sm 0.3351 H, Ha 0.0653 N, Sh 0.0000 N	Sm 0.3351 H, Ha 0.0552 N, Sh 0.0000 N
+30947	fuller|w1.0 L2.0 t0.04 c0.030 g0.03 at0.0 one	0.010100	Hammering	false	Sm 0.3033 H, Ha 0.1284 N, Sh 0.0000 N	Sm 0.3033 H, Ha 0.1183 N, Sh 0.0000 N
+30756	fuller|w1.0 L2.0 t0.02 c0.050 g0.02 at0.1 twin	0.010100	Hammering	false	Sm 0.3576 H, Ha 0.1036 N, Sh 0.0000 N	Sm 0.3576 H, Ha 0.0935 N, Sh 0.0000 N
+30328	fuller|w1.0 L2.5 t0.08 c0.015 g0.03 at0.2 twin	0.010100	Hammering	false	Sm 0.4148 H, Ha 0.0934 N, Sh 0.0000 N	Sm 0.4148 H, Ha 0.0833 N, Sh 0.0000 N
+29972	fuller|w1.0 L2.5 t0.02 c0.050 g0.03 at0.2 twin	0.010100	Hammering	false	Sm 0.4382 H, Ha 0.1804 N, Sh 0.0000 N	Sm 0.4382 H, Ha 0.1703 N, Sh 0.0000 N
+29527	fuller|w0.8 L2.0 t0.08 c0.015 g0.03 at0.1 one	0.010100	Hammering	false	Sm 0.2746 H, Ha 0.0000 N, Sh 0.0000 N	Sm 0.2746 H, Ha 0.0101 N, Sh 0.0000 N
+29177	fuller|w0.8 L2.0 t0.02 c0.050 g0.03 at0.2 one	0.010100	Hammering	false	Sm 0.2935 H, Ha 0.0519 N, Sh 0.0000 N	Sm 0.2935 H, Ha 0.0418 N, Sh 0.0000 N
+29162	fuller|w0.8 L2.0 t0.02 c0.050 g0.02 at0.2 one	0.010100	Hammering	false	Sm 0.2962 H, Ha 0.0485 N, Sh 0.0000 N	Sm 0.2962 H, Ha 0.0384 N, Sh 0.0000 N
+29115	fuller|w0.8 L2.0 t0.02 c0.030 g0.05 at0.7 twin	0.010100	Hammering	false	Sm 0.1868 N, Ha 0.3019 H, Sh 0.0512 N	Sm 0.1868 N, Ha 0.3120 H, Sh 0.0558 N
+28754	fuller|w0.8 L2.5 t0.08 c0.015 g0.05 at0.3 one	0.010100	Hammering	false	Sm 0.3391 H, Ha 0.0686 N, Sh 0.0000 N	Sm 0.3391 H, Ha 0.0585 N, Sh 0.0000 N
+28743	fuller|w0.8 L2.5 t0.08 c0.015 g0.03 at0.5 one	0.010100	Hammering	false	Sm 0.3412 H, Ha 0.0804 N, Sh 0.0000 N	Sm 0.3412 H, Ha 0.0703 N, Sh 0.0000 N
+28561	fuller|w0.8 L2.5 t0.04 c0.030 g0.03 at0.2 one	0.010100	Hammering	false	Sm 0.3074 H, Ha 0.1907 N, Sh 0.0000 N	Sm 0.3074 H, Ha 0.1806 N, Sh 0.0000 N
+27831	fuller|w0.6 L2.0 t0.04 c0.030 g0.12 at0.7 twin	0.010100	Sharpening	false	Sm 0.1571 N, Ha 0.3697 H, Sh 0.0075 N	Sm 0.1571 N, Ha 0.3775 H, Sh 0.0176 N
+27773	fuller|w0.6 L2.0 t0.04 c0.030 g0.02 at0.6 twin	0.010100	Hammering	false	Sm 0.1901 N, Ha 0.1450 N, Sh 0.0000 N	Sm 0.1901 N, Ha 0.1551 N, Sh 0.0000 N
+27476	fuller|w0.6 L2.0 t0.02 c0.015 g0.12 at0.1 one	0.010100	Hammering	false	Sm 0.0917 N, Ha 0.4840 H, Sh 0.1968 N	Sm 0.0917 N, Ha 0.4739 H, Sh 0.1973 N
+26748	fuller|w0.6 L2.5 t0.02 c0.030 g0.03 at0.2 twin	0.010100	Hammering	false	Sm 0.1840 N, Ha 0.4271 H, Sh 0.0529 N	Sm 0.1840 N, Ha 0.4372 H, Sh 0.0578 N
+26741	fuller|w0.6 L2.5 t0.02 c0.030 g0.02 at0.6 twin	0.010100	Hammering	false	Sm 0.1882 N, Ha 0.4909 H, Sh 0.0632 N	Sm 0.1882 N, Ha 0.5010 H, Sh 0.0680 N
+26046	fuller|w0.4 L2.0 t0.02 c0.030 g0.08 at0.5 twin	0.010100	Sharpening	false	Sm 0.0876 N, Ha 0.4891 H, Sh 0.1111 N	Sm 0.0876 N, Ha 0.4977 H, Sh 0.1212 N
+25216	fuller|w0.4 L2.5 t0.02 c0.015 g0.05 at0.2 one	0.010100	Hammering	false	Sm 0.0851 N, Ha 0.4358 H, Sh 0.1431 N	Sm 0.0851 N, Ha 0.4257 H, Sh 0.1431 N
+25215	fuller|w0.4 L2.5 t0.02 c0.015 g0.05 at0.1 one	0.010100	Hammering	false	Sm 0.0851 N, Ha 0.4358 H, Sh 0.1431 N	Sm 0.0851 N, Ha 0.4257 H, Sh 0.1431 N
+24613	fuller|w0.3 L2.0 t0.02 c0.015 g0.03 at0.5 twin	0.010100	Hammering	false	Sm 0.0547 N, Ha 0.3284 H, Sh 0.0889 N	Sm 0.0547 N, Ha 0.3183 H, Sh 0.0891 N
+8678	plateC09|C09|0.12 x 2.0 x 0.050 at x -0.03	0.010000	Sharpening	false	Sm 0.0009 N, Ha 0.3599 H, Sh 0.2542 H	Sm 0.0009 N, Ha 0.3594 H, Sh 0.2442 H
+8590	plateEdge|C09|guard w0.8 k0.8 l1.0 poke0.0200	0.010000	Hammering	false	Sm 0.0010 N, Ha 0.3159 H, Sh 0.1791 N	Sm 0.0010 N, Ha 0.3259 H, Sh 0.1704 N
+8533	plateEdge|C09|guard w0.8 k0.6 l0.8 poke0.0150	0.010000	Hammering	false	Sm 0.0005 N, Ha 0.3172 H, Sh 0.1854 N	Sm 0.0005 N, Ha 0.3072 H, Sh 0.1766 N
+8283	plateEdge|C09|blade w0.8 k0.6 l0.8 poke0.0300	0.010000	Hammering	false	Sm 0.0002 N, Ha 0.3336 H, Sh 0.2257 H	Sm 0.0002 N, Ha 0.3436 H, Sh 0.2300 H
+32862	grille|0.6 x 2.8 x 0.02 6 x 2 f0.5	0.010000	Hammering	false	Sm 0.2868 H, Ha 0.2393 H, Sh 0.0000 N	Sm 0.2868 H, Ha 0.2293 H, Sh 0.0000 N
+32175	ribbed|w1.2 L2.5 k0.04 edges true g0.05 at0.168 one	0.010000	Hammering	false	Sm 0.4486 H, Ha 0.2750 H, Sh 0.0303 N	Sm 0.4486 H, Ha 0.2650 H, Sh 0.0290 N
+32151	ribbed|w1.2 L2.5 k0.04 edges false g0.08 at0.072 one	0.010000	Hammering	false	Sm 0.4282 H, Ha 0.2705 H, Sh 0.0959 N	Sm 0.4282 H, Ha 0.2605 H, Sh 0.0940 N
+31144	fuller|w1.0 L2.0 t0.08 c0.015 g0.05 at0.2 twin	0.010000	Hammering	false	Sm 0.3302 H, Ha 0.0584 N, Sh 0.0000 N	Sm 0.3302 H, Ha 0.0484 N, Sh 0.0000 N
+30814	fuller|w1.0 L2.0 t0.02 c0.050 g0.12 at0.0 one	0.010000	Hammering	false	Sm 0.3357 H, Ha 0.1649 N, Sh 0.0000 N	Sm 0.3357 H, Ha 0.1549 N, Sh 0.0000 N
+30364	fuller|w1.0 L2.5 t0.08 c0.015 g0.08 at0.5 twin	0.010000	Hammering	false	Sm 0.4045 H, Ha 0.1621 N, Sh 0.0000 N	Sm 0.4045 H, Ha 0.1521 N, Sh 0.0000 N
+30181	fuller|w1.0 L2.5 t0.04 c0.030 g0.08 at0.3 one	0.010000	Hammering	false	Sm 0.3668 H, Ha 0.2641 H, Sh 0.0008 N	Sm 0.3668 H, Ha 0.2541 H, Sh 0.0008 N
+29567	fuller|w0.8 L2.0 t0.08 c0.015 g0.08 at0.6 twin	0.010000	Hammering	false	Sm 0.2639 H, Ha 0.0553 N, Sh 0.0000 N	Sm 0.2639 H, Ha 0.0653 N, Sh 0.0000 N
+29537	fuller|w0.8 L2.0 t0.08 c0.015 g0.03 at0.6 one	0.010000	Hammering	false	Sm 0.2746 H, Ha 0.0000 N, Sh 0.0000 N	Sm 0.2746 H, Ha 0.0100 N, Sh 0.0000 N
+29529	fuller|w0.8 L2.0 t0.08 c0.015 g0.03 at0.2 one	0.010000	Hammering	false	Sm 0.2746 H, Ha 0.0000 N, Sh 0.0000 N	Sm 0.2746 H, Ha 0.0100 N, Sh 0.0000 N
+29193	fuller|w0.8 L2.0 t0.02 c0.050 g0.05 at0.2 twin	0.010000	Hammering	false	Sm 0.2742 H, Ha 0.1671 N, Sh 0.0000 N	Sm 0.2742 H, Ha 0.1571 N, Sh 0.0000 N
+28779	fuller|w0.8 L2.5 t0.08 c0.015 g0.12 at0.1 one	0.010000	Hammering	false	Sm 0.3319 H, Ha 0.0810 N, Sh 0.0000 N	Sm 0.3319 H, Ha 0.0910 N, Sh 0.0000 N
+28756	fuller|w0.8 L2.5 t0.08 c0.015 g0.05 at0.4 one	0.010000	Hammering	false	Sm 0.3391 H, Ha 0.0693 N, Sh 0.0000 N	Sm 0.3391 H, Ha 0.0593 N, Sh 0.0000 N
+28742	fuller|w0.8 L2.5 t0.08 c0.015 g0.03 at0.4 twin	0.010000	Hammering	false	Sm 0.3381 H, Ha 0.1290 N, Sh 0.0000 N	Sm 0.3381 H, Ha 0.1190 N, Sh 0.0000 N
+28728	fuller|w0.8 L2.5 t0.08 c0.015 g0.02 at0.5 one	0.010000	Hammering	false	Sm 0.3422 H, Ha 0.0525 N, Sh 0.0000 N	Sm 0.3422 H, Ha 0.0425 N, Sh 0.0000 N
+28712	fuller|w0.8 L2.5 t0.08 c0.015 g0.01 at0.4 twin	0.010000	Hammering	false	Sm 0.3422 H, Ha 0.0293 N, Sh 0.0000 N	Sm 0.3422 H, Ha 0.0193 N, Sh 0.0000 N
+27945	fuller|w0.6 L2.0 t0.08 c0.015 g0.02 at0.6 twin	0.010000	Hammering	false	Sm 0.2124 H, Ha 0.0075 N, Sh 0.0000 N	Sm 0.2124 H, Ha 0.0175 N, Sh 0.0000 N
+27788	fuller|w0.6 L2.0 t0.04 c0.030 g0.03 at0.6 twin	0.010000	Hammering	false	Sm 0.1867 N, Ha 0.1408 N, Sh 0.0000 N	Sm 0.1867 N, Ha 0.1508 N, Sh 0.0000 N
+26756	fuller|w0.6 L2.5 t0.02 c0.030 g0.03 at0.6 twin	0.010000	Hammering	false	Sm 0.1840 N, Ha 0.4842 H, Sh 0.0548 N	Sm 0.1840 N, Ha 0.4942 H, Sh 0.0597 N
+26752	fuller|w0.6 L2.5 t0.02 c0.030 g0.03 at0.4 twin	0.010000	Hammering	false	Sm 0.1840 N, Ha 0.4966 H, Sh 0.0539 N	Sm 0.1840 N, Ha 0.5066 H, Sh 0.0587 N
+26737	fuller|w0.6 L2.5 t0.02 c0.030 g0.02 at0.4 twin	0.010000	Hammering	false	Sm 0.1882 N, Ha 0.5035 H, Sh 0.0623 N	Sm 0.1882 N, Ha 0.5135 H, Sh 0.0670 N
+26199	fuller|w0.4 L2.0 t0.04 c0.015 g0.05 at0.7 twin	0.010000	Hammering	false	Sm 0.0923 N, Ha 0.2417 H, Sh 0.0000 N	Sm 0.0923 N, Ha 0.2317 H, Sh 0.0000 N
+25944	fuller|w0.4 L2.0 t0.02 c0.015 g0.05 at0.1 one	0.010000	Hammering	false	Sm 0.0695 N, Ha 0.3074 H, Sh 0.0765 N	Sm 0.0695 N, Ha 0.2974 H, Sh 0.0777 N
+24099	fuller|w0.3 L2.5 t0.02 c0.030 g0.05 at0.6 one	0.010000	Hammering	false	Sm 0.1024 N, Ha 0.3310 H, Sh 0.0000 N	Sm 0.1024 N, Ha 0.3210 H, Sh 0.0000 N
+24007	fuller|w0.3 L2.5 t0.02 c0.015 g0.02 at0.6 twin	0.010000	Hammering	false	Sm 0.0688 N, Ha 0.3159 H, Sh 0.0568 N	Sm 0.0688 N, Ha 0.3059 H, Sh 0.0580 N
+21898	laminate|F5|k0.02 wf2.0 proud0.0100 capfalse	0.010000	Sharpening	false	Sm 0.0650 N, Ha 0.1828 N, Sh 0.1802 N	Sm 0.0650 N, Ha 0.1867 N, Sh 0.1902 N
+21894	laminate|F5|k0.02 wf2.0 proud0.0050 capfalse	0.010000	Sharpening	false	Sm 0.0643 N, Ha 0.1856 N, Sh 0.1850 N	Sm 0.0643 N, Ha 0.1893 N, Sh 0.1950 N
+11460	laminate|F1|k0.02 wf2.0 proud0.0100 capfalse	0.010000	Sharpening	false	Sm 0.0650 N, Ha 0.1828 N, Sh 0.1802 N	Sm 0.0650 N, Ha 0.1867 N, Sh 0.1902 N
+11456	laminate|F1|k0.02 wf2.0 proud0.0050 capfalse	0.010000	Sharpening	false	Sm 0.0643 N, Ha 0.1856 N, Sh 0.1850 N	Sm 0.0643 N, Ha 0.1893 N, Sh 0.1950 N
+21897	laminate|F5|k0.02 wf2.0 proud0.0075 captrue	0.009800	Sharpening	true	Sm 0.0653 N, Ha 0.1890 N, Sh 0.1906 N	Sm 0.0653 N, Ha 0.1928 N, Sh 0.2004 H
+11459	laminate|F1|k0.02 wf2.0 proud0.0075 captrue	0.009800	Sharpening	true	Sm 0.0653 N, Ha 0.1890 N, Sh 0.1906 N	Sm 0.0653 N, Ha 0.1928 N, Sh 0.2004 H
+21895	laminate|F5|k0.02 wf2.0 proud0.0050 captrue	0.009700	Sharpening	true	Sm 0.0650 N, Ha 0.1905 N, Sh 0.1932 N	Sm 0.0650 N, Ha 0.1941 N, Sh 0.2029 H
+11457	laminate|F1|k0.02 wf2.0 proud0.0050 captrue	0.009700	Sharpening	true	Sm 0.0650 N, Ha 0.1905 N, Sh 0.1932 N	Sm 0.0650 N, Ha 0.1941 N, Sh 0.2029 H
+21864	laminate|F5|k0.02 wf1.5 proud-0.0200 capfalse	0.009600	Sharpening	true	Sm 0.0433 N, Ha 0.1632 N, Sh 0.1943 N	Sm 0.0433 N, Ha 0.1653 N, Sh 0.2039 H
+11426	laminate|F1|k0.02 wf1.5 proud-0.0200 capfalse	0.009600	Sharpening	true	Sm 0.0433 N, Ha 0.1632 N, Sh 0.1943 N	Sm 0.0433 N, Ha 0.1653 N, Sh 0.2039 H
+30380	fuller|w1.0 L2.5 t0.08 c0.015 g0.12 at0.6 twin	0.009400	Hammering	true	Sm 0.3962 H, Ha 0.2022 H, Sh 0.0000 N	Sm 0.3962 H, Ha 0.1928 N, Sh 0.0000 N
+31983	ribbed|w1.2 L1.5 k0.02 edges true g0.08 at0.168 one	0.009100	Hammering	true	Sm 0.2248 H, Ha 0.1931 N, Sh 0.0001 N	Sm 0.2248 H, Ha 0.2022 H, Sh 0.0001 N
+29161	fuller|w0.8 L2.0 t0.02 c0.050 g0.02 at0.1 twin	0.009000	Hammering	true	Sm 0.2908 H, Ha 0.2065 H, Sh 0.0000 N	Sm 0.2908 H, Ha 0.1975 N, Sh 0.0000 N
+24595	fuller|w0.3 L2.0 t0.02 c0.015 g0.02 at0.3 twin	0.008900	Sharpening	true	Sm 0.0564 N, Ha 0.2028 H, Sh 0.0364 N	Sm 0.0564 N, Ha 0.1968 N, Sh 0.0453 N
+28371	fuller|w0.8 L2.5 t0.02 c0.050 g0.02 at0.2 twin	0.008800	Hammering	true	Sm 0.3614 H, Ha 0.2000 H, Sh 0.0000 N	Sm 0.3614 H, Ha 0.1912 N, Sh 0.0000 N
+8772	bevel|C09|a0.03 b0.05 height0.500	0.008400	Sharpening	true	Sm 0.0011 N, Ha 0.3301 H, Sh 0.2041 H	Sm 0.0011 N, Ha 0.3298 H, Sh 0.1957 N
+8739	bevel|C09|a0.02 b0.05 height0.500	0.008400	Sharpening	true	Sm 0.0008 N, Ha 0.3305 H, Sh 0.2049 H	Sm 0.0008 N, Ha 0.3299 H, Sh 0.1965 N
+27624	fuller|w0.6 L2.0 t0.02 c0.050 g0.05 at0.3 twin	0.008200	Hammering	true	Sm 0.2073 H, Ha 0.2057 H, Sh 0.0000 N	Sm 0.2073 H, Ha 0.1975 N, Sh 0.0000 N
+29209	fuller|w0.8 L2.0 t0.02 c0.050 g0.08 at0.3 twin	0.008100	Hammering	true	Sm 0.2580 H, Ha 0.2015 H, Sh 0.0000 N	Sm 0.2580 H, Ha 0.1934 N, Sh 0.0000 N
+7935	cylRib|C09|blade r0.03 psi22.50 height0.150	0.008000	Sharpening	true	Sm 0.0003 N, Ha 0.3272 H, Sh 0.2021 H	Sm 0.0003 N, Ha 0.3269 H, Sh 0.1941 N
+31981	ribbed|w1.2 L1.5 k0.02 edges true g0.08 at0.072 one	0.007900	Hammering	true	Sm 0.2248 H, Ha 0.1984 N, Sh 0.0007 N	Sm 0.2248 H, Ha 0.2063 H, Sh 0.0007 N
+29083	fuller|w0.8 L2.0 t0.02 c0.030 g0.02 at0.6 twin	0.007700	Hammering	true	Sm 0.1968 N, Ha 0.1996 N, Sh 0.0022 N	Sm 0.1968 N, Ha 0.2073 H, Sh 0.0036 N
+29073	fuller|w0.8 L2.0 t0.02 c0.030 g0.02 at0.1 twin	0.007500	Hammering	true	Sm 0.1968 N, Ha 0.1979 N, Sh 0.0026 N	Sm 0.1968 N, Ha 0.2054 H, Sh 0.0038 N
+26836	fuller|w0.6 L2.5 t0.02 c0.050 g0.03 at0.3 twin	0.007300	Hammering	true	Sm 0.2707 H, Ha 0.2068 H, Sh 0.0000 N	Sm 0.2707 H, Ha 0.1995 N, Sh 0.0000 N
+29089	fuller|w0.8 L2.0 t0.02 c0.030 g0.03 at0.2 one	0.007200	Hammering	true	Sm 0.1984 N, Ha 0.1968 N, Sh 0.0000 N	Sm 0.1984 N, Ha 0.2040 H, Sh 0.0000 N
+22569	lamHilt|hilt|w0.9 l2.0 c0.025 k0.02 proud0.005 captrue	0.007200	Hammering	true	Sm 0.1829 N, Ha 0.2002 H, Sh 0.1129 N	Sm 0.1829 N, Ha 0.1930 N, Sh 0.1135 N
+22567	lamHilt|hilt|w0.9 l2.0 c0.025 k0.02 proud0.000 captrue	0.007200	Hammering	true	Sm 0.1823 N, Ha 0.2019 H, Sh 0.1147 N	Sm 0.1823 N, Ha 0.1947 N, Sh 0.1152 N
+27804	fuller|w0.6 L2.0 t0.04 c0.030 g0.05 at0.7 twin	0.006900	Hammering	true	Sm 0.1798 N, Ha 0.1967 N, Sh 0.0000 N	Sm 0.1798 N, Ha 0.2036 H, Sh 0.0000 N
+31852	ribbed|w0.8 L2.5 k0.02 edges true g0.05 at0.304 pair	0.006700	Sharpening	true	Sm 0.2137 H, Ha 0.5060 H, Sh 0.2000 H	Sm 0.2137 H, Ha 0.5060 H, Sh 0.1933 N
+29207	fuller|w0.8 L2.0 t0.02 c0.050 g0.08 at0.2 twin	0.006700	Hammering	true	Sm 0.2580 H, Ha 0.2034 H, Sh 0.0000 N	Sm 0.2580 H, Ha 0.1967 N, Sh 0.0000 N
+27548	fuller|w0.6 L2.0 t0.02 c0.030 g0.08 at0.1 one	0.006700	Hammering	true	Sm 0.1455 N, Ha 0.2006 H, Sh 0.0008 N	Sm 0.1455 N, Ha 0.1939 N, Sh 0.0008 N
+26859	fuller|w0.6 L2.5 t0.02 c0.050 g0.08 at0.0 one	0.006600	Hammering	true	Sm 0.2640 H, Ha 0.2002 H, Sh 0.0000 N	Sm 0.2640 H, Ha 0.1936 N, Sh 0.0000 N
+30976	fuller|w1.0 L2.0 t0.04 c0.030 g0.05 at0.7 twin	0.006500	Hammering	true	Sm 0.2918 H, Ha 0.2051 H, Sh 0.0000 N	Sm 0.2918 H, Ha 0.1986 N, Sh 0.0000 N
+30961	fuller|w1.0 L2.0 t0.04 c0.030 g0.03 at0.7 twin	0.006500	Hammering	true	Sm 0.2985 H, Ha 0.2005 H, Sh 0.0000 N	Sm 0.2985 H, Ha 0.1940 N, Sh 0.0000 N
+31594	ribbed|w0.5 L2.5 k0.02 edges false g0.02 at0.190 pair	0.006300	Hammering	true	Sm 0.1110 N, Ha 0.2015 H, Sh 0.1056 N	Sm 0.1110 N, Ha 0.1952 N, Sh 0.1065 N
+29091	fuller|w0.8 L2.0 t0.02 c0.030 g0.03 at0.3 one	0.006300	Hammering	true	Sm 0.1984 N, Ha 0.1959 N, Sh 0.0000 N	Sm 0.1984 N, Ha 0.2022 H, Sh 0.0000 N
+29101	fuller|w0.8 L2.0 t0.02 c0.030 g0.05 at0.0 one	0.006100	Hammering	true	Sm 0.1951 N, Ha 0.1939 N, Sh 0.0000 N	Sm 0.1951 N, Ha 0.2000 H, Sh 0.0000 N
+29079	fuller|w0.8 L2.0 t0.02 c0.030 g0.02 at0.4 twin	0.006100	Hammering	true	Sm 0.1968 N, Ha 0.1980 N, Sh 0.0023 N	Sm 0.1968 N, Ha 0.2041 H, Sh 0.0025 N
+25321	fuller|w0.4 L2.5 t0.02 c0.030 g0.08 at0.7 twin	0.005800	Sharpening	true	Sm 0.1077 N, Ha 0.5734 H, Sh 0.2000 H	Sm 0.1077 N, Ha 0.5734 H, Sh 0.1942 N
+7938	cylRib|C09|blade r0.03 psi22.50 height0.400	0.005600	Sharpening	true	Sm 0.0024 N, Ha 0.3367 H, Sh 0.2015 H	Sm 0.0024 N, Ha 0.3393 H, Sh 0.1959 N
+27676	fuller|w0.6 L2.0 t0.04 c0.015 g0.02 at0.1 one	0.005600	Hammering	true	Sm 0.1379 N, Ha 0.2039 H, Sh 0.0000 N	Sm 0.1379 N, Ha 0.1983 N, Sh 0.0000 N
+7895	cylRib|C09|blade r0.02 psi22.50 height0.100	0.005500	Hammering	true	Sm 0.0002 N, Ha 0.3254 H, Sh 0.2017 H	Sm 0.0002 N, Ha 0.3309 H, Sh 0.1998 N
+7893	cylRib|C09|blade r0.02 psi22.50 height0.050	0.005500	Hammering	true	Sm 0.0002 N, Ha 0.3258 H, Sh 0.2016 H	Sm 0.0002 N, Ha 0.3313 H, Sh 0.1997 N
+25442	fuller|w0.4 L2.5 t0.04 c0.015 g0.02 at0.7 twin	0.005500	Hammering	true	Sm 0.1197 N, Ha 0.1945 N, Sh 0.0000 N	Sm 0.1197 N, Ha 0.2000 H, Sh 0.0000 N
+7894	cylRib|C09|blade r0.02 psi22.50 height0.075	0.005400	Hammering	true	Sm 0.0002 N, Ha 0.3256 H, Sh 0.2017 H	Sm 0.0002 N, Ha 0.3310 H, Sh 0.1997 N
+7882	cylRib|C09|blade r0.02 psi11.25 height0.100	0.005400	Hammering	true	Sm 0.0002 N, Ha 0.3254 H, Sh 0.2017 H	Sm 0.0002 N, Ha 0.3308 H, Sh 0.1997 N
+8382	plateEdge|C09|blade w1.0 k0.6 l1.0 poke0.0500	0.005300	Sharpening	true	Sm 0.0017 N, Ha 0.3673 H, Sh 0.2012 H	Sm 0.0017 N, Ha 0.3702 H, Sh 0.1959 N
+27528	fuller|w0.6 L2.0 t0.02 c0.030 g0.03 at0.5 twin	0.005000	Hammering	true	Sm 0.1489 N, Ha 0.1977 N, Sh 0.0140 N	Sm 0.1489 N, Ha 0.2027 H, Sh 0.0140 N
+8187	plateEdge|C09|blade w0.5 k0.6 l0.6 poke0.0750	0.004900	Hammering	true	Sm 0.0029 N, Ha 0.3716 H, Sh 0.2008 H	Sm 0.0029 N, Ha 0.3765 H, Sh 0.1984 N
+27001	fuller|w0.6 L2.5 t0.04 c0.030 g0.02 at0.7 twin	0.004900	Hammering	true	Sm 0.2356 H, Ha 0.1963 N, Sh 0.0000 N	Sm 0.2356 H, Ha 0.2012 H, Sh 0.0000 N
+26880	fuller|w0.6 L2.5 t0.02 c0.050 g0.12 at0.5 one	0.004700	Hammering	true	Sm 0.2501 H, Ha 0.1970 N, Sh 0.0173 N	Sm 0.2501 H, Ha 0.2017 H, Sh 0.0173 N
+24797	fuller|w0.3 L2.0 t0.04 c0.015 g0.02 at0.5 twin	0.004700	Hammering	true	Sm 0.0777 N, Ha 0.2036 H, Sh 0.0000 N	Sm 0.0777 N, Ha 0.1989 N, Sh 0.0000 N
+26169	fuller|w0.4 L2.0 t0.04 c0.015 g0.02 at0.6 twin	0.004200	Hammering	true	Sm 0.0972 N, Ha 0.2020 H, Sh 0.0000 N	Sm 0.0972 N, Ha 0.1978 N, Sh 0.0000 N
+27682	fuller|w0.6 L2.0 t0.04 c0.015 g0.02 at0.4 one	0.004100	Hammering	true	Sm 0.1379 N, Ha 0.2030 H, Sh 0.0000 N	Sm 0.1379 N, Ha 0.1989 N, Sh 0.0000 N
+27686	fuller|w0.6 L2.0 t0.04 c0.015 g0.02 at0.6 one	0.003800	Hammering	true	Sm 0.1379 N, Ha 0.2031 H, Sh 0.0000 N	Sm 0.1379 N, Ha 0.1993 N, Sh 0.0000 N
+25647	fuller|w0.4 L2.5 t0.04 c0.050 g0.12 at0.1 one	0.003700	Hammering	true	Sm 0.2000 H, Ha 0.1974 N, Sh 0.0036 N	Sm 0.2000 H, Ha 0.2011 H, Sh 0.0036 N
+1851	laminate|C02|k0.02 wf1.5 proud-0.0200 captrue	0.003700	Hammering	true	Sm 0.0533 N, Ha 0.1982 N, Sh 0.2251 H	Sm 0.0533 N, Ha 0.2019 H, Sh 0.2264 H
+31430	ribbed|w0.3 L2.5 k0.02 edges false g0.02 at0.090 pair	0.003600	Sharpening	true	Sm 0.0486 N, Ha 0.2269 H, Sh 0.2000 H	Sm 0.0486 N, Ha 0.2238 H, Sh 0.1964 N
+26141	fuller|w0.4 L2.0 t0.02 c0.050 g0.12 at0.6 twin	0.003100	Hammering	true	Sm 0.1019 N, Ha 0.6255 H, Sh 0.1992 N	Sm 0.1019 N, Ha 0.6286 H, Sh 0.2000 H
+28663	fuller|w0.8 L2.5 t0.04 c0.050 g0.05 at0.1 twin	0.002300	Hammering	true	Sm 0.4022 H, Ha 0.2010 H, Sh 0.0000 N	Sm 0.4022 H, Ha 0.1987 N, Sh 0.0000 N
+26137	fuller|w0.4 L2.0 t0.02 c0.050 g0.12 at0.4 twin	0.002300	Sharpening	true	Sm 0.1019 N, Ha 0.6422 H, Sh 0.1977 N	Sm 0.1019 N, Ha 0.6436 H, Sh 0.2000 H
+24604	fuller|w0.3 L2.0 t0.02 c0.015 g0.03 at0.0 one	0.002300	Hammering	true	Sm 0.0572 N, Ha 0.2004 H, Sh 0.0267 N	Sm 0.0572 N, Ha 0.1981 N, Sh 0.0272 N
+28409	fuller|w0.8 L2.5 t0.02 c0.050 g0.05 at0.6 twin	0.001700	Hammering	true	Sm 0.3408 H, Ha 0.2008 H, Sh 0.0000 N	Sm 0.3408 H, Ha 0.1991 N, Sh 0.0000 N
+27035	fuller|w0.6 L2.5 t0.04 c0.030 g0.08 at0.3 one	0.001000	Hammering	true	Sm 0.2273 H, Ha 0.2001 H, Sh 0.0016 N	Sm 0.2273 H, Ha 0.1991 N, Sh 0.0016 N

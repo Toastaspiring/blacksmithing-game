@@ -1,0 +1,28 @@
+  200 designs, 1382 parts, |A-B|>1e-9 17, A err 0, B err 6, ties 14, 2.0 s
+  400 designs, 2757 parts, |A-B|>1e-9 32, A err 0, B err 10, ties 32, 4.2 s
+  600 designs, 4086 parts, |A-B|>1e-9 50, A err 0, B err 20, ties 53, 6.0 s
+  800 designs, 5519 parts, |A-B|>1e-9 68, A err 0, B err 35, ties 61, 8.3 s
+  1000 designs, 6976 parts, |A-B|>1e-9 99, A err 0, B err 52, ties 86, 10.6 s
+  1200 designs, 8384 parts, |A-B|>1e-9 128, A err 0, B err 66, ties 116, 12.8 s
+  1400 designs, 9750 parts, |A-B|>1e-9 152, A err 0, B err 76, ties 138, 15.0 s
+  1600 designs, 11102 parts, |A-B|>1e-9 188, A err 0, B err 92, ties 174, 17.1 s
+  1800 designs, 12517 parts, |A-B|>1e-9 206, A err 0, B err 101, ties 187, 18.9 s
+  2000 designs, 13937 parts, |A-B|>1e-9 235, A err 0, B err 123, ties 204, 20.7 s
+  2200 designs, 15424 parts, |A-B|>1e-9 262, A err 0, B err 137, ties 227, 22.8 s
+  2400 designs, 16855 parts, |A-B|>1e-9 284, A err 0, B err 152, ties 245, 24.6 s
+  2600 designs, 18335 parts, |A-B|>1e-9 308, A err 0, B err 159, ties 269, 26.5 s
+  2800 designs, 19681 parts, |A-B|>1e-9 336, A err 0, B err 170, ties 291, 28.3 s
+  3000 designs, 21007 parts, |A-B|>1e-9 358, A err 0, B err 186, ties 313, 29.9 s
+  3200 designs, 22329 parts, |A-B|>1e-9 379, A err 0, B err 195, ties 333, 31.5 s
+  3400 designs, 23755 parts, |A-B|>1e-9 404, A err 0, B err 210, ties 353, 33.4 s
+  3600 designs, 25103 parts, |A-B|>1e-9 423, A err 0, B err 222, ties 369, 35.0 s
+  3800 designs, 26542 parts, |A-B|>1e-9 442, A err 0, B err 235, ties 384, 36.9 s
+  4000 designs, 27953 parts, |A-B|>1e-9 460, A err 0, B err 242, ties 406, 38.7 s
+XCHECK tangles7 every 1 shard 0/1: 4000 designs, 27953 parts, 38.7 s
+  model area: largest relative difference between A, B, J 2.58e-15; facet matching worst centroid gap 4.44e-16
+  |A-B| share: <1e-12 27099, <1e-10 160, <1e-9 234, <1e-6 275, <1e-3 25, more 160
+  largest |A-B| 0.334 (tangle 7#274 part 3 (Block): A 0.571050394261 B 0.905359985768)
+  brute force on 27953 parts (0 over the edge limit; 0 differing parts unsettled for that)
+  parts where A is outside the tie bracket by > 1e-9: 0, worst 0 ()
+  parts where B is outside the tie bracket by > 1e-9: 242, worst 0.00246 (tangle 7#797 part 1 (Block): A 0.767025092 B 0.764562064 J 0.767025092 tie 4.29e-11)
+  parts with a tie (bracket wider than 1e-9): 406, widest 0.459 (tangle 7#3289 part 6 (Block): A 0.558854343 B 0.585831256 J 0.589320711)

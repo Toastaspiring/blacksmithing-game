@@ -1,0 +1,16 @@
+1000 designs
+c1 vs pre: 134 verdicts move on 134 designs (134 cleaned, 0 kept); newly capped 0 []
+   cleaned that truly show under 2 %: 4 (closed false kept)
+   false Enclosed at a true share in [2.0, 2.5) %: 5  shapes ['Ball']
+   false Enclosed at a true share in [2.5, 3.0) %: 8  shapes ['Ball']
+   false Enclosed at a true share in [3.0, 4.0) %: 17  shapes ['Ball']
+   false Enclosed at a true share in [4.0, 5.0) %: 23  shapes ['Ball']
+   false Enclosed at a true share in [5.0, 900.0) %: 77  shapes ['Ball']
+      20.953 % Ball part 1 of cage 44 r 0.05 g 0.00756 b 0.0281
+      19.948 % Ball part 1 of cage 455 r 0.08 g 0.00481 b 0.0421
+      19.890 % Ball part 1 of cage 42 r 0.05 g 0.00948 b 0.0247
+      19.420 % Ball part 1 of cage 374 r 0.05 g 0.00810 b 0.0268
+      18.690 % Ball part 1 of cage 362 r 0.05 g 0.00627 b 0.0293
+      18.657 % Ball part 1 of cage 430 r 0.05 g 0.01332 b 0.0191
+      18.635 % Ball part 1 of cage 409 r 0.05 g 0.01359 b 0.0190
+      18.070 % Ball part 1 of cage 269 r 0.05 g 0.01038 b 0.0223

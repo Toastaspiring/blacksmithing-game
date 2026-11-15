@@ -1,0 +1,36 @@
+F5                           | tbase     2033.1 u ok  verdict   0.22 exposure   1.29 run   1.63 | tnow     2033.1 u ok  verdict   0.25 exposure   1.32 run   1.72
+F3                           | tbase    11362.0 u ok  verdict   0.82 exposure   1.48 run   1.80 | tnow    13504.0 u ok  verdict   0.90 exposure   1.65 run   2.01
+C05                          | tbase     1164.8 u ok  verdict   0.13 exposure   4.75 run   5.69 | tnow     1164.8 u ok  verdict   0.21 exposure   4.85 run   5.93
+C09                          | tbase    21954.4 u ok  verdict   2.04 exposure   6.95 run   8.13 | tnow    21851.2 u ok  verdict   1.70 exposure   7.10 run   8.42
+X01                          | tbase     3623.8 u ok  verdict   0.41 exposure   4.48 run   5.55 | tnow     3623.8 u ok  verdict   0.36 exposure   4.40 run   5.39
+P1                           | tbase   330993.1 u ok  verdict  11.02 exposure  18.58 run  22.19 | tnow   330993.1 u ok  verdict  11.00 exposure  18.35 run  22.13
+P2                           | tbase    26422.2 u ok  verdict   1.76 exposure   8.88 run  11.50 | tnow    27108.2 u ok  verdict   2.32 exposure   8.79 run  11.89
+P4                           | tbase   175198.5 u ok  verdict   9.64 exposure  11.37 run  13.92 | tnow   172903.0 u ok  verdict  10.09 exposure  12.02 run  14.78
+valid V1 cluster: 24 Balls d | tbase   691271.9 u ok  verdict  28.96 exposure  32.74 run  34.25 | tnow   687304.1 u ok  verdict  30.16 exposure  32.31 run  34.67
+valid tclimb_4.json #1       | tbase   680325.0 u ok  verdict  23.32 exposure  29.80 run  32.74 | tnow   638320.4 u ok  verdict  21.43 exposure  28.24 run  31.25
+valid tclimb_2.json #4       | tbase   648832.0 u ok  verdict  19.28 exposure  30.59 run  34.16 | tnow   644775.4 u ok  verdict  18.92 exposure  30.76 run  33.73
+valid tclimb_3.json #3       | tbase   645898.1 u ok  verdict  19.43 exposure  29.17 run  31.92 | tnow   655541.9 u ok  verdict  19.92 exposure  29.58 run  32.09
+valid tclimb_3.json #4       | tbase   590694.5 u ok  verdict  18.09 exposure  25.26 run  28.93 | tnow   578171.8 u ok  verdict  17.55 exposure  24.95 run  28.34
+valid tclimb_2.json #6       | tbase   558643.5 u ok  verdict  16.87 exposure  24.74 run  29.00 | tnow   562398.4 u ok  verdict  17.08 exposure  24.88 run  29.16
+valid tclimb_2.json #5       | tbase   494744.0 u ok  verdict  16.67 exposure  25.38 run  34.69 | tnow   494567.9 u ok  verdict  16.25 exposure  25.54 run  34.86
+valid tclimb_3.json #6       | tbase   452991.1 u ok  verdict  15.13 exposure  23.39 run  35.90 | tnow   452991.1 u ok  verdict  15.62 exposure  23.34 run  35.98
+valid tclimb_4.json #4       | tbase   418624.5 u ok  verdict  14.00 exposure  21.99 run  30.70 | tnow   418624.5 u ok  verdict  14.01 exposure  21.60 run  30.70
+valid tclimb_4.json #5       | tbase   431854.0 u ok  verdict  14.35 exposure  23.00 run  32.94 | tnow   431854.0 u ok  verdict  14.41 exposure  22.97 run  32.98
+valid tclimb_1.json #5       | tbase   495062.4 u ok  verdict  12.66 exposure  18.38 run  19.62 | tnow   370029.2 u ok  verdict  12.14 exposure  17.66 run  19.03
+past judge judge climb seed  | tbase   700132.5 u CAP verdict   0.00 exposure   0.00 run  13.60 | tnow   700013.5 u CAP verdict   0.00 exposure   0.00 run  14.24
+past judge judge climb seed  | tbase   700007.6 u CAP verdict   0.00 exposure   0.00 run  23.53 | tnow   700197.6 u CAP verdict   0.00 exposure   0.00 run  24.13
+past judge judge climb seed  | tbase   700098.2 u CAP verdict   0.00 exposure   0.00 run  15.36 | tnow   700207.8 u CAP verdict   0.00 exposure   0.00 run  14.95
+past judge judge climb seed  | tbase   700255.9 u CAP verdict   0.00 exposure   0.00 run  11.91 | tnow   700050.5 u CAP verdict   0.00 exposure   0.00 run  10.95
+past A climb_1 1             | tbase   700243.5 u CAP verdict   0.00 exposure   0.00 run  20.33 | tnow   700241.2 u CAP verdict   0.00 exposure   0.00 run  20.49
+past A climb_1 2             | tbase   700118.6 u CAP verdict   0.00 exposure   0.00 run  19.73 | tnow   700142.6 u CAP verdict   0.00 exposure   0.00 run  19.80
+past A climb_2 1             | tbase   700084.6 u CAP verdict   0.00 exposure   0.00 run  14.01 | tnow   700117.1 u CAP verdict   0.00 exposure   0.00 run  14.21
+past A climb_3 1             | tbase   700250.6 u CAP verdict   0.00 exposure   0.00 run  11.75 | tnow   700147.1 u CAP verdict   0.00 exposure   0.00 run  12.34
+past A climb_4 1             | tbase   700020.6 u CAP verdict   0.00 exposure   0.00 run  18.95 | tnow   700087.2 u CAP verdict   0.00 exposure   0.00 run  19.12
+past A climb_4 2             | tbase   700045.9 u CAP verdict   0.00 exposure   0.00 run  10.16 | tnow   700121.6 u CAP verdict   0.00 exposure   0.00 run  10.78
+past B uclimb uclimb_1 best  | tbase   700242.2 u CAP verdict   0.00 exposure   0.00 run  23.26 | tnow   700016.2 u CAP verdict   0.00 exposure   0.00 run  23.48
+past B uclimb uclimb_2 best  | tbase   700127.2 u CAP verdict   0.00 exposure   0.00 run  21.07 | tnow   700203.1 u CAP verdict   0.00 exposure   0.00 run  21.04
+past B uclimb uclimb_3 best  | tbase   700042.8 u CAP verdict   0.00 exposure   0.00 run  23.74 | tnow   700235.0 u CAP verdict   0.00 exposure   0.00 run  24.29
+past B uclimb uclimb_4 best  | tbase   700044.4 u CAP verdict   0.00 exposure   0.00 run  18.43 | tnow   700049.8 u CAP verdict   0.00 exposure   0.00 run  17.90
+past worst_P climbL_1#1      | tbase   700047.6 u CAP verdict   0.00 exposure   0.00 run  19.91 | tnow   700090.6 u CAP verdict   0.00 exposure   0.00 run  19.87
+past worst_P climbL_3#1      | tbase   700192.6 u CAP verdict   0.00 exposure   0.00 run  21.79 | tnow   700141.4 u CAP verdict   0.00 exposure   0.00 run  22.20
+past worst_P climbL_2#1      | tbase   700084.1 u CAP verdict   0.00 exposure   0.00 run  17.29 | tnow   700100.5 u CAP verdict   0.00 exposure   0.00 run  17.45

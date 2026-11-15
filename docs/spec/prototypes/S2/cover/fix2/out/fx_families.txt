@@ -1,0 +1,25 @@
+8016 designs
+c1 vs pre: 2 verdicts move on 2 designs (2 cleaned, 0 kept); newly capped 0 []
+   cleaned that truly show under 2 %: 0 (closed false kept)
+   false Enclosed at a true share in [2.0, 2.5) %: 0
+   false Enclosed at a true share in [2.5, 3.0) %: 0
+   false Enclosed at a true share in [3.0, 4.0) %: 0
+   false Enclosed at a true share in [4.0, 5.0) %: 1  shapes ['Ball']
+   false Enclosed at a true share in [5.0, 900.0) %: 1  shapes ['Ball']
+      7.025 % Ball part 5 of b_bead d0.10 gap0.10 t1
+      4.440 % Ball part 5 of b_bead d0.30 gap0.05 t1
+c0 vs pre: 11 verdicts move on 11 designs (11 cleaned, 0 kept); newly capped 0 []
+   cleaned that truly show under 2 %: 0 (closed false kept)
+   false Enclosed at a true share in [2.0, 2.5) %: 1  shapes ['Cylinder']
+   false Enclosed at a true share in [2.5, 3.0) %: 0
+   false Enclosed at a true share in [3.0, 4.0) %: 5  shapes ['Cylinder']
+   false Enclosed at a true share in [4.0, 5.0) %: 1  shapes ['Ball']
+   false Enclosed at a true share in [5.0, 900.0) %: 4  shapes ['Ball', 'Cylinder']
+      7.552 % Cylinder part 2 of b_curvedGrip n6 ext0.005 gap0.0120 bend0
+      7.025 % Ball part 5 of b_bead d0.10 gap0.10 t1
+      6.330 % Cylinder part 2 of b_curvedGrip n5 ext0.010 gap0.0120 bend0
+      5.103 % Cylinder part 2 of b_curvedGrip n4 ext0.020 gap0.0120 bend0
+      4.440 % Ball part 5 of b_bead d0.30 gap0.05 t1
+      3.880 % Cylinder part 2 of b_curvedGrip n3 ext0.040 gap0.0120 bend0
+      3.880 % Cylinder part 2 of b_curvedGrip n3 ext0.002 gap0.0120 bend0
+      3.675 % Cylinder part 2 of b_curvedGrip n6 ext0.040 gap0.0060 bend0

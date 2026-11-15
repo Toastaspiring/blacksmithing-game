@@ -1,6 +1,6 @@
 --!strict
 -- tests/Meta/Rules.luau — the source rules of SPEC §14.4 as pure functions over (path, source):
---   T-META-01 strict header · T-META-02 purity of src/shared · T-META-03 no transcendental math ·
+--   T-META-01 strict header · T-META-02 purity of src/shared · T-META-03 no transcendental math, no native code ·
 --   T-META-04 no float accumulation while iterating a keyed table · T-META-06 no :Reconcile( in src/.
 -- Token scans skip strings and comments (tests/Meta/Lex). Paths are repo-relative with forward slashes.
 -- Each rule returns a list of Problems; an empty list means the file passes.
@@ -616,6 +616,17 @@ function Rules.transcendental(path: string, src: string): { Problem }
 		elseif tok.kind == "op" and (tok.text == "^" or tok.text == "^=") then
 			problem(out, path, tok.line, "uses '" .. tok.text .. "' (powers by repeated multiplication, or tag the line "
 				.. "-- " .. Rules.ALLOW_TRANSCENDENTAL .. ": <reason>)")
+		end
+	end
+	-- §4.1: no native code generation in an authoritative module until S8's cross-platform digest passes
+	for _, c in lexed.comments do
+		if string.match(c.text, "^!native") then
+			problem(out, path, c.line, "--!native in an authoritative module (SPEC §4.1)")
+		end
+	end
+	for idx, tok in tokens do
+		if isOp(tok, "@") and tokens[idx + 1] and tokens[idx + 1].text == "native" then
+			problem(out, path, tok.line, "@native in an authoritative module (SPEC §4.1)")
 		end
 	end
 	return out

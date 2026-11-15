@@ -1,0 +1,23 @@
+h_bundle         24 parts   471362.125 units, valid 
+pastcap_32       24 parts   700041.750 units (capped), invalid TooComplex
+pastcap_33       24 parts   700146.500 units (capped), invalid TooComplex
+pastcap_34       24 parts   700050.875 units (capped), invalid TooComplex
+h_report          7 parts    19458.500 units, valid 
+cageflip_sword   23 parts    55060.625 units, valid 
+V1 cluster: 24 Balls d 0.54, x 0.25·sin(1.3 units 691271.875 -> 691271.875 (+0.00%), verdicts differing 0, canonical true
+tclimb_4.json #1                             units 680325.000 -> 680325.000 (+0.00%), verdicts differing 0, canonical true
+tclimb_2.json #4                             units 648832.000 -> 646837.125 (-0.31%), verdicts differing 0, canonical true
+tclimb_3.json #3                             units 645898.125 -> 642628.500 (-0.51%), verdicts differing 0, canonical true
+tclimb_3.json #4                             units 590694.500 -> 571975.250 (-3.17%), verdicts differing 0, canonical true
+tclimb_2.json #6                             units 558643.500 -> 558596.250 (-0.01%), verdicts differing 0, canonical true
+tclimb_2.json #5                             units 494744.000 -> 495288.125 (+0.11%), verdicts differing 0, canonical true
+tclimb_3.json #6                             units 452991.125 -> 453621.375 (+0.14%), verdicts differing 0, canonical true
+tclimb_4.json #4                             units 418624.500 -> 418497.500 (-0.03%), verdicts differing 0, canonical true
+tclimb_4.json #5                             units 431854.000 -> 430984.875 (-0.20%), verdicts differing 0, canonical true
+tclimb_1.json #5                             units 495062.375 -> 494539.875 (-0.11%), verdicts differing 0, canonical true
+P1 24 large overlapping tilted blocks        units 330993.125 -> 320332.250 (-3.22%), verdicts differing 0, canonical true
+P3 24 rotated wedges                         units   8354.375 ->   8354.375 (+0.00%), verdicts differing 0, canonical true
+C09 Ornate (18 parts)                        units  21954.375 ->  18879.500 (-14.01%), verdicts differing 0, canonical true
+C05 Cleaver                                  units   1164.750 ->   4755.250 (+308.26%), verdicts differing 0, canonical true
+F1                                           units   2033.125 ->   3458.250 (+70.10%), verdicts differing 0, canonical true
+F5                                           units   2033.125 ->   3458.250 (+70.10%), verdicts differing 0, canonical true

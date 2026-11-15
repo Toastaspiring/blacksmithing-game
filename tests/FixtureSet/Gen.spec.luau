@@ -123,6 +123,33 @@ return Test.suite("FixtureSet/Gen", function(t)
 		end)
 	end)
 
+	-- About 1 design in 25,000 used to come out with a finial inside an offset blade, and Enclosed. Whether that happened
+	-- to be drawn should not decide T-VAL-04, so the promise is checked at its cause, on every design: a blade block is the
+	-- only part tall and wide enough to swallow a finial, and it never stands over one in X.
+	t.it("validSword stands no blade block over a CornerWedge finial (nothing enclosed, by construction)", function()
+		local finials = 0
+		Prop.check(Tol.FUZZ_N_VALID, function(rng)
+			return Gen.validSword(rng, CTX)
+		end, function(core: Gen.Core)
+			for _, finial in core.parts do
+				if finial.shape == "CornerWedge" then
+					finials += 1
+					local lo, hi = Gen.aabb(finial)
+					for _, blade in core.parts do
+						if blade.slot == "Blade" and blade.shape == "Block" then
+							local bladeLo, bladeHi = Gen.aabb(blade)
+							-- the same height range: higher segments stand clear of a finial on the bar
+							if bladeLo[2] < hi[2] and bladeHi[2] > lo[2] then
+								A.truthy(hi[1] <= bladeLo[1] or lo[1] >= bladeHi[1], "finial " .. finial.id .. " under blade " .. blade.id)
+							end
+						end
+					end
+				end
+			end
+		end)
+		A.truthy(finials > 0, "no finial was generated")
+	end)
+
 	t.it("validSword covers every shape, both materials, rotations and the optional slots", function()
 		local shapes: { [string]: number } = {}
 		local materials: { [string]: number } = {}

@@ -1,0 +1,20 @@
+--- "src/shared/Physics/Cover.luau"	2026-11-14 18:10:52.644260500 +0100
++++ src/shared/Physics/Cover.luau (vertices alone)	2026-11-14 18:12:23.281574100 +0100
+@@ -863,14 +863,11 @@
+ 				if pm.round and q.round then
+ 					local hull = pm.hull[f]
+ 					local inside = true
+-					for j = 1, #hull, 3 do
++					for j = 1, #hull, 6 do
+ 						local s = Shapes.sd(Q, hull[j], hull[j + 1], hull[j + 2])
+-						if (if higher[k] then s > EPS else s >= -EPS) then
+-							inside = false
+-							break
+-						end
++						inside = inside and (if higher[k] then s <= EPS else s < -EPS)
+ 					end
+-					pending += UNITS_PER_TEST * #hull / 3
++					pending += UNITS_PER_TEST * #hull / 6
+ 					if inside then
+ 						gone = true
+ 						break

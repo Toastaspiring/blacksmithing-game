@@ -1,0 +1,7 @@
+design                                         parts     units   verdict exposure    old v  old exp    ns/u |     tests    boxes    polys facets
+judge judge climb seed 1 best 10790351 units      24  11169293   263.377  266.755    8.421   21.911    23.6 |  21987578   175631   149486    508
+judge judge climb seed 2 best 6424674 units       24   7207623   270.297  279.641    6.453   13.661    37.5 |  14068202    59011   152322   1728
+judge judge climb seed 3 best 9327966 units       24   7847656   211.622  215.649   20.394   29.874    27.0 |  15308935   116257   172584    759
+judge judge climb seed 4 best 14613763 units      24   8830949   185.327  193.038    3.460    8.546    21.0 |  17496513    65724    59741   1842
+judge judge time climb 49.2 ms (load)             24    605278    26.263   35.986    2.170   13.736    43.4 |   1127930    37108    30594    760
+judge judge time climb 42.8 ms (load)             24    521702    21.477   31.723   16.291   28.914    41.2 |    984593     9870    21644    816

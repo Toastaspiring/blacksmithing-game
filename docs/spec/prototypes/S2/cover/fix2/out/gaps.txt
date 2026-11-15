@@ -1,0 +1,76 @@
+F1                                       med 0.112 max 0.279
+F2                                       med 0.094 max 0.175
+F3                                       med 0.112 max 0.335
+F4                                       med 0.270 max 0.776
+F5                                       med 0.132 max 0.340
+C09                                      med 0.168 max 0.354
+C01 Minimal                              med 0.156 max 0.483
+C02 Arming (Iron)                        med 0.139 max 0.430
+C02 Arming (Steel)                       med 0.109 max 0.182
+C04 Rapier (Steel blade)                 med 0.132 max 0.342
+C05 Cleaver                              med 0.220 max 0.330
+C06 Sabre (Steel)                        med 0.089 max 0.323
+C07 Dagger                               med 0.094 max 0.145
+C08 Greatsword                           med 0.188 max 0.385
+C09 Ornate (18 parts)                    med 0.178 max 0.534
+C10 Gamey filler, symmetric              med 0.198 max 0.339
+C11 Gamey filler, lopsided               med 0.188 max 0.308
+C12 Arming, blade in 5 overlapping segme med 0.077 max 0.211
+C13 Arming, guard = half + mirror (+Corn med 0.087 max 0.165
+C14 Arming translated (0, +0.27, +0.05)  med 0.106 max 0.389
+C15 Arming rotated 4 deg about Z at the  med 0.096 max 0.358
+X01 2 blade copies at z +-0.003 (vs unio med 0.093 max 0.377
+X01raw 2 blade copies at z +-0.003 (vs F med 0.105 max 0.182
+X02 6 blade copies at z = k*0.002 (vs un med 0.091 max 0.126
+X03 F4 + 0.0003 st3 fin                  med 0.234 max 0.399
+X04a blade from 4 strips                 med 0.128 max 0.199
+X04b blade from strips, seams at +-0.05  med 0.120 max 0.213
+X04-5-0.004 5 segments, gaps 0.004       med 0.079 max 0.243
+X04-5-0.006 5 segments, gaps 0.006       med 0.098 max 0.216
+X04-5-0.009 5 segments, gaps 0.009       med 0.103 max 0.292
+X04-10-0.004 10 segments, gaps 0.004     med 0.115 max 0.334
+X04-10-0.006 10 segments, gaps 0.006     med 0.104 max 0.194
+X04-10-0.009 10 segments, gaps 0.009     med 0.109 max 0.164
+X04g0.005 grip nudge 0.005 in X          med 0.097 max 0.241
+X04g0.010 grip nudge 0.010 in X          med 0.086 max 0.182
+X04g0.015 grip nudge 0.015 in X          med 0.100 max 0.205
+X04g0.020 grip nudge 0.020 in X          med 0.108 max 0.307
+X05+0.002 5 segments, gap 0.002          med 0.085 max 0.413
+X05+0.004 5 segments, gap 0.004          med 0.114 max 0.341
+X05+0.006 5 segments, gap 0.006          med 0.108 max 0.288
+X05+0.009 5 segments, gap 0.009          med 0.105 max 0.247
+X05-0.005 5 segments, overlap 0.005      med 0.092 max 0.205
+X05-0.020 5 segments, overlap 0.020      med 0.088 max 0.281
+X05-0.050 5 segments, overlap 0.050      med 0.083 max 0.149
+X06-0.00 blade offset 0.00 in X          med 0.103 max 0.249
+X06-0.01 blade offset 0.01 in X          med 0.097 max 0.174
+X06-0.02 blade offset 0.02 in X          med 0.106 max 0.217
+X06-0.03 blade offset 0.03 in X          med 0.088 max 0.246
+X06-0.04 blade offset 0.04 in X          med 0.104 max 0.257
+X06-0.05 blade offset 0.05 in X          med 0.111 max 0.289
+X07a laminate 2 x 0.03 plates            med 0.114 max 0.313
+X07b laminate 2 x 0.035 plates overlappi med 0.145 max 0.314
+X07c 4 segments overlapping 0.07         med 0.088 max 0.214
+P1 24 large overlapping tilted blocks    med 0.264 max 0.365
+P2 24 rotated cylinders                  med 0.256 max 0.632
+P3 24 rotated wedges                     med 0.200 max 0.422
+P4 24 overlapping balls                  med 0.371 max 0.661
+P5 comb blade (sawtooth, 24 parts)       med 0.100 max 0.394
+worst valid 1                            med 0.151 max 1.151
+worst valid 2                            med 0.227 max 0.405
+worst valid 3                            med 0.261 max 0.350
+worst valid 4                            med 0.205 max 0.562
+worst valid 5                            med 0.205 max 0.447
+worst valid 6                            med 0.227 max 0.441
+worst valid 7                            med 0.212 max 0.327
+worst valid 8                            med 0.270 max 0.465
+worst valid 9                            med 0.169 max 0.334
+worst valid 10                           med 0.200 max 0.454
+worst valid 11                           med 0.289 max 0.585
+tooComplex 1                             med 0.096 max 0.190
+tooComplex 2                             med 0.121 max 0.266
+tooComplex 3                             med 0.102 max 0.179
+tooComplex 4                             med 0.143 max 0.212
+tooComplex 5                             med 0.093 max 0.182
+tooComplex 6                             med 0.106 max 0.237
+75 designs; median longest stretch past 0.35 ms on 1; the worst median 0.371 ms (P4 24 overlapping balls); over the fixtures 0.371 (P4 24 overlapping balls); the largest single run 1.151

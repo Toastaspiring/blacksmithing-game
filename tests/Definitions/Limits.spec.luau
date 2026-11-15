@@ -69,7 +69,7 @@ return Test.suite("Definitions/Limits", function(t)
 		A.truthy(Limits.NAME_MIN_CP >= 1 and Limits.NAME_MIN_CP <= Limits.NAME_MAX_CP, "1 ≤ min ≤ max code points")
 		A.truthy(Limits.NAME_MAX_CP * 2 <= Limits.NAME_MAX_INPUT_BYTES, "a Latin name (≤ 2 bytes per code point) fits")
 		A.truthy(Limits.MAX_STEP_FLAGS >= 9, "≥ the 9 flag kinds, so no flag is dropped")
-		A.truthy(Limits.MAX_ISSUES_STORED >= 5, "room for the 5 ValidationCodes")
+		A.truthy(Limits.MAX_ISSUES_STORED >= 6, "room for the 6 ValidationCodes")
 	end)
 
 	t.it("T-DEF-06 persistence budgets: the worst profile at the caps fits (§9.8, E-S1.4, E-S1.9)", function()

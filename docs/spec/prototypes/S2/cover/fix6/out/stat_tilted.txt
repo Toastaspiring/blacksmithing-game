@@ -1,0 +1,28 @@
+r 0.03 turn 0 lean 0: readings 60 tests, 0 caps open, 0 both open, 0 split | moved 40 tests, 0 open, 0 both, 0 split
+r 0.03 turn 2 lean 0: readings 60 tests, 16 caps open, 4 both open, 0 split | moved 40 tests, 0 open, 0 both, 0 split
+r 0.03 turn 30 lean 0: readings 60 tests, 40 caps open, 10 both open, 0 split | moved 40 tests, 40 open, 20 both, 8 split
+r 0.03 turn 60 lean 0: readings 60 tests, 32 caps open, 8 both open, 0 split | moved 40 tests, 32 open, 16 both, 8 split
+r 0.03 turn 88 lean 0: readings 60 tests, 0 caps open, 0 both open, 0 split | moved 40 tests, 0 open, 0 both, 0 split
+r 0.03 turn 90 lean 0: readings 60 tests, 0 caps open, 0 both open, 0 split | moved 40 tests, 0 open, 0 both, 0 split
+r 0.10 turn 0 lean 0: readings 60 tests, 0 caps open, 0 both open, 0 split | moved 40 tests, 0 open, 0 both, 0 split
+r 0.10 turn 2 lean 0: readings 60 tests, 16 caps open, 4 both open, 0 split | moved 40 tests, 16 open, 8 both, 8 split
+r 0.10 turn 30 lean 0: readings 60 tests, 56 caps open, 14 both open, 0 split | moved 40 tests, 56 open, 28 both, 8 split
+r 0.10 turn 60 lean 0: readings 60 tests, 42 caps open, 10 both open, 0 split | moved 40 tests, 40 open, 20 both, 8 split
+r 0.10 turn 88 lean 0: readings 60 tests, 0 caps open, 0 both open, 0 split | moved 40 tests, 0 open, 0 both, 0 split
+r 0.10 turn 90 lean 0: readings 60 tests, 0 caps open, 0 both open, 0 split | moved 40 tests, 0 open, 0 both, 0 split
+T (0, 0, 0, 1): checked 720, held 360, caps searched 136, units 709562
+r 0.03 turn 2 lean 0: readings 60 tests, 16 caps open, 4 both open, 0 split | moved 40 tests, 0 open, 0 both, 0 split
+r 0.03 turn 60 lean 0: readings 60 tests, 32 caps open, 8 both open, 0 split | moved 40 tests, 32 open, 16 both, 8 split
+r 0.03 turn 90 lean 0.03: readings 60 tests, 0 caps open, 0 both open, 0 split | moved 40 tests, 0 open, 0 both, 0 split
+r 0.03 turn 90 lean 0.0046: readings 60 tests, 0 caps open, 0 both open, 0 split | moved 40 tests, 0 open, 0 both, 0 split
+r 0.10 turn 2 lean 0: readings 60 tests, 16 caps open, 4 both open, 0 split | moved 40 tests, 16 open, 8 both, 8 split
+r 0.10 turn 60 lean 0: readings 60 tests, 42 caps open, 10 both open, 0 split | moved 40 tests, 40 open, 20 both, 8 split
+r 0.10 turn 90 lean 0.03: readings 60 tests, 6 caps open, 0 both open, 0 split | moved 40 tests, 4 open, 0 both, 0 split
+r 0.10 turn 90 lean 0.0046: readings 60 tests, 0 caps open, 0 both open, 0 split | moved 40 tests, 0 open, 0 both, 0 split
+T (0.0848032, 0.169606, 0.25441, 0.948324): checked 480, held 240, caps searched 78, units 478107
+r 0.03 turn 90 lean 0.03: readings 60 tests, 0 caps open, 0 both open, 0 split | moved 40 tests, 0 open, 0 both, 0 split
+r 0.03 turn 90 lean 0.0046: readings 60 tests, 0 caps open, 0 both open, 0 split | moved 40 tests, 0 open, 0 both, 0 split
+r 0.10 turn 90 lean 0.03: readings 60 tests, 6 caps open, 0 both open, 0 split | moved 40 tests, 4 open, 0 both, 0 split
+r 0.10 turn 90 lean 0.0046: readings 60 tests, 0 caps open, 0 both open, 0 split | moved 40 tests, 0 open, 0 both, 0 split
+T (0, 0, 0, 1): checked 240, held 120, caps searched 6, units 226227
+RESULT pass=2 fail=0 skip=0 files=51 time=1.71s

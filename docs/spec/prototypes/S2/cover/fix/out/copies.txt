@@ -1,0 +1,41 @@
+F3: blade part 6 Block size 0.07,3.4,0.035, kept true
+  + its blade an exact copy              in the Guard : blade kept, copy cleaned, the rest's measure bit-identical
+  + its blade an exact copy              in the Pommel: blade kept, copy cleaned, the rest's measure bit-identical
+  + its blade an exact copy              in the Grip  : blade kept, copy cleaned, the rest's measure bit-identical
+  + its blade turned 180 about Y         in the Guard : blade kept, copy cleaned, the rest's measure bit-identical
+  + its blade turned 180 about Y         in the Pommel: blade kept, copy cleaned, the rest's measure bit-identical
+  + its blade turned 180 about Y         in the Grip  : blade kept, copy cleaned, the rest's measure bit-identical
+  + its blade turned 180 about X         in the Guard : blade kept, copy cleaned, the rest's measure bit-identical
+  + its blade turned 180 about X         in the Pommel: blade kept, copy cleaned, the rest's measure bit-identical
+  + its blade turned 180 about X         in the Grip  : blade kept, copy cleaned, the rest's measure bit-identical
+  + its blade size permuted, 90 about Y  in the Guard : blade kept, copy cleaned, the rest's measure bit-identical
+  + its blade size permuted, 90 about Y  in the Pommel: blade kept, copy cleaned, the rest's measure bit-identical
+  + its blade size permuted, 90 about Y  in the Grip  : blade kept, copy cleaned, the rest's measure bit-identical
+  + its blade 1e-12 lower                in the Guard : blade kept, copy cleaned, the rest's measure bit-identical
+  + its blade 1e-12 lower                in the Pommel: blade kept, copy cleaned, the rest's measure bit-identical
+  + its blade 1e-12 lower                in the Grip  : blade kept, copy cleaned, the rest's measure bit-identical
+  + its blade 5e-8 lower                 in the Guard : blade kept, copy cleaned, the rest's measure bit-identical
+  + its blade 5e-8 lower                 in the Pommel: blade kept, copy cleaned, the rest's measure bit-identical
+  + its blade 5e-8 lower                 in the Grip  : blade kept, copy cleaned, the rest's measure bit-identical
+  C08 part 4 Blade Block size 0.3,2.8,0.08 pos 0,3.18,0
+  C08 part 5 Blade Wedge size 0.08,0.4,0.15 pos 0.075,4.78,0
+  C08 part 6 Blade Wedge size 0.08,0.4,0.15 pos -0.075,4.78,0
+C08: blade part 4 Block size 0.3,2.8,0.08, kept true
+  + its blade an exact copy              in the Guard : blade kept, copy cleaned, the rest's measure bit-identical
+  + its blade an exact copy              in the Pommel: blade kept, copy cleaned, the rest's measure bit-identical
+  + its blade an exact copy              in the Grip  : blade kept, copy cleaned, the rest's measure bit-identical
+  + its blade turned 180 about Y         in the Guard : blade kept, copy cleaned, the rest's measure bit-identical
+  + its blade turned 180 about Y         in the Pommel: blade kept, copy cleaned, the rest's measure bit-identical
+  + its blade turned 180 about Y         in the Grip  : blade kept, copy cleaned, the rest's measure bit-identical
+  + its blade turned 180 about X         in the Guard : blade kept, copy cleaned, the rest's measure bit-identical
+  + its blade turned 180 about X         in the Pommel: blade kept, copy cleaned, the rest's measure bit-identical
+  + its blade turned 180 about X         in the Grip  : blade kept, copy cleaned, the rest's measure bit-identical
+  + its blade size permuted, 90 about Y  in the Guard : blade kept, copy cleaned, the rest's measure bit-identical
+  + its blade size permuted, 90 about Y  in the Pommel: blade kept, copy cleaned, the rest's measure bit-identical
+  + its blade size permuted, 90 about Y  in the Grip  : blade kept, copy cleaned, the rest's measure bit-identical
+  + its blade 1e-12 lower                in the Guard : blade kept, copy cleaned, the rest's measure bit-identical
+  + its blade 1e-12 lower                in the Pommel: blade kept, copy cleaned, the rest's measure bit-identical
+  + its blade 1e-12 lower                in the Grip  : blade kept, copy cleaned, the rest's measure bit-identical
+  + its blade 5e-8 lower                 in the Guard : blade kept, copy cleaned, the rest's measure bit-identical
+  + its blade 5e-8 lower                 in the Pommel: blade kept, copy cleaned, the rest's measure bit-identical
+  + its blade 5e-8 lower                 in the Grip  : blade kept, copy cleaned, the rest's measure bit-identical

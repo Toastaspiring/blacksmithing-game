@@ -1,0 +1,9 @@
+-- docs/spec/prototypes/S2/cover/worst_designs.luau — evidence data (E-S2.12), not game code: the designs T-PERF-01 and
+-- S-PERF-01 run (§14.11). `valid`: V1's cluster of 24 Balls, its spacing set just under VERDICT_WORK_MAX, and the 8
+-- designs that 4 climbs on the verdict's wall time found (18,000 evaluations, under the rank before the slot came first)
+-- and that stay canonical and valid under the cap with the rank of §4.4; slowest first, with their units and the
+-- verdict's Lune ms (median of 15, every design once a round, the machine 15–20 % busy with other programs). `tooComplex`:
+-- canonical designs past it (the judge's, prototype A's and B's climbs, worst_P.json's heaviest), which Analyze must answer
+-- TooComplex at once; units are what the verdict would spend without the cap. Luau literals, 17 significant digits.
+-- Written by build/mk_worst.luau, then again by fix/cands.luau, fix/mkworst.luau and fix/reemit.luau when the slot came first
+-- in the rank.

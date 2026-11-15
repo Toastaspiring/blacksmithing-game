@@ -1,0 +1,1 @@
+seeds 4001..8000: checked 21667, off the exact 257, outside the bracket 0 (), worst 0 of the part (), past 0

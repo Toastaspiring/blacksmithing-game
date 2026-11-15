@@ -1,0 +1,5 @@
+33389 designs
+R1 vs FIN: differ {'verdict': 35, 'measure': 35, 'mass': 34, 'probes': 35, 'units': 21663}; errors 0
+   verdict moved on 35: ['wrapRings|C02|n4 extra0.04 gap0.0075', 'wrapRings|C05|n3 extra0.04 gap0.0125', 'wrapRings|C06|n4 extra0.04 gap0.0075', 'wrapRings|C09|n4 extra0.04 gap0.0020', 'wrapRings|C09|n5 extra0.04 gap0.0030', 'pommelInBlock|C09|housing xy30 cap0.0600', 'wrapRings|F3|n4 extra0.04 gap0.0030', 'cage|r0.10 k6 open0.19 roll22.5', 'wrapRings|C02|n5 extra0.04 gap0.0050', 'wrapRings|C05|n4 extra0.04 gap0.0075', 'wrapRings|C06|n5 extra0.04 gap0.0050', 'wrapRings|C09|n3 extra0.04 gap0.0020']
+   measure moved with no verdict moving on 0: []
+   mass moved with no verdict moving on 0: []

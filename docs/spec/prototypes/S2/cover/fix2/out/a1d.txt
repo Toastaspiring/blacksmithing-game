@@ -1,0 +1,6 @@
+F5 + the rod: Sm 0.0299 N, Ha 0.1045 N, Sh 0.0958 N
+F5: 14 of 72 designs keep a truly hidden copy; the lower reading up to 14.17%; worst |dD| 0.0002 (spin 35, copy in Guard, Smelting, tier flip false)
+   build Sm 0.0301 N, Ha 0.1045 N, Sh 0.0958 N | truth row Sm 0.0299 N, Ha 0.1045 N, Sh 0.0958 N
+F3 + the rod: Sm 0.0000 N, Ha 0.4735 H, Sh 0.6010 H
+F3: 14 of 72 designs keep a truly hidden copy; the lower reading up to 34.76%; worst |dD| 0.1151 (spin 55, copy in Blade, Sharpening, tier flip false)
+   build Sm 0.0000 N, Ha 0.4695 H, Sh 0.5845 H | truth row Sm 0.0000 N, Ha 0.4719 H, Sh 0.6996 H

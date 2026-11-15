@@ -1,0 +1,1 @@
+V1 tangles seed 12 x 2000: checked 10267, off the exact 100, outside the bracket 0 (), worst 0 of the part (), past 0

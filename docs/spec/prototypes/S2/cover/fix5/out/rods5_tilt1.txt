@@ -1,0 +1,1 @@
+tilt 1 500: 332 rods; 326 wholly inside (exact s ≤ EPS_GEOM): the build keeps 0 (the most 0.000%), the tree before 9 (the most 7.145%); 6 poke out more than EPS_GEOM, the build keeps 0 of them; the bounds left 348 tests open (486 caps searched) of 664 (both ranks); 0 decisions differ from the always-exact rule

@@ -1,0 +1,6 @@
+v12/a_lam emu #13         4 parts  Sm 1.0000 H, Ha 0.0582 N, Sh 0.5000 H  cleaned {}
+v12/a_lam emu #14        11 parts  Sm 0.3500 H, Ha 0.7000 H, Sh 0.7000 H  cleaned {5 6 7 8 9 10}
+v12/a_sheets emu #11     21 parts  Sm 0.3835 H, Ha 0.3688 H, Sh 0.2000 H  cleaned {7 8 9 10 11 12 13 14 15 16 17 18 19 20 21}
+v12/a_sheets emu #12      7 parts  Sm 0.7474 H, Ha 0.0257 N, Sh 0.0000 N  cleaned {}
+v12/a_void emu #5        11 parts  Sm 0.4463 H, Ha 0.7000 H, Sh 0.4969 H  cleaned {11}
+v12/a_void emu #6         9 parts  Sm 0.1376 N, Ha 0.7000 H, Sh 0.4969 H  cleaned {}

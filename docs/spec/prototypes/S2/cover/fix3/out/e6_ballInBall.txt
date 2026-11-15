@@ -1,0 +1,353 @@
+Ball r 0.037 out of Ball R 0.15 by 0.0002, pole                    truth   0.360%  base   1.738%  build   0.000%
+Ball r 0.037 out of Ball R 0.15 by 0.0002, octant                  truth   0.350%  base   8.754%  build   0.000% baseKEPT
+Ball r 0.037 out of Ball R 0.15 by 0.0002, between                 truth   0.355%  base   4.070%  build   0.000% baseKEPT
+Ball r 0.037 out of Ball R 0.15 by 0.0002, odd                     truth   0.362%  base   6.301%  build   0.000% baseKEPT
+Ball r 0.037 out of Ball R 0.15 by 0.0005, pole                    truth   0.880%  base   3.127%  build   0.000% baseKEPT
+Ball r 0.037 out of Ball R 0.15 by 0.0005, octant                  truth   0.888%  base  10.193%  build   0.000% baseKEPT
+Ball r 0.037 out of Ball R 0.15 by 0.0005, between                 truth   0.895%  base   5.607%  build   0.000% baseKEPT
+Ball r 0.037 out of Ball R 0.15 by 0.0005, odd                     truth   0.888%  base   6.557%  build   0.000% baseKEPT
+Ball r 0.037 out of Ball R 0.15 by 0.0010, pole                    truth   1.768%  base   4.399%  build   0.000% baseKEPT
+Ball r 0.037 out of Ball R 0.15 by 0.0010, octant                  truth   1.775%  base  10.555%  build   0.000% baseKEPT
+Ball r 0.037 out of Ball R 0.15 by 0.0010, between                 truth   1.758%  base   6.273%  build   0.000% baseKEPT
+Ball r 0.037 out of Ball R 0.15 by 0.0010, odd                     truth   1.770%  base   7.341%  build   0.000% baseKEPT
+Ball r 0.037 out of Ball R 0.15 by 0.0020, pole                    truth   3.517%  base   6.530%  build   1.718% CLEANED
+Ball r 0.037 out of Ball R 0.15 by 0.0020, octant                  truth   3.532%  base  11.091%  build   1.208% CLEANED
+Ball r 0.037 out of Ball R 0.15 by 0.0020, between                 truth   3.500%  base   7.831%  build   1.205% CLEANED
+Ball r 0.037 out of Ball R 0.15 by 0.0020, odd                     truth   3.520%  base   9.556%  build   0.795% CLEANED
+Ball r 0.037 out of Ball R 0.15 by 0.0040, pole                    truth   6.975%  base  10.188%  build   2.012%
+Ball r 0.037 out of Ball R 0.15 by 0.0040, octant                  truth   6.947%  base  14.678%  build   3.720%
+Ball r 0.037 out of Ball R 0.15 by 0.0040, between                 truth   6.950%  base  11.463%  build   3.516%
+Ball r 0.037 out of Ball R 0.15 by 0.0040, odd                     truth   6.957%  base  12.855%  build   3.229%
+Ball r 0.037 out of Ball R 0.15 by 0.0080, pole                    truth  13.637%  base  16.753%  build  10.365%
+Ball r 0.037 out of Ball R 0.15 by 0.0080, octant                  truth  13.627%  base  20.610%  build  11.378%
+Ball r 0.037 out of Ball R 0.15 by 0.0080, between                 truth  13.620%  base  18.411%  build  10.931%
+Ball r 0.037 out of Ball R 0.15 by 0.0080, odd                     truth  13.605%  base  19.093%  build  10.619%
+Ball r 0.037 out of Ball R 0.15 by 0.0160, pole                    truth  26.227%  base  28.993%  build  23.457%
+Ball r 0.037 out of Ball R 0.15 by 0.0160, octant                  truth  26.227%  base  29.067%  build  22.140%
+Ball r 0.037 out of Ball R 0.15 by 0.0160, between                 truth  26.210%  base  30.259%  build  22.418%
+Ball r 0.037 out of Ball R 0.15 by 0.0160, odd                     truth  26.225%  base  29.846%  build  22.410%
+Ball r 0.037 out of Ball R 0.15 by 0.0300, pole                    truth  46.325%  base  47.579%  build  44.540%
+Ball r 0.037 out of Ball R 0.15 by 0.0300, octant                  truth  46.275%  base  45.820%  build  42.786%
+Ball r 0.037 out of Ball R 0.15 by 0.0300, between                 truth  46.325%  base  46.004%  build  43.219%
+Ball r 0.037 out of Ball R 0.15 by 0.0300, odd                     truth  46.325%  base  45.298%  build  43.078%
+Ball r 0.060 out of Ball R 0.15 by 0.0002, pole                    truth   0.280%  base   2.083%  build   0.000% baseKEPT
+Ball r 0.060 out of Ball R 0.15 by 0.0002, octant                  truth   0.275%  base   6.467%  build   0.000% baseKEPT
+Ball r 0.060 out of Ball R 0.15 by 0.0002, between                 truth   0.275%  base   3.706%  build   0.000% baseKEPT
+Ball r 0.060 out of Ball R 0.15 by 0.0002, odd                     truth   0.275%  base   4.389%  build   0.000% baseKEPT
+Ball r 0.060 out of Ball R 0.15 by 0.0005, pole                    truth   0.687%  base   2.614%  build   0.000% baseKEPT
+Ball r 0.060 out of Ball R 0.15 by 0.0005, octant                  truth   0.685%  base   6.788%  build   0.000% baseKEPT
+Ball r 0.060 out of Ball R 0.15 by 0.0005, between                 truth   0.690%  base   4.006%  build   0.000% baseKEPT
+Ball r 0.060 out of Ball R 0.15 by 0.0005, odd                     truth   0.687%  base   4.608%  build   0.000% baseKEPT
+Ball r 0.060 out of Ball R 0.15 by 0.0010, pole                    truth   1.382%  base   3.458%  build   0.000% baseKEPT
+Ball r 0.060 out of Ball R 0.15 by 0.0010, octant                  truth   1.377%  base   7.301%  build   0.000% baseKEPT
+Ball r 0.060 out of Ball R 0.15 by 0.0010, between                 truth   1.382%  base   4.495%  build   0.000% baseKEPT
+Ball r 0.060 out of Ball R 0.15 by 0.0010, odd                     truth   1.370%  base   5.067%  build   0.000% baseKEPT
+Ball r 0.060 out of Ball R 0.15 by 0.0020, pole                    truth   2.730%  base   4.983%  build   1.718% CLEANED
+Ball r 0.060 out of Ball R 0.15 by 0.0020, octant                  truth   2.725%  base   8.246%  build   0.000% CLEANED
+Ball r 0.060 out of Ball R 0.15 by 0.0020, between                 truth   2.743%  base   5.428%  build   0.707% CLEANED
+Ball r 0.060 out of Ball R 0.15 by 0.0020, odd                     truth   2.735%  base   6.742%  build   0.000% CLEANED
+Ball r 0.060 out of Ball R 0.15 by 0.0040, pole                    truth   5.388%  base   7.500%  build   1.902% CLEANED
+Ball r 0.060 out of Ball R 0.15 by 0.0040, octant                  truth   5.385%  base  10.054%  build   1.678% CLEANED
+Ball r 0.060 out of Ball R 0.15 by 0.0040, between                 truth   5.398%  base   7.991%  build   2.057%
+Ball r 0.060 out of Ball R 0.15 by 0.0040, odd                     truth   5.393%  base   9.298%  build   1.501% CLEANED
+Ball r 0.060 out of Ball R 0.15 by 0.0080, pole                    truth  10.493%  base  12.187%  build   7.588%
+Ball r 0.060 out of Ball R 0.15 by 0.0080, octant                  truth  10.473%  base  15.159%  build   6.123%
+Ball r 0.060 out of Ball R 0.15 by 0.0080, between                 truth  10.470%  base  13.720%  build   6.314%
+Ball r 0.060 out of Ball R 0.15 by 0.0080, odd                     truth  10.473%  base  14.671%  build   6.248%
+Ball r 0.060 out of Ball R 0.15 by 0.0160, pole                    truth  19.863%  base  21.383%  build  16.055%
+Ball r 0.060 out of Ball R 0.15 by 0.0160, octant                  truth  19.863%  base  23.948%  build  15.663%
+Ball r 0.060 out of Ball R 0.15 by 0.0160, between                 truth  19.850%  base  22.810%  build  15.917%
+Ball r 0.060 out of Ball R 0.15 by 0.0160, odd                     truth  19.863%  base  23.461%  build  15.956%
+Ball r 0.060 out of Ball R 0.15 by 0.0300, pole                    truth  34.450%  base  36.738%  build  32.252%
+Ball r 0.060 out of Ball R 0.15 by 0.0300, octant                  truth  34.350%  base  36.901%  build  31.678%
+Ball r 0.060 out of Ball R 0.15 by 0.0300, between                 truth  34.425%  base  36.871%  build  31.442%
+Ball r 0.060 out of Ball R 0.15 by 0.0300, odd                     truth  34.375%  base  37.260%  build  31.769%
+Ball r 0.090 out of Ball R 0.15 by 0.0002, pole                    truth   0.280%  base   1.962%  build   0.000%
+Ball r 0.090 out of Ball R 0.15 by 0.0002, octant                  truth   0.275%  base   5.082%  build   0.000% baseKEPT
+Ball r 0.090 out of Ball R 0.15 by 0.0002, between                 truth   0.275%  base   3.088%  build   0.000% baseKEPT
+Ball r 0.090 out of Ball R 0.15 by 0.0002, odd                     truth   0.275%  base   3.109%  build   0.000% baseKEPT
+Ball r 0.090 out of Ball R 0.15 by 0.0005, pole                    truth   0.685%  base   2.321%  build   0.000% baseKEPT
+Ball r 0.090 out of Ball R 0.15 by 0.0005, octant                  truth   0.683%  base   5.343%  build   0.000% baseKEPT
+Ball r 0.090 out of Ball R 0.15 by 0.0005, between                 truth   0.690%  base   3.307%  build   0.000% baseKEPT
+Ball r 0.090 out of Ball R 0.15 by 0.0005, odd                     truth   0.685%  base   3.319%  build   0.000% baseKEPT
+Ball r 0.090 out of Ball R 0.15 by 0.0010, pole                    truth   1.373%  base   2.902%  build   0.000% baseKEPT
+Ball r 0.090 out of Ball R 0.15 by 0.0010, octant                  truth   1.373%  base   5.770%  build   0.000% baseKEPT
+Ball r 0.090 out of Ball R 0.15 by 0.0010, between                 truth   1.373%  base   3.677%  build   0.000% baseKEPT
+Ball r 0.090 out of Ball R 0.15 by 0.0010, odd                     truth   1.363%  base   3.627%  build   0.000% baseKEPT
+Ball r 0.090 out of Ball R 0.15 by 0.0020, pole                    truth   2.695%  base   4.929%  build   1.718% CLEANED
+Ball r 0.090 out of Ball R 0.15 by 0.0020, octant                  truth   2.707%  base   6.585%  build   0.000% CLEANED
+Ball r 0.090 out of Ball R 0.15 by 0.0020, between                 truth   2.715%  base   4.473%  build   0.707% CLEANED
+Ball r 0.090 out of Ball R 0.15 by 0.0020, odd                     truth   2.707%  base   5.686%  build   0.000% CLEANED
+Ball r 0.090 out of Ball R 0.15 by 0.0040, pole                    truth   5.272%  base   6.768%  build   1.841% CLEANED
+Ball r 0.090 out of Ball R 0.15 by 0.0040, octant                  truth   5.267%  base   8.549%  build   1.208% CLEANED
+Ball r 0.090 out of Ball R 0.15 by 0.0040, between                 truth   5.280%  base   7.412%  build   1.413% CLEANED
+Ball r 0.090 out of Ball R 0.15 by 0.0040, odd                     truth   5.260%  base   7.893%  build   0.829% CLEANED
+Ball r 0.090 out of Ball R 0.15 by 0.0080, pole                    truth  10.073%  base  10.386%  build   6.161%
+Ball r 0.090 out of Ball R 0.15 by 0.0080, octant                  truth  10.058%  base  12.728%  build   4.968%
+Ball r 0.090 out of Ball R 0.15 by 0.0080, between                 truth  10.058%  base  12.748%  build   4.917%
+Ball r 0.090 out of Ball R 0.15 by 0.0080, odd                     truth  10.063%  base  12.842%  build   4.663%
+Ball r 0.090 out of Ball R 0.15 by 0.0160, pole                    truth  18.480%  base  19.761%  build  13.493%
+Ball r 0.090 out of Ball R 0.15 by 0.0160, octant                  truth  18.473%  base  21.291%  build  14.381%
+Ball r 0.090 out of Ball R 0.15 by 0.0160, between                 truth  18.468%  base  20.721%  build  14.242%
+Ball r 0.090 out of Ball R 0.15 by 0.0160, odd                     truth  18.480%  base  21.164%  build  14.717%
+Ball r 0.090 out of Ball R 0.15 by 0.0300, pole                    truth  30.500%  base  32.730%  build  28.405%
+Ball r 0.090 out of Ball R 0.15 by 0.0300, octant                  truth  30.500%  base  32.474%  build  28.017%
+Ball r 0.090 out of Ball R 0.15 by 0.0300, between                 truth  30.500%  base  32.431%  build  27.193%
+Ball r 0.090 out of Ball R 0.15 by 0.0300, odd                     truth  30.600%  base  32.580%  build  27.071%
+Ball r 0.045 out of Ball R 0.30 by 0.0002, pole                    truth   0.265%  base   1.718%  build   0.000%
+Ball r 0.045 out of Ball R 0.30 by 0.0002, octant                  truth   0.260%  base   4.323%  build   0.000% baseKEPT
+Ball r 0.045 out of Ball R 0.30 by 0.0002, between                 truth   0.258%  base   4.983%  build   0.000% baseKEPT
+Ball r 0.045 out of Ball R 0.30 by 0.0002, odd                     truth   0.268%  base   4.354%  build   0.000% baseKEPT
+Ball r 0.045 out of Ball R 0.30 by 0.0005, pole                    truth   0.648%  base   2.901%  build   0.000% baseKEPT
+Ball r 0.045 out of Ball R 0.30 by 0.0005, octant                  truth   0.655%  base   7.992%  build   0.000% baseKEPT
+Ball r 0.045 out of Ball R 0.30 by 0.0005, between                 truth   0.658%  base   6.225%  build   0.000% baseKEPT
+Ball r 0.045 out of Ball R 0.30 by 0.0005, odd                     truth   0.655%  base   6.267%  build   0.000% baseKEPT
+Ball r 0.045 out of Ball R 0.30 by 0.0010, pole                    truth   1.313%  base   3.990%  build   0.000% baseKEPT
+Ball r 0.045 out of Ball R 0.30 by 0.0010, octant                  truth   1.300%  base   9.320%  build   0.000% baseKEPT
+Ball r 0.045 out of Ball R 0.30 by 0.0010, between                 truth   1.295%  base   7.944%  build   0.000% baseKEPT
+Ball r 0.045 out of Ball R 0.30 by 0.0010, odd                     truth   1.308%  base   6.610%  build   0.000% baseKEPT
+Ball r 0.045 out of Ball R 0.30 by 0.0020, pole                    truth   2.607%  base   5.880%  build   1.718% CLEANED
+Ball r 0.045 out of Ball R 0.30 by 0.0020, octant                  truth   2.602%  base  10.140%  build   0.000% CLEANED
+Ball r 0.045 out of Ball R 0.30 by 0.0020, between                 truth   2.607%  base   8.592%  build   0.707% CLEANED
+Ball r 0.045 out of Ball R 0.30 by 0.0020, odd                     truth   2.607%  base   8.590%  build   0.000% CLEANED
+Ball r 0.045 out of Ball R 0.30 by 0.0040, pole                    truth   5.180%  base   8.666%  build   1.718% CLEANED
+Ball r 0.045 out of Ball R 0.30 by 0.0040, octant                  truth   5.180%  base  11.191%  build   2.801%
+Ball r 0.045 out of Ball R 0.30 by 0.0040, between                 truth   5.185%  base   9.874%  build   2.358%
+Ball r 0.045 out of Ball R 0.30 by 0.0040, odd                     truth   5.190%  base  10.768%  build   1.173% CLEANED
+Ball r 0.045 out of Ball R 0.30 by 0.0080, pole                    truth  10.260%  base  14.472%  build   4.559%
+Ball r 0.045 out of Ball R 0.30 by 0.0080, octant                  truth  10.288%  base  13.845%  build   7.589%
+Ball r 0.045 out of Ball R 0.30 by 0.0080, between                 truth  10.280%  base  14.218%  build   6.540%
+Ball r 0.045 out of Ball R 0.30 by 0.0080, odd                     truth  10.265%  base  14.578%  build   5.765%
+Ball r 0.045 out of Ball R 0.30 by 0.0160, pole                    truth  20.220%  base  24.043%  build  14.901%
+Ball r 0.045 out of Ball R 0.30 by 0.0160, octant                  truth  20.215%  base  22.370%  build  16.867%
+Ball r 0.045 out of Ball R 0.30 by 0.0160, between                 truth  20.217%  base  21.990%  build  15.614%
+Ball r 0.045 out of Ball R 0.30 by 0.0160, odd                     truth  20.222%  base  22.229%  build  15.973%
+Ball r 0.045 out of Ball R 0.30 by 0.0300, pole                    truth  36.825%  base  36.877%  build  33.772%
+Ball r 0.045 out of Ball R 0.30 by 0.0300, octant                  truth  36.850%  base  34.222%  build  32.879%
+Ball r 0.045 out of Ball R 0.30 by 0.0300, between                 truth  36.900%  base  35.168%  build  32.792%
+Ball r 0.045 out of Ball R 0.30 by 0.0300, odd                     truth  36.775%  base  35.219%  build  33.208%
+Ball r 0.075 out of Ball R 0.30 by 0.0002, pole                    truth   0.175%  base   1.723%  build   0.000%
+Ball r 0.075 out of Ball R 0.30 by 0.0002, octant                  truth   0.175%  base   4.145%  build   0.000% baseKEPT
+Ball r 0.075 out of Ball R 0.30 by 0.0002, between                 truth   0.177%  base   3.783%  build   0.000% baseKEPT
+Ball r 0.075 out of Ball R 0.30 by 0.0002, odd                     truth   0.187%  base   3.557%  build   0.000% baseKEPT
+Ball r 0.075 out of Ball R 0.30 by 0.0005, pole                    truth   0.447%  base   2.439%  build   0.000% baseKEPT
+Ball r 0.075 out of Ball R 0.30 by 0.0005, octant                  truth   0.447%  base   5.301%  build   0.000% baseKEPT
+Ball r 0.075 out of Ball R 0.30 by 0.0005, between                 truth   0.447%  base   3.971%  build   0.000% baseKEPT
+Ball r 0.075 out of Ball R 0.30 by 0.0005, odd                     truth   0.447%  base   5.034%  build   0.000% baseKEPT
+Ball r 0.075 out of Ball R 0.30 by 0.0010, pole                    truth   0.880%  base   3.127%  build   0.000% baseKEPT
+Ball r 0.075 out of Ball R 0.30 by 0.0010, octant                  truth   0.890%  base   5.819%  build   0.000% baseKEPT
+Ball r 0.075 out of Ball R 0.30 by 0.0010, between                 truth   0.895%  base   5.448%  build   0.000% baseKEPT
+Ball r 0.075 out of Ball R 0.30 by 0.0010, odd                     truth   0.888%  base   5.279%  build   0.000% baseKEPT
+Ball r 0.075 out of Ball R 0.30 by 0.0020, pole                    truth   1.768%  base   4.399%  build   0.000% baseKEPT
+Ball r 0.075 out of Ball R 0.30 by 0.0020, octant                  truth   1.775%  base   6.434%  build   0.000% baseKEPT
+Ball r 0.075 out of Ball R 0.30 by 0.0020, between                 truth   1.758%  base   6.118%  build   0.000% baseKEPT
+Ball r 0.075 out of Ball R 0.30 by 0.0020, odd                     truth   1.770%  base   5.967%  build   0.000% baseKEPT
+Ball r 0.075 out of Ball R 0.30 by 0.0040, pole                    truth   3.517%  base   6.530%  build   1.718% CLEANED
+Ball r 0.075 out of Ball R 0.30 by 0.0040, octant                  truth   3.532%  base   7.838%  build   1.208% CLEANED
+Ball r 0.075 out of Ball R 0.30 by 0.0040, between                 truth   3.500%  base   7.690%  build   1.205% CLEANED
+Ball r 0.075 out of Ball R 0.30 by 0.0040, odd                     truth   3.520%  base   7.765%  build   0.795% CLEANED
+Ball r 0.075 out of Ball R 0.30 by 0.0080, pole                    truth   6.975%  base  10.188%  build   2.012%
+Ball r 0.075 out of Ball R 0.30 by 0.0080, octant                  truth   6.947%  base  10.629%  build   3.720%
+Ball r 0.075 out of Ball R 0.30 by 0.0080, between                 truth   6.950%  base  10.680%  build   3.516%
+Ball r 0.075 out of Ball R 0.30 by 0.0080, odd                     truth   6.957%  base  10.795%  build   3.230%
+Ball r 0.075 out of Ball R 0.30 by 0.0160, pole                    truth  13.637%  base  16.687%  build  10.365%
+Ball r 0.075 out of Ball R 0.30 by 0.0160, octant                  truth  13.627%  base  16.288%  build  11.378%
+Ball r 0.075 out of Ball R 0.30 by 0.0160, between                 truth  13.620%  base  16.545%  build  10.931%
+Ball r 0.075 out of Ball R 0.30 by 0.0160, odd                     truth  13.605%  base  16.384%  build  10.619%
+Ball r 0.075 out of Ball R 0.30 by 0.0300, pole                    truth  24.715%  base  27.679%  build  21.795%
+Ball r 0.075 out of Ball R 0.30 by 0.0300, octant                  truth  24.717%  base  25.660%  build  20.512%
+Ball r 0.075 out of Ball R 0.30 by 0.0300, between                 truth  24.695%  base  25.792%  build  20.867%
+Ball r 0.075 out of Ball R 0.30 by 0.0300, odd                     truth  24.707%  base  25.737%  build  21.035%
+Ball r 0.120 out of Ball R 0.30 by 0.0002, pole                    truth   0.140%  base   1.901%  build   0.000%
+Ball r 0.120 out of Ball R 0.30 by 0.0002, octant                  truth   0.145%  base   4.621%  build   0.000% baseKEPT
+Ball r 0.120 out of Ball R 0.30 by 0.0002, between                 truth   0.140%  base   2.846%  build   0.000% baseKEPT
+Ball r 0.120 out of Ball R 0.30 by 0.0002, odd                     truth   0.138%  base   3.954%  build   0.000% baseKEPT
+Ball r 0.120 out of Ball R 0.30 by 0.0005, pole                    truth   0.355%  base   2.173%  build   0.000% baseKEPT
+Ball r 0.120 out of Ball R 0.30 by 0.0005, octant                  truth   0.342%  base   4.663%  build   0.000% baseKEPT
+Ball r 0.120 out of Ball R 0.30 by 0.0005, between                 truth   0.345%  base   3.757%  build   0.000% baseKEPT
+Ball r 0.120 out of Ball R 0.30 by 0.0005, odd                     truth   0.350%  base   4.067%  build   0.000% baseKEPT
+Ball r 0.120 out of Ball R 0.30 by 0.0010, pole                    truth   0.687%  base   2.615%  build   0.000% baseKEPT
+Ball r 0.120 out of Ball R 0.30 by 0.0010, octant                  truth   0.685%  base   4.739%  build   0.000% baseKEPT
+Ball r 0.120 out of Ball R 0.30 by 0.0010, between                 truth   0.690%  base   4.006%  build   0.000% baseKEPT
+Ball r 0.120 out of Ball R 0.30 by 0.0010, odd                     truth   0.690%  base   4.252%  build   0.000% baseKEPT
+Ball r 0.120 out of Ball R 0.30 by 0.0020, pole                    truth   1.382%  base   3.458%  build   0.000% baseKEPT
+Ball r 0.120 out of Ball R 0.30 by 0.0020, octant                  truth   1.377%  base   5.231%  build   0.000% baseKEPT
+Ball r 0.120 out of Ball R 0.30 by 0.0020, between                 truth   1.382%  base   4.495%  build   0.000% baseKEPT
+Ball r 0.120 out of Ball R 0.30 by 0.0020, odd                     truth   1.370%  base   4.700%  build   0.000% baseKEPT
+Ball r 0.120 out of Ball R 0.30 by 0.0040, pole                    truth   2.730%  base   4.983%  build   1.718% CLEANED
+Ball r 0.120 out of Ball R 0.30 by 0.0040, octant                  truth   2.725%  base   6.424%  build   0.000% CLEANED
+Ball r 0.120 out of Ball R 0.30 by 0.0040, between                 truth   2.743%  base   5.428%  build   0.707% CLEANED
+Ball r 0.120 out of Ball R 0.30 by 0.0040, odd                     truth   2.735%  base   5.924%  build   0.000% CLEANED
+Ball r 0.120 out of Ball R 0.30 by 0.0080, pole                    truth   5.388%  base   7.501%  build   1.902% CLEANED
+Ball r 0.120 out of Ball R 0.30 by 0.0080, octant                  truth   5.385%  base   8.526%  build   1.678% CLEANED
+Ball r 0.120 out of Ball R 0.30 by 0.0080, between                 truth   5.398%  base   7.967%  build   2.057%
+Ball r 0.120 out of Ball R 0.30 by 0.0080, odd                     truth   5.393%  base   8.177%  build   1.501% CLEANED
+Ball r 0.120 out of Ball R 0.30 by 0.0160, pole                    truth  10.493%  base  12.187%  build   7.588%
+Ball r 0.120 out of Ball R 0.30 by 0.0160, octant                  truth  10.473%  base  13.047%  build   6.123%
+Ball r 0.120 out of Ball R 0.30 by 0.0160, between                 truth  10.470%  base  13.119%  build   6.314%
+Ball r 0.120 out of Ball R 0.30 by 0.0160, odd                     truth  10.473%  base  13.261%  build   6.248%
+Ball r 0.120 out of Ball R 0.30 by 0.0300, pole                    truth  18.753%  base  20.167%  build  15.065%
+Ball r 0.120 out of Ball R 0.30 by 0.0300, octant                  truth  18.748%  base  20.762%  build  14.730%
+Ball r 0.120 out of Ball R 0.30 by 0.0300, between                 truth  18.755%  base  20.692%  build  14.868%
+Ball r 0.120 out of Ball R 0.30 by 0.0300, odd                     truth  18.760%  base  21.270%  build  14.874%
+Ball r 0.180 out of Ball R 0.30 by 0.0002, pole                    truth   0.138%  base   1.840%  build   0.000%
+Ball r 0.180 out of Ball R 0.30 by 0.0002, octant                  truth   0.145%  base   4.765%  build   0.000% baseKEPT
+Ball r 0.180 out of Ball R 0.30 by 0.0002, between                 truth   0.140%  base   3.014%  build   0.000% baseKEPT
+Ball r 0.180 out of Ball R 0.30 by 0.0002, odd                     truth   0.138%  base   3.040%  build   0.000% baseKEPT
+Ball r 0.180 out of Ball R 0.30 by 0.0005, pole                    truth   0.355%  base   2.023%  build   0.000% baseKEPT
+Ball r 0.180 out of Ball R 0.30 by 0.0005, octant                  truth   0.343%  base   4.906%  build   0.000% baseKEPT
+Ball r 0.180 out of Ball R 0.30 by 0.0005, between                 truth   0.345%  base   3.124%  build   0.000% baseKEPT
+Ball r 0.180 out of Ball R 0.30 by 0.0005, odd                     truth   0.350%  base   3.154%  build   0.000% baseKEPT
+Ball r 0.180 out of Ball R 0.30 by 0.0010, pole                    truth   0.685%  base   2.322%  build   0.000% baseKEPT
+Ball r 0.180 out of Ball R 0.30 by 0.0010, octant                  truth   0.683%  base   5.138%  build   0.000% baseKEPT
+Ball r 0.180 out of Ball R 0.30 by 0.0010, between                 truth   0.690%  base   3.307%  build   0.000% baseKEPT
+Ball r 0.180 out of Ball R 0.30 by 0.0010, odd                     truth   0.685%  base   3.306%  build   0.000% baseKEPT
+Ball r 0.180 out of Ball R 0.30 by 0.0020, pole                    truth   1.373%  base   2.902%  build   0.000% baseKEPT
+Ball r 0.180 out of Ball R 0.30 by 0.0020, octant                  truth   1.373%  base   5.592%  build   0.000% baseKEPT
+Ball r 0.180 out of Ball R 0.30 by 0.0020, between                 truth   1.373%  base   3.677%  build   0.000% baseKEPT
+Ball r 0.180 out of Ball R 0.30 by 0.0020, odd                     truth   1.363%  base   3.608%  build   0.000% baseKEPT
+Ball r 0.180 out of Ball R 0.30 by 0.0040, pole                    truth   2.695%  base   4.929%  build   1.718% CLEANED
+Ball r 0.180 out of Ball R 0.30 by 0.0040, octant                  truth   2.707%  base   6.431%  build   0.000% CLEANED
+Ball r 0.180 out of Ball R 0.30 by 0.0040, between                 truth   2.715%  base   4.473%  build   0.707% CLEANED
+Ball r 0.180 out of Ball R 0.30 by 0.0040, odd                     truth   2.707%  base   5.503%  build   0.000% CLEANED
+Ball r 0.180 out of Ball R 0.30 by 0.0080, pole                    truth   5.272%  base   6.768%  build   1.841% CLEANED
+Ball r 0.180 out of Ball R 0.30 by 0.0080, octant                  truth   5.267%  base   8.166%  build   1.208% CLEANED
+Ball r 0.180 out of Ball R 0.30 by 0.0080, between                 truth   5.280%  base   7.408%  build   1.413% CLEANED
+Ball r 0.180 out of Ball R 0.30 by 0.0080, odd                     truth   5.260%  base   7.788%  build   0.829% CLEANED
+Ball r 0.180 out of Ball R 0.30 by 0.0160, pole                    truth  10.073%  base  10.386%  build   6.161%
+Ball r 0.180 out of Ball R 0.30 by 0.0160, octant                  truth  10.058%  base  12.615%  build   4.969%
+Ball r 0.180 out of Ball R 0.30 by 0.0160, between                 truth  10.058%  base  12.570%  build   4.917%
+Ball r 0.180 out of Ball R 0.30 by 0.0160, odd                     truth  10.063%  base  12.604%  build   4.663%
+Ball r 0.180 out of Ball R 0.30 by 0.0300, pole                    truth  17.520%  base  18.707%  build  12.793%
+Ball r 0.180 out of Ball R 0.30 by 0.0300, octant                  truth  17.505%  base  20.317%  build  13.575%
+Ball r 0.180 out of Ball R 0.30 by 0.0300, between                 truth  17.500%  base  19.399%  build  13.286%
+Ball r 0.180 out of Ball R 0.30 by 0.0300, odd                     truth  17.498%  base  19.881%  build  13.921%
+Ball r 0.120 out of Ball R 0.80 by 0.0002, pole                    truth   0.103%  base   0.000%  build   0.000%
+Ball r 0.120 out of Ball R 0.80 by 0.0002, octant                  truth   0.103%  base   3.372%  build   0.000% baseKEPT
+Ball r 0.120 out of Ball R 0.80 by 0.0002, between                 truth   0.095%  base   2.034%  build   0.000% baseKEPT
+Ball r 0.120 out of Ball R 0.80 by 0.0002, odd                     truth   0.103%  base   1.593%  build   0.000%
+Ball r 0.120 out of Ball R 0.80 by 0.0005, pole                    truth   0.245%  base   0.000%  build   0.000%
+Ball r 0.120 out of Ball R 0.80 by 0.0005, octant                  truth   0.245%  base   3.439%  build   0.000% baseKEPT
+Ball r 0.120 out of Ball R 0.80 by 0.0005, between                 truth   0.242%  base   2.100%  build   0.000% baseKEPT
+Ball r 0.120 out of Ball R 0.80 by 0.0005, odd                     truth   0.250%  base   1.657%  build   0.000%
+Ball r 0.120 out of Ball R 0.80 by 0.0010, pole                    truth   0.490%  base   0.000%  build   0.000%
+Ball r 0.120 out of Ball R 0.80 by 0.0010, octant                  truth   0.487%  base   3.545%  build   0.000% baseKEPT
+Ball r 0.120 out of Ball R 0.80 by 0.0010, between                 truth   0.485%  base   2.311%  build   0.000% baseKEPT
+Ball r 0.120 out of Ball R 0.80 by 0.0010, odd                     truth   0.487%  base   1.763%  build   0.000%
+Ball r 0.120 out of Ball R 0.80 by 0.0020, pole                    truth   0.990%  base   0.000%  build   0.000%
+Ball r 0.120 out of Ball R 0.80 by 0.0020, octant                  truth   0.987%  base   4.329%  build   0.000% baseKEPT
+Ball r 0.120 out of Ball R 0.80 by 0.0020, between                 truth   0.970%  base   3.426%  build   0.000% baseKEPT
+Ball r 0.120 out of Ball R 0.80 by 0.0020, odd                     truth   0.985%  base   2.458%  build   0.000% baseKEPT
+Ball r 0.120 out of Ball R 0.80 by 0.0040, pole                    truth   1.957%  base   0.000%  build   0.000%
+Ball r 0.120 out of Ball R 0.80 by 0.0040, octant                  truth   1.952%  base   5.077%  build   0.000% baseKEPT
+Ball r 0.120 out of Ball R 0.80 by 0.0040, between                 truth   1.957%  base   4.124%  build   0.000% baseKEPT
+Ball r 0.120 out of Ball R 0.80 by 0.0040, odd                     truth   1.960%  base   3.116%  build   0.000% baseKEPT
+Ball r 0.120 out of Ball R 0.80 by 0.0080, pole                    truth   3.895%  base   0.273%  build   0.000% baseCLEANED CLEANED
+Ball r 0.120 out of Ball R 0.80 by 0.0080, octant                  truth   3.910%  base   6.622%  build   1.678% CLEANED
+Ball r 0.120 out of Ball R 0.80 by 0.0080, between                 truth   3.900%  base   5.702%  build   1.404% CLEANED
+Ball r 0.120 out of Ball R 0.80 by 0.0080, odd                     truth   3.875%  base   5.024%  build   0.795% CLEANED
+Ball r 0.120 out of Ball R 0.80 by 0.0160, pole                    truth   7.730%  base   7.207%  build   1.718% CLEANED
+Ball r 0.120 out of Ball R 0.80 by 0.0160, octant                  truth   7.748%  base   9.886%  build   5.134%
+Ball r 0.120 out of Ball R 0.80 by 0.0160, between                 truth   7.748%  base   8.930%  build   4.547%
+Ball r 0.120 out of Ball R 0.80 by 0.0160, odd                     truth   7.733%  base   8.616%  build   3.502%
+Ball r 0.120 out of Ball R 0.80 by 0.0300, pole                    truth  14.338%  base  14.091%  build   8.167%
+Ball r 0.120 out of Ball R 0.80 by 0.0300, octant                  truth  14.325%  base  14.828%  build  12.036%
+Ball r 0.120 out of Ball R 0.80 by 0.0300, between                 truth  14.345%  base  13.929%  build  11.301%
+Ball r 0.120 out of Ball R 0.80 by 0.0300, odd                     truth  14.348%  base  14.509%  build  10.850%
+Ball r 0.200 out of Ball R 0.80 by 0.0002, pole                    truth   0.062%  base   0.000%  build   0.000%
+Ball r 0.200 out of Ball R 0.80 by 0.0002, octant                  truth   0.062%  base   2.516%  build   0.000% baseKEPT
+Ball r 0.200 out of Ball R 0.80 by 0.0002, between                 truth   0.070%  base   1.585%  build   0.000%
+Ball r 0.200 out of Ball R 0.80 by 0.0002, odd                     truth   0.065%  base   1.390%  build   0.000%
+Ball r 0.200 out of Ball R 0.80 by 0.0005, pole                    truth   0.168%  base   0.000%  build   0.000%
+Ball r 0.200 out of Ball R 0.80 by 0.0005, octant                  truth   0.165%  base   2.572%  build   0.000% baseKEPT
+Ball r 0.200 out of Ball R 0.80 by 0.0005, between                 truth   0.160%  base   1.654%  build   0.000%
+Ball r 0.200 out of Ball R 0.80 by 0.0005, odd                     truth   0.165%  base   1.430%  build   0.000%
+Ball r 0.200 out of Ball R 0.80 by 0.0010, pole                    truth   0.325%  base   0.000%  build   0.000%
+Ball r 0.200 out of Ball R 0.80 by 0.0010, octant                  truth   0.335%  base   2.717%  build   0.000% baseKEPT
+Ball r 0.200 out of Ball R 0.80 by 0.0010, between                 truth   0.330%  base   1.726%  build   0.000%
+Ball r 0.200 out of Ball R 0.80 by 0.0010, odd                     truth   0.340%  base   1.762%  build   0.000%
+Ball r 0.200 out of Ball R 0.80 by 0.0020, pole                    truth   0.662%  base   0.000%  build   0.000%
+Ball r 0.200 out of Ball R 0.80 by 0.0020, octant                  truth   0.670%  base   2.928%  build   0.000% baseKEPT
+Ball r 0.200 out of Ball R 0.80 by 0.0020, between                 truth   0.667%  base   2.477%  build   0.000% baseKEPT
+Ball r 0.200 out of Ball R 0.80 by 0.0020, odd                     truth   0.660%  base   1.953%  build   0.000%
+Ball r 0.200 out of Ball R 0.80 by 0.0040, pole                    truth   1.337%  base   0.000%  build   0.000%
+Ball r 0.200 out of Ball R 0.80 by 0.0040, octant                  truth   1.327%  base   3.374%  build   0.000% baseKEPT
+Ball r 0.200 out of Ball R 0.80 by 0.0040, between                 truth   1.322%  base   2.888%  build   0.000% baseKEPT
+Ball r 0.200 out of Ball R 0.80 by 0.0040, odd                     truth   1.332%  base   2.820%  build   0.000% baseKEPT
+Ball r 0.200 out of Ball R 0.80 by 0.0080, pole                    truth   2.652%  base   3.246%  build   1.718% CLEANED
+Ball r 0.200 out of Ball R 0.80 by 0.0080, octant                  truth   2.652%  base   4.266%  build   0.000% CLEANED
+Ball r 0.200 out of Ball R 0.80 by 0.0080, between                 truth   2.635%  base   3.732%  build   0.707% CLEANED
+Ball r 0.200 out of Ball R 0.80 by 0.0080, odd                     truth   2.640%  base   3.845%  build   0.000% CLEANED
+Ball r 0.200 out of Ball R 0.80 by 0.0160, pole                    truth   5.238%  base   6.483%  build   1.718% CLEANED
+Ball r 0.200 out of Ball R 0.80 by 0.0160, octant                  truth   5.240%  base   6.119%  build   2.348%
+Ball r 0.200 out of Ball R 0.80 by 0.0160, between                 truth   5.248%  base   5.778%  build   2.371%
+Ball r 0.200 out of Ball R 0.80 by 0.0160, odd                     truth   5.235%  base   6.080%  build   1.609% CLEANED
+Ball r 0.200 out of Ball R 0.80 by 0.0300, pole                    truth   9.695%  base  11.070%  build   6.027%
+Ball r 0.200 out of Ball R 0.80 by 0.0300, octant                  truth   9.712%  base   9.770%  build   6.257%
+Ball r 0.200 out of Ball R 0.80 by 0.0300, between                 truth   9.710%  base   9.871%  build   5.629%
+Ball r 0.200 out of Ball R 0.80 by 0.0300, odd                     truth   9.710%  base   9.972%  build   5.765%
+Ball r 0.320 out of Ball R 0.80 by 0.0002, pole                    truth   0.055%  base   0.000%  build   0.000%
+Ball r 0.320 out of Ball R 0.80 by 0.0002, octant                  truth   0.052%  base   1.914%  build   0.000%
+Ball r 0.320 out of Ball R 0.80 by 0.0002, between                 truth   0.048%  base   1.339%  build   0.000%
+Ball r 0.320 out of Ball R 0.80 by 0.0002, odd                     truth   0.055%  base   1.439%  build   0.000%
+Ball r 0.320 out of Ball R 0.80 by 0.0005, pole                    truth   0.133%  base   0.000%  build   0.000%
+Ball r 0.320 out of Ball R 0.80 by 0.0005, octant                  truth   0.130%  base   1.955%  build   0.000%
+Ball r 0.320 out of Ball R 0.80 by 0.0005, between                 truth   0.133%  base   1.364%  build   0.000%
+Ball r 0.320 out of Ball R 0.80 by 0.0005, odd                     truth   0.128%  base   1.489%  build   0.000%
+Ball r 0.320 out of Ball R 0.80 by 0.0010, pole                    truth   0.263%  base   0.010%  build   0.000%
+Ball r 0.320 out of Ball R 0.80 by 0.0010, octant                  truth   0.260%  base   2.022%  build   0.000% baseKEPT
+Ball r 0.320 out of Ball R 0.80 by 0.0010, between                 truth   0.258%  base   1.811%  build   0.000%
+Ball r 0.320 out of Ball R 0.80 by 0.0010, odd                     truth   0.263%  base   2.235%  build   0.000% baseKEPT
+Ball r 0.320 out of Ball R 0.80 by 0.0020, pole                    truth   0.515%  base   0.351%  build   0.000%
+Ball r 0.320 out of Ball R 0.80 by 0.0020, octant                  truth   0.530%  base   2.157%  build   0.000% baseKEPT
+Ball r 0.320 out of Ball R 0.80 by 0.0020, between                 truth   0.525%  base   1.977%  build   0.000%
+Ball r 0.320 out of Ball R 0.80 by 0.0020, odd                     truth   0.515%  base   2.359%  build   0.000% baseKEPT
+Ball r 0.320 out of Ball R 0.80 by 0.0040, pole                    truth   1.032%  base   2.728%  build   0.000% baseKEPT
+Ball r 0.320 out of Ball R 0.80 by 0.0040, octant                  truth   1.037%  base   2.426%  build   0.000% baseKEPT
+Ball r 0.320 out of Ball R 0.80 by 0.0040, between                 truth   1.047%  base   2.221%  build   0.000% baseKEPT
+Ball r 0.320 out of Ball R 0.80 by 0.0040, odd                     truth   1.030%  base   2.611%  build   0.000% baseKEPT
+Ball r 0.320 out of Ball R 0.80 by 0.0080, pole                    truth   2.065%  base   3.956%  build   0.000% CLEANED
+Ball r 0.320 out of Ball R 0.80 by 0.0080, octant                  truth   2.068%  base   2.970%  build   0.000% CLEANED
+Ball r 0.320 out of Ball R 0.80 by 0.0080, between                 truth   2.048%  base   2.816%  build   0.000% CLEANED
+Ball r 0.320 out of Ball R 0.80 by 0.0080, odd                     truth   2.058%  base   3.255%  build   0.000% CLEANED
+Ball r 0.320 out of Ball R 0.80 by 0.0160, pole                    truth   4.070%  base   6.049%  build   1.718% CLEANED
+Ball r 0.320 out of Ball R 0.80 by 0.0160, octant                  truth   4.052%  base   4.830%  build   1.208% CLEANED
+Ball r 0.320 out of Ball R 0.80 by 0.0160, between                 truth   4.072%  base   4.926%  build   1.294% CLEANED
+Ball r 0.320 out of Ball R 0.80 by 0.0160, odd                     truth   4.082%  base   4.640%  build   0.811% CLEANED
+Ball r 0.320 out of Ball R 0.80 by 0.0300, pole                    truth   7.498%  base   9.080%  build   4.586%
+Ball r 0.320 out of Ball R 0.80 by 0.0300, octant                  truth   7.488%  base   7.741%  build   3.050%
+Ball r 0.320 out of Ball R 0.80 by 0.0300, between                 truth   7.480%  base   7.948%  build   3.775%
+Ball r 0.320 out of Ball R 0.80 by 0.0300, odd                     truth   7.508%  base   7.778%  build   3.487%
+Ball r 0.480 out of Ball R 0.80 by 0.0002, pole                    truth   0.056%  base   1.764%  build   0.000%
+Ball r 0.480 out of Ball R 0.80 by 0.0002, octant                  truth   0.054%  base   1.543%  build   0.000%
+Ball r 0.480 out of Ball R 0.80 by 0.0002, between                 truth   0.058%  base   1.690%  build   0.000%
+Ball r 0.480 out of Ball R 0.80 by 0.0002, odd                     truth   0.054%  base   2.178%  build   0.000% baseKEPT
+Ball r 0.480 out of Ball R 0.80 by 0.0005, pole                    truth   0.126%  base   1.833%  build   0.000%
+Ball r 0.480 out of Ball R 0.80 by 0.0005, octant                  truth   0.130%  base   1.572%  build   0.000%
+Ball r 0.480 out of Ball R 0.80 by 0.0005, between                 truth   0.130%  base   1.733%  build   0.000%
+Ball r 0.480 out of Ball R 0.80 by 0.0005, odd                     truth   0.126%  base   2.203%  build   0.000% baseKEPT
+Ball r 0.480 out of Ball R 0.80 by 0.0010, pole                    truth   0.255%  base   1.947%  build   0.000%
+Ball r 0.480 out of Ball R 0.80 by 0.0010, octant                  truth   0.260%  base   1.620%  build   0.000%
+Ball r 0.480 out of Ball R 0.80 by 0.0010, between                 truth   0.264%  base   1.804%  build   0.000%
+Ball r 0.480 out of Ball R 0.80 by 0.0010, odd                     truth   0.256%  base   2.245%  build   0.000% baseKEPT
+Ball r 0.480 out of Ball R 0.80 by 0.0020, pole                    truth   0.517%  base   2.173%  build   0.000% baseKEPT
+Ball r 0.480 out of Ball R 0.80 by 0.0020, octant                  truth   0.521%  base   1.715%  build   0.000%
+Ball r 0.480 out of Ball R 0.80 by 0.0020, between                 truth   0.517%  base   1.946%  build   0.000%
+Ball r 0.480 out of Ball R 0.80 by 0.0020, odd                     truth   0.525%  base   2.329%  build   0.000% baseKEPT
+Ball r 0.480 out of Ball R 0.80 by 0.0040, pole                    truth   1.026%  base   2.615%  build   0.000% baseKEPT
+Ball r 0.480 out of Ball R 0.80 by 0.0040, octant                  truth   1.030%  base   1.899%  build   0.000%
+Ball r 0.480 out of Ball R 0.80 by 0.0040, between                 truth   1.026%  base   3.231%  build   0.000% baseKEPT
+Ball r 0.480 out of Ball R 0.80 by 0.0040, odd                     truth   1.032%  base   2.497%  build   0.000% baseKEPT
+Ball r 0.480 out of Ball R 0.80 by 0.0080, pole                    truth   2.054%  base   3.458%  build   0.000% CLEANED
+Ball r 0.480 out of Ball R 0.80 by 0.0080, octant                  truth   2.044%  base   4.335%  build   0.000% CLEANED
+Ball r 0.480 out of Ball R 0.80 by 0.0080, between                 truth   2.036%  base   3.784%  build   0.000% CLEANED
+Ball r 0.480 out of Ball R 0.80 by 0.0080, odd                     truth   2.038%  base   3.439%  build   0.000% CLEANED
+Ball r 0.480 out of Ball R 0.80 by 0.0160, pole                    truth   4.008%  base   5.804%  build   1.718% CLEANED
+Ball r 0.480 out of Ball R 0.80 by 0.0160, octant                  truth   4.004%  base   4.981%  build   1.208% CLEANED
+Ball r 0.480 out of Ball R 0.80 by 0.0160, between                 truth   4.004%  base   4.944%  build   0.707% CLEANED
+Ball r 0.480 out of Ball R 0.80 by 0.0160, odd                     truth   4.008%  base   4.545%  build   0.795% CLEANED
+Ball r 0.480 out of Ball R 0.80 by 0.0300, pole                    truth   7.272%  base   8.207%  build   3.701%
+Ball r 0.480 out of Ball R 0.80 by 0.0300, octant                  truth   7.276%  base   7.358%  build   1.471% CLEANED
+Ball r 0.480 out of Ball R 0.80 by 0.0300, between                 truth   7.276%  base   7.843%  build   2.192%
+Ball r 0.480 out of Ball R 0.80 by 0.0300, odd                     truth   7.266%  base   8.353%  build   2.342%
+ballInBall: 352 designs; kept that truly show under 2 %: base 126, build 0; cleaned that truly show 2 % or more: base 1, build 72 (the build's most: Ball r 0.120 out of Ball R 0.80 by 0.0160, pole, truly 7.730%, read 1.718%)

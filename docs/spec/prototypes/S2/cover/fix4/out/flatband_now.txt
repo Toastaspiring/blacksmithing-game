@@ -1,0 +1,8 @@
+plate 0.15, window 0.070, Ball r 0.30 at a gap 0.0140: reads 8.596 % on its model (8.596 % without the Ball), truly 8.596 %; kept true
+plate 0.15, window 0.060, Ball r 0.30 at a gap 0.0140: reads 6.316 % on its model (6.316 % without the Ball), truly 6.315 %; kept true
+plate 0.15, window 0.050, Ball r 0.30 at a gap 0.0130: reads 4.386 % on its model (4.386 % without the Ball), truly 4.386 %; kept true
+plate 0.10, window 0.050, Ball r 0.30 at a gap 0.0130: reads 8.929 % on its model (8.929 % without the Ball), truly 8.928 %; kept true
+plate 0.15, window 0.070, Ball r 0.30 at a gap 0.0121: reads 8.596 % on its model (8.596 % without the Ball), truly 8.596 %; kept true
+plate 0.10, window 0.060, Ball r 0.30 at a gap 0.0125: reads 12.857 % on its model (12.857 % without the Ball), truly 12.857 %; kept true
+plate 0.12, window 0.070, Ball r 0.30 at a gap 0.0125: reads 12.760 % on its model (12.760 % without the Ball), truly 12.760 %; kept true
+plate 0.50, window 0.105, Ball r 0.30 at a gap 0.0130: reads 2.042 % on its model (2.042 % without the Ball), truly 2.041 %; kept true

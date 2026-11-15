@@ -1,0 +1,385 @@
+Cyl r 0.022 out of Cyl R 0.15 by 0.0002, at 0.0°                  truth   4.292%  base   5.816%  build   0.000% CLEANED
+Cyl r 0.022 out of Cyl R 0.15 by 0.0002, at 5.6°                  truth   4.290%  base   8.411%  build   3.529%
+Cyl r 0.022 out of Cyl R 0.15 by 0.0002, at 2.8°                  truth   4.292%  base   7.360%  build   0.000% CLEANED
+Cyl r 0.022 out of Cyl R 0.15 by 0.0002, at 30.0°                 truth   4.285%  base   7.947%  build   3.065%
+Cyl r 0.022 out of Cyl R 0.15 by 0.0005, at 0.0°                  truth   6.792%  base   9.178%  build   5.816%
+Cyl r 0.022 out of Cyl R 0.15 by 0.0005, at 5.6°                  truth   6.787%  base   8.735%  build   5.565%
+Cyl r 0.022 out of Cyl R 0.15 by 0.0005, at 2.8°                  truth   6.790%  base   8.898%  build   4.509%
+Cyl r 0.022 out of Cyl R 0.15 by 0.0005, at 30.0°                 truth   6.775%  base   8.732%  build   5.100%
+Cyl r 0.022 out of Cyl R 0.15 by 0.0010, at 0.0°                  truth   9.640%  base  11.644%  build   7.672%
+Cyl r 0.022 out of Cyl R 0.15 by 0.0010, at 5.6°                  truth   9.640%  base  11.354%  build   8.866%
+Cyl r 0.022 out of Cyl R 0.15 by 0.0010, at 2.8°                  truth   9.632%  base   9.779%  build   8.327%
+Cyl r 0.022 out of Cyl R 0.15 by 0.0010, at 30.0°                 truth   9.652%  base  11.113%  build   8.627%
+Cyl r 0.022 out of Cyl R 0.15 by 0.0020, at 0.0°                  truth  13.715%  base  15.607%  build  13.118%
+Cyl r 0.022 out of Cyl R 0.15 by 0.0020, at 5.6°                  truth  13.722%  base  14.643%  build  12.380%
+Cyl r 0.022 out of Cyl R 0.15 by 0.0020, at 2.8°                  truth  13.727%  base  15.086%  build  13.228%
+Cyl r 0.022 out of Cyl R 0.15 by 0.0020, at 30.0°                 truth  13.742%  base  14.672%  build  13.387%
+Cyl r 0.022 out of Cyl R 0.15 by 0.0040, at 0.0°                  truth  19.644%  base  21.135%  build  19.421%
+Cyl r 0.022 out of Cyl R 0.15 by 0.0040, at 5.6°                  truth  19.647%  base  19.739%  build  18.025%
+Cyl r 0.022 out of Cyl R 0.15 by 0.0040, at 2.8°                  truth  19.639%  base  20.766%  build  19.142%
+Cyl r 0.022 out of Cyl R 0.15 by 0.0040, at 30.0°                 truth  19.682%  base  20.474%  build  18.538%
+Cyl r 0.022 out of Cyl R 0.15 by 0.0080, at 0.0°                  truth  28.499%  base  29.637%  build  28.290%
+Cyl r 0.022 out of Cyl R 0.15 by 0.0080, at 5.6°                  truth  28.497%  base  28.891%  build  27.545%
+Cyl r 0.022 out of Cyl R 0.15 by 0.0080, at 2.8°                  truth  28.494%  base  29.286%  build  27.985%
+Cyl r 0.022 out of Cyl R 0.15 by 0.0080, at 30.0°                 truth  28.497%  base  29.031%  build  28.022%
+Cyl r 0.022 out of Cyl R 0.15 by 0.0160, at 0.0°                  truth  42.350%  base  42.985%  build  42.044%
+Cyl r 0.022 out of Cyl R 0.15 by 0.0160, at 5.6°                  truth  42.300%  base  43.011%  build  41.980%
+Cyl r 0.022 out of Cyl R 0.15 by 0.0160, at 2.8°                  truth  42.275%  base  42.797%  build  41.892%
+Cyl r 0.022 out of Cyl R 0.15 by 0.0160, at 30.0°                 truth  42.350%  base  42.908%  build  41.878%
+Cyl r 0.022 out of Cyl R 0.15 by 0.0300, at 0.0°                  truth  61.246%  base  59.626%  build  59.626%
+Cyl r 0.022 out of Cyl R 0.15 by 0.0300, at 5.6°                  truth  61.221%  base  60.207%  build  60.207%
+Cyl r 0.022 out of Cyl R 0.15 by 0.0300, at 2.8°                  truth  61.196%  base  59.856%  build  59.856%
+Cyl r 0.022 out of Cyl R 0.15 by 0.0300, at 30.0°                 truth  61.196%  base  60.213%  build  60.213%
+Cyl r 0.037 out of Cyl R 0.15 by 0.0002, at 0.0°                  truth   3.375%  base   5.559%  build   0.000% CLEANED
+Cyl r 0.037 out of Cyl R 0.15 by 0.0002, at 5.6°                  truth   3.372%  base   5.654%  build   2.855%
+Cyl r 0.037 out of Cyl R 0.15 by 0.0002, at 2.8°                  truth   3.370%  base   5.123%  build   0.000% CLEANED
+Cyl r 0.037 out of Cyl R 0.15 by 0.0002, at 30.0°                 truth   3.375%  base   5.420%  build   0.000% CLEANED
+Cyl r 0.037 out of Cyl R 0.15 by 0.0005, at 0.0°                  truth   5.345%  base   7.487%  build   0.000% CLEANED
+Cyl r 0.037 out of Cyl R 0.15 by 0.0005, at 5.6°                  truth   5.342%  base   6.824%  build   4.024%
+Cyl r 0.037 out of Cyl R 0.15 by 0.0005, at 2.8°                  truth   5.342%  base   6.288%  build   3.488%
+Cyl r 0.037 out of Cyl R 0.15 by 0.0005, at 30.0°                 truth   5.347%  base   6.588%  build   3.788%
+Cyl r 0.037 out of Cyl R 0.15 by 0.0010, at 0.0°                  truth   7.575%  base   9.426%  build   6.627%
+Cyl r 0.037 out of Cyl R 0.15 by 0.0010, at 5.6°                  truth   7.575%  base   8.361%  build   5.978%
+Cyl r 0.037 out of Cyl R 0.15 by 0.0010, at 2.8°                  truth   7.575%  base   8.911%  build   6.898%
+Cyl r 0.037 out of Cyl R 0.15 by 0.0010, at 30.0°                 truth   7.585%  base   8.409%  build   7.050%
+Cyl r 0.037 out of Cyl R 0.15 by 0.0020, at 0.0°                  truth  10.770%  base  12.283%  build  10.540%
+Cyl r 0.037 out of Cyl R 0.15 by 0.0020, at 5.6°                  truth  10.775%  base  10.601%  build   9.173%
+Cyl r 0.037 out of Cyl R 0.15 by 0.0020, at 2.8°                  truth  10.767%  base  11.894%  build   9.781%
+Cyl r 0.037 out of Cyl R 0.15 by 0.0020, at 30.0°                 truth  10.765%  base  11.404%  build   9.291%
+Cyl r 0.037 out of Cyl R 0.15 by 0.0040, at 0.0°                  truth  15.362%  base  16.379%  build  14.952%
+Cyl r 0.037 out of Cyl R 0.15 by 0.0040, at 5.6°                  truth  15.359%  base  15.835%  build  14.407%
+Cyl r 0.037 out of Cyl R 0.15 by 0.0040, at 2.8°                  truth  15.354%  base  16.056%  build  14.676%
+Cyl r 0.037 out of Cyl R 0.15 by 0.0040, at 30.0°                 truth  15.364%  base  15.812%  build  14.941%
+Cyl r 0.037 out of Cyl R 0.15 by 0.0080, at 0.0°                  truth  22.109%  base  22.407%  build  21.424%
+Cyl r 0.037 out of Cyl R 0.15 by 0.0080, at 5.6°                  truth  22.106%  base  22.815%  build  21.832%
+Cyl r 0.037 out of Cyl R 0.15 by 0.0080, at 2.8°                  truth  22.116%  base  22.623%  build  21.671%
+Cyl r 0.037 out of Cyl R 0.15 by 0.0080, at 30.0°                 truth  22.114%  base  22.730%  build  21.747%
+Cyl r 0.037 out of Cyl R 0.15 by 0.0160, at 0.0°                  truth  32.315%  base  32.506%  build  31.734%
+Cyl r 0.037 out of Cyl R 0.15 by 0.0160, at 5.6°                  truth  32.240%  base  32.432%  build  32.240%
+Cyl r 0.037 out of Cyl R 0.15 by 0.0160, at 2.8°                  truth  32.290%  base  32.716%  build  32.001%
+Cyl r 0.037 out of Cyl R 0.15 by 0.0160, at 30.0°                 truth  32.514%  base  32.836%  build  32.121%
+Cyl r 0.037 out of Cyl R 0.15 by 0.0300, at 0.0°                  truth  46.779%  base  47.170%  build  46.579%
+Cyl r 0.037 out of Cyl R 0.15 by 0.0300, at 5.6°                  truth  46.779%  base  47.121%  build  46.564%
+Cyl r 0.037 out of Cyl R 0.15 by 0.0300, at 2.8°                  truth  46.829%  base  47.043%  build  46.452%
+Cyl r 0.037 out of Cyl R 0.15 by 0.0300, at 30.0°                 truth  46.804%  base  46.911%  build  46.495%
+Cyl r 0.060 out of Cyl R 0.15 by 0.0002, at 0.0°                  truth   2.800%  base   5.213%  build   0.000% CLEANED
+Cyl r 0.060 out of Cyl R 0.15 by 0.0002, at 5.6°                  truth   2.792%  base   4.045%  build   2.606%
+Cyl r 0.060 out of Cyl R 0.15 by 0.0002, at 2.8°                  truth   2.792%  base   3.796%  build   0.000% CLEANED
+Cyl r 0.060 out of Cyl R 0.15 by 0.0002, at 30.0°                 truth   2.792%  base   3.935%  build   0.000% CLEANED
+Cyl r 0.060 out of Cyl R 0.15 by 0.0005, at 0.0°                  truth   4.430%  base   6.343%  build   0.000% CLEANED
+Cyl r 0.060 out of Cyl R 0.15 by 0.0005, at 5.6°                  truth   4.427%  base   4.730%  build   3.090%
+Cyl r 0.060 out of Cyl R 0.15 by 0.0005, at 2.8°                  truth   4.427%  base   4.478%  build   2.838%
+Cyl r 0.060 out of Cyl R 0.15 by 0.0005, at 30.0°                 truth   4.430%  base   4.619%  build   2.978%
+Cyl r 0.060 out of Cyl R 0.15 by 0.0010, at 0.0°                  truth   6.267%  base   7.483%  build   5.842%
+Cyl r 0.060 out of Cyl R 0.15 by 0.0010, at 5.6°                  truth   6.270%  base   5.878%  build   4.237%
+Cyl r 0.060 out of Cyl R 0.15 by 0.0010, at 2.8°                  truth   6.267%  base   7.240%  build   3.983%
+Cyl r 0.060 out of Cyl R 0.15 by 0.0010, at 30.0°                 truth   6.265%  base   7.047%  build   4.125%
+Cyl r 0.060 out of Cyl R 0.15 by 0.0020, at 0.0°                  truth   8.885%  base   9.789%  build   8.149%
+Cyl r 0.060 out of Cyl R 0.15 by 0.0020, at 5.6°                  truth   8.890%  base   9.382%  build   7.870%
+Cyl r 0.060 out of Cyl R 0.15 by 0.0020, at 2.8°                  truth   8.885%  base   9.525%  build   7.899%
+Cyl r 0.060 out of Cyl R 0.15 by 0.0020, at 30.0°                 truth   8.890%  base   9.292%  build   8.420%
+Cyl r 0.060 out of Cyl R 0.15 by 0.0040, at 0.0°                  truth  12.645%  base  12.564%  build  11.728%
+Cyl r 0.060 out of Cyl R 0.15 by 0.0040, at 5.6°                  truth  12.637%  base  13.211%  build  12.325%
+Cyl r 0.060 out of Cyl R 0.15 by 0.0040, at 2.8°                  truth  12.645%  base  13.089%  build  11.850%
+Cyl r 0.060 out of Cyl R 0.15 by 0.0040, at 30.0°                 truth  12.650%  base  13.364%  build  12.125%
+Cyl r 0.060 out of Cyl R 0.15 by 0.0080, at 0.0°                  truth  18.094%  base  18.407%  build  17.570%
+Cyl r 0.060 out of Cyl R 0.15 by 0.0080, at 5.6°                  truth  18.081%  base  18.513%  build  17.677%
+Cyl r 0.060 out of Cyl R 0.15 by 0.0080, at 2.8°                  truth  18.089%  base  18.281%  build  17.621%
+Cyl r 0.060 out of Cyl R 0.15 by 0.0080, at 30.0°                 truth  18.094%  base  18.393%  build  17.844%
+Cyl r 0.060 out of Cyl R 0.15 by 0.0160, at 0.0°                  truth  26.115%  base  26.446%  build  25.870%
+Cyl r 0.060 out of Cyl R 0.15 by 0.0160, at 5.6°                  truth  26.120%  base  26.252%  build  25.676%
+Cyl r 0.060 out of Cyl R 0.15 by 0.0160, at 2.8°                  truth  26.123%  base  26.348%  build  25.772%
+Cyl r 0.060 out of Cyl R 0.15 by 0.0160, at 30.0°                 truth  26.128%  base  26.241%  build  25.849%
+Cyl r 0.060 out of Cyl R 0.15 by 0.0300, at 0.0°                  truth  37.011%  base  36.933%  build  36.548%
+Cyl r 0.060 out of Cyl R 0.15 by 0.0300, at 5.6°                  truth  37.036%  base  37.389%  build  36.937%
+Cyl r 0.060 out of Cyl R 0.15 by 0.0300, at 2.8°                  truth  36.911%  base  37.223%  build  36.804%
+Cyl r 0.060 out of Cyl R 0.15 by 0.0300, at 30.0°                 truth  36.961%  base  37.301%  build  36.883%
+Cyl r 0.090 out of Cyl R 0.15 by 0.0002, at 0.0°                  truth   2.577%  base   4.813%  build   0.000% CLEANED
+Cyl r 0.090 out of Cyl R 0.15 by 0.0002, at 5.6°                  truth   2.580%  base   3.090%  build   2.407%
+Cyl r 0.090 out of Cyl R 0.15 by 0.0002, at 2.8°                  truth   2.582%  base   2.988%  build   0.000% CLEANED
+Cyl r 0.090 out of Cyl R 0.15 by 0.0002, at 30.0°                 truth   2.580%  base   3.045%  build   0.000% CLEANED
+Cyl r 0.090 out of Cyl R 0.15 by 0.0005, at 0.0°                  truth   4.087%  base   5.509%  build   0.000% CLEANED
+Cyl r 0.090 out of Cyl R 0.15 by 0.0005, at 5.6°                  truth   4.095%  base   3.511%  build   2.501%
+Cyl r 0.090 out of Cyl R 0.15 by 0.0005, at 2.8°                  truth   4.085%  base   5.313%  build   2.407%
+Cyl r 0.090 out of Cyl R 0.15 by 0.0005, at 30.0°                 truth   4.080%  base   3.465%  build   2.455%
+Cyl r 0.090 out of Cyl R 0.15 by 0.0010, at 0.0°                  truth   5.772%  base   6.214%  build   5.204%
+Cyl r 0.090 out of Cyl R 0.15 by 0.0010, at 5.6°                  truth   5.777%  base   7.230%  build   3.209%
+Cyl r 0.090 out of Cyl R 0.15 by 0.0010, at 2.8°                  truth   5.782%  base   6.112%  build   3.104%
+Cyl r 0.090 out of Cyl R 0.15 by 0.0010, at 30.0°                 truth   5.770%  base   6.033%  build   3.163%
+Cyl r 0.090 out of Cyl R 0.15 by 0.0020, at 0.0°                  truth   8.165%  base   7.644%  build   6.634%
+Cyl r 0.090 out of Cyl R 0.15 by 0.0020, at 5.6°                  truth   8.175%  base   8.798%  build   7.788%
+Cyl r 0.090 out of Cyl R 0.15 by 0.0020, at 2.8°                  truth   8.165%  base   8.697%  build   6.529%
+Cyl r 0.090 out of Cyl R 0.15 by 0.0020, at 30.0°                 truth   8.167%  base   8.753%  build   7.780%
+Cyl r 0.090 out of Cyl R 0.15 by 0.0040, at 0.0°                  truth  11.555%  base  11.929%  build  10.919%
+Cyl r 0.090 out of Cyl R 0.15 by 0.0040, at 5.6°                  truth  11.552%  base  11.660%  build  10.650%
+Cyl r 0.090 out of Cyl R 0.15 by 0.0040, at 2.8°                  truth  11.557%  base  11.828%  build  10.937%
+Cyl r 0.090 out of Cyl R 0.15 by 0.0040, at 30.0°                 truth  11.557%  base  11.748%  build  11.113%
+Cyl r 0.090 out of Cyl R 0.15 by 0.0080, at 0.0°                  truth  16.357%  base  16.303%  build  15.788%
+Cyl r 0.090 out of Cyl R 0.15 by 0.0080, at 5.6°                  truth  16.377%  base  16.875%  build  15.865%
+Cyl r 0.090 out of Cyl R 0.15 by 0.0080, at 2.8°                  truth  16.374%  base  16.471%  build  15.730%
+Cyl r 0.090 out of Cyl R 0.15 by 0.0080, at 30.0°                 truth  16.359%  base  16.662%  build  15.820%
+Cyl r 0.090 out of Cyl R 0.15 by 0.0160, at 0.0°                  truth  23.248%  base  23.400%  build  22.885%
+Cyl r 0.090 out of Cyl R 0.15 by 0.0160, at 5.6°                  truth  23.228%  base  23.200%  build  23.048%
+Cyl r 0.090 out of Cyl R 0.15 by 0.0160, at 2.8°                  truth  23.226%  base  23.344%  build  22.829%
+Cyl r 0.090 out of Cyl R 0.15 by 0.0160, at 30.0°                 truth  23.211%  base  23.299%  build  22.784%
+Cyl r 0.090 out of Cyl R 0.15 by 0.0300, at 0.0°                  truth  31.978%  base  32.052%  build  31.697%
+Cyl r 0.090 out of Cyl R 0.15 by 0.0300, at 5.6°                  truth  31.978%  base  32.228%  build  31.873%
+Cyl r 0.090 out of Cyl R 0.15 by 0.0300, at 2.8°                  truth  32.053%  base  32.183%  build  31.829%
+Cyl r 0.090 out of Cyl R 0.15 by 0.0300, at 30.0°                 truth  31.928%  base  32.208%  build  31.854%
+Cyl r 0.045 out of Cyl R 0.30 by 0.0002, at 0.0°                  truth   3.032%  base   5.816%  build   0.000% CLEANED
+Cyl r 0.045 out of Cyl R 0.30 by 0.0002, at 5.6°                  truth   3.030%  base   7.733%  build   2.908%
+Cyl r 0.045 out of Cyl R 0.30 by 0.0002, at 2.8°                  truth   3.030%  base   6.685%  build   0.000% CLEANED
+Cyl r 0.045 out of Cyl R 0.30 by 0.0002, at 30.0°                 truth   3.030%  base   7.271%  build   0.000% CLEANED
+Cyl r 0.045 out of Cyl R 0.30 by 0.0005, at 0.0°                  truth   4.797%  base   5.816%  build   0.000% CLEANED
+Cyl r 0.045 out of Cyl R 0.30 by 0.0005, at 5.6°                  truth   4.797%  base   8.727%  build   3.868%
+Cyl r 0.045 out of Cyl R 0.30 by 0.0005, at 2.8°                  truth   4.797%  base   7.698%  build   2.908%
+Cyl r 0.045 out of Cyl R 0.30 by 0.0005, at 30.0°                 truth   4.787%  base   8.286%  build   3.404%
+Cyl r 0.045 out of Cyl R 0.30 by 0.0010, at 0.0°                  truth   6.792%  base   9.179%  build   5.816%
+Cyl r 0.045 out of Cyl R 0.30 by 0.0010, at 5.6°                  truth   6.787%  base   8.735%  build   5.566%
+Cyl r 0.045 out of Cyl R 0.30 by 0.0010, at 2.8°                  truth   6.792%  base   8.898%  build   4.509%
+Cyl r 0.045 out of Cyl R 0.30 by 0.0010, at 30.0°                 truth   6.775%  base   8.732%  build   5.100%
+Cyl r 0.045 out of Cyl R 0.30 by 0.0020, at 0.0°                  truth   9.640%  base  11.644%  build   7.672%
+Cyl r 0.045 out of Cyl R 0.30 by 0.0020, at 5.6°                  truth   9.640%  base  11.355%  build   8.866%
+Cyl r 0.045 out of Cyl R 0.30 by 0.0020, at 2.8°                  truth   9.632%  base   9.779%  build   8.327%
+Cyl r 0.045 out of Cyl R 0.30 by 0.0020, at 30.0°                 truth   9.652%  base  11.114%  build   8.627%
+Cyl r 0.045 out of Cyl R 0.30 by 0.0040, at 0.0°                  truth  13.715%  base  15.607%  build  13.118%
+Cyl r 0.045 out of Cyl R 0.30 by 0.0040, at 5.6°                  truth  13.722%  base  14.643%  build  12.380%
+Cyl r 0.045 out of Cyl R 0.30 by 0.0040, at 2.8°                  truth  13.727%  base  15.086%  build  13.228%
+Cyl r 0.045 out of Cyl R 0.30 by 0.0040, at 30.0°                 truth  13.742%  base  14.672%  build  13.387%
+Cyl r 0.045 out of Cyl R 0.30 by 0.0080, at 0.0°                  truth  19.644%  base  21.135%  build  19.421%
+Cyl r 0.045 out of Cyl R 0.30 by 0.0080, at 5.6°                  truth  19.647%  base  19.739%  build  18.025%
+Cyl r 0.045 out of Cyl R 0.30 by 0.0080, at 2.8°                  truth  19.639%  base  20.766%  build  19.142%
+Cyl r 0.045 out of Cyl R 0.30 by 0.0080, at 30.0°                 truth  19.682%  base  20.474%  build  18.538%
+Cyl r 0.045 out of Cyl R 0.30 by 0.0160, at 0.0°                  truth  28.499%  base  29.637%  build  28.290%
+Cyl r 0.045 out of Cyl R 0.30 by 0.0160, at 5.6°                  truth  28.497%  base  28.892%  build  27.545%
+Cyl r 0.045 out of Cyl R 0.30 by 0.0160, at 2.8°                  truth  28.494%  base  29.286%  build  27.985%
+Cyl r 0.045 out of Cyl R 0.30 by 0.0160, at 30.0°                 truth  28.499%  base  29.031%  build  28.022%
+Cyl r 0.045 out of Cyl R 0.30 by 0.0300, at 0.0°                  truth  40.727%  base  41.464%  build  40.433%
+Cyl r 0.045 out of Cyl R 0.30 by 0.0300, at 5.6°                  truth  40.677%  base  41.420%  build  40.389%
+Cyl r 0.045 out of Cyl R 0.30 by 0.0300, at 2.8°                  truth  40.702%  base  41.212%  build  40.181%
+Cyl r 0.045 out of Cyl R 0.30 by 0.0300, at 30.0°                 truth  40.752%  base  41.243%  build  40.239%
+Cyl r 0.075 out of Cyl R 0.30 by 0.0002, at 0.0°                  truth   2.387%  base   5.559%  build   0.000% CLEANED
+Cyl r 0.075 out of Cyl R 0.30 by 0.0002, at 5.6°                  truth   2.385%  base   5.266%  build   0.000% CLEANED
+Cyl r 0.075 out of Cyl R 0.30 by 0.0002, at 2.8°                  truth   2.385%  base   3.758%  build   0.000% CLEANED
+Cyl r 0.075 out of Cyl R 0.30 by 0.0002, at 30.0°                 truth   2.387%  base   5.033%  build   0.000% CLEANED
+Cyl r 0.075 out of Cyl R 0.30 by 0.0005, at 0.0°                  truth   3.772%  base   5.559%  build   0.000% CLEANED
+Cyl r 0.075 out of Cyl R 0.30 by 0.0005, at 5.6°                  truth   3.772%  base   5.849%  build   3.050%
+Cyl r 0.075 out of Cyl R 0.30 by 0.0005, at 2.8°                  truth   3.772%  base   5.317%  build   0.000% CLEANED
+Cyl r 0.075 out of Cyl R 0.30 by 0.0005, at 30.0°                 truth   3.777%  base   5.614%  build   2.814%
+Cyl r 0.075 out of Cyl R 0.30 by 0.0010, at 0.0°                  truth   5.345%  base   7.487%  build   0.000% CLEANED
+Cyl r 0.075 out of Cyl R 0.30 by 0.0010, at 5.6°                  truth   5.342%  base   6.824%  build   4.024%
+Cyl r 0.075 out of Cyl R 0.30 by 0.0010, at 2.8°                  truth   5.342%  base   6.288%  build   3.489%
+Cyl r 0.075 out of Cyl R 0.30 by 0.0010, at 30.0°                 truth   5.347%  base   6.588%  build   3.788%
+Cyl r 0.075 out of Cyl R 0.30 by 0.0020, at 0.0°                  truth   7.575%  base   9.427%  build   6.627%
+Cyl r 0.075 out of Cyl R 0.30 by 0.0020, at 5.6°                  truth   7.575%  base   8.361%  build   5.979%
+Cyl r 0.075 out of Cyl R 0.30 by 0.0020, at 2.8°                  truth   7.575%  base   8.911%  build   6.898%
+Cyl r 0.075 out of Cyl R 0.30 by 0.0020, at 30.0°                 truth   7.585%  base   8.409%  build   7.050%
+Cyl r 0.075 out of Cyl R 0.30 by 0.0040, at 0.0°                  truth  10.770%  base  12.283%  build  10.540%
+Cyl r 0.075 out of Cyl R 0.30 by 0.0040, at 5.6°                  truth  10.775%  base  10.601%  build   9.174%
+Cyl r 0.075 out of Cyl R 0.30 by 0.0040, at 2.8°                  truth  10.770%  base  11.895%  build   9.781%
+Cyl r 0.075 out of Cyl R 0.30 by 0.0040, at 30.0°                 truth  10.765%  base  11.404%  build   9.291%
+Cyl r 0.075 out of Cyl R 0.30 by 0.0080, at 0.0°                  truth  15.362%  base  16.379%  build  14.952%
+Cyl r 0.075 out of Cyl R 0.30 by 0.0080, at 5.6°                  truth  15.359%  base  15.835%  build  14.408%
+Cyl r 0.075 out of Cyl R 0.30 by 0.0080, at 2.8°                  truth  15.354%  base  16.056%  build  14.676%
+Cyl r 0.075 out of Cyl R 0.30 by 0.0080, at 30.0°                 truth  15.364%  base  15.812%  build  14.941%
+Cyl r 0.075 out of Cyl R 0.30 by 0.0160, at 0.0°                  truth  22.109%  base  22.407%  build  21.424%
+Cyl r 0.075 out of Cyl R 0.30 by 0.0160, at 5.6°                  truth  22.106%  base  22.815%  build  21.832%
+Cyl r 0.075 out of Cyl R 0.30 by 0.0160, at 2.8°                  truth  22.116%  base  22.623%  build  21.671%
+Cyl r 0.075 out of Cyl R 0.30 by 0.0160, at 30.0°                 truth  22.114%  base  22.730%  build  21.747%
+Cyl r 0.075 out of Cyl R 0.30 by 0.0300, at 0.0°                  truth  31.115%  base  31.321%  build  30.548%
+Cyl r 0.075 out of Cyl R 0.30 by 0.0300, at 5.6°                  truth  31.215%  base  31.800%  build  31.027%
+Cyl r 0.075 out of Cyl R 0.30 by 0.0300, at 2.8°                  truth  31.165%  base  31.584%  build  30.909%
+Cyl r 0.075 out of Cyl R 0.30 by 0.0300, at 30.0°                 truth  31.190%  base  31.562%  build  30.955%
+Cyl r 0.120 out of Cyl R 0.30 by 0.0002, at 0.0°                  truth   1.977%  base   5.213%  build   0.000% baseKEPT
+Cyl r 0.120 out of Cyl R 0.30 by 0.0002, at 5.6°                  truth   1.977%  base   3.818%  build   0.000% baseKEPT
+Cyl r 0.120 out of Cyl R 0.30 by 0.0002, at 2.8°                  truth   1.975%  base   3.088%  build   0.000% baseKEPT
+Cyl r 0.120 out of Cyl R 0.30 by 0.0002, at 30.0°                 truth   1.975%  base   3.708%  build   0.000% baseKEPT
+Cyl r 0.120 out of Cyl R 0.30 by 0.0005, at 0.0°                  truth   3.132%  base   5.213%  build   0.000% CLEANED
+Cyl r 0.120 out of Cyl R 0.30 by 0.0005, at 5.6°                  truth   3.127%  base   4.158%  build   2.606%
+Cyl r 0.120 out of Cyl R 0.30 by 0.0005, at 2.8°                  truth   3.125%  base   3.909%  build   0.000% CLEANED
+Cyl r 0.120 out of Cyl R 0.30 by 0.0005, at 30.0°                 truth   3.127%  base   4.049%  build   0.000% CLEANED
+Cyl r 0.120 out of Cyl R 0.30 by 0.0010, at 0.0°                  truth   4.430%  base   6.343%  build   0.000% CLEANED
+Cyl r 0.120 out of Cyl R 0.30 by 0.0010, at 5.6°                  truth   4.427%  base   4.730%  build   3.090%
+Cyl r 0.120 out of Cyl R 0.30 by 0.0010, at 2.8°                  truth   4.427%  base   4.478%  build   2.838%
+Cyl r 0.120 out of Cyl R 0.30 by 0.0010, at 30.0°                 truth   4.430%  base   4.619%  build   2.979%
+Cyl r 0.120 out of Cyl R 0.30 by 0.0020, at 0.0°                  truth   6.267%  base   7.483%  build   5.842%
+Cyl r 0.120 out of Cyl R 0.30 by 0.0020, at 5.6°                  truth   6.270%  base   5.878%  build   4.238%
+Cyl r 0.120 out of Cyl R 0.30 by 0.0020, at 2.8°                  truth   6.267%  base   7.241%  build   3.983%
+Cyl r 0.120 out of Cyl R 0.30 by 0.0020, at 30.0°                 truth   6.265%  base   7.047%  build   4.126%
+Cyl r 0.120 out of Cyl R 0.30 by 0.0040, at 0.0°                  truth   8.885%  base   9.789%  build   8.149%
+Cyl r 0.120 out of Cyl R 0.30 by 0.0040, at 5.6°                  truth   8.890%  base   9.382%  build   7.870%
+Cyl r 0.120 out of Cyl R 0.30 by 0.0040, at 2.8°                  truth   8.887%  base   9.525%  build   7.899%
+Cyl r 0.120 out of Cyl R 0.30 by 0.0040, at 30.0°                 truth   8.890%  base   9.292%  build   8.420%
+Cyl r 0.120 out of Cyl R 0.30 by 0.0080, at 0.0°                  truth  12.645%  base  12.564%  build  11.728%
+Cyl r 0.120 out of Cyl R 0.30 by 0.0080, at 5.6°                  truth  12.637%  base  13.211%  build  12.326%
+Cyl r 0.120 out of Cyl R 0.30 by 0.0080, at 2.8°                  truth  12.645%  base  13.089%  build  11.850%
+Cyl r 0.120 out of Cyl R 0.30 by 0.0080, at 30.0°                 truth  12.650%  base  13.364%  build  12.125%
+Cyl r 0.120 out of Cyl R 0.30 by 0.0160, at 0.0°                  truth  18.094%  base  18.407%  build  17.570%
+Cyl r 0.120 out of Cyl R 0.30 by 0.0160, at 5.6°                  truth  18.081%  base  18.513%  build  17.677%
+Cyl r 0.120 out of Cyl R 0.30 by 0.0160, at 2.8°                  truth  18.089%  base  18.281%  build  17.621%
+Cyl r 0.120 out of Cyl R 0.30 by 0.0160, at 30.0°                 truth  18.094%  base  18.393%  build  17.844%
+Cyl r 0.120 out of Cyl R 0.30 by 0.0300, at 0.0°                  truth  25.220%  base  25.544%  build  24.968%
+Cyl r 0.120 out of Cyl R 0.30 by 0.0300, at 5.6°                  truth  25.238%  base  25.377%  build  24.862%
+Cyl r 0.120 out of Cyl R 0.30 by 0.0300, at 2.8°                  truth  25.223%  base  25.447%  build  24.871%
+Cyl r 0.120 out of Cyl R 0.30 by 0.0300, at 30.0°                 truth  25.223%  base  25.370%  build  24.794%
+Cyl r 0.180 out of Cyl R 0.30 by 0.0002, at 0.0°                  truth   1.822%  base   4.813%  build   0.000% baseKEPT
+Cyl r 0.180 out of Cyl R 0.30 by 0.0002, at 5.6°                  truth   1.822%  base   2.950%  build   0.000% baseKEPT
+Cyl r 0.180 out of Cyl R 0.30 by 0.0002, at 2.8°                  truth   1.822%  base   2.848%  build   0.000% baseKEPT
+Cyl r 0.180 out of Cyl R 0.30 by 0.0002, at 30.0°                 truth   1.822%  base   2.905%  build   0.000% baseKEPT
+Cyl r 0.180 out of Cyl R 0.30 by 0.0005, at 0.0°                  truth   2.880%  base   4.813%  build   0.000% CLEANED
+Cyl r 0.180 out of Cyl R 0.30 by 0.0005, at 5.6°                  truth   2.885%  base   3.160%  build   2.407%
+Cyl r 0.180 out of Cyl R 0.30 by 0.0005, at 2.8°                  truth   2.887%  base   3.058%  build   0.000% CLEANED
+Cyl r 0.180 out of Cyl R 0.30 by 0.0005, at 30.0°                 truth   2.887%  base   3.115%  build   0.000% CLEANED
+Cyl r 0.180 out of Cyl R 0.30 by 0.0010, at 0.0°                  truth   4.087%  base   5.509%  build   0.000% CLEANED
+Cyl r 0.180 out of Cyl R 0.30 by 0.0010, at 5.6°                  truth   4.095%  base   3.511%  build   2.501%
+Cyl r 0.180 out of Cyl R 0.30 by 0.0010, at 2.8°                  truth   4.085%  base   5.313%  build   2.407%
+Cyl r 0.180 out of Cyl R 0.30 by 0.0010, at 30.0°                 truth   4.080%  base   3.465%  build   2.455%
+Cyl r 0.180 out of Cyl R 0.30 by 0.0020, at 0.0°                  truth   5.772%  base   6.214%  build   5.204%
+Cyl r 0.180 out of Cyl R 0.30 by 0.0020, at 5.6°                  truth   5.777%  base   7.230%  build   3.209%
+Cyl r 0.180 out of Cyl R 0.30 by 0.0020, at 2.8°                  truth   5.782%  base   6.112%  build   3.104%
+Cyl r 0.180 out of Cyl R 0.30 by 0.0020, at 30.0°                 truth   5.770%  base   6.033%  build   3.163%
+Cyl r 0.180 out of Cyl R 0.30 by 0.0040, at 0.0°                  truth   8.165%  base   7.644%  build   6.634%
+Cyl r 0.180 out of Cyl R 0.30 by 0.0040, at 5.6°                  truth   8.175%  base   8.799%  build   7.789%
+Cyl r 0.180 out of Cyl R 0.30 by 0.0040, at 2.8°                  truth   8.165%  base   8.697%  build   6.529%
+Cyl r 0.180 out of Cyl R 0.30 by 0.0040, at 30.0°                 truth   8.167%  base   8.753%  build   7.780%
+Cyl r 0.180 out of Cyl R 0.30 by 0.0080, at 0.0°                  truth  11.555%  base  11.929%  build  10.919%
+Cyl r 0.180 out of Cyl R 0.30 by 0.0080, at 5.6°                  truth  11.552%  base  11.660%  build  10.650%
+Cyl r 0.180 out of Cyl R 0.30 by 0.0080, at 2.8°                  truth  11.557%  base  11.828%  build  10.937%
+Cyl r 0.180 out of Cyl R 0.30 by 0.0080, at 30.0°                 truth  11.557%  base  11.748%  build  11.113%
+Cyl r 0.180 out of Cyl R 0.30 by 0.0160, at 0.0°                  truth  16.357%  base  16.303%  build  15.788%
+Cyl r 0.180 out of Cyl R 0.30 by 0.0160, at 5.6°                  truth  16.377%  base  16.875%  build  15.865%
+Cyl r 0.180 out of Cyl R 0.30 by 0.0160, at 2.8°                  truth  16.374%  base  16.471%  build  15.730%
+Cyl r 0.180 out of Cyl R 0.30 by 0.0160, at 30.0°                 truth  16.359%  base  16.662%  build  15.820%
+Cyl r 0.180 out of Cyl R 0.30 by 0.0300, at 0.0°                  truth  22.473%  base  22.648%  build  22.133%
+Cyl r 0.180 out of Cyl R 0.30 by 0.0300, at 5.6°                  truth  22.478%  base  22.487%  build  21.972%
+Cyl r 0.180 out of Cyl R 0.30 by 0.0300, at 2.8°                  truth  22.476%  base  22.592%  build  22.077%
+Cyl r 0.180 out of Cyl R 0.30 by 0.0300, at 30.0°                 truth  22.491%  base  22.548%  build  22.099%
+Cyl r 0.120 out of Cyl R 0.80 by 0.0002, at 0.0°                  truth   1.860%  base   5.816%  build   0.000% baseKEPT
+Cyl r 0.120 out of Cyl R 0.80 by 0.0002, at 5.6°                  truth   1.855%  base   7.311%  build   0.000% baseKEPT
+Cyl r 0.120 out of Cyl R 0.80 by 0.0002, at 2.8°                  truth   1.855%  base   4.586%  build   0.000% baseKEPT
+Cyl r 0.120 out of Cyl R 0.80 by 0.0002, at 30.0°                 truth   1.855%  base   4.879%  build   0.000% baseKEPT
+Cyl r 0.120 out of Cyl R 0.80 by 0.0005, at 0.0°                  truth   2.935%  base   5.816%  build   0.000% CLEANED
+Cyl r 0.120 out of Cyl R 0.80 by 0.0005, at 5.6°                  truth   2.935%  base   7.691%  build   2.908%
+Cyl r 0.120 out of Cyl R 0.80 by 0.0005, at 2.8°                  truth   2.935%  base   4.775%  build   0.000% CLEANED
+Cyl r 0.120 out of Cyl R 0.80 by 0.0005, at 30.0°                 truth   2.932%  base   7.229%  build   0.000% CLEANED
+Cyl r 0.120 out of Cyl R 0.80 by 0.0010, at 0.0°                  truth   4.150%  base   5.816%  build   0.000% CLEANED
+Cyl r 0.120 out of Cyl R 0.80 by 0.0010, at 5.6°                  truth   4.155%  base   8.326%  build   3.444%
+Cyl r 0.120 out of Cyl R 0.80 by 0.0010, at 2.8°                  truth   4.155%  base   7.276%  build   0.000% CLEANED
+Cyl r 0.120 out of Cyl R 0.80 by 0.0010, at 30.0°                 truth   4.152%  base   7.863%  build   2.981%
+Cyl r 0.120 out of Cyl R 0.80 by 0.0020, at 0.0°                  truth   5.882%  base   8.338%  build   5.816%
+Cyl r 0.120 out of Cyl R 0.80 by 0.0020, at 5.6°                  truth   5.877%  base   8.731%  build   4.717%
+Cyl r 0.120 out of Cyl R 0.80 by 0.0020, at 2.8°                  truth   5.877%  base   8.544%  build   3.662%
+Cyl r 0.120 out of Cyl R 0.80 by 0.0020, at 30.0°                 truth   5.867%  base   8.729%  build   4.252%
+Cyl r 0.120 out of Cyl R 0.80 by 0.0040, at 0.0°                  truth   8.335%  base  10.861%  build   5.980%
+Cyl r 0.120 out of Cyl R 0.80 by 0.0040, at 5.6°                  truth   8.335%  base  10.480%  build   7.266%
+Cyl r 0.120 out of Cyl R 0.80 by 0.0040, at 2.8°                  truth   8.335%  base   9.337%  build   7.472%
+Cyl r 0.120 out of Cyl R 0.80 by 0.0040, at 30.0°                 truth   8.312%  base   9.491%  build   7.771%
+Cyl r 0.120 out of Cyl R 0.80 by 0.0080, at 0.0°                  truth  11.852%  base  13.853%  build  11.675%
+Cyl r 0.120 out of Cyl R 0.80 by 0.0080, at 5.6°                  truth  11.852%  base  13.109%  build  10.620%
+Cyl r 0.120 out of Cyl R 0.80 by 0.0080, at 2.8°                  truth  11.847%  base  13.109%  build  10.070%
+Cyl r 0.120 out of Cyl R 0.80 by 0.0080, at 30.0°                 truth  11.827%  base  12.867%  build  10.378%
+Cyl r 0.120 out of Cyl R 0.80 by 0.0160, at 0.0°                  truth  16.905%  base  17.624%  build  16.641%
+Cyl r 0.120 out of Cyl R 0.80 by 0.0160, at 5.6°                  truth  16.907%  base  17.262%  build  15.547%
+Cyl r 0.120 out of Cyl R 0.80 by 0.0160, at 2.8°                  truth  16.912%  base  18.115%  build  16.014%
+Cyl r 0.120 out of Cyl R 0.80 by 0.0160, at 30.0°                 truth  16.942%  base  17.648%  build  15.547%
+Cyl r 0.120 out of Cyl R 0.80 by 0.0300, at 0.0°                  truth  23.549%  base  23.761%  build  23.468%
+Cyl r 0.120 out of Cyl R 0.80 by 0.0300, at 5.6°                  truth  23.552%  base  23.538%  build  21.824%
+Cyl r 0.120 out of Cyl R 0.80 by 0.0300, at 2.8°                  truth  23.549%  base  24.531%  build  23.001%
+Cyl r 0.120 out of Cyl R 0.80 by 0.0300, at 30.0°                 truth  23.532%  base  24.210%  build  22.679%
+Cyl r 0.200 out of Cyl R 0.80 by 0.0002, at 0.0°                  truth   1.460%  base   5.559%  build   0.000% baseKEPT
+Cyl r 0.200 out of Cyl R 0.80 by 0.0002, at 5.6°                  truth   1.460%  base   5.024%  build   0.000% baseKEPT
+Cyl r 0.200 out of Cyl R 0.80 by 0.0002, at 2.8°                  truth   1.460%  base   3.637%  build   0.000% baseKEPT
+Cyl r 0.200 out of Cyl R 0.80 by 0.0002, at 30.0°                 truth   1.462%  base   3.785%  build   0.000% baseKEPT
+Cyl r 0.200 out of Cyl R 0.80 by 0.0005, at 0.0°                  truth   2.313%  base   5.559%  build   0.000% CLEANED
+Cyl r 0.200 out of Cyl R 0.80 by 0.0005, at 5.6°                  truth   2.310%  base   5.242%  build   0.000% CLEANED
+Cyl r 0.200 out of Cyl R 0.80 by 0.0005, at 2.8°                  truth   2.313%  base   3.746%  build   0.000% CLEANED
+Cyl r 0.200 out of Cyl R 0.80 by 0.0005, at 30.0°                 truth   2.315%  base   5.008%  build   0.000% CLEANED
+Cyl r 0.200 out of Cyl R 0.80 by 0.0010, at 0.0°                  truth   3.273%  base   5.559%  build   0.000% CLEANED
+Cyl r 0.200 out of Cyl R 0.80 by 0.0010, at 5.6°                  truth   3.273%  base   5.606%  build   2.806%
+Cyl r 0.200 out of Cyl R 0.80 by 0.0010, at 2.8°                  truth   3.268%  base   5.075%  build   0.000% CLEANED
+Cyl r 0.200 out of Cyl R 0.80 by 0.0010, at 30.0°                 truth   3.273%  base   5.372%  build   0.000% CLEANED
+Cyl r 0.200 out of Cyl R 0.80 by 0.0020, at 0.0°                  truth   4.630%  base   7.005%  build   0.000% CLEANED
+Cyl r 0.200 out of Cyl R 0.80 by 0.0020, at 5.6°                  truth   4.630%  base   6.336%  build   3.537%
+Cyl r 0.200 out of Cyl R 0.80 by 0.0020, at 2.8°                  truth   4.635%  base   5.802%  build   3.002%
+Cyl r 0.200 out of Cyl R 0.80 by 0.0020, at 30.0°                 truth   4.635%  base   6.101%  build   3.301%
+Cyl r 0.200 out of Cyl R 0.80 by 0.0040, at 0.0°                  truth   6.565%  base   8.452%  build   5.653%
+Cyl r 0.200 out of Cyl R 0.80 by 0.0040, at 5.6°                  truth   6.555%  base   7.800%  build   5.001%
+Cyl r 0.200 out of Cyl R 0.80 by 0.0040, at 2.8°                  truth   6.563%  base   7.940%  build   4.463%
+Cyl r 0.200 out of Cyl R 0.80 by 0.0040, at 30.0°                 truth   6.563%  base   7.563%  build   4.764%
+Cyl r 0.200 out of Cyl R 0.80 by 0.0080, at 0.0°                  truth   9.313%  base  11.153%  build   8.581%
+Cyl r 0.200 out of Cyl R 0.80 by 0.0080, at 5.6°                  truth   9.318%  base   9.585%  build   8.384%
+Cyl r 0.200 out of Cyl R 0.80 by 0.0080, at 2.8°                  truth   9.310%  base  10.414%  build   8.060%
+Cyl r 0.200 out of Cyl R 0.80 by 0.0080, at 30.0°                 truth   9.310%  base   9.927%  build   8.041%
+Cyl r 0.200 out of Cyl R 0.80 by 0.0160, at 0.0°                  truth  13.252%  base  14.325%  build  12.898%
+Cyl r 0.200 out of Cyl R 0.80 by 0.0160, at 5.6°                  truth  13.259%  base  13.603%  build  11.215%
+Cyl r 0.200 out of Cyl R 0.80 by 0.0160, at 2.8°                  truth  13.259%  base  14.053%  build  12.626%
+Cyl r 0.200 out of Cyl R 0.80 by 0.0160, at 30.0°                 truth  13.257%  base  13.837%  build  12.565%
+Cyl r 0.200 out of Cyl R 0.80 by 0.0300, at 0.0°                  truth  18.362%  base  18.911%  build  17.928%
+Cyl r 0.200 out of Cyl R 0.80 by 0.0300, at 5.6°                  truth  18.367%  base  19.145%  build  17.718%
+Cyl r 0.200 out of Cyl R 0.80 by 0.0300, at 2.8°                  truth  18.367%  base  18.714%  build  17.707%
+Cyl r 0.200 out of Cyl R 0.80 by 0.0300, at 30.0°                 truth  18.362%  base  18.689%  build  17.600%
+Cyl r 0.320 out of Cyl R 0.80 by 0.0002, at 0.0°                  truth   1.211%  base   5.213%  build   0.000% baseKEPT
+Cyl r 0.320 out of Cyl R 0.80 by 0.0002, at 5.6°                  truth   1.211%  base   3.676%  build   0.000% baseKEPT
+Cyl r 0.320 out of Cyl R 0.80 by 0.0002, at 2.8°                  truth   1.209%  base   3.017%  build   0.000% baseKEPT
+Cyl r 0.320 out of Cyl R 0.80 by 0.0002, at 30.0°                 truth   1.211%  base   3.566%  build   0.000% baseKEPT
+Cyl r 0.320 out of Cyl R 0.80 by 0.0005, at 0.0°                  truth   1.915%  base   5.213%  build   0.000% baseKEPT
+Cyl r 0.320 out of Cyl R 0.80 by 0.0005, at 5.6°                  truth   1.915%  base   3.804%  build   0.000% baseKEPT
+Cyl r 0.320 out of Cyl R 0.80 by 0.0005, at 2.8°                  truth   1.915%  base   3.081%  build   0.000% baseKEPT
+Cyl r 0.320 out of Cyl R 0.80 by 0.0005, at 30.0°                 truth   1.916%  base   3.694%  build   0.000% baseKEPT
+Cyl r 0.320 out of Cyl R 0.80 by 0.0010, at 0.0°                  truth   2.706%  base   5.213%  build   0.000% CLEANED
+Cyl r 0.320 out of Cyl R 0.80 by 0.0010, at 5.6°                  truth   2.706%  base   4.017%  build   2.606%
+Cyl r 0.320 out of Cyl R 0.80 by 0.0010, at 2.8°                  truth   2.707%  base   3.768%  build   0.000% CLEANED
+Cyl r 0.320 out of Cyl R 0.80 by 0.0010, at 30.0°                 truth   2.712%  base   3.907%  build   0.000% CLEANED
+Cyl r 0.320 out of Cyl R 0.80 by 0.0020, at 0.0°                  truth   3.829%  base   5.213%  build   0.000% CLEANED
+Cyl r 0.320 out of Cyl R 0.80 by 0.0020, at 5.6°                  truth   3.826%  base   4.444%  build   2.803%
+Cyl r 0.320 out of Cyl R 0.80 by 0.0020, at 2.8°                  truth   3.829%  base   4.193%  build   0.000% CLEANED
+Cyl r 0.320 out of Cyl R 0.80 by 0.0020, at 30.0°                 truth   3.835%  base   4.333%  build   2.693%
+Cyl r 0.320 out of Cyl R 0.80 by 0.0040, at 0.0°                  truth   5.422%  base   6.909%  build   5.268%
+Cyl r 0.320 out of Cyl R 0.80 by 0.0040, at 5.6°                  truth   5.420%  base   5.304%  build   3.663%
+Cyl r 0.320 out of Cyl R 0.80 by 0.0040, at 2.8°                  truth   5.420%  base   6.438%  build   3.410%
+Cyl r 0.320 out of Cyl R 0.80 by 0.0040, at 30.0°                 truth   5.426%  base   5.192%  build   3.552%
+Cyl r 0.320 out of Cyl R 0.80 by 0.0080, at 0.0°                  truth   7.689%  base   8.635%  build   6.994%
+Cyl r 0.320 out of Cyl R 0.80 by 0.0080, at 5.6°                  truth   7.683%  base   8.249%  build   5.389%
+Cyl r 0.320 out of Cyl R 0.80 by 0.0080, at 2.8°                  truth   7.683%  base   8.387%  build   6.746%
+Cyl r 0.320 out of Cyl R 0.80 by 0.0080, at 30.0°                 truth   7.689%  base   8.191%  build   6.563%
+Cyl r 0.320 out of Cyl R 0.80 by 0.0160, at 0.0°                  truth  10.916%  base  11.341%  build  10.541%
+Cyl r 0.320 out of Cyl R 0.80 by 0.0160, at 5.6°                  truth  10.918%  base  11.667%  build  10.026%
+Cyl r 0.320 out of Cyl R 0.80 by 0.0160, at 2.8°                  truth  10.916%  base  11.266%  build  10.047%
+Cyl r 0.320 out of Cyl R 0.80 by 0.0160, at 30.0°                 truth  10.919%  base  11.558%  build   9.918%
+Cyl r 0.320 out of Cyl R 0.80 by 0.0300, at 0.0°                  truth  15.066%  base  15.150%  build  13.731%
+Cyl r 0.320 out of Cyl R 0.80 by 0.0300, at 5.6°                  truth  15.065%  base  15.581%  build  14.745%
+Cyl r 0.320 out of Cyl R 0.80 by 0.0300, at 2.8°                  truth  15.067%  base  15.448%  build  14.612%
+Cyl r 0.320 out of Cyl R 0.80 by 0.0300, at 30.0°                 truth  15.059%  base  15.523%  build  14.686%
+Cyl r 0.480 out of Cyl R 0.80 by 0.0002, at 0.0°                  truth   1.119%  base   4.813%  build   0.000% baseKEPT
+Cyl r 0.480 out of Cyl R 0.80 by 0.0002, at 5.6°                  truth   1.116%  base   2.863%  build   0.000% baseKEPT
+Cyl r 0.480 out of Cyl R 0.80 by 0.0002, at 2.8°                  truth   1.116%  base   2.761%  build   0.000% baseKEPT
+Cyl r 0.480 out of Cyl R 0.80 by 0.0002, at 30.0°                 truth   1.117%  base   2.818%  build   0.000% baseKEPT
+Cyl r 0.480 out of Cyl R 0.80 by 0.0005, at 0.0°                  truth   1.767%  base   4.813%  build   0.000% baseKEPT
+Cyl r 0.480 out of Cyl R 0.80 by 0.0005, at 5.6°                  truth   1.766%  base   2.942%  build   0.000% baseKEPT
+Cyl r 0.480 out of Cyl R 0.80 by 0.0005, at 2.8°                  truth   1.767%  base   2.839%  build   0.000% baseKEPT
+Cyl r 0.480 out of Cyl R 0.80 by 0.0005, at 30.0°                 truth   1.767%  base   2.897%  build   0.000% baseKEPT
+Cyl r 0.480 out of Cyl R 0.80 by 0.0010, at 0.0°                  truth   2.498%  base   4.813%  build   0.000% CLEANED
+Cyl r 0.480 out of Cyl R 0.80 by 0.0010, at 5.6°                  truth   2.498%  base   3.073%  build   2.407%
+Cyl r 0.480 out of Cyl R 0.80 by 0.0010, at 2.8°                  truth   2.502%  base   2.970%  build   0.000% CLEANED
+Cyl r 0.480 out of Cyl R 0.80 by 0.0010, at 30.0°                 truth   2.499%  base   3.028%  build   0.000% CLEANED
+Cyl r 0.480 out of Cyl R 0.80 by 0.0020, at 0.0°                  truth   3.535%  base   5.335%  build   0.000% CLEANED
+Cyl r 0.480 out of Cyl R 0.80 by 0.0020, at 5.6°                  truth   3.533%  base   3.335%  build   2.407%
+Cyl r 0.480 out of Cyl R 0.80 by 0.0020, at 2.8°                  truth   3.533%  base   5.226%  build   0.000% CLEANED
+Cyl r 0.480 out of Cyl R 0.80 by 0.0020, at 30.0°                 truth   3.534%  base   3.290%  build   2.407%
+Cyl r 0.480 out of Cyl R 0.80 by 0.0040, at 0.0°                  truth   5.000%  base   5.857%  build   4.847%
+Cyl r 0.480 out of Cyl R 0.80 by 0.0040, at 5.6°                  truth   5.000%  base   3.865%  build   2.855%
+Cyl r 0.480 out of Cyl R 0.80 by 0.0040, at 2.8°                  truth   5.000%  base   5.760%  build   2.750%
+Cyl r 0.480 out of Cyl R 0.80 by 0.0040, at 30.0°                 truth   5.000%  base   5.522%  build   2.809%
+Cyl r 0.480 out of Cyl R 0.80 by 0.0080, at 0.0°                  truth   7.071%  base   6.928%  build   5.918%
+Cyl r 0.480 out of Cyl R 0.80 by 0.0080, at 5.6°                  truth   7.074%  base   8.091%  build   3.920%
+Cyl r 0.480 out of Cyl R 0.80 by 0.0080, at 2.8°                  truth   7.074%  base   6.824%  build   5.814%
+Cyl r 0.480 out of Cyl R 0.80 by 0.0080, at 30.0°                 truth   7.074%  base   7.920%  build   5.732%
+Cyl r 0.480 out of Cyl R 0.80 by 0.0160, at 0.0°                  truth  10.004%  base  10.527%  build   9.722%
+Cyl r 0.480 out of Cyl R 0.80 by 0.0160, at 5.6°                  truth  10.005%  base  10.225%  build   9.215%
+Cyl r 0.480 out of Cyl R 0.80 by 0.0160, at 2.8°                  truth  10.000%  base  10.119%  build   9.109%
+Cyl r 0.480 out of Cyl R 0.80 by 0.0160, at 30.0°                 truth  10.002%  base  10.178%  build   9.168%
+Cyl r 0.480 out of Cyl R 0.80 by 0.0300, at 0.0°                  truth  13.708%  base  14.227%  build  13.217%
+Cyl r 0.480 out of Cyl R 0.80 by 0.0300, at 5.6°                  truth  13.706%  base  13.600%  build  12.664%
+Cyl r 0.480 out of Cyl R 0.80 by 0.0300, at 2.8°                  truth  13.709%  base  13.950%  build  13.266%
+Cyl r 0.480 out of Cyl R 0.80 by 0.0300, at 30.0°                 truth  13.700%  base  13.779%  build  13.017%
+cylInCyl: 384 designs; kept that truly show under 2 %: base 32, build 0; cleaned that truly show 2 % or more: base 0, build 56 (the build's most: Cyl r 0.037 out of Cyl R 0.15 by 0.0005, at 0.0°, truly 5.345%, read 0.000%)

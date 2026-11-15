@@ -1,0 +1,82 @@
+disk r 0.8: the prism's side over an edge 0.1576 long, its corners 0.00387 past the true side
+Block       0.150 × 0.02 × 0.5, centred 0.0000 from the middle, δ 1e-06 r: out by up to 0.00351; reads 22.418%, truly 44.132%
+Block       0.150 × 0.02 × 0.5, centred 0.0000 from the middle, δ 1e-05 r: out by up to 0.00351; reads 22.372%, truly 42.763%
+Block       0.150 × 0.02 × 0.5, centred 0.0000 from the middle, δ 1e-04 r: out by up to 0.00344; reads 21.910%, truly 38.324%
+Block       0.100 × 0.02 × 0.5, centred 0.0000 from the middle, δ 1e-06 r: out by up to 0.00156; reads  9.488%, truly 40.699%
+Block       0.100 × 0.02 × 0.5, centred 0.0000 from the middle, δ 1e-05 r: out by up to 0.00155; reads  9.423%, truly 38.757%
+Block       0.100 × 0.02 × 0.5, centred 0.0000 from the middle, δ 1e-04 r: out by up to 0.00148; reads  8.773%, truly 32.464%
+Block       0.070 × 0.02 × 0.5, centred 0.0000 from the middle, δ 1e-06 r: out by up to 0.00076; reads  0.000%, truly 37.285%  <- cleaned
+Block       0.070 × 0.02 × 0.5, centred 0.0000 from the middle, δ 1e-05 r: out by up to 0.00076; reads  0.000%, truly 34.690%  <- cleaned
+Block       0.070 × 0.02 × 0.5, centred 0.0000 from the middle, δ 1e-04 r: out by up to 0.00069; reads  0.000%, truly 26.285%  <- cleaned
+Block       0.070 × 0.02 × 0.5, centred 0.0394 from the middle, δ 1e-06 r: out by up to 0.00346; reads 20.897%, truly 39.774%
+Block       0.070 × 0.02 × 0.5, centred 0.0394 from the middle, δ 1e-05 r: out by up to 0.00345; reads 20.853%, truly 39.765%
+Block       0.070 × 0.02 × 0.5, centred 0.0394 from the middle, δ 1e-04 r: out by up to 0.00338; reads 20.415%, truly 35.983%
+Block       0.070 × 0.02 × 0.5, centred 0.0437 from the middle, δ 1e-06 r: out by up to 0.00387; reads 23.474%, truly 40.027%
+Block       0.070 × 0.02 × 0.5, centred 0.0437 from the middle, δ 1e-05 r: out by up to 0.00386; reads 23.430%, truly 40.019%
+Block       0.070 × 0.02 × 0.5, centred 0.0437 from the middle, δ 1e-04 r: out by up to 0.00379; reads 22.991%, truly 38.555%
+Block       0.065 × 0.02 × 0.4, centred 0.0000 from the middle, δ 1e-06 r: out by up to 0.00066; reads  0.000%, truly 36.255%  <- cleaned
+Block       0.065 × 0.02 × 0.4, centred 0.0000 from the middle, δ 1e-05 r: out by up to 0.00065; reads  0.000%, truly 33.525%  <- cleaned
+Block       0.065 × 0.02 × 0.4, centred 0.0000 from the middle, δ 1e-04 r: out by up to 0.00058; reads  0.000%, truly 24.686%  <- cleaned
+Block       0.065 × 0.02 × 0.4, centred 0.0394 from the middle, δ 1e-06 r: out by up to 0.00323; reads 20.429%, truly 38.889%
+Block       0.065 × 0.02 × 0.4, centred 0.0394 from the middle, δ 1e-05 r: out by up to 0.00322; reads 20.383%, truly 38.879%
+Block       0.065 × 0.02 × 0.4, centred 0.0394 from the middle, δ 1e-04 r: out by up to 0.00315; reads 19.921%, truly 36.315%
+Block       0.065 × 0.02 × 0.4, centred 0.0462 from the middle, δ 1e-06 r: out by up to 0.00387; reads 24.727%, truly 39.311%
+Block       0.065 × 0.02 × 0.4, centred 0.0462 from the middle, δ 1e-05 r: out by up to 0.00386; reads 24.681%, truly 39.305%
+Block       0.065 × 0.02 × 0.4, centred 0.0462 from the middle, δ 1e-04 r: out by up to 0.00379; reads 24.218%, truly 39.251%
+Block       0.040 × 0.02 × 0.5, centred 0.0000 from the middle, δ 1e-06 r: out by up to 0.00025; reads  0.000%, truly 30.935%  <- cleaned
+Block       0.040 × 0.02 × 0.5, centred 0.0000 from the middle, δ 1e-05 r: out by up to 0.00024; reads  0.000%, truly 27.026%  <- cleaned
+Block       0.040 × 0.02 × 0.5, centred 0.0000 from the middle, δ 1e-04 r: out by up to 0.00017; reads  0.000%, truly 14.370%  <- cleaned
+Block       0.040 × 0.02 × 0.5, centred 0.0394 from the middle, δ 1e-06 r: out by up to 0.00220; reads 17.974%, truly 34.423%
+Block       0.040 × 0.02 × 0.5, centred 0.0394 from the middle, δ 1e-05 r: out by up to 0.00220; reads 17.908%, truly 34.410%
+Block       0.040 × 0.02 × 0.5, centred 0.0394 from the middle, δ 1e-04 r: out by up to 0.00212; reads 17.252%, truly 34.322%
+Block       0.040 × 0.02 × 0.5, centred 0.0587 from the middle, δ 1e-06 r: out by up to 0.00387; reads 35.363%, truly 36.266%
+Block       0.040 × 0.02 × 0.5, centred 0.0587 from the middle, δ 1e-05 r: out by up to 0.00386; reads 35.297%, truly 36.254%
+Block       0.040 × 0.02 × 0.5, centred 0.0587 from the middle, δ 1e-04 r: out by up to 0.00379; reads 34.636%, truly 36.130%
+Wedge       0.150 × 0.02 × 0.5, centred 0.0000 from the middle, δ 1e-06 r: out by up to 0.00351; reads 23.951%, truly 47.378%
+Wedge       0.150 × 0.02 × 0.5, centred 0.0000 from the middle, δ 1e-05 r: out by up to 0.00351; reads 23.903%, truly 45.902%
+Wedge       0.150 × 0.02 × 0.5, centred 0.0000 from the middle, δ 1e-04 r: out by up to 0.00344; reads 23.414%, truly 41.121%
+Wedge       0.100 × 0.02 × 0.5, centred 0.0000 from the middle, δ 1e-06 r: out by up to 0.00156; reads 10.475%, truly 44.982%
+Wedge       0.100 × 0.02 × 0.5, centred 0.0000 from the middle, δ 1e-05 r: out by up to 0.00155; reads 10.403%, truly 42.833%
+Wedge       0.100 × 0.02 × 0.5, centred 0.0000 from the middle, δ 1e-04 r: out by up to 0.00148; reads  9.688%, truly 35.870%
+Wedge       0.070 × 0.02 × 0.5, centred 0.0000 from the middle, δ 1e-06 r: out by up to 0.00076; reads  0.000%, truly 42.490%  <- cleaned
+Wedge       0.070 × 0.02 × 0.5, centred 0.0000 from the middle, δ 1e-05 r: out by up to 0.00076; reads  0.000%, truly 39.532%  <- cleaned
+Wedge       0.070 × 0.02 × 0.5, centred 0.0000 from the middle, δ 1e-04 r: out by up to 0.00069; reads  0.000%, truly 29.952%  <- cleaned
+Wedge       0.070 × 0.02 × 0.5, centred 0.0394 from the middle, δ 1e-06 r: out by up to 0.00346; reads 23.578%, truly 45.079%
+Wedge       0.070 × 0.02 × 0.5, centred 0.0394 from the middle, δ 1e-05 r: out by up to 0.00345; reads 23.529%, truly 45.071%
+Wedge       0.070 × 0.02 × 0.5, centred 0.0394 from the middle, δ 1e-04 r: out by up to 0.00338; reads 23.040%, truly 40.771%
+Wedge       0.070 × 0.02 × 0.5, centred 0.0437 from the middle, δ 1e-06 r: out by up to 0.00387; reads 26.450%, truly 45.303%
+Wedge       0.070 × 0.02 × 0.5, centred 0.0437 from the middle, δ 1e-05 r: out by up to 0.00386; reads 26.401%, truly 45.294%
+Wedge       0.070 × 0.02 × 0.5, centred 0.0437 from the middle, δ 1e-04 r: out by up to 0.00379; reads 25.913%, truly 43.638%
+Wedge       0.065 × 0.02 × 0.4, centred 0.0000 from the middle, δ 1e-06 r: out by up to 0.00066; reads  0.000%, truly 41.696%  <- cleaned
+Wedge       0.065 × 0.02 × 0.4, centred 0.0000 from the middle, δ 1e-05 r: out by up to 0.00065; reads  0.000%, truly 38.555%  <- cleaned
+Wedge       0.065 × 0.02 × 0.4, centred 0.0000 from the middle, δ 1e-04 r: out by up to 0.00058; reads  0.000%, truly 28.389%  <- cleaned
+Wedge       0.065 × 0.02 × 0.4, centred 0.0394 from the middle, δ 1e-06 r: out by up to 0.00323; reads 23.262%, truly 44.467%
+Wedge       0.065 × 0.02 × 0.4, centred 0.0394 from the middle, δ 1e-05 r: out by up to 0.00322; reads 23.210%, truly 44.459%
+Wedge       0.065 × 0.02 × 0.4, centred 0.0394 from the middle, δ 1e-04 r: out by up to 0.00315; reads 22.690%, truly 41.521%
+Wedge       0.065 × 0.02 × 0.4, centred 0.0462 from the middle, δ 1e-06 r: out by up to 0.00387; reads 28.094%, truly 44.843%
+Wedge       0.065 × 0.02 × 0.4, centred 0.0462 from the middle, δ 1e-05 r: out by up to 0.00386; reads 28.042%, truly 44.837%
+Wedge       0.065 × 0.02 × 0.4, centred 0.0462 from the middle, δ 1e-04 r: out by up to 0.00379; reads 27.522%, truly 44.792%
+Wedge       0.040 × 0.02 × 0.5, centred 0.0000 from the middle, δ 1e-06 r: out by up to 0.00025; reads  0.000%, truly 37.521%  <- cleaned
+Wedge       0.040 × 0.02 × 0.5, centred 0.0000 from the middle, δ 1e-05 r: out by up to 0.00024; reads  0.000%, truly 32.781%  <- cleaned
+Wedge       0.040 × 0.02 × 0.5, centred 0.0000 from the middle, δ 1e-04 r: out by up to 0.00017; reads  0.000%, truly 17.432%  <- cleaned
+Wedge       0.040 × 0.02 × 0.5, centred 0.0394 from the middle, δ 1e-06 r: out by up to 0.00220; reads 21.672%, truly 41.563%
+Wedge       0.040 × 0.02 × 0.5, centred 0.0394 from the middle, δ 1e-05 r: out by up to 0.00220; reads 21.593%, truly 41.550%
+Wedge       0.040 × 0.02 × 0.5, centred 0.0394 from the middle, δ 1e-04 r: out by up to 0.00212; reads 20.806%, truly 41.454%
+Wedge       0.040 × 0.02 × 0.5, centred 0.0587 from the middle, δ 1e-06 r: out by up to 0.00387; reads 42.384%, truly 43.451%
+Wedge       0.040 × 0.02 × 0.5, centred 0.0587 from the middle, δ 1e-05 r: out by up to 0.00386; reads 42.306%, truly 43.439%
+Wedge       0.040 × 0.02 × 0.5, centred 0.0587 from the middle, δ 1e-04 r: out by up to 0.00379; reads 41.523%, truly 43.305%
+CornerWedge 0.150 × 0.02 × 0.5, centred 0.0000 from the middle, δ 1e-06 r: out by up to 0.00351; reads 23.859%, truly 48.208%
+CornerWedge 0.150 × 0.02 × 0.5, centred 0.0000 from the middle, δ 1e-05 r: out by up to 0.00351; reads 23.810%, truly 46.675%
+CornerWedge 0.150 × 0.02 × 0.5, centred 0.0000 from the middle, δ 1e-04 r: out by up to 0.00344; reads 23.322%, truly 41.725%
+CornerWedge 0.100 × 0.02 × 0.5, centred 0.0000 from the middle, δ 1e-06 r: out by up to 0.00156; reads 10.535%, truly 46.606%
+CornerWedge 0.100 × 0.02 × 0.5, centred 0.0000 from the middle, δ 1e-05 r: out by up to 0.00155; reads 10.463%, truly 44.348%
+CornerWedge 0.100 × 0.02 × 0.5, centred 0.0000 from the middle, δ 1e-04 r: out by up to 0.00148; reads  9.743%, truly 37.057%
+CornerWedge 0.070 × 0.02 × 0.5, centred 0.0000 from the middle, δ 1e-06 r: out by up to 0.00076; reads  0.000%, truly 44.784%  <- cleaned
+CornerWedge 0.070 × 0.02 × 0.5, centred 0.0000 from the middle, δ 1e-05 r: out by up to 0.00076; reads  0.000%, truly 41.637%  <- cleaned
+CornerWedge 0.070 × 0.02 × 0.5, centred 0.0000 from the middle, δ 1e-04 r: out by up to 0.00069; reads  0.000%, truly 31.476%  <- cleaned
+CornerWedge 0.070 × 0.02 × 0.5, centred 0.0394 from the middle, δ 1e-06 r: out by up to 0.00346; reads 25.125%, truly 48.030%
+CornerWedge 0.070 × 0.02 × 0.5, centred 0.0394 from the middle, δ 1e-05 r: out by up to 0.00345; reads 25.073%, truly 48.025%
+CornerWedge 0.070 × 0.02 × 0.5, centred 0.0394 from the middle, δ 1e-04 r: out by up to 0.00338; reads 24.552%, truly 43.446%
+CornerWedge 0.070 × 0.02 × 0.5, centred 0.0437 from the middle, δ 1e-06 r: out by up to 0.00387; reads 28.186%, truly 48.270%
+CornerWedge 0.070 × 0.02 × 0.5, centred 0.0437 from the middle, δ 1e-05 r: out by up to 0.00386; reads 28.134%, truly 48.266%
+CornerWedge 0.070 × 0.02 × 0.5, centred 0.0437 from the middle, δ 1e-04 r: out by up to 0.00379; reads 27.613%, truly 46.503%

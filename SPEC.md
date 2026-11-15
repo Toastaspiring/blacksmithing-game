@@ -61,7 +61,7 @@ Roblox-bound code only transports, persists and draws.
   and rarity §8.2–8.4. **Tuning numbers**: §5.3, §5.5, the tables of §6.8–6.13, §8.4, and §16 (every constant with
   its rationale). **Minigame rules**: §6 (play and scoring), §12.5–12.8 (what the player sees), §7.4 (what a
   failure, timeout or abandon costs). **Data formats**: §3.3, §9.3–9.4, §10.2.
-- **Conventions**: **[Decision to confirm]** marks carry their Q number; **Phase N hook:** lines say what later phases
+- **Conventions**: **[Decision to confirm]** marks carry their Q number (§0.4) or O number (§17.1); **Phase N hook:** lines say what later phases
   plug into; `E-Sx.y` points to `docs/spec/SPEC-evidence.md`; review finding ids appear only in the evidence appendix
   and refer to `docs/spec/review/findings-all.md`. Owners: S1 data model and persistence data, S2 geometry and
   difficulty, S3 minigames, S4 crafting and outcome, S5 server, networking and persistence lifecycle, S6 client UX, S7
@@ -111,7 +111,7 @@ draft (not from your design draft), dropped. Per-section logs of alternatives an
 | "Pick materials" step → material is a per-part blueprint field (§3.3) | the live preview needs it | J, Q14 |
 | Voxel grid → analytic per-part geometry, local samples, a 2D blade raster (§4.3) | a grid mis-measures a thin blade by +67 % / −17 % (E-S2.4) | J |
 | Mass = union volume, overlaps counted once; balance point measured from the guard (§4.5) | stacking buys nothing; the draft's "near the guard" focus | J |
-| Factors per step on the parts it works; volume-weighted counts; Thinness from union chords; "enclosed" = < 2 % exposed; dust < 0.0002 stud³; PartCount range 3–16 (§4.4, §5.1–5.2) | invariant to splitting a blade; filler cannot buy a tier | J |
+| Factors per step on the parts it works; volume-weighted counts; Thinness from union chords; "enclosed" = < 2 % exposed; dust < 0.0002 stud³; PartCount range 3–16 (§4.4, §5.1–5.2) | invariant to splitting a blade; filler cannot buy a tier, but for round filler a hair out of a round part (§17.1 O9) | J |
 | Asymmetry about the fixed hitbox plane x = 0, soft 0.02 tolerance; Z asymmetry deferred (§5.2) | the draft's "mirrored grid"; nothing hidden moves it | Q3 |
 | Validation adds "blade above the grip", slot maxima, a kept Blade and Grip part (§3.7, §4.2) | recognizable swords, bounded filler | Q3, Q4 |
 | Material term in D = 0 for Iron and Steel; the step's material = highest (difficultyTerm, hardness) (§5.3, §7.2) | free materials would be a difficulty slider | Q13 |
@@ -167,7 +167,7 @@ src/shared → ReplicatedStorage.Blacksmith                                     
                 World Presentation [S7] · Audio [S6]
   Util/         Quantize [S1] · Signal [S5] RB
   Blueprint/    Schema Canonical Quat Names Views [S1] · Mirror [S2] · WorkSet [S4]
-  Physics/      Shapes Gjk Sampling MassProps Edge Factors Difficulty Analyze [S2]
+  Physics/      Shapes Gjk Cover Sampling MassProps Edge Factors Difficulty Analyze [S2]
   Minigames/    Minigames Types Rng Params Timeline Checks Input HoldZone TimingStrike PrecisionTrace Bots [S3]
   Crafting/     Types Plan Quality Rarity Stats Outcome [S4]
   Pipeline      [S2 + S4]
@@ -194,8 +194,9 @@ tests/ · scripts/verify.luau · tools/ [S8] · vendor/ProfileStore (MadStudio 4
   require crosses a Rojo root; `tests/lib` requires nothing in `src/` (specs pass modules in).
 - **L2** Layers, each requiring only lower ones: Definitions → Util → Blueprint → Physics → Minigames, Crafting →
   Pipeline → Items → Persistence, EditorCore, Showcase, World, ItemRender → Net → Session → RB code;
-  `Session/SessionMachine` uses `Net/Protocol`'s wire types and no Net module requires Session. Upward calls go
-  through injected callbacks or Signals; no cycles (Roblox errors on them; S8's T-META-07 checks both trees).
+  `Session/SessionMachine` uses `Net/Protocol`'s wire types and no Net module requires Session. Inside Physics:
+  Shapes → Gjk, Cover → Sampling → MassProps → Analyze (`Cover` requires `Definitions/Balance` and `Shapes` only). Upward
+  calls go through injected callbacks or Signals; no cycles (Roblox errors on them; S8's T-META-07 checks both trees).
 - **L3** Pure modules: relative string requires (`./X`, `../Dir/X`), no `game`, `script`, `task`, services or Roblox
   datatypes, no `init.luau`. RB files in `src/shared` start `--!strict` + `-- @roblox-bound`; no pure module
   requires them. RB code requires by instance path (`script.Parent.X`; clients `WaitForChild`).
@@ -237,7 +238,8 @@ README commands: `aftman install`, `rojo serve`, `rojo build default.project.jso
 **[Decision to confirm]**, Q2). (2) Data stores → deletion
 template for automated right to be forgotten: standard key, store `PlayerData`, key pattern `User_{UserId}`, scope
 `global`; test it with a dummy account; every later store holding user data gets its own. (3) Studio API access only
-on S8's separate test experience. (4) After the first `rojo serve`, check both place properties in Studio.
+on S8's separate test experience. (4) After the first `rojo serve`, check both place properties in Studio. (5) Before
+the first publish, the test tree (§14.10) comes out of the place (§14.12).
 
 ### 1.5 Boot and player lifecycle
 
@@ -725,6 +727,7 @@ Closed forms on `q = {qx, qy, qz, qw}` (`⊗` = Hamilton product, `H = 0.7071067
 --!strict
 -- src/shared/Blueprint/Mirror.luau (pure)
 Mirror.reflect(part: Schema.PartData, plane: "X" | "Z"): Schema.PartData   -- same id; the caller assigns new ids
+Mirror.isSelfSymmetric(part: Schema.PartData, plane: "X" | "Z"): boolean   -- the solid is its own image, within EPS_GEOM
 ```
 
 Verified: 10,000 random point tests over all shapes and both planes, 0 membership mismatches (max |Δsd| 1.7e-16); a
@@ -804,7 +807,8 @@ Views.summary(r: Schema.BlueprintRecord): Schema.BlueprintSummary
 BlueprintCore (canonical, §3) ─► Shapes.prepare (basis via Blueprint/Quat, AABB, analytic V / centroid / area)
  ─► QUICK: slot counts, containment ─────────────── errors? stop (editor highlight, Save stores the result)
  ─► V3 connectivity (GJK) + V4 orientation
- ─► surface samples ─► exposure ─► CLEAN (Dust, Enclosed) ─► V5 kept Blade + Grip ── invalid? stop
+ ─► the verdict, per part: CLEAN (Dust, Enclosed) ─► the measure: kept parts' surface samples, exposure, contact
+ ─► V5 kept Blade + Grip ── invalid? stop
  ─► owned volumes (exact clipping / refined sampling) ─► MASS PROPERTIES (mass, COM, grip, balance, reach)
  ─► blade raster ─► outline ─► EDGE (chains, main-chain length)
  ─► per enabled step: work set (kept parts, CraftPlans) ─► 8 factors ─► g, m, d ─► tierRaw, tier   (§5)
@@ -813,8 +817,9 @@ BlueprintCore (canonical, §3) ─► Shapes.prepare (basis via Blueprint/Quat, 
 | Module (`src/shared/Physics/`, pure) | Holds |
 |---|---|
 | `Shapes` | `prepare`, `sd`, `chord`, `support`, `aabb` (S6's extents), `extentAlong`, `maxDist` |
+| `Cover` | the verdict's reading (§4.4): each part's polyhedral model, what shows of it against its hiders' models, exactly; its work units |
 | `Gjk` | `within(a, b, tol)`, `distance(a, b)` |
-| `Sampling` | volume and surface samples, exposure, cleaning |
+| `Sampling` | volume and surface samples, the verdict's and the measure's ranks, exposure: the verdict (cleaning) and the measure |
 | `MassProps` | owned volumes (convex clipping), mass, COM, grip frames, guard line, balance, reach |
 | `Edge` | blade raster, outline, chains, `cutIndex` |
 | `Factors`, `Difficulty` | §5 |
@@ -828,7 +833,10 @@ Determinism rules for `Blueprint/`, `Physics/` and `Pipeline` (one result on Lun
   orders. No `--!native` unless S8's cross-platform digest passes.
 - Every boundary predicate uses `EPS_GEOM = 1e-7`: buried iff `sd < −EPS_GEOM`, on a surface iff `|sd| ≤ EPS_GEOM`.
 - Sampling details are pinned by the reference prototype `docs/spec/prototypes/S2/v2/` (loops: local X outermost, then
-  Y, Z; cell centres `−h_k + (i + ½)·2h_k/n_k`); goldens come from it.
+  Y, Z; cell centres `−h_k + (i + ½)·2h_k/n_k`); goldens come from it. The build differs on purpose where §4.3 (what an
+  exact copy owns, the overlap budget, the cut face), §4.4 (the rank; the Enclosed verdict, exact on each part's polyhedral
+  model where the prototype samples, with the cap; the measure on the kept parts alone) and §4.5 (a grip part's vote) say so; `tests/Physics/Reference.spec` pins the rest, handing the prototype the parts
+  in the measure's rank order (`Sampling.measureRanked`): its lower index is the build's higher rank.
 
 ### 4.2 Validation
 
@@ -840,6 +848,7 @@ Determinism rules for `Blueprint/`, `Physics/` and `Pipeline` (one result on Lun
 | V3 | contact graph has one component | `Disconnected{partId}` per part outside the main component |
 | V4 | volume-weighted centroid of all Blade parts beyond the grip point along the physics grip axis | `BladeNotAboveGrip` |
 | V5 | each required slot keeps a kept part (§4.4) | `SlotMissing{slot, reason = "Cleaned"}` |
+| — | the verdicts within `VERDICT_WORK_MAX` (§4.4, §4.9); past it there is no verdict, so V5 is not asked and nothing is measured, whatever `measureInvalid` says | `TooComplex` (no part, slot or reason), after V3–V4 |
 
 - V1–V2 = `Pipeline.quick` (every edit). Every error of the first failing stage (quick, then full) is returned, in
   rule then part order; valid ⇔ none.
@@ -875,33 +884,157 @@ Cylinder     max(|x|−hx, sqrt(y²+z²) − r)          Ball  sqrt(x²+y²+z²)
 | Surface samples | per face `ceil(edge/h_s)` per edge (≤ 64); triangles keep `s + t ≤ 1`; cylinder caps a disk grid, side 8/16/32 directions (circumference/h_s ≤ 8, ≤ 16, else) × axial; ball cube-sphere grid `clamp(ceil((πr/2)/h_s), 2, 64)` per cube-face axis, Jacobian weights normalized to `4πr²`. Each sample has a normal and patch half-vectors `e1, e2` |
 | Blade raster | XY cells (§4.6) |
 
-**Overlap ownership.** An overlap counts once, for its owner. Priority: kept parts, then slot rank (§3.7), then
-index. `V_own(p) = V_p − V(p ∩ ∪ higher(p))`, with the first moment likewise:
-- all polyhedra and ≤ `MAX_EXACT = 3` higher overlapping parts: **exact** convex clipping (≤ 7 planes per part),
+**Overlap ownership.** An overlap counts once, for its owner. Priority: kept parts, then slot rank (§3.7), then the
+measure's rank of §4.4 (`Sampling.measureRanked`: the larger part, then where it stands), so no id decides.
+`V_own(p) = V_p − V(p ∩ ∪ higher(p))`, with the first moment likewise:
+- all polyhedra and ≤ `MAX_EXACT = 3` higher overlapping parts: **exact** convex clipping (≤ 8 half-spaces per part),
   inclusion–exclusion over the subsets, volume and moment by tetrahedra;
 - otherwise (a Ball or Cylinder involved, or more parts): midpoint sampling of the overlap box in p's frame at
   `H_OVERLAP = 0.0125` (4–24 cells per axis).
+An exact copy of a higher part owns nothing, whatever its shape; an owned volume of 0 contributes no moment;
+`N_OVERLAP_WORK` serves kept parts first. Exact clipping builds each cut face from the plane, not from the vertices found on
+it as the prototype does: within 4e-15 of the prototype, up to about 3e-4 of a part's volume on faces nearly coplanar with a
+cut.
 Laminated plates measure their exact mass (error 0.000 %, X07); segmented blades within 0.01 of G (E-S2.5).
 
 ### 4.4 Exposure and cleaning
 
 A surface sample `s` of part p (normal n) is **hidden** by another part q if: it is buried (`sd_q(s) < −EPS_GEOM`);
-or it lies on q's surface and q has the lower index (coincident face, counted once); or its probe
+or it lies on q's surface and q **ranks** higher (coincident face, counted once); or its probe
 `s + δ·n`, `δ = HIDE_OFFSET = 0.012` (= CONTACT_TOL + 0.002), is inside q. Any gap that validation calls connected
 therefore hides the faces across it, and faces 0.002–0.004 apart are no longer both exposed.
 
-**Boundary patches.** A planar sample whose patch may straddle a hiding boundary (some q with
-`|sd_q| ≤ |e1| + |e2|` at s or at its probe; every other q's verdict is constant over the patch) is tested at its 4
-corners; if they disagree with the centre, its weight is the exposed fraction of a 4 × 4 sub-grid. Curved samples keep
-the centre verdict.
+**Rank.** Geometry decides what shows; a label only breaks exact ties. The verdict's rank (`Sampling.ranked`): the larger
+part first (a Block's volume taken from its sorted half extents, a Wedge's from hy and hz in order, so that one solid
+described another way ties exactly), then the name of the slot, then where it stands (lower y, then smaller \|x\|, x, \|z\|,
+z), then a Block's sorted half extents (a Wedge's hy and hz in order, so that of two writings of one Wedge the material
+decides, as of a Block's), the name of the material, then half extents as given and turn; only what is the same in every way
+falls to the index. It settles which of two exact copies survives, the hiders' order and who keeps a coincident face in a
+reading, so that invisible choices of id and order cannot move a tier (§5). A part wholly inside another, flush with its
+faces, gives them up to it whatever its label, so filler buys no face: 4 skins 0.02 thick inside F5's guard, labelled Blade
+or Grip, are cleaned and F5 measures to the bit (Sharpening 0.0989, where relabelling the guard Blade gives 0.2804), as are 4
+plates inside a real blade in any slot (`Verdict.spec`). Of two parts of one volume that coincide, the one whose slot's name
+comes first keeps their faces: a copy of a part in a slot whose name comes after its original's, exact, turned, its size
+described another way, a hair lower or a hair smaller, is cleaned and changes nothing (F3's and C08's blades again in the
+Guard, the Pommel or the Grip, F4's and C08's Wedge tips again in the Guard described the other way: every other part
+measures to the bit); in one whose name comes first it takes over, which is no more than relabelling the part. There is no
+near-copy rule: a part that encloses another by any margin is what shows, so its label counts, exactly as relabelling the
+part it encloses would (F3's blade with a copy 1e-12 to 1e-4 larger in every size in the Guard or the Grip leaves the Blade,
+every other verdict as with the blade relabelled: Sharpening 0.6104 Hard → 0.0645 Normal, the relabelled blade's number;
+§17.2). **[Decision to confirm]** (§17.1 O8): the label of what shows counts. The measure keeps a rank of its own
+(`Sampling.measureRanked`): the larger first, then where it stands, then half extents and turn as given, then the names of
+the slot and the material, the rank both had before the verdict's took the slot's name ahead of where a part stands. It
+settles who keeps a face two kept parts share, who owns an overlap within a slot (§4.3) and who spends the measure's sub-grid
+budget first, so the measure, owned volumes and mass move only where a verdict moves (E-S2.12).
+
+First the **verdict**, per part: what gets cleaned. Then the **measure**: what factors read, on the kept parts alone.
 
 | Class | Test | Effect |
 |---|---|---|
-| Dust | `V_p < MIN_PART_VOLUME = 0.0002` stud³ | cleaned |
-| Enclosed | exposed area / area `< ENCLOSED_EXPOSED_MAX = 0.02` (all parts hide) | cleaned |
+| Dust | `V_p < MIN_PART_VOLUME = 0.0002` stud³ | cleaned: no samples, hides nothing |
+| Exact copy | `Shapes.sameSolid` with a higher-ranked part (it lies wholly on that part's surface) | Enclosed: no samples, hides nothing |
+| Enclosed | the verdict reads under `ENCLOSED_EXPOSED_MAX = 0.02` of the part's model's area | cleaned |
 
-Pass 2: a kept part next to a cleaned part is re-measured against **kept parts only** (with a fresh sub-grid
-budget), so cleaned parts never hide kept surfaces and enclosed copies leave D bit-identical. Cleaned parts count for validation counts, containment, connectivity, V4, mass, COM and the physics
+**Verdict.** Each other part, exactly, on its **model** (`Physics/Cover`): a polyhedron, which for a Block, Wedge or
+CornerWedge is the part itself (`Shapes.faces`, `Shapes.planes`); for a Cylinder the prism over its inscribed 32-gon (§4.1's
+32 directions); for a Ball the octahedron whose faces a triangular grid of `COVER_BALL_GRID = 4` steps splits into 128
+triangles, every vertex pushed out to the sphere (95.07 % of its area). Round models stand in frames the world fixes: a Ball's
+octahedron on the world axes, a Cylinder's circle from the world axis most across its own. So a round part spun or turned about
+its own symmetry has its original's model, and the model of a mirror image (§3.8) is the mirror of the model. The exception is a
+Cylinder whose axis has its two smallest components equal and not 0 (two 45° snaps make one, (0.7071, 0.5, 0.5)): there the
+axis's last bits pick the world axis, so a copy spun about it has another model and the image's 32-gon can turn; the copy reads
+nothing all the same, its true solid lying in its original's (below; on the models alone it read up to about half, 41.8 % for
+two 0.6 × 0.24 rods, 47.3 % for 1.0 × 0.12); any rule for the frame has such a tie somewhere (§17.2). A hider's half-spaces are
+its model's, one per facet.
+
+The hide test above, on a point x of facet f (normal n) against hider q, is two convex **pieces** of f: buried or coincident
+(q's half-spaces, grown by `EPS_GEOM` if q ranks higher, else shrunk) and the probe (x + δ·n inside q's half-spaces grown by
+`EPS_GEOM`). An inscribed facet lies inside the true surface by its sagitta, so a round part's facets probe δ + their
+sagitta, and a round hider's half-spaces move out to its true surface for the probe and for a polyhedron's facet's buried
+piece: a face against a round hider's true surface lies in its model's **band**, between its facets and the true surface (up
+to 0.0572 r deep on a Ball, 0.0048 r under a Cylinder's sides), buried, where the hider's own half-spaces left it showing
+(V1: 4 Blocks against the true surface of F5's pommel made a Ball 0.6 across read 10 % each and were kept, Sharpening 0.0989
+Normal → 0.2169 Hard; a plate under a Cylinder's side read 20–30 %). A Ball's moved half-spaces stand up to 0.0452 r past its
+sphere, where three or more meet off its axes, so against a Ball a **flat** facet (a polyhedron's face or a Cylinder's cap)
+reads the sphere itself: each piece is the facet within the 32-gon round the circle that its plane (the probe's, δ further
+along n) cuts from the sphere, its radius grown by `EPS_GEOM` if the Ball ranks higher, else shrunk (the probe's grown),
+about the foot of the centre, on §4.1's 32 directions in a frame that the facet's normal and the world fix (the world axis
+most across the normal, Y, then X, then Z on a tie, components within 1e-9 tying, made square to it), so that every writing
+of a solid has the same 32-gon and a mirror image across X or Z its image, but for a normal whose two least components lie
+1e-9 apart to within rounding, where its last bits still pick the axis, as a Cylinder's frame has its tie (a Block so turned,
+cut by a Ball r 0.3, reads 2.000 % one way and 1.992 % written another way, §17.2); no piece where the plane misses the
+sphere. The 32-gon holds the circle and stands at most R·(sec(π/32) − 1) = 0.0048 R past the sphere, where its plane passes
+through the centre (0.0036 R at 0.5 R from it, 0.0009 R at 0.9 R), within the Ball's over (below); its 32 lines cost what 32
+of the Ball's 128 half-spaces do. The price, both ways the band errs (**[Decision to confirm]** (§17.1 O9)): a flat face that
+stands out of a round hider's true surface by less than its model stands past it there is buried, where the truth shows it:
+on a Cylinder anywhere on its side, which its prism's faces stand past by up to 0.0048 r (at its 32-gon's corners; y²/2r at y
+from a side's middle), so a thin part lying on the side is cleaned while it truly shows nearly half its surface (on a round
+guard r 0.8 a Block 0.07 × 0.02 × 0.5 0.0002 out across a 32-gon corner truly shows 38.9 %, a Wedge so laid 44.2 %, a
+CornerWedge 46.5 %, and the Block centred on a side's middle, its face's plane 1e-6 r inside the side there, 37.3 %, all read
+0; 10 such Blade plates on F5's guard made that disk, its blade 0.8 longer: Sharpening 0.2114 Hard on the truth's row, 0.1302
+Normal as built), and on a Ball where a face pokes out near a corner of the 32-gon its plane cuts (up to 2.4 % true cleaned
+in a sword's sizes, §17.2; on the moved half-spaces 4 studs a hair out of a pommel Ball, truly 16.2 % each, read 1.7 % and
+were cleaned, Sharpening 0.2047 Hard → 0.1907 Normal; now 15.8 %, kept). A round facet's buried piece keeps the hider's own
+half-spaces, so that a round copy coinciding with the hider, or a round part round it, keeps its faces; against a round hider
+two rules read the true solids instead. A round part whose true solid lies in the hider's, as the buried or coincident piece
+asks (its farthest point within `EPS_GEOM` of the hider's surface if the hider ranks higher, else deeper than `EPS_GEOM`,
+exact for every pair of round parts, to rounding: for a Ball `Shapes.sd` at its centre + r; for a Cylinder in a Ball the
+farthest point of its cap circles; for a Cylinder in a Cylinder its support along the axis and the farthest point of its cap
+circles from the axis, at any tilt, two bounds from a step's arithmetic deciding almost every test (above sqrt(|m|² +
+2r·|p| + r²), m a cap centre's offset across the axis and p its part in the cap's plane; below the circle's point toward p)
+and a search of 60 halvings the rest (the square of a point's distance from the axis, with the best cosine for each sine
+along the circle, is a concave function of the sine), `UNITS_PER_RIM` a cap circle searched (§16.18); the caps' centres'
+distance + r, before, stood up to r·(1 − cos θ) above it, θ the axes' angle, so that 10 Blade pucks r 0.1, 0.1 long across
+the axis of F5's guard made a disk r 0.8, every point of them 1e-4 inside it, read 2.33 % each and were kept, Sharpening
+0.1302 Normal → 0.3739 Hard), shows nothing; and a round facet whose true patch so lies in it (every point of its **hull**:
+its vertices and each pushed out to the plane parallel to the facet that the true solid touches, from the centre on a Ball,
+from the axis on a Cylinder's side; a cap's onto its circumscribed 32-gon) is hidden whole. So V1's 4 Blade Balls r 0.1 in
+that pommel, 0.002 under its surface (3.3 % each and kept, Sharpening 0.2958 Hard), and the same 0.0002 under it (3.6 % with
+the facets' hulls alone), read nothing. A round filler that pokes a hair out of a round hider's true surface, or lies where a
+round part meets another part, still reads its facets in the band and can be kept (§17.2; **[Decision to confirm]** (§17.1
+O9)). The probe is conservative, but for a hider that ends within a facet's sagitta past the true probe (a Wedge's thin edge
+over a Ball's cap: up to about 0.2 % of the Ball a cap more than the truth). A round facet probes along its normal, but the
+true points of its patch along theirs (a Ball's radii, a Cylinder side's radii from its axis), so their probes land up to its
+**spread** beside its own: δ·sin θ, θ the largest angle between the facet's normal and the true normals at its vertices
+(0.0027–0.0040 on a Ball's facets, δ·sin(π/32) = 0.0012 on a Cylinder's sides, 0 on a cap and a polyhedron), by which its
+probe piece grows. What shows of f is f less the union of its pieces, hiders in rank order, the buried piece before the
+probe's: a list of disjoint convex polygons in f's plane from which each piece is **subtracted** in turn. Each area is a
+polygon's own, so the reading is exact on the model, however narrow a slit (2.6e-13 of a part's area against a brute force,
+E-S2.12). Hiders: every part but copies and Dust whose box comes within the part's reach (δ, plus its largest sagitta and
+spread on a round model: no facet probes further) + the hider's over (how far its half-spaces moved out by their sagitta
+stand past its box: 0.0260 r on a Ball, 0.0048 r on a Cylinder, taken as 0.03 r and 0.005 r; 0 on a polyhedron; a flat
+facet's 32-gon stands within a Ball's) + 2·`EPS_GEOM`, and a facet asks each of them whose box, grown by its over, comes
+within its own probe and spread of the facet's box. So no piece of the hide test is left out, however far a round part
+probes, but for the slivers the spread adds round a hider's corners and edges, where its half-spaces grown by the spread
+stand up to √3 × the spread past its box (a Block's corner) and neither box test asks for them (a Block turned corner-down
+0.0013–0.0021 past a Cylinder side's probe: up to 1.3e-6 stud² more than the brute force reads, 0.0003 % of the part, where
+no true probe reaches either): a Ball sealed in walls its probe reaches, which a reach of δ alone read at 2.345 % and kept,
+reads 0.000 % and is cleaned (it truly shows 0.502 %); a Ball caged by edge blocks beside its facets, which the probe along
+their normals alone read at 2.330 % and kept (truly 1.93 %, a tier in a sword), reads 0.000 % (E-S2.12). On the plausible
+set, the attack corpus and 2,000 of V1's cages no kept part truly shows under 2 %; the spread's price is a round part reading
+under its truth beside a hider's edge (§17.2). A part's reading stops once 2 % of its model's area shows; how many other
+parts there are changes nothing it looks at, only a part that covers it changes what it reads.
+
+**The cap.** All the verdicts of a design together spend at most `VERDICT_WORK_MAX = 700,000` of Cover's work units (each
+model, each part's look over the others' boxes, each reading; §4.9). Past it the exposure stops at the report that passes
+it, reporting nothing more, with no verdict at all, and the design is invalid, `TooComplex` (§4.2), whatever
+`measureInvalid` says. The cap changes no verdict, so a hidden part can only make its own design visibly invalid. A part's
+units depend on the part, its hiders and the number of parts (its look over their boxes: a Dust speck adds 0.125 a part),
+so whether a design passes the cap depends on no order of its parts. The model's band, ties and the cap's boundary: §17.2.
+
+**Measure.** The kept parts against kept parts only, once, on a ladder (`N_SURF_WORK`) and a sub-grid budget
+(`N_SUB_WORK`) of their own, in the measure's rank order (`Sampling.measureRanked`, which also settles who keeps a face two
+kept parts share). A planar sample whose patch may straddle a hiding boundary (some q with `|sd_q| ≤ |e1| + |e2|` at s or
+at its probe; every other q's verdict is constant over the patch) is tested at its 4 corners; if they disagree with the
+centre, its weight is the exposed fraction of a 4 × 4 sub-grid. Curved samples keep
+the centre verdict. Contact areas (§5.2) are read on the same grid. Cleaned parts neither hide kept surfaces nor coarsen
+their grid nor use their budget, so enclosed parts leave D bit-identical while the kept set is unchanged.
+
+This is where the build departs from the prototype, which decides Enclosed from one pass over all parts, on one grid and
+one sub-grid budget, so that other parts move the verdict, which goes by index where the build goes by rank, and which reads a
+sample's patch where the build reads a model exactly; its rule is what the measure keeps (E-S2.11, E-S2.12).
+
+Cleaned parts count for validation counts, containment, connectivity, V4, mass, COM and the physics
 grip frame (a lead core is a legal balance trick; an enclosed part owns no volume); they never count for reach, any
 factor, the work sets, the edge or the governing material.
 
@@ -915,7 +1048,7 @@ U = Σ_p V_own(p)          M = Σ_p ρ_p·V_own(p)          COM = Σ_p ρ_p·M1_
 | Output | Definition (unit: studs unless noted) |
 |---|---|
 | `gripPoint` g | volume-weighted centroid of all Grip parts (hand = Motor6D binding point) |
-| `gripAxis` A | normalized Σ V·ê over eligible Grip parts (Cylinders: local X; polyhedra whose longest half extent ≥ 1.5 × the middle one; never Balls or dust), XY projection, `ê_y ≥ 0`; `(0, 1)` if empty or tilted > 45° |
+| `gripAxis` A | normalized Σ V·ê over the Grip parts that vote, XY projection, `ê_y ≥ 0`. A part votes if it has an axis (Cylinders: local X; polyhedra whose longest half extent ≥ 1.5 × the middle one; never Balls or dust) and that axis tilts ≤ 45° from +Y, in 3D, so a level bar or a handle along Z, which has no way up, neither tilts the sword nor breaks its mirror image. `(0, 1)` if no part votes |
 | `guardPos` | `(c_Guard − g)·A` (volume-weighted Guard centroid); no Guard → top of the grip |
 | `balance` | `(COM − g)·A − guardPos` (point of balance from the guard toward the tip); `balanceFromHand = (COM − g)·A` |
 | `reach` | max distance from g over **kept** Blade parts (vertices; cylinder caps `sqrt(|c±−g|² + r² + 2r·|(c±−g)⊥|)`; ball `|c−g| + r`) |
@@ -954,6 +1087,7 @@ The F5 starter's main chain is 5.433 (one chain); 4 strips, 5–10 segments with
 --!strict
 -- src/shared/Physics/Analyze.luau (pure)
 export type ValidationCode = "SlotMissing" | "SlotTooMany" | "OutOfHitbox" | "Disconnected" | "BladeNotAboveGrip"
+	| "TooComplex"                                           -- the verdicts passed VERDICT_WORK_MAX (§4.4): no part named
 export type ValidationError = { code: ValidationCode, partId: number?, slot: SlotId?, reason: "Cleaned"? }
 export type FloatingComponent = { partIds: { number }, gap: number, dir: Vec3, nearestPartId: number }
 export type ValidationResult = { ok: boolean, errors: { ValidationError }, components: { FloatingComponent } }
@@ -974,7 +1108,7 @@ export type StepAnalysis = {
 }
 export type Analysis = {
 	balanceVersion: number, validation: ValidationResult, cleaned: { { partId: number, reason: "Dust" | "Enclosed" } },
-	physics: PhysicsReport?, edge: EdgeProfile?, steps: { StepAnalysis }?,    -- nil while invalid
+	physics: PhysicsReport?, edge: EdgeProfile?, steps: { StepAnalysis }?,    -- nil while invalid; TooComplex: cleaned {}
 	budget: { hSurf: number, hVol: number, edgeCell: number, surfSamples: number, volSamples: number },
 }
 export type AnalyzeOptions = { checkpoint: (() -> ())?, measureInvalid: boolean? }
@@ -1013,8 +1147,12 @@ Crafting.
 
 ### 4.9 Execution model and cost
 
-`Analyze.run` calls `opts.checkpoint()` between phases and at least every `CHECK_UNITS = 500` work units (one unit ≈
-one shape query), only at top-level loop points (never inside sort comparators or metamethods), and keeps no
+`Analyze.run` calls `opts.checkpoint()` between phases and once `CHECK_UNITS = 500` work units have been reported since the
+last (one unit ≈ one shape query; the verdict's `Cover` reports once 256 have built up, at its next facet, half-space,
+line clipped or split, line or edge tested, polygon, piece or hider, so a report carries 256 units and at most the work
+between two such points (a facet's tests against one hider and one projected line: 333.625 units in `Cover.spec` (f)'s
+run of searched cap rims); a test that ends early charges the lines it skipped in its report, which can then carry a few thousand units,
+1,088 at most on the fixtures, the attack designs and the worst designs), only at top-level loop points (never inside sort comparators or metamethods), and keeps no
 module-level state, so a checkpoint may raise to cancel a stale run (S6's PreviewScheduler does). Callers run it in a coroutine whose checkpoint yields once the slice is used: **4 ms per
 Heartbeat on the server** (S5's AnalysisQueue, §1.6: priority lanes, FIFO in each, cap 16, one job in flight per player), **6 ms per frame on the
 client** (S6's PreviewScheduler, which also abandons stale revisions). No Actors.
@@ -1023,28 +1161,55 @@ client** (S6's PreviewScheduler, which also abandons stale revisions). No Actors
 |---|---|
 | `H_LADDER` | {1, 1.25, 1.5, 2, 2.5, 3, 4, 5, 6, 8, 10, 12, 16} |
 | `H_VOL`, `N_VOL_TOTAL`, `N_MAX_PART` | 0.05, 12,000 volume samples, 3,000 per part |
-| `H_SURF`, `N_SURF_WORK` | 0.04, 40,000 surface samples × (1 + candidate parts) |
-| `N_SUB_WORK` | 24,000 boundary sub-point × candidate tests |
-| `N_OVERLAP_WORK` | 40,000 refined overlap cells × (1 + higher parts) |
+| `H_SURF`, `N_SURF_WORK` | 0.04, 40,000 surface samples × (1 + candidate parts) of the measure (§4.4), by the ladder's Block estimate: a thin cylinder samples about 2 × that |
+| `N_SUB_WORK` | 24,000 boundary sub-point × candidate tests of the measure |
+| `VERDICT_WORK_MAX` | 700,000 of Cover's work units over all the verdicts (§4.4): each model, each part's look over the boxes, each reading. Over it the exposure stops, `TooComplex` (§4.2); the cap changes no verdict. P1, the heaviest real design, spends 330,993 |
+| `N_OVERLAP_WORK` | 40,000 refined overlap cells × (1 + higher parts), kept parts first |
 | `EDGE_MAX_CELLS`, `EDGE_MAX_WORK` | 12,000 cells, 30,000 cell × part tests |
 | `THICK_BUDGET`, `ASYM_WORK` | 400 Thinness probes, 30,000 Asymmetry probe × candidate tests, per work set |
 
 Measured (Lune best of 5; Studio ≈ 2.6 × Lune): F5 4.7 ms (≈ 12 ms Studio), arming 5.5 (14), ornate 18 parts 14.6
 (38), cleaver 15.9 (41); worst constructed cases, 24 large overlapping blocks 26.3 (68) and 24 rotated cylinders or
-wedges 22.1 / 20.9 (57 / 54), down from 36–57 ms Lune in the first prototype. The median longest run between
-checkpoints is ≤ 0.52 ms Lune (≈ 1.3 ms Studio; worst observed 1.0 ms Lune with GC), so a server frame carries the
-4 ms slice plus at most one such run (E-S2.8). S8's T-PERF-01 bounds every gap by `CHECKPOINT_GAP_LUNE_MS` 0.35
-(§14.11): the build lowers `CHECK_UNITS` until the measured gaps meet it (§17.2). The adversarial cost fixture is P1
-(24 large overlapping tilted blocks; P1–P5 in E-S2.8), used by T-PERF-01, S-PERF-01 and M-09. The editor's preview
-cadence (debounce, rate) is S6's client constant, outside BALANCE. Ceiling ≤ 75 ms Studio, checked by S8's S-PERF-01;
-if a Studio measurement exceeds it, halve `N_SURF_WORK` and `EDGE_MAX_WORK`.
+wedges 22.1 / 20.9 (57 / 54), down from 36–57 ms Lune in the first prototype. Those are the prototype's rule; with §4.4's
+verdict on the model (E-S2.12; median of 15, Lune 0.8.9, the machine 2–14 % busy with other programs): the verdict on the F,
+C and X fixtures at most 1.7 ms (C09) and the whole exposure at most 7.1 ms (C09); P1 11.8–12.0 / 19.1–19.4 ms, P4 10.3 /
+12.8–13.3 (the line reading 0.8 / 3.5), the only one that grows. With M3's share emulated (E-S2.11), fixtures and specks
+stay under 33 ms Lune (C05 14.2, ≈ 37 Studio; P1 31.7, ≈ 82; P4 about 20). Under the cap, the slowest valid design known,
+V1's cluster of 24 Balls (687,304 units), takes 30.2 ms for the verdict (≈ 78 Studio; 43.9 ns a unit), 32.7 for the whole
+exposure and 34.7 for `Analyze.run`, and the designs 4 climbs on wall time found (18,000 evaluations) that stay valid at
+most 31.3 for the whole exposure and 36.2 for `Analyze.run` (≈ 94 Studio; the machine 1–7 % busy, E-S2.12); a design past
+the cap is `TooComplex` in 10.7–24.5 ms. A model reports its units as it is built and a reading once `SPEND_EVERY` have
+built up, at the next facet, half-space, line, edge, polygon, piece or hider (single reports up to 1,088 units, what a test
+that ends early charges for the lines it skipped): the median run's longest stretch between checkpoints (of 15), the machine
+1–4 % busy, is 0.07–0.24 ms Lune over the F, C and X fixtures (median 0.11), 0.14–0.29 over P1–P5, 0.16–0.28 over the worst
+valid designs and 0.10–0.24 past the cap, and was 0.14–0.41 over the worst valid designs in V1's runs, the machine 3–6 % busy
+(`tclimb_4.json #1` 0.358 and 0.377, `tclimb_2.json #4` 0.406 once), the fixtures under 0.35 (C10 0.33, P4 0.27). What passes
+0.35 is a collection, not work the units miss: in 15 runs of `tclimb_4.json #1` every stretch past 0.25 ms holds one (the
+heap drops 1.2–4.3 MB in it while Cylinder models are built), and with a full collection at every checkpoint, outside the
+stretches, no design's median run passes 0.23 ms (single runs now and then do, up to 0.43 ms and once 1.26 in the sixth
+round's runs, the machine 1–9 % busy: the clock, not the work, as the medians hold); a lower `CHECK_UNITS` does not shorten
+the long stretches (§17.2). So S8's T-PERF-01
+asserts `CHECKPOINT_GAP_LUNE_MS` 0.35 on the F, C and X fixtures and reports P1–P5 and the worst designs against it, as
+S-PERF-01 does with the 75 ms total (§14.11). The adversarial cost fixture is P1 (24 large overlapping tilted blocks; P1–P5
+in E-S2.8), used by T-PERF-01, S-PERF-01 and M-09; the first two also run `docs/spec/prototypes/S2/cover/worst_designs.luau`:
+the slowest canonical, valid designs under `VERDICT_WORK_MAX` and designs past it. The editor's preview cadence (debounce,
+rate) is S6's client constant, outside BALANCE. Ceiling ≤ 75 ms Studio on real designs (the F, C and X fixtures; the slowest,
+C05, ≈ 37), checked by S8's S-PERF-01; if a Studio measurement exceeds it there, halve `N_SURF_WORK` and `EDGE_MAX_WORK`.
+That fallback does not reach the verdict, whose cap bounds hostile designs instead: a budget that counted near parts would
+change verdicts, the hidden-part channel again (§4.4). **[Decision to confirm]** (§17.1 O7) `VERDICT_WORK_MAX = 700,000`: the
+slowest valid design known under it takes about 78 ms Studio for the verdict and the slowest about 94 ms for `Analyze.run`,
+sliced at 4 ms a Heartbeat (about 24 Heartbeats, no frame hitch, one job per player); past it the design is `TooComplex`.
 
 ---
 
 ## 5. Difficulty
 
 > A step's difficulty comes from the design alone in the MVP: what the player built, measured on the parts that step
-> works. Hidden filler, specks, invisible construction choices and the material cannot move a tier.
+> works. Hidden filler, specks, invisible construction choices and the material cannot move a tier, but for round filler
+> against a Ball's or a Cylinder's true surface that pokes a hair out of it or reaches another part (its model's band, §17.2;
+> **[Decision to confirm]** (§17.1 O9)).
+> "Hidden" is the 2 % rule of §4.4, read exactly on each part's model; what that rule itself admits (a sealed cavity, flush
+> layers, sheets) is in §5.6.
 
 ### 5.1 Structure
 
@@ -1070,7 +1235,7 @@ The governing material also drives S3's `m_material` (copied by `Plan.build`, pa
 | `PartCount` | `n = Σ min(1, V_p / V_PART_FULL)`, `V_PART_FULL = 0.004` stud³ | `norm(n, 3, 16)` |
 | `Thinness` | below | in [0, 1] |
 | `Asymmetry` | below | `norm(Asym, 0, 0.6)` |
-| `SurfaceComplexity` | `r = S_exp / (6·cbrt(V)²)`, `S_exp` = pass-2 exposed area (§4.4), V = owned volume; a cube scores 1 | `norm(r, 2.3, 2.9)` |
+| `SurfaceComplexity` | `r = S_exp / (6·cbrt(V)²)`, `S_exp` = the measure's exposed area (§4.4), V = owned volume; a cube scores 1 | `norm(r, 2.3, 2.9)` |
 | `EdgeLength` | main-chain length E (§4.6), studs; the same on every work set | `norm(E, 4.8, 8.0)` |
 | `Joints` | `J = Σ_{kept contacting pairs} min(s_p, s_q)·(1 + clamp(1 − a_pq/0.05, 0, 1))`, `s = min(1, V/V_PART_FULL)`, `a_pq` = mean contact area (stud²) | `norm(J, 3, 24)` |
 | `MaterialMix` | k = distinct materials | `norm(k, 1, 4)` |
@@ -1127,7 +1292,7 @@ Reference ranges (`EquipmentTypes.Sword.geometry.refs`, FactorId order), fitted 
 | Volume (stud³) | 0.08 | 0.80 | dagger 0.043, F5 0.101, arming 0.106, greatsword 0.193, cleaver 0.472 |
 | Thinness σ | 45 | 130 | Thinness on All: F5 0.26, arming 0.28, sabre 0.35, rapier 0.59, F3 0.91 |
 | Asymmetry | 0 | 0.6 | symmetric 0.000, lopsided filler 0.004, cleaver 0.27 / 0.33, sabre 0.26 / 0.67 (All / Blade) |
-| SurfaceComplexity r | 2.3 | 2.9 | dagger 1.98, F5 2.20, arming 2.26, rapier 2.50, ornate 2.60, F3 blade 2.98 |
+| SurfaceComplexity r | 2.3 | 2.9 | dagger 1.98, F5 2.20, arming 2.26, rapier 2.50, ornate 2.63, F3 blade 2.98 |
 | EdgeLength (studs) | 4.8 | 8.0 | dagger 2.97, F2 4.98, F5 5.43, arming 5.64, greatsword 6.39, sabre 6.48, rapier 7.11 |
 | PartCount, Joints, MaterialMix | 3 / 3 / 1 | 16 / 24 / 4 | Phase 2 factors (reported, unweighted in the MVP) |
 
@@ -1153,8 +1318,9 @@ g = 0.40 · 0.2593 = 0.1037; m = 0; d = 0.1037 → Normal, 0.096 below Hard.
 ### 5.5 Calibration and fixture tiers **[Decision to confirm]** (Q7)
 
 Target: a plain iron arming sword (S2's C02) plays Normal on all three steps with ≥ 0.05 margin; thinner or longer
-blades, asymmetry and surface detail push steps to Hard; filler cannot buy a tier. d per step (Smelting / Hammering
-/ Sharpening); full physics and the 8 factors per step: E-S2.9.
+blades, asymmetry and surface detail push steps to Hard; filler cannot buy a tier, but for round filler a hair out of a
+round part's true surface or reaching another part (§5, §17.1 O9). d per step (Smelting / Hammering / Sharpening); full
+physics and the 8 factors per step: E-S2.9.
 
 | Fixture | Smelting | Hammering | Sharpening | Tiers |
 |---|---|---|---|---|
@@ -1169,7 +1335,7 @@ blades, asymmetry and surface detail push steps to Hard; filler cannot buy a tie
 | C06 Curved sabre | 0.0097 | 0.2991 | 0.5948 (Expert) | N/H/H |
 | C07 Dagger | 0 | 0 | 0 | N/N/N |
 | C08 Greatsword | 0.1563 | 0.0992 | 0.2487 | N/N/H |
-| C09 Ornate, 18 parts | 0.0001 | 0.3061 | 0.1904 | N/H/N |
+| C09 Ornate, 18 parts | 0.0001 | 0.3170 | 0.1904 | N/H/N |
 | C10 / C11 24-part filler, symmetric / lopsided | 0.1565 / 0.1562 | 0.0000 / 0.0012 | 0.0282 / 0.0368 | N/N/N |
 | C12 / C13 / C14 Arming: 5 segments / mirrored guard / moved (0, +0.27, +0.05) | ≤ 0.0376 | ≤ 0.1137 | 0.1318 | N/N/N |
 | C15 Arming rotated 4° about Z (a real change against the fixed frame) | 0.0353 | 0.2701 | 0.4291 (Expert) | N/H/H |
@@ -1182,16 +1348,19 @@ them: the arming blade 0.20 stud longer makes Sharpening Hard (0.2056); the star
 
 | Lever | Counter | Effect |
 |---|---|---|
-| Hidden filler, duplicates | Enclosed (< 2 % exposed) owns nothing; pass-2 exposure | A16/A17 bit-identical; A25 ΔD 0.0000 |
+| Hidden filler, duplicates | Enclosed (< 2 % of its model shows) owns nothing; a verdict per part, exact on its model, with no budget of its own; the cap changes no verdict; the measure on kept parts alone; against a round part's true surface a flat filler's face on the circle its plane cuts from a Ball's sphere or on a Cylinder's half-spaces moved out, a round filler's true solid or facet's true patch in its true solid (§4.4) | A16/A17 bit-identical; A25 ΔD 0.0000; the attack corpus (1,340 designs, 84 of them that moved the line reading's rows, up to \|ΔD\| 0.80) and the sealed rods: 0 rows differ from the truth's; V1's caged Balls (2,000 cages): none kept that truly shows under 2 %; filler wholly inside a round part against its true surface, 4 Blocks or 4 Balls in F5's pommel made a Ball 0.6 across (Sharpening 0.2169 / 0.2958 Hard on its model's inscribed half-spaces) or Blocks in the pommels of F3, C04, C09: cleaned, D the fixture's own (E-S2.12); round filler a hair out of a round part's true surface, or reaching another part, can still be kept (**[Decision to confirm]** (§17.1 O9)), and what a part that really covers another can still do: §17.2 |
+| Fillers behind a hairline, pins over a core, fullers, combs, ribs, slats and cages | what shows of a facet is subtracted exactly, however narrow (§4.4) | a hairline 1e-5 reads its own width; on all 33,389 plausible designs (fullers, combs, ribbed bars, cages, grilles, tilings among them) nothing cleaned that shows 4 % (highest 3.615 %, a Ball in a pommel housing) and nothing kept under 2 % (lowest 2.002 %); Blocks and Wedges exact but beside a round hider, by its model's band (E-S2.12, §17.1 O9) |
+| Ids, the order of the parts, mirror images, flush plates and skins, exact copies | the ranks (§4.4: the verdict's the larger part, then the slot's name, then where it stands, \|x\| before x, \|z\| before z; the measure's the larger part, then where it stands) keep a shared face, own an overlap within a slot, spend a budget first | any order of a design's parts: the same exposure and the same units, to the bit; a mirror image across X or Z reads its original's, but for parts that tie in the rank up to the sign of x or z (true twins among them) and round copies that coincide on the model; 4 flush plates in F5 / C02 / C05 \|ΔD\| 0.0000 (0.4834 / 0.5756 / 0.7159 by id); 4 skins inside F5's guard, labelled Blade: cleaned, D bit-identical (0.2804 with the guard relabelled); a copy of F3's or C08's blade in the Guard, exact, turned, described another way, a hair lower or smaller, or of F4's or C08's Wedge tip described the other way: cleaned, D bit-identical; a hair larger, it encloses the blade and its label counts, as relabelling the blade does (§17.1 O8); what ids still reach: §17.2 |
 | Specks, studs | Dust (< 0.0002 stud³); slot maxima; share term | C10/C11 = C01 + 20 filler parts (16 studs, 2 hidden, 2 dust): D rises by at most 0.008 on any step (Smelting 0.1486 → 0.1565), all Normal |
-| Near-duplicate copies | burial + δ = 0.012 probe + pass 2 | X01/X02 vs the union-equivalent blade ΔD ≤ 0.0005 |
+| Near-duplicate copies | burial + δ = 0.012 probe + the verdict on each part's model + the measure | X01/X02 vs the union-equivalent blade ΔD ≤ 0.0010 (0.0002 / 0.0006) |
 | Thin fin on a chunky sword | thin share of the striking metal | X03 ΔThinness 0.000 |
 | Strips, seams, gaps, grip nudges | dilated raster, main chain | X04 EdgeLength change 0.00 % |
 | Segment gaps 0.002–0.009, overlaps 0.005–0.05, laminates | probe δ, boundary sub-grid, exact clipping | X05/X07 ΔG ≤ 0.0007, mass error ≤ 0.014 % |
 | Grip decoration, hidden cores, hilt offsets | fixed plane x = 0 and fixed +Y frame | A25 0.0000, A26 0.0011, A27 (Sharpening) 0.0000 |
 | Serrated / comb edges | only the main chain counts and is traced; DP at 1 cell; cap 8.0 | comb blade: 11 chains, EdgeLength 1.678 = the traced run (other runs 4.6 ignored) |
-| Y/Z translation, flush re-segmentation | local sampling, Y-anchored raster | Δx_f ≤ 0.0017 and ΔG ≤ 0.0007 / Δx_f ≤ 0.00001 (E-S2.10) |
-| CPU attacks | work budgets, checkpoints (§4.9) | worst 26.3 ms Lune (≈ 68 Studio) |
+| Y/Z translation, re-segmentation along the length and width; layers through the thickness: §17.2 | local sampling, Y-anchored raster | Δx_f ≤ 0.0017 and ΔG ≤ 0.0007 / Δx_f ≤ 0.00001 (E-S2.10) |
+| CPU attacks | work budgets, checkpoints, the verdicts' cap `VERDICT_WORK_MAX` (§4.9) | under the cap the slowest valid designs known: verdict 30.2 ms Lune (≈ 78 Studio; a cluster of 24 Balls), exposure 32.7, `Analyze.run` 36.2 (designs 4 climbs on wall time found); past it `TooComplex` in 10.7–24.5 ms; P1 31.7 with M3 (≈ 82): §4.9, §17.2 |
+| A filler in a sealed cavity; flush layers through the thickness; sheets over a core | none: the 2 % rule's own limits, which no reading changes. "Hidden" means within `HIDE_OFFSET` of other parts, so a filler in a sealed cavity shows; layers each under 2 % are each cleaned; k hidden sheets clean a part that shows up to about 2 % × k × their area / its area | closed box + block: Smelting 0.1376 Normal → 0.4463 Hard; a 1.6 × 3.5 × 0.16 blade in 8 flush layers: Hammering 0.0582 Normal → 0.7000 Hard; 14 sheets over a core that shows 11.92 %: cleaned (§17.2) |
 
 Telemetry: every analysis returns raw and normalized factors per step; S5's `StepScored` carries `g, m, d, tierRaw`
 and the terms with the BALANCE_VERSION, so the ranges can be re-fitted from real drafts.
@@ -2326,7 +2495,7 @@ before judging; over it is an S3 Invalid (`TooMany`).
 | Module code (owner) | Where | Wire result |
 |---|---|---|
 | `CanonError` (S1) · `NameError` (S1) | Save · Rename | `E_INVALID_BLUEPRINT`, `details = {code, path}` · `{"BadName", code}` |
-| `ValidationCode` `{code, partId, slot}` (S2) | Save · Begin | ok, `valid = false`, `errors` stored · `E_INVALID_BLUEPRINT`, `details` = codes |
+| `ValidationCode` `{code, partId?, slot?, reason?}` (S2; `TooComplex` names no part) | Save · Begin | ok, `valid = false`, `errors` stored · `E_INVALID_BLUEPRINT`, `details` = codes |
 | `InvalidReason`, `HashMismatch` (S3) | Submit | `E_INVALID_INPUT`, abort InvalidInput, Hard strike |
 | `ShowcaseCode` (S7) | Showcase.* | Ok, NoChange → ok · BadSlot, SlotLocked → `E_SLOT_INVALID` · BadItem, NotOwned, Empty → `E_NOT_FOUND` · NotLoaded → `E_NOT_READY` |
 | AnalysisQueue · DataService | Save, Begin, StartStep · writes | full → `E_BUSY`, throw → `E_INTERNAL` · refused → `E_DATA_UNAVAILABLE` |
@@ -2713,8 +2882,9 @@ RMB/Esc cancels; the part takes the active slot, material and next id.
   harder **[Decision to confirm]** (Q13).
 - Mirror: `M` copies across x = 0, `Shift+M` across z = 0, ▾ "Flip in place" (replaces each selected part by
   `Mirror.reflect(part, plane)`: same id, no copy, one command); math = `Blueprint/Mirror` (§3),
-  then canonicalized; copies keep slot and material, get new ids and become the selection; parts on the plane are
-  skipped (toast). A tool-mirrored design measures exactly symmetric (E-S6.7). `C` **Centre on axis** moves the
+  then canonicalized; copies keep slot and material, get new ids and become the selection; parts on the plane
+  (`Mirror.isSelfSymmetric`: the solid is its own image, not merely centred there) are skipped (toast). A tool-mirrored
+  design measures exactly symmetric (E-S6.7). `C` **Centre on axis** moves the
   selection so the centre of its extents is on x = 0.
 - `Ctrl+D` duplicates in place (toast: they overlap until moved); Delete/Backspace deletes. Context menu (RMB released
   within 4 px and `RMB_CLICK_MAX_MS` 250): Delete, Duplicate, Mirror copy X / Z, Snap to touch (floating part).
@@ -2746,9 +2916,10 @@ hitbox face, the overflow ("+0.12") at the worst point.
 
 Issues sort errors → warnings → info, then slot; a click selects and focuses; errors block Forge. Each §4 record
 `{code, partId, slot, reason?}` (`OutOfHitbox`, `SlotMissing`, `SlotTooMany`, `Disconnected`,
-`BladeNotAboveGrip`; cleaned `Dust` ⚠, `Enclosed` ℹ) has a message and a fix in plain words
+`BladeNotAboveGrip`, `TooComplex`; cleaned `Dust` ⚠, `Enclosed` ℹ) has a message and a fix in plain words
 (E-S6.12): `OutOfHitbox` names the overflow and `Ctrl+I`; `SlotMissing` with reason `Cleaned` says the slot's parts are
-too small or hidden to count; `Disconnected` names the gap ("Pommel floats 0.02 studs from the Grip") and offers
+too small or hidden to count; `TooComplex` highlights no part and says "Too complex to analyse: use fewer overlapping
+parts, or overlap them less" (the verdicts passed `VERDICT_WORK_MAX`, §4.4); `Disconnected` names the gap ("Pommel floats 0.02 studs from the Grip") and offers
 [Snap to touch]. Server codes: §12.12.
 
 Floating components (§4: main = most Grip volume, else largest; each other one has its closest pair `{gap, dir,
@@ -3434,8 +3605,9 @@ One suite per pure module of §1's module map [owner]; every case of every id: E
 T-DEF-00…07 `Definitions/*`, all 19 [S1; values S2–S7] (T-DEF-00: `Validate.validateAll() == {}` + one planted error
 per check) · T-UTIL-01 `Util/Quantize` [S1] · T-BP-01…05, 12, 13 `Blueprint/{Schema, Canonical, Quat, Names, Views}`
 [S1], T-BP-11 `Mirror` [S2], T-BP-14 `WorkSet` [S4] · T-UD-01 editor transforms survive Save → load bit-identically ·
-T-VAL-01…04, T-PHY-01…10, T-EDG-01, T-DIF-01…13 `Physics/{Analyze, Gjk, Shapes, Sampling, MassProps, Edge, Factors,
-Difficulty}` [S2] · T-PIPE-01 `Pipeline` [S2, S4] · T-RNG-01…06, T-MG-01…16 `Minigames/*` incl. facade and `Bots` [S3] ·
+T-VAL-01…04, T-PHY-01…10, T-EDG-01, T-DIF-01…13 `Physics/{Analyze, Gjk, Shapes, Cover, Sampling, MassProps, Edge,
+Factors, Difficulty}` [S2] (`Cover.spec`: the verdict exact on its model against a test-only brute force, its closed forms,
+the attack designs at their truth's verdict, invariance, the model, the cap) · T-PIPE-01 `Pipeline` [S2, S4] · T-RNG-01…06, T-MG-01…16 `Minigames/*` incl. facade and `Bots` [S3] ·
 T-CR-01…10 `Crafting/*` [S4] · T-ITM-01…03, T-PER-01…06 `Items/*`, `Persistence/*` [S1] · T-SES-01…38
 `Session/SessionMachine` [S5] (S5's 37 scenarios on a fake clock + every row of §7's step outcomes) · T-ED-01…09
 `EditorCore/*`, all 10 incl. `Keymap` and `Config` [S6] · T-WLD-01, 02, T-RND-01, T-SHW-01, T-INS-01 `World/Layout`, `ItemRender/RenderPlan`,
@@ -3443,8 +3615,16 @@ T-CR-01…10 `Crafting/*` [S4] · T-ITM-01…03, T-PER-01…06 `Items/*`, `Persi
 validator, 0 throws).
 
 Contract tests other sections rely on:
-- **T-DIF-03** D = 0.1999999999 is Normal, 0.2 Hard. **T-DIF-04/05** enclosed parts, duplicates and Iron ↔ Steel leave
-  D bit-identical; dust gives \|ΔG\| ≤ TOL_DUST_G. **T-DIF-07** Y/Z translation and flush re-segmentation give
+- **T-PHY-09** Dust and Enclosed only, duplicates Enclosed with the lowest id kept among copies of one slot and material,
+  partial overlaps kept, a verdict on each side of `ENCLOSED_EXPOSED_MAX`; what §4.4's verdict reads, to rounding, on designs
+  with a closed form, and exactly on its model against a brute force; ids decide nothing (any order of a design's parts, the
+  same exposure by id, to the bit); K + F measures as K alone, also past `N_SURF_WORK` and `N_SUB_WORK`; past
+  `VERDICT_WORK_MAX`, `TooComplex`; and, against a truth oracle on a sweep of plausible designs and the attack designs
+  (E-S2.12; fullers, combs, walled blades, ribbed bars, cages, grilles and tilings among them), nothing that shows 4 % is
+  cleaned and nothing under 1.9 % kept.
+- **T-DIF-03** D = 0.1999999999 is Normal, 0.2 Hard. **T-DIF-04/05** enclosed parts, duplicates (not in a slot whose name
+  comes before the original's: §4.4) and Iron ↔ Steel leave
+  D bit-identical (while the kept set is unchanged, §17.2; the cases include C04 with a 0.075 blade + 9 enclosed blocks, C09 with a blade 0.05 longer + 6, C09 + a plate + hidden blocks, a laminated blade + a Dust hairline); dust gives \|ΔG\| ≤ TOL_DUST_G. **T-DIF-07** Y/Z translation and flush re-segmentation give
   \|Δx_f\| ≤ TOL_FACTOR_ABS, \|ΔG\| ≤ TOL_G_INVARIANT; a design mirrored with the tool has Asymmetry ≤ TOL_ASYM_ZERO
   (X shifts and whole-sword rotations are real changes). **T-DIF-10** client analysis path = server path, 500 designs.
 - **T-DIF-11** every fixture's tiers = §5; F5 has D ≤ 0.2 − STARTER_MARGIN on every step (Q7, Q21).
@@ -3458,7 +3638,7 @@ Contract tests other sections rely on:
 ### 14.7 Fixtures
 
 One set, all `PartData` (§3 Record schema) in blueprint space (origin = centre of the hitbox's bottom face), every
-part ≥ 0.02 stud inside the hitbox: S2's calibration swords C01, C02, C04–C15, F1–F5, A01–A27, X01–X07, and the cost
+part ≥ 0.02 stud inside the hitbox: S2's calibration swords C01, C02, C04–C15, F1–F5, A01–A28, X01–X07, and the cost
 fixtures X08 (S8, E-S8.4) and P1–P5 (S2, E-S2.8). **Expected D and tiers are S2's §5.5 table; expected physics and
 factors are E-S2.9's tables**, blessed into goldens; S8 keeps no copy. Coordinates and the independent
 oracle: E-S8.3; constructions and expected codes: E-S8.4.
@@ -3466,7 +3646,8 @@ oracle: E-S8.3; constructions and expected codes: E-S8.4.
 - F1 ArmingSword (Iron hilt, two-part Steel blade, 45° tip) · F2 MinimalSword (one Iron Block per slot) · F3 Rapier
   (Steel, 0.035-stud blade: needs MIN_DIM ≤ 0.035, else F3 takes the new MIN_DIM) · F4 Cleaver (wide Iron blade
   offset to +X) · F5 StarterSword = F1 all Iron, the granted starter (Q21).
-- A01–A24: one invalid or edge-case draft per S1 CanonError, S2 ValidationCode and wire code; A25–A27 hidden-grip
+- A01–A24, A28: one invalid or edge-case draft per S1 CanonError, S2 ValidationCode and wire code (A28: 24 thin rods in a
+  bundle, past `VERDICT_WORK_MAX`, `TooComplex`); A25–A27 hidden-grip
   variants; X01–X07 regressions of S2's measurement fixes; X08 cost cases; P1–P5 S2's cost fixtures (P1 the
   adversarial one, §4.9).
 
@@ -3497,8 +3678,12 @@ outcome code shows as a golden diff, which also needs a bump. Workflow: edit →
 
 ### 14.10 Studio integration (L4)
 
-**Preconditions.** `rojo serve test.project.json` into a dedicated test place (confirm the instance; never a place
-being edited) with Max Players 8; ProfileStore Mock. Expected noise: S5's Max Players warning, ProfileStore's
+**Preconditions.** `rojo serve test.project.json --port 34873` into the test place (confirm the instance) with Max
+Players 8; ProfileStore Mock. The test place is the game's own place, Project 215, by the designer's choice
+(2026-11-03). Checks run in Play sessions only and change nothing in Edit, and nobody edits in that window while one
+runs. Rojo's sync does leave the test tree in the place's live session (`ReplicatedStorage.BlacksmithTests`,
+`ServerScriptService.BlacksmithTestServer`, `StarterPlayer.StarterPlayerScripts.BlacksmithTestClient`), so it comes out
+before the first publish (§14.12). Expected noise: S5's Max Players warning, ProfileStore's
 API-services prints and `____PS` probe key. Snippets (`tests/studio/e2e/`) print one `[E2E] <id> PASS|FAIL <json>`
 line per assertion and play at most one craft step per call.
 
@@ -3530,10 +3715,10 @@ step, Fast): S5's code, craft aborted `InvalidInput`, no item, Hard strike; Exac
 
 | Id | Measure | Pass |
 |---|---|---|
-| T-PERF-01 | `Analyze.run`, X08 cost cases and S2's adversarial fixture P1 (§4.9, Lune) | ≤ ANALYSIS_LUNE_MAX_MS; every checkpoint gap ≤ CHECKPOINT_GAP_LUNE_MS; P1 also reported against 29 ms (75 ms ÷ 2.6) |
+| T-PERF-01 | `Analyze.run` on the F, C and X fixtures, X08 cost cases, S2's adversarial fixture P1, P1–P5, P1–P3 + a Dust speck, and `docs/spec/prototypes/S2/cover/worst_designs.luau`: the slowest valid designs under `VERDICT_WORK_MAX` and the `TooComplex` designs past it (§4.9, Lune) | ≤ ANALYSIS_LUNE_MAX_MS; every checkpoint gap ≤ CHECKPOINT_GAP_LUNE_MS on the F, C and X fixtures (the median run's longest, of 15), P1–P5's and the worst designs' reported against it, as S-PERF-01 reports the rest against its 75 ms (a collection can pass it there, §4.9); a `TooComplex` design answered within ANALYSIS_LUNE_MAX_MS; P1 and the worst valid designs also reported against 29 ms (75 ms ÷ 2.6) |
 | T-PERF-02 | longest legal timeline per family: decode + replay + checks; Trace `generate` on X08 | ≤ REPLAY_BUDGET_MS; ≤ PT_GENERATE_BUDGET_MS |
 | T-PERF-03 | refusal of A15, A18 and oversize buffers | ≤ REJECT_BUDGET_MS |
-| S-PERF-01 | Studio: AnalysisQueue (4 ms slices), PreviewScheduler (6 ms), same cases; `Minigames.judge` in the Submit handler | total ≤ 75 ms (§4.9); longest slice ≤ SERVER_SLICE_MAX_MS / CLIENT_SLICE_MAX_MS (E-S8.8); judge time reported |
+| S-PERF-01 | Studio: AnalysisQueue (4 ms slices), PreviewScheduler (6 ms), same cases (P1, the specks and `worst_designs.luau`'s valid and `TooComplex` designs included); `Minigames.judge` in the Submit handler | total ≤ 75 ms on the F, C and X fixtures (§4.9), the rest reported against it; longest slice ≤ SERVER_SLICE_MAX_MS / CLIENT_SLICE_MAX_MS (E-S8.8) on all; judge time reported |
 
 ### 14.12 Acceptance criteria and Definition of Done
 
@@ -3554,7 +3739,8 @@ confirm]** (Q22): ≥ 3 testers, one new, finish the loop unaided within 20 minu
 unprompted, the designer signs off that it is fun. (5) Playtest telemetry inside §14.13's targets, or retuned with
 `BALANCE_VERSION` bumped. (6) M-06 with S-PAR-03/04. (7) No open severity-1 (crash, data loss, wrong authority,
 exploit beyond §10's accepted risks) or severity-2 (blocked loop step) defect. (8) SPEC and README updated (Status,
-build checklist incl. deletion template and Max Players 8).
+build checklist incl. deletion template and Max Players 8). (9) The test tree (§14.10) is out of the place before its
+first publish.
 
 Manual checks (steps: E-S8.6): M-01 build F1 from a picture ≤ 10 min · M-02 explain an invalid sword from the UI ·
 M-03 new player's first 3 swords · M-04 results card understood, offset button used · M-05 2 players, stands, live
@@ -3787,12 +3973,14 @@ One deep-frozen module; groups as in §2.8. Geometry, Difficulty, Quality and St
 | `MIN_PART_VOLUME` | 0.0002 | stud³ | S2 | Dust floor |
 | `ENCLOSED_EXPOSED_MAX` | 0.02 | fraction | S2 | Enclosed: < 2 % of the area exposed |
 | `H_VOL`, `N_MIN_AXIS`, `N_MAX_AXIS`, `N_MAX_PART`, `N_VOL_TOTAL` | 0.05, 2, 48, 3000, 12000 | stud, samples | S2 | volume-sample grid and budget |
-| `H_SURF`, `NS_MAX`, `N_SURF_WORK` | 0.04, 64, 40000 | stud, samples, tests | S2 | surface grid; samples × candidates budget |
-| `N_SUB_WORK` | 24000 | tests | S2 | boundary corner + 4 × 4 sub-grid tests per pass |
+| `H_SURF`, `NS_MAX`, `N_SURF_WORK` | 0.04, 64, 40000 | stud, samples, tests | S2 | surface grid; the measure's samples × candidates budget, by the ladder's Block estimate |
+| `N_SUB_WORK` | 24000 | tests | S2 | the measure's boundary corner + 4 × 4 sub-grid tests; the verdict has no such budget of its own, and that closes hidden parts' last channel (E-S2.11) |
+| `COVER_BALL_GRID` | 4 | steps per octahedron edge | S2 | a Ball's verdict model (§4.4): 128 triangles, 95.07 % of the sphere's area, the largest 1.21 % of the model (1.15 % of the sphere), so no facet alone keeps a Ball; a finer model costs 2–6 × and closes no window (E-S2.12). `Cover`'s bound on how far the model's half-spaces moved out stand past a Ball's box, 0.03 r, holds at 4 (0.0260 r, `Cover.spec` (e)); a flat face reads a Ball on its true sphere, not this model (§4.4) |
+| `VERDICT_WORK_MAX` | 700000 | Cover work units | S2 | the verdicts' cap (§4.4, §4.9): the slowest valid design known under it, a cluster of 24 Balls (687,304 units), about 30 ms Lune for the verdict (43.9 ns a unit; the climbed designs 30–34, one now far under the cap 46); P1, the heaviest real design, 330,993, 2.11 × under; the plausible set at most 104,573; a regular sword of 24 rods 0.12 thick 471,161. Past it `TooComplex`, no verdict moves. **[Decision to confirm]** (§17.1 O7) |
 | `H_LADDER` | {1, 1.25, 1.5, 2, 2.5, 3, 4, 5, 6, 8, 10, 12, 16} | × spacing | S2 | deterministic coarsening |
 | `MAX_EXACT`, `H_OVERLAP`, `OVERLAP_N_MIN/MAX`, `N_OVERLAP_WORK` | 3, 0.0125, 4/24, 40000 | parts, stud, cells, tests | S2 | exact clipping up to 3 higher parts, refined sampling otherwise |
 | `GJK_MAX_ITER` | 48 | iterations | S2 | mean 3.1, max 9 measured |
-| `AXIS_ELONGATION`, `AXIS_MAX_TILT_COS` | 1.5, 0.7071 | ratio, cos | S2 | physics grip axis eligibility; > 45° → +Y |
+| `AXIS_ELONGATION`, `AXIS_MAX_TILT_COS` | 1.5, 0.7071 | ratio, cos | S2 | physics grip axis: a part's eligibility; tilted > 45° from +Y it has no vote |
 | `EDGE_CELL`, `RASTER_TOL` | 0.02, 0.005 | stud | S2 | raster cell; dilation = CONTACT_TOL/2 (seams never open) |
 | `EDGE_MAX_CELLS`, `EDGE_MAX_WORK` | 12000, 30000 | cells, tests | S2 | raster budgets |
 | `EDGE_MAX_THICK`, `EDGE_DOWN_COS` | 0.25, 0.5 | stud, cos | S2 | a spine is not an edge; pommel-facing segments are not sharpenable |
@@ -4037,6 +4225,12 @@ Server and protocol tunables; they never change outcomes (§1.3 L5).
 | Name | Value | Unit | Owner | Rationale |
 |---|---|---|---|---|
 | `CHECK_UNITS` | 500 | work units | S2 | checkpoint cadence (≈ 0.1–0.5 ms Lune); not outcome-affecting |
+| `UNITS_PER_SAMPLE`, `UNITS_PER_SUBSET`, `UNITS_PER_OVERLAP_TEST`, `UNITS_PER_CONTACT_TEST`, `UNITS_PER_DISTANCE` | 4, 250, 20, 20, 40 | work units | S2 | checkpoint weights; not outcome-affecting |
+| `Cover`'s `UNITS_PER_TEST`, `UNITS_PER_BOX`, `UNITS_PER_POLYGON`, `UNITS_PER_FACET`, `UNITS_PER_RIM` | 0.5, 0.125, 1, 8, 28 | work units | S2 | a vertex against a line (a half-space or a line of a circle's 32-gon, its projection one more; and a point of a round facet's hull, or a round part, against a round hider's true solid), a box against a box, a polygon made, a model facet built, a cap circle's farthest point from a Cylinder hider's axis searched (60 halvings, 1.19 µs Lune against 43 ns a unit, only where its bounds leave a round part's own test open: never on the plausible set, the attack corpus or the fixture set): the cap's units as well as the checkpoints', so a change moves where `VERDICT_WORK_MAX` falls and goes with `BALANCE_VERSION`; dyadic, so a sum is the same in any order (E-S2.12) |
+| `Cover`'s `SPEND_EVERY` | 256 | work units | S2 | a model and a reading report their work once this much has built up, at the next facet built, half-space projected, line clipped or split, line or edge tested, polygon, piece or hider (single reports up to 1,088 units on the fixtures, the attack designs and the worst designs, what a test that ends early charges for the lines it skipped): where a checkpoint, and the cap, can stop it; not outcome-affecting |
+| `TooComplex` | — | `ValidationCode` | S2 | Analyze's answer past `VERDICT_WORK_MAX` (§4.2): no part named, nothing measured |
+| numeric guards, in `Physics/*` | `INSIDE_MARGIN` 1e-9, `OVERLAP_TOL` 1e-9, `CLIP_EPS` 1e-12, `Cover`'s `AREA_NIL` 1e-12 (of a facet), `INNER_SAFE` 1 − 1e-12 and `AXIS_TIE` 1e-9 (components of a unit normal that tie for a circle's frame), `Shapes.AXIAL2` 1e-18, `Gjk`'s `ZERO_LENGTH2` 1e-24, `CONVERGED` 1e-12, `DEGENERATE_EDGE2` 1e-30, `DEGENERATE_VOLUME` 1e-18 | stud, stud², stud³ | S2 | fixed, not tunables; they separate rounding from geometry |
+| numeric bounds, in `Physics/Cover` | `OVER_BALL` 0.03, `OVER_CYLINDER` 0.005 (× r) | — | S2 | how far a round model's half-spaces moved out by their sagitta stand past the part's box, at most (0.0260 r at `COVER_BALL_GRID` 4, sec(π/32) − 1 = 0.0048 r; `Cover.spec` (e) measures both): a model's `over`, by which hiders are chosen (§4.4); a flat face's 32-gon against a Ball stands at most 0.0048 R past its sphere, within it; fixed, not tunables |
 
 ### 16.19 `Minigames/Rng`
 
@@ -4208,7 +4402,7 @@ Vendored, unchanged.
 | TIER_MIN_MEAN_DROP | 0.05 | score | S8 | Average's Normal → Hard drop must be felt (Q8); other profiles only > 0 (§6.13) |
 | STEEL_MEAN_DROP | [0.01, 0.08] | score | S8 | Steel "slightly tighter", Average on Normal (Q13) |
 | CHI2_CRIT | 37.70 | — | S8 | χ² critical value, 16 buckets (15 dof), p = 0.001 |
-| ANALYSIS_LUNE_MAX_MS | 60 | ms | S8 | coarse Lune regression guard (≈ 156 ms Studio); the 75 ms Studio ceiling of §4.9 is gated by S-PERF-01 only (P1: 26.3 ms Lune ≈ 68 ms Studio) |
+| ANALYSIS_LUNE_MAX_MS | 60 | ms | S8 | coarse Lune regression guard (≈ 156 ms Studio); the 75 ms Studio ceiling of §4.9 is gated by S-PERF-01 only (C05 14.2 ms Lune ≈ 37 ms Studio, P1 31.7 ≈ 82; under `VERDICT_WORK_MAX` the slowest design found 36.2 ms for `Analyze.run`, §17.2) |
 | CHECKPOINT_GAP_LUNE_MS | 0.35 | ms | S8 | keeps Studio slices ≤ 5 / 8 ms (E-S8.8) |
 | REPLAY_BUDGET_MS | 8 | ms | S8 | decode + replay + checks of a 31 s timeline |
 | PT_GENERATE_BUDGET_MS | 5 | ms | S8 | Trace pattern generation |
@@ -4252,6 +4446,9 @@ Vendored, unchanged.
 | O4 | (Q13; S8) Does "Steel plays slightly tighter" mean an average player scores 1–8 points lower (of 100 %) on Normal steps in Steel than in Iron? | 1–8 points, `STEEL_MEAN_DROP` [0.01, 0.08] (PrecisionTrace measures 0.009, see §17.2 S3) |
 | O5 | (Q20; S6) Fonts GrenzeGotisch, Merriweather Bold, BuilderSans Medium, RobotoMono Medium, and a charcoal, parchment and ember UI on a blueprint-blue stage (§12.11, E-S6.14)? | as stated |
 | O6 | (S3, S6) No practice mode in the MVP (a local, unscored run of a step's minigame from the forge flow)? | none (Phase 2 hook, §15.2) |
+| O7 | (S2, S5, S8) The verdicts' cap: is a design past `VERDICT_WORK_MAX` = 700,000 Cover units invalid (`TooComplex`), never measured, and is about 78 ms Studio for the verdict (about 94 for `Analyze.run`) acceptable for the slowest valid designs under it, sliced at 4 ms a Heartbeat (§4.4, §4.9)? | as stated; real designs stay about 2 × under it (P1 330,993 units, the plausible set at most 104,573), but a regular sword of 24 rods 0.12 thick with every part showing spends 471,161 units, 1.49 × under the cap, and honest variants of it pass the cap and are `TooComplex` (§17.2) |
+| O8 | (S2, S4, S6) A part's slot label moves the Sharpening work set: F3 with its main blade labelled Guard, Sharpening 0.6104 Hard → 0.0645 Normal (§17.2). Geometry decides what shows, and the label of what shows counts (§4.4): a part that encloses another by any margin is what shows, so a part a hair larger round F3's blade in the Guard takes the blade out of the Blade, as relabelling the blade does (0.6104 → 0.0645); a part wholly inside another, flush with its faces, gives them up whatever its label (4 skins inside F5's guard, labelled Blade: cleaned, F5's D); of parts of one volume that coincide the slot's name decides, so an invisible copy, exact, turned, described another way, a hair lower or smaller, cannot take a blade out of the Blade (bit-identical, `Verdict.spec`), and a copy in the Blade brings a part in, no more than relabelling it does. Accept it, or tie Sharpening's set to geometry? | accept: the label of what shows counts, visible and the player's choice; F3's blade enclosed by a hair-larger part in the Guard leaves the Blade, as relabelling it does |
+| O9 | (S2, S5) Hidden filler cannot move a tier (§5), but the round-part model band errs both ways (§4.4, §17.2). (a) Round filler that pokes a hair out of a Ball's or a Cylinder's true surface, or lies where a round part meets another part, reads the facets that cross the band and can be kept though it truly shows under 2 %, and so buy a tier: F5 with its pommel a Ball 0.6 across and 4 Blade Balls r 0.08–0.15 poking 0.0001–0.002 out of it along (1, ±1, ±1)/√3 plays Sharpening Hard in 16 of 20 swords (up to 0.3284; the truth's row 0.0989), in random directions 3 of 240; 4 Blade rods where F5's grip enters that pommel, every point of them at least 0.002 inside the pommel or the grip, read 6.57 % each and are kept, Sharpening 0.1827 Normal → 0.2083 Hard. (b) A flat face that stands out of a round part's true surface by less than its model stands past it there is buried, so a thin part lying on a round part can be cleaned while it truly shows nearly half its surface: on a Cylinder anywhere on its side, which its prism stands past by up to 0.0048 r (at its 32-gon's corners; y²/2r at y from a side's middle). On a round guard r 0.8 a plate 0.06 × 0.1 × 0.4 0.0005–0.001 out across a corner truly shows 17.8–18.1 % and reads 0–0.5 %, but a thin one, 0.07 × 0.02 × 0.5, 0.0002 out, 38.9 %, a Wedge so laid 44.2 %, a CornerWedge 46.5 % (V2: 0.065 × 0.02 × 0.4 along a corner line, 0.0003–0.0006 out, 38.0–38.4 %), and centred on a side's middle, its face's plane 1e-6 r inside the side there, the 0.07 plate 37.3 % and one as wide as the side, 0.15, 44.1 %, all read 0; 10 such Blade plates on F5's guard made that disk, its blade 0.8 longer, play Sharpening 0.1302 Normal as built where the truth's row plays 0.2114 Hard. On a Ball, whose sphere a flat face reads on the 32-gons round its circles, only where a face pokes out near a corner of the 32-gon its plane cuts: the verifiers' climbs find parts read just under 2 % and cleaned that truly show 2.4 % at r 0.3, 2.2 % at r 0.2, 3.3 % at r 1 and 9.6 % at r 3 (the flush studs that its moved half-spaces cleaned, truly 16.2 %, are kept). Ways to narrow it, with their prices (§17.2): hiding a round facet whole when its vertices alone lie in the round part moves no plausible verdict and costs P4 3.4 % fewer units, but leaves 5 of 33 such swords a wrong tier, either way (12 as built), and cleans pokes that truly show up to 3.9 %; its buried piece on the moved half-spaces wherever a vertex is buried cleans a plausible rivet that truly shows 6.3 % and costs P4 18.8 % more units; a hull test on what a round facet has left after its hiders (V1) moves no plausible verdict for 0.16 % more units, but leaves crease Balls at 4.4 %, depends on how the subtraction cuts a facet and needs the brute force to follow it. For (b) on a Cylinder: a flat face whose plane is parallel to its axis read against the side's cut by that plane, a strip (two lines and the caps, no trigonometry), exact for a face that pokes out and one just inside alike: a trial reads all 81 plates laid on the side within 0.29 points of their truth, moves no verdict on the plausible set, the attack corpus or the fixture set, and spends fewer units (1,999 designs, at most 26 % fewer); but an oblique face's cut is part of an ellipse, whose exact area needs trigonometry (§4.1 forbids it), so it would take a polygon round it as a Ball's circle does, standing past it by up to 0.48 % of its half-axes, and the brute force must follow both. A finer prism narrows the band (64 sides stand 0.0012 r past, 128 sides 0.0003 r; 66 or 130 half-spaces for 34), but a thin plate as wide as one of its sides still lies in it (0.075 × 0.02 × 0.5 on a 64-gon's side truly 37.9 %, 0.037 wide on a 128-gon's 30.1 %, read 0), and P2 spends 2.9 × and 8.4 × the units, 5 and 6 of the 10 worst valid designs passing the cap (V1's cluster of Balls unchanged); a finer Ball grid (6–8 steps) halves the Ball's band at 2–6 × the cost. Accept the band for the MVP, or take one of those? | accept for the MVP; revisit if playtests or telemetry meet filler or flush parts at round parts (§17.2) |
 
 ### 17.2 Engineering items
 
@@ -4259,8 +4456,19 @@ Vendored, unchanged.
 |---|---|
 | S1 | Re-run `sizes2.luau` and the budget test with the Phase 2+ item shape before Phase 2 steps ship (2.08 MB exceeds the size block today); re-measure `settings` with `grindToggle` (≈ +20 B, added after the measurement). |
 | S1 | Confirm under `--!strict` that `StepRecord` passes where `CT.StepFacts` / `CT.StepRun` are expected (width subtyping); otherwise `Items/Recompute` maps the fields explicitly (S4's request). |
-| S2 | Checkpoint gaps: the prototype's longest run between checkpoints is 0.24–0.52 ms Lune (median of 15 runs; up to 1.0 ms with GC, E-S2.8), above S8's `CHECKPOINT_GAP_LUNE_MS` 0.35 (§14.11): lower `CHECK_UNITS` or add checkpoints until T-PERF-01 passes. S8 tests. |
-| S2 | Slivers thinner than a quarter sample patch between near-duplicate parts are under-counted (deflation only; X01 measures +0.0002 against its union blade). Accepted. |
+| S2 | Checkpoint gaps: the prototype's longest run between checkpoints is 0.24–0.52 ms Lune (median of 15 runs; up to 1.0 ms with GC, E-S2.8), above S8's `CHECKPOINT_GAP_LUNE_MS` 0.35 (§14.11). With §4.4's exact verdict, the median run's longest stretch was 0.16 ms over the fixtures and the worst designs (0.11 under the line reading), 0.32–0.37 on P1, P4 and C09 and 0.50 on one climbed design, the machine quiet; `CHECK_UNITS` 250 or 125 leaves them as they are (0.57 / 0.59 on that design), so they are not work the checkpoints miss but allocation and GC (the subtraction makes and drops many small polygons). V1 found single reports of up to 4,206 units and each Ball's model reported whole (1,216; P4 0.67 ms), V2 runs of polygons kept whole never reported (40,093 units at once past the cap), and V1 again a piece built whole, a Cylinder's cap clipped by most of a small Ball's 128 lines (5,362 units in one report; 5,047 in a valid sword): now a model reports as it is built and a reading once `SPEND_EVERY` 256 have built up, at the next facet, half-space, line clipped or split, line or edge tested, polygon, piece or hider, the largest single report 3,570 units (what a test that ends early charges for the lines it skipped, not work; 2,335 since the third round's rules hide `tclimb_1.json #5`'s parts whole, 1,088 since a flat face reads a Ball on 32 lines), and with the machine 5–20 % busy the median run's longest stretch is 0.11 ms over the fixtures (the median of their medians; P4 0.37, F4 0.27, P1 0.26) and 0.15–0.29 over the worst valid designs, past 0.35 on 1 of 75 designs (P4); after the fourth verifiers' round V1, the machine 3–6 % busy, 0.13 over the fixtures (all under 0.35, C10 0.33, P4 0.27) and 0.14–0.41 over the worst valid designs, `tclimb_4.json #1` past 0.35 in both of two runs (0.358, 0.377), `tclimb_2.json #4` in one (0.406); after the fifth, the machine 1–4 % busy, 0.07–0.24 over the F, C and X fixtures, 0.14–0.29 over P1–P5 and 0.16–0.28 over the worst valid designs, none past 0.35, single runs up to 0.74 (the cluster). What passes is a collection: in 15 runs of `tclimb_4.json #1` every stretch past 0.25 ms (0.31–0.52, while its Cylinder models are built) holds one, the heap dropping 1.2–4.3 MB in it, and with a full collection at every checkpoint, outside the stretches, no design's median run passes 0.23 ms (models' stretches the longest then, 0.12–0.15: a model is charged about 0.4 of its time; single runs now and then do, up to 0.43 ms and once 1.26 in the sixth round's runs, the machine 1–9 % busy: the clock, not the work, as the medians hold). `CHECK_UNITS` stays 500; T-PERF-01 asserts `CHECKPOINT_GAP_LUNE_MS` on the F, C and X fixtures and reports P1–P5 and the worst designs against it, as S-PERF-01 does with the 75 ms total (§4.9, §14.11). S8 and S2: fewer allocations in Cover (polygons reused), or an incremental GC step at each checkpoint. |
+| S2 | Slivers thinner than a quarter sample patch between near-duplicate parts are under-counted (deflation only; X01 measures +0.0002 against its union blade, X02 +0.0006). Accepted. |
+| S2 | What hidden parts can still reach: a part that really covers another (§4.4), and round filler in a round part's model band. Count, budget, order and id reach no verdict, and the cap none either: C09 + a plate 0.12 × 2 × 0.05 that shows 20.12 % stays kept, Sharpening 0.2542 Hard, with 0 and with 5 hidden blocks, where one pass over all parts cleans it (0.1904 Normal, C09's own). On the 1,340 attack designs the verifiers recorded (84 of which moved the line reading's rows, 48 tier flips, \|ΔD\| up to 0.80), the reading's kept rows are the truth's on every design (E-S2.12). Filler wholly inside a Ball or a Cylinder, against its true surface, reads nothing (§4.4: a flat filler's faces on the circles their planes cut from a Ball's sphere or on a Cylinder's half-spaces moved out, a round filler's true solid in the round part's, exact for every pair of round parts, to rounding): V1's 4 Blocks and 4 Balls r 0.1 in F5's pommel made a Ball 0.6 across (10 % and 3.3 % each on the inscribed half-spaces, Sharpening 0.0989 Normal → 0.2169 / 0.2958 Hard) and 4 Blocks in each of F3's, C04's and C09's pommels (4.4 % each; F3's Sharpening 0.6104 → 0.5238) are cleaned, D the fixture's own, and of 1,800 Balls in Balls, 3,050 Cylinders in Balls and 4,050 rods along Cylinders (half of them turned 0.5°), 0.0002–0.02 under the true surface, none reads 1 % (up to 9.0 %, 4.9 % and 8.9 % before); and since the fifth verifiers' round at any tilt, a Cylinder in a Cylinder by the farthest point of its cap circles from the axis: V1's 10 Blade pucks across the axis of F5's guard made a disk r 0.8, 1e-4 under its side (2.33 % each and kept on the caps' centres' distance + r, Sharpening 0.1302 Normal → 0.3739 Hard), are cleaned, D the truth's row's, and of 17,647 rods and pucks wholly inside one Cylinder (tangent to a disk's rim r 0.8 or 0.5, turned 0–90° about its radius, and V1's random tilts; 1,237 kept before, up to 7.2 %) none is kept. **[Decision to confirm]** (§17.1 O9): round filler that pokes a hair out of a round part's true surface still reads the facets that cross it in the band: F5 + 4 Blade Balls r 0.06–0.15 in that pommel, 0.0001–0.002 out (truly 0.06–1.5 % each), read 2.0–7.1 % and are kept, and 12 of the 33 such swords in the hitbox move a tier (Sharpening 0.0989 Normal → 0.2965 Hard; with r 0.06–0.15 along (1, ±1, ±1)/√3, 16 of 20, every one of r 0.08 or more, up to 0.3284 Hard; in random directions of the pommel's upper half 3 of 240), as in the build before; of 1,440 Balls and rods poked 0.0002–0.03 out of a Ball or a Cylinder alone (r 0.15–0.8), 159 that truly show under 2 % are kept (20 that show more are cleaned); and round filler where a round part meets another part, truly hidden (every point of it at least 0.002 inside one of them), reads its facets in the round part's band too: 4 Blade rods r 0.043 × 0.137 where F5's grip enters that pommel read 6.57 % each and are kept, Sharpening 0.1827 Normal → 0.2083 Hard with the blade 0.25 longer (the truth's row 0.1827); Balls there read up to 4.8 %, rods in C09's grip reaching into its guard 2.4 % (Sharpening 0.1904 → 0.1664, no tier), Balls in the crease of two pommel Balls or of a pommel Ball and a grip Cylinder up to 2.7 and 2.8 %, all kept and truly 0 (a rod's caps read the pommel's sphere, so far fewer crease rods are kept than on its half-spaces, 4 of 3,744 placements against 23; the 2.04 % of one Ball straddling the pommel and the grip, earlier, was read without the part's own test: that Ball lies wholly in the pommel and reads 0). Taking a round facet's buried piece on the moved half-spaces too, wherever a vertex of it lies in the round part, keeps none of the pokes but cleans a plausible design's ball rivet that truly shows 6.3 % (`ballRivet\|F3\|guardX d0.10 cap0.3000`, its 4 turns, no tier) and 170 pokes that truly show 2.0–7.7 %, and costs P4 18.8 % more units; hiding a round facet whole when its vertices alone lie in it moves no verdict on the plausible set (P4 3.4 % fewer units) but leaves 5 of the 33 swords a tier the truth's row does not have, either way, and cleans pokes that truly show up to 3.9 %; V1's hull test on the polygons a round facet has left after every hider (their vertices, each also pushed out by r over the facet's offset, in a round hider's true solid) closes the 4 crease rods, moves no plausible verdict and costs 0.16 % more units (at most 2.7 % on one design), but leaves crease Balls at up to 4.4 %, rods at 3.9 % and the crease of two Balls at 2.7 %, depends on how the subtraction cuts a facet, and would need the brute force to follow it (E-S2.12). None is adopted, nor a finer model, which narrows the band (E-S2.12). The limit is otherwise the 2 % rule itself (below). |
+| S2 | The round-part model band: a Cylinder is read on its inscribed 32-gon and a Ball on 128 triangles (95.07 % of its sphere's area), and the conservative probe hides what its sagitta and spread reach, so near 2 % a round part's reading strays from the truth, mostly under it. On all 33,389 plausible designs (323,577 parts; E-S2.12): cleaned at a true share of 2.5 / 3 / 4 % or more 455 / 3 / 0 parts, the highest 3.615 % (a Ball in a pommel housing), all Balls and Cylinders; kept under 2 / 1.5 %: 0 / 0, the lowest kept 2.002 %. The spread (§4.4) closes what the probe along a facet's normal alone left open, Balls caged by blocks beside their facets (V1's 4 of 1,000 cages, truly 1.75–1.95 %, read 2.10–2.34 % and kept; in a valid sword Hammering 0.1548 Normal against the truth's 0.2020 Hard), at a price, all under the truth: on the plausible set 35 more parts truly at 2.0–3.6 % are cleaned (wrap rings, Balls in a pommel housing, a caged Ball, a rod; no tier, \|ΔD\| at most 0.041); in the verifiers' 12 families (every 8th) 2 beads truly 4.4 and 7.0 % (no tier, \|ΔD\| 0.033); on 2,000 of V1's cages it cleans 253 Balls that truly show 2 % or more, 148 of them 5 % or more, up to 25.9 % (r 0.05; every r from 0.05 to 0.25), and closes the 5 kept under 2 %; a bar behind 16 slats reads 36.5 % where it truly shows 40.7 % (0.4 points under without the spread). A caged Ball in a sword, r 0.20, truly 3.59 %, reads 0.07 % (1.89 % without the spread) and is cleaned, Smelting 0.2057 Hard → 0.1974 Normal, as before. A Cylinder that pokes less than its 32-gon's sagitta (0.0048 r) through a flat face reads nothing there (a long rib that pokes 0.0048 r to 0.006 r, truly 3.0 to 3.4 %, is cleaned), and so does a Ball poking through flat faces by less than its model's depth there (≤ 0.0572 r; 0.0474 r on three perpendicular faces): a Ball set in a turned cube's corner truly 6.9 % reads 0; in F5's pommel 2.5–4.6 %, \|ΔD\| ≤ 0.005. Blocks, Wedges and CornerWedges are exact against polyhedral hiders, but not next to a round hider, whose model stands past its true surface (the band's other way, **[Decision to confirm]** (§17.1 O9)). Against a Cylinder a polyhedron's facet takes its half-spaces moved out by their sagitta for its buried piece as for its probe (§4.4), and they stand up to 0.0048 r past its side at its 32-gon's corners, so a face that stands out of the side by less than that is buried there, and one in that band past `HIDE_OFFSET` is hidden by the probe, where the truth shows them: a Block 0.04 × 0.2 × 0.04 0.0002–0.0019 out of a Cylinder r 0.8's side across a 32-gon corner, truly 4.7–5.5 %, reads 0–0.05 % (r 0.3: 0.0001 out, 4.8 % read 1.5–1.9 %), a plate 0.06 × 0.1 × 0.4 0.0005–0.001 out there, truly 17.8–18.1 %, reads 0–0.5 %, and is cleaned, and a thin part far more (V1: 0.07 × 0.02 × 0.5, 0.0002 out, truly 38.9 %, a Wedge so laid 44.2 %, a CornerWedge 46.5 %, read 0; 10 such on F5's guard made that disk, its blade 0.8 longer, Sharpening 0.2114 Hard on the truth's row, 0.1302 Normal as built; V2: 0.065 × 0.02 × 0.4 along the corner line, 0.0003–0.0006 out, truly 38.0–38.4 %, read 0, two such in F5 cleaned, no tier); across a side's middle a face that stands out there reads within 0.4 points of the truth, but anywhere on the side a face lying flat on it, its plane δ inside the true side on the side's middle line, stands y²/2r − δ out at y from that line and inside the prism over the side's length (2r·tan(π/32), 0.158 at r 0.8), and is buried: on that disk, δ 1e-6 to 1e-4 r, a Block 0.07 × 0.02 × 0.5 centred on the middle truly 37.3–26.3 %, one as wide as the side 44.1–38.3 %, off the middle 34–40 %, Wedges up to 47.4 %, CornerWedges 48.3 %, all read 0 (`fix5/plate_side.luau`); past a sword's hitbox the price grows with the radius (a Cylinder r 3, truly 13.0 %, reads 0); a plate framed but for a window 0.05 wide under a Cylinder r 0.4's edge HIDE_OFFSET + 0.0005 over it, truly 3.9 %, reads 1.6 %. Against a Ball a flat facet reads the sphere, on the 32-gon round the circle its plane cuts (§4.4), which stands past the sphere by up to 0.0048 R where the plane passes through its centre (0.0036 R at 0.5 R from it, 0.0009 R at 0.9 R), so a face poking out near a corner of it is buried there (of 540 Blocks laid in the centre plane of a Ball r 0.3 and poking out by up to 0.0048 r, 14 that truly show 2.0–2.1 % are cleaned; none at r 0.2, 18 at r 1, up to 2.9 %, 8 at r 3, up to 5.2 %; 0 of 786 Blocks poked out by a corner 0.0001–0.006 r of Balls r 0.2 and 0.3, 25 of 397 at r 3, truly 2.0–3.4 %; the verifiers' climbs on Blocks, Wedges and CornerWedges of at least 0.0002 stud³, several faces poking out near corners of their 32-gons, find parts read just under 2 % and cleaned that truly show 2.40 % at r 0.3 (V2: a Block 0.0365 × 0.0592 × 0.0933 reads 1.9998 %, truly 2.397 %; 2.26 % with a face in the centre plane; Wedges 2.28 %, CornerWedges 2.32 %), 2.23 % at r 0.2, 3.30 % at r 1 and 9.63 % at r 3 (V1: a CornerWedge 0.1404 × 0.2116 × 0.0206 reads 1.962 %, truly 5.94 %), VisibleOracle agreeing on 400,000 points). Its half-spaces moved out by their sagitta, which a flat facet took before (V1: they stand up to 0.0452 r past the sphere where three or more meet off its axes), cleaned 91 of 440 Blocks 0.03–0.1 wide poked 0.002–0.045 r out of a Ball r 0.3 that truly show 2 % or more (up to 17.3 %; 27 at r 0.2, up to 12.5 %; 320 at r 3, up to all of the Block), a Block 0.04 wide 0.0004–0.004 out of its pole truly 5.1–6.7 % (read 0–1.9 %), 4 studs in a sword truly 16.2 % each (Sharpening 0.2047 Hard → 0.1907 Normal), Blocks straddling F5's big pommel and its grip truly up to 11.7 % (read 0.005–1.8 %), a plate under a window 0.06 wide under a Ball d 0.6 hovering 0.0125 over it, truly 12.86 % (read 1.61 %), and a plate framed but for a window 0.05 wide under a Ball r 0.3's tip, truly 3.9 % (read 0.08 %); on the sphere each of them reads within 0.4 points of its truth and none is cleaned (none of the 440 Blocks at any r from 0.2 to 3). On the plausible set the circle moves 14 verdicts, all to the truth (the grips of wrap-ring swords, their caps against the pommel Ball, truly 2.13–2.97 %, kept, D the truth's row's), and none on the attack corpus or the fixture set (E-S2.12). The probe is conservative, but for a hider that ends within a facet's sagitta past the true probe: a Ball r 0.3 buried but for a top cap 0.004–0.008 high under a Wedge 0.013–0.015 thick over its pole reads 0.11–0.22 % where the truth reads 0.00–0.09 % (only a Wedge's or a CornerWedge's thin edge is that thin; no verdict moves). A finer model costs 2–6 × and does not close the window below (E-S2.12). Accepted under the lead's rule for the spread (adopted unless it cleaned a part truly showing 5 % or flipped a tier on the plausible set); revisit Balls and Cylinders, and the spread's price on caged Balls, if playtests meet beads, ribs or caged Balls at 2.5–25 % (the flat faces' price: §17.1 O9). |
+| S2 | Ties: a face exactly at `EPS_GEOM`, or `HIDE_OFFSET` + `EPS_GEOM`, from a hider's face parallel to it lies on the hide test's boundary, and rounding decides, in any reading and in the truth: 811 of 55,911 fuzz parts lie on such a tie, where whether a piece of up to 0.46 of a part shows follows the bits (E-S2.12). A flat face whose normal's two least components lie `AXIS_TIE` apart to within rounding takes the 32-gon of its circle against a Ball in a frame its last bits pick, so two writings of one solid can read differently (V1: a Block 0.15 × 0.05 × 0.12 so turned, cut by a Ball r 0.3, 2.000 %, kept, and 1.992 %, cleaned, written 0.05 × 0.15 × 0.12 with a quarter turn; of 405 such normals 111 pick another axis in the other writing, their readings at most 1.25e-4 of a part apart), as a Cylinder's frame has its tie (§4.4): any rule for the frame has such a tie somewhere. The conservative probe (§4.4) leaves a round filler sealed by flat walls just under `HIDE_OFFSET` away hidden, as it truly is, now that every wall its probe reaches is among its hiders (a reach of δ alone left out walls past a facet's box and read a sealed Ball at 2.345 %, kept: V1's caged-Ball sword, Smelting 0.1707 Normal → 0.2176 Hard), and with its spread a Ball caged by blocks beside its facets too: without it, an inscribed model read such rods at 5–10 % and kept them (\|ΔD\| up to 0.44, tier flips). Accepted. |
+| S2 | What ids and order still reach. In the build, nothing: any order of a design's parts gives the same verdicts, readings, units, areas and contact rows to the bit (§4.4). M3's probes are still in part order in the emulator: C09 in 300 random orders, Smelting and Sharpening exact, Hammering 0.3170–0.3195; P5 Hammering 0.1853–0.1902 in 60; 9 other fixtures exact. M3 is to walk its parts in the measure's rank order (`Sampling.measureRanked`), §5.2's probes and budgets included, and bless §5.5 on that. A mirror image across X or Z keeps every verdict but for parts with a face in common that tie in the rank up to the sign of x or z (volume, slot, height, \|x\|, \|z\|: true twins and others) and round copies that coincide on the model (a Cylinder spun about its axis on its original, a Ball turned: 79 of 23,394 part images of 2,000 tangles, none else), which swap who keeps the face (two plates of 0.005 stud³, 0.5 × 0.02 × 0.5 at z +0.05 and 0.25 × 0.02 × 1.0 at z −0.05, sharing a window under lids: the first reads 0 % and is cleaned, under the Z mirror 3.000 % and is kept, the truth agreeing both times; \|z\| comes before z in the rank as \|x\| before x, so near twins stacked in z no longer swap under the Z mirror: 545 of 8,000 tangles did). The cap's boundary: a part's reading stops at 2 % in its model's facet order (a Ball's octants on the world axes, a polyhedron's own frame), which neither a mirror image keeps in the world nor the way a Block's size and turn are written: a design and its image can differ by up to about 30 % of their units (a climbed design, 655,542 → 475,890 under the Z mirror; P4 +3.5 % under the X mirror; another, valid at 638,320, spends 685,385 under the X mirror, and before the third round's rules was valid at 680,325 and `TooComplex` at 722,733), and so can one solid written another way (every Block's X and Y sizes swapped with a quarter turn about its Z: P1 −3.2 %, C09 +21.3 %, a climbed design −4.5 %; far more on small designs, F5 +96 %, C05 +689 %, E-S2.12), so one within that of `VERDICT_WORK_MAX` can be valid while its image or another description of it is `TooComplex`; real designs stay about 2 × under (P1 330,993, its images 329,190). Accepted. |
+| S2 | **[Decision to confirm]** (§17.1 O8) A label moves Sharpening's tier: F3 with its main blade labelled Guard, Sharpening 0.6104 Hard → 0.0645 Normal; C08 0.2487 Hard → 0 Normal; no hidden part is needed, so it is outside the verdict, but §5 says invisible construction choices cannot move a tier, and `Slot` is a free property (§11.10). Geometry decides what shows and the label of what shows counts (§4.4): the verdict's rank goes by volume, then by the slot's name. So no copy of one volume can take a part out of the Blade, whatever the frame, the size's description or the nudge that tells it from an exact copy (F3 + its blade in the Guard, the Pommel or the Grip, exact, turned 180° about Y or X, its size given as 0.035 × 3.4 × 0.07 with a quarter turn, 1e-12 or 5e-8 lower, 1e-9 or 1e-4 smaller; C08 the same: the blade kept, every other part's measure and D bit-identical), and filler inside a part buys none of its faces (F5 + 4 skins 0.02 thick inside its guard, labelled Blade: cleaned, F5's D; with the slot's name before the volume they were kept and Sharpening went 0.0989 Normal → 0.4201 Hard, past relabelling the guard, 0.2804). But a part that encloses another by any margin is what shows, and there is no near-copy rule: F3's blade with a copy 1e-12 to 1e-4 larger in every size in the Guard or the Grip leaves the Blade, every other verdict as with the blade relabelled, Sharpening 0.6104 → 0.0645 (C08 0.2487 → 0), the relabelled blade's numbers (V1 tried cleaning copies within `COPY_NEAR` = 0.001 of a part above: a copy 0.0012 larger still moved the blade, and 0.01 broke 10 Physics cases). A copy can bring a part in, no more than relabelling does (F3 + a copy of its guard in the Blade, 0.6104 → 0.6770, the relabelled guard's number). Accept it, or tie Sharpening's set to geometry. |
+| S2 | The measure keeps its rank (§4.4, `Sampling.measureRanked`: by the solids, the larger first, the slot's name last), so the verdict's rank, the larger then the slot's name, moves the measure, owned volumes and mass only where it moves a verdict: against the build before the verdict took the slot's name ahead of where a part stands, the measure, mass and volume probes are bit-identical on every one of the 33,389 plausible, 1,340 attack and 191 fixture-set designs whose verdicts agree, and the verdicts move only where the probe's spread moves them (35 plausible designs; E-S2.12); and against the build before the third verifiers' round's rules (§4.4: the buried piece moved out, round parts and facets in a round part's true solid, a Wedge's rank volume) no verdict, measure, mass or probe moves on any of the 33,389, the 1,340 and the 193 designs, only units; and against the build before the fourth round's (§4.4: a flat facet against a Ball on the circles its plane cuts from the sphere; a Wedge's rank extents, the part test's farthest point of a rod) 14 plausible verdicts move, all to the truth (the grips of wrap-ring swords, kept), and with them only those designs' measures, mass and probes; on the 1,340 and the 193 designs only units move. With the slot's name first in the measure too, 12,547 plausible designs measured differently, D moved on 7,664 and 95 tiers flipped (C09's Sharpening 0.1904 → 0.1826), and 4 grilles' mass moved. Where the verdict keeps a part the truth hides, the measure's rank can give it a face it shares with one the truth keeps: a rod whose axis ties (two 45° snaps) in F3's Guard and its copy spun 55° in the Blade were both kept, the rod truly hidden, Sharpening 0.5845 against the truth's row's 0.6996 through the emulator, no tier; now the rod's true solid lies in its copy's and it is cleaned, D the truth's row's (0 of 72 such spins keep a truly hidden copy, 14 before). M3 calibrates on the ranks as they are. |
+| S2 | What the 2 % rule itself admits, which no reading changes. "Hidden" means within `HIDE_OFFSET` of other parts, so a filler in a sealed cavity is not hidden: a closed box + a block inside it, Smelting 0.1376 Normal → 0.4463 Hard. Flush layers through the thickness, each under 2 %, are each cleaned: a 1.6 × 3.5 × 0.16 blade in 8 flush layers, Hammering 0.0582 Normal → 0.7000 Hard. k hidden sheets clean a part that shows up to about 2 % × k × their area / its area: 14 sheets over a core that shows 11.92 % clean it (the r2 verifier's measures, E-S2.12). M3 and the designer: whether the rule should look through a sealed cavity or a stack of layers. |
+| S2 | Design question for M3: where a core sandwiched between cheeks crosses 2 %, D jumps 0.34–0.47 whatever the precision, because cleaning it opens the chord in Thinness. M3 decides how a cleaned part affects Thinness' chords. |
+| S2 | Overlap budget: designs past `N_OVERLAP_WORK` trade accuracy for time. P1, P2 and P4 measure about −10.3, −4.4 and −5.6 % against the union's volume (P1's COM y off by 0.021); with the budget lifted, within about 1.2 %. `TOL_MASS_REL` and `TOL_BALANCE_ABS` hold for designs within the budget (the F, C and X fixtures), not for P1–P5. |
+| S2 | The cost of the verdict (E-S2.12; Lune, median of 15; Studio assumed 2.6 × Lune, not measured): on the F, C and X fixtures the verdict takes at most 1.7 ms (C09) and the whole exposure 7.1, P1 11.8–12.0 / 19.1–19.4 ms, P4 10.3 / 12.8–13.3 (the line reading 0.8 / 3.5), the machine 2–14 % busy with other programs. Hostile designs cost far more than under the line reading (the judge's climbs reach 273 ms Lune for the verdict alone), so `VERDICT_WORK_MAX` caps them: units count every vertex against a line, box test, polygon made, model facet built and cap circle searched (28 units, its time), and track time to within about 1.5 × near the cap (28–46 ns a unit; a model is charged about 0.4 of its time, 97–116 ns a unit, so that a design whose parts their own test hides at once costs about 100–125 ns a unit, but builds 24 models at most). 4 climbs on the verdict's wall time under 700,000 units (18,000 evaluations, canonical designs that pass V1–V3, under the rank by size, place and frame) found the slowest at 22.5 ms for the verdict; under §4.4's rank and spread 10 of them stay valid, and the slowest valid design known is V1's cluster of 24 Balls, its spacing set at 0.0614, 687,304 units: 30.2 ms for the verdict (43.9 ns a unit; ≈ 78 Studio), 32.7 for the whole exposure, 34.7 for `Analyze.run`; the climbed designs that stay valid take at most 31.3 for the whole exposure and 36.2 for `Analyze.run` (≈ 94 Studio; the machine 1–7 % busy besides the run, after the fourth verifiers' round; 30.2 / 32.3 / 34.7 and 30.8 / 36.0 after the third, 31.7 / 34.0 / 36.3 and 32.9 / 38.0 before it, the machine 2–14 % busy). The heaviest real design, P1, spends 330,993 units, 2.11 × under the cap, the plausible set at most 104,573 (a C09 under 5 wrap rings); but V1's regular sword of 24 rods 0.12 thick with every part showing spends 471,161, 1.49 × under, and honest variants of it pass the cap and are `TooComplex` (two grip rods turned 9.0° and 4.6° into the guard stack, every part still showing; V1's climb on units reached 1.75 M, and hand jitter of ±0.01 and ±2° on 320 bundles at most 488,000, under the build before). **[Decision to confirm]** (§17.1 O7) with no designer to ask at M2: past the cap a design is `TooComplex`, answered in 10.7–24.5 ms; under it the slowest takes about 94 ms Studio, about 24 Heartbeats at 4 ms, no frame hitch, one job per player. T-PERF-01 and S-PERF-01 run P1, the specks and `worst_designs.luau`. |
+| S2 | Grip axis: the no-vote rule is a step at 45°: a grip part crossing it drops its whole vote at once (F4 + equal parts at −45.1° and +44.9° about its grip: axis −22.45°, balance 0.634; at ±45°: axis 0°, balance 0.740), and a small strap beside a level bar sets the whole axis, as on a ring grip (A26). D is unaffected: its frame is fixed at +Y. Accepted unless playtests find it. |
 | S3 | PrecisionTrace's Average Iron − Steel drop on Normal is 0.009 (§6.13: 0.633 → 0.624), below `STEEL_MEAN_DROP`'s 0.01 floor (§14.6); HoldZone (0.016) and TimingStrike (0.012) pass. Retune the Steel column or lower the floor with S8 (O4). |
 | S3 | Replace the bot models with playtest distributions from `StepScored` and retune `Definitions/MinigameFamilies` (one `BALANCE_VERSION` bump); tune the Expert…Hell placeholder columns before Phase 2; keep trace half-widths ≥ 0.0156 (band ≥ 12 px at 720p; the MVP minimum is 0.034). |
 | S3 | Re-measure the `PtTooPrecise` human minimum over `FP_RUNS` runs on the 30 fps / 360 px device (3,000 runs give 0.0028 u, ×3.5, against §14.8's 3 × `PT_PRECISE_MEAN_DEV` floor); if it nears 3 ×, retune `PT_PRECISE_MEAN_DEV` (with S8). |
@@ -4275,7 +4483,7 @@ Vendored, unchanged.
 | S6 | Re-check the orthographic read-back on the shipping client; while it fails, S8 runs the editor scenarios on the telephoto path. Pick the 14 audio ids from Roblox-published Creator Store sounds and check their licence lines. |
 | S7 | Define the named camera framings for the bridge's `cameraShot` (S-VIS-01…09; with S8). Confirm that the invisible, non-colliding `HomeSpawn` puts first spawns and respawns on the floor at the home pose (S-E2E-02, ≤ 10 studs) and that §13.7's Wedge and CornerWedge vertex sets match Roblox's rendered shapes before the bounds goldens freeze (with S8). |
 | S7 | If `MIN_DIM` or `MAX_DIM` is ever tightened after launch, records kept under the older bound (§9.6) fail `RenderPlan`'s size check (`BadSize`) and show the placeholder: decide then whether the builder accepts stored sizes (with S1). |
-| S8 | Measure the analysis in the Studio server DataModel on the final modules (S-PERF-01) and apply §4.9's fallback above 75 ms; confirm bit-identical factor digests Lune vs Studio client vs server (no FMA contraction, `--!native` off); confirm the double round trip on a live DataStore key and the JSONEncode length model (S-PAR-03, with S1). |
+| S8 | Measure the analysis in the Studio server DataModel on the final modules (S-PERF-01) and apply §4.9's fallback above 75 ms on real designs; confirm bit-identical factor digests Lune vs Studio client vs server (no FMA contraction, `--!native` off); confirm the double round trip on a live DataStore key and the JSONEncode length model (S-PAR-03, with S1). |
 | S8 | Tool and engine facts to verify in the build: **V-01** luau-lsp flags at the pinned version (named definitions, sourcemap, `--ignore`, `--formatter`, exit code), checked with `--help` and a planted type error · **V-02** Lune typedefs for luau-lsp pass B (`lune setup`, the `lune` alias; commit `tests/.luaurc`) · **V-03** whether `execute_luau` shares the game's module cache · **V-04** `screen_capture` honours a camera set by a client snippet (with S7) · **V-05** timing precision of `user_keyboard_input` (sets S-E2E-12's offsets) · **V-06** `execute_luau` time limit for yielding snippets · **V-07** buffers replicate through RemoteEvents intact (S5) · **V-08** releases while the Esc menu is open reach the game and `MenuOpened` fires on Esc (S3, S6) · **V-09** engine shape conventions and float survival (S-PAR-01, S-PAR-03; S2, S1). |
 
 ### 17.3 Carried from the design draft

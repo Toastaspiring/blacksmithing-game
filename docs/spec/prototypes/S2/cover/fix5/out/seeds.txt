@@ -1,0 +1,6 @@
+PROP_BASE_SEED default: RESULT pass=3 fail=0 skip=0 files=9 time=53.42s
+PROP_BASE_SEED 0x0000002A: RESULT pass=3 fail=0 skip=0 files=9 time=61.20s
+PROP_BASE_SEED 0x600DCAFE: RESULT pass=3 fail=0 skip=0 files=9 time=58.68s
+PROP_BASE_SEED 0x31415926: RESULT pass=3 fail=0 skip=0 files=9 time=62.06s
+PROP_BASE_SEED 0x27182818: RESULT pass=3 fail=0 skip=0 files=9 time=62.48s
+PROP_BASE_SEED 0x55AA55AA: RESULT pass=3 fail=0 skip=0 files=9 time=62.51s

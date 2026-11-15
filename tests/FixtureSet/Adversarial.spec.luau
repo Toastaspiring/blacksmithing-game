@@ -1,5 +1,5 @@
 --!strict
--- The adversarial drafts A01–A24 (SPEC §14.7, E-S8.4): the set's shape (ids, variants, fresh deterministic drafts),
+-- The adversarial drafts A01–A24 and A28 (SPEC §14.7, E-S8.4): the set's shape (ids, variants, fresh deterministic drafts),
 -- well-formed expectations, coverage of every CanonError, ValidationCode and wire code, each `save` against a model
 -- of §10.3's Guard, the Definitions values the constructions assume, and the premises of each construction that the
 -- test side can measure now (slot counts, exact containment, gaps, Dust volumes, enclosure, copies). The verdicts
@@ -37,7 +37,7 @@ local CANON_ERRORS = {
 	"Malformed", "UnsupportedSchema", "UnknownId", "DisabledId", "SlotNotInType", "MaterialNotAllowed", "TooManyParts",
 	"DuplicatePartId", "NonFinite", "OutOfRange", "BadRotation", "BadName",
 }
-local VALIDATION_CODES = { "SlotMissing", "SlotTooMany", "OutOfHitbox", "Disconnected", "BladeNotAboveGrip" }
+local VALIDATION_CODES = { "SlotMissing", "SlotTooMany", "OutOfHitbox", "Disconnected", "BladeNotAboveGrip", "TooComplex" }
 local SAVES = { "Valid", "Invalid", "E_INVALID_BLUEPRINT", "E_BAD_REQUEST" }
 local QUICK = { SlotMissing = true, SlotTooMany = true, OutOfHitbox = true } -- V1–V2 (SlotMissing without a reason)
 
@@ -126,12 +126,12 @@ local function gapX(a: Gen.Part, b: Gen.Part): number
 end
 
 return Test.suite("FixtureSet/Adversarial", function(t)
-	t.it("A01–A24 in order, every case with variants, keys unique", function()
-		A.eq(#Adversarial.list, 24, "cases")
+	t.it("A01–A24 and A28 in order, every case with variants, keys unique", function()
+		A.eq(#Adversarial.list, 25, "cases")
 		local seen: { [string]: boolean } = {}
 		local count = 0
 		for i, c in Adversarial.list do
-			A.eq(c.id, string.format("A%02d", i), "case order")
+			A.eq(c.id, string.format("A%02d", if i <= 24 then i else 28), "case order (A25–A27 are M3's)")
 			A.eq(Adversarial.order[i], c.id)
 			A.eq(Adversarial.get(c.id), c)
 			A.truthy(#c.title > 0 and #c.variants > 0, c.id .. " has a title and variants")

@@ -1,0 +1,23 @@
+canonical: true
+valid: true 
+ 1 Pommel Ball     reads  96.201% (kept), truth  97.683% on 40,000 points
+ 2 Grip   Block    reads  62.508% (kept), truth  62.710% on 40,000 points
+ 3 Guard  Block    reads  96.200% (kept), truth  96.198% on 40,000 points
+ 4 Blade  Block    reads  98.556% (kept), truth  98.554% on 40,000 points
+ 5 Blade  Block    reads  50.000% (kept), truth  50.002% on 40,000 points
+ 6 Blade  Cylinder reads   6.574% (kept), truth   0.000% on 400,000 points
+ 7 Blade  Cylinder reads   6.574% (kept), truth   0.000% on 400,000 points
+ 8 Blade  Cylinder reads   6.574% (kept), truth   0.000% on 400,000 points
+ 9 Blade  Cylinder reads   6.574% (kept), truth   0.000% on 400,000 points
+rod 6: the largest min(sd pommel, sd grip) over its surface -0.002048 (< 0: buried in the union)
+rod 7: the largest min(sd pommel, sd grip) over its surface -0.002048 (< 0: buried in the union)
+rod 8: the largest min(sd pommel, sd grip) over its surface -0.002048 (< 0: buried in the union)
+rod 9: the largest min(sd pommel, sd grip) over its surface -0.002048 (< 0: buried in the union)
+D without the rods: Sm 0.1661 N, Ha 0.1269 N, Sh 0.1827 N
+D build:            Sm 0.1657 N, Ha 0.1269 N, Sh 0.2083 H
+D truth's row:      Sm 0.1661 N, Ha 0.1269 N, Sh 0.1827 N
+|dD| 0.0256 on Sharpening, tier flip true
+	{ slot = "Blade", shape = "Cylinder", material = "Iron", pos = { 0.091439999999999994, 0.52998100000000004, -0.038117999999999999 }, rot = { 0, 0.063277017687257728, 0.97409027227872502, 0.21712706069158158 }, size = { 0.13697000000000001, 0.086550000000000002, 0.086550000000000002 } },
+	{ slot = "Blade", shape = "Cylinder", material = "Iron", pos = { 0.091439999999999994, 0.52998100000000004, 0.038117999999999999 }, rot = { -0.97409027227872502, 0.21712706069158158, 0, 0.063277017687257728 }, size = { 0.13697000000000001, 0.086550000000000002, 0.086550000000000002 } },
+	{ slot = "Blade", shape = "Cylinder", material = "Iron", pos = { 0.038117999999999999, 0.52998100000000004, 0.091439999999999994 }, rot = { -0.68878583701613705, -0.10878840869419942, 0.68878583701613705, 0.19827562529404152 }, size = { 0.13697000000000001, 0.086550000000000002, 0.086550000000000002 } },
+	{ slot = "Blade", shape = "Cylinder", material = "Iron", pos = { 0.038117999999999999, 0.52998100000000004, -0.091439999999999994 }, rot = { 0.68878583701613705, -0.19827562529404152, -0.68878583701613705, 0.10878840869419942 }, size = { 0.13697000000000001, 0.086550000000000002, 0.086550000000000002 } },

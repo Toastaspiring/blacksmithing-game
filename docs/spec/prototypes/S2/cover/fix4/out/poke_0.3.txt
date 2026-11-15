@@ -1,0 +1,7 @@
+base, Ball r 0.30: 440 Blocks poked out, 91 cleaned that truly show 2 % or more, 0 kept that truly show under 2 %
+  the largest true share cleaned: vertex, Block 0.08 × 0.10 × 0.08, 0.00060 out (0.002 r): reads 1.950%, truth 17.271%
+  the farthest out still read 0: 0.015 r: vertex, Block 0.04 × 0.20 × 0.04, 0.00450 out: reads 0.0000%, truth 6.993%
+cap, Ball r 0.30: 440 Blocks poked out, 0 cleaned that truly show 2 % or more, 0 kept that truly show under 2 %
+  the largest true share cleaned: 
+  the farthest out still read 0: 0.000 r: 
+exit 0

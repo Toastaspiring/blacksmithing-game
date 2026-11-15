@@ -1,0 +1,248 @@
+[
+ {
+  "line": 584,
+  "orig": "\tif al <= 1e-8 then",
+  "new": "\tif al <= 1e-6 then",
+  "what": "HAND rim: cutoff 1e-6 (V1's)"
+ },
+ {
+  "line": 584,
+  "orig": "\tif al <= 1e-8 then",
+  "new": "\tif al <= 1e-4 then",
+  "what": "HAND rim: cutoff 1e-4"
+ },
+ {
+  "line": 584,
+  "orig": "\tif al <= 1e-8 then",
+  "new": "\tif al <= 1e-3 then",
+  "what": "HAND rim: cutoff 1e-3"
+ },
+ {
+  "line": 584,
+  "orig": "\tif al <= 1e-8 then",
+  "new": "\tif al <= 0.03 then",
+  "what": "HAND rim: cutoff 0.03"
+ },
+ {
+  "line": 584,
+  "orig": "\tif al <= 1e-8 then",
+  "new": "\tif al <= 1e-12 then",
+  "what": "HAND rim: cutoff 1e-12"
+ },
+ {
+  "line": 595,
+  "orig": "\tfor _ = 1, 60 do",
+  "new": "\tfor _ = 1, 30 do",
+  "what": "HAND rim: 30 halvings"
+ },
+ {
+  "line": 595,
+  "orig": "\tfor _ = 1, 60 do",
+  "new": "\tfor _ = 1, 20 do",
+  "what": "HAND rim: 20 halvings"
+ },
+ {
+  "line": 595,
+  "orig": "\tfor _ = 1, 60 do",
+  "new": "\tfor _ = 1, 15 do",
+  "what": "HAND rim: 15 halvings"
+ },
+ {
+  "line": 621,
+  "orig": "\tif held(sqrt(mx * mx + my * my + mz * mz + 2 * r * pl + r * r) - Q.r, higher) then",
+  "new": "\tif held(sqrt(mx * mx + my * my + mz * mz + 2 * r * pl + r * r) - Q.r + 1e-3, higher) then",
+  "what": "HAND bounds: upper 1e-3 high (more open)"
+ },
+ {
+  "line": 626,
+  "orig": "\t\tc, sn = pv / pl, pw / pl",
+  "new": "\t\tc, sn = -pv / pl, -pw / pl",
+  "what": "HAND bounds: lower from the point away from p"
+ },
+ {
+  "line": 626,
+  "orig": "\t\tc, sn = pv / pl, pw / pl",
+  "new": "\t\tc, sn = pw / pl, pv / pl",
+  "what": "HAND bounds: lower from a turned point"
+ },
+ {
+  "line": 625,
+  "orig": "\tif pl > 0 then",
+  "new": "\tif pl >= 0 then",
+  "what": "HAND bounds: divide by pl = 0"
+ },
+ {
+  "line": 631,
+  "orig": "\treturn mx, my, mz, if held(sqrt(qx * qx + qy * qy + qz * qz) - Q.r, higher) then 0 else -1",
+  "new": "\treturn mx, my, mz, if held(sqrt(qx * qx + qy * qy + qz * qz) - Q.r - 1e-9, higher) then 0 else -1",
+  "what": "HAND bounds: lower 1e-9 low"
+ },
+ {
+  "line": 673,
+  "orig": "\tlocal units = UNITS_PER_TEST + (if a == 0 then UNITS_PER_RIM else 0) + (if b == 0 then UNITS_PER_RIM else 0)",
+  "new": "\tlocal units = UNITS_PER_TEST + (if a == 0 then UNITS_PER_RIM else 0)",
+  "what": "HAND units: the second cap's search uncharged"
+ },
+ {
+  "line": 673,
+  "orig": "\tlocal units = UNITS_PER_TEST + (if a == 0 then UNITS_PER_RIM else 0) + (if b == 0 then UNITS_PER_RIM else 0)",
+  "new": "\tlocal units = UNITS_PER_TEST + (if a == 0 or b == 0 then UNITS_PER_RIM else 0)",
+  "what": "HAND units: one charge for any open"
+ },
+ {
+  "line": 947,
+  "orig": "\t\t\t\tif due() then -- a run of rims searched reports too",
+  "new": "\t\t\t\tif false then -- a run of rims searched reports too",
+  "what": "HAND rule-A loop: no report"
+ },
+ {
+  "line": 569,
+  "orig": "\treturn if higher then s <= EPS else s < -EPS",
+  "new": "\treturn if higher then s < EPS else s < -EPS",
+  "what": "<= -> < @24"
+ },
+ {
+  "line": 582,
+  "orig": "\tlocal ax, ay, az = ny * uz - nz * uy, nz * ux - nx * uz, nx * uy - ny * ux",
+  "new": "\tlocal ax, ay, az = ny / uz - nz * uy, nz * ux - nx * uz, nx * uy - ny * ux",
+  "what": "* -> / @22"
+ },
+ {
+  "line": 582,
+  "orig": "\tlocal ax, ay, az = ny * uz - nz * uy, nz * ux - nx * uz, nx * uy - ny * ux",
+  "new": "\tlocal ax, ay, az = ny * uz + nz * uy, nz * ux - nx * uz, nx * uy - ny * ux",
+  "what": "- -> + @27"
+ },
+ {
+  "line": 584,
+  "orig": "\tif al <= 1e-8 then",
+  "new": "\tif al < 1e-8 then",
+  "what": "<= -> < @6"
+ },
+ {
+  "line": 584,
+  "orig": "\tif al <= 1e-8 then",
+  "new": "\tif al <= 2e-08 then",
+  "what": "literal 1e-8 -> 2e-08"
+ },
+ {
+  "line": 585,
+  "orig": "\t\treturn sqrt(mx * mx + my * my + mz * mz) + r",
+  "new": "\t\treturn sqrt(mx / mx + my * my + mz * mz) + r",
+  "what": "* -> / @16"
+ },
+ {
+  "line": 585,
+  "orig": "\t\treturn sqrt(mx * mx + my * my + mz * mz) + r",
+  "new": "\t\treturn sqrt(mx * mx - my * my + mz * mz) + r",
+  "what": "+ -> - @21"
+ },
+ {
+  "line": 585,
+  "orig": "\t\treturn sqrt(mx * mx + my * my + mz * mz) + r",
+  "new": "\t\tdo end -- return sqrt(mx * mx + my * my + mz * mz) + r",
+  "what": "drop statement"
+ },
+ {
+  "line": 589,
+  "orig": "\tlocal eu = ex * ux + ey * uy + ez * uz",
+  "new": "\tlocal eu = ex * ux - ey * uy + ez * uz",
+  "what": "+ -> - @19"
+ },
+ {
+  "line": 594,
+  "orig": "\tlocal lo, hi = -1, 1",
+  "new": "\tlocal lo, hi = -2, 1",
+  "what": "literal 1 -> 2"
+ },
+ {
+  "line": 597,
+  "orig": "\t\tif (B - 2 * C * s) * sqrt(max(0, 1 - s * s)) - A * s > 0 then",
+  "new": "\t\tif (B - 2 * C * s) * sqrt(max(0, 1 - s * s)) - A * s >= 0 then",
+  "what": "> -> >= @54"
+ },
+ {
+  "line": 619,
+  "orig": "\tlocal pv, pw = mx * P.vx + my * P.vy + mz * P.vz, mx * P.wx + my * P.wy + mz * P.wz",
+  "new": "\tlocal pv, pw = mx / P.vx + my * P.vy + mz * P.vz, mx * P.wx + my * P.wy + mz * P.wz",
+  "what": "* -> / @18"
+ },
+ {
+  "line": 622,
+  "orig": "\t\treturn mx, my, mz, 1",
+  "new": "\t\treturn mx, my, mz, 2",
+  "what": "literal 1 -> 2"
+ },
+ {
+  "line": 624,
+  "orig": "\tlocal c, sn = 1, 0",
+  "new": "\tlocal c, sn = 2, 0",
+  "what": "literal 1 -> 2"
+ },
+ {
+  "line": 625,
+  "orig": "\tif pl > 0 then",
+  "new": "\tif pl >= 0 then",
+  "what": "> -> >= @6"
+ },
+ {
+  "line": 625,
+  "orig": "\tif pl > 0 then",
+  "new": "\tif pl > 1 then",
+  "what": "literal 0 -> 1"
+ },
+ {
+  "line": 626,
+  "orig": "\t\tc, sn = pv / pl, pw / pl",
+  "new": "\t\tc, sn = pv * pl, pw / pl",
+  "what": "/ -> * @12"
+ },
+ {
+  "line": 626,
+  "orig": "\t\tc, sn = pv / pl, pw / pl",
+  "new": "\t\tc, sn = pv / pl, pw * pl",
+  "what": "/ -> * @21"
+ },
+ {
+  "line": 626,
+  "orig": "\t\tc, sn = pv / pl, pw / pl",
+  "new": "\t\tdo end -- c, sn = pv / pl, pw / pl",
+  "what": "drop statement"
+ },
+ {
+  "line": 629,
+  "orig": "\tlocal wu = wx * ux + wy * uy + wz * uz",
+  "new": "\tlocal wu = wx * ux - wy * uy + wz * uz",
+  "what": "+ -> - @19"
+ },
+ {
+  "line": 630,
+  "orig": "\tlocal qx, qy, qz = mx + r * (wx - wu * ux), my + r * (wy - wu * uy), mz + r * (wz - wu * uz)",
+  "new": "\tlocal qx, qy, qz = mx - r * (wx - wu * ux), my + r * (wy - wu * uy), mz + r * (wz - wu * uz)",
+  "what": "+ -> - @22"
+ },
+ {
+  "line": 658,
+  "orig": "\tlocal dx, dy, dz = P.cx - Q.cx, P.cy - Q.cy, P.cz - Q.cz",
+  "new": "\tlocal dx, dy, dz = P.cx + Q.cx, P.cy - Q.cy, P.cz - Q.cz",
+  "what": "- -> + @24"
+ },
+ {
+  "line": 660,
+  "orig": "\tlocal along = abs(dx * ux + dy * uy + dz * uz) + P.hx * abs(P.ux * ux + P.uy * uy + P.uz * uz)",
+  "new": "\tlocal along = abs(dx * ux - dy * uy + dz * uz) + P.hx * abs(P.ux * ux + P.uy * uy + P.uz * uz)",
+  "what": "+ -> - @26"
+ },
+ {
+  "line": 948,
+  "orig": "\t\t\t\t\treturn 0, done, true",
+  "new": "\t\t\t\t\treturn 1, done, true",
+  "what": "literal 0 -> 1"
+ },
+ {
+  "line": 948,
+  "orig": "\t\t\t\t\treturn 0, done, true",
+  "new": "\t\t\t\t\tdo end -- return 0, done, true",
+  "what": "drop statement"
+ }
+]

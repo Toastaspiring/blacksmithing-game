@@ -1,0 +1,33 @@
+wrapRings|F3|n5 extra0.01 gap0.0010 part 2 Cylinder: base 1.821% E, nocap 1.821% E, cap 2.086% K; truth 2.130% K toward the truth
+  D base Sm 0.0000 N, Ha 0.4292 H, Sh 0.6104 H (|dD| 0.0030); nocap Sm 0.0000 N, Ha 0.4292 H, Sh 0.6104 H (|dD| 0.0030); cap Sm 0.0000 N, Ha 0.4322 H, Sh 0.6104 H (|dD| 0.0000); truth Sm 0.0000 N, Ha 0.4322 H, Sh 0.6104 H
+wrapRings|F3|n4 extra0.04 gap0.0040 part 2 Cylinder: base 1.918% E, nocap 1.918% E, cap 2.184% K; truth 2.965% K toward the truth
+  D base Sm 0.0000 N, Ha 0.3798 H, Sh 0.6104 H (|dD| 0.0106); nocap Sm 0.0000 N, Ha 0.3798 H, Sh 0.6104 H (|dD| 0.0106); cap Sm 0.0000 N, Ha 0.3904 H, Sh 0.6104 H (|dD| 0.0000); truth Sm 0.0000 N, Ha 0.3904 H, Sh 0.6104 H
+wrapRings|C06|n4 extra0.04 gap0.0075 part 2 Cylinder: base 1.863% E, nocap 1.863% E, cap 2.043% K; truth 2.807% K toward the truth
+  D base Sm 0.0225 N, Ha 0.2566 H, Sh 0.5948 H (|dD| 0.0123); nocap Sm 0.0225 N, Ha 0.2566 H, Sh 0.5948 H (|dD| 0.0123); cap Sm 0.0228 N, Ha 0.2689 H, Sh 0.5948 H (|dD| 0.0000); truth Sm 0.0228 N, Ha 0.2689 H, Sh 0.5948 H
+wrapRings|C09|n3 extra0.04 gap0.0040 part 3 Cylinder: base 1.931% E, nocap 1.931% E, cap 2.122% K; truth 2.628% K toward the truth
+  D base Sm 0.0108 N, Ha 0.2417 H, Sh 0.1345 N (|dD| 0.0023); nocap Sm 0.0108 N, Ha 0.2417 H, Sh 0.1345 N (|dD| 0.0023); cap Sm 0.0105 N, Ha 0.2440 H, Sh 0.1339 N (|dD| 0.0000); truth Sm 0.0105 N, Ha 0.2440 H, Sh 0.1339 N
+wrapRings|F3|n3 extra0.02 gap0.0020 part 2 Cylinder: base 1.821% E, nocap 1.821% E, cap 2.086% K; truth 2.135% K toward the truth
+  D base Sm 0.0000 N, Ha 0.4092 H, Sh 0.6104 H (|dD| 0.0024); nocap Sm 0.0000 N, Ha 0.4092 H, Sh 0.6104 H (|dD| 0.0024); cap Sm 0.0000 N, Ha 0.4116 H, Sh 0.6104 H (|dD| 0.0000); truth Sm 0.0000 N, Ha 0.4116 H, Sh 0.6104 H
+wrapRings|C09|n5 extra0.04 gap0.0040 part 3 Cylinder: base 1.931% E, nocap 1.931% E, cap 2.122% K; truth 2.628% K toward the truth
+  D base Sm 0.0104 N, Ha 0.2470 H, Sh 0.1215 N (|dD| 0.0010); nocap Sm 0.0104 N, Ha 0.2470 H, Sh 0.1215 N (|dD| 0.0010); cap Sm 0.0102 N, Ha 0.2480 H, Sh 0.1208 N (|dD| 0.0000); truth Sm 0.0102 N, Ha 0.2480 H, Sh 0.1208 N
+wrapRings|F3|n3 extra0.01 gap0.0020 part 2 Cylinder: base 1.821% E, nocap 1.821% E, cap 2.086% K; truth 2.135% K toward the truth
+  D base Sm 0.0000 N, Ha 0.4274 H, Sh 0.6104 H (|dD| 0.0022); nocap Sm 0.0000 N, Ha 0.4274 H, Sh 0.6104 H (|dD| 0.0022); cap Sm 0.0000 N, Ha 0.4296 H, Sh 0.6104 H (|dD| 0.0000); truth Sm 0.0000 N, Ha 0.4296 H, Sh 0.6104 H
+wrapRings|C09|n4 extra0.04 gap0.0040 part 3 Cylinder: base 1.931% E, nocap 1.931% E, cap 2.122% K; truth 2.628% K toward the truth
+  D base Sm 0.0106 N, Ha 0.2553 H, Sh 0.1274 N (|dD| 0.0011); nocap Sm 0.0106 N, Ha 0.2553 H, Sh 0.1274 N (|dD| 0.0011); cap Sm 0.0104 N, Ha 0.2559 H, Sh 0.1263 N (|dD| 0.0000); truth Sm 0.0104 N, Ha 0.2559 H, Sh 0.1263 N
+wrapRings|F3|n3 extra0.04 gap0.0050 part 2 Cylinder: base 1.955% E, nocap 1.955% E, cap 2.221% K; truth 2.755% K toward the truth
+  D base Sm 0.0000 N, Ha 0.3770 H, Sh 0.6104 H (|dD| 0.0001); nocap Sm 0.0000 N, Ha 0.3770 H, Sh 0.6104 H (|dD| 0.0001); cap Sm 0.0000 N, Ha 0.3771 H, Sh 0.6104 H (|dD| 0.0000); truth Sm 0.0000 N, Ha 0.3771 H, Sh 0.6104 H
+wrapRings|F3|n5 extra0.02 gap0.0010 part 2 Cylinder: base 1.821% E, nocap 1.821% E, cap 2.086% K; truth 2.130% K toward the truth
+  D base Sm 0.0000 N, Ha 0.4112 H, Sh 0.6104 H (|dD| 0.0029); nocap Sm 0.0000 N, Ha 0.4112 H, Sh 0.6104 H (|dD| 0.0029); cap Sm 0.0000 N, Ha 0.4141 H, Sh 0.6104 H (|dD| 0.0000); truth Sm 0.0000 N, Ha 0.4141 H, Sh 0.6104 H
+wrapRings|F3|n3 extra0.04 gap0.0040 part 2 Cylinder: base 1.747% E, nocap 1.747% E, cap 2.013% K; truth 2.550% K toward the truth
+  D base Sm 0.0000 N, Ha 0.3769 H, Sh 0.6104 H (|dD| 0.0006); nocap Sm 0.0000 N, Ha 0.3769 H, Sh 0.6104 H (|dD| 0.0006); cap Sm 0.0000 N, Ha 0.3775 H, Sh 0.6104 H (|dD| 0.0000); truth Sm 0.0000 N, Ha 0.3775 H, Sh 0.6104 H
+wrapRings|C06|n3 extra0.04 gap0.0100 part 2 Cylinder: base 1.847% E, nocap 1.847% E, cap 2.027% K; truth 2.540% K toward the truth
+  D base Sm 0.0226 N, Ha 0.2565 H, Sh 0.5948 H (|dD| 0.0009); nocap Sm 0.0226 N, Ha 0.2565 H, Sh 0.5948 H (|dD| 0.0009); cap Sm 0.0229 N, Ha 0.2556 H, Sh 0.5948 H (|dD| 0.0000); truth Sm 0.0229 N, Ha 0.2556 H, Sh 0.5948 H
+wrapRings|C06|n5 extra0.01 gap0.0040 part 2 Cylinder: base 1.921% E, nocap 1.921% E, cap 2.101% K; truth 2.125% K toward the truth
+  D base Sm 0.0123 N, Ha 0.2950 H, Sh 0.5948 H (|dD| 0.0053); nocap Sm 0.0123 N, Ha 0.2950 H, Sh 0.5948 H (|dD| 0.0053); cap Sm 0.0120 N, Ha 0.3003 H, Sh 0.5948 H (|dD| 0.0000); truth Sm 0.0120 N, Ha 0.3003 H, Sh 0.5948 H
+wrapRings|C06|n5 extra0.02 gap0.0040 part 2 Cylinder: base 1.921% E, nocap 1.921% E, cap 2.101% K; truth 2.125% K toward the truth
+  D base Sm 0.0156 N, Ha 0.2832 H, Sh 0.5948 H (|dD| 0.0013); nocap Sm 0.0156 N, Ha 0.2832 H, Sh 0.5948 H (|dD| 0.0013); cap Sm 0.0155 N, Ha 0.2819 H, Sh 0.5948 H (|dD| 0.0000); truth Sm 0.0155 N, Ha 0.2819 H, Sh 0.5948 H
+14 part verdicts move: 14 toward the truth, 0 away; designs with a tier the truth's row does not have: 0 before, 0 after
+
+real	0m5.738s
+user	0m0.015s
+sys	0m0.015s

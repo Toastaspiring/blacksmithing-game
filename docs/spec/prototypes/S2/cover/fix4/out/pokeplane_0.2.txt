@@ -1,0 +1,4 @@
+base, Ball r 0.20: 288 Blocks; 156 cleaned that truly show 2 % or more, 0 kept truly under 2 %
+  the largest true share cleaned: corner, h 0.10 r, Block 0.06 × 0.20 × 0.03, 0.00080 out (0.0040 r): reads 1.897%, truth 5.703%
+cap, Ball r 0.20: 288 Blocks; 0 cleaned that truly show 2 % or more, 0 kept truly under 2 %
+exit 0

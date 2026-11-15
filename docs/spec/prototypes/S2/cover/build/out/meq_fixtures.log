@@ -1,0 +1,3 @@
+fixtures every 1: 77 designs (0 capped). Kept rows: old = new on 74, differ on 3; the rank's order differs on 2.
+  build with the old rank key: the same kept row on 76, the same measure to the bit on 76, different on 0
+  build as it is: the same measure on 74 of 74; different on 0 where the rank's order is the same, 0 where it changed

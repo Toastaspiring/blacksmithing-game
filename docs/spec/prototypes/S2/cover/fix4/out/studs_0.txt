@@ -1,0 +1,11 @@
+canonical draft ok: true
+studs 0.06 × 0.10 × 0.06, 0.0040 out, blade +0.00: valid true
+  part  6 Block    base 1.729% E, cap 15.789% K; truth 16.176% K
+  part  7 Block    base 1.729% E, cap 15.789% K; truth 16.176% K
+  part  8 Block    base 1.745% E, cap 15.795% K; truth 16.176% K
+  part  9 Block    base 1.745% E, cap 15.795% K; truth 16.176% K
+  D base   Sm 0.1627 N, Ha 0.1070 N, Sh 0.0989 N  |dD| 0.0206
+  D cap    Sm 0.1645 N, Ha 0.1070 N, Sh 0.1195 N  |dD| 0.0000
+  D truth  Sm 0.1645 N, Ha 0.1070 N, Sh 0.1195 N
+D without the studs: Sm 0.1627 N, Ha 0.1070 N, Sh 0.0989 N
+exit 0

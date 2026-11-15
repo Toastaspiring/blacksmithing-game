@@ -1,0 +1,52 @@
+sword + caged Ball (r 0.20, g 0.011320, b 0.032600) in Blade: 23 parts, canonical true, valid true (), units 66838.4
+  the Ball: reads 0.068%, truth 3.585%: build cleaned, truth kept
+  build Sm 0.1974 N, Ha 0.0493 N, Sh 0.0000 N
+  truth Sm 0.2057 H, Ha 0.0416 N, Sh 0.0000 N
+  |dD| 0.0083 on Smelting, tier flip true
+sword + caged Ball (r 0.08, g 0.005370, b 0.030200) in Blade: 23 parts, canonical true, valid true (), units 55060.1
+  the Ball: reads 0.000%, truth 1.943%: build cleaned, truth cleaned
+  build Sm 0.0396 N, Ha 0.1444 N, Sh 0.0000 N
+  truth Sm 0.0396 N, Ha 0.1444 N, Sh 0.0000 N
+  |dD| 0.0000 on , tier flip false
+sword + caged Ball (r 0.05, g 0.003510, b 0.028000) in Blade: 23 parts, canonical true, valid true (), units 50600.0
+  the Ball: reads 0.000%, truth 4.543%: build cleaned, truth kept
+  build Sm 0.0272 N, Ha 0.1047 N, Sh 0.0000 N
+  truth Sm 0.0279 N, Ha 0.1047 N, Sh 0.0000 N
+  |dD| 0.0007 on Smelting, tier flip false
+r 0.10, through 1 face(s) by 0.0046: reads 0.000%, truth 2.290% (h/2r × faces 2.300%): cleaned
+r 0.10, through 2 face(s) by 0.0046: reads 0.000%, truth 4.578% (h/2r × faces 4.600%): cleaned
+r 0.10, through 3 face(s) by 0.0046: reads 0.000%, truth 6.885% (h/2r × faces 6.900%): cleaned
+r 0.15, through 1 face(s) by 0.0069: reads 0.000%, truth 2.290% (h/2r × faces 2.300%): cleaned
+r 0.15, through 2 face(s) by 0.0069: reads 0.000%, truth 4.577% (h/2r × faces 4.600%): cleaned
+r 0.15, through 3 face(s) by 0.0069: reads 0.000%, truth 6.885% (h/2r × faces 6.900%): cleaned
+r 0.20, through 1 face(s) by 0.0092: reads 0.000%, truth 2.290% (h/2r × faces 2.300%): cleaned
+r 0.20, through 2 face(s) by 0.0092: reads 0.000%, truth 4.578% (h/2r × faces 4.600%): cleaned
+r 0.20, through 3 face(s) by 0.0092: reads 0.000%, truth 6.885% (h/2r × faces 6.900%): cleaned
+F5, pommel a turned cube 0.34 (top 0.597), a Ball r 0.10 in its corner through 3 face(s) by 0.0046, in the Pommel: canonical true, valid true ()
+   the Ball reads 0.000% (cleaned), truth 2.500%
+   build Sm 0.0626 N, Ha 0.1101 N, Sh 0.0989 N
+   truth Sm 0.0626 N, Ha 0.1101 N, Sh 0.0989 N
+   |dD| 0.0000 on , tier flip false
+F5, pommel a turned cube 0.34 (top 0.597), a Ball r 0.10 in its edge through 2 face(s) by 0.0046, in the Pommel: canonical true, valid true ()
+   the Ball reads 0.000% (cleaned), truth 4.555%
+   build Sm 0.0626 N, Ha 0.1101 N, Sh 0.0989 N
+   truth Sm 0.0626 N, Ha 0.1101 N, Sh 0.0989 N
+   |dD| 0.0000 on , tier flip false
+F5, pommel a turned cube 0.34 (top 0.597), a Ball r 0.12 in its corner through 3 face(s) by 0.0055, in the Pommel: canonical true, valid true ()
+   the Ball reads 0.000% (cleaned), truth 3.053%
+   build Sm 0.0626 N, Ha 0.1101 N, Sh 0.0989 N
+   truth Sm 0.0626 N, Ha 0.1101 N, Sh 0.0989 N
+   |dD| 0.0000 on , tier flip false
+F5, pommel a turned cube 0.34 (top 0.597), a Ball r 0.10 in its corner through 3 face(s) by 0.0046, in the Blade: canonical true, valid true ()
+   the Ball reads 0.000% (cleaned), truth 2.500%
+   build Sm 0.0626 N, Ha 0.1101 N, Sh 0.0989 N
+   truth Sm 0.0625 N, Ha 0.1101 N, Sh 0.1036 N
+   |dD| 0.0047 on Sharpening, tier flip false
+Ball r 0.2, window 0.03, its bottom HIDE_OFFSET + 0.0005 over it: 8 hiders; the plate reads 5.488%, truth 7.503%
+Ball r 0.2, window 0.03, its bottom HIDE_OFFSET + 0.0020 over it: 8 hiders; the plate reads 6.355%, truth 7.503%
+Ball r 0.2, window 0.05, its bottom HIDE_OFFSET + 0.0005 over it: 10 hiders; the plate reads 1.384%, truth 3.905%
+Ball r 0.2, window 0.05, its bottom HIDE_OFFSET + 0.0020 over it: 10 hiders; the plate reads 2.692%, truth 3.905%
+Ball r 0.3, window 0.03, its bottom HIDE_OFFSET + 0.0005 over it: 8 hiders; the plate reads 3.986%, truth 7.503%
+Ball r 0.3, window 0.03, its bottom HIDE_OFFSET + 0.0020 over it: 8 hiders; the plate reads 4.853%, truth 7.503%
+Ball r 0.3, window 0.05, its bottom HIDE_OFFSET + 0.0005 over it: 10 hiders; the plate reads 0.079%, truth 3.905%
+Ball r 0.3, window 0.05, its bottom HIDE_OFFSET + 0.0020 over it: 10 hiders; the plate reads 0.636%, truth 3.905%

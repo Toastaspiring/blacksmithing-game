@@ -1,0 +1,61 @@
+F5 with its pommel a Ball 0.6 across: valid true
+  part  1 Ball     base 97.524% K, cap 97.524% K; truth 97.675% K
+  part  2 Block    base 62.508% K, cap 62.670% K; truth 62.707% K
+  part  3 Block    base 96.200% K, cap 96.200% K; truth 96.203% K
+  part  4 Block    base 98.419% K, cap 98.419% K; truth 98.427% K
+  part  5 Block    base 50.000% K, cap 50.000% K; truth 50.200% K
+  D base   Sm 0.1627 N, Ha 0.1070 N, Sh 0.0989 N  |dD| 0.0000
+  D cap    Sm 0.1627 N, Ha 0.1070 N, Sh 0.0989 N  |dD| 0.0000
+  D truth  Sm 0.1627 N, Ha 0.1070 N, Sh 0.0989 N
+F5 + that pommel + 4 Blade Blocks, 0.0110 under: valid true
+  part  6 Block    base 0.000% E, cap 0.000% E; truth 0.000% E
+  part  7 Block    base 0.000% E, cap 0.000% E; truth 0.000% E
+  part  8 Block    base 0.000% E, cap 0.000% E; truth 0.000% E
+  part  9 Block    base 0.000% E, cap 0.000% E; truth 0.000% E
+  D base   Sm 0.1627 N, Ha 0.1070 N, Sh 0.0989 N  |dD| 0.0000
+  D cap    Sm 0.1627 N, Ha 0.1070 N, Sh 0.0989 N  |dD| 0.0000
+  D truth  Sm 0.1627 N, Ha 0.1070 N, Sh 0.0989 N
+F5 + that pommel + 4 Blade Balls, 0.0020 under: valid true
+  part  6 Ball     base 0.000% E, cap 0.000% E; truth 0.000% E
+  part  7 Ball     base 0.000% E, cap 0.000% E; truth 0.000% E
+  part  8 Ball     base 0.000% E, cap 0.000% E; truth 0.000% E
+  part  9 Ball     base 0.000% E, cap 0.000% E; truth 0.000% E
+  D base   Sm 0.1627 N, Ha 0.1070 N, Sh 0.0989 N  |dD| 0.0000
+  D cap    Sm 0.1627 N, Ha 0.1070 N, Sh 0.0989 N  |dD| 0.0000
+  D truth  Sm 0.1627 N, Ha 0.1070 N, Sh 0.0989 N
+F5 + that pommel + 4 Blade Balls, 0.0002 under: valid true
+  part  6 Ball     base 0.000% E, cap 0.000% E; truth 0.000% E
+  part  7 Ball     base 0.000% E, cap 0.000% E; truth 0.000% E
+  part  8 Ball     base 0.000% E, cap 0.000% E; truth 0.000% E
+  part  9 Ball     base 0.000% E, cap 0.000% E; truth 0.000% E
+  D base   Sm 0.1627 N, Ha 0.1070 N, Sh 0.0989 N  |dD| 0.0000
+  D cap    Sm 0.1627 N, Ha 0.1070 N, Sh 0.0989 N  |dD| 0.0000
+  D truth  Sm 0.1627 N, Ha 0.1070 N, Sh 0.0989 N
+F3 + 4 Blade Blocks 0.046 × 0.245 in its pommel (r 0.140), 0.0044 deep: valid true
+  part  8 Block    base 0.000% E, cap 0.000% E; truth 0.000% E
+  part  9 Block    base 0.000% E, cap 0.000% E; truth 0.000% E
+  part 10 Block    base 0.000% E, cap 0.000% E; truth 0.000% E
+  part 11 Block    base 0.000% E, cap 0.000% E; truth 0.000% E
+  D base   Sm 0.0000 N, Ha 0.4423 H, Sh 0.6104 H  |dD| 0.0000
+  D cap    Sm 0.0000 N, Ha 0.4423 H, Sh 0.6104 H  |dD| 0.0000
+  D truth  Sm 0.0000 N, Ha 0.4423 H, Sh 0.6104 H
+C04 + 4 Blade Blocks 0.042 × 0.225 in its pommel (r 0.130), 0.0041 deep: valid true
+  part  8 Block    base 0.000% E, cap 0.000% E; truth 0.000% E
+  part  9 Block    base 0.000% E, cap 0.000% E; truth 0.000% E
+  part 10 Block    base 0.000% E, cap 0.000% E; truth 0.000% E
+  part 11 Block    base 0.000% E, cap 0.000% E; truth 0.000% E
+  D base   Sm 0.0000 N, Ha 0.3368 H, Sh 0.4703 H  |dD| 0.0000
+  D cap    Sm 0.0000 N, Ha 0.3368 H, Sh 0.4703 H  |dD| 0.0000
+  D truth  Sm 0.0000 N, Ha 0.3368 H, Sh 0.4703 H
+C09 + 4 Blade Blocks 0.042 × 0.225 in its pommel (r 0.130), 0.0041 deep: valid true
+  part 19 Block    base 0.000% E, cap 0.000% E; truth 0.000% E
+  part 20 Block    base 0.000% E, cap 0.000% E; truth 0.000% E
+  part 21 Block    base 0.000% E, cap 0.000% E; truth 0.000% E
+  part 22 Block    base 0.000% E, cap 0.000% E; truth 0.000% E
+  D base   Sm 0.0001 N, Ha 0.3170 H, Sh 0.1904 N  |dD| 0.0000
+  D cap    Sm 0.0001 N, Ha 0.3170 H, Sh 0.1904 N  |dD| 0.0000
+  D truth  Sm 0.0001 N, Ha 0.3170 H, Sh 0.1904 N
+plate 0.0208 wide, 0.0003 under a Cylinder r 0.3's side: base 0.000%, cap 0.000%, truth 0.000%
+plate 0.0329 wide, 0.0006 under a Cylinder r 0.3's side: base 0.000%, cap 0.000%, truth 0.000%
+plate 0.0441 wide, 0.0010 under a Cylinder r 0.3's side: base 0.000%, cap 0.000%, truth 0.000%
+exit 0

@@ -1,0 +1,5 @@
+174 designs
+R1 vs FIN: differ {'verdict': 2, 'measure': 2, 'mass': 2, 'probes': 2, 'units': 50}; errors 0
+   verdict moved on 2: ['worst valid V1 cluster: 24 Balls d 0.54, x 0.25·sin(1.3 i), y 0.3 + 0.06 (i − 1)', 'worst valid tclimb_2.json #5']
+   measure moved with no verdict moving on 0: []
+   mass moved with no verdict moving on 0: []

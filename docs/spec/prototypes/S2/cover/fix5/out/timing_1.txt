@@ -1,0 +1,36 @@
+F5                           | base     1793.1 u ok  verdict   0.25 exposure   1.35 run   1.73 | hook     1793.1 u ok  verdict   0.37 exposure   1.40 run   1.82
+F3                           | base    10973.2 u ok  verdict   0.68 exposure   1.46 run   1.84 | hook    10973.2 u ok  verdict   0.88 exposure   1.68 run   1.94
+C05                          | base     1164.8 u ok  verdict   0.12 exposure   4.62 run   5.67 | hook     1164.8 u ok  verdict   0.20 exposure   4.83 run   5.83
+C09                          | base    17511.6 u ok  verdict   2.04 exposure   7.05 run   8.31 | hook    17511.6 u ok  verdict   1.63 exposure   6.83 run   8.36
+X01                          | base     3383.8 u ok  verdict   0.51 exposure   4.53 run   5.31 | hook     3383.8 u ok  verdict   0.36 exposure   4.47 run   5.35
+P1                           | base   330993.1 u ok  verdict  10.87 exposure  18.74 run  22.11 | hook   330993.1 u ok  verdict  11.15 exposure  18.52 run  22.26
+P2                           | base    27108.2 u ok  verdict   2.28 exposure   9.19 run  11.85 | hook    27108.2 u ok  verdict   2.40 exposure   8.91 run  11.68
+P4                           | base   172903.0 u ok  verdict  10.21 exposure  12.22 run  14.29 | hook   172903.0 u ok  verdict  10.04 exposure  12.66 run  14.46
+valid V1 cluster: 24 Balls d | base   687304.1 u ok  verdict  29.55 exposure  32.77 run  34.39 | hook   687304.1 u ok  verdict  30.06 exposure  32.86 run  34.34
+valid tclimb_4.json #1       | base   638320.4 u ok  verdict  22.59 exposure  28.85 run  31.33 | hook   638320.4 u ok  verdict  21.93 exposure  28.62 run  31.69
+valid tclimb_3.json #3       | base   655541.9 u ok  verdict  19.76 exposure  29.37 run  32.57 | hook   655541.9 u ok  verdict  20.05 exposure  29.71 run  32.49
+valid tclimb_2.json #4       | base   644775.4 u ok  verdict  18.87 exposure  30.94 run  33.79 | hook   644775.4 u ok  verdict  19.11 exposure  31.18 run  33.93
+valid tclimb_2.json #5       | base   494567.9 u ok  verdict  16.19 exposure  25.45 run  34.59 | hook   494567.9 u ok  verdict  16.18 exposure  25.71 run  34.56
+valid tclimb_2.json #6       | base   505237.6 u ok  verdict  16.27 exposure  23.91 run  27.70 | hook   505237.6 u ok  verdict  16.36 exposure  23.68 run  27.90
+valid tclimb_3.json #4       | base   518339.5 u ok  verdict  16.59 exposure  23.21 run  26.78 | hook   518339.5 u ok  verdict  16.31 exposure  23.38 run  26.81
+valid tclimb_3.json #6       | base   452991.1 u ok  verdict  15.24 exposure  23.23 run  35.31 | hook   452991.1 u ok  verdict  15.49 exposure  23.34 run  35.71
+valid tclimb_4.json #5       | base   431854.0 u ok  verdict  14.62 exposure  22.81 run  32.75 | hook   431854.0 u ok  verdict  14.29 exposure  22.86 run  32.83
+valid tclimb_4.json #4       | base   418624.5 u ok  verdict  13.91 exposure  21.77 run  30.67 | hook   418624.5 u ok  verdict  13.94 exposure  21.75 run  30.62
+valid tclimb_1.json #5       | base   174411.1 u ok  verdict   8.19 exposure  13.50 run  15.48 | hook   174411.1 u ok  verdict   7.68 exposure  13.68 run  15.71
+past judge judge climb seed  | base   700013.5 u CAP verdict   0.00 exposure   0.00 run  13.81 | hook   700013.5 u CAP verdict   0.00 exposure   0.00 run  14.36
+past judge judge climb seed  | base   700197.6 u CAP verdict   0.00 exposure   0.00 run  23.66 | hook   700197.6 u CAP verdict   0.00 exposure   0.00 run  24.40
+past judge judge climb seed  | base   700207.8 u CAP verdict   0.00 exposure   0.00 run  15.46 | hook   700207.8 u CAP verdict   0.00 exposure   0.00 run  15.29
+past judge judge climb seed  | base   700066.6 u CAP verdict   0.00 exposure   0.00 run  15.02 | hook   700066.6 u CAP verdict   0.00 exposure   0.00 run  14.70
+past A climb_1 1             | base   700241.2 u CAP verdict   0.00 exposure   0.00 run  20.76 | hook   700241.2 u CAP verdict   0.00 exposure   0.00 run  20.35
+past A climb_1 2             | base   700142.6 u CAP verdict   0.00 exposure   0.00 run  19.94 | hook   700142.6 u CAP verdict   0.00 exposure   0.00 run  19.75
+past A climb_2 1             | base   700117.1 u CAP verdict   0.00 exposure   0.00 run  14.23 | hook   700117.1 u CAP verdict   0.00 exposure   0.00 run  14.22
+past A climb_3 1             | base   700147.1 u CAP verdict   0.00 exposure   0.00 run  11.71 | hook   700147.1 u CAP verdict   0.00 exposure   0.00 run  12.44
+past A climb_4 1             | base   700087.2 u CAP verdict   0.00 exposure   0.00 run  19.04 | hook   700087.2 u CAP verdict   0.00 exposure   0.00 run  19.16
+past A climb_4 2             | base   700121.6 u CAP verdict   0.00 exposure   0.00 run  10.51 | hook   700121.6 u CAP verdict   0.00 exposure   0.00 run  10.77
+past B uclimb uclimb_1 best  | base   700016.2 u CAP verdict   0.00 exposure   0.00 run  23.17 | hook   700016.2 u CAP verdict   0.00 exposure   0.00 run  23.38
+past B uclimb uclimb_2 best  | base   700203.1 u CAP verdict   0.00 exposure   0.00 run  21.55 | hook   700203.1 u CAP verdict   0.00 exposure   0.00 run  21.65
+past B uclimb uclimb_3 best  | base   700235.0 u CAP verdict   0.00 exposure   0.00 run  24.20 | hook   700235.0 u CAP verdict   0.00 exposure   0.00 run  24.43
+past B uclimb uclimb_4 best  | base   700049.8 u CAP verdict   0.00 exposure   0.00 run  18.63 | hook   700049.8 u CAP verdict   0.00 exposure   0.00 run  17.95
+past worst_P climbL_1#1      | base   700090.6 u CAP verdict   0.00 exposure   0.00 run  20.41 | hook   700090.6 u CAP verdict   0.00 exposure   0.00 run  19.76
+past worst_P climbL_3#1      | base   700141.4 u CAP verdict   0.00 exposure   0.00 run  21.77 | hook   700141.4 u CAP verdict   0.00 exposure   0.00 run  22.20
+past worst_P climbL_2#1      | base   700100.5 u CAP verdict   0.00 exposure   0.00 run  17.72 | hook   700100.5 u CAP verdict   0.00 exposure   0.00 run  17.79

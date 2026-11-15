@@ -1,0 +1,31 @@
+33389 designs
+c1 vs pre: 35 verdicts move on 35 designs (35 cleaned, 0 kept); newly capped 0 []
+   cleaned that truly show under 2 %: 0 (closed false kept)
+   false Enclosed at a true share in [2.0, 2.5) %: 19  shapes ['Ball', 'Cylinder']
+   false Enclosed at a true share in [2.5, 3.0) %: 13  shapes ['Cylinder']
+   false Enclosed at a true share in [3.0, 4.0) %: 3  shapes ['Ball']
+   false Enclosed at a true share in [4.0, 5.0) %: 0
+   false Enclosed at a true share in [5.0, 900.0) %: 0
+      3.615 % Ball part 1 of pommelInBlock|C09|housing xy30 cap0.0600
+      3.598 % Ball part 1 of pommelInBlock|C09|housing r47 cap0.0600
+      3.595 % Ball part 1 of pommelInBlock|C09|housing unrot cap0.0600
+      2.965 % Cylinder part 2 of wrapRings|F3|n4 extra0.04 gap0.0040
+      2.960 % Cylinder part 2 of wrapRings|F3|n5 extra0.04 gap0.0030
+      2.960 % Cylinder part 2 of wrapRings|C06|n5 extra0.04 gap0.0060
+      2.807 % Cylinder part 2 of wrapRings|C06|n4 extra0.04 gap0.0075
+      2.755 % Cylinder part 2 of wrapRings|F3|n3 extra0.04 gap0.0050
+c0 vs pre: 450 verdicts move on 436 designs (450 cleaned, 0 kept); newly capped 0 []
+   cleaned that truly show under 2 %: 0 (closed false kept)
+   false Enclosed at a true share in [2.0, 2.5) %: 55  shapes ['Ball', 'Cylinder']
+   false Enclosed at a true share in [2.5, 3.0) %: 66  shapes ['Cylinder']
+   false Enclosed at a true share in [3.0, 4.0) %: 82  shapes ['Ball', 'Cylinder']
+   false Enclosed at a true share in [4.0, 5.0) %: 61  shapes ['Cylinder']
+   false Enclosed at a true share in [5.0, 900.0) %: 186  shapes ['Cylinder']
+      51.675 % Cylinder part 4 of ribBar|r0.10 L3.0 n16 roll0.00 f0.3
+      51.575 % Cylinder part 4 of ribBar|r0.10 L3.0 n16 roll11.25 f0.3
+      51.575 % Cylinder part 4 of ribBar|r0.10 L3.0 n16 roll11.25 f0.3
+      50.244 % Cylinder part 4 of ribBar|r0.10 L2.0 n16 roll11.25 f0.3
+      50.244 % Cylinder part 4 of ribBar|r0.10 L2.0 n16 roll11.25 f0.3
+      50.244 % Cylinder part 4 of ribBar|r0.10 L2.0 n16 roll0.00 f0.3
+      47.795 % Cylinder part 4 of ribBar|r0.06 L3.0 n8 roll11.25 f0.5
+      47.745 % Cylinder part 4 of ribBar|r0.06 L3.0 n8 roll22.50 f0.5

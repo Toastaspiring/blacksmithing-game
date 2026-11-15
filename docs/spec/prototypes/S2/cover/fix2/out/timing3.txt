@@ -1,0 +1,6 @@
+P1 24 large overlapping tilted blocks    verdict 11.97 exposure 19.14
+P2 24 rotated cylinders                  verdict 1.99 exposure 9.31
+P3 24 rotated wedges                     verdict 0.90 exposure 7.98
+P4 24 overlapping balls                  verdict 10.32 exposure 12.80
+P5 comb blade (sawtooth, 24 parts)       verdict 0.35 exposure 2.39
+F, C and X: the verdict at most 1.54 (C09 Ornate (18 parts)), the whole exposure at most 7.09 (C09 Ornate (18 parts))

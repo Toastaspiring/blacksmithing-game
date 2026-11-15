@@ -1,0 +1,8 @@
+1340 designs
+c1b vs pre: 0 verdicts move on 0 designs (0 cleaned, 0 kept); newly capped 0 []
+   cleaned that truly show under 2 %: 0 (closed false kept)
+   false Enclosed at a true share in [2.0, 2.5) %: 0
+   false Enclosed at a true share in [2.5, 3.0) %: 0
+   false Enclosed at a true share in [3.0, 4.0) %: 0
+   false Enclosed at a true share in [4.0, 5.0) %: 0
+   false Enclosed at a true share in [5.0, 900.0) %: 0

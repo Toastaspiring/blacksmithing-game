@@ -1,0 +1,2 @@
+corpus 0/1: 1340 designs, 88612 round pairs × rank (19924 Cylinder in Cylinder), 19 inside; the build's bounds left 0 tests open (0 caps searched); 0 decisions differ from the always-exact rule; the tree before's bound differs from it on 0 (0 designs)
+

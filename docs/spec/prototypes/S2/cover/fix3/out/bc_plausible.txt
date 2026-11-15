@@ -1,0 +1,19 @@
+33389 designs, base vs build
+moved: {'units': 21070}
+
+verdict moved on 0:
+
+anything but the units moved with no verdict moving on 0:
+
+units moved on 21070 (18976 up, 2094 down)
+  wrapRings|C09|n3 extra0.04 gap0.0500: 82965.625 -> 30443.250 (-52522.375, -63.31 %)
+  wrapRings|C09|n3 extra0.04 gap0.0300: 88708.125 -> 36325.750 (-52382.375, -59.05 %)
+  wrapRings|C09|n3 extra0.04 gap0.0200: 95599.125 -> 43384.750 (-52214.375, -54.62 %)
+  wrapRings|C09|n3 extra0.04 gap0.0010: 104986.375 -> 52862.000 (-52124.375, -49.65 %)
+  wrapRings|C09|n3 extra0.04 gap0.0020: 104986.375 -> 52862.000 (-52124.375, -49.65 %)
+  cage|r0.10 k8 open0.19 roll22.5: 11275.500 -> 18081.625 (+6806.125, +60.36 %)
+  cage|r0.18 k4 open0.19 roll22.5: 10803.500 -> 20070.125 (+9266.625, +85.77 %)
+  cage|r0.18 k4 open0.10 roll22.5: 12933.250 -> 23510.000 (+10576.750, +81.78 %)
+  cage|r0.10 k4 open0.10 roll22.5: 12665.750 -> 23693.875 (+11028.125, +87.07 %)
+  cage|r0.10 k4 open0.19 roll22.5: 11465.000 -> 22839.375 (+11374.375, +99.21 %)
+  the heaviest valid: base 125173.875, build 109405.000

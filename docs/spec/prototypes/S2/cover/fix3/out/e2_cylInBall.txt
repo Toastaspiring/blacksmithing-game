@@ -1,0 +1,18 @@
+  Cyl r 0.080 hx 0.016 in Ball R 0.10, e 0.0002, dir 7                   build  1.518%  base  3.708%  truth  0.000%
+  Cyl r 0.080 hx 0.016 in Ball R 0.10, e 0.0002, dir 8                   build  1.722%  base  2.480%  truth  0.000%
+  Cyl r 0.080 hx 0.016 in Ball R 0.10, e 0.0002, dir 10                  build  1.131%  base  2.504%  truth  0.000%
+  Cyl r 0.160 hx 0.032 in Ball R 0.20, e 0.0002, dir 7                   build  2.403%  base  3.866%  truth  0.000%
+  Cyl r 0.160 hx 0.032 in Ball R 0.20, e 0.0002, dir 8                   build  1.735%  base  2.538%  truth  0.000%
+  Cyl r 0.160 hx 0.032 in Ball R 0.20, e 0.0002, dir 10                  build  1.907%  base  2.559%  truth  0.000%
+  Cyl r 0.160 hx 0.032 in Ball R 0.20, e 0.0005, dir 7                   build  1.448%  base  3.457%  truth  0.000%
+  Cyl r 0.160 hx 0.032 in Ball R 0.20, e 0.0005, dir 8                   build  1.306%  base  2.270%  truth  0.000%
+  Cyl r 0.150 hx 0.030 in Ball R 0.30, e 0.0002, dir 10                  build  1.466%  base  1.907%  truth  0.000%
+  Cyl r 0.240 hx 0.048 in Ball R 0.30, e 0.0002, dir 4                   build  1.036%  base  1.775%  truth  0.000%
+  Cyl r 0.240 hx 0.048 in Ball R 0.30, e 0.0002, dir 7                   build  2.298%  base  3.595%  truth  0.000%
+  Cyl r 0.240 hx 0.048 in Ball R 0.30, e 0.0002, dir 8                   build  1.753%  base  2.428%  truth  0.000%
+  Cyl r 0.240 hx 0.048 in Ball R 0.30, e 0.0002, dir 10                  build  1.933%  base  2.534%  truth  0.000%
+  Cyl r 0.240 hx 0.048 in Ball R 0.30, e 0.0005, dir 7                   build  1.350%  base  3.341%  truth  0.000%
+  Cyl r 0.240 hx 0.048 in Ball R 0.30, e 0.0005, dir 8                   build  1.624%  base  2.261%  truth  0.000%
+  Cyl r 0.240 hx 0.048 in Ball R 0.30, e 0.0005, dir 10                  build  1.035%  base  2.351%  truth  0.000%
+  Cyl r 0.240 hx 0.048 in Ball R 0.30, e 0.0010, dir 8                   build  1.233%  base  2.008%  truth  0.000%
+cylInBall: 3050 designs, the build reads up to 2.403% (Cyl r 0.160 hx 0.032 in Ball R 0.20, e 0.0002, dir 7), 1 % or more on 17; the base up to 4.929%

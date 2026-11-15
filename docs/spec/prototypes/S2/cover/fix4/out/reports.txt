@@ -1,0 +1,20 @@
+var_tbase: the largest single report 2334.500 units (past the cap judge judge climb seed 4 best 14613763 units)
+     2334.500  past the cap judge judge climb seed 4 best 14613763 units      700050.500 units CAPPED
+     2330.000  worst tclimb_2.json #6                                         562398.375 units
+     2058.500  worst tclimb_1.json #5                                         370029.250 units
+     1828.000  worst tclimb_3.json #4                                         578171.750 units
+     1088.000  past the cap A climb_2 1                                       700117.125 units CAPPED
+     1065.000  worst tclimb_2.json #4                                         644775.375 units
+     1040.000  past the cap B uclimb uclimb_4 best 2699876 units              700049.750 units CAPPED
+     1008.000  worst tclimb_3.json #3                                         655541.875 units
+   over the fixtures, attack and worst designs: 2334.500
+var_fin: the largest single report 1088.000 units (past the cap A climb_2 1)
+     1088.000  past the cap A climb_2 1                                       700117.125 units CAPPED
+     1065.000  worst tclimb_2.json #4                                         644775.375 units
+     1056.500  worst tclimb_3.json #4                                         518339.500 units
+     1056.500  worst tclimb_2.json #6                                         505237.625 units
+     1040.000  past the cap B uclimb uclimb_4 best 2699876 units              700049.750 units CAPPED
+     1008.000  worst tclimb_3.json #3                                         655541.875 units
+     1008.000  past the cap judge judge climb seed 1 best 10790351 units      700013.500 units CAPPED
+      976.000  past the cap A climb_3 1                                       700147.125 units CAPPED
+   over the fixtures, attack and worst designs: 1088.000

@@ -1,0 +1,9 @@
+tilt ~ 0°:   70 rods,   1 kept, the most 3.385%
+tilt ~15°:   45 rods,   4 kept, the most 3.524%
+tilt ~30°:   28 rods,   0 kept, the most 1.673%
+tilt ~45°:   34 rods,   0 kept, the most 1.380%
+tilt ~60°:   40 rods,   1 kept, the most 2.284%
+tilt ~75°:   36 rods,   0 kept, the most 0.549%
+tilt ~90°:   78 rods,   2 kept, the most 4.584%
+331 rods wholly inside one Cylinder (truly 0): 8 kept, the most 4.584%
+[{"id":1,"label":"Cylinder","material":"Iron","pos":[0,2,0],"rot":[0,0.7071067811865476,0,0.7071067811865476],"shape":"Cylinder","size":[0.3,1.6,1.6],"slot":"Guard"},{"id":2,"label":"Cylinder","material":"Iron","pos":[0.563461343866653,1.9642169139828367,0],"rot":[0.83397098606987,-0.031264188878725147,-0.010186180419277413,0.5508277286192754],"shape":"Cylinder","size":[0.46674630230292674,0.11119924649596216,0.11119924649596216],"slot":"Blade"}]

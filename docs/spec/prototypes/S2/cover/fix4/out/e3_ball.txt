@@ -1,0 +1,316 @@
+Ball r 0.20, pole    Block 0.040 x 0.200, top 0.05 over (0.00026) out    truth   5.288%  base   0.688%  build   5.120%  MOVED
+Ball r 0.20, pole    Block 0.040 x 0.200, top 0.10 over (0.00052) out    truth   5.388%  base   0.938%  build   5.238%  MOVED
+Ball r 0.20, pole    Block 0.040 x 0.200, top 0.25 over (0.00130) out    truth   5.733%  base   1.920%  build   5.592%  MOVED
+Ball r 0.20, pole    Block 0.040 x 0.200, top 0.50 over (0.00260) out    truth   6.340%  base   4.119%  build   6.183%
+Ball r 0.20, pole    Block 0.040 x 0.200, top 0.75 over (0.00390) out    truth   6.928%  base   5.803%  build   6.774%
+Ball r 0.20, pole    Block 0.040 x 0.200, top 1.00 over (0.00520) out    truth   7.505%  base   6.759%  build   7.365%
+Ball r 0.20, pole    Block 0.040 x 0.200, top 1.25 over (0.00650) out    truth   8.098%  base   7.350%  build   7.956%
+Ball r 0.20, pole    Block 0.100 x 0.200, top 0.05 over (0.00026) out    truth  13.500%  base  11.179%  build  13.405%
+Ball r 0.20, pole    Block 0.100 x 0.200, top 0.10 over (0.00052) out    truth  13.607%  base  11.473%  build  13.509%
+Ball r 0.20, pole    Block 0.100 x 0.200, top 0.25 over (0.00130) out    truth  13.925%  base  12.294%  build  13.821%
+Ball r 0.20, pole    Block 0.100 x 0.200, top 0.50 over (0.00260) out    truth  14.439%  base  13.455%  build  14.341%
+Ball r 0.20, pole    Block 0.100 x 0.200, top 0.75 over (0.00390) out    truth  14.959%  base  14.360%  build  14.861%
+Ball r 0.20, pole    Block 0.100 x 0.200, top 1.00 over (0.00520) out    truth  15.492%  base  15.008%  build  15.381%
+Ball r 0.20, pole    Block 0.100 x 0.200, top 1.25 over (0.00650) out    truth  16.002%  base  15.528%  build  15.901%
+Ball r 0.20, pole    Block 0.050 x 0.200, top 0.05 over (0.00026) out    truth   6.593%  base   2.253%  build   6.421%
+Ball r 0.20, pole    Block 0.050 x 0.200, top 0.10 over (0.00052) out    truth   6.706%  base   2.637%  build   6.536%
+Ball r 0.20, pole    Block 0.050 x 0.200, top 0.25 over (0.00130) out    truth   7.061%  base   3.961%  build   6.883%
+Ball r 0.20, pole    Block 0.050 x 0.200, top 0.50 over (0.00260) out    truth   7.643%  base   5.965%  build   7.461%
+Ball r 0.20, pole    Block 0.050 x 0.200, top 0.75 over (0.00390) out    truth   8.231%  base   7.398%  build   8.039%
+Ball r 0.20, pole    Block 0.050 x 0.200, top 1.00 over (0.00520) out    truth   8.796%  base   8.260%  build   8.616%
+Ball r 0.20, pole    Block 0.050 x 0.200, top 1.25 over (0.00650) out    truth   9.371%  base   8.838%  build   9.194%
+Ball r 0.20, octant  Block 0.040 x 0.200, top 0.05 over (0.00026) out    truth   5.288%  base   4.664%  build   5.126%
+Ball r 0.20, octant  Block 0.040 x 0.200, top 0.10 over (0.00052) out    truth   5.388%  base   4.782%  build   5.244%
+Ball r 0.20, octant  Block 0.040 x 0.200, top 0.25 over (0.00130) out    truth   5.733%  base   5.136%  build   5.599%
+Ball r 0.20, octant  Block 0.040 x 0.200, top 0.50 over (0.00260) out    truth   6.340%  base   5.727%  build   6.190%
+Ball r 0.20, octant  Block 0.040 x 0.200, top 0.75 over (0.00390) out    truth   6.928%  base   6.318%  build   6.781%
+Ball r 0.20, octant  Block 0.040 x 0.200, top 1.00 over (0.00520) out    truth   7.505%  base   6.909%  build   7.371%
+Ball r 0.20, octant  Block 0.040 x 0.200, top 1.25 over (0.00650) out    truth   8.098%  base   7.500%  build   7.962%
+Ball r 0.20, octant  Block 0.100 x 0.200, top 0.05 over (0.00026) out    truth  13.505%  base  12.313%  build  13.389%
+Ball r 0.20, octant  Block 0.100 x 0.200, top 0.10 over (0.00052) out    truth  13.603%  base  12.417%  build  13.493%
+Ball r 0.20, octant  Block 0.100 x 0.200, top 0.25 over (0.00130) out    truth  13.925%  base  12.729%  build  13.805%
+Ball r 0.20, octant  Block 0.100 x 0.200, top 0.50 over (0.00260) out    truth  14.448%  base  13.249%  build  14.325%
+Ball r 0.20, octant  Block 0.100 x 0.200, top 0.75 over (0.00390) out    truth  14.960%  base  13.769%  build  14.845%
+Ball r 0.20, octant  Block 0.100 x 0.200, top 1.00 over (0.00520) out    truth  15.488%  base  14.289%  build  15.365%
+Ball r 0.20, octant  Block 0.100 x 0.200, top 1.25 over (0.00650) out    truth  16.013%  base  14.809%  build  15.885%
+Ball r 0.20, octant  Block 0.050 x 0.200, top 0.05 over (0.00026) out    truth   6.593%  base   5.699%  build   6.459%
+Ball r 0.20, octant  Block 0.050 x 0.200, top 0.10 over (0.00052) out    truth   6.706%  base   5.815%  build   6.574%
+Ball r 0.20, octant  Block 0.050 x 0.200, top 0.25 over (0.00130) out    truth   7.061%  base   6.161%  build   6.921%
+Ball r 0.20, octant  Block 0.050 x 0.200, top 0.50 over (0.00260) out    truth   7.643%  base   6.739%  build   7.499%
+Ball r 0.20, octant  Block 0.050 x 0.200, top 0.75 over (0.00390) out    truth   8.231%  base   7.317%  build   8.077%
+Ball r 0.20, octant  Block 0.050 x 0.200, top 1.00 over (0.00520) out    truth   8.796%  base   7.895%  build   8.654%
+Ball r 0.20, octant  Block 0.050 x 0.200, top 1.25 over (0.00650) out    truth   9.371%  base   8.473%  build   9.232%
+Ball r 0.20, between Block 0.040 x 0.200, top 0.05 over (0.00026) out    truth   5.288%  base   1.704%  build   5.129%  MOVED
+Ball r 0.20, between Block 0.040 x 0.200, top 0.10 over (0.00052) out    truth   5.388%  base   2.217%  build   5.247%
+Ball r 0.20, between Block 0.040 x 0.200, top 0.25 over (0.00130) out    truth   5.733%  base   3.745%  build   5.602%
+Ball r 0.20, between Block 0.040 x 0.200, top 0.50 over (0.00260) out    truth   6.340%  base   5.365%  build   6.193%
+Ball r 0.20, between Block 0.040 x 0.200, top 0.75 over (0.00390) out    truth   6.928%  base   6.026%  build   6.784%
+Ball r 0.20, between Block 0.040 x 0.200, top 1.00 over (0.00520) out    truth   7.505%  base   6.617%  build   7.375%
+Ball r 0.20, between Block 0.040 x 0.200, top 1.25 over (0.00650) out    truth   8.098%  base   7.208%  build   7.965%
+Ball r 0.20, between Block 0.100 x 0.200, top 0.05 over (0.00026) out    truth  13.500%  base  10.322%  build  13.374%
+Ball r 0.20, between Block 0.100 x 0.200, top 0.10 over (0.00052) out    truth  13.607%  base  10.712%  build  13.478%
+Ball r 0.20, between Block 0.100 x 0.200, top 0.25 over (0.00130) out    truth  13.925%  base  11.767%  build  13.790%
+Ball r 0.20, between Block 0.100 x 0.200, top 0.50 over (0.00260) out    truth  14.439%  base  13.150%  build  14.310%
+Ball r 0.20, between Block 0.100 x 0.200, top 0.75 over (0.00390) out    truth  14.959%  base  14.061%  build  14.830%
+Ball r 0.20, between Block 0.100 x 0.200, top 1.00 over (0.00520) out    truth  15.492%  base  14.605%  build  15.350%
+Ball r 0.20, between Block 0.100 x 0.200, top 1.25 over (0.00650) out    truth  16.002%  base  15.125%  build  15.870%
+Ball r 0.20, between Block 0.050 x 0.200, top 0.05 over (0.00026) out    truth   6.593%  base   2.697%  build   6.487%
+Ball r 0.20, between Block 0.050 x 0.200, top 0.10 over (0.00052) out    truth   6.706%  base   3.229%  build   6.603%
+Ball r 0.20, between Block 0.050 x 0.200, top 0.25 over (0.00130) out    truth   7.061%  base   4.637%  build   6.949%
+Ball r 0.20, between Block 0.050 x 0.200, top 0.50 over (0.00260) out    truth   7.643%  base   6.357%  build   7.527%
+Ball r 0.20, between Block 0.050 x 0.200, top 0.75 over (0.00390) out    truth   8.231%  base   7.235%  build   8.105%
+Ball r 0.20, between Block 0.050 x 0.200, top 1.00 over (0.00520) out    truth   8.796%  base   7.812%  build   8.683%
+Ball r 0.20, between Block 0.050 x 0.200, top 1.25 over (0.00650) out    truth   9.371%  base   8.390%  build   9.261%
+Ball r 0.30, pole    Block 0.040 x 0.200, top 0.05 over (0.00039) out    truth   5.130%  base   0.000%  build   5.026%  MOVED
+Ball r 0.30, pole    Block 0.040 x 0.200, top 0.10 over (0.00078) out    truth   5.298%  base   0.000%  build   5.203%  MOVED
+Ball r 0.30, pole    Block 0.040 x 0.200, top 0.25 over (0.00195) out    truth   5.848%  base   0.118%  build   5.735%  MOVED
+Ball r 0.30, pole    Block 0.040 x 0.200, top 0.50 over (0.00390) out    truth   6.718%  base   1.920%  build   6.622%  MOVED
+Ball r 0.30, pole    Block 0.040 x 0.200, top 0.75 over (0.00585) out    truth   7.600%  base   5.053%  build   7.508%
+Ball r 0.30, pole    Block 0.040 x 0.200, top 1.00 over (0.00780) out    truth   8.495%  base   6.759%  build   8.394%
+Ball r 0.30, pole    Block 0.040 x 0.200, top 1.25 over (0.00975) out    truth   9.375%  base   7.645%  build   9.281%
+Ball r 0.30, pole    Block 0.100 x 0.200, top 0.05 over (0.00039) out    truth  12.395%  base   7.736%  build  12.181%
+Ball r 0.30, pole    Block 0.100 x 0.200, top 0.10 over (0.00078) out    truth  12.550%  base   8.319%  build  12.337%
+Ball r 0.30, pole    Block 0.100 x 0.200, top 0.25 over (0.00195) out    truth  13.037%  base   9.931%  build  12.805%
+Ball r 0.30, pole    Block 0.100 x 0.200, top 0.50 over (0.00390) out    truth  13.790%  base  12.154%  build  13.585%
+Ball r 0.30, pole    Block 0.100 x 0.200, top 0.75 over (0.00585) out    truth  14.574%  base  13.800%  build  14.365%
+Ball r 0.30, pole    Block 0.100 x 0.200, top 1.00 over (0.00780) out    truth  15.364%  base  14.869%  build  15.145%
+Ball r 0.30, pole    Block 0.100 x 0.200, top 1.25 over (0.00975) out    truth  16.149%  base  15.649%  build  15.925%
+Ball r 0.30, pole    Block 0.075 x 0.200, top 0.05 over (0.00039) out    truth   9.382%  base   3.202%  build   9.124%
+Ball r 0.30, pole    Block 0.075 x 0.200, top 0.10 over (0.00078) out    truth   9.555%  base   3.747%  build   9.289%
+Ball r 0.30, pole    Block 0.075 x 0.200, top 0.25 over (0.00195) out    truth  10.049%  base   5.629%  build   9.781%
+Ball r 0.30, pole    Block 0.075 x 0.200, top 0.50 over (0.00390) out    truth  10.849%  base   8.476%  build  10.602%
+Ball r 0.30, pole    Block 0.075 x 0.200, top 0.75 over (0.00585) out    truth  11.672%  base  10.513%  build  11.423%
+Ball r 0.30, pole    Block 0.075 x 0.200, top 1.00 over (0.00780) out    truth  12.497%  base  11.739%  build  12.244%
+Ball r 0.30, pole    Block 0.075 x 0.200, top 1.25 over (0.00975) out    truth  13.319%  base  12.560%  build  13.065%
+Ball r 0.30, octant  Block 0.040 x 0.200, top 0.05 over (0.00039) out    truth   5.130%  base   4.723%  build   4.914%
+Ball r 0.30, octant  Block 0.040 x 0.200, top 0.10 over (0.00078) out    truth   5.298%  base   4.900%  build   5.091%
+Ball r 0.30, octant  Block 0.040 x 0.200, top 0.25 over (0.00195) out    truth   5.848%  base   5.432%  build   5.623%
+Ball r 0.30, octant  Block 0.040 x 0.200, top 0.50 over (0.00390) out    truth   6.718%  base   6.318%  build   6.509%
+Ball r 0.30, octant  Block 0.040 x 0.200, top 0.75 over (0.00585) out    truth   7.600%  base   7.205%  build   7.396%
+Ball r 0.30, octant  Block 0.040 x 0.200, top 1.00 over (0.00780) out    truth   8.495%  base   8.091%  build   8.282%
+Ball r 0.30, octant  Block 0.040 x 0.200, top 1.25 over (0.00975) out    truth   9.375%  base   8.977%  build   9.168%
+Ball r 0.30, octant  Block 0.100 x 0.200, top 0.05 over (0.00039) out    truth  12.405%  base  10.834%  build  12.198%
+Ball r 0.30, octant  Block 0.100 x 0.200, top 0.10 over (0.00078) out    truth  12.555%  base  10.990%  build  12.354%
+Ball r 0.30, octant  Block 0.100 x 0.200, top 0.25 over (0.00195) out    truth  13.038%  base  11.458%  build  12.822%
+Ball r 0.30, octant  Block 0.100 x 0.200, top 0.50 over (0.00390) out    truth  13.795%  base  12.238%  build  13.602%
+Ball r 0.30, octant  Block 0.100 x 0.200, top 0.75 over (0.00585) out    truth  14.573%  base  13.018%  build  14.382%
+Ball r 0.30, octant  Block 0.100 x 0.200, top 1.00 over (0.00780) out    truth  15.370%  base  13.798%  build  15.162%
+Ball r 0.30, octant  Block 0.100 x 0.200, top 1.25 over (0.00975) out    truth  16.145%  base  14.578%  build  15.942%
+Ball r 0.30, octant  Block 0.075 x 0.200, top 0.05 over (0.00039) out    truth   9.382%  base   8.099%  build   9.178%
+Ball r 0.30, octant  Block 0.075 x 0.200, top 0.10 over (0.00078) out    truth   9.555%  base   8.263%  build   9.342%
+Ball r 0.30, octant  Block 0.075 x 0.200, top 0.25 over (0.00195) out    truth  10.049%  base   8.756%  build   9.835%
+Ball r 0.30, octant  Block 0.075 x 0.200, top 0.50 over (0.00390) out    truth  10.849%  base   9.577%  build  10.656%
+Ball r 0.30, octant  Block 0.075 x 0.200, top 0.75 over (0.00585) out    truth  11.672%  base  10.398%  build  11.477%
+Ball r 0.30, octant  Block 0.075 x 0.200, top 1.00 over (0.00780) out    truth  12.497%  base  11.219%  build  12.298%
+Ball r 0.30, octant  Block 0.075 x 0.200, top 1.25 over (0.00975) out    truth  13.319%  base  12.040%  build  13.119%
+Ball r 0.30, between Block 0.040 x 0.200, top 0.05 over (0.00039) out    truth   5.130%  base   1.339%  build   4.836%  MOVED
+Ball r 0.30, between Block 0.040 x 0.200, top 0.10 over (0.00078) out    truth   5.298%  base   2.021%  build   4.997%
+Ball r 0.30, between Block 0.040 x 0.200, top 0.25 over (0.00195) out    truth   5.848%  base   4.197%  build   5.529%
+Ball r 0.30, between Block 0.040 x 0.200, top 0.50 over (0.00390) out    truth   6.718%  base   5.715%  build   6.416%
+Ball r 0.30, between Block 0.040 x 0.200, top 0.75 over (0.00585) out    truth   7.600%  base   6.600%  build   7.302%
+Ball r 0.30, between Block 0.040 x 0.200, top 1.00 over (0.00780) out    truth   8.495%  base   7.486%  build   8.188%
+Ball r 0.30, between Block 0.040 x 0.200, top 1.25 over (0.00975) out    truth   9.375%  base   8.373%  build   9.075%
+Ball r 0.30, between Block 0.100 x 0.200, top 0.05 over (0.00039) out    truth  12.395%  base   6.869%  build  12.243%
+Ball r 0.30, between Block 0.100 x 0.200, top 0.10 over (0.00078) out    truth  12.550%  base   7.527%  build  12.399%
+Ball r 0.30, between Block 0.100 x 0.200, top 0.25 over (0.00195) out    truth  13.037%  base   9.308%  build  12.867%
+Ball r 0.30, between Block 0.100 x 0.200, top 0.50 over (0.00390) out    truth  13.790%  base  11.643%  build  13.647%
+Ball r 0.30, between Block 0.100 x 0.200, top 0.75 over (0.00585) out    truth  14.574%  base  13.197%  build  14.427%
+Ball r 0.30, between Block 0.100 x 0.200, top 1.00 over (0.00780) out    truth  15.364%  base  14.033%  build  15.207%
+Ball r 0.30, between Block 0.100 x 0.200, top 1.25 over (0.00975) out    truth  16.149%  base  14.813%  build  15.987%
+Ball r 0.30, between Block 0.075 x 0.200, top 0.05 over (0.00039) out    truth   9.382%  base   3.833%  build   9.219%
+Ball r 0.30, between Block 0.075 x 0.200, top 0.10 over (0.00078) out    truth   9.555%  base   4.589%  build   9.383%
+Ball r 0.30, between Block 0.075 x 0.200, top 0.25 over (0.00195) out    truth  10.049%  base   6.589%  build   9.876%
+Ball r 0.30, between Block 0.075 x 0.200, top 0.50 over (0.00390) out    truth  10.849%  base   9.034%  build  10.697%
+Ball r 0.30, between Block 0.075 x 0.200, top 0.75 over (0.00585) out    truth  11.672%  base  10.281%  build  11.518%
+Ball r 0.30, between Block 0.075 x 0.200, top 1.00 over (0.00780) out    truth  12.497%  base  11.102%  build  12.339%
+Ball r 0.30, between Block 0.075 x 0.200, top 1.25 over (0.00975) out    truth  13.319%  base  11.923%  build  13.160%
+Ball r 0.60, pole    Block 0.040 x 0.200, top 0.05 over (0.00078) out    truth   5.103%  base   0.000%  build   5.052%  MOVED
+Ball r 0.60, pole    Block 0.040 x 0.200, top 0.10 over (0.00156) out    truth   5.463%  base   0.000%  build   5.406%  MOVED
+Ball r 0.60, pole    Block 0.040 x 0.200, top 0.25 over (0.00390) out    truth   6.513%  base   0.000%  build   6.470%  MOVED
+Ball r 0.60, pole    Block 0.040 x 0.200, top 0.50 over (0.00780) out    truth   8.298%  base   0.000%  build   8.242%  MOVED
+Ball r 0.60, pole    Block 0.040 x 0.200, top 0.75 over (0.01170) out    truth  10.068%  base   1.922%  build  10.015%  MOVED
+Ball r 0.60, pole    Block 0.040 x 0.200, top 1.00 over (0.01560) out    truth  11.840%  base   6.759%  build  11.788%
+Ball r 0.60, pole    Block 0.040 x 0.200, top 1.25 over (0.01950) out    truth  13.605%  base   8.532%  build  13.561%
+Ball r 0.60, pole    Block 0.100 x 0.200, top 0.05 over (0.00078) out    truth  11.417%  base   0.200%  build  11.147%  MOVED
+Ball r 0.60, pole    Block 0.100 x 0.200, top 0.10 over (0.00156) out    truth  11.732%  base   0.482%  build  11.459%  MOVED
+Ball r 0.60, pole    Block 0.100 x 0.200, top 0.25 over (0.00390) out    truth  12.682%  base   2.064%  build  12.395%
+Ball r 0.60, pole    Block 0.100 x 0.200, top 0.50 over (0.00780) out    truth  14.232%  base   7.131%  build  13.955%
+Ball r 0.60, pole    Block 0.100 x 0.200, top 0.75 over (0.01170) out    truth  15.799%  base  12.155%  build  15.515%
+Ball r 0.60, pole    Block 0.100 x 0.200, top 1.00 over (0.01560) out    truth  17.354%  base  14.869%  build  17.075%
+Ball r 0.60, pole    Block 0.100 x 0.200, top 1.25 over (0.01950) out    truth  18.909%  base  16.429%  build  18.635%
+Ball r 0.60, pole    Block 0.150 x 0.200, top 0.05 over (0.00078) out    truth  16.194%  base   5.530%  build  15.760%
+Ball r 0.60, pole    Block 0.150 x 0.200, top 0.10 over (0.00156) out    truth  16.484%  base   6.473%  build  16.044%
+Ball r 0.60, pole    Block 0.150 x 0.200, top 0.25 over (0.00390) out    truth  17.331%  base   9.723%  build  16.895%
+Ball r 0.60, pole    Block 0.150 x 0.200, top 0.50 over (0.00780) out    truth  18.746%  base  14.641%  build  18.313%
+Ball r 0.60, pole    Block 0.150 x 0.200, top 0.75 over (0.01170) out    truth  20.179%  base  18.158%  build  19.731%
+Ball r 0.60, pole    Block 0.150 x 0.200, top 1.00 over (0.01560) out    truth  21.599%  base  20.276%  build  21.150%
+Ball r 0.60, pole    Block 0.150 x 0.200, top 1.25 over (0.01950) out    truth  23.019%  base  21.694%  build  22.568%
+Ball r 0.60, octant  Block 0.040 x 0.200, top 0.05 over (0.00078) out    truth   5.103%  base   4.900%  build   4.812%
+Ball r 0.60, octant  Block 0.040 x 0.200, top 0.10 over (0.00156) out    truth   5.463%  base   5.255%  build   5.155%
+Ball r 0.60, octant  Block 0.040 x 0.200, top 0.25 over (0.00390) out    truth   6.513%  base   6.318%  build   6.219%
+Ball r 0.60, octant  Block 0.040 x 0.200, top 0.50 over (0.00780) out    truth   8.298%  base   8.091%  build   7.992%
+Ball r 0.60, octant  Block 0.040 x 0.200, top 0.75 over (0.01170) out    truth  10.068%  base   9.864%  build   9.765%
+Ball r 0.60, octant  Block 0.040 x 0.200, top 1.00 over (0.01560) out    truth  11.840%  base  11.636%  build  11.537%
+Ball r 0.60, octant  Block 0.040 x 0.200, top 1.25 over (0.01950) out    truth  13.605%  base  13.409%  build  13.310%
+Ball r 0.60, octant  Block 0.100 x 0.200, top 0.05 over (0.00078) out    truth  11.413%  base  10.312%  build  11.038%
+Ball r 0.60, octant  Block 0.100 x 0.200, top 0.10 over (0.00156) out    truth  11.733%  base  10.624%  build  11.350%
+Ball r 0.60, octant  Block 0.100 x 0.200, top 0.25 over (0.00390) out    truth  12.678%  base  11.560%  build  12.286%
+Ball r 0.60, octant  Block 0.100 x 0.200, top 0.50 over (0.00780) out    truth  14.228%  base  13.120%  build  13.846%
+Ball r 0.60, octant  Block 0.100 x 0.200, top 0.75 over (0.01170) out    truth  15.795%  base  14.680%  build  15.406%
+Ball r 0.60, octant  Block 0.100 x 0.200, top 1.00 over (0.01560) out    truth  17.350%  base  16.240%  build  16.966%
+Ball r 0.60, octant  Block 0.100 x 0.200, top 1.25 over (0.01950) out    truth  18.910%  base  17.800%  build  18.526%
+Ball r 0.60, octant  Block 0.150 x 0.200, top 0.05 over (0.00078) out    truth  16.194%  base  13.989%  build  15.853%
+Ball r 0.60, octant  Block 0.150 x 0.200, top 0.10 over (0.00156) out    truth  16.484%  base  14.273%  build  16.137%
+Ball r 0.60, octant  Block 0.150 x 0.200, top 0.25 over (0.00390) out    truth  17.331%  base  15.124%  build  16.988%
+Ball r 0.60, octant  Block 0.150 x 0.200, top 0.50 over (0.00780) out    truth  18.746%  base  16.542%  build  18.406%
+Ball r 0.60, octant  Block 0.150 x 0.200, top 0.75 over (0.01170) out    truth  20.179%  base  17.960%  build  19.824%
+Ball r 0.60, octant  Block 0.150 x 0.200, top 1.00 over (0.01560) out    truth  21.599%  base  19.378%  build  21.242%
+Ball r 0.60, octant  Block 0.150 x 0.200, top 1.25 over (0.01950) out    truth  23.019%  base  20.796%  build  22.661%
+Ball r 0.60, between Block 0.040 x 0.200, top 0.05 over (0.00078) out    truth   5.103%  base   0.519%  build   4.570%  MOVED
+Ball r 0.60, between Block 0.040 x 0.200, top 0.10 over (0.00156) out    truth   5.463%  base   1.561%  build   4.683%  MOVED
+Ball r 0.60, between Block 0.040 x 0.200, top 0.25 over (0.00390) out    truth   6.513%  base   5.180%  build   5.638%
+Ball r 0.60, between Block 0.040 x 0.200, top 0.50 over (0.00780) out    truth   8.298%  base   6.991%  build   7.410%
+Ball r 0.60, between Block 0.040 x 0.200, top 0.75 over (0.01170) out    truth  10.068%  base   8.764%  build   9.183%
+Ball r 0.60, between Block 0.040 x 0.200, top 1.00 over (0.01560) out    truth  11.840%  base  10.536%  build  10.956%
+Ball r 0.60, between Block 0.040 x 0.200, top 1.25 over (0.01950) out    truth  13.605%  base  12.309%  build  12.729%
+Ball r 0.60, between Block 0.100 x 0.200, top 0.05 over (0.00078) out    truth  11.417%  base   3.407%  build  10.977%
+Ball r 0.60, between Block 0.100 x 0.200, top 0.10 over (0.00156) out    truth  11.732%  base   4.664%  build  11.289%
+Ball r 0.60, between Block 0.100 x 0.200, top 0.25 over (0.00390) out    truth  12.682%  base   8.635%  build  12.225%
+Ball r 0.60, between Block 0.100 x 0.200, top 0.50 over (0.00780) out    truth  14.232%  base  12.189%  build  13.785%
+Ball r 0.60, between Block 0.100 x 0.200, top 0.75 over (0.01170) out    truth  15.799%  base  13.739%  build  15.345%
+Ball r 0.60, between Block 0.100 x 0.200, top 1.00 over (0.01560) out    truth  17.354%  base  15.299%  build  16.905%
+Ball r 0.60, between Block 0.100 x 0.200, top 1.25 over (0.01950) out    truth  18.909%  base  16.859%  build  18.465%
+Ball r 0.60, between Block 0.150 x 0.200, top 0.05 over (0.00078) out    truth  16.194%  base   6.620%  build  15.923%
+Ball r 0.60, between Block 0.150 x 0.200, top 0.10 over (0.00156) out    truth  16.484%  base   7.926%  build  16.207%
+Ball r 0.60, between Block 0.150 x 0.200, top 0.25 over (0.00390) out    truth  17.331%  base  11.382%  build  17.058%
+Ball r 0.60, between Block 0.150 x 0.200, top 0.50 over (0.00780) out    truth  18.746%  base  15.604%  build  18.476%
+Ball r 0.60, between Block 0.150 x 0.200, top 0.75 over (0.01170) out    truth  20.179%  base  17.751%  build  19.894%
+Ball r 0.60, between Block 0.150 x 0.200, top 1.00 over (0.01560) out    truth  21.599%  base  19.169%  build  21.312%
+Ball r 0.60, between Block 0.150 x 0.200, top 1.25 over (0.01950) out    truth  23.019%  base  20.588%  build  22.731%
+Ball r 1.20, pole    Block 0.040 x 0.200, top 0.05 over (0.00156) out    truth   5.348%  base   0.000%  build   5.330%  MOVED
+Ball r 1.20, pole    Block 0.040 x 0.200, top 0.10 over (0.00312) out    truth   6.073%  base   0.000%  build   6.039%  MOVED
+Ball r 1.20, pole    Block 0.040 x 0.200, top 0.25 over (0.00780) out    truth   8.198%  base   0.000%  build   8.167%  MOVED
+Ball r 1.20, pole    Block 0.040 x 0.200, top 0.50 over (0.01560) out    truth  11.738%  base   0.000%  build  11.712%  MOVED
+Ball r 1.20, pole    Block 0.040 x 0.200, top 0.75 over (0.02340) out    truth  15.275%  base   0.000%  build  15.258%  MOVED
+Ball r 1.20, pole    Block 0.040 x 0.200, top 1.00 over (0.03120) out    truth  18.828%  base   6.760%  build  18.803%
+Ball r 1.20, pole    Block 0.040 x 0.200, top 1.25 over (0.03900) out    truth  22.378%  base  10.306%  build  22.348%
+Ball r 1.20, pole    Block 0.100 x 0.200, top 0.05 over (0.00156) out    truth  11.177%  base   0.000%  build  11.041%  MOVED
+Ball r 1.20, pole    Block 0.100 x 0.200, top 0.10 over (0.00312) out    truth  11.797%  base   0.000%  build  11.665%  MOVED
+Ball r 1.20, pole    Block 0.100 x 0.200, top 0.25 over (0.00780) out    truth  13.687%  base   0.000%  build  13.537%  MOVED
+Ball r 1.20, pole    Block 0.100 x 0.200, top 0.50 over (0.01560) out    truth  16.802%  base   0.040%  build  16.657%  MOVED
+Ball r 1.20, pole    Block 0.100 x 0.200, top 0.75 over (0.02340) out    truth  19.916%  base   7.135%  build  19.777%
+Ball r 1.20, pole    Block 0.100 x 0.200, top 1.00 over (0.03120) out    truth  23.033%  base  14.870%  build  22.897%
+Ball r 1.20, pole    Block 0.100 x 0.200, top 1.25 over (0.03900) out    truth  26.150%  base  17.990%  build  26.017%
+Ball r 1.20, pole    Block 0.300 x 0.200, top 0.05 over (0.00156) out    truth  25.478%  base   8.690%  build  24.766%
+Ball r 1.20, pole    Block 0.300 x 0.200, top 0.10 over (0.00312) out    truth  25.921%  base  10.172%  build  25.212%
+Ball r 1.20, pole    Block 0.300 x 0.200, top 0.25 over (0.00780) out    truth  27.260%  base  15.279%  build  26.549%
+Ball r 1.20, pole    Block 0.300 x 0.200, top 0.50 over (0.01560) out    truth  29.478%  base  23.007%  build  28.778%
+Ball r 1.20, pole    Block 0.300 x 0.200, top 0.75 over (0.02340) out    truth  31.718%  base  28.535%  build  31.006%
+Ball r 1.20, pole    Block 0.300 x 0.200, top 1.00 over (0.03120) out    truth  33.916%  base  31.862%  build  33.235%
+Ball r 1.20, pole    Block 0.300 x 0.200, top 1.25 over (0.03900) out    truth  36.114%  base  34.091%  build  35.464%
+Ball r 1.20, octant  Block 0.040 x 0.200, top 0.05 over (0.00156) out    truth   5.348%  base   5.255%  build   4.836%
+Ball r 1.20, octant  Block 0.040 x 0.200, top 0.10 over (0.00312) out    truth   6.073%  base   5.964%  build   5.538%
+Ball r 1.20, octant  Block 0.040 x 0.200, top 0.25 over (0.00780) out    truth   8.198%  base   8.091%  build   7.665%
+Ball r 1.20, octant  Block 0.040 x 0.200, top 0.50 over (0.01560) out    truth  11.738%  base  11.636%  build  11.211%
+Ball r 1.20, octant  Block 0.040 x 0.200, top 0.75 over (0.02340) out    truth  15.275%  base  15.182%  build  14.756%
+Ball r 1.20, octant  Block 0.040 x 0.200, top 1.00 over (0.03120) out    truth  18.828%  base  18.727%  build  18.302%
+Ball r 1.20, octant  Block 0.040 x 0.200, top 1.25 over (0.03900) out    truth  22.378%  base  22.273%  build  21.847%
+Ball r 1.20, octant  Block 0.100 x 0.200, top 0.05 over (0.00156) out    truth  11.183%  base  10.624%  build  10.619%
+Ball r 1.20, octant  Block 0.100 x 0.200, top 0.10 over (0.00312) out    truth  11.808%  base  11.248%  build  11.224%
+Ball r 1.20, octant  Block 0.100 x 0.200, top 0.25 over (0.00780) out    truth  13.683%  base  13.120%  build  13.096%
+Ball r 1.20, octant  Block 0.100 x 0.200, top 0.50 over (0.01560) out    truth  16.798%  base  16.240%  build  16.216%
+Ball r 1.20, octant  Block 0.100 x 0.200, top 0.75 over (0.02340) out    truth  19.918%  base  19.360%  build  19.336%
+Ball r 1.20, octant  Block 0.100 x 0.200, top 1.00 over (0.03120) out    truth  23.040%  base  22.480%  build  22.456%
+Ball r 1.20, octant  Block 0.100 x 0.200, top 1.25 over (0.03900) out    truth  26.147%  base  25.600%  build  25.576%
+Ball r 1.20, octant  Block 0.300 x 0.200, top 0.05 over (0.00156) out    truth  25.478%  base  21.983%  build  24.912%
+Ball r 1.20, octant  Block 0.300 x 0.200, top 0.10 over (0.00312) out    truth  25.921%  base  22.428%  build  25.358%
+Ball r 1.20, octant  Block 0.300 x 0.200, top 0.25 over (0.00780) out    truth  27.260%  base  23.766%  build  26.695%
+Ball r 1.20, octant  Block 0.300 x 0.200, top 0.50 over (0.01560) out    truth  29.478%  base  25.994%  build  28.924%
+Ball r 1.20, octant  Block 0.300 x 0.200, top 0.75 over (0.02340) out    truth  31.718%  base  28.223%  build  31.152%
+Ball r 1.20, octant  Block 0.300 x 0.200, top 1.00 over (0.03120) out    truth  33.916%  base  30.451%  build  33.381%
+Ball r 1.20, octant  Block 0.300 x 0.200, top 1.25 over (0.03900) out    truth  36.114%  base  32.680%  build  35.610%
+Ball r 1.20, between Block 0.040 x 0.200, top 0.05 over (0.00156) out    truth   5.348%  base   0.000%  build   4.545%  MOVED
+Ball r 1.20, between Block 0.040 x 0.200, top 0.10 over (0.00312) out    truth   6.073%  base   0.819%  build   4.566%  MOVED
+Ball r 1.20, between Block 0.040 x 0.200, top 0.25 over (0.00780) out    truth   8.198%  base   6.051%  build   6.173%
+Ball r 1.20, between Block 0.040 x 0.200, top 0.50 over (0.01560) out    truth  11.738%  base   9.596%  build   9.719%
+Ball r 1.20, between Block 0.040 x 0.200, top 0.75 over (0.02340) out    truth  15.275%  base  13.142%  build  13.264%
+Ball r 1.20, between Block 0.040 x 0.200, top 1.00 over (0.03120) out    truth  18.828%  base  16.687%  build  16.810%
+Ball r 1.20, between Block 0.040 x 0.200, top 1.25 over (0.03900) out    truth  22.378%  base  20.233%  build  20.355%
+Ball r 1.20, between Block 0.100 x 0.200, top 0.05 over (0.00156) out    truth  11.177%  base   1.763%  build  10.152%  MOVED
+Ball r 1.20, between Block 0.100 x 0.200, top 0.10 over (0.00312) out    truth  11.797%  base   3.823%  build  10.476%
+Ball r 1.20, between Block 0.100 x 0.200, top 0.25 over (0.00780) out    truth  13.687%  base  10.762%  build  12.249%
+Ball r 1.20, between Block 0.100 x 0.200, top 0.50 over (0.01560) out    truth  16.802%  base  14.445%  build  15.369%
+Ball r 1.20, between Block 0.100 x 0.200, top 0.75 over (0.02340) out    truth  19.916%  base  17.565%  build  18.489%
+Ball r 1.20, between Block 0.100 x 0.200, top 1.00 over (0.03120) out    truth  23.033%  base  20.685%  build  21.609%
+Ball r 1.20, between Block 0.100 x 0.200, top 1.25 over (0.03900) out    truth  26.150%  base  23.805%  build  24.729%
+Ball r 1.20, between Block 0.300 x 0.200, top 0.05 over (0.00156) out    truth  25.478%  base  10.404%  build  25.022%
+Ball r 1.20, between Block 0.300 x 0.200, top 0.10 over (0.00312) out    truth  25.921%  base  12.455%  build  25.468%
+Ball r 1.20, between Block 0.300 x 0.200, top 0.25 over (0.00780) out    truth  27.260%  base  17.885%  build  26.805%
+Ball r 1.20, between Block 0.300 x 0.200, top 0.50 over (0.01560) out    truth  29.478%  base  24.521%  build  29.034%
+Ball r 1.20, between Block 0.300 x 0.200, top 0.75 over (0.02340) out    truth  31.718%  base  27.885%  build  31.262%
+Ball r 1.20, between Block 0.300 x 0.200, top 1.00 over (0.03120) out    truth  33.916%  base  30.114%  build  33.491%
+Ball r 1.20, between Block 0.300 x 0.200, top 1.25 over (0.03900) out    truth  36.114%  base  32.343%  build  35.720%
+Ball r 3.00, pole    Block 0.040 x 0.200, top 0.05 over (0.00390) out    truth   6.358%  base   0.000%  build   6.348%  MOVED
+Ball r 3.00, pole    Block 0.040 x 0.200, top 0.10 over (0.00780) out    truth   8.130%  base   0.000%  build   8.121%  MOVED
+Ball r 3.00, pole    Block 0.040 x 0.200, top 0.25 over (0.01950) out    truth  13.448%  base   0.000%  build  13.439%  MOVED
+Ball r 3.00, pole    Block 0.040 x 0.200, top 0.50 over (0.03900) out    truth  22.313%  base   0.000%  build  22.303%  MOVED
+Ball r 3.00, pole    Block 0.040 x 0.200, top 0.75 over (0.05850) out    truth  31.194%  base   0.000%  build  31.167%  MOVED
+Ball r 3.00, pole    Block 0.040 x 0.200, top 1.00 over (0.07800) out    truth  39.985%  base   6.764%  build  40.030%
+Ball r 3.00, pole    Block 0.040 x 0.200, top 1.25 over (0.09750) out    truth  48.876%  base  15.627%  build  48.894%
+Ball r 3.00, pole    Block 0.100 x 0.200, top 0.05 over (0.00390) out    truth  11.780%  base   0.000%  build  11.727%  MOVED
+Ball r 3.00, pole    Block 0.100 x 0.200, top 0.10 over (0.00780) out    truth  13.343%  base   0.000%  build  13.287%  MOVED
+Ball r 3.00, pole    Block 0.100 x 0.200, top 0.25 over (0.01950) out    truth  18.018%  base   0.000%  build  17.967%  MOVED
+Ball r 3.00, pole    Block 0.100 x 0.200, top 0.50 over (0.03900) out    truth  25.812%  base   0.000%  build  25.767%  MOVED
+Ball r 3.00, pole    Block 0.100 x 0.200, top 0.75 over (0.05850) out    truth  33.625%  base   0.000%  build  33.567%  MOVED
+Ball r 3.00, pole    Block 0.100 x 0.200, top 1.00 over (0.07800) out    truth  41.375%  base  14.873%  build  41.367%
+Ball r 3.00, pole    Block 0.100 x 0.200, top 1.25 over (0.09750) out    truth  49.250%  base  22.673%  build  49.167%
+Ball r 3.00, pole    Block 0.750 x 0.200, top 0.05 over (0.00390) out    truth  38.656%  base  13.224%  build  37.688%
+Ball r 3.00, pole    Block 0.750 x 0.200, top 0.10 over (0.00780) out    truth  39.480%  base  15.479%  build  38.366%
+Ball r 3.00, pole    Block 0.750 x 0.200, top 0.25 over (0.01950) out    truth  41.629%  base  23.250%  build  40.401%
+Ball r 3.00, pole    Block 0.750 x 0.200, top 0.50 over (0.03900) out    truth  44.978%  base  35.010%  build  43.792%
+Ball r 3.00, pole    Block 0.750 x 0.200, top 0.75 over (0.05850) out    truth  48.301%  base  43.422%  build  47.184%
+Ball r 3.00, pole    Block 0.750 x 0.200, top 1.00 over (0.07800) out    truth  51.574%  base  48.486%  build  50.575%
+Ball r 3.00, pole    Block 0.750 x 0.200, top 1.25 over (0.09750) out    truth  55.047%  base  51.877%  build  53.966%
+Ball r 3.00, octant  Block 0.040 x 0.200, top 0.05 over (0.00390) out    truth   6.358%  base   6.318%  build   5.095%
+Ball r 3.00, octant  Block 0.040 x 0.200, top 0.10 over (0.00780) out    truth   8.130%  base   8.091%  build   6.867%
+Ball r 3.00, octant  Block 0.040 x 0.200, top 0.25 over (0.01950) out    truth  13.448%  base  13.409%  build  12.186%
+Ball r 3.00, octant  Block 0.040 x 0.200, top 0.50 over (0.03900) out    truth  22.313%  base  22.273%  build  21.049%
+Ball r 3.00, octant  Block 0.040 x 0.200, top 0.75 over (0.05850) out    truth  31.194%  base  31.136%  build  29.913%
+Ball r 3.00, octant  Block 0.040 x 0.200, top 1.00 over (0.07800) out    truth  39.985%  base  40.000%  build  38.777%
+Ball r 3.00, octant  Block 0.040 x 0.200, top 1.25 over (0.09750) out    truth  48.876%  base  48.864%  build  47.640%
+Ball r 3.00, octant  Block 0.100 x 0.200, top 0.05 over (0.00390) out    truth  11.780%  base  11.560%  build  10.639%
+Ball r 3.00, octant  Block 0.100 x 0.200, top 0.10 over (0.00780) out    truth  13.343%  base  13.120%  build  12.183%
+Ball r 3.00, octant  Block 0.100 x 0.200, top 0.25 over (0.01950) out    truth  18.018%  base  17.800%  build  16.863%
+Ball r 3.00, octant  Block 0.100 x 0.200, top 0.50 over (0.03900) out    truth  25.812%  base  25.600%  build  24.663%
+Ball r 3.00, octant  Block 0.100 x 0.200, top 0.75 over (0.05850) out    truth  33.625%  base  33.400%  build  32.463%
+Ball r 3.00, octant  Block 0.100 x 0.200, top 1.00 over (0.07800) out    truth  41.375%  base  41.200%  build  40.263%
+Ball r 3.00, octant  Block 0.100 x 0.200, top 1.25 over (0.09750) out    truth  49.250%  base  49.000%  build  48.063%
+Ball r 3.00, octant  Block 0.750 x 0.200, top 0.05 over (0.00390) out    truth  38.656%  base  33.452%  build  37.910%
+Ball r 3.00, octant  Block 0.750 x 0.200, top 0.10 over (0.00780) out    truth  39.480%  base  34.130%  build  38.588%
+Ball r 3.00, octant  Block 0.750 x 0.200, top 0.25 over (0.01950) out    truth  41.629%  base  36.165%  build  40.623%
+Ball r 3.00, octant  Block 0.750 x 0.200, top 0.50 over (0.03900) out    truth  44.978%  base  39.556%  build  44.015%
+Ball r 3.00, octant  Block 0.750 x 0.200, top 0.75 over (0.05850) out    truth  48.301%  base  42.948%  build  47.406%
+Ball r 3.00, octant  Block 0.750 x 0.200, top 1.00 over (0.07800) out    truth  51.574%  base  46.339%  build  50.797%
+Ball r 3.00, octant  Block 0.750 x 0.200, top 1.25 over (0.09750) out    truth  55.047%  base  49.730%  build  54.188%
+Ball r 3.00, between Block 0.040 x 0.200, top 0.05 over (0.00390) out    truth   6.358%  base   0.000%  build   4.545%  MOVED
+Ball r 3.00, between Block 0.040 x 0.200, top 0.10 over (0.00780) out    truth   8.130%  base   0.000%  build   4.545%  MOVED
+Ball r 3.00, between Block 0.040 x 0.200, top 0.25 over (0.01950) out    truth  13.448%  base   8.550%  build   8.374%
+Ball r 3.00, between Block 0.040 x 0.200, top 0.50 over (0.03900) out    truth  22.313%  base  17.413%  build  17.238%
+Ball r 3.00, between Block 0.040 x 0.200, top 0.75 over (0.05850) out    truth  31.194%  base  26.277%  build  26.101%
+Ball r 3.00, between Block 0.040 x 0.200, top 1.00 over (0.07800) out    truth  39.985%  base  35.141%  build  34.965%
+Ball r 3.00, between Block 0.040 x 0.200, top 1.25 over (0.09750) out    truth  48.876%  base  44.004%  build  43.829%
+Ball r 3.00, between Block 0.100 x 0.200, top 0.05 over (0.00390) out    truth  11.785%  base   0.000%  build  10.000%  MOVED
+Ball r 3.00, between Block 0.100 x 0.200, top 0.10 over (0.00780) out    truth  13.337%  base   1.803%  build  10.045%  MOVED
+Ball r 3.00, between Block 0.100 x 0.200, top 0.25 over (0.01950) out    truth  18.021%  base  13.524%  build  13.581%
+Ball r 3.00, between Block 0.100 x 0.200, top 0.50 over (0.03900) out    truth  25.811%  base  21.324%  build  21.381%
+Ball r 3.00, between Block 0.100 x 0.200, top 0.75 over (0.05850) out    truth  33.670%  base  29.124%  build  29.181%
+Ball r 3.00, between Block 0.100 x 0.200, top 1.00 over (0.07800) out    truth  41.411%  base  36.924%  build  36.981%
+Ball r 3.00, between Block 0.100 x 0.200, top 1.25 over (0.09750) out    truth  49.226%  base  44.724%  build  44.781%
+Ball r 3.00, between Block 0.750 x 0.200, top 0.05 over (0.00390) out    truth  38.656%  base  15.832%  build  38.078%
+Ball r 3.00, between Block 0.750 x 0.200, top 0.10 over (0.00780) out    truth  39.480%  base  18.954%  build  38.756%
+Ball r 3.00, between Block 0.750 x 0.200, top 0.25 over (0.01950) out    truth  41.629%  base  27.217%  build  40.791%
+Ball r 3.00, between Block 0.750 x 0.200, top 0.50 over (0.03900) out    truth  44.978%  base  37.315%  build  44.182%
+Ball r 3.00, between Block 0.750 x 0.200, top 0.75 over (0.05850) out    truth  48.301%  base  42.447%  build  47.573%
+Ball r 3.00, between Block 0.750 x 0.200, top 1.00 over (0.07800) out    truth  51.574%  base  45.838%  build  50.965%
+Ball r 3.00, between Block 0.750 x 0.200, top 1.25 over (0.09750) out    truth  55.047%  base  49.229%  build  54.356%
+ball: 315 designs, verdict moved against the base on 44, cleaned by the build while truly ≥ 2 % on 0

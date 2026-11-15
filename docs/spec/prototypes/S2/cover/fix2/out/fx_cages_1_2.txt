@@ -1,0 +1,31 @@
+1000 designs
+c1 vs pre: 124 verdicts move on 124 designs (124 cleaned, 0 kept); newly capped 0 []
+   cleaned that truly show under 2 %: 1 (closed false kept)
+   false Enclosed at a true share in [2.0, 2.5) %: 5  shapes ['Ball']
+   false Enclosed at a true share in [2.5, 3.0) %: 13  shapes ['Ball']
+   false Enclosed at a true share in [3.0, 4.0) %: 21  shapes ['Ball']
+   false Enclosed at a true share in [4.0, 5.0) %: 13  shapes ['Ball']
+   false Enclosed at a true share in [5.0, 900.0) %: 71  shapes ['Ball']
+      25.920 % Ball part 1 of cage 99 r 0.05 g 0.00851 b 0.0282
+      21.675 % Ball part 1 of cage 3 r 0.05 g 0.00904 b 0.0260
+      21.375 % Ball part 1 of cage 449 r 0.05 g 0.00754 b 0.0283
+      20.310 % Ball part 1 of cage 37 r 0.08 g 0.00340 b 0.0443
+      19.758 % Ball part 1 of cage 154 r 0.05 g 0.00968 b 0.0243
+      19.332 % Ball part 1 of cage 438 r 0.05 g 0.01211 b 0.0194
+      19.318 % Ball part 1 of cage 265 r 0.08 g 0.00032 b 0.0478
+      17.398 % Ball part 1 of cage 377 r 0.08 g 0.01177 b 0.0279
+c0 vs pre: 124 verdicts move on 124 designs (124 cleaned, 0 kept); newly capped 0 []
+   cleaned that truly show under 2 %: 1 (closed false kept)
+   false Enclosed at a true share in [2.0, 2.5) %: 5  shapes ['Ball']
+   false Enclosed at a true share in [2.5, 3.0) %: 13  shapes ['Ball']
+   false Enclosed at a true share in [3.0, 4.0) %: 21  shapes ['Ball']
+   false Enclosed at a true share in [4.0, 5.0) %: 13  shapes ['Ball']
+   false Enclosed at a true share in [5.0, 900.0) %: 71  shapes ['Ball']
+      25.920 % Ball part 1 of cage 99 r 0.05 g 0.00851 b 0.0282
+      21.675 % Ball part 1 of cage 3 r 0.05 g 0.00904 b 0.0260
+      21.375 % Ball part 1 of cage 449 r 0.05 g 0.00754 b 0.0283
+      20.310 % Ball part 1 of cage 37 r 0.08 g 0.00340 b 0.0443
+      19.758 % Ball part 1 of cage 154 r 0.05 g 0.00968 b 0.0243
+      19.332 % Ball part 1 of cage 438 r 0.05 g 0.01211 b 0.0194
+      19.318 % Ball part 1 of cage 265 r 0.08 g 0.00032 b 0.0478
+      17.398 % Ball part 1 of cage 377 r 0.08 g 0.01177 b 0.0279

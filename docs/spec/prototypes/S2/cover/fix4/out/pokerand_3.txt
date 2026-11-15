@@ -1,0 +1,5 @@
+base, Ball r 3.00, seed 4: 397 Blocks, 397 read near 2 % and checked against the truth; 78 cleaned that truly show 2 % or more, 0 kept truly under 2 %
+  the largest true share cleaned: #321 Block 0.045 × 0.081 × 0.174, its corner 0.00854 out (0.0028 r): reads 0.000%, truth 18.728%
+cap, Ball r 3.00, seed 4: 397 Blocks, 397 read near 2 % and checked against the truth; 25 cleaned that truly show 2 % or more, 0 kept truly under 2 %
+  the largest true share cleaned: #126 Block 0.140 × 0.032 × 0.050, its corner 0.00942 out (0.0031 r): reads 1.002%, truth 3.417%
+exit 0

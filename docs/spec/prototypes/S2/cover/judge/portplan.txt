@@ -1,0 +1,167 @@
+===== failingTests
+`lune run tests/run -- --quick` in the copy: 532 pass, 29 fail, 14 skipped (before the change: 561 pass). Log and list: C:\Users\louis\AppData\Local\Temp\claude\C--Users-louis-Documents-RANDOM-ROBLOX\93ae48b4-72b9-4dc1-aa5d-451af1abf9a0\scratchpad\m2x-protoA\quick_final.log and quick_final_fails.txt.
+
+1 real defect of the baseline model:
+- Sampling › T-PHY-09 "a copy turned about its own symmetry axis": with part-frame round models, a Cylinder spun 37° about its axis reads 41.8 % and a Ball turned 77° reads 50.4 % (true 0 %), so the copy is kept. canon reads 0 % for both and fixes it.
+
+28 pins of the old reading (expected):
+- Analyze › "each long loop reaches a checkpoint": it lists the old function name shownArea; the new checkpoints come from Cover.shown and subtract.
+- Reference › "M2 equals the prototype on P1–P5": OWN_VERDICT pins P1's old cleaned list. The new reading keeps part 2, which truly shows 2.043 % and reads 2.042 %.
+- Sampling › "K + F … P1": pins 10 cleaned; now 9 (the same part 2).
+- Sampling › 3 spend-unit tests: old accounting 7644, 1608 and 562 against 7256, 1220 and 76.5.
+- Verdict › 22 cases that pin what the patch/line reading reads or misses. They cover:
+  - hider-first order, VERDICT_CORNER, the one-part rules, axes reach, the Block-estimate rung, the spend units
+  - laminated core 5.54 %: still kept; only the pinned 5.596 % strip value fails
+  - strip along the rim, strip through the centres and hairline, slit wherever it passes
+  - "2 lids reads 0": the new reading sees the 0.001 hair, 0.3696 %
+  - what the reading cannot see: the Ball band now reads 19.79 % (oracle 19.08 %), the window 0.166664 % (exact)
+  - ROD1, BULGE and POST readings, the Cylinder-side strip, arc and sub-point cases, the VERDICT_TRIANGLE_CELLS = 1 case, VERDICT_BALL_NF
+  - Dust and exact copies hide nothing: the invariances hold (M4); only the pinned reading values fail
+- On these designs the new values equal the closed forms (pins_check.luau).
+
+The verdict constants VERDICT_* are now unused but left in Balance, so the fingerprint golden does not change.
+===== risks
+1. Sealed-round-filler channel. Any inscribed-polygon model keeps a truly hidden round filler sealed by flat walls at a gap within one sagitta below HIDE_OFFSET (tier flips, |dD| 0.47, valid designs). The sagitta is 0.0048·r at 32 sides and 0.057·r for the n=4 Ball. More sides narrow the window (r 0.2: 0.00096 at 32 sides, 0.00024 at 64, 0.00006 at 128) but never close it. The model layout is deterministic, so the window can be targeted.
+
+2. A model-error band around 2 % on round parts: false Enclosed up to 3.53 % (base), 2.95 % (canon), 2.82 % (fine); false kept down to 1.29 %; effect on D ≤ 0.0264.
+
+3. Cost without a cap: about 0.9 s Studio per verdict for a design that passes V1–V3, and V5-invalid designs still pay it.
+
+4. Many small tables are allocated; GC pressure and checkpoint gaps are unverified on an idle machine.
+
+5. Units overstate the separating-axis pre-check. Fix the counting before freezing a cap value.
+
+6. A design right at the cap could be valid while its mirror image is not, since units differ slightly between them.
+
+7. The Ball model is 95.07 % of the sphere's area, and shares are taken on the model's area.
+
+8. Lune 0.8.9's serde JSON is lossy. The encoder writes |x| below about 1e-16 (and −0, and subnormals) as 0; the decoder misparses some 17-digit values. So worst_P.json, the verifiers' JSON designs and my climbs are not bit-exact copies of what was measured.
+
+9. Incident: at 19:59 my process filter `*climb.luau*` also stopped the sibling agent's (m2x-protoB) work/climb.luau seeds 1 and 2. They were at evaluation 1,250 and had saved. That agent then ran uclimb_1–4. No file of theirs was touched.
+===== code
+M6 (m6_size.py; out\m6_size.log).
+
+Old reading in base Sampling.luau: 390 lines, 343 of code.
+- flatShown, lineShown, shownArea, sidePoint, hiddenByNear, the line frames and the verdict loop: 372 lines.
+- 5 constants and a 13-line header paragraph.
+- It also relied on Shapes.chordLocal and the verdict grid of surfaceSamples, both kept.
+
+New reading: Cover.luau is 742 lines, 631 of code.
+- model with the canon and sag options: 225 lines
+- 32-direction table moved from Sampling: 23 lines
+- clipping, subtraction and shown: 408 lines
+- plus a 43-line verdict loop in Sampling
+
+Sampling.luau went from 1,094 to 730 lines. The code is about 1.8× the old reading's; the baseline model alone would be roughly 100 lines shorter.
+
+Rules: only + − × ÷, sqrt, abs, min and max; numeric loops; no pairs, no trigonometry, no ^ % //; no module-level state; no sort. Hiders are taken in rank order. luau-lsp passes A and B report no errors.
+
+Changed files:
+- C:\Users\louis\AppData\Local\Temp\claude\C--Users-louis-Documents-RANDOM-ROBLOX\93ae48b4-72b9-4dc1-aa5d-451af1abf9a0\scratchpad\m2x-protoA\repo\src\shared\Physics\Cover.luau (new)
+- C:\Users\louis\AppData\Local\Temp\claude\C--Users-louis-Documents-RANDOM-ROBLOX\93ae48b4-72b9-4dc1-aa5d-451af1abf9a0\scratchpad\m2x-protoA\repo\src\shared\Physics\Sampling.luau
+- C:\Users\louis\AppData\Local\Temp\claude\C--Users-louis-Documents-RANDOM-ROBLOX\93ae48b4-72b9-4dc1-aa5d-451af1abf9a0\scratchpad\m2x-protoA\repo\tests\Physics\PhysicsHelpers.luau (plants Cover)
+
+The model option is `local MODEL = nil` in Sampling.luau; the drop-in keeps the baseline for comparison with variant B.
+===== worstCost
+Climb (climb.luau; logs and JSON out\climb_1..4.log and out\climb_1..4.json).
+- 4 seeds × 10,000 evaluations each, all finished.
+- Families and moves of d_climb.luau, plus ball clusters and Ball shape changes.
+- 70 % of restarts begin from the listed climbed designs and worst_P.
+- A move is kept only if it raises the units and the design is canonical and passes Analyze.quick with connectivity (V1–V3).
+
+Best per seed, units, then quiet-machine ms (verdict | whole exposure) vs the old reading on the same design:
+- seed 3: 16,532,150 units; 357 | 346 vs old 22.4 | 34.6. About 0.9 s in Studio. It fails V5 (a required slot is cleaned), but Analyze.run runs the whole exposure before V5, so the server pays this cost.
+- seed 4, fully valid: 8,638,262 units; 189 | 220 vs 18.3 | 31.3. About 0.57 s in Studio.
+- seed 1, valid: 5,788,672 units; 219 | 235 vs 14.4 | 30.0.
+- seed 2, valid: 5,591,818 units; 176 | 186 vs 15.1 | 26.4.
+- Seed 4's log reports 8,638,282: its JSON copy is perturbed by Lune's lossy JSON.
+
+All are bundles of 15–21 thin Cylinders (diameter 0.02–0.17, length 1.3–3.5) a few hundredths of a stud apart, plus a few Blocks or CornerWedges.
+
+Before the climb, the worst listed designs were the rods d 0.10 L 4.8 (3.7 M units, 152 ms) and worst_P climbL_2#1 (2.17 M units, 84 ms).
+
+Against SPEC's figures (old worst 54.6 ms Lune exposure, 30.7 ms verdict): the new worst valid design is about 4× and the worst V1–V3 design about 6.3× on the exposure call.
+===== notFinished
+- b_sets families: every 10th design only (6,414 of about 64k), scored against VisibleOracle. The verifiers' b_run.luau with V1's truth was not re-run.
+- v1-2 Rows.spec.luau and VerdictTurned.spec.luau (specs of the old reading) were not run.
+- The verifiers' d_climb runs were replaced by my own climb.
+- v12 a_fill and a_near ran with 0 differences but recorded no designs.
+- The 55 listed climbed designs were timed only under about 2.24× load; quiet-machine timings cover fixtures, worst_P, the rod bundles and my 4 climbs.
+- No Studio timing (not allowed).
+- Checkpoint gaps are not settled.
+- The cap is described, not implemented.
+- The finer model was measured but not climbed.
+- The lattice check was run once (fixtures).
+===== recommendation
+adopt-with-cap
+===== portPlan
+Port A into C:\Users\louis\Documents\RANDOM\ROBLOX\Blacksmithing Game (branch mvp). Sources: A's drop-in at C:\Users\louis\AppData\Local\Temp\claude\C--Users-louis-Documents-RANDOM-ROBLOX\93ae48b4-72b9-4dc1-aa5d-451af1abf9a0\scratchpad\m2x-protoA\repo, and the conservative probe as proto\CoverC.luau with its diff out\coverC.diff, both in the judge folder (C:\Users\louis\AppData\Local\Temp\claude\C--Users-louis-Documents-RANDOM-ROBLOX\93ae48b4-72b9-4dc1-aa5d-451af1abf9a0\scratchpad\m2x-judge). The judge folder's repoA\ is A's copy with canonical + conservative already applied (quick 533/28/14).
+
+1. src/shared/Physics/Cover.luau (new; from A's Cover.luau)
+- Keep COS/SIN (Sampling reads Cover.COS/SIN), Cover.model, the subtraction (measure/split/clip/piece/within/apart/subtract) and Cover.shown.
+- Make canonical frames unconditional. Drop opts.sag, circle(), BALL_STEPS/BALL_SAG/CYL_STEPS and the part-frame branch.
+- Add the conservative probe: model.sag per half-space; fsag/qsag in shown (cA = coincident − qsag, base includes qsag, cB = EPS − (HIDE_OFFSET + fsag)·n_q·n_f; the probe's inner-ball shortcut uses HIDE_OFFSET + fsag).
+- Add the budget parameter, returning (shown, work, over).
+- Fix the accounting (scan, box tests, allocations, 10 units per model facet) and spend every SPEND_CHUNK.
+- Write the header in the style of its neighbours: the model, the hide test as pieces, subtraction, shortcuts, work, cap.
+
+2. src/shared/Physics/Sampling.luau
+- Take A's version: the verdict loop builds models for all hiders, candidates in rank order with aabbOverlap(p, q, HIDE_OFFSET + 2·EPS_GEOM), need = ENCLOSED_EXPOSED_MAX × model area, early stop.
+- Add the budget and Exposure.capped.
+- Delete frames/lineShown/flatShown/sidePoint/hiddenByNear/shownArea, VERDICT_* and LINES_AGREE/LINE_NOTHING. Delete surfaceSamples' minCells (the verdict's triangle cells) and the CornerWedge `cells > 1` branch.
+- Rewrite header lines 21–39. The measure (exposedWeight, ladder, sub-grid) stays byte-for-byte.
+
+3. src/shared/Physics/Analyze.luau
+- ValidationCode gains "TooComplex".
+- In stage 3, if exposure.capped, return it as invalid before V5, whatever measureInvalid says.
+- CHECK_UNITS stays 500; re-measure the checkpoint gaps.
+
+4. Definitions/Balance.luau (Geometry and its type)
+- Remove VERDICT_SAMPLES, VERDICT_BALL_NF, VERDICT_CORNER, VERDICT_STRIP_RIM, VERDICT_STRIP_CENTRE, VERDICT_TRIANGLE_CELLS.
+- Add VERDICT_WORK_MAX = 500000. Optionally add COVER_BALL_GRID = 4; the 32-gon is fixed by the COS table.
+- Check Definitions/Validate and Manifest for the Geometry key list.
+- Then delete tests/golden/balance_fingerprint.golden.txt and run `lune run tests/run -- --bless`.
+
+5. Wherever ValidationCode is mapped: the editor message (S6) and Save/E_INVALID_BLUEPRINT detail codes (§10.3).
+
+6. Tests in tests/Physics. PhysicsHelpers.plantedSampling plants Cover (A's change).
+
+Retire, or turn into exact-value cases, the pins of the line/patch mechanism:
+- Verdict: corners at VERDICT_CORNER; the one part must hide all 4 corners (flat and on a Cylinder's side); "asked among all"; reach on any of its own axes; Block-estimate rung; curved patch's 4 corners; strip VERDICT_STRIP_CENTRE/RIM; narrow arc between directions; sub-points back on the surface; thin CornerWedge tip (VERDICT_TRIANGLE_CELLS); Ball VERDICT_BALL_NF.
+- Re-pin with exact values, using closed forms where they exist (A's pins_check: ring strip 2.915520 %; strip on 3 sides 2.198491 %, now kept; hair 0.002 → 0.737741 %; hair 0.001 → 0.369593 %; slit 0.03 → 2.777759 %; slit 1e-5 → 0.000907 %; window 0.166664 %; laminated core 5.540 %; lid with a corner off 0.2315 %): hider-first order (now order-free); laminated core; strip along the rim; strip through the centres; slit; what the reading cannot see; two rods at MIN_DIM; Dust hides nothing; exact copies hide nothing; the spend tests (new accounting).
+- Sampling: the 3 spend-unit tests; K + F on P1 (9 cleaned: Giant2 reads 2.042 %, truth 2.043 %); T-PHY-09 passes with canonical frames.
+- Reference: the P1–P5 OWN_VERDICT pin (P1 part 2 now kept; a §4.1 departure).
+- Analyze: the checkpoint test's function names.
+- VerdictPrecision.spec: bless its expected counts again with the new reading.
+
+7. New tests
+- tests/Physics/Cover.spec.luau:
+  (a) exactness on the model against a test-only brute force (port JBrute.luau: 3D clip plus exact slab union, with the ±1e-11 tie bracket) on fixtures, the attack designs and a seeded fuzz of overlapping, near-touching parts; |difference| ≤ 1e-9 of the part's area except within a bracket;
+  (b) the closed forms above;
+  (c) the attack designs as regression cases with their truth: out\atk_chain_sword_s0.2.json (hidden 0 % → cleaned; visible 5 % → kept), the sealed-rod tube from out\atk_model_all.json (0 % → cleaned), T-PHY-09 copies, and the verifiers' hairline cores, 16 ribs, 16 slats, ball with corner blocks, rod in octagon with 1e-5 seams;
+  (d) invariance: 3 random orders bit-identical; mirror X/Z verdicts equal except rank flips; exact copies first or last; Dust;
+  (e) the model: a spun or turned copy has the same vertex set; the mirror model is the mirror of the model.
+- Analyze.spec: a design over VERDICT_WORK_MAX is invalid with TooComplex and unmeasured; the F/C/X fixtures and P1 stay under the cap with a margin.
+- T-PERF-01 (§14.11): add out\judge_worst.json and A's and B's climbs (they must come back TooComplex promptly), the time-under-cap design (≤ about 30 ms Lune), and gaps ≤ 0.35 ms.
+
+8. SPEC.md
+- §4.1: add Physics/Cover to the module table; list the exact verdict on the model as a departure from the prototype.
+- §4.4: Verdict paragraph rewritten (model, canonical frames, pieces, subtraction, conservative probe, early stop, cap); drop the VERDICT_* text and point to §17.2.
+- §4.9: the budget-table row for the verdict becomes "capped at VERDICT_WORK_MAX; over it TooComplex"; new measured numbers.
+- §5 and §5.6: rows for hidden filler, hairlines/pins/fullers and CPU attacks, with the new numbers.
+- §14.6: Physics plan with Cover.spec.
+- §14.11: T-PERF-01 and S-PERF-01 cases.
+- §16.10: Geometry rows; §16.18: TooComplex.
+- §17.2: replace "what the reading cannot see" and the cost paragraph with: the model band; ties; Z-mirror rank flips; the cap's mirror boundary; the cap as a [Decision to confirm].
+
+9. docs/spec/SPEC-evidence.md: new E-S2.12, "The exact verdict". It covers the two prototypes; the cross-check (223,862 natural parts plus 55,911 fuzz parts); B's chain defect; the model channel and the conservative probe; cost tables; climbs; cap; invariance. Reference it from E-S2.11.
+
+10. README if it lists Physics modules. Run `lune run scripts/verify` and luau-lsp passes A and B before committing.
+
+Not done by the judge:
+- Studio timing (not allowed).
+- Checkpoint gaps.
+- The accounting fix and the cap are proposed, not implemented.
+- The conservative probe was run on every 4th or 8th design of the families and plausible sets, not all of them; it was not run on the fuller sweep.
+- The finer model was not climbed.
+- v1-2's Rows.spec and VerdictTurned.spec were not run.

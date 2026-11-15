@@ -1,0 +1,1 @@
+R 0.50: 1904 rods wholly inside the disk (truly 0), 0 read 2 % or more (kept); none reads above 0

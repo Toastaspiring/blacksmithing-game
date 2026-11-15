@@ -1,0 +1,20 @@
+chain hidden in C01                                     Block    reads   0.000 %  truth   0.000 %  diff  +0.000  kept false (truth's false)
+chain visible in C01                                    Block    reads   5.000 %  truth   5.000 %  diff  -0.000  kept true (truth's true)
+rod r 0.10 sealed in 16 walls, corner gap 0.0119        Cylinder reads   0.000 %  truth   0.000 %  diff  +0.000  kept false (truth's false)
+rod r 0.10 sealed in 16 walls, corner gap 0.0118        Cylinder reads   0.000 %  truth   0.000 %  diff  +0.000  kept false (truth's false)
+rod r 0.20 sealed in 16 walls, corner gap 0.0119        Cylinder reads   0.000 %  truth   0.000 %  diff  +0.000  kept false (truth's false)
+rod r 0.20 sealed in 16 walls, corner gap 0.0118        Cylinder reads   0.000 %  truth   0.000 %  diff  +0.000  kept false (truth's false)
+rod r 0.20 sealed in 16 walls, corner gap 0.0116        Cylinder reads   0.000 %  truth   0.000 %  diff  +0.000  kept false (truth's false)
+rod r 0.20 sealed in 16 walls, corner gap 0.0115        Cylinder reads   0.000 %  truth   0.000 %  diff  +0.000  kept false (truth's false)
+a core under 16 ribs, 0.0010 past the lines             Block    reads  11.252 %  truth  11.253 %  diff  -0.000  kept true (truth's true)
+a core under 16 ribs, 0.0005 past the lines             Block    reads  11.511 %  truth  11.524 %  diff  -0.014  kept true (truth's true)
+a core under 8 tiles, 3 hairline crossings              Block    reads   0.001 %  truth   0.003 %  diff  -0.002  kept false (truth's false)
+a core under 9 tiles, 4 hairline crossings              Block    reads   0.001 %  truth   0.003 %  diff  -0.001  kept false (truth's false)
+a bar r 0.15 behind 16 slats                            Cylinder reads  36.490 %  truth  40.670 %  diff  -4.180  kept true (truth's true)
+a bar r 0.25 behind 16 slats                            Cylinder reads  38.838 %  truth  41.370 %  diff  -2.532  kept true (truth's true)
+a Ball d 0.56 in 8 corner blocks                        Ball     reads  44.026 %  truth  47.975 %  diff  -3.949  kept true (truth's true)
+a rod r 0.10 in an octagon, seams 1e-5                  Cylinder reads   0.000 %  truth   0.017 %  diff  -0.017  kept false (truth's false)
+a rod r 0.09 in an octagon, seams 1e-5                  Cylinder reads   0.000 %  truth   0.020 %  diff  -0.020  kept false (truth's false)
+largest |reading - truth| 0.0418
+caged sword r 0.20: reads 0.0000 %, kept false, truth 0.5014 %
+caged sword r 0.08: reads 0.0000 %, kept false, truth 1.9275 %

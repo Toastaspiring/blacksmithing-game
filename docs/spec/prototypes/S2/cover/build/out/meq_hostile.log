@@ -1,0 +1,3 @@
+hostile every 1: 60 designs (16 capped). Kept rows: old = new on 27, differ on 17; the rank's order differs on 12.
+  build with the old rank key: the same kept row on 27, the same measure to the bit on 27, different on 0
+  build as it is: the same measure on 27 of 27; different on 0 where the rank's order is the same, 0 where it changed

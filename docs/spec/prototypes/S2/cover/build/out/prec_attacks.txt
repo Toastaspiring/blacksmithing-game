@@ -1,0 +1,2 @@
+attacks shard 0/1: 17 designs, 326 parts; false Enclosed at >= 2.5/3/4/5 %: 0/0/0/0, highest 0.0000 % (); false kept under 2/1.5/1/0.5 %: 0/0/0/0, lowest kept 2.2900 % (rod r 0.10 sealed in 16 walls, corner gap 0.0118 part 14 (Block))
+

@@ -1,0 +1,5 @@
+original: T reads 0.000% (truth 0.000%) cleaned
+Z mirror: T reads 3.000% (truth 3.000%) kept
+caged sword, Ball in Blade: build Sm 0.1707 N, Ha 0.0749 N, Sh 0.0000 N | truth row Sm 0.1707 N, Ha 0.0749 N, Sh 0.0000 N | the Ball kept Sm 0.2176 H, Ha 0.0486 N, Sh 0.0000 N
+caged sword, Ball in Pommel: build Sm 0.1707 N, Ha 0.0749 N, Sh 0.0000 N | truth row Sm 0.1707 N, Ha 0.0749 N, Sh 0.0000 N | the Ball kept Sm 0.2218 H, Ha 0.0569 N, Sh 0.0000 N
+C09 + plate: reads 20.120%
