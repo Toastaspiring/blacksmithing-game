@@ -20,6 +20,20 @@ export type Part = {
 }
 export type Core = { schema: number, name: string, type: string, parts: { Part } }
 
+-- The record of a measured fixture (Calibration, Regression, Cost): what §14 expects of it, as Blueprints' record without
+-- its oracle and starter, with the parts Physics cleans and, for a regression, its bound against a base (E-S2.5).
+export type Cleaned = { partId: number, reason: string } -- "Dust" | "Enclosed"
+export type Expected = {
+	canon: { ok: boolean, equals: string }, -- Canonical.draft(core) is ok and returns core bit for bit (M1)
+	validation: { valid: boolean, errors: { { code: string, partId: number? } } }, -- Physics/Analyze (M2)
+	tiers: { [string]: string }, -- played tier per step (T-DIF-11, M3)
+	tierRaw: { [string]: string },
+	cleaned: { Cleaned }, -- Analyze.run's cleaned list, in part order (M2)
+	relation: { to: string, kind: string, bound: number }?, -- a fixture id; kind and bound as E-S2.5's table (T-DIF-13)
+	save: string, -- what Blueprint.Save does: "Valid" / "Invalid" (M7)
+}
+export type Measured = { id: string, label: string, what: string, core: Core, expect: Expected }
+
 local Build = {}
 
 -- The blueprint format the fixtures are written in: a blueprint is self-describing (SPEC §3.3), so this is data,
@@ -38,6 +52,7 @@ Build.Z90 = table.freeze({ 0, 0, R, R }) :: Vec -- 90° about Z: a cylinder's ax
 Build.Y90 = table.freeze({ 0, R, 0, R }) :: Vec -- 90° about Y: local X → −Z, local Z → +X (the wedge tips)
 Build.Y45 = table.freeze({ 0, S, 0, C }) :: Vec -- 45° about Y, the sword axis
 Build.Z180 = table.freeze({ 0, 0, 1, 0 }) :: Vec -- 180° about Z (qw = 0: the second hemisphere rule, C4)
+Build.YM90 = table.freeze({ 0, -R, 0, R }) :: Vec -- −90° about Y: the prototype's RY_M90, the +X tips (local X → +Z)
 
 -- a ⊗ b: rotate by b, then by a (Blueprint/Quat.mul's convention, SPEC §3.11).
 function Build.mul(a: Vec, b: Vec): Vec

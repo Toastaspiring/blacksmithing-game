@@ -19,8 +19,11 @@
 -- within 4e-15.
 --
 -- Mass (§4.5). U = Σ V_own, M = Σ ρ·V_own, COM = Σ ρ·M1_own / M, in part order; ρ = Definitions/Materials.density.
--- Physics frame = all Grip parts (balance, reach, display pivot); cleaned parts count for mass, COM and this frame
--- (a lead core is a legal balance trick; an enclosed part owns no volume), never for reach or the blade's length.
+-- Physics frame = the kept Grip parts (balance, reach, display pivot), and the guard line the kept Guard parts (else
+-- the kept grip's top): a cleaned part counts for mass and COM by what it owns (an enclosed part nothing, dust its own
+-- volume) and for the total length, and steers nothing, so no hidden part moves the balance, reach, bladeLength or
+-- cutIndex (A25, V2's strap hidden in A26's ring grip). V4 is asked before the verdict, so its frame is every Grip part
+-- (validationFrame), as V1–V3 count every part.
 -- Difficulty frame = the point of the kept Grip parts, axis fixed at blueprint +Y, consistent with the fixed plane
 -- x = 0: no grip part, visible or hidden, can steer a factor (A25–A27, E-S2.7).
 
@@ -515,11 +518,23 @@ function MassProps.gripFrame(list: { Prepared }): (Vec3, Vec2)
 	return point, axis
 end
 
--- Physics frame: all parts of the grip slot, kept or cleaned.
-function MassProps.physicsFrame(parts: { Prepared }, gripSlot: DT.SlotId): (Vec3, Vec2)
+-- V4's frame (§4.2): every part of the grip slot, kept or cleaned, since V4 is asked before the verdict.
+function MassProps.validationFrame(parts: { Prepared }, gripSlot: DT.SlotId): (Vec3, Vec2)
 	local list: { Prepared } = {}
 	for i = 1, #parts do
 		if parts[i].slot == gripSlot then
+			table.insert(list, parts[i])
+		end
+	end
+	return MassProps.gripFrame(list)
+end
+
+-- Physics frame: the kept parts of the grip slot, in blueprint order; with none kept (only measureInvalid reaches
+-- one) the origin and +Y, as with no Grip part.
+function MassProps.physicsFrame(parts: { Prepared }, kept: { boolean }, gripSlot: DT.SlotId): (Vec3, Vec2)
+	local list: { Prepared } = {}
+	for i = 1, #parts do
+		if parts[i].slot == gripSlot and kept[i] then
 			table.insert(list, parts[i])
 		end
 	end
@@ -540,9 +555,9 @@ end
 
 -- ── mass properties (§4.5) ────────────────────────────────────────────────────────────────────────────────────────
 
--- gripPoint and gripAxis: the physics frame. Parts carry their material id; density comes from Definitions/Materials
--- (retired rows stay readable). A design with no kept part of the striking slot (only measureInvalid reaches here with
--- one) has reach and bladeLength 0.
+-- gripPoint and gripAxis: the physics frame (physicsFrame, the kept Grip parts). Parts carry their material id;
+-- density comes from Definitions/Materials (retired rows stay readable). A design with no kept part of the striking
+-- slot (only measureInvalid reaches here with one) has reach and bladeLength 0.
 function MassProps.report(parts: { Prepared }, kept: { boolean }, owned: Ownership, geometry: DT.GeometryRules,
 	gripPoint: Vec3, gripAxis: Vec2): MassReport
 	local N = #parts
@@ -570,16 +585,17 @@ function MassProps.report(parts: { Prepared }, kept: { boolean }, owned: Ownersh
 	end
 	local com: Vec3 = { Mx / M, My / M, Mz / M }
 
-	-- the guard line, or the top of the grip without a guard
+	-- the guard line, or the top of the grip without a guard: kept parts only, as the frame (no kept Guard part is no
+	-- guard)
 	local guardVolume, guardMoment = 0, 0
 	local gripTop = -math.huge
 	local gAlong = gx * ax + gy * ay
 	for i = 1, N do
 		local p = parts[i]
-		if geometry.guardSlot ~= nil and p.slot == geometry.guardSlot then
+		if kept[i] and geometry.guardSlot ~= nil and p.slot == geometry.guardSlot then
 			guardVolume += p.volume
 			guardMoment += p.volume * ((p.gx - gx) * ax + (p.gy - gy) * ay)
-		elseif p.slot == geometry.gripSlot then
+		elseif kept[i] and p.slot == geometry.gripSlot then
 			local _, top = Shapes.extentAlong(p, ax, ay, 0)
 			gripTop = max(gripTop, top - gAlong)
 		end

@@ -1,5 +1,5 @@
 --!strict
--- The adversarial drafts A01–A24 and A28 (SPEC §14.7, E-S8.4): the set's shape (ids, variants, fresh deterministic drafts),
+-- The adversarial drafts A01–A28 (SPEC §14.7, E-S8.4, E-S2.7): the set's shape (ids, variants, fresh deterministic drafts),
 -- well-formed expectations, coverage of every CanonError, ValidationCode and wire code, each `save` against a model
 -- of §10.3's Guard, the Definitions values the constructions assume, and the premises of each construction that the
 -- test side can measure now (slot counts, exact containment, gaps, Dust volumes, enclosure, copies). The verdicts
@@ -126,12 +126,12 @@ local function gapX(a: Gen.Part, b: Gen.Part): number
 end
 
 return Test.suite("FixtureSet/Adversarial", function(t)
-	t.it("A01–A24 and A28 in order, every case with variants, keys unique", function()
-		A.eq(#Adversarial.list, 25, "cases")
+	t.it("A01–A28 in order, every case with variants, keys unique", function()
+		A.eq(#Adversarial.list, 28, "cases")
 		local seen: { [string]: boolean } = {}
 		local count = 0
 		for i, c in Adversarial.list do
-			A.eq(c.id, string.format("A%02d", if i <= 24 then i else 28), "case order (A25–A27 are M3's)")
+			A.eq(c.id, string.format("A%02d", i), "case order")
 			A.eq(Adversarial.order[i], c.id)
 			A.eq(Adversarial.get(c.id), c)
 			A.truthy(#c.title > 0 and #c.variants > 0, c.id .. " has a title and variants")
@@ -148,9 +148,50 @@ return Test.suite("FixtureSet/Adversarial", function(t)
 		end
 		A.eq(#Adversarial.variants, count, "flattened variants")
 		A.throws(function()
-			Adversarial.get("A25")
-		end, "no case A25")
+			Adversarial.get("A29")
+		end, "no case A29")
 	end)
+
+	t.it("A25–A27, the hidden-grip variants: E-S2.7's bounds against their bases, the prototype's rows bit for bit",
+		function()
+			local bound: { [string]: { to: string, bound: number, steps: string } } = {
+				A25 = { to = "F1", bound = 0.01, steps = "All" },
+				A26 = { to = "A26base", bound = 0.02, steps = "All" },
+				A27 = { to = "F1", bound = 0.02, steps = "Sharpening" },
+			}
+			-- Through a cast, so luau-lsp stays out of the prototype's loose types: it is reference data, not game code.
+			local Proto: any = (require :: any)("../../docs/spec/prototypes/S2/v2/fixtures")
+			local theirs: { [string]: any } = {}
+			for _, a in ipairs(Proto.adversarial()) do
+				local id = string.match(a.fixture.name, "^(A%d+)") :: string
+				theirs[id] = a.fixture
+				if id == "A26" then
+					theirs.A26base = a.base
+				end
+			end
+			for _, key in { "A25", "A26base", "A26", "A27" } do
+				local v = Adversarial.variant(key)
+				local analysis = v.analysis :: Adversarial.Analysis
+				local want = bound[key]
+				if want then
+					local r = analysis.relation :: any
+					A.eq(r.d, "Within", key)
+					A.eq(r.to, want.to, key .. " base")
+					A.eq(r.bound, want.bound, key .. " bound")
+					A.eq(r.steps, want.steps, key .. " steps")
+				else
+					A.eq(analysis.relation, nil, key .. " is a base")
+				end
+				local d = v.draft()
+				local b = theirs[key]
+				A.eq(#d.parts, #b.parts, key .. " parts")
+				for i, p in d.parts do
+					local q = b.parts[i]
+					A.eq(Shape.bitDifference(p, { id = q.id, slot = q.slot, shape = q.shape, material = q.material,
+						pos = q.pos, rot = q.rot, size = q.size }), nil, key .. " part " .. i)
+				end
+			end
+		end)
 
 	t.it("draft() builds a fresh, identical draft on every call", function()
 		for _, v in Adversarial.variants do

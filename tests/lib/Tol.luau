@@ -22,8 +22,11 @@ local Tol = {
 	TOL_G_INVARIANT = 0.002,
 	TOL_DUST_G = 0.005,
 	TOL_ASYM_ZERO = 0.02,
+	TOL_EDGE_REL = 0.02, -- |ΔEdgeLength| / EdgeLength: E-S8.4's X04 bound (T-EDG-01)
 	TOL_PARITY_MASS_REL = 1e-3,
 	TOL_PARITY_COM_ABS = 1e-3,
+	PARITY_DESIGNS = 200, -- S-PAR-02's Gen.validSword designs beside the fixtures (E-S8.6)
+	PARITY_SEED = 0x5EED0002, -- their TestRng stream
 	STARTER_MARGIN = 0.05,
 
 	-- statistics (§14.8)
@@ -42,6 +45,7 @@ local Tol = {
 	-- performance (§14.11)
 	ANALYSIS_LUNE_MAX_MS = 60,
 	CHECKPOINT_GAP_LUNE_MS = 0.35,
+	PERF_RUNS = 15, -- T-PERF-01's rounds per case: its numbers are the medians (single runs meet collections, §4.9)
 	REPLAY_BUDGET_MS = 8,
 	PT_GENERATE_BUDGET_MS = 5,
 	REJECT_BUDGET_MS = 2,

@@ -1,6 +1,7 @@
 --!strict
--- tests/fixtures/Adversarial.luau — the invalid and edge-case drafts A01–A24 and A28 (SPEC §14.7; constructions and expected
--- codes E-S8.4): together one draft per S1 CanonError, S2 ValidationCode and wire code. Each case holds variants;
+-- tests/fixtures/Adversarial.luau — the invalid and edge-case drafts A01–A28 (SPEC §14.7; constructions and expected
+-- codes E-S8.4): together one draft per S1 CanonError, S2 ValidationCode and wire code, and A25–A27, the hidden-grip
+-- variants of E-S2.7, whose D must not follow the grip. Each case holds variants;
 -- variant.draft() builds a fresh raw draft on every call (the drafts are untrusted input: some are not even tables),
 -- so the large ones (A15, A18) cost nothing until used. Most are F1 or F2 with one change.
 --
@@ -39,7 +40,9 @@ export type ValidationExpect = { valid: boolean, errors: { ValidationError } }
 export type Cleaned = { partId: number, reason: string }
 export type Analysis = {
 	cleaned: { Cleaned }?,
-	relation: { to: string, d: string, gTol: string?, mass: string? }?, -- d: "BitIdentical" | "NonIncreasing"
+	-- to: a fixture id or a variant key; d: "BitIdentical" | "NonIncreasing" (by at most gTol) | "Within" (|ΔD| ≤ bound
+	-- on steps, "All" or one StepId); mass "Identical": mass, COM, balance and reach bit-identical
+	relation: { to: string, d: string, gTol: string?, mass: string?, bound: number?, steps: string? }?,
 	thinness: { [string]: number }?, -- normalized Thinness per work set ("All", "Blade")
 	steps: { [string]: { tier: string, d: number? } }?,
 	finite: boolean?, -- every physics and factor value finite
@@ -573,7 +576,9 @@ case("A14", "F1 + 19 attached dust cubes, every slot within its maximum (24 part
 				end
 				return out
 			end)(),
-			relation = { to = "F1", d = "NonIncreasing", gTol = "TOL_DUST_G" },
+			-- Dust is in no work set and hides nothing: every step and the edge bit-identical to F1's (no mass relation:
+			-- Dust counts for mass)
+			relation = { to = "F1", d = "BitIdentical" },
 		},
 		save = "Valid",
 	},
@@ -1002,7 +1007,106 @@ case("A24", "a needle blade of MIN_DIM × 3.0 × MIN_DIM", {
 	},
 })
 
--- A25–A27 are M3's hidden-grip variants (SPEC §14.7).
+-- ── A25–A27 hidden-grip variants (E-S2.7) ─────────────────────────────────────────────────────────────────────────
+-- D's frame is the kept Grip parts' point with the axis fixed at +Y (§4.5): no grip part, hidden or visible, can steer a
+-- factor. Rows as S2's prototype builds them (docs/spec/prototypes/S2/v2/fixtures.luau, adversarial()), its 20° and 40°
+-- turns pasted with the bits Lune computed (a fixture never recomputes trigonometry).
+
+local Z20 = table.freeze({ 0, 0, 0.17364817766693033, 0.984807753012208 }) -- 20° about Z
+local Z40 = table.freeze({ 0, 0, 0.3420201433256687, 0.9396926207859084 }) -- 40° about Z
+
+-- F1 with its grip as 4 rings 0.20 × 0.225 × 0.20, none elongated (no axis vote), ids renumbered in list order.
+local function ringGrip(): { Part }
+	return {
+		P(1, "Pommel", "Ball", "Iron", { 0, 0.17, 0 }, I, { 0.26, 0.26, 0.26 }),
+		P(2, "Guard", "Block", "Iron", { 0, 1.29, 0 }, I, { 1.00, 0.18, 0.24 }),
+		P(3, "Blade", "Block", "Steel", { 0, 2.68, 0 }, I, { 0.16, 2.60, 0.06 }),
+		P(4, "Blade", "Block", "Steel", { 0, 3.98, 0 }, Z45, { 0.113, 0.113, 0.055 }),
+		P(5, "Grip", "Block", "Iron", { 0, 0.4125, 0 }, I, { 0.20, 0.225, 0.20 }),
+		P(6, "Grip", "Block", "Iron", { 0, 0.6375, 0 }, I, { 0.20, 0.225, 0.20 }),
+		P(7, "Grip", "Block", "Iron", { 0, 0.8625, 0 }, I, { 0.20, 0.225, 0.20 }),
+		P(8, "Grip", "Block", "Iron", { 0, 1.0875, 0 }, I, { 0.20, 0.225, 0.20 }),
+	}
+end
+
+case("A25", "a hidden grip core turned 20° about Z", {
+	{
+		key = "A25",
+		what = "F1 + a 0.04 × 0.30 × 0.06 Grip block inside its grip, turned 20° about Z: Enclosed, it steers nothing",
+		base = "F1",
+		draft = function(): any
+			local list = parts("F1")
+			table.insert(list, P(6, "Grip", "Block", "Iron", { 0, 0.75, 0 }, Z20, { 0.04, 0.30, 0.06 }))
+			return core("A25", list)
+		end,
+		canon = canonOk(),
+		validation = valid(),
+		analysis = {
+			cleaned = { { partId = 6, reason = "Enclosed" } },
+			relation = { to = "F1", d = "Within", bound = 0.01, steps = "All" },
+		},
+		save = "Valid",
+	},
+})
+
+case("A26", "a visible grip strap turned 40° about Z on a ring grip", {
+	{
+		key = "A26base",
+		what = "F1 with its grip as 4 rings 0.20 × 0.225 × 0.20, none elongated enough to vote for the grip axis",
+		base = "F1",
+		draft = function(): any
+			return core("A26 base", ringGrip())
+		end,
+		canon = canonOk(),
+		validation = valid(),
+		analysis = { cleaned = {} },
+		save = "Valid",
+	},
+	{
+		key = "A26",
+		what = "A26base + a 0.05 × 0.40 × 0.05 Grip strap turned 40° about Z: it tilts the physics axis, not D's frame",
+		base = "F1",
+		draft = function(): any
+			local list = ringGrip()
+			table.insert(list, P(9, "Grip", "Block", "Iron", { 0, 0.75, 0 }, Z40, { 0.05, 0.40, 0.05 }))
+			return core("A26", list)
+		end,
+		canon = canonOk(),
+		validation = valid(),
+		analysis = {
+			cleaned = {},
+			relation = { to = "A26base", d = "Within", bound = 0.02, steps = "All" },
+		},
+		save = "Valid",
+	},
+})
+
+case("A27", "the hilt off the plane x = 0", {
+	{
+		key = "A27",
+		what = "F1 with its pommel, grip and guard moved 0.04 along +X, the blade on the plane x = 0",
+		base = "F1",
+		draft = function(): any
+			local list = parts("F1")
+			for _, p in list do
+				if p.slot ~= "Blade" then
+					p.pos[1] += 0.04
+				end
+			end
+			return core("A27", list)
+		end,
+		canon = canonOk(),
+		validation = valid(),
+		analysis = {
+			cleaned = {},
+			-- Sharpening's set is the Blade alone; All's Asymmetry sees the shifted hilt, a real change (Hammering 0.1037 →
+			-- 0.1537)
+			relation = { to = "F1", d = "Within", bound = 0.02, steps = "Sharpening" },
+		},
+		save = "Valid",
+	},
+})
+
 case("A28", "a design past the verdicts' cap", {
 	{
 		key = "A28",
@@ -1043,7 +1147,7 @@ end
 
 local Adversarial = {
 	ASSUMED = ASSUMED,
-	order = ORDER, -- {"A01", …, "A24", "A28"}
+	order = ORDER, -- {"A01", …, "A28"}
 	list = CASES,
 	variants = VARIANTS, -- every variant of every case, in case order
 }

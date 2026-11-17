@@ -1,0 +1,1 @@
+{analyze={fixtures={bytes=425658,designs=136,fnv1a32=60321529},generated={bytes=709366,designs=200,fnv1a32=611215233}},version=1}

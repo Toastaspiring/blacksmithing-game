@@ -89,7 +89,7 @@ function H.measure(core: any): (any, any, any)
 	local parts = H.prepared(core)
 	local exposure = Sampling.exposure(parts)
 	local owned = MassProps.ownership(parts, exposure.kept, rankOf(typeDef))
-	local point, axis = MassProps.physicsFrame(parts, typeDef.geometry.gripSlot)
+	local point, axis = MassProps.physicsFrame(parts, exposure.kept, typeDef.geometry.gripSlot)
 	return MassProps.report(parts, exposure.kept, owned, typeDef.geometry, point, axis), exposure, owned
 end
 

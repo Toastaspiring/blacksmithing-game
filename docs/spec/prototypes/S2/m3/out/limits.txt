@@ -1,0 +1,49 @@
+proud: 96 families, 12 crossings, |ΔD| 0.2696–0.4070, 7 tier flips on 6 crossings
+  w 1.2 l 2.0 c 0.03 k 0.02 cap true: p +0.0020 (cleaned) -> +0.0030 (kept): 0.2090 / 0.6122 / 0.2688 H H(Ma) H -> 0.2751 / 0.2052 / 0.1675 H H N, |ΔD| 0.4070, 1 flips
+      cleaned - kept: Sm Δd -0.0661: Volu -0.0661 | Ha Δd +0.4070: Thin +0.3122, Surf +0.0948 | Sh Δd +0.1013: Surf +0.1013
+  w 1.2 l 2.0 c 0.05 k 0.02 cap true: p +0.0020 (cleaned) -> +0.0030 (kept): 0.3432 / 0.4038 / 0.2688 H H(Ex) H -> 0.4093 / 0.0000 / 0.0688 H(Ex) N N, |ΔD| 0.4038, 2 flips
+      cleaned - kept: Sm Δd -0.0661: Volu -0.0661 | Ha Δd +0.4038: Thin +0.1038, Surf +0.3000 | Sh Δd +0.2000: Surf +0.2000
+  w 1.2 l 3.0 c 0.05 k 0.02 cap true: p +0.0020 (cleaned) -> +0.0030 (kept): 0.5099 / 0.4975 / 0.5813 H(Ex) H(Ex) H(Ex) -> 0.6095 / 0.1023 / 0.3961 H(Ma) N H, |ΔD| 0.3952, 1 flips
+      cleaned - kept: Sm Δd -0.0996: Volu -0.0996 | Ha Δd +0.3952: Thin +0.1975, Surf +0.1977 | Sh Δd +0.1852: Surf +0.1852
+  w 1.2 l 3.0 c 0.05 k 0.02 cap false: p +0.0000 (cleaned) -> +0.0010 (kept): 0.5019 / 0.4929 / 0.5688 H(Ex) H(Ex) H(Ex) -> 0.6011 / 0.0985 / 0.3805 H(Ma) N H, |ΔD| 0.3944, 1 flips
+      cleaned - kept: Sm Δd -0.0992: Volu -0.0992 | Ha Δd +0.3944: Thin +0.1929, Surf +0.2015 | Sh Δd +0.1883: Surf +0.1882
+  w 1.2 l 3.0 c 0.05 k 0.02 cap false: p -0.0100 (kept) -> -0.0050 (cleaned): 0.5993 / 0.1133 / 0.3915 H(Ex) N H -> 0.5019 / 0.4929 / 0.5688 H(Ex) H(Ex) H(Ex), |ΔD| 0.3796, 1 flips
+      cleaned - kept: Sm Δd -0.0974: Volu -0.0974 | Ha Δd +0.3796: Thin +0.1929, Surf +0.1867 | Sh Δd +0.1773: Surf +0.1772
+  w 1.2 l 3.0 c 0.03 k 0.02 cap false: p -0.0100 (kept) -> -0.0050 (cleaned): 0.4011 / 0.3412 / 0.5688 H(Ex) H H(Ex) -> 0.3037 / 0.7000 / 0.5688 H H(Ma) H(Ex), |ΔD| 0.3588, 0 flips
+      cleaned - kept: Sm Δd -0.0974: Volu -0.0974 | Ha Δd +0.3588: Thin +0.3588 | Sh Δd +0.0000: 
+  w 1.2 l 3.0 c 0.03 k 0.02 cap false: p +0.0000 (cleaned) -> +0.0010 (kept): 0.3037 / 0.7000 / 0.5688 H H(Ma) H(Ex) -> 0.4030 / 0.3412 / 0.5688 H(Ex) H H(Ex), |ΔD| 0.3588, 0 flips
+      cleaned - kept: Sm Δd -0.0993: Volu -0.0993 | Ha Δd +0.3588: Thin +0.3588 | Sh Δd +0.0000: 
+  w 1.2 l 3.0 c 0.03 k 0.02 cap true: p +0.0020 (cleaned) -> +0.0030 (kept): 0.3090 / 0.6993 / 0.5813 H H(Ma) H(Ex) -> 0.4086 / 0.3435 / 0.5813 H(Ex) H H(Ex), |ΔD| 0.3558, 0 flips
+      cleaned - kept: Sm Δd -0.0996: Volu -0.0996 | Ha Δd +0.3558: Thin +0.3558 | Sh Δd +0.0000: 
+  w 1.2 l 2.0 c 0.02 k 0.02 cap true: p +0.0020 (cleaned) -> +0.0030 (kept): 0.1420 / 0.6987 / 0.2688 N H(Ma) H -> 0.2080 / 0.3502 / 0.2688 H H H, |ΔD| 0.3485, 1 flips
+      cleaned - kept: Sm Δd -0.0660: Volu -0.0661 | Ha Δd +0.3485: Thin +0.3485 | Sh Δd +0.0000: 
+  w 1.2 l 3.0 c 0.02 k 0.02 cap false: p -0.0100 (kept) -> -0.0050 (cleaned): 0.3020 / 0.4255 / 0.5688 H H(Ex) H(Ex) -> 0.2046 / 0.7000 / 0.5688 H H(Ma) H(Ex), |ΔD| 0.2745, 0 flips
+      cleaned - kept: Sm Δd -0.0974: Volu -0.0974 | Ha Δd +0.2745: Thin +0.2745 | Sh Δd +0.0000: 
+  w 1.2 l 3.0 c 0.02 k 0.02 cap false: p +0.0000 (cleaned) -> +0.0010 (kept): 0.2046 / 0.7000 / 0.5688 H H(Ma) H(Ex) -> 0.3039 / 0.4255 / 0.5688 H H(Ex) H(Ex), |ΔD| 0.2745, 0 flips
+      cleaned - kept: Sm Δd -0.0993: Volu -0.0993 | Ha Δd +0.2745: Thin +0.2745 | Sh Δd +0.0000: 
+  w 1.2 l 3.0 c 0.02 k 0.02 cap true: p +0.0020 (cleaned) -> +0.0030 (kept): 0.2086 / 0.6982 / 0.5813 H H(Ma) H(Ex) -> 0.3082 / 0.4286 / 0.5813 H H(Ex) H(Ex), |ΔD| 0.2696, 0 flips
+      cleaned - kept: Sm Δd -0.0996: Volu -0.0996 | Ha Δd +0.2696: Thin +0.2696 | Sh Δd +0.0000: 
+sandwich: K -> K+S, hollow
+  1.1 × 2.0 × 0.06 core 0.95: K 0.4282 / 0.0421 / 0.0594 H(Ex) N N [] -> K+S 0.3762 / 0.3532 / 0.2594 H H H [E7,E8] (2 flips, |ΔD| 0.3111); hollow 0.3762 / 0.3532 / 0.2594 H H H
+      Sm Δd -0.0520: Volu -0.0520 | Ha Δd +0.3111: Thin +0.0236, Surf +0.2876 | Sh Δd +0.2000: Surf +0.2000
+  1.1 × 2.0 × 0.04 core 0.95: K 0.3053 / 0.2829 / 0.1339 H H N [] -> K+S 0.2534 / 0.4812 / 0.2594 H H(Ex) H [E7,E8] (1 flips, |ΔD| 0.1983); hollow 0.2534 / 0.4812 / 0.2594 H H(Ex) H
+      Sm Δd -0.0519: Volu -0.0520 | Ha Δd +0.1983: Thin +0.0805, Surf +0.1178 | Sh Δd +0.1255: Surf +0.1255
+  1.1 × 2.0 × 0.03 core 0.95: K 0.2439 / 0.4605 / 0.2430 H H(Ex) H [] -> K+S 0.1919 / 0.6122 / 0.2594 N H(Ma) H [E7,E8] (1 flips, |ΔD| 0.1517); hollow 0.1919 / 0.6122 / 0.2594 N H(Ma) H
+      Sm Δd -0.0520: Volu -0.0520 | Ha Δd +0.1517: Thin +0.1484, Surf +0.0033 | Sh Δd +0.0164: Surf +0.0163
+  1.1 × 2.0 × 0.02 core 0.95: K 0.1825 / 0.5335 / 0.2594 N H(Ex) H [] -> K+S 0.1305 / 0.6987 / 0.2594 N H(Ma) H [E7,E8] (0 flips, |ΔD| 0.1652); hollow 0.1305 / 0.6987 / 0.2594 N H(Ma) H
+      Sm Δd -0.0520: Volu -0.0520 | Ha Δd +0.1652: Thin +0.1653 | Sh Δd +0.0000: 
+  1.2 × 2.5 × 0.05 core 0.90: K 0.4883 / 0.4268 / 0.3850 H(Ex) H(Ex) H [] -> K+S 0.4265 / 0.4505 / 0.4250 H(Ex) H(Ex) H(Ex) [E7,E8] (0 flips, |ΔD| 0.0618); hollow 0.4265 / 0.4505 / 0.4250 H(Ex) H(Ex) H(Ex)
+      Sm Δd -0.0618: Volu -0.0617 | Ha Δd +0.0237: Thin +0.0238 | Sh Δd +0.0400: Surf +0.0400
+  1.2 × 2.5 × 0.03 core 0.90: K 0.3208 / 0.6416 / 0.4250 H H(Ma) H(Ex) [] -> K+S 0.2590 / 0.6903 / 0.4250 H H(Ma) H(Ex) [E7,E8] (0 flips, |ΔD| 0.0618); hollow 0.2590 / 0.6903 / 0.4250 H H(Ma) H(Ex)
+      Sm Δd -0.0618: Volu -0.0617 | Ha Δd +0.0487: Thin +0.0487 | Sh Δd +0.0000: 
+  1.0 × 2.5 × 0.06 core 0.80: K 0.4808 / 0.1716 / 0.1929 H(Ex) N N [] -> K+S 0.4911 / 0.0134 / 0.1844 H(Ex) N N [E7] (0 flips, |ΔD| 0.1582); hollow 0.4259 / 0.3911 / 0.3844 H(Ex) H H
+      Sm Δd +0.0103: Volu +0.0103 | Ha Δd -0.1582: Thin -0.0486, Surf -0.1096 | Sh Δd -0.0085: Surf -0.0085
+  1.0 × 2.5 × 0.04 core 0.80: K 0.3414 / 0.4574 / 0.3595 H H(Ex) H [] -> K+S 0.3516 / 0.1745 / 0.2203 H N H [E7] (1 flips, |ΔD| 0.2829); hollow 0.2865 / 0.5400 / 0.3844 H H(Ex) H
+      Sm Δd +0.0102: Volu +0.0103 | Ha Δd -0.2829: Thin -0.1237, Surf -0.1592 | Sh Δd -0.1392: Surf -0.1393
+  0.8 × 2.5 × 0.04 core 0.60: K 0.2716 / 0.4748 / 0.3163 H H(Ex) H [] -> K+S 0.2819 / 0.1068 / 0.1630 H N N [E7] (2 flips, |ΔD| 0.3680); hollow 0.2305 / 0.5400 / 0.3531 H H(Ex) H
+      Sm Δd +0.0103: Volu +0.0103 | Ha Δd -0.3680: Thin -0.1878, Surf -0.1802 | Sh Δd -0.1533: Surf -0.1533
+sandwich: 7 flips, largest |ΔD| 0.3680
+g131 +0.2: EdgeLength 6.413334 (10 pts) -> 6.389542 (8 pts); bladeArea equal true
+  Smelting g 0.0121 -> 0.0121 |ΔG| 0.0000 Normal -> Normal
+  Hammering g 0.1798 -> 0.1798 |ΔG| 0.0000 Normal -> Normal
+  Sharpening g 0.4523 -> 0.4486 |ΔG| 0.0037 Hard -> Hard

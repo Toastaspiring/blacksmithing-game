@@ -10,13 +10,18 @@
 --   run(core, opts)    the whole pipeline (§4.1):
 --     1 prepare, QUICK        V1 slot counts, V2 containment; errors stop here, whatever measureInvalid says
 --     2 V3, V4                the contact graph (AABB broad phase, then GJK within CONTACT_TOL) and the blade's side of
---                             the grip
+--                             the grip, in the frame of every Grip part (MassProps.validationFrame): no verdict yet
 --     3 exposure, CLEAN, V5   a required slot keeps a kept part; invalid stops here unless opts.measureInvalid. Verdicts
 --                             past VERDICT_WORK_MAX stop it before V5 as TooComplex, measured never: there is no verdict
---     4 MASS PROPERTIES       owned volumes, mass, COM, grip frame, guard line, balance, reach
---     5 volume probes         M3's Thinness and Asymmetry measure on them
---     6 EDGE, FACTORS, STEPS  arrive with M3, which fills edge, steps, physics.edgeLength, physics.cutIndex and
---                             budget.edgeCell. Until then edge and steps are nil and those three numbers 0.
+--     4 MASS PROPERTIES       owned volumes, mass, COM, the physics frame and guard line of the kept parts (§4.5: a
+--                             cleaned part steers nothing), balance, reach
+--     5 volume probes         Thinness and Asymmetry measure on them
+--     6 EDGE                  the difficulty frame (§4.5) and the edge (§4.6) on the parts in the measure's rank order
+--                             (Sampling.measureRanked, §17.2): physics.edgeLength, physics.cutIndex, budget.edgeCell
+--     7 FACTORS, STEPS        per enabled CraftPlans step, in plan order: its work set (Blueprint/WorkSet), the 8
+--                             factors once per distinct set (Physics/Factors), then g, m, d and the tiers
+--                             (Physics/Difficulty). A step whose set is empty leaves steps nil, the edge measured; on
+--                             the Sword's plan only measureInvalid reaches one (V5 keeps a striking part)
 --
 -- Validity (§4.2): every error of the first failing stage (quick, then full) is returned, in rule then part order;
 -- valid ⇔ none. Main component = the most Grip volume, else the largest volume, else the lowest index. Each other
@@ -34,6 +39,10 @@ local EquipmentTypes = require("../Definitions/EquipmentTypes")
 local Limits = require("../Definitions/Limits")
 local Versions = require("../Definitions/Versions")
 local Schema = require("../Blueprint/Schema")
+local WorkSet = require("../Blueprint/WorkSet")
+local Difficulty = require("./Difficulty")
+local Edge = require("./Edge")
+local Factors = require("./Factors")
 local Gjk = require("./Gjk")
 local MassProps = require("./MassProps")
 local Sampling = require("./Sampling")
@@ -43,7 +52,12 @@ type Prepared = Shapes.Prepared
 type Spend = Sampling.Spend
 type Vec3 = Schema.Vec3
 
-export type Vec2 = { number } -- {x, y} array, blueprint XY
+-- M3's types live in the modules that produce them (§1.3); Analyze names them for everything above Physics (§4.7).
+export type Vec2 = Edge.Vec2 -- {x, y} array, blueprint XY
+export type EdgeChain = Edge.EdgeChain
+export type EdgeProfile = Edge.EdgeProfile
+export type FactorValue = Factors.FactorValue
+export type StepAnalysis = Difficulty.StepAnalysis
 
 export type ValidationCode =
 	"SlotMissing"
@@ -72,28 +86,6 @@ export type PhysicsReport = {
 	cutIndex: number,
 	kept: { boolean }, -- per part, in blueprint order
 	ownedVolume: { number }, -- per part, in blueprint order
-}
-export type EdgeChain = { points: { Vec2 }, length: number } -- blueprint XY
-export type EdgeProfile = {
-	chains: { EdgeChain },
-	length: number,
-	cell: number,
-	bladeArea: number,
-	bladeMeanThickness: number,
-	gripPoint: Vec3, -- difficulty frame, for sidesFromChains
-	gripAxis: Vec2,
-}
-export type FactorValue = { factor: DT.FactorId, raw: number, x: number }
-export type StepAnalysis = {
-	step: DT.StepId,
-	g: number,
-	m: number,
-	d: number,
-	tierRaw: DT.TierId,
-	tier: DT.TierId,
-	material: DT.MaterialId,
-	terms: { { factor: DT.FactorId, w: number, x: number } }, -- the step's weight list (§5)
-	factors: { FactorValue }, -- all 8, FactorId order, on this step's work set
 }
 export type CleanedPart = { partId: number, reason: "Dust" | "Enclosed" }
 export type AnalysisBudget = { hSurf: number, hVol: number, edgeCell: number, surfSamples: number, volSamples: number }
@@ -275,7 +267,8 @@ local function connectivity(parts: { Prepared }, gripSlot: DT.SlotId, spend: Spe
 	return { touching = touching, errors = errors, components = components }
 end
 
--- V4: the volume-weighted centroid of all parts of the striking slot lies beyond the grip point along the physics axis.
+-- V4: the volume-weighted centroid of all parts of the striking slot lies beyond the grip point along the grip axis,
+-- both of every Grip part (MassProps.validationFrame).
 local function bladeAboveGrip(parts: { Prepared }, strikingSlot: DT.SlotId, gripPoint: Vec3, gripAxis: Vec2): boolean
 	local volume, moment = 0, 0
 	for i = 1, #parts do
@@ -377,11 +370,11 @@ function Analyze.run(core: Schema.BlueprintCore, opts: AnalyzeOptions?): Analysi
 	end
 	phase()
 
-	-- 2 V3 connectivity, V4 orientation
+	-- 2 V3 connectivity, V4 orientation (before the verdict: every Grip part's frame)
 	local graph = connectivity(parts, geometry.gripSlot, spend)
 	local errors = graph.errors
-	local gripPoint, gripAxis = MassProps.physicsFrame(parts, geometry.gripSlot)
-	if not bladeAboveGrip(parts, geometry.strikingSlot, gripPoint, gripAxis) then
+	local v4Point, v4Axis = MassProps.validationFrame(parts, geometry.gripSlot)
+	if not bladeAboveGrip(parts, geometry.strikingSlot, v4Point, v4Axis) then
 		table.insert(errors, problem("BladeNotAboveGrip"))
 	end
 	phase()
@@ -418,8 +411,9 @@ function Analyze.run(core: Schema.BlueprintCore, opts: AnalyzeOptions?): Analysi
 	end
 	phase()
 
-	-- 4 mass properties
+	-- 4 mass properties, in the physics frame of the kept Grip parts (a cleaned part steers nothing, §4.5)
 	local owned = MassProps.ownership(parts, kept, rankOf, spend)
+	local gripPoint, gripAxis = MassProps.physicsFrame(parts, kept, geometry.gripSlot)
 	local mass = MassProps.report(parts, kept, owned, geometry, gripPoint, gripAxis)
 	local physics: PhysicsReport = {
 		mass = mass.mass,
@@ -434,29 +428,77 @@ function Analyze.run(core: Schema.BlueprintCore, opts: AnalyzeOptions?): Analysi
 		bladeLength = mass.bladeLength,
 		totalLength = mass.totalLength,
 		comOffAxis = mass.comOffAxis,
-		edgeLength = 0, -- M3: the main chain's length (§4.6)
-		cutIndex = 0, -- M3: clamp((bladeLength/bladeMeanThickness − CUT_LO)/(CUT_HI − CUT_LO), 0, 1)
+		edgeLength = 0, -- phase 6: the main chain's length (§4.6)
+		cutIndex = 0, -- phase 6: Edge.cutIndex(bladeLength, the edge's bladeMeanThickness)
 		kept = kept,
 		ownedVolume = mass.ownedVolume,
 	}
 	phase()
 
-	-- 5 volume probes, the samples M3's Thinness and Asymmetry measure on
+	-- 5 volume probes, the samples Thinness and Asymmetry measure on
 	local probes = Sampling.volumeProbes(parts, kept, spend)
 	budget.hVol, budget.volSamples = probes.h, probes.total
 	phase()
 
-	-- 6 M3 plugs in here, with what the phases above hold: parts, kept, exposure (areas, contact), graph.touching,
-	-- owned (ownedVolume, higher), probes, MassProps.difficultyFrame(parts, kept, geometry.gripSlot):
-	--   edge  = Edge.profile(...); physics.edgeLength, physics.cutIndex, budget.edgeCell
-	--   steps = per enabled CraftPlans step, Blueprint/WorkSet → Factors → Difficulty (§5)
+	-- 6 the difficulty frame and the EDGE, walking the parts in the measure's rank order (§17.2), kept indexed alike
+	local N = #parts
+	local rank, byRank = Sampling.measureRanked(parts)
+	local keptByRank: { boolean } = table.create(N, false)
+	for r = 1, N do
+		keptByRank[r] = kept[byRank[r].index]
+	end
+	local framePoint, frameAxis = MassProps.difficultyFrame(byRank, keptByRank, geometry.gripSlot)
+	local edge = Edge.profile(byRank, keptByRank, geometry, framePoint, frameAxis, spend)
+	physics.edgeLength = edge.length
+	physics.cutIndex = Edge.cutIndex(physics.bladeLength, edge.bladeMeanThickness)
+	budget.edgeCell = edge.cell
+	phase()
+
+	-- 7 FACTORS once per distinct work set, STEPS in plan order; every set chosen first, so an empty one (steps nil,
+	-- §4.7) costs no factor work
+	local plan = Difficulty.planSteps(core.type)
+	local sets: { { number } } = table.create(#plan)
+	local empty = false
+	for k = 1, #plan do
+		sets[k] = WorkSet.select(core.parts, kept, plan[k].worksOn)
+		empty = empty or #sets[k] == 0
+	end
+	local steps: { StepAnalysis }? = nil
+	if not empty then
+		local ctx: Factors.FactorContext = {
+			parts = parts,
+			rank = rank,
+			probes = probes,
+			exposure = exposure,
+			owned = owned,
+			touching = graph.touching,
+			edgeLength = edge.length,
+			geometry = geometry,
+		}
+		local measured: { [string]: { FactorValue } } = {} -- by selector, looked up and never iterated
+		local list: { StepAnalysis } = table.create(#plan)
+		for k = 1, #plan do
+			local row = plan[k]
+			local selector = row.worksOn
+			local key = if type(selector) == "table" then table.concat(selector, "+") else selector
+			local values = measured[key]
+			if values == nil then
+				values = (Factors.measure(ctx, sets[k], spend))
+				measured[key] = values
+				phase()
+			end
+			local material: DT.MaterialId = Difficulty.governing(parts, sets[k]) :: DT.MaterialId -- the set has parts
+			list[k] = Difficulty.step(row.step, values, material)
+		end
+		steps = list
+	end
 	return {
 		balanceVersion = balanceVersion,
 		validation = validation,
 		cleaned = cleaned,
 		physics = physics,
-		edge = nil,
-		steps = nil,
+		edge = edge,
+		steps = steps,
 		budget = budget,
 	}
 end

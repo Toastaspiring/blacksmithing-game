@@ -10,6 +10,7 @@ local Gen = require("../lib/Gen")
 local Prop = require("../lib/Prop")
 local TestRng = require("../lib/TestRng")
 local Tol = require("../lib/Tol")
+local Adversarial = require("../fixtures/Adversarial")
 local Blueprints = require("../fixtures/Blueprints")
 local H = require("./PhysicsHelpers")
 local Balance = require("../../src/shared/Definitions/Balance")
@@ -231,7 +232,8 @@ return Test.suite("Physics/MassProps", function(t)
 
 	-- Generated swords have round parts overlapping others: refined sampling, whose grid moves when a merely touching part
 	-- falls in or out of the broad phase by rounding, so these hold to the player-facing tolerances, not the analytic one.
-	t.it("T-PHY-04 Y/Z translation on generated swords, within TOL_MASS_REL and TOL_BALANCE_ABS", function()
+	-- Fast until M3's fix round 1 (§14.1's 27 s); --quick keeps T-PHY-04 on the fixtures, above.
+	t.slow("T-PHY-04 Y/Z translation on generated swords, within TOL_MASS_REL and TOL_BALANCE_ABS", function()
 		Prop.check(40, function(rng: Rng): any
 			local core = Gen.validSword(rng, CTX)
 			local moved, delta = Gen.translated(rng, CTX, core)
@@ -331,7 +333,8 @@ return Test.suite("Physics/MassProps", function(t)
 		A.truthy(physicsOf(bigger).balance < physicsOf(Blueprints.get("F2").core).balance, "more pommel, closer to the hand")
 	end)
 
-	t.it("T-PHY-08 the physics frame is all Grip parts, the difficulty frame the kept ones with a fixed +Y axis", function()
+	t.it("T-PHY-08 the physics frame is the kept Grip parts, V4's every one, the difficulty frame the kept ones' point with "
+		.. "a fixed +Y axis", function()
 		-- F1 + an enclosed grip core off the grip's axis, turned 20° about Z (A25)
 		local core = H.f("F1")
 		table.insert(core.parts, H.part(6, "Grip", "Block", "Iron", { 0.005, 0.85, 0 }, H.axisAngle(0, 0, 1, 20), { 0.04, 0.30, 0.06 }))
@@ -340,22 +343,27 @@ return Test.suite("Physics/MassProps", function(t)
 		local p = report.physics :: any
 		local parts = H.prepared(core)
 		local kept = p.kept
+		A.deepEq(p.gripPoint, { 0, 0.75, 0 }, "physics: the kept Grip part only, a cleaned one steers nothing")
+		A.deepEq(p.gripAxis, { 0, 1 }, "physics: the tilted core has no vote")
 		local gripV, coreV = 0.16 * 0.9 * 0.16, 0.04 * 0.30 * 0.06
-		A.near(p.gripPoint[1], (coreV * 0.005) / (gripV + coreV), 1e-12, "physics: every Grip part, cleaned ones too")
-		A.near(p.gripPoint[2], (gripV * 0.75 + coreV * 0.85) / (gripV + coreV), 1e-12)
-		A.truthy(p.gripAxis[1] < 0, "physics: the tilted core tilts the axis")
+		local v4Point, v4Axis = MassProps.validationFrame(parts, "Grip")
+		A.near(v4Point[1], (coreV * 0.005) / (gripV + coreV), 1e-12, "V4, before the verdict: every Grip part")
+		A.near(v4Point[2], (gripV * 0.75 + coreV * 0.85) / (gripV + coreV), 1e-12)
+		A.truthy(v4Axis[1] < 0, "V4: the tilted core tilts its axis")
 		local point, axis = MassProps.difficultyFrame(parts, kept, "Grip")
 		A.near(point[1], 0, 1e-12, "difficulty: the kept Grip part only")
 		A.near(point[2], 0.75, 1e-12)
 		A.near(point[3], 0, 1e-12)
 		A.deepEq(axis, { 0, 1 }, "difficulty: fixed +Y")
-		-- the F1 values of A25 and A26 (E-S2.7)
+		-- A25 measures F1 (E-S2.7): before M3's fix round 1 its core tilted the axis to (−0.010, 1.000), balance 0.1272
+		-- (F1 0.1272) and cutIndex 0.724130 (0.724180)
 		local a25 = H.f("F1")
 		table.insert(a25.parts, H.part(6, "Grip", "Block", "Iron", { 0, 0.75, 0 }, H.axisAngle(0, 0, 1, 20), { 0.04, 0.30, 0.06 }))
-		local a25p = physicsOf(a25)
-		A.near(a25p.gripAxis[1], -0.010, 5e-4, "A25 axis x")
-		A.near(a25p.gripAxis[2], 1.000, 5e-4, "A25 axis y")
-		A.near(a25p.balance, 0.127, 5e-4, "A25 balance")
+		local a25p, f1p = physicsOf(a25), physicsOf(H.f("F1"))
+		A.deepEq(a25p.gripAxis, { 0, 1 }, "A25 axis")
+		for _, field in ipairs({ "guardPos", "balance", "balanceFromHand", "reach", "bladeLength", "cutIndex" }) do
+			A.eq(a25p[field], f1p[field], "A25 " .. field)
+		end
 		-- A26: F1's grip as 4 rings (no axis), then a visible 40° strap
 		local rings = H.f("F1")
 		rings.parts[2] = H.part(2, "Grip", "Block", "Iron", { 0, 0.30 + 0.1125, 0 }, H.I, { 0.20, 0.225, 0.20 })
@@ -376,13 +384,43 @@ return Test.suite("Physics/MassProps", function(t)
 			H.part(1, "Grip", "Block", "Iron", { 0, 1, 0 }, H.axisAngle(0, 0, 1, 25), { 0.1, 1, 0.1 }),
 			H.part(2, "Blade", "Block", "Iron", { 0, 2, 0 }, H.I, { 0.2, 1, 0.1 }),
 		}))
-		local _, physicsAxis = MassProps.physicsFrame(tilted, "Grip")
+		local _, physicsAxis = MassProps.physicsFrame(tilted, { true, true }, "Grip")
 		A.truthy(physicsAxis[1] < -0.3, "the physics axis follows the grip: " .. physicsAxis[1])
+		A.deepEq({ MassProps.validationFrame(tilted, "Grip") }, { MassProps.physicsFrame(tilted, { true, true }, "Grip") },
+			"nothing cleaned: V4's frame is the physics frame")
+		A.deepEq({ MassProps.physicsFrame(tilted, { false, true }, "Grip") }, { { 0, 0, 0 }, { 0, 1 } },
+			"no kept Grip part (measureInvalid only): the origin and +Y, as with none")
 		local _, difficultyAxis = MassProps.difficultyFrame(tilted, { true, true }, "Grip")
 		A.deepEq(difficultyAxis, { 0, 1 }, "fixed +Y")
 		local difficultyPoint = MassProps.difficultyFrame(tilted, { true, true }, "Grip")
 		A.near(difficultyPoint[2], 1, 1e-12, "the Grip part with the lowest index counts")
 	end)
+
+	-- M3's review (V2): with every Grip part in the frame, the strap tilted the axis to (−0.342, 0.940) and (−0.643, 0.766),
+	-- bladeLength 2.7699 → 2.6029 and 2.1219, cutIndex 0.724180 → 0.668445 and 0.507963 (S4's Damage), D unchanged.
+	t.it("§4.5 a cleaned Grip part steers nothing: a strap hidden in A26's ring grip, turned 20° and 40°, measures A26base",
+		function()
+			local base = Analyze.run(Adversarial.variant("A26base").draft())
+			for _, degrees in ipairs({ 20, 40 }) do
+				local core = Adversarial.variant("A26base").draft()
+				table.insert(core.parts, H.part(9, "Grip", "Block", "Iron", { 0, 0.6375, 0 }, H.axisAngle(0, 0, 1, degrees),
+					{ 0.05, 0.20, 0.05 }))
+				local report = Analyze.run(core)
+				local what = "the strap turned " .. degrees .. "°"
+				A.truthy(report.validation.ok, what .. " is valid")
+				A.deepEq(report.cleaned, { { partId = 9, reason = "Enclosed" } }, what)
+				local p, q = report.physics :: any, base.physics :: any
+				A.deepEq(p.gripPoint, q.gripPoint, what .. ": the grip point")
+				A.deepEq(p.gripAxis, { 0, 1 }, what .. ": no vote, the rings have none")
+				for _, field in ipairs({ "guardPos", "reach", "bladeLength", "totalLength", "cutIndex", "edgeLength" }) do
+					A.eq(p[field], q[field], what .. ": " .. field)
+				end
+				A.near(p.balance, q.balance, 1e-12, what .. ": balance")
+				A.eq(p.cutIndex, 0.72417951973367989, what .. ": cutIndex, F1's")
+				A.eq(Dump.canonical(report.steps), Dump.canonical(base.steps), what .. ": steps")
+				A.eq(Dump.canonical(report.edge), Dump.canonical(base.edge), what .. ": edge")
+			end
+		end)
 
 	t.it("§4.5 the grip axis: which parts have one, the sign rule, the tilt rule", function()
 		local function axisOf(parts: { any }): { number }
@@ -451,14 +489,14 @@ return Test.suite("Physics/MassProps", function(t)
 				{ 0.5, 0.1, 0.1 }))
 			return core
 		end
-		-- turned from level: the bar's axis is 90° − |angle| from +Y
+		-- turned from level: the bar's axis is 90° − |angle| from +Y (the bar shows: every Grip part's frame is the physics frame)
 		for _, degrees in ipairs({ 0, 1, -1, 30, -30, 44, -44, 180, 179 }) do
 			local core = withBar(degrees)
-			local _, axis = MassProps.physicsFrame(H.prepared(core), "Grip")
+			local _, axis = MassProps.validationFrame(H.prepared(core), "Grip")
 			A.deepEq(axis, baseAxis, degrees .. "°: no vote")
 		end
 		for _, degrees in ipairs({ 46, -46, 60, -60 }) do
-			local _, axis = MassProps.physicsFrame(H.prepared(withBar(degrees)), "Grip")
+			local _, axis = MassProps.validationFrame(H.prepared(withBar(degrees)), "Grip")
 			A.truthy(math.abs(axis[1]) > 1e-3, degrees .. "°: a vote")
 			A.truthy((axis[1] > 0) == (degrees > 0), degrees .. "°: toward the part's lean, " .. axis[1])
 		end
@@ -481,7 +519,8 @@ return Test.suite("Physics/MassProps", function(t)
 	end)
 
 	-- Whichever way up rounding would call a level part, the mirror image must agree: V4, balance and comOffAxis read it.
-	t.it("§4.5 the physics frame mirrors with the design, level grip parts included (PROP_N)", function()
+	-- The frame of every Grip part, V4's, is checked on any design (the physics frame lists the kept ones, by the same vote).
+	t.it("§4.5 the grip frame mirrors with the design, level grip parts included (PROP_N)", function()
 		local function mirrored(core: any): any
 			local out = table.clone(core)
 			out.parts = {}
@@ -491,8 +530,8 @@ return Test.suite("Physics/MassProps", function(t)
 			return out
 		end
 		local function check(core: any, what: string)
-			local point, axis = MassProps.physicsFrame(H.prepared(core), "Grip")
-			local imagePoint, imageAxis = MassProps.physicsFrame(H.prepared(mirrored(core)), "Grip")
+			local point, axis = MassProps.validationFrame(H.prepared(core), "Grip")
+			local imagePoint, imageAxis = MassProps.validationFrame(H.prepared(mirrored(core)), "Grip")
 			A.near(imagePoint[1], -point[1], 1e-12, what .. " grip point x")
 			A.near(imagePoint[2], point[2], 1e-12, what .. " grip point y")
 			if axis[1] == 0 and axis[2] == 1 then
@@ -524,7 +563,8 @@ return Test.suite("Physics/MassProps", function(t)
 		end)
 	end)
 
-	t.it("§4.4 cleaned parts count for mass, COM and the physics frame, never for reach or the blade's length", function()
+	t.it("§4.4 cleaned parts count for mass, COM and the total length, never for the physics frame, the guard line, reach "
+		.. "or the blade's length", function()
 		local base = physicsOf(Blueprints.get("F2").core)
 		-- dust on top of the blade: above the kept blade top, heavy enough to see
 		local dust = H.f("F2")
@@ -539,13 +579,22 @@ return Test.suite("Physics/MassProps", function(t)
 		A.eq(p.bladeLength, base.bladeLength, "so does the blade's length")
 		A.near(p.totalLength, base.totalLength + 0.05, 1e-12, "the total length is every part's")
 		A.rel(p.ownedVolume[5], 0.05 * 0.05 * 0.05, 1e-12, "dust owns its volume")
-		-- an enclosed guard part moves the guard line (the volume-weighted centroid of all Guard parts), owns nothing
-		local hidden = H.f("F2")
-		table.insert(hidden.parts, H.part(5, "Guard", "Block", "Iron", { 0.2, 1.45, 0 }, H.I, { 0.2, 0.1, 0.1 }))
-		local q = physicsOf(hidden)
-		A.near(q.mass, base.mass, 1e-12, "an enclosed part owns no volume")
-		A.near(q.ownedVolume[5], 0, 1e-12)
-		A.truthy(q.guardPos == base.guardPos, "centred on the same line: no change")
+		-- an enclosed Guard part owns nothing and leaves the guard line, the kept Guard parts' (§4.5): in the guard, or high in
+		-- the blade, where every Guard part's centroid moved it 0.0738 up (balance −0.0570 → −0.1308, cutIndex 0.425 → 0.4065)
+		for _, at in ipairs({ { pos = { 0.2, 1.45, 0 }, size = { 0.2, 0.1, 0.1 } }, { pos = { 0, 3.0, 0 }, size = { 0.1, 0.4, 0.04 } } }) do
+			local hidden = H.f("F2")
+			table.insert(hidden.parts, H.part(5, "Guard", "Block", "Iron", at.pos, H.I, at.size))
+			local hiddenReport = Analyze.run(hidden)
+			A.deepEq(hiddenReport.cleaned, { { partId = 5, reason = "Enclosed" } })
+			local q = hiddenReport.physics :: any
+			local what = "a Guard part hidden at y " .. at.pos[2]
+			A.near(q.mass, base.mass, 1e-12, what .. " owns no volume")
+			A.near(q.ownedVolume[5], 0, 1e-12)
+			for _, field in ipairs({ "guardPos", "reach", "bladeLength", "cutIndex" }) do
+				A.eq(q[field], base[field], what .. ": " .. field)
+			end
+			A.near(q.balance, base.balance, 1e-12, what .. ": balance")
+		end
 	end)
 
 	t.it("§4.5 no guard: the guard line is the top of the grip; no kept blade: reach and blade length 0", function()
@@ -554,14 +603,25 @@ return Test.suite("Physics/MassProps", function(t)
 		noGuard.parts[3].pos[2] = 2.55 -- the blade down onto the grip
 		local p = physicsOf(noGuard)
 		A.near(p.guardPos, 1.35 - 0.85, 1e-12, "the top of the grip above the grip point")
-		-- every Grip part makes the top of the grip, cleaned or not: a dust cube on its side, above its top
-		local capped = H.f("F2")
-		table.remove(capped.parts, 3)
-		capped.parts[3].pos[2] = 2.55
-		table.insert(capped.parts, H.part(5, "Grip", "Block", "Iron", { 0.125, 1.345, 0 }, H.I, { 0.05, 0.05, 0.05 }))
-		local top = Analyze.run(capped)
-		A.deepEq(top.cleaned, { { partId = 5, reason = "Dust" } })
-		A.near((top.physics :: any).guardPos, 1.37 - (top.physics :: any).gripPoint[2], 1e-12, "the dust cube's top")
+		-- the kept Grip parts make the top of the grip (§4.5), not a cleaned one: a dust cube on its side above its top (every
+		-- Grip part's top was the cube's, 1.37), or a Grip block hidden in the blade (the line was 1.69 above the grip point,
+		-- cutIndex 0.40 → 0.0875)
+		for _, extra in ipairs({
+			{ pos = { 0.125, 1.345, 0 }, size = { 0.05, 0.05, 0.05 }, reason = "Dust" },
+			{ pos = { 0, 2.4, 0 }, size = { 0.1, 0.4, 0.04 }, reason = "Enclosed" },
+		}) do
+			local capped = H.f("F2")
+			table.remove(capped.parts, 3)
+			capped.parts[3].pos[2] = 2.55
+			table.insert(capped.parts, H.part(5, "Grip", "Block", "Iron", extra.pos, H.I, extra.size))
+			local top = Analyze.run(capped)
+			A.deepEq(top.cleaned, { { partId = 5, reason = extra.reason } })
+			local q = top.physics :: any
+			for _, field in ipairs({ "guardPos", "reach", "bladeLength", "cutIndex" }) do
+				A.eq(q[field], p[field], extra.reason .. " Grip part: " .. field)
+			end
+			A.deepEq(q.gripPoint, p.gripPoint, extra.reason .. " Grip part: the grip point")
+		end
 		-- measureInvalid on A22a: the only Blade part is dust
 		local core = H.f("F2")
 		core.parts[4] = H.part(4, "Blade", "Block", "Iron", { 0, 1.575, 0 }, H.I, { 0.05, 0.05, 0.05 })

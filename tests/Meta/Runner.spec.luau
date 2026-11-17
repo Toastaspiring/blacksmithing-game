@@ -332,6 +332,44 @@ return Test.suite("Meta/Runner", function(t)
 		end
 	end)
 
+	t.it("Golden.digest: its own .digest.txt, compared like a golden, at most DIGEST_MAX_BYTES", function()
+		local temp = process.env.TEMP or process.env.TMPDIR or "/tmp"
+		local dir = string.format("%s/blacksmith-digest-%d-%d", temp, os.time(), math.floor(os.clock() * 1e6) % 1000000)
+		fs.writeDir(dir)
+		local savedDir, savedBless = Golden.dir, Golden.bless
+		local ok, err = pcall((function()
+			Golden.dir = dir
+			Golden.bless = false
+			A.eq(Golden.readDigest("sample.bv1"), nil, "read of a missing digest")
+			A.throws(function()
+				Golden.digest("sample.bv1", { h = 1 })
+			end, "assert: golden file missing")
+			Golden.bless = true
+			Golden.digest("sample.bv1", { h = 1, n = 2 })
+			Golden.bless = false
+			A.truthy(fs.isFile(dir .. "/sample.bv1.digest.txt"), "written as <name>.digest.txt")
+			A.falsy(fs.isFile(dir .. "/sample.bv1.golden.txt"), "not as a golden")
+			Golden.digest("sample.bv1", { n = 2, h = 1 })
+			A.deepEq(Golden.readDigest("sample.bv1"), { h = 1, n = 2 }, "read back")
+			A.eq(Golden.read("sample.bv1"), nil, "a digest is no golden")
+			A.throws(function()
+				Golden.digest("sample.bv1", { h = 2, n = 2 })
+			end, "assert: golden mismatch")
+			local big = string.rep("x", Golden.DIGEST_MAX_BYTES)
+			Golden.bless = true
+			A.throws(function()
+				Golden.digest("big.bv1", { s = big })
+			end, "more than 1024")
+			Golden.bless = false
+			A.falsy(fs.isFile(dir .. "/big.bv1.digest.txt"), "an oversized digest is never written")
+		end) :: any)
+		Golden.dir, Golden.bless = savedDir, savedBless
+		fs.removeDir(dir)
+		if not ok then
+			error(err, 0)
+		end
+	end)
+
 	t.it("Assert: every failure raises 'assert:', passes stay silent", function()
 		local failing: { () -> () } = {
 			function() A.fail("x") end,

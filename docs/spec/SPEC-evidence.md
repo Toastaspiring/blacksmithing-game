@@ -14,7 +14,7 @@ and refer to `docs/spec/review/findings-all.md`. Section numbers (§N.M) refer t
 ## Contents
 
 1. [Evidence S1](#evidence-s1) (data model, blueprint data, persistence data): [E-S1.1](#e-s11-canonical-form-idempotency-and-the-renormalization-threshold) · [E-S1.2](#e-s12-rotation-matrix-and-the-instance-round-trip) · [E-S1.3](#e-s13-json-storage-precision) · [E-S1.4](#e-s14-size-budget-sizes2luau--sizes2outtxt) · [E-S1.5](#e-s15-names-namesluau--namesv1outtxt-unchanged-by-the-revision) · [E-S1.6](#e-s16-migration-order-migrateluau--migratev1outtxt) · [E-S1.7](#e-s17-material-rows-phase-2-rows-blurbs-and-rationale) · [E-S1.8](#e-s18-mass-display-check-r4a-22) · [E-S1.9](#e-s19-size-guard-thresholds-and-the-per-key-write-limit)
-2. [Evidence S2](#evidence-s2) (geometry and difficulty): [E-S2.1](#e-s21-shapes-against-the-engine) · [E-S2.2](#e-s22-min_dim--002-and-sensitivity-mindim-checksluau) · [E-S2.3](#e-s23-contact) · [E-S2.4](#e-s24-why-no-global-grid) · [E-S2.5](#e-s25-regression-fixtures-base-f5-reg-checksluau) · [E-S2.6](#e-s26-mirror) · [E-S2.7](#e-s27-grip-independent-difficulty-and-the-two-deviations-adv-variantsluau) · [E-S2.8](#e-s28-performance-and-checkpoints-perf-gapsluau) · [E-S2.9](#e-s29-calibration-and-the-full-fixture-tables) · [E-S2.10](#e-s210-validation-invariance-determinism-val-inv-det) · [E-S2.11](#e-s211-the-enclosed-verdict-against-the-truth-verdict) · [E-S2.12](#e-s212-the-exact-verdict-cover)
+2. [Evidence S2](#evidence-s2) (geometry and difficulty): [E-S2.1](#e-s21-shapes-against-the-engine) · [E-S2.2](#e-s22-min_dim--002-and-sensitivity-mindim-checksluau) · [E-S2.3](#e-s23-contact) · [E-S2.4](#e-s24-why-no-global-grid) · [E-S2.5](#e-s25-regression-fixtures-base-f5-reg-checksluau) · [E-S2.6](#e-s26-mirror) · [E-S2.7](#e-s27-grip-independent-difficulty-and-the-two-deviations-adv-variantsluau) · [E-S2.8](#e-s28-performance-and-checkpoints-perf-gapsluau) · [E-S2.9](#e-s29-calibration-and-the-full-fixture-tables) · [E-S2.10](#e-s210-validation-invariance-determinism-val-inv-det) · [E-S2.11](#e-s211-the-enclosed-verdict-against-the-truth-verdict) · [E-S2.12](#e-s212-the-exact-verdict-cover) · [E-S2.13](#e-s213-difficulty-as-built-m3)
 3. [Evidence S3](#evidence-s3) (minigames): [E-S3.1](#e-s31-prng-test-vectors-unchanged-module-cross-checked-bit-for-bit-against-the-python-reference-rng_refpy) · [E-S3.2](#e-s32-final-bot-table-distluau-2000-outfinal_tabletxt) · [E-S3.3](#e-s33-full-parameter-columns-and-resolved-values-paramsluau-goldenluau) · [E-S3.4](#e-s34-timingstrike-golden-values-and-grade-bands-goldenluau) · [E-S3.5](#e-s35-precisiontrace-edge-mapping-golden-values-and-costs-costluau-worstluau-goldenluau) · [E-S3.6](#e-s36-determinism-and-codec-detluau) · [E-S3.7](#e-s37-holdzone-why-strokes-hztuneluau-goldenluau) · [E-S3.8](#e-s38-check-margins-and-cheats-checksluau) · [E-S3.9](#e-s39-tuning-log-multisweepluau-sweepluau-2003000-runs-per-setting)
 4. [Evidence S4](#evidence-s4) (crafting and outcome): [E-S4.1](#e-s41-stat-constants-rationale-ranges-placeholders) · [E-S4.2](#e-s42-fixture-inputs-and-outcomes-s2-live-analysis) · [E-S4.3](#e-s43-golden-outcome-cases-t-cr-02-weights-025--040--035-pass--050) · [E-S4.4](#e-s44-γ-gamma_fit-bold-s3s-code-1000-runs-per-cell-600-for-precisiontrace-same-seeds-at-every-x) · [E-S4.5](#e-s45-properties-and-the-recompute-check) · [E-S4.6](#e-s46-sensitivity-thresholds-055--084--104) · [E-S4.7](#e-s47-grid-search-and-the-full-rarity-table-simluau-tune-table) · [E-S4.8](#e-s48-cap-rule-alternatives-r3-05-designer-default-q10--max)
 5. [Evidence S5](#evidence-s5) (server, networking, persistence lifecycle): [E-S5.1](#e-s51-guard-fuzz-and-cost-guard_fuzzluau-libguardluau) · [E-S5.2](#e-s52-session-machine-scenarios-session_scenariosluau-libsessionmachineluau) · [E-S5.3](#e-s53-timing-model-timing_simluau) · [E-S5.4](#e-s54-analysisqueue-arithmetic) · [E-S5.5](#e-s55-rate-limits-ratelimit_simluau-libratelimitluau) · [E-S5.6](#e-s56-rojo-project-verification) · [E-S5.7](#e-s57-payload-sizes-and-paging-payload_sizeluau-s1s-measured-json-sizes) · [E-S5.8](#e-s58-save-cadence-and-datastore-budgets) · [E-S5.9](#e-s59-telemetry-volume-and-field-combinations) · [E-S5.10](#e-s510-alternatives-considered)
@@ -223,8 +223,8 @@ shifts 0–0.005 and 0.0250 (−17 %) at 0.010–0.025; per-part sampling gives 
 | Fixture | Result | Bound |
 |---|---|---|
 | X01 2 blade copies at z ±0.003, vs the union blade (0.066 thick) | ΔD max 0.0002, with the rank of §4.4 (\|z\| before z; 0.0010 under the rank before it) (vs F5: Hammering −0.0281, the real thickening) | 0.01 |
-| X02 6 copies at z = k·0.002, vs the union blade (0.072) | ΔD max 0.0006 | 0.01 |
-| X03 F4 + a 0.0003 stud³ fin | ΔThinness 0.0000, Hammering +0.0003 | 0.02 |
+| X02 6 copies at z = k·0.002, vs the union blade (0.072) | ΔD max 0.0010 walking the measure's rank, as M3 builds it (Hammering 0.0510 against 0.0520; 0.0006 in part order) | 0.01 |
+| X03 F4 + a 0.0003 stud³ fin | ΔThinness 0.0000 (All; Blade +0.00034), Hammering +0.0003; the fin splits F4's one chain of 5.7237 into two, the main 4.7564, so Sharpening 0.3420 Hard → 0.1980 Normal (only the main chain counts, §4.6; SPEC §17.1 O10) | 0.02 |
 | X04 4 strips; strips with seams at ±0.05 and 0; 5 and 10 segments with 0.004 / 0.006 / 0.009 gaps; grip nudges 0.005–0.020 | EdgeLength 5.4330 in every case (0.00 %), one chain | 2 % |
 | X05 5 segments, gaps 0.002–0.009, overlaps 0.005–0.05 | ΔG max 0.0007 | 0.01 |
 | X06 blade offset 0–0.05 in X vs a 120-probe oracle | max error 0.0030 (Asym Blade 0 / 0 / 0.040 / 0.153 / 0.280 / 0.408) | 0.02 |
@@ -247,7 +247,11 @@ inside(p, mirror(x))` with 0 mismatches, max |Δsd| 1.67e-16. C13 (guard and Cor
 | A26 F1 ring grip + visible 40° strap (0.02) | **0.0011** | **0.0989**: axis tilts 40°, EdgeLength 5.433 → 2.823, Sharpening 0.0989 → 0 |
 | A27 F1 hilt shifted 0.04 in X, Sharpening (0.02) | 0.0000 (Hammering 0.1037 → 0.1537, a visible asymmetry) | 0.0000 |
 
-Physics follows the ruling: A26's physics axis is (−0.643, 0.766) and its balance 0.038 (ring-grip base 0.051).
+Physics follows the ruling: A26's physics axis is (−0.643, 0.766) and its balance 0.038 (ring-grip base 0.051). Since
+M3's fix round 1 the physics frame and the guard line are the kept parts' (SPEC §4.5), so a hidden grip part steers no
+physics either: A25's enclosed core leaves F1's (with every Grip part it tilted the axis to (−0.010, 1.000), cutIndex
+0.724130 against 0.724180), and the M3 verifier's strap hidden in A26's rings, turned 20° or 40°, A26base's (the axis
+(−0.342, 0.940) or (−0.643, 0.766), bladeLength 2.7699 → 2.6029 or 2.1219, cutIndex 0.6684 or 0.5080) (E-S2.13).
 
 | Thin-share reference | A24 needle Thinness / Hammering | F3, F5, C02, C04, C10 |
 |---|---|---|
@@ -283,6 +287,16 @@ three margins, with greatsword Sharpening and ornate Hammering as wanted Hard st
 EdgeLength 4.8–8.0 (arming 0.068 below Hard, required Hard ≥ 0.30, wanted Hard ≥ 0.249). A wider edge range
 (5.0–9.5) puts the arming sword at 0.08 but leaves the greatsword Normal (0.155).
 
+The tables are the parts in the measure's rank order (`Sampling.measureRanked`), as M3 builds `Analyze.run` and as
+T-DIF-12's goldens bless them: as M3 was first built, walking each fixture's own part order, as the fit did, gave the
+same values at these digits but for C09's Thinness on All (0.3858 / 0.386) and Hammering (0.3170). M3's fix round 1 (θ
+on every local axis, the canonical walk and its lattice pick, SPEC §5.2; the raster read off its cells' centres, §4.6)
+then moved Thinness on All for C04, C05, C09 and C13 and on the Blade for F3, C06, C08 and C09, C04's edge 7.107 →
+7.149, Hammering on C04, C05, C09 and C13 (0.3368 → 0.3379, 0.1363 → 0.1369, 0.3186 → 0.3201, 0.1133 → 0.1137) and
+C04's Sharpening (0.4703 → 0.4769), no tier (E-S2.13); these tables are `Analyze.run`'s after that round, its physics
+frame the kept Grip parts' (no row here cleans a Grip or Guard part the frame feels). Physics, mass and balance stay sums in
+blueprint order (SPEC §4.1).
+
 #### Physics (mass units = kg; Iron 7.87, Steel 7.85)
 | Fixture | parts (kept) | mass | volume st³ | balance | reach | blade length | edge (main chain) | cutIndex |
 |---|---|---|---|---|---|---|---|---|
@@ -294,7 +308,7 @@ EdgeLength 4.8–8.0 (arming 0.068 below Hard, required Hard ≥ 0.30, wanted Ha
 | C01 Minimal | 4 (4) | 1.4717 | 0.18700 | 0.108 | 3.103 | 2.500 | 5.060 | 0.30 |
 | C02 Arming (Iron) | 6 (6) | 0.8305 | 0.10553 | 0.180 | 3.420 | 2.900 | 5.644 | 0.77 |
 | C02 Arming (Steel) | 6 (6) | 0.8284 | 0.10553 | 0.180 | 3.420 | 2.900 | 5.644 | 0.77 |
-| C04 Rapier (Steel blade) | 7 (7) | 0.4150 | 0.05282 | 0.239 | 4.130 | 3.654 | 7.107 | 1.00 |
+| C04 Rapier (Steel blade) | 7 (7) | 0.4150 | 0.05282 | 0.239 | 4.130 | 3.654 | 7.149 | 1.00 |
 | C05 Cleaver | 6 (6) | 3.7185 | 0.47249 | 0.985 | 3.278 | 2.670 | 5.972 | 0.16 |
 | C06 Sabre (Steel) | 10 (10) | 0.6831 | 0.08695 | 0.361 | 3.815 | 3.272 | 6.480 | 0.89 |
 | C07 Dagger | 6 (6) | 0.3415 | 0.04339 | 0.071 | 1.890 | 1.540 | 2.968 | 0.31 |
@@ -318,16 +332,16 @@ EdgeLength 4.8–8.0 (arming 0.068 below Hard, required Hard ≥ 0.30, wanted Ha
 | C01 Minimal | 4 / 0.077 | 0 / 0.000 | 0 / 0.000 | 2.068 / 0.000 | 5.06 / 0.081 | 3.574 / 0.027 | 1 / 0.000 | 0.187 / 0.149 |
 | C02 Arming (Iron) | 4.6 / 0.123 | 0.2843 / 0.284 | 0 / 0.000 | 2.26 / 0.000 | 5.644 / 0.264 | 5.709 / 0.129 | 1 / 0.000 | 0.1055 / 0.035 |
 | C02 Arming (Steel) | 4.6 / 0.123 | 0.2843 / 0.284 | 0 / 0.000 | 2.26 / 0.000 | 5.644 / 0.264 | 5.709 / 0.129 | 1 / 0.000 | 0.1055 / 0.035 |
-| C04 Rapier (Steel blade) | 5.169 / 0.167 | 0.5934 / 0.593 | 0 / 0.000 | 2.499 / 0.332 | 7.107 / 0.721 | 6.655 / 0.174 | 2 / 0.333 | 0.05282 / 0.000 |
-| C05 Cleaver | 6 / 0.231 | 0 / 0.000 | 0.2726 / 0.454 | 2.24 / 0.000 | 5.972 / 0.366 | 8.709 / 0.272 | 1 / 0.000 | 0.4725 / 0.545 |
+| C04 Rapier (Steel blade) | 5.169 / 0.167 | 0.596 / 0.596 | 0 / 0.000 | 2.499 / 0.332 | 7.149 / 0.734 | 6.655 / 0.174 | 2 / 0.333 | 0.05282 / 0.000 |
+| C05 Cleaver | 6 / 0.231 | 0.001539 / 0.002 | 0.2726 / 0.454 | 2.24 / 0.000 | 5.972 / 0.366 | 8.709 / 0.272 | 1 / 0.000 | 0.4725 / 0.545 |
 | C06 Sabre (Steel) | 8.486 / 0.422 | 0.3514 / 0.351 | 0.2569 / 0.428 | 2.36 / 0.100 | 6.48 / 0.525 | 11.52 / 0.406 | 2 / 0.333 | 0.08695 / 0.010 |
 | C07 Dagger | 4.405 / 0.108 | 0 / 0.000 | 0 / 0.000 | 1.985 / 0.000 | 2.968 / 0.000 | 6.009 / 0.143 | 1 / 0.000 | 0.04339 / 0.000 |
 | C08 Greatsword | 5.2 / 0.169 | 0.1882 / 0.188 | 0 / 0.000 | 2.348 / 0.080 | 6.392 / 0.497 | 6.953 / 0.188 | 1 / 0.000 | 0.1925 / 0.156 |
-| C09 Ornate (18 parts) | 10.16 / 0.551 | 0.3858 / 0.386 | 0 / 0.000 | 2.625 / 0.542 | 5.411 / 0.191 | 20.25 / 0.821 | 1 / 0.000 | 0.08005 / 0.000 |
+| C09 Ornate (18 parts) | 10.16 / 0.551 | 0.3935 / 0.394 | 0 / 0.000 | 2.625 / 0.542 | 5.411 / 0.191 | 20.25 / 0.821 | 1 / 0.000 | 0.08005 / 0.000 |
 | C10 Gamey filler, symmetric | 6.916 / 0.301 | 0 / 0.000 | 0 / 0.000 | 2.139 / 0.000 | 4.98 / 0.056 | 8.871 / 0.280 | 1 / 0.000 | 0.1927 / 0.156 |
 | C11 Gamey filler, lopsided | 6.916 / 0.301 | 0 / 0.000 | 0.002488 / 0.004 | 2.128 / 0.000 | 5.02 / 0.069 | 10.04 / 0.335 | 1 / 0.000 | 0.1925 / 0.156 |
 | C12 Arming, blade in 5 overlapping segments | 8.6 / 0.431 | 0.2843 / 0.284 | 0 / 0.000 | 2.263 / 0.000 | 5.644 / 0.264 | 9.72 / 0.320 | 1 / 0.000 | 0.1055 / 0.035 |
-| C13 Arming, guard = half + mirror (+CornerWedges) | 5.984 / 0.230 | 0.2831 / 0.283 | 0 / 0.000 | 2.278 / 0.000 | 5.644 / 0.264 | 11.17 / 0.389 | 1 / 0.000 | 0.1071 / 0.038 |
+| C13 Arming, guard = half + mirror (+CornerWedges) | 5.984 / 0.230 | 0.2843 / 0.284 | 0 / 0.000 | 2.278 / 0.000 | 5.644 / 0.264 | 11.17 / 0.389 | 1 / 0.000 | 0.1071 / 0.038 |
 | C14 Arming translated (0, +0.27, +0.05) | 4.6 / 0.123 | 0.2843 / 0.284 | 0 / 0.000 | 2.26 / 0.000 | 5.644 / 0.264 | 5.709 / 0.129 | 1 / 0.000 | 0.1055 / 0.035 |
 | C15 Arming rotated 4 deg about Z at the grip | 4.6 / 0.123 | 0.2824 / 0.282 | 0.3144 / 0.524 | 2.262 / 0.000 | 5.626 / 0.258 | 5.709 / 0.129 | 1 / 0.000 | 0.1054 / 0.035 |
 
@@ -336,18 +350,18 @@ EdgeLength 4.8–8.0 (arming 0.068 below Hard, required Hard ≥ 0.30, wanted Ha
 |---|---|---|---|---|---|---|---|---|
 | F1 ArmingSword | 1.176 / 0.000 | 0.001614 / 0.002 | 0 / 0.000 | 2.258 / 0.000 | 5.433 / 0.198 | 0.2483 / 0.000 | 1 / 0.000 | 0.02531 / 0.000 |
 | F2 MinimalSword | 1 / 0.000 | 0 / 0.000 | 0 / 0.000 | 1.991 / 0.000 | 4.98 / 0.056 | 0 / 0.000 | 1 / 0.000 | 0.0384 / 0.000 |
-| F3 Rapier | 1.092 / 0.000 | 0.7143 / 0.714 | 0.005451 / 0.009 | 2.98 / 1.000 | 7.409 / 0.815 | 0.1792 / 0.000 | 1 / 0.000 | 0.008698 / 0.000 |
+| F3 Rapier | 1.092 / 0.000 | 0.7171 / 0.717 | 0.005451 / 0.009 | 2.98 / 1.000 | 7.409 / 0.815 | 0.1792 / 0.000 | 1 / 0.000 | 0.008698 / 0.000 |
 | F4 Cleaver | 2 / 0.000 | 0 / 0.000 | 0.3954 / 0.659 | 1.778 / 0.000 | 5.724 / 0.289 | 1 / 0.000 | 1 / 0.000 | 0.3264 / 0.342 |
 | F5 StarterSword | 1.176 / 0.000 | 0.001614 / 0.002 | 0 / 0.000 | 2.258 / 0.000 | 5.433 / 0.198 | 0.2483 / 0.000 | 1 / 0.000 | 0.02531 / 0.000 |
 | C01 Minimal | 1 / 0.000 | 0 / 0.000 | 0 / 0.000 | 1.854 / 0.000 | 5.06 / 0.081 | 0 / 0.000 | 1 / 0.000 | 0.06 / 0.000 |
 | C02 Arming (Iron) | 1.6 / 0.000 | 0.03922 / 0.039 | 0 / 0.000 | 2.281 / 0.000 | 5.644 / 0.264 | 1.563 / 0.000 | 1 / 0.000 | 0.0324 / 0.000 |
 | C02 Arming (Steel) | 1.6 / 0.000 | 0.03922 / 0.039 | 0 / 0.000 | 2.281 / 0.000 | 5.644 / 0.264 | 1.563 / 0.000 | 1 / 0.000 | 0.0324 / 0.000 |
-| C04 Rapier (Steel blade) | 1.169 / 0.000 | 0.3222 / 0.322 | 0 / 0.000 | 2.63 / 0.550 | 7.107 / 0.721 | 0.4657 / 0.000 | 1 / 0.000 | 0.01552 / 0.000 |
+| C04 Rapier (Steel blade) | 1.169 / 0.000 | 0.3222 / 0.322 | 0 / 0.000 | 2.63 / 0.550 | 7.149 / 0.734 | 0.4657 / 0.000 | 1 / 0.000 | 0.01552 / 0.000 |
 | C05 Cleaver | 3 / 0.000 | 0 / 0.000 | 0.327 / 0.545 | 2.048 / 0.000 | 5.972 / 0.366 | 3.606 / 0.029 | 1 / 0.000 | 0.3974 / 0.441 |
-| C06 Sabre (Steel) | 5.486 / 0.191 | 0.1089 / 0.109 | 0.6682 / 1.000 | 2.397 / 0.162 | 6.48 / 0.525 | 6.932 / 0.187 | 1 / 0.000 | 0.0337 / 0.000 |
+| C06 Sabre (Steel) | 5.486 / 0.191 | 0.1093 / 0.109 | 0.6682 / 1.000 | 2.397 / 0.162 | 6.48 / 0.525 | 6.932 / 0.187 | 1 / 0.000 | 0.0337 / 0.000 |
 | C07 Dagger | 1.405 / 0.000 | 0 / 0.000 | 0 / 0.000 | 1.844 / 0.000 | 2.968 / 0.000 | 1.084 / 0.000 | 1 / 0.000 | 0.01458 / 0.000 |
-| C08 Greatsword | 2.2 / 0.000 | 0 / 0.000 | 0 / 0.000 | 2.217 / 0.000 | 6.392 / 0.497 | 2.891 / 0.000 | 1 / 0.000 | 0.072 / 0.000 |
-| C09 Ornate (18 parts) | 3.46 / 0.035 | 0.164 / 0.164 | 0 / 0.000 | 2.585 / 0.474 | 5.411 / 0.191 | 7.047 / 0.193 | 1 / 0.000 | 0.02712 / 0.000 |
+| C08 Greatsword | 2.2 / 0.000 | 0.003108 / 0.003 | 0 / 0.000 | 2.217 / 0.000 | 6.392 / 0.497 | 2.891 / 0.000 | 1 / 0.000 | 0.072 / 0.000 |
+| C09 Ornate (18 parts) | 3.46 / 0.035 | 0.1676 / 0.168 | 0 / 0.000 | 2.585 / 0.474 | 5.411 / 0.191 | 7.047 / 0.193 | 1 / 0.000 | 0.02712 / 0.000 |
 | C10 Gamey filler, symmetric | 2.822 / 0.000 | 0 / 0.000 | 0 / 0.000 | 1.935 / 0.000 | 4.98 / 0.056 | 2.885 / 0.000 | 1 / 0.000 | 0.06365 / 0.000 |
 | C11 Gamey filler, lopsided | 2.822 / 0.000 | 0 / 0.000 | 0.004773 / 0.008 | 1.939 / 0.000 | 5.02 / 0.069 | 2.885 / 0.000 | 1 / 0.000 | 0.06365 / 0.000 |
 | C12 Arming, blade in 5 overlapping segments | 5.6 / 0.200 | 0.03922 / 0.039 | 0 / 0.000 | 2.289 / 0.000 | 5.644 / 0.264 | 5.563 / 0.122 | 1 / 0.000 | 0.0324 / 0.000 |
@@ -366,16 +380,16 @@ EdgeLength 4.8–8.0 (arming 0.068 below Hard, required Hard ≥ 0.30, wanted Ha
 | C01 Minimal | 0.1486 / 0.1486 Normal | 0.0000 / 0.0000 Normal | 0.0407 / 0.0407 Normal | N/N/N |
 | C02 Arming (Iron) | 0.0355 / 0.0355 Normal | 0.1137 / 0.1137 Normal | 0.1318 / 0.1318 Normal | N/N/N |
 | C02 Arming (Steel) | 0.0355 / 0.0355 Normal | 0.1137 / 0.1137 Normal | 0.1318 / 0.1318 Normal | N/N/N |
-| C04 Rapier (Steel blade) | 0.0000 / 0.0000 Normal | 0.3368 / 0.3368 Hard | 0.4703 / 0.4703 Hard (Expert) | N/H/H |
-| C05 Cleaver | 0.5451 / 0.5451 Hard (Expert) | 0.1363 / 0.1363 Normal | 0.3466 / 0.3466 Hard | H/N/H |
+| C04 Rapier (Steel blade) | 0.0000 / 0.0000 Normal | 0.3379 / 0.3379 Hard | 0.4769 / 0.4769 Hard (Expert) | N/H/H |
+| C05 Cleaver | 0.5451 / 0.5451 Hard (Expert) | 0.1369 / 0.1369 Normal | 0.3466 / 0.3466 Hard | H/N/H |
 | C06 Sabre (Steel) | 0.0097 / 0.0097 Normal | 0.2991 / 0.2991 Hard | 0.5948 / 0.5948 Hard (Expert) | N/H/H |
 | C07 Dagger | 0.0000 / 0.0000 Normal | 0.0000 / 0.0000 Normal | 0.0000 / 0.0000 Normal | N/N/N |
 | C08 Greatsword | 0.1563 / 0.1563 Normal | 0.0992 / 0.0992 Normal | 0.2487 / 0.2487 Hard | N/N/H |
-| C09 Ornate (18 parts) | 0.0001 / 0.0001 Normal | 0.3170 / 0.3170 Hard | 0.1904 / 0.1904 Normal | N/H/N |
+| C09 Ornate (18 parts) | 0.0001 / 0.0001 Normal | 0.3201 / 0.3201 Hard | 0.1904 / 0.1904 Normal | N/H/N |
 | C10 Gamey filler, symmetric | 0.1565 / 0.1565 Normal | 0.0000 / 0.0000 Normal | 0.0282 / 0.0282 Normal | N/N/N |
 | C11 Gamey filler, lopsided | 0.1562 / 0.1562 Normal | 0.0012 / 0.0012 Normal | 0.0368 / 0.0368 Normal | N/N/N |
 | C12 Arming, blade in 5 overlapping segments | 0.0355 / 0.0355 Normal | 0.1137 / 0.1137 Normal | 0.1318 / 0.1318 Normal | N/N/N |
-| C13 Arming, guard = half + mirror (+CornerWedges) | 0.0376 / 0.0376 Normal | 0.1133 / 0.1133 Normal | 0.1318 / 0.1318 Normal | N/N/N |
+| C13 Arming, guard = half + mirror (+CornerWedges) | 0.0376 / 0.0376 Normal | 0.1137 / 0.1137 Normal | 0.1318 / 0.1318 Normal | N/N/N |
 | C14 Arming translated (0, +0.27, +0.05) | 0.0355 / 0.0355 Normal | 0.1137 / 0.1137 Normal | 0.1318 / 0.1318 Normal | N/N/N |
 | C15 Arming rotated 4 deg about Z at the grip | 0.0353 / 0.0353 Normal | 0.2701 / 0.2701 Hard | 0.4291 / 0.4291 Hard (Expert) | N/H/H |
 
@@ -1323,6 +1337,588 @@ C05 0.309, X03 0.280, P1 0.278; `out/gaps_collect_q1.txt`).
 
 **Not done here.** No Studio timing. Nothing in `src` moved, so the fifth round's bit-for-bit compares, units, timings and
 precision stand. The mutants left alive were not killed, `along`'s among them.
+
+### E-S2.13 Difficulty as built (`m3/`)
+
+M3 ported S2/v2's edge and factors onto the build's verdict and measure: `Physics/Edge`, `Factors` and `Difficulty`,
+phases 6 and 7 of `Analyze.run`, every walk in the measure's rank order (`Sampling.measureRanked`). Its plan was
+measured through `verdict/analyze_build.luau`, the emulator; the numbers below are the build's, Lune 0.8.9, each
+builder's and fixer's method and load in `docs/build/M3-notes.md`, the 2 % rule's limits in `m3/limits.luau` (→
+`m3/out/limits.txt`). M3's fix round 1 then changed four things (fixer A): Thinness' chords and the edge's thickness
+merge across the gaps the verdict hides (≤ `HIDE_OFFSET` + `EPS_GEOM`); θ is every local axis of a polyhedron (a
+Cylinder's axis and two radial directions fixed by Z, a Ball's world axes); a polyhedron's samples are walked in a
+canonical order and each part's probes placed by a rank-1 lattice; the raster reads each cell 0.0013 off its centre
+towards x = 0 and 0.0017 up. Then fixer B took the physics frame and the guard line from the kept parts (SPEC §4.5), and
+pinned §5.1's soft OR, the frame's rank order, each loop's charges and §4.6's boundaries in tests (each failing on its
+mutant). Then fixer C ran Douglas–Peucker on the outline's integer lattice (SPEC §4.6, the M3 lead's L3 option (a)), so
+a Y shift keeps the edge to the bit. M3's fix round 2 (fixer D) merged a hidden gap however slantwise a chord crosses it
+to the next part (Thinness' union chord and the edge's thickness: where the measure's hide test hides both faces at the crossing,
+each by the part across, `Edge.hiddenGap`) and read every part but a Thinness probe's own grown by `TIE` = 1e-10, so a
+probe on another part's face meets it whatever the rounding (bullet below). Fixer E then measured what the hide test's
+point probe shows of a face flush on a thin part, what fix round 1 moved beyond the 70 fixtures, the X mirror's cause, a
+Wedge written its other way and the timing under the machine's ordinary load (bullets below; scripts in the session's
+Temp scratch `m3-fix2e`, figures in `docs/build/M3-notes.md`). M3's fix round 3 (fixer F) asked a hidden gap's probes of
+every part of the set, not only of the part across, so that a flush seam beside a slanted crossing no longer reopened
+the gap, each crossing point within `HIDE_OFFSET` + 2·`EPS_GEOM` of the other across (bullet below; withdrawn in fix
+round 4). Fixer G then measured what stays open, a slanted slit's mouth at the blade's outline, against a scratch
+closure of it, and the round's minor figures (bullets below; scripts in the session's Temp scratch `m3-fix3g`). M3's fix
+round 4 (fixer H) withdrew the set, which merged visible air at a grazing slant, and measured what the part across alone
+merges, on flat and round faces, and the seam it leaves open (bullet below; scripts in the session's Temp scratch
+`m3-fix4h`). Fixer I then re-measured the round's minor figures and estimated what a measure that follows the solid
+would move and cost (SPEC §17.1 O11 (iii); bullet below; scripts in the session's Temp scratch `m3-fix4i`).
+
+- **The §5 table.** As M3 was first built, `Analyze.run`'s d per step equalled the emulator's in rank order on the 70
+  fixtures of the repo (F, C, X, P, P1–P3 with a floating or an attached speck, A24–A27), and its factor raws on the 63
+  prototype fixtures whose verdict the build shares were bit-identical to the emulator's (1,512 raws). Against each
+  fixture's own part order, as §5.5 and E-S2.9 were fitted, the rank order moves one cell of §5.5: C09's Hammering
+  0.3170 → 0.3186 (its Thinness on All 0.3858 → 0.3898), no tier. Fix round 1 moved, every tier of §5.5 held: C04 0.3368
+  / 0.4703 → 0.3379 / 0.4769 (Hammering / Sharpening), C05 0.1363 → 0.1369, C09 0.3186 → 0.3201 (Thinness on All
+  0.3935), C13 0.1133 → 0.1137 (its Thinness now C02's, its guard mirrored), F3's, C06's and C08's Thinness on the Blade
+  without a step's move; X01 and X01raw 0.0756 → 0.0749, X05-0.050 0.1038 → 0.1037; and, θ reading a Wedge's taper, P3's
+  Hammering 0.1804 Normal → 0.2752 Hard, P5's 0.1902 Normal → 0.2167 Hard, P3's with a speck 0.1759 → 0.2559 Hard. The
+  T-DIF-06 sweeps (F5 thinned, C02 lengthened) and F5's 0.1037 are unchanged. T-DIF-12's goldens
+  `tests/golden/difficulty_{calibration, regression, cost}.bv1.golden.txt` hold 42,408, 84,793 and 24,405 bytes since
+  fix round 2, which fix rounds 3 and 4 left byte for byte (42,414, 84,891 and 24,409 after fix round 1, 42,266,
+  84,811 and 23,900 as first built); field by field only Thinness, g, d and the tiers named here and the edge,
+  EdgeLength and cutIndex below moved, then, with the kept parts' frame, A25's and P1's (with or without a speck)
+  balance and bladeLength and A25's cutIndex (below), then, with the lattice, the chains' lengths and EdgeLength in
+  their last bits on 55 of the 70 entries (no g, d or tier) and the chains of P1, P2, P4 and P1's and P2's specks
+  (below). Against the reference prototype in rank order: PartCount, Asymmetry and MaterialMix to the bit, Volume within
+  1.4e-17, SurfaceComplexity within 1.3e-15 where the measure's grid is the prototype's; X02's is not (hSurf 0.04
+  against 0.06: SurfaceComplexity raw 0.0069 and Joints 0.159 off on All), its Smelting the same; Thinness and
+  EdgeLength are the build's own since fix round 1; P1 keeps the build's own verdict.
+- **The edge (T-EDG-01).** cutIndex: F1 = F5 0.724180, F2 0.425000, F3 1, F4 0.134375, C01 0.300000, C02 = C02s = C12 =
+  C14 = C15 0.766667, C04 1, C05 0.161483 (0.158369 on centred cells), C06 0.890676, C07 0.313333, C08 0.617500, C09 1,
+  C10 = C11 0.271528, C13 0.765380, A26 0.507963, P5 0.820973, P2 0 (the build's physics frame tilts −45°, bladeLength
+  2.1073; the prototype's 0.0225). EdgeLength within 4.3e-5 of the plan's 4-decimal values but C04 7.1067 → 7.1487 (the
+  cells `RASTER_TOL` off its blade's faces at ±0.045, which 0.045 + 0.005 < 0.05 left out by rounding, are in), C06
+  6.4797 → 6.4795 and C15 5.6261 → 5.6260. Every fixture's edge was the emulator's to the bit (64 of 64); read off the
+  centres, 12 of the prototype fixtures whose verdict the build shares read otherwise (C04, C05, C06, C09, C15, F4, X03,
+  X07c, P2 15 → 14 chains, P3, P4 6 → 5 chains, P5; P3's mean thickness also by the merged hidden gaps, +2.6e-5), and P1
+  (1 → 2 chains, 0.1897 → 0.2286), no tier; with the lattice P2 has 15 chains and P4 6 again (their rasters still the
+  build's), P1 4 (0.1897), and every other prototype fixture's edge is the prototype's within 1e-12. Of the sample
+  offsets tried, 0.0013 / 0.0017 towards x = 0 and up moved the fewest fixtures (19); away from x = 0, 29, A24's 0.02
+  needle losing its plain cells (cutIndex 1 → 0); downward, 59. The cell-size ladder charges a unit per kept part per
+  row it tries: Edge's longest median stretch at `CHECK_UNITS` 500 is then 0.080 ms (0.298 without), Edge alone 0.58 ms
+  (F5) to 5.48 (a worst valid design).
+- **Douglas–Peucker on the outline's integer lattice** (SPEC §4.6, the M3 lead's L3 option (a)): a vertex at (2i, 2j),
+  an edge's midpoint at the sum of its ends, squared distances compared as integers (cross², \|ap\|²·\|ab\|² or
+  \|bp\|²·\|ab\|² against tol²·\|ab\|², under 2^52 for a design within Canonical's bounds), the first maximum by index,
+  a segment's length its lattice length × the cell. Tried first on the centred raster, it moved C15's Sharpening 0.4291
+  → 0.4299 through one exact tie (cross 12 = 12), P1 1 → 4 chains and P2 15 → 16, and was not adopted. Fix round 1
+  adopted it on the raster read off the centres (fixer C, from builder 1's and fixer B's ports). Against the tree before
+  (`Analyze.run` with `measureInvalid`, every value to 17 digits) the physics (M2's fields, cutIndex) and the raster
+  never move. Of the 136 Parity fixtures 33 are identical, 91 move only in their lengths' and points' last bits (≤
+  1.8e-15; every F, C, X and A fixture is among these two), 12 for real, no tier: P1 2 → 4 chains (EdgeLength 0.2286 →
+  0.1897), P1 with either speck 1 → 2 (0.2286 → 0.18), P2 14 → 15 (1.2322 → 1.2325), P2 with either speck two chains
+  re-picked (0.1345 → 0.1308, 0.0728 → 0.0806), P4 5 → 6, P5 two pairs of equal chains in the other order, worst valid 3
+  15 → 16, 7 2 → 4, 9 Sharpening 0.0549 → 0.0543 (EdgeLength 5.0840 → 5.0806, the only d that moves), 10 its second
+  chain 3 → 2 points. Of the 200 generated designs of `PARITY_SEED` 3 move (Gen 5, 92, 176), no d; of the 33,389
+  plausible designs 28 (17,504 identical, 15,857 in the last bits), 12 d values by at most 0.0012 (a plate poking 0.03
+  out of C02's edge: Sharpening 0.1825 → 0.1837), no tier. Every real move is one of four exact ties that blueprint XY
+  decided by rounding: a point exactly 1 cell from its segment, which it measured a hair farther (P1's
+  0.060000000000000053 against 0.06) and kept, now dropped (12 of the fixtures' 20 runs that pick other points, out of
+  261; 22 of the plausible designs' 28); two points tied for the farthest, where it took a later one (8; 6); a chain
+  exactly `EDGE_MIN_CHAIN` cells long, whose length in blueprint XY fell short (0.17999999999999972 against 0.18: P1's
+  three, worst valid 7's two), now kept; and two chains of one length, now equal to the bit and ordered by their first
+  point (P2, P5). Every one of the 1,793 shifted copies of TestRng 0x5EED0001's first 300 generated designs keeps its
+  edge to the bit (the build's rule in blueprint XY changed some length's last bits on 291, and #131's outline at (0,
+  0.2, 0.05): 6.4133 → 6.3895), and so do the 410 shifted copies of the 71 fixtures (P1, P2 with a speck and P5 changed
+  under 11 of them).
+- **Ties under a shift** (§4.6, §17.2). On centred cells the raster decided by rounding where a cell centre lay on a
+  face, `RASTER_TOL` from one or on a thin Wedge's edge: 11 of 370 copies of the 64 prototype fixtures moved under
+  E-S2.10's offsets (C05 +0.125: 1 cell; C09 0.037 down in Z: 240 cells, bladeArea 0.620 → 0.524, mean thickness 0.0433
+  → 0.0512, cutIndex 1 → 0.884; C10 / C11 +0.3317: EdgeLength −0.04 / −0.02, Sharpening's G 0.0063 / 0.0031; X03 10
+  cells, X07c 2, P5 12 at +0.3317; P1 1 → 2 chains at (0, 0.2, 0.05)), the prototype the same bit for bit. Read off the
+  centres, none of the 410 shifted copies of the 71 fixtures inside the hitbox changes its raster, and with the lattice
+  none its edge (its chains, points' x and lengths to the bit, the points moved by Δy): in blueprint XY P1, P2 with a
+  speck and P5 changed an outline's points or chains under 11 of them (G 0.0003 at most), and of 1,793 shifted copies of
+  TestRng 0x5EED0001's first 300 generated designs 4 their outline (#131 at (0, 0.2, 0.05): 6.413334 → 6.389542,
+  Sharpening's g 0.4523 → 0.4486; on centred cells 6.450091 over 10 points → 6.426299 over 8, 0.4580 → 0.4543), none
+  now. G still moved on 44 of the 410 copies, the edge kept, no flip: on 43 through Thinness, where a probe lies exactly
+  on another part's face and the shift's rounding moved it off (F1's tip, a Block turned 45° and centred on its blade's
+  top face at y 3.98, has probes there: at +0.125 the union chord along z no longer met the blade, τ 0.06 → 0.055; F1,
+  F5 and the X and A fixtures built on them moved 0.0006–0.0017, mostly at +0.125, a few at +0.3317 or (0, 0.2, 0.05),
+  X02 and its base 0.0031, past `TOL_G_INVARIANT`; P5 0.0003; on 12 of the 500 property-stream designs moved along their
+  Y draw alone, up to 0.0016, every probe whose chord moved within 3e-16 of a face), and on C09 0.037 down in Z through
+  SurfaceComplexity (0.0007). Since fix round 2 (every part but a probe's own grown by `TIE`) only C09 in Z moves G: of
+  the 544 copies of the 136 Parity fixtures inside the hitbox, 45 moved G along Y alone (largest X02's 0.0031) and none
+  now, no step's Thinness by more than 1e-12. Every X mirror image keeps its raster.
+- **Invariance (T-DIF-07, T-DIF-08).** E-S2.10's offsets on F1–F5 and C01–C15 (111 copies): Δx ≤ 0.0017, ΔG ≤ 0.0007
+  (F1, F5), the edge and cutIndex as above; F5 in 2, 3 and 7 pieces and C12 against C02: Δx ≤ 8.3e-16, ΔG 0. On 500
+  generated designs of the property stream (`PROP_BASE_SEED`): translated ΔG ≤ 0.0016, Δx ≤ 0.0040, no flip, and along
+  their Y draw alone every edge kept to the bit and G on all but 12, each through a Thinness probe on a face (above);
+  since fix round 2 translated ΔG 0 and Δx under 5e-5, and along Y alone G on all;
+  re-cut flush (`Gen.segmented`, each design cut) Volume and EdgeLength 0, ΔG up to 0.0379 (#115: Asymmetry on the
+  Blade), then 0.0339, 0.0294, 0.0215, 0.0195, 3 past 0.024, one tier flip (#297, seed 4102300182: Hammering 0.2011 Hard
+  → 0.1978 Normal); Thinness' x up to 0.0846, Asymmetry's 0.0730 (All) and 0.1261 (Blade). Before fix round 1: ΔG up to
+  0.1250, then 0.0615, 0.0448, 0.0378, 0.0325, 5 past 0.024, one flip (case seed 515583194: two tip blocks cut into
+  pieces 0.0879 and 0.1066 long, but chiefly a main blade turned and cut in three, whose 3 × 48 × 3 grid a stride of 3
+  took on one outer Z layer, where the Z line crosses its corners, and its pieces' 3 × 18 × 3 on the middle one:
+  Thinness on All 0.3395 → 0.0269, Hammering 0.2158 Hard → 0.0908 Normal; now 0.2088 → 0.2082), Thinness' x up to
+  0.3126; θ alone (every local axis, a plain stride) left it at 0.1251 with 11 past 0.024, the canonical walk with a
+  plain stride at 0.0824 with 9; on TestRng 0x5EED0007's 300, the M3 plan's stream, ΔG up to 0.0236, no flip. V1's fins
+  cut into pieces shorter than they are thin: ΔG 0.0104, 0.0111, 0.0185, 0.0005 (0.2229, 0.3298, 0.2962, 0.3823, each a
+  tier, before). Another writing: Gen #244's blade (TestRng 0x5EED0042, turned 54° about Y) in its 24 writings plays
+  Hammering 0.1032 every time, 0.1983 at 0.0475 thick (0.0734–0.1226 and 0.1893 Normal – 0.2051 Hard before; g, d and
+  tier the same, every factor within 5e-15); every Block of 300 generated designs written (b, a, c) a quarter turn about
+  Z: ΔG 0 (0.0298 before; 500 more in T-DIF-07 (d)); F5's blade 0.05 to 0.06 thick with a square rib or a round rod on
+  its face, 28 sizes, two writings each: 0 (up to 0.0728 and 0.0604, 5 flips, before); every Wedge of the 19 fixtures
+  that have one written its other way (size (x, z, y), turned the half-turn (x, y, z) → (−x, −z, −y); M3's review round
+  2, V1's `wedgewrite`, re-run on fix round 2's tree): Thinness the same on every one, and only C09's bevel 15 (2.4 ×
+  0.03 × 0.05) moves anything, M2's surface samples, which follow its writing: SurfaceComplexity −0.00105 on All and
+  −0.00215 on the Blade, Hammering 0.3201 → 0.3196, Sharpening 0.1904 → 0.1897, mass to the bit. Round parts' grids
+  follow their writing: every Ball of the 94 designs of 0x5EED0042's first 300 that have one, turned 70°: ΔG up to
+  0.0093 (#201), mass up to 6.6e-4, 51 designs move, no flip; Cylinders spun 30°: ΔG up to 0.0048, no flip (both as
+  before the round).
+  A laminate across the verdict's gap window: F5's blade split through its thickness plays Hammering 0.1035 Normal at
+  every gap up to 0.0120 (0.3981 Hard from 0.0101 before), and F5, C02, C05, C08 and F2 at 0.0099 → 0.0101 flip nothing
+  (all five did); crossed slantwise since fix round 2, below. The gap's volume still leaves SurfaceComplexity's V, its faces staying out of A (V1's `gapsc`,
+  re-run): C02's blade split 0.005, 0.0099 and 0.0119 apart plays Sharpening 0.1318 → 0.1535, 0.1871 and 0.2016 Hard,
+  its Thinness and cutIndex the same; with that blade 0.15 longer 0.1889 Normal → 0.2173 Hard, 0.2516, 0.2664; F5 0.0989
+  → 0.1109, 0.1430, 0.1567 (§17.1 O10); from 0.0121 the faces show (C02 0.3318). Swords built half and mirrored (with
+  the plane's parts that are not their own image): Asymmetry 0 on 500. A whole design against its X mirror image: F1–F5
+  and C01–C15 the same; 150 generated designs EdgeLength ≤ 0.37 % (the mirrored outline is traced the other way round,
+  so Douglas–Peucker keeps other points: #132 6.4133 over 10 points, 6.3895 over 8), ΔD ≤ 0.0621 since fix round 1's
+  Thinness (fixer A's θ, walk and pick), no flip (#24: Hammering 0.1585 → 0.0964, Thinness on All 0.394 → 0.239; 0.0081
+  before the round; the lattice moves neither figure). Its cause (M3's review round 2, V1 and V2; re-measured on fix
+  round 2's tree): every part's probes read the same τ in #24 and its image but the Wedge tip's (0.0894 × 0.1817 ×
+  0.0628, turned 90° about Y; 8 samples, 4 probes), whose smallest local axis lies along X. The walk signs that axis up
+  the world, +X, in the design and in its image alike, so the image's walk is not the mirror of the design's: the
+  design's runs 2 samples at x −0.016, then 6 at +0.016, the image's 6 then 2, and the lattice, from slot 4 in steps of
+  5, takes slots 4, 1, 6 and 3 of each, 2 of the image's 4 the mirrors of the design's: τ 0.0235, 0.0549, 0.0392,
+  0.0392 against 0.0392, 0.0392, 0.0549, 0.0549, the one probe at the thin edge (φ 1) carrying Thinness' self-weighted
+  mean. Read with every owned sample a probe, #24 and its image both give 0.3697. No sign rule from the world follows a
+  mirror across x = 0 for an axis along X (signing by z before x, fixer C's try, leaves 0.0621).
+- **Fix round 2: hidden gaps crossed slantwise, face ties, aimed re-cuts** (fixer D; scripts in the session's Temp
+  scratch `m3-fix2d`, figures in `docs/build/M3-notes.md`). *Hidden gaps.* M3's review round 2 (V1): a chord merged a
+  gap by its width along the chord, the verdict hides it by its width across, so F5's blade turned 30° about its length
+  and split, its faces hidden 0.0105 apart (0.0121 along Z), played Hammering 0.4095 Expert against 0.1318 Normal at
+  0.0100 (turned 15°: 0.1043 → 0.4001 at 0.0119; 45°: 0.1765 Normal → 0.3323 Hard at 0.009), and two Wedges cut along
+  its X-Z diagonal 0.3028 Hard at 0.0113 against 0.1762 Normal at 0.0112. A chord past `HIDE_OFFSET` + `EPS_GEOM` now
+  joins the next where the measure's hide test hides both faces at the crossing, each by the part across
+  (`Edge.hiddenGap`, Thinness' union chord and the raster's thickness alike): the turned laminate reads Thinness 0.3017
+  / 0.3021 / 0.3033 at 0.0100 / 0.0105 / 0.0119 (Hammering 0.1318–0.1321 Normal), the diagonal 0.1442 / 0.1433 / 0.1416,
+  and both jump only at 0.0121, where SurfaceComplexity says the faces show (2.2312 → 2.8824). Laminates turned 0°, 15°,
+  30°, 45°, 60° and 75° about the blade's length (F5's hilt) and across it (a short blade on a long grip) at 0.0100,
+  0.0119, 0.01200005, 0.0120002, 0.0121 and 0.0125: Thinness continuous to 0.01200005 and jumping with SurfaceComplexity
+  at 0.0120002, at every angle (merged along the chord alone it jumped from 15°); continuous, not flat: where a probe's
+  line crosses a slit's mouth at the rims it drifts with the gap (M3's review round 3, bullet below). V1's distance rule
+  (each part within the window of the other's crossing point) merged non-facing neighbours where the verdict shows them:
+  of 9,600 lines through each pair, a square rod's edge over a plate 32–41 crossings (15°–30°), a roof of two plates
+  ±20° edge to edge 9–44 (even 0.013 apart), none for a facing pair or a half stair, and on the plausible set 4,164 of
+  its 5,207 joins crossed a face that shows (65 designs moved, 4 a tier, ribbed bars Hard → Normal; worst valid 4's
+  Hammering 0.2215 Hard → 0.1994 Normal); the hide test at the crossing merged none of those. What the rule moved,
+  against the tree before: no F, C, X or A value; worst valid 4, 9 and 10's mean thickness +1.1e-5 (cutIndex −2.1e-5 to
+  −2.7e-5) and worst valid 8's Sharpening Thinness 0.745625 → 0.746206 (no d); 14 of the 33,389 plausible designs,
+  ribbed bars whose ribs' inner faces, 1e-4 off the rod at the tangent, a chord crosses 0.0121 apart along the line
+  (Hammering down by up to 0.0386, no tier). Its tests are charged (F5 on All 4,801 → 4,911 units, P5 14,656 → 14,794,
+  on the Blade 8,217 → 8,273); a sorted sweep and V1's closure gave the same chords on every fixture. *Face ties* (V2):
+  a probe exactly on another part's face, its chord along it, met that part by rounding, so a design's Y draw alone
+  moved G on 53 of 3,000 generated designs of six property streams (up to 0.0055; T-DIF-07's asserts failed on 3 of 5
+  other seeds) and every Block written (b, a, c) on 2 (0.0007). Every part but the probe's own is now read grown by
+  `TIE` = 1e-10, its box test and its chord: none of those moves G, Thinness only in its last bits (up to 1.14e-14), and
+  `tests/Physics` (T-PERF-01 aside) passes on all six seeds; one design of V2's 0x0C0FFFE1 stream still moves G 0.0001
+  along Y through M2's owned volumes (a round part's sampled overlap), Thinness unmoved. It moved X04-5-0.006,
+  X05+0.002, X05+0.006 and X05-0.020 0.1044 → 0.1037 (F5's: their tip's probes on the blade's face), Parity's Gen 17,
+  19, 131, 161 and 193 (up to 0.0012) and 839 plausible designs, 53 a played tier (fullers 560, 47 a tier; wedges in
+  guards 107; plate edges 57; grilles 36; cylinder ribs 29; rods 26; bevels 24, 6 a tier; with the slanted merge's 14
+  ribbed bars, d on 853 for the round; V2's dumps of the trees with the tie rule alone and the slanted merge alone, M3's
+  review round 3, re-counted by fixer G), \|Δd\| up to 0.3932; on 57 of them (8 a family) every one of the 1,672 probes
+  whose τ moved runs a line along another part's face within 1e-11 (a fuller's groove edge on a column of samples: the
+  strip's chord along its side face). A nudge of the other parts' line by (−0.491, −0.237, 0.838)·1e-9 (its least part
+  along 56,808 face normals of 0.5° single-axis and 15° two-axis turns 1.57e-12) passed the same seeds and moved the
+  same fixtures and generated designs, but decided each tie by its direction (a groove's two edges opposite ways,
+  swapped by an X mirror) and moved 1,270 plausible designs, 82 a tier. *Aimed re-cuts* (V1, V2; `recutaim`,
+  `recutdown`, `recutwedge` on the final tree): V1's plate (0.15 × 2.4 × 0.03 on the +Z face of a 0.12 blade on a
+  6,096-sample hilt, overhanging −X by 0.05) plays Hammering 0.1075 Normal whole, 0.1608 / 0.1786 / 0.2141 Hard / 0.2853
+  / 0.3242 / 0.3254 in 3 / 4 / 6 / 8 / 10 / 11 pieces (Thinness 0.2667 → 0.8116); overhanging +X by 0.05, 0.1253 →
+  0.0008 from 6 pieces; by 0.08, 0.2158 Hard → 0.1446 Normal in 4 pieces, 0.0024 in 11; Blade Wedges cut along their
+  length (450 re-cuts of F4, Parity's 200 and the property stream's 500) up to 0.0521, 16 past 0.024, a tier on Prop 425
+  (0.2037 → 0.1645) and Prop 297 (0.2011 → 0.1993). A floor of 8 probes a part, stratified and weighted by its share
+  (scratch, not adopted): V1's plate 0.1075 → 0.0808, the others 0.1253 → 0.0808 and 0.2158 → 0.2424, but a 0.025 plate
+  overhanging 0.11, 0.1871 Normal → 0.2101 Hard in 4 pieces; probes +1.2 % on the worst valid designs and P1, C10's and
+  C11's 605 → 748. *Cost* (`Analyze.run`, the tree before and this one alternating in one process, a collection before
+  each run, medians of 41, the machine 17 % → 6 % busy): × 0.995–1.028 on the worst valid designs and P1, worst valid 8
+  × 1.0255, so its 53.4 ms quiet projects to 54.8 (the tie rule alone × 0.985–1.045, the probe floor against the round's
+  tree × 0.985–1.042, both within the noise: an identical copy measured × 0.957–1.033 at 21 rounds).
+- **Fix round 3: hidden gaps asked of the set** (fixer F; withdrawn in fix round 4, next bullet; scripts in the
+  session's Temp scratch `m3-fix3f`, figures in `docs/build/M3-notes.md`). *The seam* (M3's review round 3, V1):
+  `Edge.hiddenGap` asked only the part the line meets next whether it holds a face's probe, where the measure's hide
+  test asks every part, so a flush seam in the far plate beside a slanted crossing reopened a gap the verdict hides.
+  F5's laminate turned 30° and split 0.0105 apart plays Hammering 0.1319 Normal (Thinness 0.3021); with its upper plate
+  in 4 flush pieces it played 0.3095 Hard (Thinness 0.7457, the mean thickness 0.05925 → 0.05779, cutIndex 0.7349 →
+  0.7586) where the same pieces 0.0100 apart (merged along Z) play 0.1734; one seam 0.2186 Hard (0.1733), both plates
+  cut 0.3322 Hard (0.2102), a seam in the lower plate 0.1742 (0.1263), one seam 0.0119 apart, near the window's edge,
+  0.2104 Hard (0.1337); turned 45°, 48 of 49 single seams Hard, up to 0.2513. A probe was then held by any part of the
+  set but its own, the part across first, and each crossing point had to lie within `HIDE_OFFSET` + 2·`EPS_GEOM` of the
+  other across, along its face's normal (V1's tried rule; its reach pre-tests, which the probes imply, dropped, the
+  bound across tested first): those read 0.1734, 0.1734, 0.2102, 0.1264 and 0.1343, each within 0.0006 of its pieces at
+  0.0100. At 45° 26 single seams still play Hard (up to 0.2228): the whole laminate there plays 0.1994 at 0.0105 and
+  0.1765 at 0.005, and each seam's move against its own pieces at 0.005, less the whole's, lies within −0.0095 … +0.0078
+  (median −0.0015): the re-cut's grids (§17.1 O11) on the gap's drift at the rims, no reopening. *The set*: Thinness
+  asks its work set W (on All every kept part, the measure's own hiders), the raster the striking slot's kept parts.
+  Every kept part as the hider instead moved the edge of 7 fixtures (P3 and its two specks' mean thickness +8.6e-6 and
+  +9.7e-6, worst valid 3, 4, 5 and 8 +4.6e-5, +1.1e-4, +1.1e-5 and +1.1e-5, cutIndex down by up to 3.8e-4) and of 13
+  plausible ribbed bars, and 2 ribbed bars' Sharpening Thinness, no d: every one of those joins, 10 on the fixtures and
+  48 on the ribbed bars, runs the line through a guard, a grip or a pommel part between the two blade chords, whose
+  metal it bridged into the blade's thickness; where a part of another slot only lies beside the gap (V1's 30° laminate
+  cut at −0.035, the piece beside labelled Guard), the edge reads the gap open (the mean thickness 0.0413 → 0.0395 at
+  0.0105; Hammering, on All, holds), a visible label (§17.1 O8). *What the verdict shows stayed open*, as far as these
+  looked (an open slot crossed at a grazing slant did not: next bullet): fixer D's sweep (0–75° about the length and
+  across it, 0.0100 … 0.0125, 84 designs) and his non-facing neighbours on F5's hilt (stairs, a rod's edge over a plate,
+  roofs: 55 designs) read the same to the bit, and so do 1,152,000 lines through 120 two-part cases; without the bound
+  across, two of P3's wedges joined across a channel 0.11 long and 0.088 across, held by a third (V1's narrower fix2).
+  Of the 24 joins the rule makes on the fixtures (6 by a part other than the one across) every one crosses air within
+  `MERGE_GAP` of two kept parts at each of 9 points along it; on the plausible set 40 joins on 4 ribbed bars do not (a Z
+  line grazing the rod 0.0003–0.001 off its surface between two staves the rod hides; no value moves). *Moves*, against
+  the tree before: none on the 136 Parity fixtures, the 200 generated designs, the goldens or the digest; d on 10 of the
+  33,389 plausible designs, ribbed bars (Hammering by up to 0.0173, 7 down, 3 up), no tier. *Cost*: every normal, box
+  test and sd the test makes is charged (counted on the 136 fixtures and 13 attack designs: the units returned sum to
+  the queries made, design by design), at most 2 + 2·(2 + 2·22) = 94 a call with 24 parts (46 met on the fixtures, 39 on
+  the attacks), at most 2 calls a pass of a union chord; Thinness' charges by caller F5 on All 4,911 → 4,921, F4 5,600 →
+  5,644, P5 14,794 → 14,848 and on the Blade 8,273 → 8,351. `Analyze.run` alternating with the tree before (a collection
+  before each run): × 0.978–1.013 on the worst valid designs and P1 (31 rounds, the machine 19–45 % busy) and ×
+  0.973–1.023 (41 rounds, the order swapped, 23–40 %), worst valid 8 × 0.978 and × 0.991, so fix round 2's projection,
+  54.8 ms, becomes 53.6–54.3 (the largest ratio, × 1.023, to 56.0); the attack designs (stacks of 4–21 plates turned
+  60°, the plates of a stack of 10, 7 or 5 cut in 2–4 pieces, a 0.40 laminate's upper plate in 8–19 pieces, a laminate
+  beside 19 rods turned 45°) 19.0–30.1 ms, × 0.95–1.06 of the tree before, their longest stretch 0.205–0.282 ms (21–40 %
+  busy; worst valid 8 68.3 ms and 0.720 in the same runs); those attacks cross gaps 0.0105 across, where the part across
+  holds every probe at once, so the set's walk never ran in them: at 0.01200015 across it walked every test (12 plates
+  turned 30°, × 1.215 of the tree before; M3's review round 4, V2), and without the set the pair asks the part across
+  there and stops (next bullet but one).
+- **Fix round 4: the set withdrawn** (fixer H; scripts in the session's Temp scratch `m3-fix4h`, figures in
+  `docs/build/M3-notes.md`). *The open slot* (M3's review round 4, V1): F5 without its tip and four Blade slabs 0.4 long
+  over its blade, their faces 3° off Z, p and r 0.012 over it, r′ and q 0.0119 over p's top plane, an open slot 0.15
+  long between the two hidden slits, two Blade bridges 0.025 × 0.04 × 0.24 tying r′ and q to the blade (valid, nothing
+  cleaned). The raster's column x = 0.0087 leaves p's top face under r and meets q's bottom face over r′ 0.227 further,
+  each probe held by the slab beside, each point 0.0119 across from the other's face. Asked of the set, it read p +
+  0.227 + q ≈ 0.27 thick, past `EDGE_MAX_THICK`, and cut the edge: Sharpening 0.0720 Normal, EdgeLength 3.0433 in 2
+  chains (the mean thickness 0.06686, cutIndex 0.7243); Thinness' union chord across the slot from a plate under it
+  0.2905. Asked of the part across, as before fix round 3 and now: 0.2728 Hard, one chain of 6.0851 (0.06275, 0.7849),
+  the chord 0.0421. *The rule*: `Edge.hiddenGap` asks each face's probe of the part across alone: the gap across from
+  p's normal first ((f − e)·n_p at most REACH, an exact pre-test: p holding f's probe implies it, p lying behind its
+  face's plane), e's probe of q (its box, then its sd), then f's normal and its probe of p. The bound at f went with the
+  set: q holding e's probe implies it (q behind its face's plane at f: (f − e)·n_q ≥ −`HIDE_OFFSET` − `EPS_GEOM`), so
+  without a third part as the holder it never fires (V2's mutant without it survived the suite, an equivalent one). *Bit
+  for bit*: `dump` on the 136 Parity fixtures, the 200 generated designs and the 33,389 plausible designs equals the
+  tree before fix round 3 byte for byte (the 10 ribbed bars back); goldens and digest unchanged, nothing re-blessed;
+  Thinness' charges by caller unchanged (F5 on All 4,921, F4 5,644, P5 14,848 and on the Blade 8,351: on F5, F4 and P5
+  the set's loop never ran). *Fixer F's checks*, against the tree before fix round 3: his sweep (84 designs), neighbours
+  (55) and 1,152,000 lines read the same, P3's channel with them (its dump byte for byte); his join scan finds 17 joins
+  on 5 fixtures and 725 on 32 plausible designs, every one by the pair, between faces that face each other, its air
+  within `MERGE_GAP` of two parts at each of 9 points (his 40 others gone). *Why it merges nothing the verdict shows*:
+  each part is convex and lies behind its face's plane, so the line between the two points runs between the two faces'
+  planes, within `MERGE_GAP` of them summed, and where flat faces face each other the point the line leaves lies under
+  the other part (its probe lands there), the point it meets over the first, and by convexity the line between over both
+  all along. On round faces (`curved`: two parts, their nearest points g apart, a Ball's and a Cylinder's side, 0.05 and
+  0.2 across, against a plate and against each other, parallel, crossed and 30° skew, a Cylinder's cap, and plates
+  tilted 5–60°; g 0.001–0.0125 either side of the window; lines through a 17 × 17 grid in the gap at 12 slants of
+  0.5–80° and 16 headings): 13,872,000 lines, 2,876,754 of them past `MERGE_GAP` along, 179,928 merged, and every point
+  of every merged line lies within `MERGE_GAP` of the two parts summed (at most 0.0120), each part's face nearest to it
+  hidden (its probe in the other); from 0.01205 across, none merged. Only a partner thinner than `HIDE_OFFSET` there
+  differs (a Wedge 0.014 thick tapering to nothing, its flat face 0.002, 0.004 or 0.008 over a plate: 1,139, 1,615 and
+  1,751 merged lines pass a plate face whose probe the verdict reads through the thin Wedge, the air only that gap
+  across, as the plain merge along its normal reads it; §17.1 O10). *The seam, a residual* (`seam` v1 and s45,
+  `seamfig`, on the tree, the tree before fix round 3 and fix round 3's): F5's laminate turned 30° and 0.0105 apart, its
+  upper plate in 4 flush pieces, plays 0.3095 Hard (Thinness 0.7457, the mean thickness 0.05779, cutIndex 0.7586)
+  against 0.1734 Normal (0.4051, 0.05933, 0.7338) for the same pieces 0.0100 apart; one seam 0.2186 Hard (0.1733), both
+  plates cut 0.3322 Hard (0.2102), a seam in the lower plate 0.1742 (0.1263), one seam 0.0119 apart near the window's
+  edge 0.2104 Hard (0.1337); turned 45°, 48 of 49 single seams Hard, up to 0.2513: the tree before fix round 3's on
+  every one (SPEC §4.6, §5.2, §5.6, §17.1 O11; Invariance.spec pins it). *The sandwich checks* (V1's B and B2 on top of
+  the set, scratch variants, M3's review round 4): B (each point of the line, REACH apart at most, within REACH of two
+  parts) and B2 (its two least distances summed at most REACH) both keep the slot open and move no plausible design, at
+  × 0.959–1.037 and × 0.945–1.070 of fix round 3's tree (31 rounds each, 35–65 % and 4–31 % busy); B still merges a
+  channel up to about 2·REACH across (rails 0.002 off the line, 0.0159 across), and B2 reads the V whose middle the
+  verdict shows open and moves two unit pins. Both count two flush pieces of one layer beside a point, both below the
+  line, as a sandwich (`floorslot`: V1's slot over a floor cut flush at the checks' points): B merges the 0.15 slot over
+  its floor in 14 pieces (the line up to 0.0094 over it), and B2 a slot 0.05 long (up to 0.0042 over its floor, within
+  REACH/2) at s 0.0119 or 0.005; neither floor moves the pair. *Cost* (`timing3`, the tree, the tree before fix round 3
+  and fix round 3's alternating in one process, a collection before each run, every worst valid design and P1, 31
+  rounds, the machine 2–10 % busy): × 1.0003–1.0240 of the tree before fix round 3 (sum × 1.0090, worst valid 8 ×
+  1.0088) and × 0.988–1.017 of fix round 3's (sum × 1.0065, × 1.0087); again with a byte copy of the tree as a null
+  (2–19 % busy): the tree × 1.005 and the copy × 1.0075 of the tree before fix round 3 on the sums, so within the noise.
+  T-PERF-01 alone at 9–18 % busy: worst valid 8 at 60.06 ms, 0.06 over `ANALYSIS_LUNE_MAX_MS` (fix round 3's tree, M3's
+  review round 4: 61.10 ms at 3–17 %); in `scripts/verify` at 3–32 % (median 14 %) it passed, worst valid 9 at 59.31 ms:
+  749 of 749, VERIFY GREEN.
+- **Fix round 4: O11's structural question and the round's minors** (fixer I; scripts in the session's Temp scratch
+  `m3-fix4i`, figures in `docs/build/M3-notes.md`). Re-measured on this tree, each as M3's review round 4 found it. *The
+  empty sealed cavity* (V1's `hollow`: F5's blade as a sealed box, walls and end caps 0.03 wide at its full thickness,
+  top and bottom plates over a cavity c thick, every part kept, the outline F5's blade's): c 0.0100 and 0.0119, the
+  cavity's faces hidden, Hammering 0.1035 and 0.1051 Normal (Sharpening 0.1914 Normal and 0.2036 Hard, the cavity's
+  volume out of SurfaceComplexity's V); c 0.0121, 0.013 and 0.018, its faces shown, 0.5355, 0.5368 and 0.5433 Hard
+  (Thinness on All 0.2588 → 0.8702, cutIndex 0.7242 → 0.8810, 0.8948 and 0.9785, Sharpening 0.2989, EdgeLength 5.4330
+  throughout). *A Block's writing* (V1's `write4` and `write4b`): every Block written (b, a, c) a quarter turn about its
+  Z moves no F or C fixture's G; on F5's laminate cut in 3 flush seams its tip alone moves it, SurfaceComplexity on the
+  Blade 2.442958 → 2.441603 and Sharpening 0.2008 → 0.2003 turned 30° at 0.0105 (0.1973 → 0.1969 at 0.0100), 0.1437 →
+  0.1439 flat; with 5 symmetric seams, nothing. *The X mirror* (fixer C's `mirror`): F1–F5 and C01–C15 the same, 150
+  generated designs ΔD up to 0.0621 (#24), EdgeLength 0.371 % (#132), no flip. *The raster's hidden-gap charges* (V2's
+  `rastercharge`, T-EDG-01's three plates turned 30°): 0.0105 apart, +10,920 units over 1,300 covered cells against
+  0.0100 apart, 8.40 a covered cell (the test asks 3; a merged gap's test makes 6 queries), the same on fix round 3's
+  tree. *The pair at the window's edge* (V2's `advab`, alternating with fix round 3's tree, 9 rounds, 6–7 % busy): where
+  the part across misses each probe by 1.5e-7 (0.01200015 across) the pair asks it and stops, 12 plates 0.02 thick
+  turned 30° about Y taking 27.5 ms against 31.1 with the set (29.9 at 0.0105, the gaps merged), turned 60° 24.1 against
+  26.4, 21 plates 24.7 against 25.8, zigzags of 12 plates 23.0–24.1 against 22.9–25.5, their longest stretches 0.17–0.26
+  ms (worst valid 8 59.4 ms in the same runs; one zigzag's Hammering 0.5733 against the set's 0.5911). *The seam on fix
+  round 3's tree* (fixer H's `seam`): the one-seam laminate read 0.1734 at 0.0105 (0.1733 its pieces at 0.0100). *What a
+  measure that follows the solid would move and cost* (SPEC §17.1 O11 (iii); estimates, not a prototype): `solidgrid`
+  reads Thinness at a probe in every covered cell's metal run of the edge's grid (0.02 cells, x from the plane x = 0, y
+  from the set's lowest point, read 0.0013 towards x = 0 and 0.0017 up; the run's middle, weighted by its length × the
+  cell's area, owned by the highest-ranked part holding it, a Ball's or a Cylinder's probe moved as Thinness moves it),
+  τ along Z and the owner's θ through `Factors.unionChord` as built, then each step with that Thinness: on F1–F5 and
+  C01–C15 d moves by up to 0.0425 (C09's Hammering 0.3201 → 0.3626, its Thinness on All 0.3935 → 0.4998), C13 0.1137 →
+  0.1228, C07 0 → 0.0054, C02, C12 and C14 0.1137 → 0.1176, C08 0.0992 → 0.1026, F3 0.4423 → 0.4453, C06 0.2991 →
+  0.3019, C15 0.2701 → 0.2725, the rest by 0.0011 or less, Smelting and Sharpening not at all, no tier; V1's aimed plate
+  (fixer D's `recutaim` design), overhanging either edge by 0.05, plays 0.1271 whole and in 6 and 11 pieces, against
+  0.1075, 0.2141 and 0.3254, and 0.1253, 0.0008 and 0.0008, as built. `phases` (15 rounds, a collection before each, 6–8
+  % busy): `Edge.profile` as built 0.43–3.47 ms on F1–F5 and C01–C15, 0.89–3.84 on P1–P5 and 2.23–6.74 on the worst
+  valid designs (1,386–6,705 cells, 19,849–28,865 cell × part tests, 451–2,707 covered), and with every kept part
+  relabelled striking, All's union, 0.89–3.98, 1.67–7.55 and 2.67–11.70 (worst valid 8 9.65 against 5.49); Thinness on
+  All 0.92–2.68 ms on the fixtures and 0.82–6.99 on the worst valid designs (273–400 probes), on the Blade 0.37–1.09 and
+  0.78–4.74; `Analyze.run` 4.1–16.1, 7.9–32.3 and 25.2–58.5 ms in the same runs.
+- **Fix round 5: a shift on the plausible set, a part flush at a slanted gap** (SPEC §4.4, §4.6, §5.6, §17.1 O11 (j) and
+  (k); M3's review round 5, V1, re-measured by the minors' fixer; scripts in the session's Temp scratch `m3-fix5m`,
+  figures in `docs/build/M3-notes.md`). *A shift* (V1's `dump` and `dumpshift`, every part moved, on the plausible
+  designs 22,261–33,389, byte for byte V1's dumps): moved 0.037 down Z, 246 leave the hitbox and of the 10,883 still
+  valid G moves on 2,081, 621 past `TOL_G_INVARIANT`, up to 0.0354, 11 a played tier, M2's volume on 73; moved 0.3317
+  along Y, G on 357, 103 past it, up to 0.0363, 2 a tier (#32923's Smelting 0.1906 Normal → 0.2030 Hard), M2's volume on
+  698; the raster and the edge beyond 1e-12 on none. What moves them (`rankcmp`: the kept parts' order in
+  `Sampling.measureRanked`, as built and moved): along Z the measure's rank reorders on 10,174 of the 11,129 designs,
+  among them 2,027 of the 2,081 (its keys −volume, y, \|x\|, x, \|z\|, z: parts of one volume, y and x change places
+  where the shift changes which stands nearer the plane z = 0), and ranked by z alone (`czrank`, a scratch variant) G
+  moves on 110 (47 past it, 2 tiers, up to 0.0354); along Y, which keeps the order, G moves only where an owned volume
+  does (348 with M2's volume, 9 more within 1e-9 of it). The grille #32977 (1.0 × 2.8 × 0.02, 6 × 8, f0.7): its three
+  Guard bars under the 7 Blade blocks, an overlap past `MAX_EXACT` that M2 samples, own 0.00728875 → 0.00245 each (a
+  Pommel block 0.00588 → 0.003675), M2's volume 0.440572 → 0.423851 on this tree and on M2's own, Smelting 0.5008 →
+  0.4776, Hammering 0.2509 → 0.2863. The fuller #24151 (w0.3, t0.02, its two cheeks 0.12 × 0.05 of the core's volume):
+  as built the core ranks first (\|z\| 0 against 0.035), moved the upper cheek (0.002 against 0.037), so the sub-grid
+  budget (`N_SUB_WORK`, spent in rank order) runs out at other patches (241 → 245 sub-sampled; `explog`): its exposed
+  area 5.232951 → 5.351951 on both trees (the core's 0.245 → 0.3588), Hammering 0.2955 → 0.3261; with the budget
+  unlimited (`subwork`) 878 patches both ways and nothing moves. *A part flush with the face a line leaves for a slanted
+  hidden gap* (V1's `flushrib` and `flushscan`, my `flushtilt`): F5's blade turned 30° about its length and split 0.0105
+  apart, five Blade ribs 0.02 wide whose tops lie in the lower plate's top face, reaching 0.01 below it: the edge's mean
+  thickness 0.063386 at 22 of 31 shifts k·0.0013 along Z and 0.064654 at 9 (cutIndex 0.6740, 0.6568), 0.063386 at all 19
+  valid shifts k·0.0131 along Y, steps 0.0260 / 0.1119 / 0.1362 and Thinness 0.258665 throughout (in the union chord the
+  rib, grown by `TIE`, ends the line's run past the plate and is asked); the ribs' tops 0.001 lower, inside the plate,
+  0.064654 at every shift, 0.0260 / 0.1121 / 0.1363, Thinness 0.259156; EdgeLength 5.449406 in one chain throughout. The
+  whole design turned a further 2° about X: Y shifts one mean thickness (0.063895), Z shifts 22 between 0.063758 and
+  0.064376, Hammering 0.1157 throughout. *Tests*: seven mutants of fix round 4's code that passed `--quick` (V1's R5h1,
+  the box test with `EPS_GEOM` alone; R5p1, V2's `fprobereach`, the second probe `REACH` out; R5c1, R5c2, R5c6, R5c7,
+  the last of a tie asked; R5c3, a join past lo skipped where a chord lies past hi) each fail their new assertion in
+  T-EDG-01 or the union chord's case; `--list`: 749 cases, T-PERF-01 the 614th.
+- **A slanted slit's mouth** (SPEC §4.6, §5.2, §17.1 O10; M3's review round 3, V2's `slant`, `slantfixed`, `slantedge`,
+  `slantwhy2` and `slantgrid`, re-run by fixer G on fix round 3's tree, every figure the same, with a scratch closure,
+  `var/close1`, and `closecmp`, `stackcmp`, `seamcmp`, `diagcmp`, `mouthline`, `rastercols`, `mouthcount` in the session's Temp
+  scratch `m3-fix3g`). Where a slanted hidden slit meets the blade's outline, a chord that enters it there leaves through
+  its mouth into air, with no chord beyond to join, and ends at the hidden face it left, while every face stays hidden
+  (SurfaceComplexity on All 2.2155 → 2.2308 over 0.005 → 0.0119 at 45°, 2.8845 at 0.0121). F5's blade turned 45° about
+  its length and split through its thickness, the outer 0.06 kept, 0.005 / 0.0100 / 0.0110 / 0.0119 apart: Thinness on
+  All 0.3885 / 0.4432 / 0.4567 / 0.4695, Hammering 0.1765 / 0.1969 / 0.2020 Hard / 0.2068 Hard, where the whole blade
+  plays 0.1497 and the blade split flush 0.1725 (its pieces' grids, O11); without its tip 0.1714 → 0.1964 (so not the
+  tip, which fixer D's notes blamed); turned 60°, 0.1679 → 0.1896 (whole 0.1253, flush 0.1552); turned 30°, 0.1308 →
+  0.1321. On one Z line (45°, 0.0119, no tip) the whole blade's chord is 0.0495 and the laminate's 0.0340, the plate's
+  [−0.0212, 0.0128] and the other plate missed, 96 of the whole blade's 384 samples reading thinner through the laminate.
+  *The mouth's own share*, against a scratch closure (exact on flat faces; not adopted): where a union chord ends at a
+  face whose probe a part of the set holds, it goes on along the line until the face's foot point leaves the face (a
+  chord of that part in the face's plane) or the probe leaves the hiders (their union along its path), then the plain
+  closure again. It reads the 45° blade 0.1812 / 0.1823 / 0.1833 Normal at 0.0100 / 0.0110 / 0.0119 (Thinness 0.4106;
+  73 chords continued), so the mouth adds 0.0235 at 0.0119 and the tier, the rest from 0.1497 being the pieces' grids;
+  60°, 0.1758 (0.0138). At 30° it continues no chord of the design at any gap: one Z line from mid-plate at local x
+  0.070 does cross a mouth (0.02777, closed 0.03389, the whole blade's chord), but no probe's line does; the laminate
+  with 3 seams (Invariance's `seamedLaminate`) puts its pieces' probes there, 25 chords continued at 0.0100 and 0.0105
+  alike (Thinness 0.4051 and 0.4053, closed 0.3707 and 0.3715; Hammering 0.1734, closed 0.1596), and one seam none. Two plates
+  0.024 thick turned 45°: flush 0.2315 against the 0.048 solid's 0.2146; 0.0119 apart 0.2075 Hard, closed 0.1836 Normal,
+  against 0.1501 for the 0.0599 solid of their outline (V2's "gap share" of about 0.04, taken against that solid, held
+  the solid's own grid changing with its thickness); at 30°, 0.1325 against 0.1204, none continued: grids. Three and
+  four plates turned 30° (Invariance's `slantStack`): Thinness 0.3847 → 0.3919 and 0.2955 → 0.3030 over 0.0100 →
+  0.0119, the same closed: the plates' grids as they thin, not mouths. The diagonal cut: none continued, its 0.1442 /
+  0.1433 / 0.1416 its outline thickening as its Wedges part (the mean thickness 0.0703 → 0.0706). *The raster* at 30°:
+  the mean thickness 0.061085 whole → 0.060040 / 0.059326 / 0.059055 at 0.005 / 0.0100 / 0.0119, cutIndex 0.706898 →
+  0.722693 / 0.733789 / 0.738076, EdgeLength 5.4494 throughout, 0 and 0.001 apart as the whole to the bit; a cell reads
+  the mouth where its sample's line crosses it, a strip g·sin(slant) wide at each rim: at 30° F5's columns at x ±0.0687
+  (0.02777 against the whole's 0.03599 at 0.0119), at 45° and 60° none, the edge the same to the bit. *The closure's
+  reach and cost*: no union chord of F1–F5, C01–C15 or P1 ends at a face a part of the set holds, so no §5.5 value
+  moves; worst valid 3, 4, 5, 8, 9 and 10 have 109 such ends (4: 0.2215 → 0.2244, 8: 0.6153 → 0.6143, no tier); of the
+  33,389 plausible designs 203 (ribbed bars 130, wedges in guards 51, cylinder rivets 11, cages 5, cylinder ribs 3,
+  bevels 2, wrap rings 1), d moving on 96 (ribbed bars 92, wedges in guards 4; 70 steps down, 26 up; at most 0.1440) and
+  the played tier on 2 (ribbed bars, Hammering 0.3219 → 0.1779 and 0.2386 → 0.1584: a rib's inner face hidden by its
+  rod beside the line). Its end tests alone (`var/close0`: after each union chord, the normal at each end and the probe
+  asked of the parts whose box grown by `REACH` meets the line; Thinness only, nothing charged) cost `Analyze.run`
+  × 1.024–1.206 on the worst valid designs and P1, worst valid 8 × 1.198, about 66 ms quiet (21 rounds alternating with
+  this tree, the machine 14–24 % busy), before the lateral chords and the raster's half; written lean (V2's `close0L`:
+  at each end the normal, then the probe asked of the list's boxes, then an sd), × 1.005–1.121, worst valid 8 × 1.085
+  and × 1.117 (M3's review round 4, 31 rounds twice, 23–53 % busy), and × 1.012–1.091, worst valid 8 × 1.070, against ×
+  1.160 for fixer G's form in the same runs (fix round 4, fixer I, 31 rounds, 6–36 %), and × 1.019–1.168, worst valid 8
+  × 1.111 and × 1.164, against × 1.036–1.237, × 1.174 and × 1.216 for fixer G's form (M3's review round 5, V2, 31 rounds
+  each, 1–28 % busy): a tenth to a sixth of the slowest design's time, about 59–64 ms, at or past `ANALYSIS_LUNE_MAX_MS`
+  and past the 57 ms gate.
+- **What the 2 % rule itself admits, through `Analyze.run`** (`m3/limits.luau`). The proud core between cheeks, 96
+  families (w 0.3–1.2, l 2–3, c 0.02–0.05, k 0.02–0.04, with and without a cap; p from −0.02 to 0.03): the core crosses
+  2 % 12 times, \|ΔD\| 0.2696–0.4070, 7 tier flips on 6 crossings; Hammering's jump carried by Thinness 0.1038–0.3588
+  (all of it on 7 crossings) and SurfaceComplexity up to 0.3000, Smelting's fall 0.0660–0.0996 by Volume. The recessed
+  cores (a core in the cheeks' 0.02 gap, a sheet over its rims that cleans it): core → core + sheet up to 0.3680
+  (0.8 × 2.5 × 0.04, core 0.60: 2 flips, Thinness −0.1878, SurfaceComplexity −0.1802; LAM1 0.3111, SurfaceComplexity
+  +0.2876, Thinness +0.0236), 7 flips over the 9 designs (0.3713 and 0.3235 before fix round 1).
+- **The physics frame** (SPEC §4.5, fixer B). gripPoint and the axis's vote, the top of the grip and the guard line
+  take the kept parts only; V4, asked before the verdict, keeps every Grip part. Against the tree before fix round 1
+  (M2's physics fields to the bit, `Analyze.run` with `measureInvalid`): of the 136 Parity fixtures 15 move, each with
+  a cleaned Grip or Guard part (A14, A22c, A25, P1 with and without its specks, worst valid 2 and 4–11); C10 and C11,
+  whose two cleaned Dust specks of the grip sit as a mirrored pair at its height, keep their frame to the bit. Of the
+  33,389 plausible designs 1,785 move, 676 of the 782 with a cleaned Grip part and 1,109 of the 2,329 with a cleaned
+  Guard part (ballRivet 588, plateEdge 233, wrapRings 229, wedgeInGuard 214, rod 193, tiled 192, cylRib 75, grille 42,
+  cylRivet 15, cage 4), none else. Kept flags and owned volumes are bit-identical on every design, and against fixer
+  A's tree its steps and edge too; against the tree before the round, fixer A's Thinness and raster and fixer C's
+  lattice moved steps and edges (next bullet).
+  cutIndex moves on 705 of them by at most 0.0043, on the fixtures by at most 0.0213 (worst valid 10); guardPos by up
+  to 0.178 (a C09 under 5 wrap rings, whose cleaned rings had pulled the grip point that far up); A22c, measured
+  with its only Grip part cleaned, takes the no-grip frame (the origin, +Y). The 200 generated designs of
+  `PARITY_SEED` clean no Grip or Guard part. A hidden part's channel, before: V2's strap in A26's rings (E-S2.7);
+  a Guard block 0.1 × 0.4 × 0.04 hidden in F2's blade at y 2, 3 or 3.7, balance −0.0570 → −0.0832, −0.1308,
+  −0.1641 and cutIndex 0.4250 → 0.4185, 0.4065, 0.3982; in a guardless F2, a Grip block so hidden at y 1.6, 2.4 or
+  3.2 raised the grip's top: cutIndex 0.40 → 0.2875, 0.0875, 0, balance −0.047 → −0.497, −1.297, −2.097. Now each
+  measures its base.
+- **Fix round 1 beyond the 70 fixtures** (M3's review round 2, V2; re-measured by fixer E with V2's `dump` on fix round
+  2's tree, against V2's dumps of the trees before and after fix round 1: `Analyze.run` with `measureInvalid`, every
+  step's d, played tier and raw tier). Of the 33,389 plausible designs fix round 1 moved d on 14,230, by up to 0.3122 (a
+  ribbed bar), and the played tier on 164: fullers 73, ribbed bars 52, ribbed blades 27, bevels 10, plate edges 2, each
+  first at the gap window (4), θ on every local axis (109) or the canonical walk and its lattice pick (51), none at the
+  raster's samples, the kept parts' frame or the lattice Douglas–Peucker (V2's attribution through fixer A's staged
+  trees); the raw tier alone on 222 more; kept flags and owned volumes on none. Fix round 2 then moved d on 853 and the
+  played tier on 53 (fullers 47, bevels 6: the face ties, bullet above), 10 of them fix round 1's flips, which now play
+  their tier from before fix round 1 again (8 fullers, and C02's and F2's 0.05 × 0.05 bevels at 0.75: Hammering 0.1358
+  Normal → 0.2164 Hard → 0.1358 on C02's); against the tree before fix round 1, d has moved on 14,333 and the played
+  tier on 197 (fullers 104, ribbed bars 52, ribbed blades 27, bevels 12, plate edges 2), the raw tier alone on 242. Of
+  Parity's 200 generated designs fix round 1 moved d on 78 and the tier on 2, both at the walk and pick: Gen 57's
+  Hammering 0.1095 Normal → 0.2589 Hard (Thinness on All 0.6456 on 286 probes; every owned sample read as a probe,
+  0.4669) and Gen 126's Sharpening 0.2000 Hard → 0.1938 Normal (Hammering 0.0992 → 0.0612, Thinness on All 0.1495 on 338
+  probes, every sample 0.2265: the pick's sampling, either way); fix round 2 moved 5 more, by up to 0.0012, no tier. Of
+  Parity's fixtures beyond the 70, fix round 1 moved worst valid 2, 3, 4, 5, 6, 8, 9 and 10, worst valid 4 a tier (24
+  wedges: Hammering 0.0434 Normal → 0.2215 Hard, Thinness on All 0.4791 on 364 probes, every sample 0.4673), and fix
+  round 2 none at 4 decimals.
+- **A face flush on a thin part** (SPEC §4.4, §17.1 O10; M3's review round 2, V1's `diagflush` and `diagwhy`, re-run on
+  fix round 2's tree; fixer E's `bevel`, `segcmp`, `timing`). The hide test's probe is the point `HIDE_OFFSET` along a
+  face's normal, in the measure and in the verdict, and the coincident rule hides only the lower-ranked part's face of
+  two in contact, so the higher-ranked part's face shows where its partner is thinner than `HIDE_OFFSET` along the
+  normal. A fixture's main blade cut flush along its X-Z diagonal into two Wedges, the same solid: F5's blade reads
+  1.1440 stud² whole and 0.5720 + 0.6826 cut (the higher Wedge's slope shows 0.1106 of its 0.4443, 24.9 %; the partner
+  is under 0.012 thick along the normal over 0.0320 + 0.0045 of the 0.1709 diagonal, 21.4 %), so Sharpening plays 0.0989
+  → 0.1563 (SurfaceComplexity on the Blade 2.2584 → 2.4721); F5's blade 0.05 thick 0.1440 Normal → 0.2224 Hard; C02,
+  C02s, C13 and C14 0.1318 → 0.1832; C09's core 0.1904 Normal → 0.2225 Hard (Hammering 0.3201 → 0.3443,
+  SurfaceComplexity on All 2.6254 → 2.6738); F3's Hammering 0.4423 → 0.5146, C04's 0.3379 / 0.4769 → 0.4047 / 0.5670,
+  C08's 0.0992 / 0.2487 → 0.1328 / 0.2643, C12's Sharpening 0.1318 → 0.1381, C05's Hammering 0.1369 → 0.1391; F2, F4,
+  C01 and C07 under 0.002; Thinness the same on every one. A Block 2.6 long with a Wedge bevel on its side, a 0.06
+  contact: where the Block ranks higher its face shows 0.0585, 0.0390, 0.0195 and 0 stud² for a bevel 0.03, 0.05, 0.10
+  and 0.20 wide (δ·a/b·L 0.0624, 0.0374, 0.0187 and 0.0094, the last under the 4 × 4 sub-grid's reach), where the Wedge
+  does (a Block 0.03 × 1.0 × 0.06 against a bevel 0.30 wide) nothing. On the §5.5 fixtures, the measure's exposed area
+  less what a segment probe leaves (a scratch variant of the measure, `var/segprobe`: a part grown by `EPS_GEOM` met
+  anywhere from 2·`EPS_GEOM` to `HIDE_OFFSET` along the normal hides the sample, by `Shapes.chord`; the verdict
+  untouched): C09 2.9259 → 2.7543 (5.86 %: its core's sides under its four bevels' thin edges 0.0690, the bevels back to
+  back 0.0570 and 0.0431, a tip 0.0024; δ·a/b·L 0.069 and 0.048 a pair), C13 0.0101 (0.33 %: its tip and its guard's
+  Blocks under its CornerWedges), C04 0.0042 (0.20 %), C07 0.0023, C06 0.0030, C02, C02s, C12, C14 and C15 0.0030 (0.10
+  %: a tip's two Wedges back to back, the higher one's back face, 0.048 × 0.06), F4 0.0046 and C05 0.0044 (a tip on its
+  blade's top), C08 0.0024; F3 (its one Wedge), F1, F2, F5, C01, C10 and C11 none. With that probe no §5.5 tier moves:
+  C09's Hammering 0.3201 → 0.2432 and Sharpening 0.1904 → 0.0955 (SurfaceComplexity on All 2.6254 → 2.4715, on the Blade
+  2.5846 → 2.2679), C04 0.3379 / 0.4769 → 0.3354 / 0.4731, C06 0.2991 / 0.5948 → 0.2978 / 0.5932, C08's Hammering 0.0992
+  → 0.0986, every other d the same (SurfaceComplexity under 2.3 where it moves). Its cost (`Analyze.run`, this tree and
+  the variant alternating in one process, a collection before each run, medians of 31, the machine 26–82 % busy): ×
+  1.04–1.27 on the worst valid designs and P1, worst valid 8 × 1.19 (so 54.8 ms quiet would be about 65), the sum ×
+  1.195; × 0.94–1.16 on the F and C fixtures (C09 × 1.16), the sum × 1.055; an identical copy measured × 0.970–1.035
+  (sum × 1.003, 40–76 % busy), and a first form that tested the segment on every candidate × 1.05–1.40. With that probe
+  a blade cut along its diagonal plays its whole blade's d (F5 at 0.06, 0.05 and 0.04 thick, F1, F3, C02, C02s, C04,
+  C07, C08, C12–C14; what is left is the re-cut's own grids, O11: F4 0.1557 / 0.3401 against 0.1572 / 0.3420 as on the
+  build, C05 within 0.0010, C09's core 0.0003). On the 33,389 plausible designs (V2's `dump` of the variant against this
+  tree's, `segpl.py`): d moves on 5,191, by up to 0.2053 (`ribBar|r0.10 L3.0 n12 roll11.25 f0.7`), 2,212 by 0.05 or
+  more, and the played tier on 197, every one Hard → Normal: 185 designs built on C09, whose own bevels' band it hides
+  as on C09 (wrap rings 67, plate edges 54, bevels 28, cylinder ribs 18, plates 6, pommels in a block 6, ball rivets 4,
+  a rivet and a tilted plate), 8 on C02 (its tip's band; bevels 5, plate edges 2, a laminate), bevels on F1 and F5, a
+  laminated hilt and a ribbed bar (Hammering 104 steps, Sharpening 95); 24 designs rise, by up to 0.0207
+  (`bevel|F3|a0.05 b0.08 height0.030`), where the variant's extra tests spend the measure's sub-grid budget
+  (`N_SUB_WORK`) sooner and a later part keeps its centres' verdicts (with the budget × 100 both trees read that design
+  alike, and on a C02 laminate only the band differs); kept flags and owned volumes move on none. Per §5.5 fixture, the
+  build against the variant:
+
+| §5.5 fixture | Wedges (CornerWedges counted) | Band: exposed area the segment hides, stud² (of exposedKept) | SurfaceComplexity on All | on the Blade | d: Smelting / Hammering / Sharpening | Tiers |
+|---|---|---|---|---|---|---|
+| F1 | 0 | 0 | 2.1996 | 2.2584 | 0.0288 / 0.1037 / 0.0989 | N/N/N |
+| F2 | 0 | 0 | 2.0790 | 1.9914 | 0.0797 / 0.0176 / 0.0282 | N/N/N |
+| F3 | 1 | 0 | 2.4529 | 2.9804 | 0.0000 / 0.4423 / 0.6104 | N/H/H |
+| F4 | 1 | 0.0046 (0.07 %) | 2.0001 → 1.9987 | 1.7785 → 1.7768 | 0.4590 / 0.1572 / 0.3420 | H/N/H |
+| F5 | 0 | 0 | 2.1996 | 2.2584 | 0.0288 / 0.1037 / 0.0989 | N/N/N |
+| C01 | 0 | 0 | 2.0676 | 1.8541 | 0.1486 / 0.0000 / 0.0407 | N/N/N |
+| C02 | 2 | 0.0030 (0.10 %) | 2.2599 → 2.2576 | 2.2814 → 2.2765 | 0.0355 / 0.1137 / 0.1318 | N/N/N |
+| C02s | 2 | 0.0030 (0.10 %) | 2.2599 → 2.2576 | 2.2814 → 2.2765 | 0.0355 / 0.1137 / 0.1318 | N/N/N |
+| C04 | 2 | 0.0042 (0.20 %) | 2.4989 → 2.4940 | 2.6298 → 2.6185 | 0.0000 / 0.3379 → 0.3354 / 0.4769 → 0.4731 | N/H/H |
+| C05 | 1 | 0.0044 (0.05 %) | 2.2404 → 2.2392 | 2.0483 → 2.0469 | 0.5451 / 0.1369 / 0.3466 | H/N/H |
+| C06 | 2 | 0.0030 (0.11 %) | 2.3603 → 2.3577 | 2.3971 → 2.3923 | 0.0097 / 0.2991 → 0.2978 / 0.5948 → 0.5932 | N/H/H |
+| C07 | 2 | 0.0023 (0.15 %) | 1.9849 → 1.9819 | 1.8438 → 1.8375 | 0.0000 / 0.0000 / 0.0000 | N/N/N |
+| C08 | 2 | 0.0024 (0.05 %) | 2.3477 → 2.3465 | 2.2170 → 2.2146 | 0.1563 / 0.0992 → 0.0986 / 0.2487 | N/N/H |
+| C09 | 6 | 0.1715 (5.86 %) | 2.6254 → 2.4715 | 2.5846 → 2.2679 | 0.0001 / 0.3201 → 0.2432 / 0.1904 → 0.0955 | N/H/N |
+| C10 | 0 | 0 | 2.1390 | 1.9346 | 0.1565 / 0.0000 / 0.0282 | N/N/N |
+| C11 | 0 | 0 | 2.1278 | 1.9390 | 0.1562 / 0.0012 / 0.0368 | N/N/N |
+| C12 | 2 | 0.0030 (0.10 %) | 2.2635 → 2.2613 | 2.2894 → 2.2845 | 0.0355 / 0.1137 / 0.1318 | N/N/N |
+| C13 | 4 | 0.0101 (0.33 %) | 2.2781 → 2.2706 | 2.2814 → 2.2765 | 0.0376 / 0.1137 / 0.1318 | N/N/N |
+| C14 | 2 | 0.0030 (0.10 %) | 2.2599 → 2.2576 | 2.2814 → 2.2765 | 0.0355 / 0.1137 / 0.1318 | N/N/N |
+| C15 | 2 | 0.0030 (0.10 %) | 2.2615 → 2.2593 | 2.2814 → 2.2765 | 0.0353 / 0.2701 / 0.4291 | N/H/H |
+
+- **Cost** (T-PERF-01: medians of 15, a collection before each run, run alone, the machine about 1 % busy). The F, C and X
+  fixtures 2.90–12.12 ms (C05), longest stretch 0.078–0.230 (F2); P1–P5 and the specks 5.60–28.21 (P1), 0.084–0.321 (P4);
+  the worst valid designs 19.24–48.95 (valid 8, `tclimb_3.json #6`), 0.123–0.242; past the cap 10.24–24.22, 0.077–0.112.
+  After fix round 1, which charges and measures up to three more union chords a probe (two runs, the machine 0–4 % busy
+  but for one rise to 12 % after the first): the fixtures 3.52–14.19 ms (C09), longest stretch 0.082–0.236 (F2); P1–P5
+  and the specks 6.58–28.94 (P1), 0.083–0.276; the worst valid designs 20.17–53.22 (valid 8, ≈ 138 Studio at 2.6 ×),
+  0.124–0.332; past the cap 10.30–24.30, 0.077–0.107. Inside the whole suite (one process, a larger heap): valid 8 53.9,
+  the fixtures' stretches up to 0.236, worst valid 10 0.553 and P1 with a speck 0.399 (reported, collections). On the
+  final tree, the physics frame the kept parts' (fixer B; two runs alone, the machine 1–9 % busy): the fixtures
+  3.53–14.16 ms (C09, ≈ 37 Studio), longest stretch 0.079–0.239 (F2); P1–P5 and the specks 6.60–28.99 (P1, ≈ 75),
+  0.085–0.302; the worst valid designs 20.35–53.44 (valid 8, ≈ 139 Studio), 0.123–0.256; past the cap 10.09–24.35,
+  0.077–0.110; inside the whole suite (the machine 1 % busy at its start) valid 8 53.5, the fixtures' stretches up to
+  0.241, past 0.35 P1 with an attached speck 0.360 and worst valid 9, 10 and 11 0.603, 0.474 and 0.403 (reported,
+  collections). `ANALYSIS_LUNE_MAX_MS` kept 6.6 ms over valid 8 quiet after fix round 1, and about 5 after fix round 3:
+  `Analyze.run` alternating with fix round 1's tree (`m3-r2-base`, fixer G's `timing`, 41 rounds each, a collection
+  before every run) gives worst valid 8 × 1.0246 at 20–64 % busy (median 34 %) and × 1.0312 with the order swapped at
+  9–33 % (median 13 %; × 0.996–1.049 and × 1.003–1.047 over the worst valid designs and P1), so its 53.4 ms quiet
+  projects to 54.7–55.1, and through fix round 2's 54.8 and fixer F's two runs against fix round 2's tree to 53.6–54.3:
+  about 55, under fix round 3's 57 ms gate in every run; M3's review measured the worst valid designs'
+  medians at 61.5–76.9 ms with the machine 27–38 % busy (the tree before fix round 1, 49.4 quiet), so T-PERF-01 needs
+  a quiet machine. Under the machine's ordinary load (Studio, chat and voice programs open; never quiet in M3's review
+  round 2 or fix round 2): on the tree after the lattice, run alone, no other Lune process, 7–26 % busy, T-PERF-01
+  passed twice with the slowest valid design at 58.9 and 59.8 ms (0.2–1.1 under the guard), C09 16.2, P1 32.4–32.6,
+  `TooComplex` 11.4–28.1 and the F, C and X fixtures' stretches 0.109–0.294, and once failed on C05's stretch (0.377 ms)
+  at 12–31 % with another Lune process running; one process timing fixer B's tree and that one case by case gave 59.7
+  and 59.4 for the slowest (× 0.95–1.01), so the lattice costs nothing and the 6.6 ms of headroom are a quiet machine's
+  only (V2); `--quick` took 30.21–30.27 s there at 15–29 % (30.14–30.20 on fixer B's tree; 25.9 quiet). After fix
+  round 2: T-PERF-01 alone failed at 14–45 % busy (median 18 %), worst valid 5 at 60.25 ms, and the tree before, alone
+  right after, at 9–30 %, worst valid 8 at 60.97; `scripts/verify` failed only there, worst valid 8 at 62.11 ms (14 →
+  10 % busy at its start and end) and 61.47 (10–40 %, median 23 %); `--quick` 30.66 s at 7–14 % (fixer D); the last
+  `scripts/verify` of the round failed only there too, on F2's longest stretch, 0.489 ms (28–74 %, median 40 %; fixer
+  E). After fix round 3: `scripts/verify` failed only there, worst valid 5 at 62.14 ms (26–61 %, median 40 %), and
+  T-PERF-01 alone right after on F2's longest stretch, 0.404 ms (25–62 %, median 52 %; fixer F); in fixer G's
+  alternating runs above (9–64 % busy) worst valid 8's median took 61.3–66.2 ms, and his last `scripts/verify` (24–79 %,
+  median 42 %) failed only there, worst valid 5 at 63.89 ms, and T-PERF-01 alone right after (24–65 %, median 34 %) on
+  F4's longest stretch, 0.398 ms. In M3's review round 4, on fix round 3's tree, T-PERF-01 alone failed at 36–74 % busy
+  (median 55 %, other agents' Lune processes running) on F3's longest stretch, 0.352 ms, and at 3–17 % (median 14 %) on
+  worst valid 8, 61.10 ms (V1); at 29–51 % (median 42 %) on worst valid 5, 61.32 ms, and at 17–34 % beside 4 other Lune
+  processes on C01's stretch, 0.374 ms; a clean copy's `scripts/verify` at 6–34 % (median 20 %) failed only there, on
+  F2's stretch, 0.365 ms, and `--quick` took 33.70 s at 29–48 % (V2). After fix round 4: alone at 9–18 % busy, worst
+  valid 8 at 60.06 ms and failing, and in `scripts/verify` at 3–32 % (median 14 %) passing, worst valid 9 at 59.31 ms,
+  the F, C and X fixtures' longest stretch 0.274 ms (C01; fixer H), and again at 2–27 % (median 8 %), worst valid 8 at
+  57.52 ms, their longest stretch 0.270 ms (C01; fixer I). In M3's review round 5 it passed at 0–20 % (median 8 %),
+  worst valid 9 at 57.26 ms, the stretch 0.273 ms (F2; V1), and after its fix round 5 at 0–37 % (median 9 %), 57.55
+  ms and 0.277 ms (C01; the minors' fixer). The quiet figures need a quiet machine. M3's share as first
+  built (the tree before against M3's, 15 rounds; fix round 1 adds about 4 ms on the slowest): 1.61–7.10 ms on the
+  fixtures, 3.17–7.95 on P1–P5, 5.23–9.03 with a speck, 4.07–14.25 on the worst valid designs; its longest stretch ends
+  at Thinness' per-probe charge, 0.07–0.26 ms. Checkpoints with `measureInvalid`: F2 100 (97 before fix round 1, 41
+  before M3), F5 112 (108), P5 236 (222), P1 1,252 (1,248), the same after fix round 1; P5 237 since fix round 2 charges
+  its hidden-gap queries, and after fix round 3 F2 100, F5 112, P5 237 and P1 1,252 (fixer G's `ckcount`, V2's).
+- **S-PAR-02's Lune digest** (`tests/Physics/Parity.spec`): the fixtures' group 136 designs (43 of the 149 Adversarial
+  variants pass `Canonical.draft`), 425,658 bytes, fnv1a32 60321529; the generated group 200 designs of `PARITY_SEED`
+  0x5EED0002, 709,366 bytes, 611215233; `parity.bv1.digest.txt` 130 bytes (fix round 2 moved 61 fixtures' and 19
+  generated designs' lines, most in Thinness' last digits, the `TIE` growth of a chord that ends on a slanted face; the
+  groups were 425,752 bytes and 3014135086, 709,377 and 410604535; fix round 1 moved 293 of the 336 designs'
+  lines: fixer A's chords, walk and raster 185, then the kept parts' frame 15 fixtures' physics, 3 of them new (A14,
+  A22c, A25), the groups at 424,595 bytes and 2087286482, 709,434 and 2874446443 after those two, then the lattice 247,
+  103 fixtures and 144 generated designs, all but 15 in their edges' last bits; first built: 424,515 bytes, 945249129,
+  1.46 s; 706,909 bytes, 440098388, 0.94 s). The Studio runs are M3's exit (§14.10, §18).
 
 ---
 
@@ -2558,7 +3154,7 @@ T-PHY-03 maps S2's definition onto these primitives.
 | A11 | size 0, −0.2, MIN_DIM − 1e-6, MAX_DIM + 1e-6; \|pos\| = POS_ABS_MAX + 1e-6 | refused `OutOfRange` (never clamped) |
 | A12 | q {0,0,0,0}, {1e-20,0,0,0}; {0,0,0,2}; ‖q‖² = 1 + 1e-3 | refused; renormalized per S1's rule; never NaN |
 | A13 | F1 with every q negated | bit-identical to F1 |
-| A14 | F1 + 19 attached 0.05 cubes (dust) within slot maxima | valid; D non-increasing, \|ΔG\| ≤ TOL_DUST_G |
+| A14 | F1 + 19 attached 0.05 cubes (dust) within slot maxima | valid; the cubes cleaned (Dust); D, the steps and the edge bit-identical to F1's (M3; stronger than the \|ΔG\| ≤ TOL_DUST_G once written) |
 | A15, A18 | F1 + 2,000 parts; 10,000 parts, 1 MB strings, 100-deep nesting | `TooManyParts` / Guard `E_BAD_REQUEST` before per-part work |
 | A16, A17 | F1 + parts inside blade and guard; F2 + 3 exact blade copies | Enclosed; D bit-identical |
 | A19 | draft as string, number, array; parts as a map; wrong types; unknown fields | `Malformed`, never a throw |
@@ -2569,12 +3165,12 @@ T-PHY-03 maps S2's definition onto these primitives.
 | A25–A27 | F1 + enclosed 20° grip core / ring grip + 40° strap / hilt shifted 0.04 in X (R3-01) | ΔD ≤ 0.01 / ≤ 0.02 / Sharpening ΔD ≤ 0.02 |
 | A28 | 24 thin rods (0.02 × 1.2) in one bundle, 0.004 apart across, 0.01 deep, Blade above Guard above Grip (M2) | `TooComplex` alone: the verdicts spend 1,083,869 units, past `VERDICT_WORK_MAX` (E-S2.12) |
 | X01, X02 | F5 + 2 blade copies at ±0.003; 6 copies at k·0.002 (R3-02) | \|ΔD\| ≤ 0.01 against the union-equivalent single blade (0.066 / 0.072 thick); against F5 the change is the real thickening (E-S2.5) |
-| X03 | F4 + a 0.0003 stud³ fin (R3-03) | ΔThinness ≤ 0.02 |
+| X03 | F4 + a 0.0003 stud³ fin (R3-03) | ΔThinness ≤ 0.02; the fin's two chains as measured (Sharpening 0.3420 Hard → 0.1980 Normal, E-S2.5) |
 | X04 | blade from 4 strips; 5 and 10 segments with 0.004–0.009 gaps; grip nudge 0–0.02 (R4a-02) | \|ΔEdgeLength\| ≤ 2 % |
 | X05 | segment gaps 0.002–0.009, overlaps 0.005–0.05 (R4a-03) | \|ΔG\| ≤ 0.01 |
 | X06 | blade offset sweep 0–0.05 in X (R4a-04) | \|Asymmetry − continuous oracle\| ≤ 0.02 |
 | X07 | laminated plates, overlapping segments (R4a-07) | \|ΔG\| ≤ 0.01, mass error ≤ 0.5 % |
-| X08 | 24 rotated cylinders; 24 hitbox-sized blocks; sawtooth blade; 256-point zigzag edge (R3-07, R3-08) | §14.11 |
+| X08 | 24 rotated cylinders; 24 hitbox-sized blocks; sawtooth blade; 256-point zigzag edge (R3-07, R3-08) | §14.11; the first three are aliases of S2's cost fixtures, X08a = P2, X08b = P1 (its first P1 was 24 overlapping hitbox-sized blocks), X08c = P5 (`tests/fixtures/Cost.luau`); the zigzag edge is an `EdgeChain`, not a blueprint, for M4's T-PERF-02 |
 
 ### E-S8.5 Case catalogue
 
@@ -2594,12 +3190,17 @@ T-PHY-03 maps S2's definition onto these primitives.
 - **T-PHY** 01 Monte Carlo volume and centroid, 10⁵ points (0.5 %, 0.005·max size) · 02 fixtures = E-S2.9 · 03 E-S2.9
   = oracle (E-S8.3) · 04 Y/Z translation: mass within TOL_ANALYTIC_REL, COM moves by δ · 05 any rotation keeps mass;
   about the grip axis keeps reach and balance · 06 q ↔ −q bit-identical · 07 density scaling; pommel mass moves
-  balance toward the hand · 08 grip point from Grip parts; difficulty frame from kept parts · 09 cleaning: Dust and
+  balance toward the hand · 08 the physics frame and the guard line from the kept Grip and Guard parts, V4's from every
+  Grip part, the difficulty frame the kept ones' point (a hidden strap, Guard or Grip block steers nothing) · 09
+  cleaning: Dust and
   Enclosed only, duplicates Enclosed (lowest id kept among copies of one slot and material), partial overlaps kept; the verdict's rules and its precision
   (E-S2.11) · 10 overlap mass error ≤ 0.5 % (X07).
-- **T-DIF** 01 P-RANGE, caps · 02 soft-OR identities, 101 × 101 grid · 03 boundary, NaN errors, `tierRaw` unclamped ·
-  04 enclosed and duplicates bit-identical, dust · 05 Iron ↔ Steel · 06 monotone Thinness, PartCount, EdgeLength ·
-  07 invariances · 08 mirrored Asymmetry · 09 step scoping · 10–13 as §14.6.
+- **T-DIF** 01 P-RANGE, caps · 02 soft OR: §5.1's formula, its identities, 101 × 101 grid, a planted term · 03
+  boundary, NaN errors, `tierRaw` unclamped ·
+  04 enclosed, duplicates and dust bit-identical · 05 Iron ↔ Steel · 06 monotone Thinness, PartCount, EdgeLength ·
+  07 invariances · 08 mirrored Asymmetry · 09 step scoping · 10–13 as §14.6 (12 the §5 table's goldens, 13 the
+  regression relations). **T-EDG** 01 `Physics/Edge` as §14.6: F5's chain, E-S2.9's edge and cutIndex columns and the
+  prototype's edge, X04, P5's comb, §4.6's rules and boundaries, invariance, P1's budgets, each loop's units by caller.
 - **T-RNG** 01 vectors from `kat/` (`studies/kat_xorshift32.py`) · 02 determinism · 03 seed validation · 04 χ² over
   16 buckets < CHI2_CRIT · 05 1,000 derived tags collision-free · 06 independence.
 - **T-MG** 01 `prepare`/`judge` deterministic, StepSpec complete · 02 `passed` ⇔ Ok ∧ score ≥ pass line · 03
@@ -2664,8 +3265,12 @@ T-PHY-03 maps S2's definition onto these primitives.
   HoldZone then release recorded (R6-12) · 13 plots disjoint, farthest station reachable.
 - S-PAR-01 per shape × 20 sizes × random rotations, built as `ItemModelBuilder` builds it (density 1): `Mass` =
   S2 volume (TOL_PARITY_MASS_REL), `CenterOfMass` = S2 centroid (TOL_PARITY_COM_ABS), 200 margin points via
-  `GetPartsInPart` agree 100 % · 02 digest of `Pipeline.analyze` (fixtures + 200 `Gen.validSword`), 50
-  judged bot runs per family and T-CR-08's outcomes, in both datamodels = `parity.bv<N>.digest` · 03 0.1, 1/3,
+  `GetPartsInPart` agree 100 % · 02 digest (M3: of `Analyze.run` with `measureInvalid`, on every fixture of
+  `tests/fixtures/Parity`, an A variant through `Canonical.draft` and dropped when refused, then `PARITY_DESIGNS` 200
+  `Gen.validSword` from `PARITY_SEED`; one line per design, its name, a tab and `Dump.canonical`; per group the
+  designs, the bytes and the fnv1a32 of its lines; `tests/Physics/Parity.spec` blesses it, and `SPar02.spec` runs the
+  snippet on a fake engine; M5: of `Pipeline.analyze`, 50 judged bot runs per family and T-CR-08's outcomes too), in
+  both datamodels = `parity.bv<N>.digest` · 03 0.1, 1/3,
   2^53 + 1, 1e-300, 123456.789012345678 through `JSONEncode/Decode`, a Mock save/load and a real key
   (`BS_DataMode = "Live"`) · 04 (R7-22) live `Blueprint.Save` summaries of F1–F5 = client preview; one craft per
   family with clientScore = rawScore.

@@ -33,30 +33,37 @@ tests/
 ├── Util/, Blueprint/      T-UTIL-01; T-BP-01…05, 11–14 and T-UD-01 (SaveLoad)
 ├── Physics/               T-PHY, T-VAL; Reference.spec compares M2 with S2's prototype (SPEC §4.1); Cover.spec holds
 │                          §4.4's verdict exact on its model (CoverBrute, CoverAttacks), Verdict.spec to closed forms,
-│                          VerdictPrecision.spec (VisibleOracle, PlausibleDesigns) to the truth
-├── ItemRender/            RenderPlan and ItemModelBuilder (on a fake Roblox), and S-PAR-01's own logic
-├── fixtures/              Build (shared record helpers), Blueprints (F1–F5), Adversarial (A01–A24, A28): a Rojo root,
-│                          so Studio tests load them too
+│                          VerdictPrecision.spec (VisibleOracle, PlausibleDesigns) to the truth; T-EDG-01 (Edge.spec),
+│                          T-DIF (Factors, Difficulty, Invariance, DifficultyTable), T-PERF-01 (Perf.spec, slow);
+│                          S-PAR-02's Lune digest (Parity.spec) and its snippet on a fake Roblox (SPar02.spec)
+├── ItemRender/            RenderPlan and ItemModelBuilder (on a fake Roblox, FakeRoblox), and S-PAR-01's own logic
+├── fixtures/              Build (shared record helpers), Blueprints (F1–F5), Adversarial (A01–A28), Calibration
+│                          (C01–C15), Regression (X01–X07), Cost (P1–P5, the specks, X08, T-PERF-01's cases),
+│                          WorstDesigns, Parity (S-PAR-02's list): a Rojo root, so Studio tests load them too
 ├── FixtureSet/            the fixture and Gen specs (not tests/Fixtures, which is tests/fixtures on a
 │                          case-insensitive file system)
-├── golden/                balance_fingerprint, definition_ids, world_build_list (`--bless` rewrites them: review the diff)
-└── studio/                Studio bridge (test place only), e2e snippets (first: e2e/S-PAR-01), reference
+├── golden/                balance_fingerprint, definition_ids, world_build_list, the §5 table (difficulty_*.bv1),
+│                          S-PAR-02's parity.bv1.digest and parity_designs.bv1 (`--bless` rewrites them: review the diff)
+└── studio/                Studio bridge (test place only), e2e snippets (e2e/S-PAR-01, e2e/S-PAR-02), reference
 scripts/verify.luau        the local gate: sourcemaps → T-META-07 → luau-lsp → tests
 tools/                     Roblox definitions for luau-lsp, runner self-test roots (tools/README.md)
 docs/spec/
 ├── SPEC-evidence.md       evidence appendix (E-Sx.y): calibration tables, simulations, proofs
 ├── prototypes/S1…S8/      throwaway Lune prototypes behind the spec's numbers (not game code); tests/Physics/Reference
 │                          compares the build with S2/v2, the reference §4.1 names; S2/verdict is E-S2.11's study,
-│                          S2/cover E-S2.12's (the exact verdict, its cap, worst_designs.luau for T-PERF-01)
+│                          S2/cover E-S2.12's (the exact verdict, its cap, worst_designs.luau for T-PERF-01), S2/m3
+│                          E-S2.13's (difficulty as built)
 └── review/                review findings, the lead's verdicts and rulings (RULINGS.md)
+docs/build/                M1–M3 build notes: open items, deviations from the SPEC, what each builder measured
 vendor/ProfileStore/       vendored ProfileStore (MadStudioRoblox, commit 45c9847, Apache-2.0, never edited)
 ```
 
 The `src/` folders follow SPEC §1.2's module map. M1 filled `src/shared/Definitions/` (all 19 modules, `Manifest`
 and `Validate` included), `Util/Quantize` and `Blueprint/{Schema, Canonical, Quat, Names, Views}`. M2 added
-`Physics/{Shapes, Gjk, Cover, Sampling, MassProps, Analyze}` (validation, the exact Enclosed verdict and mass properties; `Analyze` gains edges and steps
-in M3), `Blueprint/{Mirror, WorkSet}` and a minimal `ItemRender/{RenderPlan, ItemModelBuilder}`. `Main.server`,
-`Main.client` and `Net/Remotes` are still the M0 stubs, the other folders hold `.gitkeep` files, and
+`Physics/{Shapes, Gjk, Cover, Sampling, MassProps, Analyze}` (validation, the exact Enclosed verdict and mass
+properties), `Blueprint/{Mirror, WorkSet}` and a minimal `ItemRender/{RenderPlan, ItemModelBuilder}`. M3 added
+`Physics/{Edge, Factors, Difficulty}`, which `Analyze.run` calls for the edge and the steps (SPEC §4.6, §5).
+`Main.server`, `Main.client` and `Net/Remotes` are still the M0 stubs, the other folders hold `.gitkeep` files, and
 `tests/studio/bridge/` holds the two bridge stubs. Later milestones fill them.
 
 ## Toolchain
@@ -113,5 +120,11 @@ the data contracts (SPEC §18), is built: `Definitions/*` with `Manifest` and `V
 T-BP-01…05/12/13, T-UD-01 and T-BAL-01/02 pass. M2, the geometry core, is built and passes its Lune exit tests:
 T-PHY, T-VAL and T-BP-11/14, with `lune run scripts/verify` green. Its Enclosed verdict is exact on a polyhedral model of
 each part, capped at `VERDICT_WORK_MAX` (SPEC §4.4, E-S2.12). S-PAR-01 (`tests/studio/e2e/S-PAR-01.luau`), engine
-parity of the five shapes, passed in 3 fresh Play sessions of the test place (SPEC §14.10) on 2026-11-14. Next: M3,
-difficulty.
+parity of the five shapes, passed in 3 fresh Play sessions of the test place (SPEC §14.10) on 2026-11-14. M3,
+difficulty, is built: its Lune exit tests T-EDG-01 and T-DIF-01…13 pass, with S2's §5 table blessed for every fixture
+from `Analyze.run` (SPEC §5.5, T-DIF-12), and `lune run scripts/verify` is green with 749 tests. T-PERF-01's timings
+need a quiet machine (SPEC §14.11): the slowest valid design takes about 57 ms against the 60 ms guard, and under this
+machine's ordinary load it fails on timing alone. Its open design calls are SPEC §17.1 O7, O10 and O11, which asks the
+structural question, whether to measure the solid itself (`docs/build/M3-notes.md`). S-PAR-02
+(`tests/studio/e2e/S-PAR-02.luau`), the first Lune = Studio Server = Studio Client digest of `Analyze.run`, M3's Studio
+exit (SPEC §18), passed in 3 fresh Play sessions of the test place on 2026-11-17, both data models in each.

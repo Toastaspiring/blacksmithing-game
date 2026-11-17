@@ -441,7 +441,8 @@ return Test.suite("Physics/Sampling", function(t)
 			H.sameKeptMeasure(after, before, #c.core.parts)
 		end)
 	end
-	t.it("T-PHY-09 duplicates on generated swords, 40 designs", function()
+	-- Fast until M3's fix round 1 (§14.1's 27 s); its designs are the first of the FUZZ_N_VALID case's.
+	t.slow("T-PHY-09 duplicates on generated swords, 40 designs", function()
 		duplicatesOnSwords(40)
 	end)
 	t.slow("T-PHY-09 duplicates on generated swords, FUZZ_N_VALID designs", function()
@@ -466,10 +467,12 @@ return Test.suite("Physics/Sampling", function(t)
 			H.sameKeptMeasure(after, before, #c.core.parts)
 		end)
 	end
-	t.it("T-PHY-09 enclosed filler on generated swords, 40 designs", function()
+	-- Fast until M3's fix round 1 (§14.1's 27 s); its designs are the first of the FUZZ_N_VALID case's.
+	t.slow("T-PHY-09 enclosed filler on generated swords, 40 designs", function()
 		fillerOnSwords("Enclosed", 40)
 	end)
-	t.it("T-PHY-09 dust filler on generated swords, 40 designs", function()
+	-- Fast until M3's fix round 1 (§14.1's 27 s); its designs are the first of the FUZZ_N_VALID case's.
+	t.slow("T-PHY-09 dust filler on generated swords, 40 designs", function()
 		fillerOnSwords("Dust", 40)
 	end)
 	t.slow("T-PHY-09 enclosed and dust filler on generated swords, FUZZ_N_VALID designs each", function()
@@ -650,7 +653,8 @@ return Test.suite("Physics/Sampling", function(t)
 		end)
 		A.truthy(coarser > count / 2, "most fills would coarsen a ladder over all parts: " .. coarser .. " of " .. count)
 	end
-	t.it("§4.4 the measure's ladder: random fill inside a large design's core, kept parts bit-identical, 40 designs", function()
+	-- Fast until M3's fix round 1 (§14.1's 27 s); its designs are the first of the FUZZ_N_VALID case's.
+	t.slow("§4.4 the measure's ladder: random fill inside a large design's core, kept parts bit-identical, 40 designs", function()
 		fillInCore(40)
 	end)
 	t.slow("§4.4 the measure's ladder: random fill inside a large design's core, kept parts bit-identical, FUZZ_N_VALID designs", function()

@@ -4,10 +4,13 @@
 -- sample bit for bit. The build differs from the prototype on purpose in the rules §4.3, §4.4 and §4.5 state: exact copies,
 -- the Enclosed verdict (per part, exact on its polyhedral model, no budget of its own), the measure of the kept parts alone
 -- on a ladder of their own (the prototype's rule, once), a part with no volume of its own, the overlap budget's kept parts
--- first, no axis vote past 45°; the rank, where the prototype goes by index, for which it is handed the parts in rank order;
--- and in exact clipping's cut face, which MassProps builds from the plane so that faces nearly coplanar with a cut stay right
--- (it moves these cases by about 1e-15). Only two of these cases meet those rules in a number compared here, listed below,
--- and a design with cleaned parts counts its measure's samples on the kept parts alone: anything else that moves fails. The
+-- first, no axis vote past 45°, the physics frame and the guard line of the kept parts alone (a cleaned part steers nothing,
+-- M3's fix round 1; the prototype takes every Grip and Guard part); the rank, where the prototype goes by index, for which it
+-- is handed the parts in rank order; and in exact clipping's cut face, which MassProps builds from the plane so that faces
+-- nearly coplanar with a cut stay right (it moves these cases by about 1e-15). Only two of these cases meet those rules in a
+-- number compared here, P1 and P2, listed below (of the prototype's calibration swords only C10 and C11 clean a Grip part:
+-- two Dust specks, a mirrored pair at the grip's height, which leave its frame to the bit), and a design with cleaned parts
+-- counts its measure's samples on the kept parts alone: anything else that moves fails. The
 -- prototype fills its 32 directions from math.cos and math.sin when it loads, so a libm that rounds differently from the one the
 -- literals were generated with would show up here first.
 -- The prototype keeps its own copy of the budgets: a retune of Balance.Geometry (§4.9's fallback, say) ends what this spec
@@ -37,7 +40,8 @@ local ABS = 1e-12
 -- and pinned where it has a number of its own:
 -- the measure's grid, finer than the prototype's over all parts, and what is read on it, SurfaceComplexity's areas and Joints'
 -- contact rows; the volume probes' grid, kept parts only; and through ownership, kept parts first, the volume and everything
--- that weighs it.
+-- that weighs it. Besides, P1's guard line is its kept Guard parts' (§4.5), where the prototype's takes every Guard part, its
+-- Enclosed 6, 8, 11 and 12 too: guardPos and bladeLength are the build's own (the frame is not, P1 cleaning no Grip part).
 local OWN_VERDICT: { [string]: { any } } = {
 	P1 = {
 		{ partId = 6, reason = "Enclosed" },
@@ -58,6 +62,7 @@ local ALONG_AXIS: { [string]: boolean } = {
 	guardPos = true, balance = true, balanceFromHand = true, bladeLength = true, totalLength = true, comOffAxis = true,
 }
 local WEIGHED: { [string]: boolean } = { mass = true, volume = true, balance = true, balanceFromHand = true, comOffAxis = true }
+local GUARD_LINE: { [string]: boolean } = { guardPos = true, bladeLength = true }
 
 -- The prototype's lower index keeps a coincident face, owns an overlap and spends a budget first, where the build's higher rank
 -- in the measure does: on the parts in the measure's rank order the two rules are one.
@@ -115,7 +120,7 @@ local function agreeOn(blueprints: { any })
 		end
 		local p: any, q: any = mine.physics, theirs.physics
 		for _, field in ipairs(PHYSICS) do
-			if not (NO_VOTE[tag] and ALONG_AXIS[field]) and not (ownVerdict and WEIGHED[field]) then
+			if not (NO_VOTE[tag] and ALONG_AXIS[field]) and not (ownVerdict and (WEIGHED[field] or GUARD_LINE[field])) then
 				A.near(p[field], q[field], ABS, what .. " " .. field)
 			end
 		end
@@ -136,9 +141,13 @@ local function agreeOn(blueprints: { any })
 			A.near(p.com[2], 2.4926181549629498, 1e-9, what .. " COM y")
 			A.near(p.com[1], 0.012006968545309067, 1e-9, what .. " COM x")
 			A.near(p.com[3], 0.00044862872391563177, 1e-9, what .. " COM z")
-			A.near(p.balance, 0.16822653163686932, 1e-9, what .. " balance")
+			A.near(p.balance, 0.20549376330958277, 1e-9, what .. " balance")
 			A.near(p.balanceFromHand, 0.41747511140832499, 1e-9, what .. " balanceFromHand")
 			A.near(p.comOffAxis, 0.017139267321934232, 1e-9, what .. " comOffAxis")
+			-- the kept Guard parts' line (every Guard part's, the prototype's: 0.24924857977145568 and 2.4645307140142103)
+			A.near(p.guardPos, 0.21198134809874222, 1e-9, what .. " guardPos")
+			A.near(p.bladeLength, 2.5017979456869242, 1e-9, what .. " bladeLength")
+			A.near(q.guardPos, 0.24924857977145568, 1e-9, what .. " the prototype's guardPos")
 			-- the measure on the kept row: what is read on its grid, and the overlap counts
 			local area, touch = 0, 0
 			for i = 1, #b.parts do

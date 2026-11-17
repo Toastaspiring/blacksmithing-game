@@ -1,9 +1,10 @@
 --!strict
 -- T-VAL-01, 02, 04 Physics/Analyze (SPEC §4.1, §4.2, §4.7, §4.9, E-S2.10, E-S8.4, E-S8.5): the V-rules on the A fixtures'
--- exact lists in fixed order, containment against brute force, valid designs valid, floating components, what run
--- leaves for M3, and the execution model: checkpoints, cancellation, re-entrancy, no module-level state. T-VAL-03 lives
--- in Gjk.spec, T-PHY in MassProps.spec and Shapes.spec, T-PERF-01 with M3's fixtures; the cap's TooComplex here, the cap
--- itself in Cover.spec.
+-- exact lists in fixed order, containment against brute force, valid designs valid, floating components, the report
+-- with M3's edge and steps (the M3 plan's [3.5], [10] and the lead's L14, L16), and the execution model: checkpoints,
+-- cancellation, re-entrancy, no module-level state. T-VAL-03 lives in Gjk.spec, T-PHY in MassProps.spec and Shapes.spec,
+-- T-EDG and T-DIF in Edge.spec, Factors.spec, Difficulty.spec, Invariance.spec and DifficultyTable.spec, T-PERF-01 in
+-- Perf.spec; the cap's TooComplex here, the cap itself in Cover.spec.
 
 local fs = require("@lune/fs")
 local luau = require("@lune/luau")
@@ -18,18 +19,20 @@ local Drafts = require("../Blueprint/Drafts")
 local Adversarial = require("../fixtures/Adversarial")
 local Blueprints = require("../fixtures/Blueprints")
 local Build = require("../fixtures/Build")
+local Calibration = require("../fixtures/Calibration")
+local Cost = require("../fixtures/Cost")
+local D = require("./DifficultyHelpers")
 local H = require("./PhysicsHelpers")
 local Balance = require("../../src/shared/Definitions/Balance")
-local Catalog = require("../../src/shared/Definitions/Catalog")
 local EquipmentTypes = require("../../src/shared/Definitions/EquipmentTypes")
 local Limits = require("../../src/shared/Definitions/Limits")
 local Materials = require("../../src/shared/Definitions/Materials")
-local Types = require("../../src/shared/Definitions/Types")
 local Versions = require("../../src/shared/Definitions/Versions")
 local Canonical = require("../../src/shared/Blueprint/Canonical")
-local Schema = require("../../src/shared/Blueprint/Schema")
 local Analyze = require("../../src/shared/Physics/Analyze")
-local Gjk = require("../../src/shared/Physics/Gjk")
+local Difficulty = require("../../src/shared/Physics/Difficulty")
+local Edge = require("../../src/shared/Physics/Edge")
+local Factors = require("../../src/shared/Physics/Factors")
 local MassProps = require("../../src/shared/Physics/MassProps")
 local Sampling = require("../../src/shared/Physics/Sampling")
 local Shapes = require("../../src/shared/Physics/Shapes")
@@ -174,11 +177,37 @@ return Test.suite("Physics/Analyze", function(t)
 		A.eq(plain.physics, nil)
 		A.truthy(plain.budget.hSurf > 0, "exposure ran")
 		A.eq(plain.budget.hVol, 0, "measurement did not")
+		A.eq(plain.edge, nil)
+		A.eq(plain.steps, nil)
 		local measured = run(core, { measureInvalid = true })
 		A.deepEq(measured.validation, plain.validation, "the verdict is the same")
 		A.truthy(measured.physics ~= nil, "measured anyway")
 		A.truthy(measured.budget.hVol > 0)
 		H.finite(measured.physics, "A06 physics")
+		A.truthy(measured.edge ~= nil and measured.budget.edgeCell > 0, "the edge measured too")
+		A.eq(#measured.steps, 3, "and the steps")
+		H.finite(measured, "A06")
+	end)
+
+	-- D5 (the M3 plan): with measureInvalid, a step whose work set is empty leaves steps nil; the edge is measured, here
+	-- with no kept part of the striking slot: no chain, all zero, the frame.
+	t.it("§4.7 measureInvalid with every Blade part cleaned: steps nil, the edge empty, edgeLength and cutIndex 0", function()
+		local core = H.core("blade in the guard", {
+			H.part(1, "Pommel", "Block", "Iron", { 0, 0.2, 0 }, H.I, { 0.2, 0.2, 0.2 }),
+			H.part(2, "Grip", "Block", "Iron", { 0, 0.8, 0 }, H.I, { 0.15, 1, 0.15 }),
+			H.part(3, "Guard", "Block", "Iron", { 0, 2.3, 0 }, H.I, { 1, 2, 0.3 }),
+			H.part(4, "Blade", "Block", "Iron", { 0, 2.3, 0 }, H.I, { 0.2, 1.5, 0.06 }), -- enclosed in the guard
+		})
+		local plain = run(core)
+		A.deepEq(plain.validation.errors, { { code = "SlotMissing", slot = "Blade", reason = "Cleaned" } })
+		A.eq(plain.edge, nil)
+		local report = run(core, { measureInvalid = true })
+		A.deepEq(report.cleaned, { { partId = 4, reason = "Enclosed" } })
+		A.eq(report.steps, nil, "Sharpening's work set is empty")
+		local e = report.edge
+		A.deepEq({ #e.chains, e.length, e.cell, e.bladeArea, e.bladeMeanThickness }, { 0, 0, 0, 0, 0 }, "no kept Blade part")
+		A.deepEq(e.gripAxis, { 0, 1 }, "the difficulty frame's axis")
+		A.deepEq({ report.physics.edgeLength, report.physics.cutIndex, report.budget.edgeCell }, { 0, 0, 0 })
 	end)
 
 	t.it("§4.2 every full-stage error together, in rule order: V3, V4, V5", function()
@@ -206,17 +235,8 @@ return Test.suite("Physics/Analyze", function(t)
 
 	-- Analyze on planted Balance.Geometry fields: its Sampling and that Sampling's Cover (H.plantedSampling).
 	local function plantedAnalyze(overrides: { [string]: any }): any
-		return Drafts.planted("src/shared/Physics/Analyze.luau", {
-			["../Definitions/Types"] = Types,
-			["../Definitions/EquipmentTypes"] = EquipmentTypes,
-			["../Definitions/Limits"] = Limits,
-			["../Definitions/Versions"] = Versions,
-			["../Blueprint/Schema"] = Schema,
-			["./Gjk"] = Gjk,
-			["./MassProps"] = MassProps,
-			["./Sampling"] = H.plantedSampling(overrides),
-			["./Shapes"] = Shapes,
-		})
+		return Drafts.planted("src/shared/Physics/Analyze.luau",
+			D.analyzeRequires({ ["./Sampling"] = H.plantedSampling(overrides) }))
 	end
 
 	-- Past VERDICT_WORK_MAX there is no verdict: no part to clean, no kept row for V5, nothing to measure. The design is invalid,
@@ -633,7 +653,8 @@ return Test.suite("Physics/Analyze", function(t)
 			H.finite(report.physics, "physics")
 		end)
 	end
-	t.it("T-VAL-04 generated swords are valid, 60 designs", function()
+	-- Fast until M3's fix round 1 (§14.1's 27 s); its designs are the first of the FUZZ_N_VALID case's.
+	t.slow("T-VAL-04 generated swords are valid, 60 designs", function()
 		validSwords(60)
 	end)
 	t.slow("T-VAL-04 generated swords are valid, FUZZ_N_VALID designs", function()
@@ -662,35 +683,54 @@ return Test.suite("Physics/Analyze", function(t)
 			A.truthy(p.gripAxis[2] >= Geo.AXIS_MAX_TILT_COS - 1e-12, "the axis tilts at most 45°")
 		end)
 	end
-	t.it("§4.9 any design inside the hitbox: no throw, finite, consistent, 30 designs", function()
+	-- Fast until M3's fix round 1 (§14.1's 27 s); its designs are the first of the PROP_N case's.
+	t.slow("§4.9 any design inside the hitbox: no throw, finite, consistent, 30 designs", function()
 		anyDesigns(30)
 	end)
 	t.slow("§4.9 any design inside the hitbox: no throw, finite, consistent, PROP_N designs", function()
 		anyDesigns(Tol.PROP_N)
 	end)
 
-	t.it("§4.7 the report: balance version, physics fields, nil edge and steps until M3, per-part arrays in part order", function()
-		local report = run(Blueprints.get("F1").core)
-		A.eq(report.balanceVersion, Versions.BALANCE_VERSION)
-		A.eq(report.edge, nil, "M3")
-		A.eq(report.steps, nil, "M3")
-		local p = report.physics
-		for _, field in ipairs({ "mass", "volume", "guardPos", "balance", "balanceFromHand", "reach", "bladeLength", "totalLength",
-			"comOffAxis", "edgeLength", "cutIndex" }) do
-			A.finite(p[field], field)
-		end
-		A.eq(p.edgeLength, 0, "M3")
-		A.eq(p.cutIndex, 0, "M3")
-		A.eq(#p.com, 3)
-		A.eq(#p.gripPoint, 3)
-		A.eq(#p.gripAxis, 2)
-		A.eq(#p.kept, 5)
-		A.eq(#p.ownedVolume, 5)
-		A.eq(report.budget.edgeCell, 0, "M3")
-		A.truthy(report.budget.surfSamples > 0)
-		A.truthy(report.budget.volSamples > 0)
-		A.eq(Analyze.CHECK_UNITS, 500, "§16.18")
-	end)
+	t.it("§4.7 the report: balance version, physics fields with the edge's, the edge, the steps, per-part arrays in part order",
+		function()
+			local report = run(Blueprints.get("F1").core)
+			A.eq(report.balanceVersion, Versions.BALANCE_VERSION)
+			local p = report.physics
+			for _, field in ipairs({ "mass", "volume", "guardPos", "balance", "balanceFromHand", "reach", "bladeLength", "totalLength",
+				"comOffAxis", "edgeLength", "cutIndex" }) do
+				A.finite(p[field], field)
+			end
+			A.eq(#p.com, 3)
+			A.eq(#p.gripPoint, 3)
+			A.eq(#p.gripAxis, 2)
+			A.eq(#p.kept, 5)
+			A.eq(#p.ownedVolume, 5)
+			A.truthy(report.budget.surfSamples > 0)
+			A.truthy(report.budget.volSamples > 0)
+			A.eq(Analyze.CHECK_UNITS, 500, "§16.18")
+			-- the edge (L14): EdgeLength is its main chain's, cutIndex on the physics' blade length, the cell its raster's
+			local e = report.edge
+			A.eq(#e.chains, 1, "F1's one chain")
+			A.near(e.length, 5.4330, 5e-5, "EdgeLength (§4.6)")
+			A.eq(p.edgeLength, e.length, "physics.edgeLength = edge.length")
+			A.eq(p.edgeLength, e.chains[1].length, "the main chain's")
+			A.eq(p.cutIndex, Edge.cutIndex(p.bladeLength, e.bladeMeanThickness), "cutIndex on bladeLength")
+			A.near(p.cutIndex, 0.724180, 1e-6, "cutIndex (L1)")
+			A.eq(report.budget.edgeCell, e.cell)
+			A.eq(e.cell, Geo.EDGE_CELL, "no coarsening")
+			-- its frame is the difficulty frame: the kept Grip parts' point, the axis fixed at +Y (§4.5)
+			A.deepEq(e.gripPoint, p.gripPoint, "F1's one Grip part, kept")
+			A.deepEq(e.gripAxis, { 0, 1 })
+			-- the steps: CraftPlans' enabled steps in order, each with its 8 factors in FactorId order
+			A.eq(#report.steps, 3)
+			for k, row in ipairs(Difficulty.planSteps("Sword")) do
+				local s = report.steps[k]
+				A.eq(s.step, row.step, "plan order")
+				A.eq(#s.factors, #Factors.ORDER, s.step)
+				A.eq(s.material, "Steel", s.step .. ": Steel governs F1's sets")
+			end
+			A.deepEq({ report.steps[1].d, report.steps[2].d, report.steps[3].d }, { 0.0288, 0.1037, 0.0989 }, "§5.5's F1")
+		end)
 
 	t.it("§4.7 every return path carries the balance version", function()
 		local quickStop = canonicalOf(Adversarial.variant("A01"))
@@ -721,6 +761,31 @@ return Test.suite("Physics/Analyze", function(t)
 		for i, id in ipairs(report.physics.kept) do
 			A.eq(id, not cleanedIds[i], "kept and cleaned agree, part " .. i)
 		end
+		-- M3's budgets (the M3 plan's [10]): the raster's chosen rung fits EDGE_MAX_CELLS and EDGE_MAX_WORK, or is the last;
+		-- each work set's Thinness takes at most THICK_BUDGET probes, its Asymmetry fits ASYM_WORK or is on the last rung.
+		-- They are what the report was measured with: the same cell, the same factors.
+		local m = D.measured(H.p1())
+		local _, byRank = Sampling.measureRanked(m.parts)
+		local keptByRank: { boolean } = {}
+		for r, p in ipairs(byRank) do
+			keptByRank[r] = m.kept[p.index]
+		end
+		local point, axis = MassProps.difficultyFrame(byRank, keptByRank, "Grip")
+		local edge, raster = Edge.profile(byRank, keptByRank, D.GEOMETRY, point, axis)
+		local last = Geo.EDGE_CELL * Geo.H_LADDER[#Geo.H_LADDER]
+		A.truthy(edge.cell > Geo.EDGE_CELL, "the raster coarsened: " .. edge.cell)
+		A.truthy(edge.cell == last or (raster.cells <= Geo.EDGE_MAX_CELLS and raster.work <= Geo.EDGE_MAX_WORK),
+			string.format("raster at %g: %d cells, %d tests", edge.cell, raster.cells, raster.work))
+		A.eq(report.budget.edgeCell, edge.cell, "the report's cell")
+		A.eq(Dump.canonical(report.edge), Dump.canonical(edge), "the report's edge")
+		local Dif = Balance.Difficulty
+		for k, row in ipairs(Difficulty.planSteps("Sword")) do
+			local values, budget = Factors.measure(m.ctx, D.set(m, row.worksOn))
+			A.truthy(budget.thinProbes <= Dif.THICK_BUDGET, row.step .. " Thinness probes: " .. budget.thinProbes)
+			A.truthy(budget.asymWork <= Dif.ASYM_WORK or budget.asymSpacing == Geo.H_VOL * Geo.H_LADDER[#Geo.H_LADDER],
+				string.format("%s Asymmetry: %d tests at %g", row.step, budget.asymWork, budget.asymSpacing))
+			A.eq(Dump.canonical(report.steps[k].factors), Dump.canonical(values), row.step .. " factors")
+		end
 	end)
 
 	t.it("§4.9 checkpoints: between phases and through long loops", function()
@@ -745,17 +810,7 @@ return Test.suite("Physics/Analyze", function(t)
 		-- Analyze with a cadence no design reaches: every checkpoint left comes from a phase boundary
 		local source, replaced = string.gsub(fs.readFile("src/shared/Physics/Analyze.luau"), "local CHECK_UNITS = %d+", "local CHECK_UNITS = 1e12")
 		A.eq(replaced, 1, "the constant's line")
-		local modules: { [string]: any } = {
-			["../Definitions/Types"] = Types,
-			["../Definitions/EquipmentTypes"] = EquipmentTypes,
-			["../Definitions/Limits"] = Limits,
-			["../Definitions/Versions"] = Versions,
-			["../Blueprint/Schema"] = Schema,
-			["./Gjk"] = Gjk,
-			["./MassProps"] = MassProps,
-			["./Sampling"] = Sampling,
-			["./Shapes"] = Shapes,
-		}
+		local modules = D.analyzeRequires()
 		local environment: { [string]: any } = {
 			require = function(spec: string): any
 				return modules[spec]
@@ -763,10 +818,11 @@ return Test.suite("Physics/Analyze", function(t)
 		}
 		local phasesOnly: any = luau.load(source, { debugName = "Analyze (phases only)", environment = environment })()
 		local count = 0
-		phasesOnly.run(Blueprints.get("F2").core, { checkpoint = function()
+		local report = phasesOnly.run(Blueprints.get("F2").core, { checkpoint = function()
 			count += 1
 		end })
-		A.eq(count, 5, "after quick, V3 and V4, exposure, mass properties, volume probes")
+		A.eq(count, 8, "after quick, V3 and V4, exposure, mass properties, volume probes, the edge, the sets All and {Blade}")
+		A.eq(Dump.canonical(report), Dump.canonical(run(Blueprints.get("F2").core)), "the same analysis")
 	end)
 
 	-- The cases above count checkpoints in total: dropping one phase's spend passes them, and so does a counter that stops
@@ -789,6 +845,12 @@ return Test.suite("Physics/Analyze", function(t)
 		local seen = callers(H.p1())
 		for _, name in ipairs({ "connectivity", "exposure", "shown", "subtract", "surfaceSamples", "exposedWeight", "ownership", "sampledOverlap", "volumeProbes", "volumeSamples" }) do
 			A.truthy(seen[name], "no checkpoint from " .. name)
+		end
+		-- M3's: Edge's ladder, raster, crack edges, loops and their runs' Douglas–Peucker (P5's comb has outline enough);
+		-- Factors' Thinness and Asymmetry
+		local comb = callers(Cost.get("P5").core)
+		for _, name in ipairs({ "rungFits", "raster", "crackEdges", "traceLoops", "emitRun", "simplify", "thinness", "asymmetry" }) do
+			A.truthy(seen[name] or comb[name], "no checkpoint from " .. name)
 		end
 		-- exact overlaps: 3 tilted blocks through a fourth
 		local parts = { H.part(1, "Grip", "Block", "Iron", { 0, 2, 0 }, H.axisAngle(0, 0, 1, 10), { 0.6, 2, 0.3 }) }
@@ -882,34 +944,22 @@ return Test.suite("Physics/Analyze", function(t)
 		end
 	end)
 
+	-- L16: Materials, Steps and Tiers rebuilt in shuffled order, planted into MassProps, Factors and Difficulty, and those
+	-- into Analyze.
 	t.it("P-ORDER: Definitions rows rebuilt in shuffled order leave the result bit-identical", function()
-		local function shuffled(catalog: any, order: { number }): any
-			return Catalog.build(Drafts.rows(catalog.ordered, order))
-		end
-		local materials = shuffled(Materials, { 7, 3, 1, 5, 2, 6, 4 })
-		local massProps = Drafts.planted("src/shared/Physics/MassProps.luau", {
-			["../Definitions/Balance"] = Balance,
-			["../Definitions/Types"] = Types,
-			["../Definitions/Materials"] = materials,
-			["../Blueprint/Schema"] = Schema,
-			["./Gjk"] = Gjk,
-			["./Sampling"] = Sampling,
-			["./Shapes"] = Shapes,
-		})
-		local planted = Drafts.planted("src/shared/Physics/Analyze.luau", {
-			["../Definitions/Types"] = Types,
-			["../Definitions/EquipmentTypes"] = EquipmentTypes,
-			["../Definitions/Limits"] = Limits,
-			["../Definitions/Versions"] = Versions,
-			["../Blueprint/Schema"] = Schema,
-			["./Gjk"] = Gjk,
-			["./MassProps"] = massProps,
-			["./Sampling"] = Sampling,
-			["./Shapes"] = Shapes,
-		})
+		local planted = D.plantedPhysics({
+			materials = D.reordered("src/shared/Definitions/Materials.luau", { 7, 3, 1, 5, 2, 6, 4 }),
+			steps = D.reordered("src/shared/Definitions/Steps.luau", { 8, 6, 4, 2, 7, 5, 3, 1 }),
+			tiers = D.reordered("src/shared/Definitions/Tiers.luau", { 5, 2, 4, 1, 3 }),
+		}).analyze
+		local cores: { any } = {}
 		for _, id in ipairs(Blueprints.order) do
-			local core: any = Blueprints.get(id).core
-			A.eq(Dump.canonical(planted.run(core)), Dump.canonical(Analyze.run(core)), id)
+			table.insert(cores, Blueprints.get(id).core)
+		end
+		table.insert(cores, Calibration.get("C09").core)
+		table.insert(cores, Cost.get("P1").core)
+		for _, core in ipairs(cores) do
+			A.eq(Dump.canonical(planted.run(core)), Dump.canonical(Analyze.run(core)), core.name)
 		end
 	end)
 

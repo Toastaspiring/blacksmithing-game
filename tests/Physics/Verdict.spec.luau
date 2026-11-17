@@ -220,7 +220,8 @@ return Test.suite("Physics/Verdict", function(t)
 		end
 	end)
 
-	t.it("§5 random fill around a large design: kept parts bit-identical, 40 designs", function()
+	-- Fast until M3's fix round 1 (§14.1's 27 s); its designs are the first of the FUZZ_N_VALID case's.
+	t.slow("§5 random fill around a large design: kept parts bit-identical, 40 designs", function()
 		fillLeavesKept(40)
 	end)
 	t.slow("§5 random fill around a large design: kept parts bit-identical, FUZZ_N_VALID designs", function()

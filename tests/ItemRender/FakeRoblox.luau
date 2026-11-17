@@ -1,6 +1,7 @@
 --!strict
 -- tests/ItemRender/FakeRoblox.luau — a small stand-in for the engine, so Lune can run the Roblox-bound item code and
--- the S-PAR-01 snippet (nobody can run Studio from the test gate). Not a spec (the runner loads *.spec.luau only).
+-- the S-PAR-01 and S-PAR-02 snippets (nobody can run Studio from the test gate). Not a spec (the runner loads *.spec.luau
+-- only).
 --
 -- It proves that this code does what it says against an engine that behaves as documented, and that S-PAR-01 fails when
 -- the engine behaves otherwise. It proves nothing about Roblox itself: that is S-PAR-01's job, in Studio.
@@ -9,13 +10,16 @@
 --   datatypes  Vector3 and CFrame (float32 components, as the engine stores them), Color3, enums, PhysicalProperties,
 --              OverlapParams
 --   instances  the DataModel with the test project's ReplicatedStorage (src/shared, tests/lib, tests/fixtures read from
---              disk), Part and Folder with type-checked properties: an unknown member or a wrong value type errors
+--              disk; tests/golden as StringValues named by the file's stem, as Rojo maps a .txt file), Part and Folder
+--              with type-checked properties: an unknown member or a wrong value type errors
+--   RunService IsRunning, IsServer and IsClient: a Play session's Server data model, or its Client one (Options.server)
 --   Part       Mass = density × volume, CenterOfMass (local), ExtentsSize (sides below PHYSICS_MIN_DIM enlarged)
 --   queries    workspace:GetPartsInPart for a Ball probe: filter, CanQuery, both parts in the Workspace, collision
 --              shape at the physics size
 --
 -- Options.faults plants a wrong engine, one switch per fault (the Faults type); Options.moduleRewrite(path, source)
--- plants a fault in a Roblox-bound module's source. A pure module is the real one, through Lune's require.
+-- plants a fault in a Roblox-bound module's source, Options.goldenRewrite(stem, text) in a golden's Value. A pure module
+-- is the real one, through Lune's require.
 
 local fs = require("@lune/fs")
 local luau = require("@lune/luau")
@@ -37,9 +41,11 @@ export type Faults = {
 export type Options = {
 	faults: Faults?,
 	running: boolean?, -- RunService:IsRunning(), default true
-	server: boolean?, -- RunService:IsServer(), default true
-	omit: { string }?, -- module paths left out of the tree, e.g. "src/shared/Physics/Shapes"
+	server: boolean?, -- RunService:IsServer(), default true; IsClient() is its inverse
+	omit: { string }?, -- module or golden paths left out of the tree, e.g. "src/shared/Physics/Shapes",
+	-- "tests/golden/parity.bv1.digest"
 	moduleRewrite: ((path: string, source: string) -> string)?,
+	goldenRewrite: ((stem: string, text: string) -> string)?,
 }
 export type World = {
 	env: { [string]: any },
@@ -292,6 +298,7 @@ local NAME_ONLY = { Name = "string" }
 local WRITABLE: { [string]: { [string]: string } } = {
 	Folder = NAME_ONLY,
 	ModuleScript = NAME_ONLY,
+	StringValue = { Name = "string", Value = "string" },
 	Part = {
 		Name = "string",
 		Anchored = "boolean",
@@ -468,6 +475,14 @@ function FakeRoblox.new(options: Options?): World
 		return nil
 	end
 
+	function methods.GetChildren(self: any): { any }
+		return table.clone(raw(self, "_children"))
+	end
+
+	function methods.IsA(self: any, className: string): boolean
+		return raw(self, "_class") == className -- the fake has no class tree: exact classes only
+	end
+
 	function methods.WaitForChild(self: any, name: string): any
 		return methods.FindFirstChild(self, name) or error("the fake would wait forever for " .. name, 2)
 	end
@@ -525,6 +540,9 @@ function FakeRoblox.new(options: Options?): World
 	end
 	function methods.IsServer(_self: any): boolean
 		return opts.server ~= false
+	end
+	function methods.IsClient(_self: any): boolean
+		return opts.server == false
 	end
 
 	function methods.GetPartsInPart(_self: any, probe: any, params: any): { any }
@@ -588,6 +606,22 @@ function FakeRoblox.new(options: Options?): World
 	setParent(tests, replicated)
 	mapDir(tests, "lib", "tests/lib")
 	mapDir(tests, "fixtures", "tests/fixtures")
+
+	-- tests/golden: Rojo makes each <stem>.txt a StringValue named <stem> holding the file's text.
+	local golden = instance("Folder", "golden")
+	setParent(golden, tests)
+	local goldenFiles = fs.readDir("tests/golden")
+	table.sort(goldenFiles)
+	for _, entry in goldenFiles do
+		local stem = string.match(entry, "^(.*)%.txt$")
+		if stem and not omitted["tests/golden/" .. stem] then
+			local text = fs.readFile("tests/golden/" .. entry)
+			if opts.goldenRewrite then
+				text = opts.goldenRewrite(stem, text)
+			end
+			setParent(instance("StringValue", stem, { Value = text }), golden)
+		end
+	end
 
 	-- ── the globals a chunk sees ──────────────────────────────────────────────────────────────────────────────────
 

@@ -16,8 +16,11 @@
 --
 -- Exposure. A sample s of part p (normal n) is hidden by another part q if it is buried (sd_q(s) < −EPS_GEOM), or lies
 -- on q's surface and q ranks higher (a coincident face counts once), or its probe s + HIDE_OFFSET·n is inside q.
--- HIDE_OFFSET = CONTACT_TOL + 0.002, so any gap validation calls connected hides the faces across it. Both ranks put the
--- larger part first and settle every tie by the solids or the slot's name, so a part's id cannot decide anything here.
+-- HIDE_OFFSET = CONTACT_TOL + 0.002, so any gap validation calls connected hides the faces across it where the part
+-- beyond holds the probe. The probe is one point: a face flush on a part thinner than HIDE_OFFSET there (a Wedge's
+-- thin edge) shows where that part ranks lower, the coincident rule hiding only the lower part's face (SPEC §4.4,
+-- §17.1 O10). Both ranks put the larger part first and settle every tie by the solids or the slot's name, so a part's
+-- id cannot decide anything here.
 --
 -- The verdict comes first, per part, and depends only on the part and on what covers it. Dust: V < MIN_PART_VOLUME, no
 -- samples, hides nothing. An exact copy (Shapes.sameSolid with a higher rank) lies wholly on that part's surface:
