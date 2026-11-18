@@ -1,0 +1,11 @@
+spend<exposedWeight<exposure<run] C05 Cleaver                                         1165    144    0.694    0.037     6.75 valid  [spend<addRectangl
+spend<exactOverlap<ownership<run] C09 Ornate (18 parts)                              21482    186    0.426    0.048     9.84 valid  [phase<run -> spen
+spend<exposure<run] F5 StarterSword                                     2033     46    0.578    0.038     1.89 valid  [phase<run -> spend<exposure<run
+spend<exposure<run] X01raw 2 blade copies at z +-0.003 (vs F5)          3624    133    0.478    0.044     6.19 valid  [phase<run -> spend<exposure<run
+spend<sampledOverlap<ownership<run] P1 24 large overlapping tilted blocks             330993    924    0.470    0.020    25.24 valid  [spend<exactOver
+spend<exposure<run] P2 24 rotated cylinders                            27403    256    0.452    0.045    12.95 valid  [phase<run -> spend<exposure<run
+spend<exposure<run] P3 24 rotated wedges                                8405    257    0.828    0.047    13.04 valid  [phase<run -> spend<exposure<run
+spend<ownership<run] P4 24 overlapping balls                           154857    358    0.852    0.027    13.59 valid  [phase<run -> spend<ownership<r
+spend<exactOverlap<ownership<run] P5 comb blade (sawtooth, 24 parts)                  2973     70    0.869    0.038     2.90 valid  [phase<run -> spen
+spend<exposure<run] repo F5                                             2033     46    0.355    0.037     1.79 valid  [phase<run -> spend<exposure<run
+ms longest gap over all: 0.869 ms

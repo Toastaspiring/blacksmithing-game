@@ -1,0 +1,18 @@
+M4 model corpus_fixtures.json: 615 parts, 482 bit-exact mirror models, largest |difference| 1.33e-15 (P1 24 large overlapping tilted blocks Block)
+  Cylinder        49 parts,     7 exact, largest 4.51e-17
+  Ball            88 parts,    88 exact, largest 0
+  Wedge           64 parts,    54 exact, largest 5.55e-17
+  Block          400 parts,   333 exact, largest 1.33e-15
+  CornerWedge     14 parts,     0 exact, largest 4.44e-16
+M4 model fuzz:300:3: 3956 parts, 1220 bit-exact mirror models, largest |difference| 1.44e-15 (fuzz3#108 CornerWedge)
+  Cylinder       561 parts,   197 exact, largest 8.33e-17
+  CornerWedge    559 parts,    88 exact, largest 1.44e-15
+  Wedge          607 parts,   252 exact, largest 1.33e-15
+  Block         1673 parts,   682 exact, largest 8.88e-16
+  Ball           556 parts,     1 exact, largest 6.07e-18
+M4 model fuzz:300:3: 3956 parts, 1220 bit-exact mirror models, largest |difference| 1.44e-15 (fuzz3#108 CornerWedge)
+  Cylinder       561 parts,   197 exact, largest 1.94e-16
+  CornerWedge    559 parts,    88 exact, largest 1.44e-15
+  Wedge          607 parts,   252 exact, largest 1.33e-15
+  Block         1673 parts,   682 exact, largest 8.88e-16
+  Ball           556 parts,     1 exact, largest 1.73e-18

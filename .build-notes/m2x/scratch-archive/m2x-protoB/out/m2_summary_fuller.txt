@@ -1,0 +1,10 @@
+M2 fuller sweep (54,000 of 71,616): 54000 designs from fuller 54000
+  shape          parts   fine | false Enclosed at true >= 2.5/3/5/7.5/10/15/20 % | false kept at true < 1.5/1/0.5/0.25 %
+  Block         485840  21415 | new cleaned    273 FE 0/0/0/0/0/0/0              | FK 0/0/0/0
+                     0      0 | old cleaned    273 FE 0/0/0/0/0/0/0              | FK 0/0/0/0
+  Cylinder       54000      0 | new cleaned      0 FE 0/0/0/0/0/0/0              | FK 0/0/0/0
+                     0      0 | old cleaned      0 FE 0/0/0/0/0/0/0              | FK 0/0/0/0
+  Ball           54000      0 | new cleaned      0 FE 0/0/0/0/0/0/0              | FK 0/0/0/0
+                     0      0 | old cleaned      0 FE 0/0/0/0/0/0/0              | FK 0/0/0/0
+  ALL           593840  21415 | new cleaned    273 FE 0/0/0/0/0/0/0              | FK 0/0/0/0
+                     0      0 | old cleaned    273 FE 0/0/0/0/0/0/0              | FK 0/0/0/0

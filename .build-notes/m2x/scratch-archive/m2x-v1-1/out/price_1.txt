@@ -1,0 +1,1 @@
+seed 1: 500 cages, 46 read 0.2–2 % on the model; the highest truth among them 5.550% (r 0.10 g -0.00201 b 0.0500, model 1.988%)

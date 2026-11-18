@@ -1,0 +1,74 @@
+M2 PlausibleDesigns (all families): 32348 designs, 308601 parts, 0 design errors, files 4
+== reading old
+  Ball        parts  49390  false Enclosed at >= 2.5/3/5/7.5/10/15/20 %: 144/14/3/0/0/0/0   false kept at < 1.5/1/0.5/0.25 %: 3/1/0/0   highest cleaned 6.33 %, lowest kept 0.603 %
+  Block       parts 188496  false Enclosed at >= 2.5/3/5/7.5/10/15/20 %: 0/0/0/0/0/0/0   false kept at < 1.5/1/0.5/0.25 %: 0/0/0/0   highest cleaned 2.36 %, lowest kept 2.002 %
+  CornerWedge parts   1080  false Enclosed at >= 2.5/3/5/7.5/10/15/20 %: 5/4/0/0/0/0/0   false kept at < 1.5/1/0.5/0.25 %: 1/0/0/0   highest cleaned 3.34 %, lowest kept 1.270 %
+  Cylinder    parts  37268  false Enclosed at >= 2.5/3/5/7.5/10/15/20 %: 230/82/0/0/0/0/0   false kept at < 1.5/1/0.5/0.25 %: 59/25/6/0   highest cleaned 4.46 %, lowest kept 0.297 %
+  Wedge       parts  32367  false Enclosed at >= 2.5/3/5/7.5/10/15/20 %: 0/0/0/0/0/0/0   false kept at < 1.5/1/0.5/0.25 %: 0/0/0/0   highest cleaned 1.97 %, lowest kept 1.875 %
+  ALL         parts 308601  false Enclosed at >= 2.5/3/5/7.5/10/15/20 %: 379/100/3/0/0/0/0   false kept at < 1.5/1/0.5/0.25 %: 63/26/6/0   highest cleaned 6.33 %, lowest kept 0.297 %
+    false Enclosed: true 6.33 % read -  ballRivet | ballRivet|F3|guardX d0.10 unrot cap0.3000 part 8 (Ball)
+    false Enclosed: true 5.28 % read -  ballRivet | ballRivet|C09|guardZ d0.14 z45 cap0.0250 part 19 (Ball)
+    false Enclosed: true 5.27 % read -  ballRivet | ballRivet|C09|guardZ d0.14 z45 cap0.0250 part 20 (Ball)
+    false Enclosed: true 4.99 % read -  ballRivet | ballRivet|C09|guardZ d0.14 z45 cap0.0225 part 19 (Ball)
+    false Enclosed: true 4.98 % read -  ballRivet | ballRivet|C09|guardZ d0.14 z45 cap0.0225 part 20 (Ball)
+    false Enclosed: true 4.70 % read -  ballRivet | ballRivet|C09|guardZ d0.14 z45 cap0.0200 part 19 (Ball)
+    false kept:     true 0.297 % read -  wrapRings | wrapRings|C05|n4 extra0.01 gap0.0010 part 2 (Cylinder)
+    false kept:     true 0.297 % read -  wrapRings | wrapRings|C05|n4 extra0.02 gap0.0010 part 2 (Cylinder)
+    false kept:     true 0.297 % read -  wrapRings | wrapRings|C05|n4 extra0.04 gap0.0010 part 2 (Cylinder)
+    false kept:     true 0.307 % read -  wrapRings | wrapRings|C02|n4 extra0.01 gap0.0010 part 2 (Cylinder)
+    false kept:     true 0.307 % read -  wrapRings | wrapRings|C02|n4 extra0.02 gap0.0010 part 2 (Cylinder)
+    false kept:     true 0.307 % read -  wrapRings | wrapRings|C02|n4 extra0.04 gap0.0010 part 2 (Cylinder)
+== reading base
+  Ball        parts  49390  false Enclosed at >= 2.5/3/5/7.5/10/15/20 %: 499/221/0/0/0/0/0   false kept at < 1.5/1/0.5/0.25 %: 0/0/0/0   highest cleaned 3.53 %, lowest kept 2.925 %
+  Block       parts 188496  false Enclosed at >= 2.5/3/5/7.5/10/15/20 %: 0/0/0/0/0/0/0   false kept at < 1.5/1/0.5/0.25 %: 0/0/0/0   highest cleaned 1.99 %, lowest kept 2.002 %
+  CornerWedge parts   1080  false Enclosed at >= 2.5/3/5/7.5/10/15/20 %: 0/0/0/0/0/0/0   false kept at < 1.5/1/0.5/0.25 %: 0/0/0/0   highest cleaned 1.98 %, lowest kept 2.087 %
+  Cylinder    parts  37268  false Enclosed at >= 2.5/3/5/7.5/10/15/20 %: 192/0/0/0/0/0/0   false kept at < 1.5/1/0.5/0.25 %: 9/0/0/0   highest cleaned 2.82 %, lowest kept 1.290 %
+  Wedge       parts  32367  false Enclosed at >= 2.5/3/5/7.5/10/15/20 %: 0/0/0/0/0/0/0   false kept at < 1.5/1/0.5/0.25 %: 0/0/0/0   highest cleaned 1.97 %, lowest kept 2.060 %
+  ALL         parts 308601  false Enclosed at >= 2.5/3/5/7.5/10/15/20 %: 691/221/0/0/0/0/0   false kept at < 1.5/1/0.5/0.25 %: 9/0/0/0   highest cleaned 3.53 %, lowest kept 1.290 %
+    false Enclosed: true 3.53 % read 1.90 %  ballRivet | ballRivet|C09|guardZ d0.14 r47 cap0.0100 part 19 (Ball)
+    false Enclosed: true 3.52 % read 1.95 %  ballRivet | ballRivet|C09|guardZ d0.14 xy30 cap0.0100 part 19 (Ball)
+    false Enclosed: true 3.01 % read 1.67 %  ballRivet | ballRivet|C02|guardZ d0.14 r47 cap0.0300 part 7 (Ball)
+    false Enclosed: true 3.01 % read 1.67 %  ballRivet | ballRivet|C02|guardZ d0.14 r47 cap0.0300 part 8 (Ball)
+    false Enclosed: true 3.01 % read 0.97 %  ballRivet | ballRivet|C02|guardX d0.14 r47 cap0.0300 part 7 (Ball)
+    false Enclosed: true 3.01 % read 1.66 %  ballRivet | ballRivet|C05|guardX d0.14 xy30 cap0.0300 part 7 (Ball)
+    false kept:     true 1.290 % read 2.020 %  wrapRings | wrapRings|C06|n5 extra0.01 gap0.0020 part 2 (Cylinder)
+    false kept:     true 1.290 % read 2.020 %  wrapRings | wrapRings|C06|n5 extra0.02 gap0.0020 part 2 (Cylinder)
+    false kept:     true 1.290 % read 2.020 %  wrapRings | wrapRings|C06|n5 extra0.04 gap0.0020 part 2 (Cylinder)
+    false kept:     true 1.295 % read 2.020 %  wrapRings | wrapRings|C06|n3 extra0.01 gap0.0040 part 2 (Cylinder)
+    false kept:     true 1.295 % read 2.020 %  wrapRings | wrapRings|C06|n3 extra0.02 gap0.0040 part 2 (Cylinder)
+    false kept:     true 1.295 % read 2.020 %  wrapRings | wrapRings|C06|n3 extra0.04 gap0.0040 part 2 (Cylinder)
+== reading canon
+  Ball        parts  49390  false Enclosed at >= 2.5/3/5/7.5/10/15/20 %: 255/0/0/0/0/0/0   false kept at < 1.5/1/0.5/0.25 %: 0/0/0/0   highest cleaned 2.95 %, lowest kept 2.995 %
+  Block       parts 188496  false Enclosed at >= 2.5/3/5/7.5/10/15/20 %: 0/0/0/0/0/0/0   false kept at < 1.5/1/0.5/0.25 %: 0/0/0/0   highest cleaned 1.99 %, lowest kept 2.002 %
+  CornerWedge parts   1080  false Enclosed at >= 2.5/3/5/7.5/10/15/20 %: 0/0/0/0/0/0/0   false kept at < 1.5/1/0.5/0.25 %: 0/0/0/0   highest cleaned 1.98 %, lowest kept 2.087 %
+  Cylinder    parts  37268  false Enclosed at >= 2.5/3/5/7.5/10/15/20 %: 192/0/0/0/0/0/0   false kept at < 1.5/1/0.5/0.25 %: 9/0/0/0   highest cleaned 2.82 %, lowest kept 1.290 %
+  Wedge       parts  32367  false Enclosed at >= 2.5/3/5/7.5/10/15/20 %: 0/0/0/0/0/0/0   false kept at < 1.5/1/0.5/0.25 %: 0/0/0/0   highest cleaned 1.97 %, lowest kept 2.060 %
+  ALL         parts 308601  false Enclosed at >= 2.5/3/5/7.5/10/15/20 %: 447/0/0/0/0/0/0   false kept at < 1.5/1/0.5/0.25 %: 9/0/0/0   highest cleaned 2.95 %, lowest kept 1.290 %
+    false Enclosed: true 2.95 % read 1.97 %  ballRivet | ballRivet|C09|guardZ d0.14 r47 cap0.0050 part 19 (Ball)
+    false Enclosed: true 2.94 % read 1.97 %  ballRivet | ballRivet|C09|guardZ d0.14 z45 cap0.0050 part 19 (Ball)
+    false Enclosed: true 2.94 % read 1.97 %  ballRivet | ballRivet|C09|guardZ d0.14 unrot cap0.0050 part 19 (Ball)
+    false Enclosed: true 2.94 % read 1.97 %  ballRivet | ballRivet|C09|guardZ d0.14 r47 cap0.0050 part 20 (Ball)
+    false Enclosed: true 2.94 % read 1.97 %  ballRivet | ballRivet|C09|guardZ d0.14 z45 cap0.0050 part 20 (Ball)
+    false Enclosed: true 2.93 % read 1.97 %  ballRivet | ballRivet|C09|guardZ d0.14 xy30 cap0.0050 part 19 (Ball)
+    false kept:     true 1.290 % read 2.020 %  wrapRings | wrapRings|C06|n5 extra0.01 gap0.0020 part 2 (Cylinder)
+    false kept:     true 1.290 % read 2.020 %  wrapRings | wrapRings|C06|n5 extra0.02 gap0.0020 part 2 (Cylinder)
+    false kept:     true 1.290 % read 2.020 %  wrapRings | wrapRings|C06|n5 extra0.04 gap0.0020 part 2 (Cylinder)
+    false kept:     true 1.295 % read 2.020 %  wrapRings | wrapRings|C06|n3 extra0.01 gap0.0040 part 2 (Cylinder)
+    false kept:     true 1.295 % read 2.020 %  wrapRings | wrapRings|C06|n3 extra0.02 gap0.0040 part 2 (Cylinder)
+    false kept:     true 1.295 % read 2.020 %  wrapRings | wrapRings|C06|n3 extra0.04 gap0.0040 part 2 (Cylinder)
+== reading fine
+  Ball        parts  49390  false Enclosed at >= 2.5/3/5/7.5/10/15/20 %: 0/0/0/0/0/0/0   false kept at < 1.5/1/0.5/0.25 %: 0/0/0/0   highest cleaned 2.25 %, lowest kept 2.495 %
+  Block       parts 188496  false Enclosed at >= 2.5/3/5/7.5/10/15/20 %: 0/0/0/0/0/0/0   false kept at < 1.5/1/0.5/0.25 %: 0/0/0/0   highest cleaned 1.99 %, lowest kept 2.002 %
+  CornerWedge parts   1080  false Enclosed at >= 2.5/3/5/7.5/10/15/20 %: 0/0/0/0/0/0/0   false kept at < 1.5/1/0.5/0.25 %: 0/0/0/0   highest cleaned 1.98 %, lowest kept 2.087 %
+  Cylinder    parts  37268  false Enclosed at >= 2.5/3/5/7.5/10/15/20 %: 192/0/0/0/0/0/0   false kept at < 1.5/1/0.5/0.25 %: 0/0/0/0   highest cleaned 2.82 %, lowest kept 1.925 %
+  Wedge       parts  32367  false Enclosed at >= 2.5/3/5/7.5/10/15/20 %: 0/0/0/0/0/0/0   false kept at < 1.5/1/0.5/0.25 %: 0/0/0/0   highest cleaned 1.97 %, lowest kept 2.060 %
+  ALL         parts 308601  false Enclosed at >= 2.5/3/5/7.5/10/15/20 %: 192/0/0/0/0/0/0   false kept at < 1.5/1/0.5/0.25 %: 0/0/0/0   highest cleaned 2.82 %, lowest kept 1.925 %
+    false Enclosed: true 2.82 % read 1.29 %  cylRib | cylRib|C02|blade r0.02 psi0.00 height0.002 part 7 (Cylinder)
+    false Enclosed: true 2.82 % read 1.29 %  cylRib | cylRib|F5|blade r0.02 psi0.00 height0.002 part 6 (Cylinder)
+    false Enclosed: true 2.82 % read 1.29 %  cylRib | cylRib|F1|blade r0.02 psi0.00 height0.002 part 6 (Cylinder)
+    false Enclosed: true 2.82 % read 1.29 %  cylRib | cylRib|C02|blade r0.02 psi22.50 height0.002 part 7 (Cylinder)
+    false Enclosed: true 2.82 % read 1.29 %  cylRib | cylRib|C09|blade r0.02 psi0.00 height0.002 part 19 (Cylinder)
+    false Enclosed: true 2.82 % read 1.29 %  cylRib | cylRib|F2|blade r0.02 psi0.00 height0.002 part 5 (Cylinder)
+  |base read - truth| max by shape (fine-lattice rows): Ball 0.0264, Block 0.0267, CornerWedge 0.0083, Cylinder 0.0213, Wedge 0.0033
+  |canon read - truth| max by shape (fine-lattice rows): Ball 0.0254, Block 0.0267, CornerWedge 0.0083, Cylinder 0.0213, Wedge 0.0033
+  |fine read - truth| max by shape (fine-lattice rows): Ball 0.0126, Block 0.0217, CornerWedge 0.0083, Cylinder 0.0213, Wedge 0.0033

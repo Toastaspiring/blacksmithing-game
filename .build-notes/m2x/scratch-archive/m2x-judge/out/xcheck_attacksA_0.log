@@ -1,0 +1,11 @@
+  200 designs, 3271 parts, |A-B|>1e-9 0, A err 0, B err 0, ties 0, 7.3 s
+  400 designs, 6508 parts, |A-B|>1e-9 0, A err 0, B err 0, ties 0, 14.6 s
+  600 designs, 8903 parts, |A-B|>1e-9 0, A err 0, B err 0, ties 0, 17.5 s
+XCHECK attacksA every 1 shard 0/2: 670 designs, 9739 parts, 18.3 s
+  model area: largest relative difference between A, B, J 4.41e-15; facet matching worst centroid gap 0
+  |A-B| share: <1e-12 9739, <1e-10 0, <1e-9 0, <1e-6 0, <1e-3 0, more 0
+  largest |A-B| 1.87e-14 (v11/a10_sub emu #23 part 20 (Wedge): A 0.632640111605 B 0.632640111605)
+  brute force on 9739 parts (0 over the edge limit; 0 differing parts unsettled for that)
+  parts where A is outside the tie bracket by > 1e-9: 0, worst 0 ()
+  parts where B is outside the tie bracket by > 1e-9: 0, worst 0 ()
+  parts with a tie (bracket wider than 1e-9): 0, widest 0 ()

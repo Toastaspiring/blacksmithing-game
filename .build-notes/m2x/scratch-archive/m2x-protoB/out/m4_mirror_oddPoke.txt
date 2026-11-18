@@ -1,0 +1,3 @@
+  200 designs, 1433 parts, 0 verdicts differ, 5 s
+  400 designs, 3191 parts, 0 verdicts differ, 9 s
+M4 mirror bset:oddPoke:10:1: 435 designs, 3856 parts, 0 verdicts differ from the image's; reads differ in 1501 parts, largest |difference| 0.0304 (C02 Arming (Iron) #359 Block t0.001 part 6 (Wedge): 0.699286800 / 0.668886530), 12 s

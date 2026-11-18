@@ -1,0 +1,13 @@
+[
+{"name":"worst_P climbV_4#1","parts":24,"units":497332.375,"verdict":23.8074,"exposure":34.9181,"oldVerdict":17.8511,"oldExposure":27.3326,"tests":923705.0,"boxes":53463.0,"polys":27645.0,"facets":144.0,"capped":false},
+{"name":"worst_P climbL_2#4","parts":24,"units":503838.000,"verdict":25.9672,"exposure":35.5871,"oldVerdict":26.4842,"oldExposure":33.3655,"tests":937545.0,"boxes":46340.0,"polys":28169.0,"facets":138.0,"capped":false},
+{"name":"worst_P climbL_2#3","parts":24,"units":584389.750,"verdict":26.2538,"exposure":37.4275,"oldVerdict":23.2715,"oldExposure":37.3425,"tests":1092899.0,"boxes":55970.0,"polys":29840.0,"facets":138.0,"capped":false},
+{"name":"worst_P climbV_4#2","parts":24,"units":417807.500,"verdict":20.4972,"exposure":31.4834,"oldVerdict":16.7654,"oldExposure":30.1198,"tests":773467.0,"boxes":44208.0,"polys":24396.0,"facets":144.0,"capped":false},
+{"name":"worst_P climbV_3#2","parts":24,"units":314013.125,"verdict":16.0569,"exposure":28.0898,"oldVerdict":15.1700,"oldExposure":24.6128,"tests":580479.0,"boxes":29637.0,"polys":18917.0,"facets":144.0,"capped":false},
+{"name":"worst_P climbV_3#1","parts":24,"units":418054.625,"verdict":20.1626,"exposure":31.0167,"oldVerdict":18.9800,"oldExposure":28.5501,"tests":776242.0,"boxes":40965.0,"polys":23701.0,"facets":139.0,"capped":false},
+{"name":"worst_P climbV_3#3","parts":24,"units":432406.750,"verdict":22.5831,"exposure":34.0891,"oldVerdict":15.5768,"oldExposure":29.0890,"tests":801545.0,"boxes":45386.0,"polys":24809.0,"facets":144.0,"capped":false},
+{"name":"worst_P climbL_1#1","parts":24,"units":1179881.750,"verdict":48.1018,"exposure":57.7078,"oldVerdict":33.1843,"oldExposure":44.3944,"tests":2257989.0,"boxes":39666.0,"polys":42633.0,"facets":412.0,"capped":false},
+{"name":"worst_P climbL_3#1","parts":24,"units":1410788.750,"verdict":59.5278,"exposure":72.4491,"oldVerdict":29.4516,"oldExposure":40.7705,"tests":2701344.0,"boxes":30766.0,"polys":50903.0,"facets":671.0,"capped":false},
+{"name":"worst_P climbL_2#1","parts":24,"units":2522801.250,"verdict":88.1194,"exposure":96.7044,"oldVerdict":36.1421,"oldExposure":40.7827,"tests":4861758.0,"boxes":80482.0,"polys":78118.0,"facets":468.0,"capped":false},
+{"name":"worst_P clampedP#1","parts":24,"units":68492.500,"verdict":4.5846,"exposure":15.6504,"oldVerdict":6.2317,"oldExposure":16.8639,"tests":120768.0,"boxes":7708.0,"polys":5993.0,"facets":144.0,"capped":false}
+]

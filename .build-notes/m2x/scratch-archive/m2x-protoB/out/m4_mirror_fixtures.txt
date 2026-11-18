@@ -1,0 +1,1 @@
+M4 mirror corpus_fixtures.json: 71 designs, 615 parts, 0 verdicts differ from the image's; reads differ in 150 parts, largest |difference| 0.0871 (C04 Rapier (Steel blade) part 6 (Wedge): 0.624326437 / 0.711439910), 2 s

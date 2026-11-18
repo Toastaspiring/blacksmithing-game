@@ -1,0 +1,1 @@
+Rng.new(1, 'HoldZone.Target'): range(0.3,0.7) 0.58070660615339875; int(900,2200) 2060; chance(0.25) False; range(0.5,1.0) 0.8602050932822749; sign() 1; int(1,16) 16

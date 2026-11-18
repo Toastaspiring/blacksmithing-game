@@ -1,0 +1,54 @@
+fixtures base: 77 designs, 0 s; units max 251378, p99.9 251378, p99 251378, p90 5850, median 1406
+      251378 units    36.05 ms (one run, under load) 24 parts  P1 24 large overlapping tilted blocks
+      128507 units    20.41 ms (one run, under load) 24 parts  P4 24 overlapping balls
+       55811 units     7.09 ms (one run, under load) 24 parts  P2 24 rotated cylinders
+       14856 units     4.53 ms (one run, under load) 18 parts  C09 Ornate (18 parts)
+        9562 units     2.35 ms (one run, under load)  7 parts  F3 Rapier
+        9562 units     1.80 ms (one run, under load)  7 parts  repo F3
+        8280 units     1.79 ms (one run, under load) 11 parts  X02 6 blade copies at z = k*0.002 (vs union blade 0.072)
+        5850 units     1.84 ms (one run, under load) 24 parts  P3 24 rotated wedges
+plausible base: 32349 designs, 50 s; units max 141709, p99.9 76148, p99 29247, p90 13304, median 2918
+      141709 units    16.49 ms (one run, under load) 23 parts  wrapRings | wrapRings|C09|n5 extra0.04 gap0.0010
+      141709 units    14.73 ms (one run, under load) 23 parts  wrapRings | wrapRings|C09|n5 extra0.04 gap0.0020
+      132325 units    11.51 ms (one run, under load) 22 parts  wrapRings | wrapRings|C09|n4 extra0.04 gap0.0020
+      132325 units    12.95 ms (one run, under load) 22 parts  wrapRings | wrapRings|C09|n4 extra0.04 gap0.0010
+      123751 units    11.73 ms (one run, under load) 21 parts  wrapRings | wrapRings|C09|n3 extra0.04 gap0.0040
+      123751 units    12.32 ms (one run, under load) 21 parts  wrapRings | wrapRings|C09|n3 extra0.04 gap0.0030
+      123751 units    10.56 ms (one run, under load) 21 parts  wrapRings | wrapRings|C09|n3 extra0.04 gap0.0020
+      123751 units    14.66 ms (one run, under load) 21 parts  wrapRings | wrapRings|C09|n3 extra0.04 gap0.0075
+fuzz base: 2000 designs, 2 s; units max 33044, p99.9 27304, p99 15926, p90 6979, median 1176
+       33044 units     2.33 ms (one run, under load) 19 parts  fuzz anyDesign 116
+       31618 units     3.99 ms (one run, under load) 24 parts  fuzz anyDesign 442
+       27304 units     3.67 ms (one run, under load) 22 parts  fuzz anyDesign 238
+       23012 units     2.37 ms (one run, under load) 11 parts  fuzz validSword 816
+       22756 units     4.48 ms (one run, under load) 15 parts  fuzz validSword 102
+       21835 units     4.12 ms (one run, under load) 23 parts  fuzz anyDesign 304
+       21228 units     5.91 ms (one run, under load) 19 parts  fuzz anyDesign 107
+       21068 units     3.04 ms (one run, under load) 10 parts  fuzz validSword 948
+attacks base: 1410 designs, 10 s; units max 3705354, p99.9 3679166, p99 1786482, p90 14856, median 14856
+     3705354 units   334.35 ms (one run, under load) 24 parts  v1-1 d_hand rods d 0.10 L 4.8 spread 0.01
+     3679166 units   351.86 ms (one run, under load) 24 parts  v1-1 d_hand rods d 0.08 L 4.8 spread 0.01
+     3653890 units   339.85 ms (one run, under load) 24 parts  v1-1 d_hand rods d 0.15 L 4.8 spread 0.01
+     3166336 units   356.58 ms (one run, under load) 24 parts  v1-1 d_hand rods d 0.15 L 3.5 spread 0.01
+     3033154 units   399.66 ms (one run, under load) 24 parts  v1-1 d_hand rods d 0.10 L 3.5 spread 0.01
+     2911426 units   246.80 ms (one run, under load) 24 parts  v1-1 d_climb_3 #4
+     2703194 units   278.89 ms (one run, under load) 24 parts  v1-1 d_climb_4 #4
+     2510710 units   233.98 ms (one run, under load) 24 parts  v1-2 climb_fan_3 rodsfan_3
+plausible fine: 32349 designs, 106 s; units max 200419, p99.9 123968, p99 65502, p90 24727, median 5459
+      200419 units    18.76 ms (one run, under load) 23 parts  wrapRings | wrapRings|C09|n5 extra0.04 gap0.0010
+      200419 units    20.55 ms (one run, under load) 23 parts  wrapRings | wrapRings|C09|n5 extra0.04 gap0.0020
+      191035 units    17.21 ms (one run, under load) 22 parts  wrapRings | wrapRings|C09|n4 extra0.04 gap0.0010
+      191035 units    18.11 ms (one run, under load) 22 parts  wrapRings | wrapRings|C09|n4 extra0.04 gap0.0020
+      182461 units    17.54 ms (one run, under load) 21 parts  wrapRings | wrapRings|C09|n3 extra0.04 gap0.0030
+      182461 units    21.61 ms (one run, under load) 21 parts  wrapRings | wrapRings|C09|n3 extra0.04 gap0.0040
+      182461 units    19.53 ms (one run, under load) 21 parts  wrapRings | wrapRings|C09|n3 extra0.04 gap0.0020
+      182461 units    20.17 ms (one run, under load) 21 parts  wrapRings | wrapRings|C09|n3 extra0.04 gap0.0050
+plausible old: 32349 designs, 38 s; units max 21186, p99.9 14864, p99 10890, p90 8118, median 3094
+       21186 units     4.11 ms (one run, under load) 23 parts  wrapRings | wrapRings|C09|n5 extra0.04 gap0.0020
+       21186 units     4.90 ms (one run, under load) 23 parts  wrapRings | wrapRings|C09|n5 extra0.04 gap0.0010
+       21178 units     4.62 ms (one run, under load) 23 parts  wrapRings | wrapRings|C09|n5 extra0.04 gap0.0030
+       21098 units     4.04 ms (one run, under load) 23 parts  wrapRings | wrapRings|C09|n5 extra0.04 gap0.0050
+       21098 units     6.44 ms (one run, under load) 23 parts  wrapRings | wrapRings|C09|n5 extra0.04 gap0.0060
+       21098 units     3.90 ms (one run, under load) 23 parts  wrapRings | wrapRings|C09|n5 extra0.04 gap0.0040
+       17272 units     3.11 ms (one run, under load) 23 parts  wrapRings | wrapRings|C09|n5 extra0.01 gap0.0010
+       17272 units     3.34 ms (one run, under load) 23 parts  wrapRings | wrapRings|C09|n5 extra0.01 gap0.0030

@@ -1,0 +1,17 @@
+cheeks 0.050, slit 0.080, one face, 3 fillers (valid true, true)
+  K      Core(Block) true 3.82% read 3.83% kept
+  K + F  Core(Block) true 3.80% read 3.80% kept; Pin(CornerWedge) true 1.52% read 1.52% CLEANED; Pin(CornerWedge) true 1.52% read 1.52% CLEANED; Pin(CornerWedge) true 1.52% read 1.52% CLEANED
+  K: Sm 0.3583 H, Ha 0.0172 N, Sh 0.0603 N | K + F: Sm 0.3583 H, Ha 0.0172 N, Sh 0.0603 N | |dD| 0.0000 
+cheeks 0.050, slit 0.080, both faces, 8 fillers (valid true, true)
+  K      Core(Block) true 7.65% read 7.65% kept
+  K + F  Core(Block) true 7.07% read 7.08% kept; Pin(CornerWedge) true 34.07% read 34.06% kept; Pin(CornerWedge) true 34.00% read 34.03% kept; Pin(CornerWedge) true 34.07% read 34.06% kept; Pin(CornerWedge) true 34.00% read 34.03% kept; Pin(CornerWedge) true 34.07% read 34.06% kept; Pin(CornerWedge) true 34.00% read 34.03% kept; Pin(CornerWedge) true 34.07% read 34.06% kept; Pin(CornerWedge) true 34.00% read 34.03% kept
+  K: Sm 0.3474 H, Ha 0.0913 N, Sh 0.0864 N | K + F: Sm 0.3493 H, Ha 0.1060 N, Sh 0.0876 N | |dD| 0.0147 Hammering
+cheeks 0.080, slit 0.080, one face, 3 fillers (valid true, true)
+  K      Core(Block) true 3.82% read 3.83% kept
+  K + F  Core(Block) true 3.81% read 3.81% kept; Pin(CornerWedge) true 0.86% read 0.87% CLEANED; Pin(CornerWedge) true 0.86% read 0.87% CLEANED; Pin(CornerWedge) true 0.86% read 0.87% CLEANED
+  K: Sm 0.5322 H, Ha 0.0000 N, Sh 0.0586 N | K + F: Sm 0.5322 H, Ha 0.0000 N, Sh 0.0586 N | |dD| 0.0000 
+cheeks 0.080, slit 0.080, both faces, 8 fillers (valid true, true)
+  K      Core(Block) true 7.65% read 7.65% kept
+  K + F  Core(Block) true 7.25% read 7.24% kept; Pin(CornerWedge) true 39.02% read 39.11% kept; Pin(CornerWedge) true 39.00% read 39.08% kept; Pin(CornerWedge) true 39.02% read 39.11% kept; Pin(CornerWedge) true 39.00% read 39.08% kept; Pin(CornerWedge) true 39.02% read 39.11% kept; Pin(CornerWedge) true 39.00% read 39.08% kept; Pin(CornerWedge) true 39.02% read 39.11% kept; Pin(CornerWedge) true 39.00% read 39.08% kept
+  K: Sm 0.5147 H, Ha 0.0212 N, Sh 0.0586 N | K + F: Sm 0.5175 H, Ha 0.0212 N, Sh 0.0586 N | |dD| 0.0028 Smelting
+-- dumprun a4_pin: 8 designs, 2.5 s

@@ -1,0 +1,25 @@
+design                                       units   verdict  exposure    ns/u  canon Analyze.run
+tclimb_1.json #1                            692796    21.903    29.507    31.6   true valid
+tclimb_1.json #2                            683946    20.659    30.507    30.2   true BladeNotAboveGrip
+tclimb_1.json #3                            658963    19.020    29.090    28.9   true BladeNotAboveGrip
+tclimb_1.json #4                            577424    16.228    24.231    28.1   true BladeNotAboveGrip
+tclimb_1.json #5                            493105    12.897    18.851    26.2   true valid
+tclimb_1.json #6                            493344    15.085    22.197    30.6   true BladeNotAboveGrip
+tclimb_2.json #1                            696278    20.834    31.342    29.9   true BladeNotAboveGrip
+tclimb_2.json #2                            671106    22.205    29.236    33.1   true BladeNotAboveGrip
+tclimb_2.json #3                            570376    16.486    25.527    28.9   true BladeNotAboveGrip
+tclimb_2.json #4                            643926    18.517    31.149    28.8   true valid
+tclimb_2.json #5                            504264    16.554    26.602    32.8   true valid
+tclimb_2.json #6                            546971    16.791    25.108    30.7   true valid
+tclimb_3.json #1                            694179    22.538    30.582    32.5   true BladeNotAboveGrip
+tclimb_3.json #2                            641198    21.178    29.226    33.0   true BladeNotAboveGrip
+tclimb_3.json #3                            648237    18.960    29.230    29.2   true valid
+tclimb_3.json #4                            584812    17.496    24.972    29.9   true valid
+tclimb_3.json #5                            641223    21.423    29.612    33.4   true BladeNotAboveGrip
+tclimb_3.json #6                            452991    15.134    23.901    33.4   true valid
+tclimb_4.json #1                            661903    20.928    28.180    31.6   true valid
+tclimb_4.json #2                            696192    20.739    28.165    29.8   true BladeNotAboveGrip
+tclimb_4.json #3                            698006    21.270    28.399    30.5   true valid
+tclimb_4.json #4                            416626    13.696    22.465    32.9   true valid
+tclimb_4.json #5                            427522    14.090    22.871    33.0   true valid
+tclimb_4.json #6                            431497    12.142    15.522    28.1   true BladeNotAboveGrip

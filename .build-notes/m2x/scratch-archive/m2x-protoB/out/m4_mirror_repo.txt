@@ -1,0 +1,1 @@
+M4 mirror corpus_repo.json: 45 designs, 262 parts, 0 verdicts differ from the image's; reads differ in 35 parts, largest |difference| 0.0263 (C09 ornate (PhysicsHelpers.ornate) part 17 (Wedge): 0.707509852 / 0.733826431), 1 s

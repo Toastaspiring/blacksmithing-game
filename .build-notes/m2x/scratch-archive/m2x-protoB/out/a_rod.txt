@@ -1,0 +1,41 @@
+rod d 0.16 x 3.0 in a square tube, 1 wall(s) split by 1e-5 at the rod's direction [10 parts, valid]
+   Rod#10(Cylinder) true 33.392% read 33.905% kept
+   K alone Sm 0.1283 N, Ha 0.6024 H, Sh 0.4344 H
+   K + F   Sm 0.2121 H, Ha 0.4761 H, Sh 0.3045 H
+   |dD| 0.1299 Sharpening TIER FLIP  (truth's verdict on K + F: Sm 0.2121 H, Ha 0.4761 H, Sh 0.3045 H)
+rod d 0.30 x 3.0 in a square tube, 1 wall(s) split by 1e-5 at the rod's direction [10 parts, valid]
+   Rod#10(Cylinder) true 48.269% read 47.630% kept
+   K alone Sm 0.2607 H, Ha 0.6024 H, Sh 0.2000 H
+   K + F   Sm 0.5552 H, Ha 0.5995 H, Sh 0.2000 H
+   |dD| 0.2945 Smelting  (truth's verdict on K + F: Sm 0.5552 H, Ha 0.5995 H, Sh 0.2000 H)
+rod d 0.50 x 3.0 in a square tube, 1 wall(s) split by 1e-5 at the rod's direction [10 parts, valid]
+   Rod#10(Cylinder) true 56.589% read 58.417% kept
+   K alone Sm 0.4536 H, Ha 0.6024 H, Sh 0.2000 H
+   K + F   Sm 1.0000 H, Ha 0.5510 H, Sh 0.1459 N
+   |dD| 0.5464 Smelting TIER FLIP  (truth's verdict on K + F: Sm 1.0000 H, Ha 0.5510 H, Sh 0.1459 N)
+rod d 0.50 x 2.0 in a square tube, 2 wall(s) split by 1e-5 at the rod's direction [11 parts, valid]
+   Rod#11(Cylinder) true 54.493% read 56.263% kept
+   K alone Sm 0.3336 H, Ha 0.4847 H, Sh 0.2000 H
+   K + F   Sm 0.8790 H, Ha 0.2624 H, Sh 0.0280 N
+   |dD| 0.5454 Smelting TIER FLIP  (truth's verdict on K + F: Sm 0.8790 H, Ha 0.2624 H, Sh 0.0280 N)
+rod d 0.50 x 3.0 in a square tube, 2 wall(s) split by 1e-5 at the rod's direction [11 parts, valid]
+   Rod#11(Cylinder) true 56.589% read 58.417% kept
+   K alone Sm 0.4536 H, Ha 0.6024 H, Sh 0.2000 H
+   K + F   Sm 1.0000 H, Ha 0.5584 H, Sh 0.1524 N
+   |dD| 0.5464 Smelting TIER FLIP  (truth's verdict on K + F: Sm 1.0000 H, Ha 0.5584 H, Sh 0.1524 N)
+ball d 0.56 in a box, 2 walls split at x = 0, turned 0.00 about Y [11 parts, valid]
+   Ball#11(Ball) true 91.825% read 95.448% kept
+   K alone Sm 0.1385 N, Ha 0.5425 H, Sh 0.2000 H
+   K + F   Sm 0.2662 H, Ha 0.4615 H, Sh 0.1643 N
+   |dD| 0.1277 Smelting TIER FLIP  (truth's verdict on K + F: Sm 0.2662 H, Ha 0.4615 H, Sh 0.1643 N)
+ball d 0.56 in a box, 2 walls split at x = 0, turned 104.04 about Y [11 parts, valid]
+   Ball#11(Ball) true 91.825% read 96.147% kept
+   K alone Sm 0.1385 N, Ha 0.5425 H, Sh 0.2000 H
+   K + F   Sm 0.2662 H, Ha 0.4536 H, Sh 0.1559 N
+   |dD| 0.1277 Smelting TIER FLIP  (truth's verdict on K + F: Sm 0.2662 H, Ha 0.4536 H, Sh 0.1559 N)
+ball d 0.56 in a box, 2 walls split at x = 0, turned 75.96 about Y [11 parts, valid]
+   Ball#11(Ball) true 91.775% read 96.147% kept
+   K alone Sm 0.1385 N, Ha 0.5425 H, Sh 0.2000 H
+   K + F   Sm 0.2662 H, Ha 0.4536 H, Sh 0.1559 N
+   |dD| 0.1277 Smelting TIER FLIP  (truth's verdict on K + F: Sm 0.2662 H, Ha 0.4536 H, Sh 0.1559 N)
+-- dumprun a_rod: 14 designs, 2.3 s

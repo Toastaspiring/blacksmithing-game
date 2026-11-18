@@ -1,0 +1,4 @@
+axis moved: P2 24 rotated cylinders old (0.0000, 1.0000) new (-0.7071, 0.7071)
+V4 false in the build: V-upside-down (-1.8725), axis (0.0000, 1.0000)
+fixtures 76 axis moved 1 V4 flips 0 V4 false 1
+plausible 23009 axis moved 0 V4 flips 0 V4 false 0

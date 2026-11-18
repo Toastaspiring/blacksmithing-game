@@ -1,0 +1,39 @@
+KILLED | LINES_AGREE 1e-3 | Physics/Verdict › §4.9 spend reports the reading's work (16.0 ms)
+SURVIVED | LINES_AGREE 1e-9 | 
+SURVIVED | LINE_NOTHING 1e-6 | 
+SURVIVED | LINE_NOTHING 1e-12 | 
+KILLED | rank: x before |x| gone | Physics/Verdict › §4.4 Sampling.ranked: the larger first, then by where it stands, |x| bef
+KILLED | rank: |x| before y | Physics/Verdict › §4.4 Sampling.ranked: the larger first, then by where it stands, |x| bef
+KILLED | rank: y before volume | Physics/MassProps › §4.3 ownership: kept parts, then slot rank, then the larger part; an o
+KILLED | rank: slot names reversed | Physics/Verdict › §4.4 an exact copy changes nothing: first or last, in a slot that comes 
+KILLED | rank: material names reversed | Physics/Verdict › §4.4 an exact copy changes nothing: first or last, in a slot that comes 
+KILLED | rank: the highest index stays | Physics/Analyze › T-VAL-01 A14, A16, A17, A22: the cleaned lists, valid or not (14.6 ms)
+KILLED | the family that agrees worse wins | Physics/Reference › §4.1 M2 equals the prototype on its cost fixtures P1–P5 (224.0 ms)
+KILLED | a family that reads nothing does not lose | Physics/Reference › §4.1 M2 equals the prototype on its cost fixtures P1–P5 (1481.7 ms)
+KILLED | of two alike, the larger | Physics/Verdict › §4.4 of 2 families that agree alike the smaller reading stands: a bar be
+KILLED | a surface span always shrunk | Physics/Reference › §4.4 the verdict cleans what the prototype cleans on its regression fi
+KILLED | a surface span always grown | Physics/MassProps › §4.3 near copies 1e-12 away own nothing: mass, COM and balance stay F2
+KILLED | the probe's span not grown | Physics/Verdict › §5 a laminated core that shows 5.54 % is kept: its proud rims are measur
+KILLED | the reach at the probe tested at the surface | Physics/Verdict › §4.4 a part that cannot reach the patch's plane changes no line, and nei
+KILLED | no rim: a triangle's or a cap's patch counts whole | Physics/Sampling › T-PHY-09 duplicates: a copy turned about its own symmetry axis is the s
+KILLED | the reach at the surface tested at the probe | Physics/Reference › §4.1 M2 equals the prototype on its cost fixtures P1–P5 (240.3 ms)
+KILLED | the reach forgets e1 on z | Physics/Reference › §4.1 M2 equals the prototype on its cost fixtures P1–P5 (576.9 ms)
+KILLED | the reach forgets e2 on x | Physics/Verdict › §4.4 a part reaches a patch on any of its own axes: a lid reads the same
+KILLED | no centre credit | Physics/Verdict › §4.9 spend reports the reading's work (254.5 ms)
+SURVIVED | rim credit without a corner | 
+KILLED | the verdict's grid keeps the prototype's second slope | Physics/Verdict › §4.3 a CornerWedge's verdict grid is its mirror image's, sample for samp
+KILLED | a Ball one cell coarser | Physics/Verdict › §4.4 what the reading cannot see: a Ball's band between its samples, a w
+NOT APPLIED the measure's candidates include the cleaned
+KILLED | copies hide | Physics/Sampling › §4.9 spend reports the verdict's work and the measure's: every rung, sa
+KILLED | dust hides | Physics/Verdict › §5 a Dust hairline hides nothing: a laminated blade's core stays kept wi
+KILLED | the measure spends in part order | Physics/Reference › §4.1 M2 equals the prototype on its calibration swords (517.8 ms)
+KILLED | Traceback (most recent call last):
+  File "C:\Users\louis\AppData\Local\Temp\claude\C--Users-louis-Documents-RANDOM-ROBLOX\93ae48b4-72b9-4dc1-aa5d-451af1abf9a0\scratchpad\m2r5-v2-2\mut.py", line 88, in <module>
+    reap()
+  File "C:\Users\louis\AppData\Local\Temp\claude\C--Users-louis-Documents-RANDOM-ROBLOX\93ae48b4-72b9-4dc1-aa5d-451af1abf9a0\scratchpad\m2r5-v2-2\mut.py", line 81, in reap
+    print(state, "|", m[3], "|", (fails[0][:90] if fails else ""), flush=True)
+  File "C:\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2265' in position 7: character maps to <undefined>
+killed (the rest in mut2)

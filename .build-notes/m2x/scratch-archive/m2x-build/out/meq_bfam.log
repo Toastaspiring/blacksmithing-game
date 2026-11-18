@@ -1,0 +1,3 @@
+bfam every 1: 16028 designs (0 capped). Kept rows: old = new on 15976, differ on 52; the rank's order differs on 0.
+  build with the old rank key: the same kept row on 15976, the same measure to the bit on 15976, different on 0
+  build as it is: the same measure on 15976 of 15976; different on 0 where the rank's order is the same, 0 where it changed

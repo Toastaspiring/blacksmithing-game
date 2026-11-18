@@ -1,0 +1,6 @@
+design (ms Lune, median of 15)                             verdict ms: old base | exposure ms: same | verdict units: same | kept: same
+climb seed 1 #1                                              27.31  406.16 |   48.94  421.54 |   293697  5788672 | 20 20
+climb seed 2 #1                                              25.75  314.73 |   47.51  342.52 |   292226  5591818 | 20 20
+climb seed 4 #1                                              33.66  396.57 |   59.44  390.54 |   281431  8638262 | 16 17
+climb seed 3_snapshot #1                                     38.57  609.32 |   66.23  643.52 |   341680 15453806 | 14 14
+M5CDONE

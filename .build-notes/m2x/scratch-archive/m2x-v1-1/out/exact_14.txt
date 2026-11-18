@@ -1,0 +1,2 @@
+seed 14: 1500 tangles, 7500 parts checked, 61 ties (bracketed), 30 outside the bracket, 0 past the limit, 0 non-finite; worst agreement outside ties 7.77e-10; worst outside 0.0118
+  seed 14 tangle 1214 part 2 (Ball): cover 0.642411 brute 0.634715, outside the bracket by 0.0118 of its area

@@ -1,0 +1,5 @@
+Elite@240: 0.512 ms per run (20000 runs, flagged 0) -> 300,000 runs = 154 s
+Elite@60: 0.165 ms per run (20000 runs, flagged 0) -> 300,000 runs = 49 s
+Good@60: 0.157 ms per run (20000 runs, flagged 0) -> 300,000 runs = 47 s
+Average@30: 0.109 ms per run (20000 runs, flagged 0) -> 300,000 runs = 33 s
+T-MG-10 TimingStrike FP at FP_RUNS_TS = 300,000 per device, 4 devices: 283 s (plan: 144 s)

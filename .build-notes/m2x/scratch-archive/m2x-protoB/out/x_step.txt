@@ -1,0 +1,12 @@
+1 x 2, no step (the rule's own case): 13 parts valid=true | core true 0.005 % read 0.002 % CLEANED | against truth's verdict |dD| 0.0000
+   build Sm 0.3136 H, Ha 0.4078 H, Sh 0.2981 H
+   truth Sm 0.3136 H, Ha 0.4078 H, Sh 0.2981 H
+1 x 2, a step of 1e-5 in 1 row: 14 parts valid=true | core true 0.005 % read 0.002 % CLEANED | against truth's verdict |dD| 0.0000
+   build Sm 0.3136 H, Ha 0.4078 H, Sh 0.2981 H
+   truth Sm 0.3136 H, Ha 0.4078 H, Sh 0.2981 H
+   K alone Sm 0.3136 H, Ha 0.4078 H, Sh 0.2981 H, K + F against K |dD| 0.0000
+1 x 2, a step of 1e-5 in 2 rows: 15 parts valid=true | core true 0.005 % read 0.002 % CLEANED | against truth's verdict |dD| 0.0000
+   build Sm 0.3136 H, Ha 0.4077 H, Sh 0.2981 H
+   truth Sm 0.3136 H, Ha 0.4077 H, Sh 0.2981 H
+   K alone Sm 0.3136 H, Ha 0.4077 H, Sh 0.2981 H, K + F against K |dD| 0.0000
+-- dumprun x_step: 5 designs, 1.1 s

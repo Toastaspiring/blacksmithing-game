@@ -1,0 +1,2 @@
+  50 designs, 832 variants, 0 other parts changed, 7 s
+M4 dust corpus_fixtures.json: 71 designs, 1230 variants (each part, first and last), other parts whose read or verdict moved: 0; dust not cleaned as expected: 0, 24 s

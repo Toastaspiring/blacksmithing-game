@@ -1,0 +1,261 @@
+Whole-design shift fault (SPEC §17.1 O11 (j)) - lead's journal
+
+2026-11-17. Found by M3's review round 5 (V1), with the mechanism corrected by fixer 5m. See
+.build-notes\m3\m3_journal_r5.txt.
+- A whole design moved 0.037 down Z moves G on 2,081 of 10,883 plausible designs (up to 0.0354) and changes the tier on
+  11. Moved 0.3317 along Y: 357 designs, 2 tiers.
+- Cause: M2's code, the same on M2's tree:
+  - Sampling.measureRanked keys on { -volume, cy, |cx|, cx, |cz|, cz, ... }, and the verdict's Sampling.ranked has the
+    same key. A Z shift reorders parts of one volume, y and x, and the sub-grid budget is spent in that order.
+  - Keyed on z alone (scratch czrank), 110 designs and 2 tiers still move, through M2's sampled overlaps.
+- Ruling: an engineering fault (a whole-design move is invisible in the game). Fix it apart from M3, before M4: verify
+  it, commit it on its own, and run S-PAR-02 again if the parity digest moves.
+
+11:00 Groundwork launched: workflow wf_b3a31bfc-4dd (task wbihd3jrc).
+- The frame analyst (scratch shift-frame) reads which moves a player can make, what the SPEC promises, why the ranks
+  key on |cx| and |cz|, and every use of absolute position.
+- The census (scratch shift-census) measures what X, Y and Z shifts move and each mechanism, with scratch variants:
+  ranks on the design's centre, grids anchored to the design, position normalised before analysis. It recommends the
+  smallest fix.
+In parallel, the plain-words write-up of M3 for Louis: workflow wf_3f7d5d44-05f (task w2rznhmth) ->
+.build-notes\m3\M3-spec-changes.md.
+
+11:23 The M3 write-up is done (.build-notes\m3\M3-spec-changes.md, 552 lines; writer, then checker with 22
+corrections) and sent to Louis. The checker raised SPEC text to fold into this fix's commit, since it touches O11 anyway:
+- §4.4 ends "so a hidden part steers nothing a player is shown". O10 shows cleaned parts still move d through their
+  absence, so limit it to the physics (balance, reach, blade length, cutIndex), as §4.5 does.
+- O11's default says (iii) "would close (a)-(d) and (k) together", but its own detail closes only Thinness' share of
+  (d), and (a) only square-on. Say "(b), (c) and (k), and most of (a) and (d)".
+- MERGE_GAP (§14.6, O10, O11) and REACH (O11) are used but never defined: add them to §16.18.
+- "The 57 ms gate" (O10, O11) is the lead's adoption limit and is never defined: define it, or name it as the lead's
+  gate in §14.11.
+- §16's CONTACT_TOL row still says "chord merging", stale since M3 merges up to HIDE_OFFSET + EPS_GEOM.
+- When (j) is fixed, update M3-spec-changes.md's fault bullet, (j), O11's "What the game does now" and the fault
+  section (or write a short addendum).
+
+15:37 Groundwork done (wf_b3a31bfc-4dd, 5 h). Results: shift_frame.json, shift_census.json.
+- The frame analyst found:
+  - A player can move a whole sword any distance along X, Y and Z, turn it, and flip it across x = 0 and z = 0. No
+    step re-centres a design. Forged items render from their own bounds, so such a move cannot be seen on an item.
+  - The SPEC promises Y/Z translation invariance (but (h), (j), (k)), mirror invariance across x = 0 and z = 0 (but
+    stated cases), and ids/order to the bit. X moves and rotations are real by design: Asymmetry is read about x = 0
+    and the raster's columns start at x = 0.
+  - The ranks key on |cx| and |cz| only so the editor's mirrors cannot reorder parts (E-S2.12).
+  - Every sampling grid is already part-anchored.
+- The census (21 shifts x all corpora) found:
+  - The tree moves G along Z on up to 5,125 plausible designs (22 tiers; 0.0013 alone: 3,978 designs, 22 tiers),
+    along Y on 547 (2 tiers), and along X beyond the x = 0 reads on 6,041 (15 tiers).
+  - On the fixtures, a Z shift flips X01/X02's kept twin (the verdict's rank), and an X nudge of 0.0013 plays P5's
+    Hammering Normal instead of Hard.
+  - Mechanisms: J1, the ranks' |x|/|z| keys (verdict and measure); J2, MassProps.ownership's box test with margin 0
+    (rounding decides whether a flush part enters `higher`, which switches exact/sampled clipping and the overlap
+    boxes); J3, ceil(extent/h) at exact whole numbers and flat boxes; GJK's round-pair tangency of about 4e-8 against
+    OVERLAP_TOL 1e-9; Asymmetry's candidate box exactly at reach; contact exactly at CONTACT_TOL (Joints); G's 1e-4
+    rounding tipped by a factor's last bits.
+  - Normalising position does not close it (rounding breaks exact ties again: 11 laminates still flip). Ranking by
+    z alone breaks mirrors.
+  - Fix R = vgk + vop + vk2 + vt + va + vq9 + vj:
+    - both ranks keyed on q(c - ref), RANK_Q 1e-9; the verdict's ref is every Grip part's point, the measure's the
+      kept Grip parts' point;
+    - the ownership box margin, with OVERLAP_TOL 1e-7;
+    - flat boxes get no cell, and ceil(extent/h - 1e-9);
+    - Asymmetry's candidate box +1e-9;
+    - each factor rounded to 1e-9 inside G's sum;
+    - contact at CONTACT_TOL + 1e-9.
+  - R's measured result: nothing moves under any shift beyond last-bit rounding, and no G at 4 decimals along Y or Z.
+    Along X only the anchored reads move. Mirrors and ids read as before; cost is within noise. Fixtures and generated
+    designs are bit for bit except Joints on 11 fixtures (vj): the T-DIF-12 goldens and the digest re-bless, and
+    S-PAR-02 runs again. As built, the plausible G moves on 703 (max 0.0354, 2 grille tiers).
+
+Lead's ruling (fix round S1; fixers S then T, then V1/V2, then minors; base snapshot scratch shift-base = f7ac37d):
+- Adopt R, all six guards (not R'). Joints is unweighted in the MVP, but it should be stable too, and S-PAR-02 runs
+  again anyway.
+- Guard 2's margin sign, by measurement:
+  - -OVERLAP_TOL (vo) reads like the SPEC ("parts that merely touch own their whole volume"; the grille's bars own
+    0.00729 against an exact 0.00762) but moves 9,579 plausible designs as built (29 tiers).
+  - +OVERLAP_TOL (vop) has the least drift (474, 2 tiers) but gives coarser sampled boxes (the grille 0.00245).
+  - Fixer S measures both, against a reference owned volume on every design where they differ, and adopts the more
+    accurate one (vo if equal).
+- The verdict's rank reference is every Grip part's point (vgk). The SPEC states that a hidden Grip part can move it,
+  deciding only between parts tied on volume and height. The measure's reference is the kept Grip parts only.
+- Invalid designs with no kept Grip part (A22c): state their world-origin frame.
+- BALANCE_VERSION: re-bless at 1 as M3's rounds did, unless the SPEC requires a bump for a pre-release change.
+- Two designer questions, as text (default as built):
+  - New O12, a whole-design move along X. Asymmetry and the raster are anchored at x = 0, so x + 0.0013 moves G on
+    13,111 plausible designs, 32 tiers, even with R. Options: keep x = 0; anchor on the kept Grip parts' x; centre
+    every design on x = 0 before analysis.
+  - O11 gains (l), a mirror image. Thinness' walk signs axes up the world, so the X mirror plays Gen 57 at 0.2589 Hard
+    -> 0.1095 Normal, and on the plausible set up to 0.0849/0.1174 and 13/11 tiers. §5.6's "0.0621, no flip" is
+    understated.
+- Fold in the writer's SPEC wording items (11:23 above).
+- Round severity: major only for these:
+  - a Y or Z whole-design shift that moves G at 4 decimals beyond the stated exceptions;
+  - the fix moving what it claims not to (validity, kept sets, fixtures beyond Joints);
+  - a hidden part steering the measure's reference;
+  - mirror, id or validity regressions;
+  - a test that cannot fail;
+  - determinism, crash or cost failures;
+  - a false SPEC statement.
+  Thinness' merge rules and the named O10/O11 classes stay out of scope; new ones are minor.
+
+15:43 Launched fix round S1: workflow wf_fa31dd97-03f (task w6eytmf6e), script
+workflows\scripts\shift-fix-round1-wf_fa31dd97-03f.js. Scratch: shift-fix-s, shift-fix-t, shift-v1-1, shift-v2-1,
+shift-fix-m. Resume with scriptPath + resumeFromRunId if cut off.
+
+2026-11-17 22:55 The session limit cut V1 and V2 off before they reported. Fixers S and T had finished: shift_fixer_s.json
+and shift_fixer_t.json.
+- Fixer S:
+  - R is in the working tree. Guard 2's sign was measured: -OVERLAP_TOL is closer to the reference on 9,947 designs,
+    against 271.
+  - Y, Z and random moves change nothing beyond last-bit rounding (max 4.35e-13) on every corpus.
+  - Unshifted, it moves only C04's ownership and 11 fixtures' Joints. The plausible drift (9,748 designs, max 0.0371,
+    29 tiers) is attributed guard by guard. Validity moves on no design.
+  - verify was green 3 times quiet (758 tests); under load only T-PERF-01 fails.
+  - BALANCE_VERSION stays 1 (pre-release re-bless). New digest: fixtures 425,673 bytes, fnv1a32 1001114566;
+    generated unchanged.
+- Fixer T:
+  - SPEC, E-S2.14, README, the notes and the designer update are written. O11 (j) is closed; O11 (l) and O12 are new.
+  - O12 is much larger than the census's single offset. At 0.05 (the default Move step), 44 % of plausible designs
+    change tier, the Starter Sword among them (Hammering 0.1037 -> 0.2250, Sharpening 0.0989 -> 0.3030).
+    - (ii), the plane on the kept grip: G moves on 93 plausible designs, no tier, but A27 flips to Hard.
+    - (iii), centring on the extents: 5,076 tier flips, all cleavers.
+  - A hidden Grip block off the grip's axis flips which near copy is kept in X01, X01raw and X02 (the verdict's
+    reference is every Grip part's point).
+  - --quick is 29.3-29.6 s quiet, against 30.
+- V1's and V2's progress lines before the cut:
+  - V2 confirmed the fix's claims.
+  - V1 found two gaps, each with a tried repair:
+    (a) Twins whose heights differ in the last bit are reordered by a Y shift (the rank keeps cy raw): 857 of 20,676
+        sample swords given such twins, 5 tiers. Repair: cy keyed like x and z.
+    (b) A hidden grip speck moves the verdict's reference, so the verdict keeps the other near copy and the kept grip
+        point moves, enough to change a tier. Repair: order near copies from the centre of the sword's outline.
+- The lead stopped V2's orphaned test lanes (shift-v2-1/work after2.sh, testlane.sh, testrun.sh, final.sh; by PID) at
+  23:12.
+23:15 Resumed the workflow (same run id). The fixers replay from cache. The V1/V2 prompts now tell each reviewer to
+carry on from its files and progress lines, and to keep a NOTES.md.
+Lead's view pending the reports: (a) and (b) are majors under this round's severity (a Y shift moving G; a hidden part
+steering a tier). Expect fix round S2 to adopt V1's repairs, then review round 2. O12 goes to Louis as the top designer
+question, default (i) as the approved SPEC says, with the lead recommending (ii).
+
+2026-11-18 00:23 Review round 1 of the shift fix (resumed run): shift_v1_r1.json and shift_v2_r1.json, both pass = false.
+Majors:
+- (V1, V2) Twin heights. Both ranks compare raw cy. Twins whose heights differ in the last bit (1.4 + 0.2 =
+  1.5999999999999999 beside a typed 1.6; Rotate by; placement) are reordered by a Y move. P5 tooth 7: 12 of 41 moves;
+  857 of 20,676 perturbed plausible designs, 5 tiers. f7ac37d does the same, but the new SPEC claims Y moves are exact.
+  Repair: key the height in RANK_Q (V1's hq, relative to the grip's y; V2's raw place(p.cy)).
+- (V1, V2) A hidden part moves the measure's reference. The verdict's place reference is every Grip part's point, and
+  a cleaned speck moves it. When the near copies it chooses between are Grip parts, the kept copy moves the kept Grip
+  point, the measure's reference. P5 (grip copied 4e-8 or 4e-9, a speck at +x) goes 0.2167 Hard -> 0.1902 Normal;
+  f7ac37d stays 0.2167. A regression.
+- (V1) Ids decide between parts whose places round to one RANK_Q step. P5's grip copied 3e-10 apart, with teeth at
+  +-0.1400000004, plays 0.2167 or 0.1902 by ids. A regression (typed sub-1e-9 digits).
+Minors:
+- (V1) A new class from R: a 1e-9 nudge of the Grip parts moves G on 13.4 % of every 3rd plausible design, 8+1 tiers
+  (f7ac37d: Z 0, X 5).
+- (V1) 17 surviving mutants, with tried pins (shift-v1-1 out2 pins_guards.diff).
+- (V1) Each guard leaves a typed-only boundary (an overlap of exactly 1e-7; a gap of 0.01 + 1e-9). Name them.
+- (V1, V2) T-PERF-01 under load.
+- (V2) X01 wording (the hidden block cleans X01's and X01raw's middle copy and keeps one more of X02's).
+- (V2) M3-spec-changes "23 ways" (8 were sideways).
+- (V2) The Z shift list (no 0.3317 on Z); O12's "to the bit" (last bits, up to 4e-13); E-S2.13's digest 130 -> 132
+  bytes.
+- (V2) §14.9's pre-release practice unstated.
+- (V2) Fixer S's mirror counts (11 and 7; 4 and 4).
+Repairs tried:
+- V1's grp (shift-v1-1 var/grp, out2/fix_ties_grp.diff, on hq): places across from the centroid of each part's own tie
+  group (equal volume and height bucket; the verdict also needs the same slot, the measure the same kept flag). No
+  global reference. It closes the hidden-speck chain, the id regression and the grip nudges (Z 0, X 4 at 0.0002), and
+  with hq the twin slide. As built: 43 plausible designs move (no tier), Parity's 200 do not, C11's owned volumes move
+  6e-5. Whole moves, mirrors and cost (x0.9986) as before.
+- V2's vby (outline box of non-Dust parts for the verdict, plus place(p.cy)): closes the speck chain and the twin
+  slide with zero drift, but not the grip-nudge class or the id regression, and a poking Enclosed part can move the
+  box.
+Lead's ruling (fix round S2; fixers U (code, tests) then V (text), then review round 2; scratch shift-fix-u,
+shift-fix-v, shift-v1-2, shift-v2-2; snapshot shift-r1 = the tree after S1):
+- Adopt V1's tie-centroid places for x and z in both ranks, and key the height in RANK_Q. The height is raw
+  place(p.cy) unless measurement shows a reason for V1's grip-relative hq: no reference a hidden part could move.
+- Remove gripPlace from the ranks if nothing else uses it.
+- State the residual: a hidden part tied with visible ones on volume, height and slot moves its group's centroid.
+- Adopt the reviewers' pins, adapted, each failing on its mutant or on the tree before.
+- Text minors as proposed, including §14.9's pre-release sentence ("Before the first release no item is stored, so a
+  round that changes outcome code re-blesses its goldens at the same version; from the first release every such change
+  bumps BALANCE_VERSION").
+- Round-2 severity: majors only for an editor-reachable input (snapped or typed ordinary values, ordinary arithmetic
+  such as 1.4 + 0.2, rotations, placement):
+  - a Y or Z whole-design move that moves G at 4 decimals;
+  - a hidden part steering a tier or the measure;
+  - a regression against f7ac37d.
+  Also major: a false SPEC statement; a test that cannot fail; determinism, crash or cost failures.
+  Cases that need a typed sub-1e-9 offset or an exact typed tie are minor (named residuals, as TIE's).
+
+00:26 Launched fix round S2: workflow wf_22fe7eaa-99d (task woq4jskl6), script
+workflows\scripts\shift-fix-round2-wf_22fe7eaa-99d.js. Snapshot before it: scratch shift-r1\repo (1,159 files). Resume with
+scriptPath + resumeFromRunId if cut off; every agent now keeps a NOTES.md and stops its own background lanes.
+
+2026-11-18 11:49 Fix round S2 + review round 2: wf_22fe7eaa-99d, 00:26 -> 11:49. Results: shift_fixer_u.json,
+shift_fixer_v.json, shift_v1_r2.json, shift_v2_r2.json, all pass = false.
+- Fixer U adopted the tie-centroid places with |q| first in both ranks and the height in RANK_Q.
+  - It closes round 1's majors: the speck chain, the id case, grip nudges, twin heights.
+  - Verify green quiet (769 tests).
+Majors:
+- (V1, V2) The verdict's tie centre counts hidden parts. Ctrl+D a part, nudge the copy 0.002 (one is cleaned), then
+  Ctrl+D the cleaned copy in place: the exact duplicate pulls the centre and decides which copy is kept.
+  - C09 Sharpening 0.2110 Hard -> 0.1967 Normal; #22338 Hammering 0.1175 -> 0.7000 Hard; #1940 0.1950 -> 0.2099 Hard.
+  - V1's corpus: 107 tier changes on 71 of 2,644 designs; f7ac37d and r1: none.
+  - Cover (d)'s exact-copy property fails on seeds 0x0C0FFEE1, 0x2468ACE0 and 0x600DCAFE.
+- (V2) Near twins in the verdict are now twins about their own centre, so the mirror swaps the copy kept: #1940's
+  Z image Sharpening 0.1950 Normal -> 0.2099 Hard; C09's X image keeps both. f7ac37d and r1 read every image as its
+  original. This makes §17.2's mirror sentence false; a regression.
+Repairs tried:
+- V1's signed order for the verdict (fixa): hidden-proof and shift-proof, but the mirror reverses the order, so near
+  copies swap under the mirror (X01's Z images).
+- V2's skip-exact-duplicates (dp): leaves a duplicate nudged 0.0005, and the mirror.
+Lead's analysis:
+- Any tie rule for the verdict's near copies breaks one of three things: whole-design moves, mirrors, robustness to
+  hidden parts.
+  - World planes (f7ac37d): mirror- and hidden-proof, not move-proof.
+  - The grip point (r1): hidden Grip parts steer.
+  - Tie centres (r2): hidden duplicates steer, and mirrors break.
+  - Signed order: mirrors break.
+  - The outline box: hidden poking parts steer.
+- The measure's ties are kept parts only, so a tie centre there is hidden-proof.
+- The census found the verdict's world-keyed rank changed no G or kept set on the plausible set under shifts (only
+  X01/X02's near copies on the fixtures). The shift fix's value is in the measure and the guards.
+Lead's ruling (fix round S3; fixers W (code, tests) then X (text), then review round 3; scratch shift-fix-w,
+shift-fix-x, shift-v1-3, shift-v2-3, shift-fix-m3; snapshot shift-r2 = the tree after S2):
+- The verdict's rank goes back to f7ac37d's world keys for x and z (raw |x|, x, |z|, z), with the height in RANK_Q
+  (place(cy)). This keeps the twin-height fix and nothing that can be steered or mirrored.
+- The measure's rank keeps S2's tie-centroid places with |q| first, over kept parts, with the height in RANK_Q.
+- Guards 2-6 stay.
+- The residual is named under O11 (j): near copies (tied on volume, slot and height) straddling the plane x = 0 or z = 0
+  can change which one the verdict keeps under a whole-design move along X or Z, as at M3's commit. Measure it on V1's
+  near-copy corpus.
+- Adopt the reviewers' pins, adapted: the hidden-duplicate and mirror near-copy cases read as f7ac37d; the tie-height
+  pins (mT_tieRawY, tGroupRawY); Cover (d) on the 8 seeds.
+- V2's text minors: §17.2's mirror sentence true again; §5.5; the RANK_Q wordings; snapped moves' factor bound
+  1.2e-11 and TOL_FACTOR_ABS; the Verdict.spec copies pinned exactly.
+- Round-3 severity: major only for these:
+  - a hidden part steering anything;
+  - a regression against f7ac37d on an editor-reachable input;
+  - a whole-design Y or Z move moving G at 4 decimals beyond the stated exceptions, for an editor-reachable input;
+  - a false SPEC statement;
+  - a test that cannot fail;
+  - determinism, crash or cost failures.
+  Typed sub-1e-9 cases and the named near-copy class at other figures are minor.
+- If round 3 finds a major in the verdict's ties again, the lead takes near copies to Louis as a design question
+  rather than patch again.
+
+11:53 Launched fix round S3: workflow wf_74d02c3d-513 (task wndgg0erb), script
+workflows/scripts/shift-fix-round3-wf_74d02c3d-513.js. Snapshot before it: scratch shift-r2/repo (1,159 files). Resume with
+scriptPath + resumeFromRunId if cut off.
+
+[20:51 2026-11-18] Review round 3, V2 (restarted copy, wf_df03e57c-056; result in shift_v2_r3.json): 2 majors, 3 minors.
+Major 1: the MEASURE's ties (not the verdict's): a cleaned part is placed from the centre of the cleaned parts it ties
+with, so a hidden duplicate decides which of two hidden overlapping fillers owns the overlap: mass and balance move
+(-0.000135 kg) while G stays the same; a regression from round 2 vs f7ac37d. V2's repair (B), cleaned parts get no
+place (out/fix_cleaned_noplace.diff), is byte for byte the live tree on every corpus, plus pin_hidden_ownership.diff.
+Major 2: §14.6/E-S2.14/M3-notes 'each guard between its value and twice it' is false for CELL_EPS, CONTACT_REACH and
+MIRROR_GUARD; pin_guards_15.diff (1.5x pins) makes it true. Minors: pin_quantxz.diff; near-copy figures; wording.
+Lead's provisional ruling: neither major is the verdict's near-copy tie, so the convergence rule does not trigger:
+fix round 4 = repair (B) + the three pin diffs + text, then a short re-review. Waiting for V1 (shift workflow) first.
+Paused for the usage limit at 20:51: shift workflow (V1, V2-A) and the M4 build stopped; resume both from their NOTES.md.

@@ -1,0 +1,2 @@
+seed 13: 1500 tangles, 7599 parts checked, 71 ties (bracketed), 20 outside the bracket, 0 past the limit, 0 non-finite; worst agreement outside ties 5.43e-10; worst outside 0.00788
+  seed 13 tangle 737 part 2 (Ball): cover 1.08906 brute 1.07937, outside the bracket by 0.00788 of its area

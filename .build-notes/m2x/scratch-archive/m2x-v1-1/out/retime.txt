@@ -1,0 +1,9 @@
+worst valid 1            units    692796 verdict med  24.72 best  23.30 (35.7 ns/unit)  exposure  34.08  run  36.09  valid canonical true
+worst valid 2            units    661903 verdict med  22.43 best  21.57 (33.9 ns/unit)  exposure  30.68  run  34.35  valid canonical true
+worst valid 3            units    698006 verdict med  22.21 best  21.62 (31.8 ns/unit)  exposure  31.10  run  34.36  valid canonical true
+P1                       units    330993 verdict med  12.03 best  11.26 (36.3 ns/unit)  exposure  19.55  run  24.52  valid canonical true
+V1 climb 1               units    680636 verdict med  26.80 best  25.71 (39.4 ns/unit)  exposure  29.33  run  30.95  valid canonical true
+V1 climb 2               units    699217 verdict med  27.82 best  26.73 (39.8 ns/unit)  exposure  30.45  run  32.45  valid canonical true
+V1 climb 3               units    670660 verdict med  26.83 best  26.21 (40.0 ns/unit)  exposure  29.94  run  32.08  valid canonical true
+V1 climb 4               units    683944 verdict med  27.44 best  26.58 (40.1 ns/unit)  exposure  30.45  run  32.48  valid canonical true
+V1 cluster d0.54 ax0.25  units    692654 verdict med  28.32 best  27.43 (40.9 ns/unit)  exposure  31.58  run  33.09  valid canonical true

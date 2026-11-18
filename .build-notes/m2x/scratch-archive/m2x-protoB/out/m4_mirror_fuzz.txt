@@ -1,0 +1,4 @@
+  200 designs, 2414 parts, 0 verdicts differ, 8 s
+  400 designs, 4892 parts, 0 verdicts differ, 16 s
+  600 designs, 7513 parts, 0 verdicts differ, 24 s
+M4 mirror fuzz:600:21: 600 designs, 7513 parts, 0 verdicts differ from the image's; reads differ in 3723 parts, largest |difference| 1.47e-14 (fuzz21#340 part 3 (Block): 0.900041641 / 0.900041641), 24 s

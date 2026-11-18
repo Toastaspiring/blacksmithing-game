@@ -1,0 +1,2 @@
+  50 designs, 832 variants, 0 other parts changed, 8 s
+M4 copy corpus_fixtures.json: 71 designs, 1230 variants (each part, first and last), other parts whose read or verdict moved: 0; copy not cleaned as expected: 0, 26 s

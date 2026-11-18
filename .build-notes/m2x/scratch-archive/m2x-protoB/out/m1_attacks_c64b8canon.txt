@@ -1,0 +1,4 @@
+M1 dumps:a_hand,a_rod,a_void,a_sheets,a20_all,a30_more (model cyl 64 ball 8 canonical): 111 designs, 1287 parts, 95664 facets, 144.9 s
+  largest |share difference| per part 2.6e-13  (a30_more#37 part 18 (Wedge): exact 0.707509851728 brute 0.707509851728)
+  largest |difference| per facet, of its area 1.04e-12  (a20_all#13 part 17 (Wedge) facet 3: exact 0.0248909395871 brute 0.0248909395871 area 0.024891)
+  parts by |share difference|: <1e-12 1287, <1e-10 0, <1e-8 0, <1e-6 0, <1e-4 0, more 0

@@ -1,0 +1,1 @@
+P1 24 large overlapping tilted blocks                      n24 | new verdict   28.72 ms  293328 u, exposure   38.71 ms | old verdict  16.27 ms 106658 u, exposure  25.34 ms | cleaned 9/10

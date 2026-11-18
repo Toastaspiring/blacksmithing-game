@@ -1,0 +1,1 @@
+fixtures: 62 designs, 556 parts; 0 read differently from the hide test (> 1e-9 of the area), 0 verdicts flip; worst 0.0000 of a part: 

@@ -1,0 +1,9 @@
+UNITS bset:pinRivet:8:3: 313 designs, new median 2464, p99 12922, max 12940 | old median 1930, p99 9540, max 9540 (1 s)
+      12940 units (old    9174)  n19 cleaned  0  C09 r0.12 poke0.0120 one spin33 [bset-pinRivet]
+      12939 units (old    9146)  n19 cleaned  0  C09 r0.08 poke0.0005 one spin33 [bset-pinRivet]
+      12928 units (old    9527)  n19 cleaned  0  C09 r0.12 poke0.0400 one spin33 [bset-pinRivet]
+      12922 units (old    9271)  n19 cleaned  0  C09 r0.12 poke0.0200 one spin33 [bset-pinRivet]
+      12761 units (old    9146)  n19 cleaned  0  C09 r0.08 poke0.0010 one spin33 [bset-pinRivet]
+      12660 units (old    9540)  n19 cleaned  0  C09 r0.12 poke0.0010 one spin33 [bset-pinRivet]
+      12660 units (old    9540)  n19 cleaned  0  C09 r0.12 poke0.0020 one spin33 [bset-pinRivet]
+      12660 units (old    9540)  n19 cleaned  0  C09 r0.12 poke0.0005 one spin33 [bset-pinRivet]

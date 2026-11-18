@@ -1,0 +1,4 @@
+F5 stride base 0.0288 / 0.1037 / 0.0989 | 2 pieces |Δx| 4.4e-16 (Ha.Thinness) |ΔG| 0 | 3 pieces |Δx| 7.2e-16 (Ha.Thinness) |ΔG| 0 | 7 pieces |Δx| 4.4e-16 (Ha.Thinness) |ΔG| 0
+F5 FINE   base 0.0288 / 0.1039 / 0.0989 | 2 pieces |Δx| 1.9e-15 (Ha.Thinness) |ΔG| 0 | 3 pieces |Δx| 1e-15 (Ha.Thinness) |ΔG| 0 | 7 pieces |Δx| 2.1e-15 (Ha.Thinness) |ΔG| 0
+C12 vs C02 stride |Δx| 8.3e-16 (Ha.Thinness) |ΔG| 0
+C12 vs C02 FINE   |Δx| 3.9e-15 (Ha.Thinness) |ΔG| 0

@@ -1,0 +1,46 @@
+M3 review round 1 -> fix round 1 (2026-11-15)
+
+Build wf_b30746e2-333: builders 1-4 green (650 / 685 / 707 / 718 tests). Results in m3_builder_1..4.json,
+verifiers in m3_v1_adversary_r1.json and m3_v2_numbers_and_text_r1.json.
+- L3 fell back to (b): lattice Douglas-Peucker moved C15 Sharpening 0.4291 -> 0.4299 (one tie).
+- B1: exact raster ties are not translation-invariant (prototype too): C10/C11 Sharpening G 0.0063/0.0031 at E-S2.10's
+  +0.3317 (past TOL_G_INVARIANT), C09 cutIndex 1 -> 0.8842 under Z -0.037. Recorded in O11.
+- B3: flush re-cut moves G up to 0.125 and flips a tier on the Prop stream (case 152 Hammering 0.2158 H -> 0.0908 N).
+
+Verifiers round 1:
+- V1 major 1: Thinness merges chords across gaps <= CONTACT_TOL 0.010, the verdict hides across HIDE_OFFSET 0.012:
+  a hidden 0.0101 laminate gap flips Hammering on 5/5 fixtures (F5 0.1035 N -> 0.3981 H). Edge's chord thickness too.
+- V1 major 2: theta depends on the writing (tie rule, rod spin, Ball turn): a square rib two ways 0.2117 H / 0.1637 N.
+- V1 major 3 / V2 major: O11 understated: a re-cut chosen for theta reaches |dG| 0.3823; the stride's per-part sample
+  order makes 24 writings of a turned blade span a tier; §5's promise and §0.5 list only O9.
+- Minors: test gaps (soft-OR vs max, frame order, per-loop charges, §4.6 boundaries), hidden gaps move SC through V,
+  a turned Ball moves M2's measure, T-PERF-01 fails under ~30 % load, text numbers, hidden grip parts steer cutIndex
+  through the physics frame (M2 §4.5: all Grip parts).
+
+Lead decisions for fix round 1 (two fixers in sequence, then V1/V2 round 2):
+Fixer A (Thinness and the raster):
+ 1. Chords merge across gaps <= HIDE_OFFSET + EPS_GEOM in Thinness and Edge (what the verdict hides across).
+ 2. theta-min: tau = min of union chords along the thickness axis and ALL THREE of the owner's local axes (Cylinder:
+    axis + 2 radial in a frame fixed by the thickness axis; Ball: world axes). Gate: every §5.5 tier holds and the
+    slowest valid design <= 57 ms quiet after charging; else V1's tied-axes theta + honest O11 figures.
+ 3. The stride walks each part's samples in a canonical, writing-invariant order; de-alias if a deterministic pick
+    removes V1's layer aliasing without moving a §5.5 tier.
+ 4. Raster ties: keep cell sample points off snapped planes (or tie-proof predicates) if E-S2.10's offsets become exact
+    on all F/C fixtures without moving a §5.5 tier; else document.
+Fixer B (frame, tests, text):
+ 5. Physics frame from kept Grip parts (point and vote); §4.5 changes; cleaned parts steer nothing.
+ 6. §5's promise and §0.5 name O9, O10, O11.
+ 7. The verifiers' tried tests (soft-OR formula, frame order, per-loop charges, §4.6 boundaries).
+ 8. Text minors; document hidden-gap SC (O10), round parts' sample grids following their writing (§17.2), T-PERF-01
+    needs a quiet machine; --quick margin.
+Then S-PAR-02 in Studio after round 2 passes (any code change moves the digest).
+
+2026-11-16: fixers A and B done (verify 727 / 732 green). A: one gap window, theta on all three local axes (adopted:
+every §5.5 tier holds, slowest valid 53.1-53.4 ms), canonical walk + rank-1 lattice pick, raster read off-centre
+(0.0013 toward x = 0, 0.0017 up). §5.5 moves: C04 0.3379/0.4769, C05 0.1369, C09 0.3201, C13 0.1137 (tiers hold).
+B: physics frame, guard line and grip top from kept parts (wider than asked: 1,785 plausible designs move, 15
+fixtures); V4 keeps all Grip parts (validationFrame); §5/§0.5 name O9-O11; the verifiers' tests; --quick 25.87 s.
+The round-2 verifiers hit the weekly limit, then were stopped on resume: fixer B found L3 (a) now meets its
+criterion (no F/C/X/A move at 4 decimals; Y shifts exact on 1,793 copies). Lead: adopt L3 (a) as fixer C, then
+verify round 2 (scratch m3-v1-2b, m3-v2-2b). Snapshot after A+B: scratch m3-r1b-base. Task w55qc0pm3.
+Rojo servers restarted 2026-11-16 at the user's request (rojo 34872, rojo-test 34873).

@@ -1,0 +1,10 @@
+T-MG-04: worst |mean - E-S3.2| as a fraction of the band: 0.67; smallest Q8 margin 0.023
+  T-MG-05 drop HoldZone       Iron  Average 0.0680 (need >= 0.05)
+  T-MG-05 drop HoldZone       Steel Average 0.0688 (need >= 0.05)
+  T-MG-05 drop TimingStrike   Iron  Average 0.0976 (need >= 0.05)
+  T-MG-05 drop TimingStrike   Steel Average 0.0882 (need >= 0.05)
+  T-MG-05 drop PrecisionTrace Iron  Elite   0.0077 (need > 0.00)
+  T-MG-05 drop PrecisionTrace Iron  Average 0.0789 (need >= 0.05)
+  T-MG-05 drop PrecisionTrace Steel Elite   0.0052 (need > 0.00)
+  T-MG-05 drop PrecisionTrace Steel Average 0.0744 (need >= 0.05)
+FAILURES: none

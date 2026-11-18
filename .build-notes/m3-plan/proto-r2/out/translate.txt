@@ -1,0 +1,5 @@
+F1   6 offsets (0 out of the hitbox, skipped): max |Δx| 0.0017 (Sm.Thinness), |ΔG| 0.0007; EdgeLength |Δ| 1.8e-15; main chain's points moved by Δy within 4.4e-16
+F3   6 offsets (3 out of the hitbox, skipped): max |Δx| 0.0000 (), |ΔG| 0.0000; EdgeLength |Δ| 0; main chain's points moved by Δy within 0
+F5   6 offsets (0 out of the hitbox, skipped): max |Δx| 0.0017 (Sm.Thinness), |ΔG| 0.0007; EdgeLength |Δ| 1.8e-15; main chain's points moved by Δy within 4.4e-16
+C02  6 offsets (0 out of the hitbox, skipped): max |Δx| 0.0000 (Sm.EdgeLength), |ΔG| 0.0000; EdgeLength |Δ| 1.8e-15; main chain's points moved by Δy within 8.9e-16
+C06  6 offsets (0 out of the hitbox, skipped): max |Δx| 0.0000 (Sh.SurfaceComplexity), |ΔG| 0.0000; EdgeLength |Δ| 1.8e-15; main chain's points moved by Δy within 8.9e-16

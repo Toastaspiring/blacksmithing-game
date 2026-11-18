@@ -1,0 +1,6 @@
+F2    M2 checkpoints 41, M3 (emulated) 48, total 89
+F5    M2 checkpoints 46, M3 (emulated) 55, total 101
+C05   M2 checkpoints 143, M3 (emulated) 176, total 319
+C09   M2 checkpoints 204, M3 (emulated) 138, total 342
+P1    M2 checkpoints 1009, M3 (emulated) 185, total 1194
+P5    M2 checkpoints 70, M3 (emulated) 131, total 201

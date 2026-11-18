@@ -1,0 +1,12 @@
+M1 fixtures model base: 77 designs, 641 parts, 8.8 s
+  largest |cover - slabs| share: 2.603e-13   C09 Ornate (18 parts) part 17 (Wedge): cover 0.707509851728 slabs 0.707509851728
+M1 fixtures model canon: 77 designs, 641 parts, 9.1 s
+  largest |cover - slabs| share: 2.603e-13   C09 Ornate (18 parts) part 17 (Wedge): cover 0.707509851728 slabs 0.707509851728
+M1 fixtures model fine: 77 designs, 641 parts, 62.8 s
+  largest |cover - slabs| share: 2.603e-13   C09 Ornate (18 parts) part 17 (Wedge): cover 0.707509851728 slabs 0.707509851728
+M1 worst model base: 15 designs, 330 parts, 28.7 s
+  largest |cover - slabs| share: 1.813e-13   worst_P climbV_3#1 part 20 (Block): cover 0.017092255501 slabs 0.017092255501
+M1 jsonl:out/corpus_all.jsonl model base: 447 designs, 6469 parts, 78.7 s
+  largest |cover - slabs| share: 2.609e-13   v11/a8_flush emu #30 part 19 (Wedge): cover 0.733826431243 slabs 0.733826431243
+M1DONE
+M1DONE (lattice step stopped, rerun separately)

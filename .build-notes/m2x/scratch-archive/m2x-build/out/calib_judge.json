@@ -1,0 +1,8 @@
+[
+{"name":"judge judge climb seed 1 best 10790351 units","parts":24,"units":11169292.875,"verdict":263.3774,"exposure":266.7548,"oldVerdict":8.4209,"oldExposure":21.9112,"tests":21987578.0,"boxes":175631.0,"polys":149486.0,"facets":508.0,"capped":false},
+{"name":"judge judge climb seed 2 best 6424674 units","parts":24,"units":7207623.375,"verdict":270.2973,"exposure":279.6409,"oldVerdict":6.4529,"oldExposure":13.6615,"tests":14068202.0,"boxes":59011.0,"polys":152322.0,"facets":1728.0,"capped":false},
+{"name":"judge judge climb seed 3 best 9327966 units","parts":24,"units":7847655.625,"verdict":211.6221,"exposure":215.6492,"oldVerdict":20.3945,"oldExposure":29.8738,"tests":15308935.0,"boxes":116257.0,"polys":172584.0,"facets":759.0,"capped":false},
+{"name":"judge judge climb seed 4 best 14613763 units","parts":24,"units":8830949.000,"verdict":185.3272,"exposure":193.0380,"oldVerdict":3.4599,"oldExposure":8.5460,"tests":17496513.0,"boxes":65724.0,"polys":59741.0,"facets":1842.0,"capped":false},
+{"name":"judge judge time climb 49.2 ms (load)","parts":24,"units":605277.500,"verdict":26.2627,"exposure":35.9860,"oldVerdict":2.1696,"oldExposure":13.7360,"tests":1127930.0,"boxes":37108.0,"polys":30594.0,"facets":760.0,"capped":false},
+{"name":"judge judge time climb 42.8 ms (load)","parts":24,"units":521702.250,"verdict":21.4766,"exposure":31.7233,"oldVerdict":16.2908,"oldExposure":28.9140,"tests":984593.0,"boxes":9870.0,"polys":21644.0,"facets":816.0,"capped":false}
+]

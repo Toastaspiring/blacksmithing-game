@@ -1,0 +1,13 @@
+C05, valid true: Skin(Block) true 0.00% read 0.00% CLEANED; Skin(Block) true 0.00% read 0.00% CLEANED; Skin(Block) true 0.00% read 0.00% CLEANED; Skin(Block) true 0.00% read 0.00% CLEANED; Skin(Block) true 0.00% read 
+   K: Sm 0.5451 H, Ha 0.1363 N, Sh 0.3466 H | K + skin: Sm 0.5451 H, Ha 0.1363 N, Sh 0.3466 H | |dD| 0.0000 
+C02 Arming (Iron), valid true: Skin(Block) true 0.00% read 0.00% CLEANED; Skin(Block) true 0.00% read 0.00% CLEANED; Skin(Block) true 0.00% read 0.00% CLEANED; Skin(Block) true 0.00% read 0.00% CLEANED; Skin(Block) true 0.00% read 
+   K: Sm 0.0355 N, Ha 0.1137 N, Sh 0.1318 N | K + skin: Sm 0.0355 N, Ha 0.1137 N, Sh 0.1318 N | |dD| 0.0000 
+C08, valid true: Skin(Block) true 0.00% read 0.00% CLEANED; Skin(Block) true 0.00% read 0.00% CLEANED; Skin(Block) true 0.00% read 0.00% CLEANED; Skin(Block) true 0.00% read 0.00% CLEANED; Skin(Block) true 0.00% read 
+   K: Sm 0.1563 N, Ha 0.0992 N, Sh 0.2487 H | K + skin: Sm 0.1563 N, Ha 0.0992 N, Sh 0.2487 H | |dD| 0.0000 
+F5, valid true: Skin(Block) true 0.00% read 0.00% CLEANED; Skin(Block) true 0.00% read 0.00% CLEANED; Skin(Block) true 0.00% read 0.00% CLEANED; Skin(Block) true 0.00% read 0.00% CLEANED; Skin(Block) true - read - CL
+   K: Sm 0.0288 N, Ha 0.1037 N, Sh 0.0989 N | K + skin: Sm 0.0288 N, Ha 0.1037 N, Sh 0.0989 N | |dD| 0.0000 
+F4, valid true: Skin(Block) true 0.00% read 0.00% CLEANED; Skin(Block) true 0.00% read 0.00% CLEANED; Skin(Block) true 0.00% read 0.00% CLEANED; Skin(Block) true 0.00% read 0.00% CLEANED; Skin(Block) true 0.00% read 
+   K: Sm 0.4590 H, Ha 0.1572 N, Sh 0.3420 H | K + skin: Sm 0.4590 H, Ha 0.1572 N, Sh 0.3420 H | |dD| 0.0000 
+C09, valid true: Skin(Block) true 0.00% read 0.00% CLEANED; Skin(Block) true 0.00% read 0.00% CLEANED; Skin(Block) true 0.00% read 0.00% CLEANED; Skin(Block) true 0.00% read 0.00% CLEANED; Skin(Block) true - read - CL
+   K: Sm 0.0001 N, Ha 0.3170 H, Sh 0.1904 N | K + skin: Sm 0.0001 N, Ha 0.3170 H, Sh 0.1904 N | |dD| 0.0000 
+-- dumprun a12_skin: 12 designs, 1.5 s

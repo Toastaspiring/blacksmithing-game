@@ -1,0 +1,14 @@
+F4 + parts at  -45.0°,  45.0° | new   +0.000° bal +0.740 blade 2.675 total 3.850 ok | old   +0.000° bal +0.740 blade 2.675 total 3.850 ok
+F4 + parts at  -45.1°,  44.9° | new  -22.450° bal +0.634 blade 2.243 total 3.386 ok | old   +0.059° bal +0.740 blade 2.676 total 3.851 ok
+F4 + parts at  -44.9°,  45.1° | new  +22.450° bal +0.734 blade 2.701 total 3.845 ok | old   -0.059° bal +0.740 blade 2.674 total 3.850 ok
+F4 + parts at  -46.0°,  46.0° | new   +0.000° bal +0.739 blade 2.675 total 3.850 ok | old   +0.000° bal +0.739 blade 2.675 total 3.850 ok
+handle along Z at any nudge: tested 4000 not +Y: 0
+mirror worst guardPos     0
+mirror worst reach        0
+mirror worst bladeLength  0
+mirror worst mass         1.34e-16
+mirror worst axisX        0
+mirror worst axisY        0
+mirror worst totalLength  0
+mirror worst balance      4.44e-16
+mirror worst comOffAxis   7.63e-17

@@ -1,0 +1,21 @@
+M1: data contracts (Definitions, Util/Quantize, Blueprint, fixtures)
+
+- All 19 Definitions modules with the SPEC §16 values, Manifest and
+  Validate; goldens for the BALANCE fingerprint, definition ids and the
+  world build list
+- Util/Quantize and Blueprint/{Schema, Canonical, Quat, Names, Views}:
+  raw-double transforms, canonical rules C1-C7, wire sanitization
+- Fixtures F1-F5 and A01-A24, tests/lib/Gen
+- Meta rules tightened: cast and aliased requires, the definitions file
+  check, literal tokens, other Roblox datatypes, no init.luau in pure code
+- Rojo pin moved to 7.7.1 to match the upgraded Studio plugin
+- SPEC: Quantize guard wording, T-META-02 token list, isCanonical's
+  bounds = false, and a §17.2 item closed: rojo serve applies both place
+  settings (read back in Studio on 7.7.1)
+- docs/build/M1-notes.md keeps the open items for later milestones
+
+Independently verified: scripts/verify green with 285 tests; every
+Definitions value checked against §16 by script; fuzz runs and 126 code
+mutants (121 killed, the rest harmless).
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>

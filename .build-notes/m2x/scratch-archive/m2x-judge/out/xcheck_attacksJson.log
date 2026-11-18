@@ -1,0 +1,8 @@
+XCHECK attacksJson every 1 shard 0/1: 4 designs, 66 parts, 0.0 s
+  model area: largest relative difference between A, B, J 1.66e-15; facet matching worst centroid gap 0
+  |A-B| share: <1e-12 66, <1e-10 0, <1e-9 0, <1e-6 0, <1e-3 0, more 0
+  largest |A-B| 2.22e-16 (v2-2 attacks windows between the lines, blade 1 x 2, ribs 0.0005 past part 8 (Block): A 0.707236071135 B 0.707236071135)
+  brute force on 66 parts (0 over the edge limit; 0 differing parts unsettled for that)
+  parts where A is outside the tie bracket by > 1e-9: 0, worst 0 ()
+  parts where B is outside the tie bracket by > 1e-9: 0, worst 0 ()
+  parts with a tie (bracket wider than 1e-9): 0, widest 0 ()

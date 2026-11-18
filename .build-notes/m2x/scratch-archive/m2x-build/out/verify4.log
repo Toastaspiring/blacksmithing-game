@@ -1,0 +1,11 @@
+[tools] rojo Rojo 7.7.1
+[tools] luau-lsp 1.70.1
+[tools] lune lune 0.8.9
+[tools] tools/luau-lsp/globalTypes.None.d.luau: 677555 bytes, 2238 declaration blocks
+[sourcemaps] sourcemap.json, test.sourcemap.json
+[T-META-07] ok: 119 files, 706 requires; compared against sourcemap.json 99, test.sourcemap.json 109
+[luau-lsp] pass A: 0 error(s)
+[luau-lsp] pass B: 0 error(s)
+RESULT pass=577 fail=0 skip=0 files=51 time=170.65s
+VERIFY GREEN (175.5 s)
+exit=0

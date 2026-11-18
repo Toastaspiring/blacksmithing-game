@@ -1,0 +1,7 @@
+C01          orders differ, d and factors within 1e-12
+C10          orders differ, d and factors within 1e-12
+C11          orders differ, d and factors within 1e-12
+P2           orders differ, d and factors within 1e-12
+P3           orders differ, d and factors within 1e-12
+P4           orders differ, d and factors within 1e-12
+64 fixtures alike, 0 differ (beyond 1e-12)

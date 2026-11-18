@@ -1,0 +1,9 @@
+C09:       Sm 0.0001 N, Ha 0.3170 H, Sh 0.1904 N
+C09 split: Sm 0.0001 N, Ha 0.3178 H, Sh 0.1904 N
+split: hSurf 0.040 surfSamples 3844 subSampled 498
+1 fillers: hSurf 0.040 subSampled 498 cleaned 1 | F1(Block) true 0.00% read 0.01% CLEANED | Sm 0.0001 N, Ha 0.3178 H, Sh 0.1904 N | |dD| 0.0000 
+2 fillers: hSurf 0.040 subSampled 498 cleaned 2 | F1(Block) true 0.00% read 0.01% CLEANED; F2(Block) true 0.00% read 0.01% CLEANED | Sm 0.0001 N, Ha 0.3178 H, Sh 0.1904 N | |dD| 0.0000 
+3 fillers: hSurf 0.040 subSampled 498 cleaned 3 | F1(Block) true 0.00% read 0.01% CLEANED; F3(Block) true 0.01% read 0.01% CLEANED | Sm 0.0001 N, Ha 0.3178 H, Sh 0.1904 N | |dD| 0.0000 
+4 fillers: hSurf 0.040 subSampled 498 cleaned 4 | F1(Block) true 0.00% read 0.01% CLEANED; F4(Block) true 0.01% read 0.01% CLEANED | Sm 0.0001 N, Ha 0.3178 H, Sh 0.1904 N | |dD| 0.0000 
+5 fillers: hSurf 0.040 subSampled 498 cleaned 5 | F1(Block) true 0.00% read 0.01% CLEANED; F5(Block) true 1.10% read 1.10% CLEANED | Sm 0.0001 N, Ha 0.3178 H, Sh 0.1904 N | |dD| 0.0000 
+-- dumprun a5_c09: 7 designs, 2.1 s

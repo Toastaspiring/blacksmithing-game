@@ -1,0 +1,9 @@
+UNITS bset:thinPart:8:3: 1280 designs, new median 2195, p99 11530, max 11744 | old median 2485, p99 10280, max 14565 (5 s)
+      11744 units (old   10870)  n19 cleaned  1  C09 Cylinder L1.2 w0.04 proud-0.0020 turn16 [bset-thinPart]
+      11744 units (old   10870)  n19 cleaned  1  C09 Cylinder L1.2 w0.02 proud-0.0020 turn16 [bset-thinPart]
+      11744 units (old   10870)  n19 cleaned  1  C09 Cylinder L1.2 w0.30 proud-0.0020 turn16 [bset-thinPart]
+      11744 units (old   14565)  n19 cleaned  1  C09 Cylinder L2.0 w0.10 proud-0.0020 turn16 [bset-thinPart]
+      11744 units (old   14565)  n19 cleaned  1  C09 Cylinder L2.0 w0.04 proud-0.0020 turn16 [bset-thinPart]
+      11744 units (old   14565)  n19 cleaned  1  C09 Cylinder L2.0 w0.30 proud-0.0020 turn16 [bset-thinPart]
+      11744 units (old   10870)  n19 cleaned  1  C09 Cylinder L1.2 w0.10 proud-0.0020 turn16 [bset-thinPart]
+      11744 units (old   14565)  n19 cleaned  1  C09 Cylinder L2.0 w0.02 proud-0.0020 turn16 [bset-thinPart]

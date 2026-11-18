@@ -1,0 +1,11 @@
+worst_P#1 climbV_4#1                                       n24 | new verdict   46.54 ms  236905 u, exposure   69.89 ms | old verdict  43.20 ms 138009 u, exposure  64.36 ms | cleaned 5/6
+worst_P#2 climbL_2#4                                       n24 | new verdict   47.70 ms  250058 u, exposure   73.94 ms | old verdict  45.73 ms 176255 u, exposure  63.55 ms | cleaned 7/11
+worst_P#3 climbL_2#3                                       n24 | new verdict   43.02 ms  231027 u, exposure   67.47 ms | old verdict  48.60 ms 182881 u, exposure  72.15 ms | cleaned 7/8
+worst_P#4 climbV_4#2                                       n24 | new verdict   44.19 ms  212380 u, exposure   66.09 ms | old verdict  34.59 ms 133978 u, exposure  59.94 ms | cleaned 8/8
+worst_P#5 climbV_3#2                                       n24 | new verdict   29.32 ms  158629 u, exposure   53.36 ms | old verdict  29.20 ms 114981 u, exposure  50.94 ms | cleaned 4/5
+worst_P#6 climbV_3#1                                       n24 | new verdict   34.13 ms  181931 u, exposure   57.98 ms | old verdict  33.46 ms 122574 u, exposure  56.19 ms | cleaned 8/10
+worst_P#7 climbV_3#3                                       n24 | new verdict   41.30 ms  213166 u, exposure   65.13 ms | old verdict  31.31 ms 121803 u, exposure  56.02 ms | cleaned 9/9
+worst_P#8 climbL_1#1                                       n24 | new verdict  203.20 ms 1377327 u, exposure  235.66 ms | old verdict  69.25 ms 430815 u, exposure  94.31 ms | cleaned 9/10
+worst_P#9 climbL_3#1                                       n24 | new verdict  333.16 ms 2470922 u, exposure  357.96 ms | old verdict  60.55 ms 573157 u, exposure  80.55 ms | cleaned 10/12
+worst_P#10 climbL_2#1                                      n24 | new verdict  265.90 ms 1890023 u, exposure  292.60 ms | old verdict  67.26 ms 444753 u, exposure  83.71 ms | cleaned 16/16
+worst_P#11 clampedP#1                                      n24 | new verdict    6.95 ms   28048 u, exposure   28.10 ms | old verdict  12.12 ms  45109 u, exposure  36.91 ms | cleaned 0/0

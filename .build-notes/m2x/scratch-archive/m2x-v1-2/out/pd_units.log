@@ -1,0 +1,22 @@
+33389 plausible designs: the most units 113704.9 (wrapRings|C09|n5 extra0.04 gap0.0020); the largest single report 2144.8 (wrapRings|C02|n5 extra0.01 gap0.0010)
+  ballRivet              7296 designs, at most    57407.5 units
+  bevel                   891 designs, at most    23974.6 units
+  cage                     80 designs, at most    28891.8 units
+  comb                     16 designs, at most     7079.9 units
+  cylRib                 3432 designs, at most    33719.0 units
+  cylRivet               1782 designs, at most    44628.9 units
+  fuller                 8352 designs, at most     7539.8 units
+  grille                  216 designs, at most    41270.1 units
+  lamHilt                 672 designs, at most     4249.1 units
+  laminate                760 designs, at most    13566.6 units
+  plateC09                 10 designs, at most    23002.8 units
+  plateEdge              4518 designs, at most    27768.5 units
+  plateTilt               288 designs, at most    22695.2 units
+  pommelInBlock           507 designs, at most    33723.9 units
+  ribBar                  360 designs, at most     7878.8 units
+  ribbed                  832 designs, at most     6350.5 units
+  rod                     720 designs, at most    41652.4 units
+  tiled                   384 designs, at most    23073.4 units
+  wall                    140 designs, at most     5290.8 units
+  wedgeInGuard           1080 designs, at most    27905.6 units
+  wrapRings              1053 designs, at most   113704.9 units

@@ -1,0 +1,11 @@
+  pfam:pommelInBlock: 50 / 507 designs, 2 s
+  pfam:pommelInBlock: 100 / 507 designs, 4 s
+  pfam:pommelInBlock: 150 / 507 designs, 7 s
+  pfam:pommelInBlock: 200 / 507 designs, 10 s
+  pfam:pommelInBlock: 250 / 507 designs, 14 s
+  pfam:pommelInBlock: 300 / 507 designs, 15 s
+  pfam:pommelInBlock: 350 / 507 designs, 17 s
+  pfam:pommelInBlock: 400 / 507 designs, 19 s
+  pfam:pommelInBlock: 450 / 507 designs, 20 s
+  pfam:pommelInBlock: 500 / 507 designs, 22 s
+M2 pfam:pommelInBlock -> m2f_pfam_pommelInBlock.jsonl: 507 designs, 22 s

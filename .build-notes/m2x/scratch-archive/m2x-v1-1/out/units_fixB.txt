@@ -1,0 +1,16 @@
+P1 24 large overlapping tilted blocks    units   330993.1 capped false cleaned  9  39.0 ms
+P2 24 rotated cylinders                  units    27403.0 capped false cleaned  0  15.7 ms
+P3 24 rotated wedges                     units     8405.0 capped false cleaned  0  13.2 ms
+P4 24 overlapping balls                  units   162886.1 capped false cleaned  0  20.9 ms
+P5 comb blade (sawtooth, 24 parts)       units     2973.2 capped false cleaned  0  3.9 ms
+worst valid 1                            units   694308.8 capped false cleaned 12  54.4 ms
+worst valid 2                            units   662259.2 capped false cleaned 13  47.5 ms
+worst valid 3                            units   698540.4 capped false cleaned 13  53.3 ms
+worst valid 4                            units   648569.1 capped false cleaned  0  55.6 ms
+worst valid 5                            units   643925.9 capped false cleaned 12  51.4 ms
+worst valid 6                            units   588310.4 capped false cleaned 12  45.6 ms
+worst valid 7                            units   504263.9 capped false cleaned  6  54.9 ms
+worst valid 8                            units   548798.0 capped false cleaned 13  47.2 ms
+tooComplex 1                             units   700036.1 capped true  cleaned  0  20.5 ms
+tooComplex 2                             units   700057.2 capped true  cleaned  0  38.1 ms
+tooComplex 3                             units   700043.0 capped true  cleaned  0  25.1 ms

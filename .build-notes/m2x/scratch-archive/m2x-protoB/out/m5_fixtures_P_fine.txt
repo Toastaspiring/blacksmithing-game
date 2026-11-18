@@ -1,0 +1,5 @@
+P1 24 large overlapping tilted blocks                      n24 | new verdict   46.53 ms  293328 u, exposure   66.10 ms | old verdict  28.87 ms 106658 u, exposure  43.14 ms | cleaned 9/10
+P2 24 rotated cylinders                                    n24 | new verdict   27.27 ms  165371 u, exposure   44.37 ms | old verdict   3.13 ms  12713 u, exposure  22.90 ms | cleaned 0/0
+P3 24 rotated wedges                                       n24 | new verdict    1.80 ms    3086 u, exposure   21.42 ms | old verdict   1.98 ms   5322 u, exposure  21.30 ms | cleaned 0/0
+P4 24 overlapping balls                                    n24 | new verdict   34.02 ms  168484 u, exposure   38.23 ms | old verdict   3.74 ms  11301 u, exposure   9.14 ms | cleaned 0/0
+P5 comb blade (sawtooth, 24 parts)                         n15 | new verdict    1.89 ms    6306 u, exposure    6.35 ms | old verdict   0.75 ms   2507 u, exposure   5.63 ms | cleaned 0/0

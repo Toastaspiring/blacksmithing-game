@@ -1,0 +1,7 @@
+FLIP r 0.28 g -0.001285 b 0.070532: cover 2.412%, hide test 0.357%, truth 0.398%
+FLIP r 0.28 g -0.002167 b 0.078915: cover 4.723%, hide test 1.196%, truth 1.235%
+FLIP r 0.28 g 0.000288 b 0.073999: cover 3.275%, hide test 1.153%, truth 1.375%
+FLIP r 0.28 g -0.000346 b 0.076679: cover 4.031%, hide test 1.400%, truth 1.602%
+FLIP r 0.20 g 0.003657 b 0.053493: cover 3.196%, hide test 1.208%, truth 1.392%
+FLIP r 0.28 g -0.000737 b 0.069625: cover 2.208%, hide test 0.368%, truth 0.443%
+seed 3: 400 cages; Cover above the hide test by up to 0.0706 (r 0.28 g -0.00215 b 0.1518: cover 45.227%, hide test 38.172%); verdicts flipped 6

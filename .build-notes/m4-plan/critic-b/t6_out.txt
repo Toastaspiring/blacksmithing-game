@@ -1,0 +1,4 @@
+HoldZone       salt  139534870  Iron 0.6144  Steel 0.5991  drop 0.0153 over 4000 paired runs (first 400: 0.0105)
+TimingStrike   salt 2250252261  Iron 0.6489  Steel 0.6403  drop 0.0086 over 20000 paired runs (first 400: 0.0221)
+PrecisionTrace salt 3614378124  Iron 0.6337  Steel 0.6207  drop 0.0130 over 4000 paired runs (first 400: 0.0170)
+(89.7 s)

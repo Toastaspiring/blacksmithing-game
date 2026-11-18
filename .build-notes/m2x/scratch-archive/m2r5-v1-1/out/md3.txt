@@ -1,0 +1,7 @@
+4393 designs
+m102: 0 designs differ, 0 verdicts flip, the largest change of a reading 0.00000 
+m115: 0 designs differ, 0 verdicts flip, the largest change of a reading 0.00000 
+m122: 0 designs differ, 0 verdicts flip, the largest change of a reading 0.00000 
+m125: 1317 designs differ, 1 verdicts flip, the largest change of a reading 0.09761 any983 part 8 (Wedge): 0.65098 -> 0.74859
+m151: 0 designs differ, 0 verdicts flip, the largest change of a reading 0.00000 
+m162: 1576 designs differ, 1 verdicts flip, the largest change of a reading 0.11091 any280 part 12 (Wedge): 0.65961 -> 0.54870

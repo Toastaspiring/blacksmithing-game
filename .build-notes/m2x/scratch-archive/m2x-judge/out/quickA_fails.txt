@@ -1,0 +1,29 @@
+  FAIL  Physics/Analyze › §4.9 each long loop reaches a checkpoint, at the cadence
+  FAIL  Physics/Reference › §4.1 M2 equals the prototype on its cost fixtures P1–P5
+  FAIL  Physics/Sampling › T-PHY-09 duplicates: a copy turned about its own symmetry axis is the same solid, and Enclosed
+  FAIL  Physics/Sampling › §4.4 K + F measures as K alone, past N_SURF_WORK: P1, whose kept parts alone are the same 14
+  FAIL  Physics/Sampling › §4.9 spend reports a patch's tests: 4 corners per part that hides its centre, then a line's chords, 2 units each
+  FAIL  Physics/Sampling › §4.9 spend reports each rung tried, and the measure takes candidates at its own grid's margin, not the base's
+  FAIL  Physics/Sampling › §4.9 spend reports the verdict's work and the measure's: every rung, sample written and sample tested, each at its own margin
+  FAIL  Physics/Verdict › §4.4 Dust hides nothing: a speck over a strip leaves what the verdict reads
+  FAIL  Physics/Verdict › §4.4 a Ball has VERDICT_BALL_NF cells whatever its radius, and its largest sample weighs under 2 %
+  FAIL  Physics/Verdict › §4.4 a Cylinder's side has the same test: a narrow arc between its directions shows
+  FAIL  Physics/Verdict › §4.4 a Cylinder's sub-points are back on the surface: a lid over its top reads as the curve does
+  FAIL  Physics/Verdict › §4.4 a part is near by the sample or by the probe: two rods at MIN_DIM, either clause alone reads otherwise
+  FAIL  Physics/Verdict › §4.4 a part reaches a patch on any of its own axes: a lid reads the same turned so that each of them lies along each of the patch's
+  FAIL  Physics/Verdict › §4.4 a part that hides a curved patch's 4 corners and not its centre does not hide it all
+  FAIL  Physics/Verdict › §4.4 a part whose Block estimate is exactly VERDICT_SAMPLES stays on that rung
+  FAIL  Physics/Verdict › §4.4 a strip along the rim is measured, on the lines that cross it
+  FAIL  Physics/Verdict › §4.4 a strip on a Cylinder's side reads VERDICT_STRIP_CENTRE through a direction, VERDICT_STRIP_RIM by its corners
+  FAIL  Physics/Verdict › §4.4 a strip through the centres is measured: a hairline reads a hairline
+  FAIL  Physics/Verdict › §4.4 a thin CornerWedge's tip is seen: triangles have VERDICT_TRIANGLE_CELLS cells per edge
+  FAIL  Physics/Verdict › §4.4 corners at VERDICT_CORNER: the one part must hide them, or the patch is measured
+  FAIL  Physics/Verdict › §4.4 exact copies hide nothing: a stack of a lid's copies leaves what the verdict reads, and they have no verdict
+  FAIL  Physics/Verdict › §4.4 on a Cylinder's side the one part must hide all 4 corners too: a lid with a corner off and a post over it
+  FAIL  Physics/Verdict › §4.4 the hider-first order changes no bit: what the verdict reads, every order of 4 candidates
+  FAIL  Physics/Verdict › §4.4 the lines read a slit wherever it passes: between the points of the patch, and in pairs
+  FAIL  Physics/Verdict › §4.4 the one part must hide all 4 corners: a lid with a corner off is measured
+  FAIL  Physics/Verdict › §4.4 the one part: asked among all that hide the centre, its corners by probe as well, its centre hidden too
+  FAIL  Physics/Verdict › §4.4 what the reading cannot see: a Ball's band between its samples, a window between the lines
+  FAIL  Physics/Verdict › §4.9 spend reports the reading's work
+  FAIL  Physics/Verdict › §5 a laminated core that shows 5.54 % is kept: its proud rims are measured

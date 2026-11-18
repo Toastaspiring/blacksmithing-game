@@ -1,0 +1,11 @@
+  100 designs, 400 orders, 0 differ, 10 s
+  200 designs, 800 orders, 0 differ, 21 s
+  300 designs, 1200 orders, 0 differ, 31 s
+  400 designs, 1600 orders, 0 differ, 41 s
+  500 designs, 2000 orders, 0 differ, 51 s
+  600 designs, 2400 orders, 0 differ, 60 s
+  700 designs, 2800 orders, 0 differ, 71 s
+  800 designs, 3200 orders, 0 differ, 81 s
+  900 designs, 3600 orders, 0 differ, 91 s
+  1000 designs, 4000 orders, 0 differ, 101 s
+M4 perm fuzz:1000:11: 1000 designs x 4 orders = 4000 cases, 0 differ in any bit (kept, cleaned, reads, exposedKept, contact, budgets), 101 s

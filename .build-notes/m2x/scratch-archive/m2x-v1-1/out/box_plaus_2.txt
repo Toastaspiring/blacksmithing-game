@@ -1,0 +1,1 @@
+plausible: 8347 designs, 80730 parts; 9 read differently from the hide test (> 1e-9 of the area), 0 verdicts flip; worst 0.0035 of a part: cage|r0.28 k8 open0.10 roll0.0 part 4 (Ball): cover 24.0265%, the model's hide test 23.6743%

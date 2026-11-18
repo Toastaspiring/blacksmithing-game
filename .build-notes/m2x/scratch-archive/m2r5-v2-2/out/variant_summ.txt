@@ -1,0 +1,53 @@
+designs 105626 parts 953279
+ballRivet     9144 designs: false Enclosed at 2.5/3/5/7.5/10/15/20/30/40 %: 16/3/0/0/0/0/0/0/0 | false kept < 1.5/1/0.5/0.25 %: 5/0/0/0
+bead           264 designs: false Enclosed at 2.5/3/5/7.5/10/15/20/30/40 %: 31/31/20/18/12/5/0/0/0 | false kept < 1.5/1/0.5/0.25 %: 1/0/0/0
+chamfer      15096 designs: false Enclosed at 2.5/3/5/7.5/10/15/20/30/40 %: 0/0/0/0/0/0/0/0/0 | false kept < 1.5/1/0.5/0.25 %: 0/0/0/0
+comb            16 designs: false Enclosed at 2.5/3/5/7.5/10/15/20/30/40 %: 0/0/0/0/0/0/0/0/0 | false kept < 1.5/1/0.5/0.25 %: 0/0/0/0
+curvedGrip     280 designs: false Enclosed at 2.5/3/5/7.5/10/15/20/30/40 %: 6/6/0/0/0/0/0/0/0 | false kept < 1.5/1/0.5/0.25 %: 21/15/10/5
+fuller        5568 designs: false Enclosed at 2.5/3/5/7.5/10/15/20/30/40 %: 0/0/0/0/0/0/0/0/0 | false kept < 1.5/1/0.5/0.25 %: 0/0/0/0
+oddPoke       4348 designs: false Enclosed at 2.5/3/5/7.5/10/15/20/30/40 %: 2/2/0/0/0/0/0/0/0 | false kept < 1.5/1/0.5/0.25 %: 0/0/0/0
+pinRivet      2500 designs: false Enclosed at 2.5/3/5/7.5/10/15/20/30/40 %: 0/0/0/0/0/0/0/0/0 | false kept < 1.5/1/0.5/0.25 %: 0/0/0/0
+plausible    32349 designs: false Enclosed at 2.5/3/5/7.5/10/15/20/30/40 %: 255/102/3/0/0/0/0/0/0 | false kept < 1.5/1/0.5/0.25 %: 77/23/6/0
+studyFixtures    117 designs: false Enclosed at 2.5/3/5/7.5/10/15/20/30/40 %: 0/0/0/0/0/0/0/0/0 | false kept < 1.5/1/0.5/0.25 %: 0/0/0/0
+studyFuzz     5000 designs: false Enclosed at 2.5/3/5/7.5/10/15/20/30/40 %: 2/1/0/0/0/0/0/0/0 | false kept < 1.5/1/0.5/0.25 %: 0/0/0/0
+studyPoke     4049 designs: false Enclosed at 2.5/3/5/7.5/10/15/20/30/40 %: 8/6/2/1/0/0/0/0/0 | false kept < 1.5/1/0.5/0.25 %: 0/0/0/0
+sunkRod      10080 designs: false Enclosed at 2.5/3/5/7.5/10/15/20/30/40 %: 0/0/0/0/0/0/0/0/0 | false kept < 1.5/1/0.5/0.25 %: 0/0/0/0
+thinPart     10240 designs: false Enclosed at 2.5/3/5/7.5/10/15/20/30/40 %: 0/0/0/0/0/0/0/0/0 | false kept < 1.5/1/0.5/0.25 %: 0/0/0/0
+tiltPlate     6435 designs: false Enclosed at 2.5/3/5/7.5/10/15/20/30/40 %: 0/0/0/0/0/0/0/0/0 | false kept < 1.5/1/0.5/0.25 %: 0/0/0/0
+wall           140 designs: false Enclosed at 2.5/3/5/7.5/10/15/20/30/40 %: 0/0/0/0/0/0/0/0/0 | false kept < 1.5/1/0.5/0.25 %: 0/0/0/0
+TOTAL false Enclosed 320/151/25/19/12/5/0/0/0 false kept 104/38/16/5
+Ball         parts 147901: false Enclosed 74/54/25/19/12/5/0/0/0 | false kept 23/1/0/0
+Block        parts 487961: false Enclosed 0/0/0/0/0/0/0/0/0 | false kept 0/0/0/0
+CornerWedge  parts  19081: false Enclosed 10/7/0/0/0/0/0/0/0 | false kept 1/0/0/0
+Cylinder     parts 134312: false Enclosed 236/90/0/0/0/0/0/0/0 | false kept 80/37/16/5
+Wedge        parts 164024: false Enclosed 0/0/0/0/0/0/0/0/0 | false kept 0/0/0/0
+--- the highest true share cleaned, per shape
+Ball true 18.59% read 0.00% bead d0.50 gap0.20 t1 Bead |dD| 0.0964  valid
+CornerWedge true 4.63% read 0.71% oddPoke C02 Arming (Iron) #547 CornerWedge t0.030 Poke |dD| 0.0043  valid
+Cylinder true 4.45% read 0.00% plausible cylRib|F5|blade r0.02 psi11.25 height0.005 Rib |dD| 0.0002  valid
+--- the lowest true share kept, per shape
+Ball true 0.606% read 6.57% plausible pommelInBlock|C09|housing unrot cap0.0300 Pommel |dD| 0.0011  valid
+CornerWedge true 1.269% read 2.07% plausible wedgeInGuard|C05|CornerWedge 0.12 0.12 0.16 spin0 height0.200 Finial |dD| 0.0000  valid
+Cylinder true 0.224% read 7.65% curvedGrip n4 ext0.040 gap0.0005 bend0 Grip |dD| 0.0000  valid
+--- wrong designs with a D: 407; |dD| >= .005/.01/.02/.05/.1: 39/32/22/9/0; tier flips 0; valid tier flips 0
+--- per family: wrong designs, tier flips (valid), largest |dD|
+bead           32 wrong,    0 flips (0 valid), |dD| 0.0964 Hammering: d0.50 gap0.20 t1 | [('Bead', 'Ball', 18.59, 0, 'cleaned')] | build: Sm 0.4154 H, Ha 0.3246 H, Sh 0.0439 N | truth: Sm 0.4417 H, Ha 0.2282 H, Sh 0.0000 N
+plausible     315 wrong,    0 flips (0 valid), |dD| 0.0250 Hammering: wrapRings|C06|n4 extra0.01 gap0.0010 | [('Grip', 'Cylinder', 0.74, 8.08, 'kept')] | build: Sm 0.0121 N, Ha 0.3180 H, Sh 0.5948 H | truth: Sm 0.0127 N, Ha 0.2930 H, Sh 0.5948 H
+studyFuzz       2 wrong,    0 flips (0 valid), |dD| 0.0059 Hammering: anyDesign|531 | [('', 'CornerWedge', 2.89, 0.34, 'cleaned')] | build: Sm 0.8598 H, Ha 0.1554 N, Sh 0.0513 N | truth: Sm 0.8598 H, Ha 0.1495 N, Sh 0.0513 N
+oddPoke         2 wrong,    0 flips (0 valid), |dD| 0.0043 Sharpening: C02 Arming (Iron) #547 CornerWedge t0.030 | [('Poke', 'CornerWedge', 4.63, 0.71, 'cleaned')] | build: Sm 0.0355 N, Ha 0.1137 N, Sh 0.1318 N | truth: Sm 0.0357 N, Ha 0.1136 N, Sh 0.1275 N
+studyPoke       8 wrong,    0 flips (0 valid), |dD| 0.0012 Hammering: poke|C09|3344 Block | [('FinialR', 'Ball', 3.83, 0, 'cleaned')] | build: Sm 0.0814 N, Ha 0.4679 H, Sh 0.1904 N | truth: Sm 0.0814 N, Ha 0.4667 H, Sh 0.1904 N
+curvedGrip     27 wrong,    0 flips (0 valid), |dD| 0.0003 Smelting: n5 ext0.002 gap0.0060 bend0 | [('Grip', 'Cylinder', 3.07, 0.96, 'cleaned')] | build: Sm 0.0473 N, Ha 0.0824 N, Sh 0.0344 N | truth: Sm 0.0476 N, Ha 0.0824 N, Sh 0.0344 N
+ballRivet      21 wrong,    0 flips (0 valid), |dD| 0.0001 Hammering: C08 d0.08 f-0.95 x0.00 y0.3 t3 | [('Rivet', 'Ball', 2.5, 1.64, 'cleaned')] | build: Sm 0.1563 N, Ha 0.0992 N, Sh 0.2487 H | truth: Sm 0.1563 N, Ha 0.0991 N, Sh 0.2487 H
+--- per family, false kept and false Enclosed apart: largest |dD| when only one kind is wrong
+false kept     bead            1,    0 flips, |dD| 0.0000 : d0.10 gap0.02 t2 | [('Bead', 'Ball', 1.39, 9.1)]
+false kept     plausible      77,    0 flips, |dD| 0.0250 Hammering: wrapRings|C06|n4 extra0.01 gap0.0010 | [('Grip', 'Cylinder', 0.74, 8.08)]
+false kept     curvedGrip     21,    0 flips, |dD| 0.0001 Smelting: n4 ext0.002 gap0.0030 bend0 | [('Grip', 'Cylinder', 1.21, 10.52)]
+false kept     ballRivet       5,    0 flips, |dD| 0.0000 : F4 d0.16 f-0.97 x0.21 y0.3 t2 | [('Rivet', 'Ball', 1.5, 2.59)]
+false Enclosed bead           31,    0 flips, |dD| 0.0964 Hammering: d0.50 gap0.20 t1 | [('Bead', 'Ball', 18.59, 0)]
+false Enclosed plausible     238,    0 flips, |dD| 0.0211 Hammering: wrapRings|F3|n5 extra0.01 gap0.0050 | [('Grip', 'Cylinder', 3.81, 1.88)]
+false Enclosed studyFuzz       2,    0 flips, |dD| 0.0059 Hammering: anyDesign|531 | [('', 'CornerWedge', 2.89, 0.34)]
+false Enclosed oddPoke         2,    0 flips, |dD| 0.0043 Sharpening: C02 Arming (Iron) #547 CornerWedge t0.030 | [('Poke', 'CornerWedge', 4.63, 0.71)]
+false Enclosed studyPoke       8,    0 flips, |dD| 0.0012 Hammering: poke|C09|3344 Block | [('FinialR', 'Ball', 3.83, 0)]
+false Enclosed curvedGrip      6,    0 flips, |dD| 0.0003 Smelting: n5 ext0.002 gap0.0060 bend0 | [('Grip', 'Cylinder', 3.07, 0.96)]
+false Enclosed ballRivet      16,    0 flips, |dD| 0.0001 Hammering: C08 d0.08 f-0.95 x0.00 y0.3 t3 | [('Rivet', 'Ball', 2.5, 1.64)]
+--- the highest share cleaned among tier flips, per family

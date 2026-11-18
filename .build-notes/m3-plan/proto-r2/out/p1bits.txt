@@ -1,0 +1,6 @@
+  H.p1 part 3 rot[3]: 0.057636532149416303 vs the prototype's 0.057636532149416296
+  H.p1 part 3 rot[4]: 0.99828110794839897 vs the prototype's 0.99828110794839886
+  H.p1 part 4 rot[2]: 0.025770922255863166 vs the prototype's 0.025770922255863162
+  H.p1 part 4 rot[3]: -0.045499451194499323 vs the prototype's -0.045499451194499316
+H.p1: 24 parts, 43 differing fields
+H.ornate: 18 parts, 0 differing fields

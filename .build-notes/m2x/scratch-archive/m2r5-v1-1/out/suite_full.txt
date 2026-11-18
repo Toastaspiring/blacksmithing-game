@@ -1,0 +1,5 @@
+RESULT pass=549 fail=0 skip=0 files=50 time=80.54s
+
+real	1m21.131s
+user	0m0.015s
+sys	0m0.000s

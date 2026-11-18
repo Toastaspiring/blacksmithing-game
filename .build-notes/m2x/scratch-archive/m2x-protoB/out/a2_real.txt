@@ -1,0 +1,57 @@
+C05 Guard sheet 1.0 x 2.0 x 0.02, rim 0.0005 past valid true: F(Block) true 1.02% read 1.02% CLEANED
+    K: Sm 0.5451 H, Ha 0.1363 N, Sh 0.3466 H | K + F: Sm 0.5451 H, Ha 0.1363 N, Sh 0.3466 H | |dD| 0.0000 
+C05 Guard sheet 1.0 x 2.0 x 0.02, rim 0.0020 past valid true: F(Block) true 1.17% read 1.17% CLEANED
+    K: Sm 0.5451 H, Ha 0.1363 N, Sh 0.3466 H | K + F: Sm 0.5451 H, Ha 0.1363 N, Sh 0.3466 H | |dD| 0.0000 
+C05 Guard sheet 1.0 x 2.0 x 0.02, rim 0.0034 past valid true: F(Block) true 1.30% read 1.30% CLEANED
+    K: Sm 0.5451 H, Ha 0.1363 N, Sh 0.3466 H | K + F: Sm 0.5451 H, Ha 0.1363 N, Sh 0.3466 H | |dD| 0.0000 
+C05 Guard sheet 1.0 x 2.0 x 0.02, rim 0.0040 past valid true: F(Block) true 1.36% read 1.36% CLEANED
+    K: Sm 0.5451 H, Ha 0.1363 N, Sh 0.3466 H | K + F: Sm 0.5451 H, Ha 0.1363 N, Sh 0.3466 H | |dD| 0.0000 
+C05 Guard sheet 1.0 x 2.0 x 0.02, rim 0.0060 past valid true: F(Block) true 1.56% read 1.56% CLEANED
+    K: Sm 0.5451 H, Ha 0.1363 N, Sh 0.3466 H | K + F: Sm 0.5451 H, Ha 0.1363 N, Sh 0.3466 H | |dD| 0.0000 
+C05 Guard sheet 1.0 x 2.0 x 0.02, rim 0.0100 past valid true: F(Block) true 1.95% read 1.95% CLEANED
+    K: Sm 0.5451 H, Ha 0.1363 N, Sh 0.3466 H | K + F: Sm 0.5451 H, Ha 0.1363 N, Sh 0.3466 H | |dD| 0.0000 
+C05 Blade sheet 1.0 x 2.0 x 0.02, rim 0.0005 past valid true: F(Block) true 1.02% read 1.02% CLEANED
+    K: Sm 0.5451 H, Ha 0.1363 N, Sh 0.3466 H | K + F: Sm 0.5451 H, Ha 0.1363 N, Sh 0.3466 H | |dD| 0.0000 
+C05 Blade sheet 1.0 x 2.0 x 0.02, rim 0.0020 past valid true: F(Block) true 1.17% read 1.17% CLEANED
+    K: Sm 0.5451 H, Ha 0.1363 N, Sh 0.3466 H | K + F: Sm 0.5451 H, Ha 0.1363 N, Sh 0.3466 H | |dD| 0.0000 
+C05 Blade sheet 1.0 x 2.0 x 0.02, rim 0.0034 past valid true: F(Block) true 1.30% read 1.30% CLEANED
+    K: Sm 0.5451 H, Ha 0.1363 N, Sh 0.3466 H | K + F: Sm 0.5451 H, Ha 0.1363 N, Sh 0.3466 H | |dD| 0.0000 
+C05 Blade sheet 1.0 x 2.0 x 0.02, rim 0.0040 past valid true: F(Block) true 1.36% read 1.36% CLEANED
+    K: Sm 0.5451 H, Ha 0.1363 N, Sh 0.3466 H | K + F: Sm 0.5451 H, Ha 0.1363 N, Sh 0.3466 H | |dD| 0.0000 
+C05 Blade sheet 1.0 x 2.0 x 0.02, rim 0.0060 past valid true: F(Block) true 1.56% read 1.56% CLEANED
+    K: Sm 0.5451 H, Ha 0.1363 N, Sh 0.3466 H | K + F: Sm 0.5451 H, Ha 0.1363 N, Sh 0.3466 H | |dD| 0.0000 
+C05 Blade sheet 1.0 x 2.0 x 0.02, rim 0.0100 past valid true: F(Block) true 1.95% read 1.95% CLEANED
+    K: Sm 0.5451 H, Ha 0.1363 N, Sh 0.3466 H | K + F: Sm 0.5451 H, Ha 0.1363 N, Sh 0.3466 H | |dD| 0.0000 
+C02 Guard sheet 0.2 x 2.3 x 0.02, rim 0.0010 past +X valid true: F(Block) true 4.96% read 4.96% kept
+    K: Sm 0.0355 N, Ha 0.1137 N, Sh 0.1318 N | K + F: Sm 0.0355 N, Ha 0.1137 N, Sh 0.1318 N | |dD| 0.0000 
+C02 Guard sheet 0.2 x 2.3 x 0.02, rim 0.0040 past +X valid true: F(Block) true 6.33% read 6.33% kept
+    K: Sm 0.0355 N, Ha 0.1137 N, Sh 0.1318 N | K + F: Sm 0.0357 N, Ha 0.1137 N, Sh 0.1318 N | |dD| 0.0002 Smelting
+C02 Guard sheet 0.2 x 2.3 x 0.02, rim 0.0060 past +X valid true: F(Block) true 7.24% read 7.24% kept
+    K: Sm 0.0355 N, Ha 0.1137 N, Sh 0.1318 N | K + F: Sm 0.0358 N, Ha 0.1137 N, Sh 0.0000 N | |dD| 0.1318 Sharpening
+C02 Guard sheet 0.2 x 2.3 x 0.02, rim 0.0100 past +X valid true: F(Block) true 9.06% read 9.06% kept
+    K: Sm 0.0355 N, Ha 0.1137 N, Sh 0.1318 N | K + F: Sm 0.0361 N, Ha 0.1137 N, Sh 0.0000 N | |dD| 0.1318 Sharpening
+C02 Blade sheet 0.2 x 2.3 x 0.02, rim 0.0010 past +X valid true: F(Block) true 4.96% read 4.96% kept
+    K: Sm 0.0355 N, Ha 0.1137 N, Sh 0.1318 N | K + F: Sm 0.0355 N, Ha 0.1137 N, Sh 0.1318 N | |dD| 0.0000 
+C02 Blade sheet 0.2 x 2.3 x 0.02, rim 0.0040 past +X valid true: F(Block) true 6.33% read 6.33% kept
+    K: Sm 0.0355 N, Ha 0.1137 N, Sh 0.1318 N | K + F: Sm 0.0357 N, Ha 0.1137 N, Sh 0.1318 N | |dD| 0.0002 Smelting
+C02 Blade sheet 0.2 x 2.3 x 0.02, rim 0.0060 past +X valid true: F(Block) true 7.24% read 7.24% kept
+    K: Sm 0.0355 N, Ha 0.1137 N, Sh 0.1318 N | K + F: Sm 0.0358 N, Ha 0.1137 N, Sh 0.1528 N | |dD| 0.0210 Sharpening
+C02 Blade sheet 0.2 x 2.3 x 0.02, rim 0.0100 past +X valid true: F(Block) true 9.06% read 9.06% kept
+    K: Sm 0.0355 N, Ha 0.1137 N, Sh 0.1318 N | K + F: Sm 0.0361 N, Ha 0.1137 N, Sh 0.1499 N | |dD| 0.0181 Sharpening
+C08 Guard sheet 0.3 x 2.6 x 0.02, rim 0.0010 past +X valid true: F(Block) true 3.41% read 3.42% kept
+    K: Sm 0.1563 N, Ha 0.0992 N, Sh 0.2487 H | K + F: Sm 0.1564 N, Ha 0.0989 N, Sh 0.2487 H | |dD| 0.0003 Hammering
+C08 Guard sheet 0.3 x 2.6 x 0.02, rim 0.0040 past +X valid true: F(Block) true 4.35% read 4.35% kept
+    K: Sm 0.1563 N, Ha 0.0992 N, Sh 0.2487 H | K + F: Sm 0.1566 N, Ha 0.0983 N, Sh 0.2487 H | |dD| 0.0009 Hammering
+C08 Guard sheet 0.3 x 2.6 x 0.02, rim 0.0060 past +X valid true: F(Block) true 4.98% read 4.98% kept
+    K: Sm 0.1563 N, Ha 0.0992 N, Sh 0.2487 H | K + F: Sm 0.1567 N, Ha 0.1101 N, Sh 0.2487 H | |dD| 0.0109 Hammering
+C08 Guard sheet 0.3 x 2.6 x 0.02, rim 0.0100 past +X valid true: F(Block) true 6.23% read 6.23% kept
+    K: Sm 0.1563 N, Ha 0.0992 N, Sh 0.2487 H | K + F: Sm 0.1570 N, Ha 0.1093 N, Sh 0.2487 H | |dD| 0.0101 Hammering
+C08 Blade sheet 0.3 x 2.6 x 0.02, rim 0.0010 past +X valid true: F(Block) true 3.41% read 3.42% kept
+    K: Sm 0.1563 N, Ha 0.0992 N, Sh 0.2487 H | K + F: Sm 0.1564 N, Ha 0.0989 N, Sh 0.2487 H | |dD| 0.0003 Hammering
+C08 Blade sheet 0.3 x 2.6 x 0.02, rim 0.0040 past +X valid true: F(Block) true 4.35% read 4.35% kept
+    K: Sm 0.1563 N, Ha 0.0992 N, Sh 0.2487 H | K + F: Sm 0.1566 N, Ha 0.0983 N, Sh 0.2487 H | |dD| 0.0009 Hammering
+C08 Blade sheet 0.3 x 2.6 x 0.02, rim 0.0060 past +X valid true: F(Block) true 4.98% read 4.98% kept
+    K: Sm 0.1563 N, Ha 0.0992 N, Sh 0.2487 H | K + F: Sm 0.1567 N, Ha 0.1101 N, Sh 0.2487 H | |dD| 0.0109 Hammering
+C08 Blade sheet 0.3 x 2.6 x 0.02, rim 0.0100 past +X valid true: F(Block) true 6.23% read 6.23% kept
+    K: Sm 0.1563 N, Ha 0.0992 N, Sh 0.2487 H | K + F: Sm 0.1570 N, Ha 0.1093 N, Sh 0.2487 H | |dD| 0.0101 Hammering
+-- dumprun a2_real: 31 designs, 6.5 s

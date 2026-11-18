@@ -1,0 +1,33 @@
+M2 exact verdict, round 5 -> fix round 5 (2026-11-14, late evening)
+
+Round 5 verifiers (workflow wf_2263d132-7b2 resumed as task w2e019oqw; results in m2x_v1_r5.json, m2x_v2_r5.json;
+fixer r4's result in m2x_fixer_r4.json). Verify green 601/0/0.
+- Round 4's circle method holds: exact against V1's brute force on 123,791 parts and V2's own reading on 576,000 facets.
+- V1 major 1: rule A's Cylinder-in-Cylinder bound (caps' centres' distance + r) is loose at a tilt; filler wholly inside
+  ONE Cylinder is kept: 10 Blade pucks inside F5's guard made a disk r 0.8 read 2.33 %, truly 0, Sharpening 0.1302 N ->
+  0.3739 H. Contradicts §17.2, outside O9. V1's rimFarthest (exact farthest rim point, 60 halvings) fixes it, moves
+  nothing on the three sets, ~2 us a call, uncharged.
+- V1 major 2 = V2 major: O9 (b) understates the Cylinder prism's price: thin plates lying on the side read 0 and truly
+  show 38.9 % (Block), 44.2 % (Wedge), 46.5 % (CornerWedge); 10 plates flip Sharpening 0.2114 H -> 0.1302 N.
+- Minors: AXIS_TIE boundary tie (text); 3 surviving mutants (tests); Ball circle price from climbs 2.4 % at r 0.3,
+  9.6 % at r 3 (text); checkpoint gaps 0.14-0.41 ms on worst valid designs, tclimb_4 #1 past 0.35 twice; fix4 scripts
+  lack `flat`; two stale comments.
+
+Lead decisions for fix round 5 (workflow wf_b7a00db9-ea4, task whdcc8dw5):
+1. Adopt rimFarthest; call it only where it can change rule A's decision (cheap upper bound says inside: done; lower
+   bound sqrt(d_perp^2 + r^2/2) says outside: skip), charge it as a new Cover unit weight at its measured cost; every
+   decision equal to the always-exact rule's; CoverBrute independent; tests; puck_sword Verdict.spec case.
+2. O9 (b): text at the true price (nearly half the surface on a Cylinder's side), checked "anywhere along the side"
+   (near-tangent plate at an edge's middle); ways to narrow: own-plane cut (strip exact for axis-parallel planes,
+   near-tangent faces still inside any circumscribed polygon; exact conic area needs trigonometry), finer prism
+   (64: 0.0012 r, 128: 0.0003 r). No code change for Cylinders. Default unchanged (accept for the MVP).
+3. Ball circle price quoted as found by climbs, V2's wording (near a corner of the 32-gon its plane cuts).
+4. Checkpoint gaps: diagnose tclimb_4 #1's longest stretch; charge missed work, else T-PERF-01 asserts the gap on the
+   F, C and X fixtures and reports P1-P5 and the worst designs (as S-PERF-01 does with 75 ms). Engineering call.
+5. Minors as tried. E-S2.12 'After the fifth verifiers' round'.
+Then V1/V2 round 6, minors fixer if only minors.
+
+Snapshot of the tree before fix round 5: scratchpad\m2x-r5-base\repo.
+At commit: S-PAR-01's dependencies vs spar01_hashes.txt; M2 notes from .build-notes\m2\M2-notes-draft.md + rounds 5-6.
+M3: if round 5 limits T-PERF-01's gap assertion, M3's lead decisions follow §14.11 as M2 leaves it.
+Evidence inputs from old scratch folders archived in m2x\scratch-archive (README there).

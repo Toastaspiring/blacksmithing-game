@@ -1,0 +1,9 @@
+old reading: lineShown, flatShown, sidePoint, hiddenByNear, shownArea lines  323, code  293, comment   20, bytes  12355
+old verdict loop (grid, samples, cand, stop)               lines   49, code   45, comment    3, bytes   1759
+old reading's constants                                    lines    5, code    5, comment    0, bytes    351
+old total                                                  lines  377, code  343, comment   23, bytes  14465
+new: Physics/Cover.luau (whole file, header included)      lines  897, code  789, comment   82, bytes  34109
+new verdict loop in Sampling.exposure                      lines   46, code   42, comment    3, bytes   1686
+new constant (BALL_GRID)                                   lines    1, code    1, comment    0, bytes    118
+new total                                                  lines  944, code  832, comment   85, bytes  35913
+Cover.luau without its 33-line header                      lines  849, code  789, comment   35, bytes  29520

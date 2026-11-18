@@ -1,0 +1,8 @@
+4393 designs
+m0: 0 designs differ, 0 verdicts flip, the largest change of a reading 0.00000 
+m13: 0 designs differ, 0 verdicts flip, the largest change of a reading 0.00000 
+m16: 724 designs differ, 0 verdicts flip, the largest change of a reading 0.06219 thinPart F4 Cylinder L2.0 w0.02 proud0.0150 turn1 part 6 (Cylinder): 0.56372 -> 0.62591
+m60: 3064 designs differ, 2 verdicts flip, the largest change of a reading 0.06334 oddPoke F5 #25 CornerWedge t0.080 part 5 (Block): 0.47889 -> 0.41555
+m69: 0 designs differ, 0 verdicts flip, the largest change of a reading 0.00000 
+m70: 0 designs differ, 0 verdicts flip, the largest change of a reading 0.00000 
+m73: 0 designs differ, 0 verdicts flip, the largest change of a reading 0.00000 

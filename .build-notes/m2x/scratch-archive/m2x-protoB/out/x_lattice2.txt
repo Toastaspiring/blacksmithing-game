@@ -1,0 +1,31 @@
+--- blade 0.30 x 2.60, core 0.02, cheeks 0.03: spacing 0.320, 1 x 9 patches
+  2 crossings: 14 parts valid=true | core true 0.000 % read 0.002 % CLEANED | against truth's verdict |dD| 0.0000
+   build Sm 0.0551 N, Ha 0.6932 H, Sh 0.3219 H
+   truth Sm 0.0551 N, Ha 0.6932 H, Sh 0.3219 H
+   K alone Sm 0.0551 N, Ha 0.6932 H, Sh 0.3219 H, K + F against K |dD| 0.0000
+--- blade 0.30 x 2.60, core 0.02, cheeks 0.05: spacing 0.320, 1 x 9 patches
+  2 crossings: 14 parts valid=true | core true 0.000 % read 0.002 % CLEANED | against truth's verdict |dD| 0.0000
+   build Sm 0.1104 N, Ha 0.4725 H, Sh 0.3219 H
+   truth Sm 0.1104 N, Ha 0.4725 H, Sh 0.3219 H
+   K alone Sm 0.1104 N, Ha 0.4725 H, Sh 0.3219 H, K + F against K |dD| 0.0000
+--- blade 0.20 x 2.50, core 0.02, cheeks 0.03: spacing 0.200, 1 x 13 patches
+  3 crossings: 16 parts valid=true | core true 0.285 % read 0.288 % CLEANED | against truth's verdict |dD| 0.0000
+   build Sm 0.0306 N, Ha 0.6831 H, Sh 0.2720 H
+   truth Sm 0.0306 N, Ha 0.6831 H, Sh 0.2720 H
+   K alone Sm 0.0306 N, Ha 0.6831 H, Sh 0.2720 H, K + F against K |dD| 0.0000
+--- blade 0.50 x 2.50, core 0.02, cheeks 0.03: spacing 0.320, 2 x 8 patches
+  3 crossings: 16 parts valid=true | core true 0.000 % read 0.001 % CLEANED | against truth's verdict |dD| 0.0000
+   build Sm 0.1004 N, Ha 0.6875 H, Sh 0.3344 H
+   truth Sm 0.1004 N, Ha 0.6875 H, Sh 0.3344 H
+   K alone Sm 0.1004 N, Ha 0.6875 H, Sh 0.3344 H, K + F against K |dD| 0.0000
+--- blade 1.00 x 2.00, core 0.02, cheeks 0.05: spacing 0.400, 3 x 5 patches
+  3 crossings: 16 parts valid=true | core true 0.003 % read 0.001 % CLEANED | against truth's verdict |dD| 0.0000
+   build Sm 0.3137 H, Ha 0.4166 H, Sh 0.2406 H
+   truth Sm 0.3137 H, Ha 0.4166 H, Sh 0.2406 H
+   K alone Sm 0.3137 H, Ha 0.4166 H, Sh 0.2406 H, K + F against K |dD| 0.0000
+--- blade 0.16 x 2.60, core 0.02, cheeks 0.03: spacing 0.200, 1 x 13 patches
+  3 crossings: 16 parts valid=true | core true 0.287 % read 0.290 % CLEANED | against truth's verdict |dD| 0.0000
+   build Sm 0.0245 N, Ha 0.6872 H, Sh 0.2970 H
+   truth Sm 0.0245 N, Ha 0.6872 H, Sh 0.2970 H
+   K alone Sm 0.0245 N, Ha 0.6872 H, Sh 0.2970 H, K + F against K |dD| 0.0000
+-- dumprun x_lattice2: 12 designs, 2.3 s

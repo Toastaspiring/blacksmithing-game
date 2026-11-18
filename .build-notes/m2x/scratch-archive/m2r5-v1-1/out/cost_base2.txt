@@ -1,0 +1,36 @@
+21 rounds
+design                  verdict       M2       M3    M2+M3   Studio       gap
+F5                         0.10     1.49     2.72     4.21     11.0     0.071
+C02                        0.19     1.90     3.00     4.90     12.7     0.080
+C05                        0.17     6.08     8.86    14.94     38.8     0.146
+C09                        1.11     8.64     5.16    13.80     35.9     0.145
+C10                        0.73     6.48     4.42    10.90     28.3     0.176
+P1                        10.25    20.98     7.69    28.67     74.5     0.301
+P2                         1.21    11.60     9.13    20.73     53.9     0.129
+P3                         0.64    12.41     7.19    19.60     51.0     0.189
+P4                         0.70     4.95     7.50    12.45     32.4     0.111
+P5                         0.22     2.49     4.50     6.98     18.2     0.071
+P1 + speck                 9.06    19.64     7.27    26.91     70.0     0.299
+P2 + speck                 1.14    11.41    11.15    22.57     58.7     0.134
+P3 + speck                 0.59    12.35     7.02    19.37     50.4     0.182
+worst_P.json#1             6.73    20.01    16.79    36.80     95.7     0.174
+worst_P.json#2             9.21    23.59    13.00    36.59     95.1     0.164
+worst_P.json#3             6.55    19.39    17.24    36.62     95.2     0.166
+worst_P.json#4             5.69    20.34    15.60    35.93     93.4     0.170
+worst_P.json#5             5.20    20.30    15.62    35.91     93.4     0.185
+worst_P.json#6             5.24    19.98    15.99    35.97     93.5     0.215
+worst_P.json#7             5.26    20.48    15.43    35.91     93.4     0.207
+worst_P.json#8             9.17    22.20    13.63    35.82     93.1     0.251
+worst_P.json#9            13.52    26.07     8.25    34.32     89.2     0.242
+worst_P.json#10           13.18    25.50     6.97    32.46     84.4     0.440
+worst_P.json#11           10.73    24.46     7.22    31.68     82.4     0.239
+worst_P.json#12           10.93    25.41     6.43    31.84     82.8     0.449
+the longest gap of all: 0.680 ms on P1, ending at:
+
+[string "d_cost"]:85 function checkpoint
+[string "tree\src\shared\Physics\Analyze.luau"]:338 function spend
+[string "tree\src\shared\Physics\MassProps.luau"]:320 function sampledOverlap
+[string "tree\src\shared\Physics\MassProps.luau"]:427 function ownership
+[string "tree\src\shared\Physics\Analyze.luau"]:400 function run
+[string "d_cost"]:78
+

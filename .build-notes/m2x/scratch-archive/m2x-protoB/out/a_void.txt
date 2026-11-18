@@ -1,0 +1,41 @@
+closed box 0.60 x 3.0 x 0.10, walls 0.02: a block in the cavity, 0.03 clear of all but a strut [11 parts, valid]
+   Fill#10(Block) true 100.000% read 100.000% kept
+   K alone Sm 0.1009 N, Ha 0.7000 H, Sh 0.4969 H
+   K + F   Sm 0.1891 N, Ha 0.6661 H, Sh 0.4969 H
+   |dD| 0.0882 Smelting  (truth's verdict on K + F: Sm 0.1891 N, Ha 0.6661 H, Sh 0.4969 H, |dD| vs build 0.0000)
+closed box 0.60 x 3.0 x 0.20, walls 0.02: a block in the cavity, 0.03 clear of all but a strut [11 parts, valid]
+   Fill#10(Block) true 100.000% read 100.000% kept
+   K alone Sm 0.1376 N, Ha 0.7000 H, Sh 0.4969 H
+   K + F   Sm 0.4463 H, Ha 0.7000 H, Sh 0.4969 H
+   |dD| 0.3087 Smelting TIER FLIP  (truth's verdict on K + F: Sm 0.4463 H, Ha 0.7000 H, Sh 0.4969 H, |dD| vs build 0.0000)
+closed box 1.00 x 3.0 x 0.20, walls 0.03: a block in the cavity, 0.03 clear of all but a strut [11 parts, valid]
+   Fill#10(Block) true 100.000% read 100.000% kept
+   K alone Sm 0.3639 H, Ha 0.7000 H, Sh 0.2000 H
+   K + F   Sm 0.9013 H, Ha 0.7000 H, Sh 0.2000 H
+   |dD| 0.5374 Smelting  (truth's verdict on K + F: Sm 0.9013 H, Ha 0.7000 H, Sh 0.2000 H, |dD| vs build 0.0000)
+closed box 0.30 x 3.0 x 0.12, walls 0.02: a block in the cavity, 0.02 clear of all but a strut [11 parts, valid]
+   Fill#10(Block) true 100.000% read 100.000% kept
+   K alone Sm 0.0382 N, Ha 0.7000 H, Sh 0.4531 H
+   K + F   Sm 0.1238 N, Ha 0.6425 H, Sh 0.4531 H
+   |dD| 0.0856 Smelting  (truth's verdict on K + F: Sm 0.1238 N, Ha 0.6425 H, Sh 0.4531 H, |dD| vs build 0.0000)
+rod r 0.10 x 3.0 in a 8-sided tube, seams 1e-5 [13 parts, valid]
+   Rod#13(Cylinder) true 0.017% read 0.000% CLEANED
+   K alone Sm 0.1010 N, Ha 0.6024 H, Sh 0.2000 H
+   K + F   Sm 0.1010 N, Ha 0.6024 H, Sh 0.2000 H
+   |dD| 0.0000   (truth's verdict on K + F: Sm 0.1010 N, Ha 0.6024 H, Sh 0.2000 H, |dD| vs build 0.0000)
+rod r 0.09 x 2.5 in a 8-sided tube, seams 1e-5 [13 parts, valid]
+   Rod#13(Cylinder) true 0.020% read 0.000% CLEANED
+   K alone Sm 0.0688 N, Ha 0.5435 H, Sh 0.2000 H
+   K + F   Sm 0.0688 N, Ha 0.5435 H, Sh 0.2000 H
+   |dD| 0.0000   (truth's verdict on K + F: Sm 0.0688 N, Ha 0.5435 H, Sh 0.2000 H, |dD| vs build 0.0000)
+rod r 0.20 x 3.0 in a 12-sided tube, seams 1e-5 [17 parts, INVALID SlotTooMany/Blade]
+   Rod#17(Cylinder) true 0.011% read 3.806% kept
+   K alone Sm 0.2662 H, Ha 0.6024 H, Sh 0.2000 H
+   K + F   
+   |dD| -1.0000 nosteps  (truth's verdict on K + F: , |dD| vs build -1.0000)
+rod r 0.25 x 3.0 in a 16-sided tube, seams 1e-5 [21 parts, INVALID SlotTooMany/Blade,OutOfHitbox,OutOfHitbox,OutOfHitbox,OutOfHitbox]
+   Rod#21(Cylinder) true 0.010% read 0.000% CLEANED
+   K alone 
+   K + F   
+   |dD| -1.0000 nosteps  (truth's verdict on K + F: , |dD| vs build -1.0000)
+-- dumprun a_void: 16 designs, 2.5 s

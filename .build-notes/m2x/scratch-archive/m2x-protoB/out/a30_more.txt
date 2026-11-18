@@ -1,0 +1,39 @@
+F3: exact copy of the blade in Guard, after          |dD| 0.0000        K Sm 0.0000 N, Ha 0.4423 H, Sh 0.6104 H | K+ Sm 0.0000 N, Ha 0.4423 H, Sh 0.6104 H
+F3: exact copy of the blade in Guard, first          |dD| 0.0000        K Sm 0.0000 N, Ha 0.4423 H, Sh 0.6104 H | K+ Sm 0.0000 N, Ha 0.4423 H, Sh 0.6104 H
+F3: exact Steel copy, same slot, first               |dD| 0.0000        K Sm 0.0000 N, Ha 0.4423 H, Sh 0.6104 H | K+ Sm 0.0000 N, Ha 0.4423 H, Sh 0.6104 H
+F3: the blade labelled Guard                         |dD| 0.5459 TIER   K Sm 0.0000 N, Ha 0.4423 H, Sh 0.6104 H | K+ Sm 0.0000 N, Ha 0.4423 H, Sh 0.0645 N
+C08: exact copy of the blade in Guard, after         |dD| 0.0000        K Sm 0.1563 N, Ha 0.0992 N, Sh 0.2487 H | K+ Sm 0.1563 N, Ha 0.0992 N, Sh 0.2487 H
+C08: exact copy of the blade in Guard, first         |dD| 0.0000        K Sm 0.1563 N, Ha 0.0992 N, Sh 0.2487 H | K+ Sm 0.1563 N, Ha 0.0992 N, Sh 0.2487 H
+C08: exact Steel copy, same slot, first              |dD| 0.0000        K Sm 0.1563 N, Ha 0.0992 N, Sh 0.2487 H | K+ Sm 0.1563 N, Ha 0.0992 N, Sh 0.2487 H
+C08: the blade labelled Guard                        |dD| 0.2487 TIER   K Sm 0.1563 N, Ha 0.0992 N, Sh 0.2487 H | K+ Sm 0.1563 N, Ha 0.0992 N, Sh 0.0000 N
+F5: exact copy of the blade in Pommel, after         |dD| 0.0000        K Sm 0.0288 N, Ha 0.1037 N, Sh 0.0989 N | K+ Sm 0.0288 N, Ha 0.1037 N, Sh 0.0989 N
+F5: exact copy of the blade in Pommel, first         |dD| 0.0000        K Sm 0.0288 N, Ha 0.1037 N, Sh 0.0989 N | K+ Sm 0.0288 N, Ha 0.1037 N, Sh 0.0989 N
+F5: exact Steel copy, same slot, first               |dD| 0.0000        K Sm 0.0288 N, Ha 0.1037 N, Sh 0.0989 N | K+ Sm 0.0288 N, Ha 0.1037 N, Sh 0.0989 N
+F5: the blade labelled Pommel                        |dD| 0.0989        K Sm 0.0288 N, Ha 0.1037 N, Sh 0.0989 N | K+ Sm 0.0288 N, Ha 0.1037 N, Sh 0.0000 N
+rod in a split solid, slit 0.00001, Blade            core true 0.005 %, read 0.000 %, cleaned
+rod in a split solid, slit 0.00001, Blade            |dD| 0.0000        K Sm 0.3895 H, Ha 0.0000 N, Sh 0.0156 N | K+ Sm 0.3895 H, Ha 0.0000 N, Sh 0.0156 N
+rod in a split solid, slit 0.00001, Guard            core true 0.005 %, read 0.000 %, cleaned
+rod in a split solid, slit 0.00001, Guard            |dD| 0.0000        K Sm 0.3895 H, Ha 0.0000 N, Sh 0.0156 N | K+ Sm 0.3895 H, Ha 0.0000 N, Sh 0.0156 N
+rod spun 22.5, slit 0.00001                          core true 0.005 %, read 0.000 %, cleaned
+rod in a split solid, slit 0.00100, Blade            core true 0.507 %, read 0.016 %, cleaned
+rod in a split solid, slit 0.00100, Blade            |dD| 0.0000        K Sm 0.3891 H, Ha 0.0000 N, Sh 0.0156 N | K+ Sm 0.3891 H, Ha 0.0000 N, Sh 0.0156 N
+rod in a split solid, slit 0.00100, Guard            core true 0.507 %, read 0.016 %, cleaned
+rod in a split solid, slit 0.00100, Guard            |dD| 0.0000        K Sm 0.3891 H, Ha 0.0000 N, Sh 0.0156 N | K+ Sm 0.3891 H, Ha 0.0000 N, Sh 0.0156 N
+rod spun 22.5, slit 0.00100                          core true 0.510 %, read 0.016 %, cleaned
+a groove 0.03 at x 0.05, y 1.5 to 3.4                core true 2.868 %, read 2.869 %, kept
+a groove 0.05 at x 0.05, y 1.8 to 3.1                core true 3.154 %, read 3.155 %, kept
+a groove 0.03 at x 0.09, y 2.0 to 2.9                core true 1.311 %, read 1.311 %, cleaned
+a groove 0.05 at x 0.09, y 2.2 to 2.7                core true 1.212 %, read 1.214 %, cleaned
+a groove 0.03 at x 0.20, y 2.3 to 2.6                core true 0.440 %, read 0.437 %, cleaned
+a groove 0.06 at x 0.15, y 2.0 to 2.2                core true 0.582 %, read 0.583 %, cleaned
+lattice 3 x 5 rib 0.25 off 0.00 (14 parts)           core true 11.765 %, read 11.772 %, kept
+lattice 3 x 5 rib 0.27 off 0.00 (14 parts)           core true 9.934 %, read 9.937 %, kept
+lattice 6 x 10 rib 0.10 off 0.00 (22 parts)          core true 12.981 %, read 12.985 %, kept
+lattice 6 x 10 rib 0.12 off 0.00 (22 parts)          core true 8.644 %, read 8.641 %, kept
+lattice 3 x 5 rib 0.30 off 0.02 (14 parts)           core true 7.476 %, read 7.476 %, kept
+lattice 6 x 5 rib 0.12 off 0.01 (17 parts)           core true 14.461 %, read 14.466 %, kept
+C09: a flush near copy of part 12 (Block) first      |dD| 0.0000        K Sm 0.0001 N, Ha 0.3170 H, Sh 0.1904 N | K+ Sm 0.0001 N, Ha 0.3170 H, Sh 0.1904 N
+C09: a flush near copy of part 13 (Wedge) first      |dD| 0.0000        K Sm 0.0001 N, Ha 0.3170 H, Sh 0.1904 N | K+ Sm 0.0001 N, Ha 0.3170 H, Sh 0.1904 N
+C09: a flush near copy of part 3 (Cylinder) first    |dD| 0.0000        K Sm 0.0001 N, Ha 0.3170 H, Sh 0.1904 N | K+ Sm 0.0001 N, Ha 0.3170 H, Sh 0.1904 N
+C09: a flush near copy of part 7 (Block) first       |dD| 0.0000        K Sm 0.0001 N, Ha 0.3170 H, Sh 0.1904 N | K+ Sm 0.0001 N, Ha 0.3170 H, Sh 0.1904 N
+-- dumprun a30_more: 40 designs, 2.5 s

@@ -1,0 +1,15 @@
+  pfam:rod: 50 / 720 designs, 2 s
+  pfam:rod: 100 / 720 designs, 3 s
+  pfam:rod: 150 / 720 designs, 5 s
+  pfam:rod: 200 / 720 designs, 7 s
+  pfam:rod: 250 / 720 designs, 9 s
+  pfam:rod: 300 / 720 designs, 14 s
+  pfam:rod: 350 / 720 designs, 17 s
+  pfam:rod: 400 / 720 designs, 18 s
+  pfam:rod: 450 / 720 designs, 18 s
+  pfam:rod: 500 / 720 designs, 20 s
+  pfam:rod: 550 / 720 designs, 21 s
+  pfam:rod: 600 / 720 designs, 23 s
+  pfam:rod: 650 / 720 designs, 24 s
+  pfam:rod: 700 / 720 designs, 25 s
+M2 pfam:rod -> m2f_pfam_rod.jsonl: 720 designs, 26 s

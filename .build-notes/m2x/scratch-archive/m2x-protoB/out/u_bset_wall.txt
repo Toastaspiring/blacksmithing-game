@@ -1,0 +1,9 @@
+UNITS bset:wall:8:3: 18 designs, new median 3038, p99 3389, max 3389 | old median 4824, p99 6485, max 6485 (0 s)
+       3389 units (old    6132)  n11 cleaned  1  depth0.1 width1.2 L2.5 slit0.02 at-0.200 [bset-wall]
+       3312 units (old    4958)  n11 cleaned  0  depth0.1 width1.2 L2.5 slit0.20 at0.000 [bset-wall]
+       3218 units (old    5069)  n11 cleaned  0  depth0.1 width1.2 L2.5 slit0.05 at-0.133 [bset-wall]
+       3218 units (old    4976)  n11 cleaned  0  depth0.1 width1.2 L2.5 slit0.10 at-0.070 [bset-wall]
+       3210 units (old    4824)  n11 cleaned  0  depth0.1 width1.2 L2.5 slit0.30 at0.100 [bset-wall]
+       3198 units (old    5626)  n11 cleaned  0  depth0.3 width1.2 L2.5 slit0.05 at-0.267 [bset-wall]
+       3188 units (old    6485)  n11 cleaned  1  depth0.3 width1.2 L2.5 slit0.02 at-0.350 [bset-wall]
+       3038 units (old    5359)  n11 cleaned  0  depth0.3 width1.2 L2.5 slit0.20 at-0.133 [bset-wall]

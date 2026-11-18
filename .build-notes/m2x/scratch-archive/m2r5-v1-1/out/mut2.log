@@ -1,0 +1,47 @@
+0 KILLED physics the second part never a copy
+13 KILLED physics no AABB test (cost)
+17 KILLED physics all on the middle ring
+60 KILLED physics 3 corners
+70 KILLED physics a hidden corner counts as showing (it only gets here when the centre shows)
+16 SURVIVED  off the axis
+69 SURVIVED  a curved corner must be on the surface by sd (it is)
+73 KILLED full the search with one near part (equivalent)
+78 KILLED physics the centre not asked
+74 KILLED full the search when all show (reads the same?)
+80 KILLED physics one part: corners at 1 in a
+77 KILLED full the last near part cannot hide all
+83 KILLED physics any corner will do
+79 SURVIVED  one part: 3 corners
+81 SURVIVED  one part: corners at 1 in b
+99 SURVIVED  the centre's normal for the sub-points' probes
+101 SURVIVED  no spend for the sub-grid
+107 KILLED physics no centre credit
+112 KILLED physics rim credit at the centre's
+113 KILLED physics copies hide
+114 KILLED physics Dust hides
+121 KILLED physics a Ball on the Block estimate
+102 SURVIVED  nothing on the surface reads all (dead?)
+123 KILLED physics one cell fewer
+125 KILLED physics strictly under
+126 KILLED physics 1 cell per triangle edge
+115 SURVIVED  at the floor exactly, no hider
+127 KILLED physics no spend writing samples
+135 KILLED physics no spend per sample
+141 KILLED physics no early exit (bits equal, cost only)
+122 KILLED full an exact division: ceil of rounding
+142 KILLED physics exactly at the threshold: cleaned
+147 KILLED physics the ladder counts cleaned candidates
+150 KILLED physics no spend in the ladder
+149 KILLED physics no candidates in the charge
+157 KILLED physics the measure's margin without h
+161 KILLED physics minCells not on edge a
+151 KILLED quick strictly under
+162 SURVIVED  minCells not on edge b
+164 SURVIVED  a Wedge's +X side at 1
+165 SURVIVED  a Wedge's -X side at 1
+166 SURVIVED  a CornerWedge's x side at 1
+167 SURVIVED  a CornerWedge's z side at 1
+168 SURVIVED  a CornerWedge's slope at 1
+169 SURVIVED  a CornerWedge's other slope at 1
+171 SURVIVED  a Ball votes
+177 SURVIVED  at exactly 45 no vote

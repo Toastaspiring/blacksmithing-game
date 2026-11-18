@@ -1,0 +1,6 @@
+P1 + floating speck (part 24, slot Blade): valid false Disconnected#24 cleaned [E6,E8,E11,E12,E13,E16,E18,E22,D24] | d 1.0000 / 0.0000 / 0.0048
+P1 + attached speck (part 24, slot Blade): valid true  cleaned [E6,E8,E11,E12,E13,E16,E18,E22,D24] | d 1.0000 / 0.0000 / 0.0048
+P2 + floating speck (part 24, slot Blade): valid false Disconnected#24 cleaned [D24] | d 1.0000 / 0.0674 / 0.0479
+P2 + attached speck (part 24, slot Blade): valid true  cleaned [D24] | d 1.0000 / 0.0674 / 0.0479
+P3 + floating speck (part 24, slot Blade): valid false Disconnected#24 cleaned [D24] | d 0.2622 / 0.1759 / 0.1612
+P3 + attached speck (part 24, slot Blade): valid true  cleaned [D24] | d 0.2622 / 0.1759 / 0.1612

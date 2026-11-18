@@ -1,0 +1,3 @@
+11:	PROP_BASE_SEED = 0x12345678,
+RESULT pass=180 fail=0 skip=0 files=50 time=56.90s
+exit 0

@@ -1,0 +1,1 @@
+M3 corpus_fixtures.json: 71 designs, rows differ from the truth's in 0, tier flips 0, worst |dD| 0.0000 (), no steps 0, 0 s

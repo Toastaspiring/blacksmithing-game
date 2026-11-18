@@ -1,0 +1,12 @@
+FNV 'HoldZone.Target' 0x364c5dc9
+FNV 'TimingStrike.Tempo' 0x6ae6e414
+FNV 'TimingStrike.Offsets' 0xbde3cd3f
+FNV 'PrecisionTrace.Perturb' 0xce7a16ce
+mul32 0xffffffff 0xffffffff = 1
+mul32 0x80000000 0x2 = 0
+mul32 0x1000193 0x811c9dc5 = 84696351
+mul32 0x75bcd15 0x3ade68b1 = 4227814277
+mul32 0x0 0xffffffff = 0
+seed 0 tag '' state ['0x9cef78c', '0x79661de2', '0xea0eb7ee', '0xe8b2c241'] u32x4 [2040553127, 2671230994, 3535833209, 446703493]
+seed 4294967295 tag '' state ['0xe7469b4a', '0x67ecdb64', '0x47a974d7', '0xaaebfa63'] u32x4 [1363692059, 3358058105, 1851661954, 1516388948]
+hashU32(basis, 0) = 0x4b95f515  hashU32(basis, 0xDEADBEEF) = 0x90879fcb

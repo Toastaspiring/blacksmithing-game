@@ -1,0 +1,1313 @@
+1	ballRivet|C02|guardZ d0.08 unrot cap0.0050	7	K	E	0.005000	0.000652	Ball
+4	ballRivet|C02|guardZ d0.08 unrot cap0.0175	7	K	E	0.017500	0.007989	Ball
+7	ballRivet|C02|guardZ d0.08 unrot cap0.0250	7	K	E	0.025000	0.016305	Ball
+22	ballRivet|C02|guardZ d0.08 z45 cap0.0150	7	K	E	0.015000	0.005869	Ball
+25	ballRivet|C02|guardZ d0.08 z45 cap0.0225	7	K	E	0.022500	0.013207	Ball
+40	ballRivet|C02|guardZ d0.08 xy30 cap0.0100	7	K	E	0.010050	0.002608	Ball
+43	ballRivet|C02|guardZ d0.08 xy30 cap0.0200	7	K	E	0.020000	0.010435	Ball
+58	ballRivet|C02|guardZ d0.08 r47 cap0.0050	7	K	E	0.005000	0.000652	Ball
+61	ballRivet|C02|guardZ d0.08 r47 cap0.0175	7	K	E	0.017400	0.007989	Ball
+64	ballRivet|C02|guardZ d0.08 r47 cap0.0250	7	K	E	0.024950	0.016305	Ball
+79	ballRivet|C02|guardZ d0.10 unrot cap0.0150	7	K	E	0.015000	0.005869	Ball
+82	ballRivet|C02|guardZ d0.10 unrot cap0.0225	7	K	E	0.022500	0.013207	Ball
+97	ballRivet|C02|guardZ d0.10 z45 cap0.0100	7	K	E	0.010000	0.002608	Ball
+100	ballRivet|C02|guardZ d0.10 z45 cap0.0200	7	K	E	0.020000	0.010435	Ball
+115	ballRivet|C02|guardZ d0.10 xy30 cap0.0050	7	K	E	0.004925	0.000652	Ball
+118	ballRivet|C02|guardZ d0.10 xy30 cap0.0175	7	K	E	0.017525	0.007989	Ball
+121	ballRivet|C02|guardZ d0.10 xy30 cap0.0250	7	K	E	0.025050	0.016305	Ball
+136	ballRivet|C02|guardZ d0.10 r47 cap0.0150	7	K	E	0.014900	0.005869	Ball
+139	ballRivet|C02|guardZ d0.10 r47 cap0.0225	7	K	E	0.022400	0.013207	Ball
+154	ballRivet|C02|guardZ d0.14 unrot cap0.0100	7	K	E	0.010000	0.002609	Ball
+157	ballRivet|C02|guardZ d0.14 unrot cap0.0200	7	K	E	0.020000	0.010435	Ball
+172	ballRivet|C02|guardZ d0.14 z45 cap0.0050	7	K	E	0.005000	0.000652	Ball
+175	ballRivet|C02|guardZ d0.14 z45 cap0.0175	7	K	E	0.017500	0.007989	Ball
+178	ballRivet|C02|guardZ d0.14 z45 cap0.0250	7	K	E	0.025000	0.016305	Ball
+193	ballRivet|C02|guardZ d0.14 xy30 cap0.0150	7	K	E	0.015025	0.005870	Ball
+196	ballRivet|C02|guardZ d0.14 xy30 cap0.0225	7	K	E	0.022475	0.013207	Ball
+211	ballRivet|C02|guardZ d0.14 r47 cap0.0100	7	K	E	0.010100	0.002609	Ball
+214	ballRivet|C02|guardZ d0.14 r47 cap0.0200	7	K	E	0.019875	0.010435	Ball
+229	ballRivet|C02|guardX d0.08 unrot cap0.0050	7	K	E	0.004975	0.000652	Ball
+235	ballRivet|C02|guardX d0.08 unrot cap0.0250	7	K	E	0.025050	0.016305	Ball
+253	ballRivet|C02|guardX d0.08 z45 cap0.0225	7	K	E	0.022425	0.013207	Ball
+271	ballRivet|C02|guardX d0.08 xy30 cap0.0200	7	K	E	0.019925	0.010435	Ball
+289	ballRivet|C02|guardX d0.08 r47 cap0.0175	7	K	E	0.017425	0.007989	Ball
+307	ballRivet|C02|guardX d0.10 unrot cap0.0150	7	K	E	0.015050	0.005869	Ball
+325	ballRivet|C02|guardX d0.10 z45 cap0.0100	7	K	E	0.009925	0.002608	Ball
+343	ballRivet|C02|guardX d0.10 xy30 cap0.0050	7	K	E	0.005075	0.000652	Ball
+349	ballRivet|C02|guardX d0.10 xy30 cap0.0250	7	K	E	0.025075	0.016305	Ball
+367	ballRivet|C02|guardX d0.10 r47 cap0.0225	7	K	E	0.022375	0.013207	Ball
+385	ballRivet|C02|guardX d0.14 unrot cap0.0200	7	K	E	0.019975	0.010435	Ball
+403	ballRivet|C02|guardX d0.14 z45 cap0.0175	7	K	E	0.017475	0.007989	Ball
+421	ballRivet|C02|guardX d0.14 xy30 cap0.0150	7	K	E	0.015000	0.005870	Ball
+439	ballRivet|C02|guardX d0.14 r47 cap0.0100	7	K	E	0.010100	0.002609	Ball
+687	cylRivet|C02|guard r0.03 tilt0 poke0.0000	7	K	E	0.000000	0.000000	Cylinder
+720	cylRivet|C02|guard r0.05 tilt0 poke0.0000	7	K	E	0.000000	0.000000	Cylinder
+852	cylRivet|C02|blade r0.08 tilt0 poke0.0000	8	K	E	0.000000	0.000000	Cylinder
+935	cylRib|C02|blade r0.03 psi11.25 height0.002	7	K	E	0.028025	0.012810	Cylinder
+1091	cylRib|C02|guard r0.03 psi11.25 height0.002	7	K	E	0.027525	0.012575	Cylinder
+1169	cylRib|C02|guard r0.08 psi11.25 height0.002	7	K	E	0.026175	0.011932	Cylinder
+1223	plateEdge|C02|blade w0.5 k0.6 l1.0 poke-0.0050	7	K	E	0.000000	0.000000	Block
+1265	plateEdge|C02|blade w0.5 k0.8 l1.0 poke-0.0050	7	K	E	0.000000	0.000000	Block
+1307	plateEdge|C02|blade w0.8 k0.6 l1.0 poke-0.0050	7	K	E	0.000000	0.000000	Block
+1349	plateEdge|C02|blade w0.8 k0.8 l1.0 poke-0.0050	7	K	E	0.000000	0.000000	Block
+1420	plateEdge|C02|blade w1.0 k0.8 l0.8 poke0.0000	7	K	E	0.000000	0.000000	Block
+1475	plateEdge|C02|guard w0.5 k0.6 l1.0 poke-0.0050	7	K	E	0.000000	0.000000	Block
+1517	plateEdge|C02|guard w0.5 k0.8 l1.0 poke-0.0050	7	K	E	0.000000	0.000000	Block
+1559	plateEdge|C02|guard w0.8 k0.6 l1.0 poke-0.0050	7	K	E	0.000000	0.000000	Block
+1601	plateEdge|C02|guard w0.8 k0.8 l1.0 poke-0.0050	7	K	E	0.000000	0.000000	Block
+1672	plateEdge|C02|guard w1.0 k0.8 l0.8 poke0.0000	7	K	E	0.000000	0.000000	Block
+1731	bevel|C02|a0.02 b0.03 height0.020	7	K	E	0.013000	0.012983	Wedge
+1743	bevel|C02|a0.02 b0.05 height0.030	7	K	E	0.017800	0.017821	Wedge
+1764	bevel|C02|a0.03 b0.03 height0.020	7	K	E	0.014074	0.014083	Wedge
+1786	bevel|C02|a0.03 b0.08 height0.020	7	K	E	0.011724	0.011746	Wedge
+1808	bevel|C02|a0.05 b0.05 height0.020	7	K	E	0.014074	0.014047	Wedge
+1830	laminate|C02|k0.02 wf1.0 proud-0.0200 capfalse	7	K	E	0.000000	0.000000	Block
+1832	laminate|C02|k0.02 wf1.0 proud-0.0100 capfalse	7	K	E	0.000000	0.000000	Block
+1834	laminate|C02|k0.02 wf1.0 proud-0.0050 capfalse	7	K	E	0.000000	0.000000	Block
+1836	laminate|C02|k0.02 wf1.0 proud0.0000 capfalse	7	K	E	0.000000	0.000000	Block
+1838	laminate|C02|k0.02 wf1.0 proud0.0030 capfalse	7	K	E	0.000000	0.000000	Block
+1841	laminate|C02|k0.02 wf1.0 proud0.0050 captrue	7	K	E	0.000000	0.000000	Block
+1844	laminate|C02|k0.02 wf1.0 proud0.0100 capfalse	7	K	E	0.000000	0.000000	Block
+1847	laminate|C02|k0.02 wf1.0 proud0.0150 captrue	7	K	E	0.000000	0.000000	Block
+1890	laminate|C02|k0.03 wf1.0 proud-0.0200 capfalse	9	K	E	0.000000	0.000000	Block
+1896	laminate|C02|k0.03 wf1.0 proud0.0000 capfalse	9	K	E	0.000000	0.000000	Block
+1914	laminate|C02|k0.03 wf1.5 proud-0.0050 capfalse	4	K	E	0.000250	0.000272	Block
+1920	laminate|C02|k0.03 wf1.5 proud0.0050 capfalse	4	K	E	0.000250	0.000272	Block
+1926	laminate|C02|k0.03 wf1.5 proud0.0150 capfalse	4	K	E	0.000250	0.000272	Block
+1932	laminate|C02|k0.03 wf2.0 proud-0.0100 capfalse	4	K	E	0.000250	0.000272	Block
+1938	laminate|C02|k0.03 wf2.0 proud0.0030 capfalse	4	K	E	0.000125	0.000136	Block
+1944	laminate|C02|k0.03 wf2.0 proud0.0100 capfalse	4	K	E	0.000125	0.000136	Block
+1950	wrapRings|C02|n3 extra0.01 gap0.0010	2	K	E	0.002050	0.002042	Cylinder
+1956	wrapRings|C02|n3 extra0.01 gap0.0075	2	K	E	0.015300	0.015313	Cylinder
+1968	wrapRings|C02|n3 extra0.02 gap0.0060	2	K	E	0.012250	0.012250	Cylinder
+1980	wrapRings|C02|n3 extra0.04 gap0.0050	2	K	E	0.010200	0.005405	Cylinder
+1991	wrapRings|C02|n4 extra0.01 gap0.0030	2	K	E	0.009175	0.009188	Cylinder
+2004	wrapRings|C02|n4 extra0.02 gap0.0030	2	K	E	0.009175	0.009188	Cylinder
+2017	wrapRings|C02|n4 extra0.04 gap0.0030	2	K	E	0.009175	0.001983	Cylinder
+2029	wrapRings|C02|n5 extra0.01 gap0.0020	2	K	E	0.008150	0.008167	Cylinder
+2044	wrapRings|C02|n5 extra0.02 gap0.0040	2	K	E	0.016350	0.016334	Cylinder
+2059	wrapRings|C02|n5 extra0.04 gap0.0060	2	K	E	0.024500	0.014893	Cylinder
+2072	pommelInBlock|C02|housing unrot cap0.0225	1	K	E	0.022500	0.013208	Ball
+2090	pommelInBlock|C02|housing xy30 cap0.0200	1	K	E	0.020000	0.010436	Ball
+2108	pommelInBlock|C02|housing r47 cap0.0175	1	K	E	0.017500	0.007990	Ball
+2125	wedgeInGuard|C02|Wedge 0.12 0.12 0.16 spin0 height0.030	7	K	E	0.015223	0.015225	Wedge
+2144	wedgeInGuard|C02|Wedge 0.20 0.15 0.10 spin0 height0.020	7	K	E	0.013125	0.013132	Wedge
+2155	wedgeInGuard|C02|Wedge 0.20 0.15 0.10 spin30 height0.030	7	K	E	0.019699	0.019743	Wedge
+2186	wedgeInGuard|C02|CornerWedge 0.12 0.12 0.16 spin0 height0.050	7	K	E	0.001750	0.001720	CornerWedge
+2189	wedgeInGuard|C02|CornerWedge 0.12 0.12 0.16 spin0 height0.150	7	K	E	0.015498	0.015484	CornerWedge
+2196	wedgeInGuard|C02|CornerWedge 0.12 0.12 0.16 spin30 height0.050	7	K	E	0.001750	0.001720	CornerWedge
+2199	wedgeInGuard|C02|CornerWedge 0.12 0.12 0.16 spin30 height0.150	7	K	E	0.015498	0.015484	CornerWedge
+2206	wedgeInGuard|C02|CornerWedge 0.20 0.15 0.10 spin0 height0.050	7	K	E	0.001725	0.001815	CornerWedge
+2209	wedgeInGuard|C02|CornerWedge 0.20 0.15 0.10 spin0 height0.150	7	K	E	0.016198	0.016338	CornerWedge
+2216	wedgeInGuard|C02|CornerWedge 0.20 0.15 0.10 spin30 height0.050	7	K	E	0.001725	0.001815	CornerWedge
+2219	wedgeInGuard|C02|CornerWedge 0.20 0.15 0.10 spin30 height0.150	7	K	E	0.016198	0.016338	CornerWedge
+2284	rod|C02|guard Block d0.04 poke-0.0020	7	K	E	0.000000	0.000000	Block
+2314	rod|C02|guard Cylinder d0.06 poke-0.0020	7	K	E	0.000000	0.000000	Cylinder
+2326	ballRivet|C05|guardZ d0.08 unrot cap0.0150	7	K	E	0.015000	0.005869	Ball
+2329	ballRivet|C05|guardZ d0.08 unrot cap0.0225	7	K	E	0.022500	0.013207	Ball
+2344	ballRivet|C05|guardZ d0.08 z45 cap0.0100	7	K	E	0.010000	0.002608	Ball
+2347	ballRivet|C05|guardZ d0.08 z45 cap0.0200	7	K	E	0.020000	0.010435	Ball
+2362	ballRivet|C05|guardZ d0.08 xy30 cap0.0050	7	K	E	0.004900	0.000652	Ball
+2365	ballRivet|C05|guardZ d0.08 xy30 cap0.0175	7	K	E	0.017525	0.007989	Ball
+2368	ballRivet|C05|guardZ d0.08 xy30 cap0.0250	7	K	E	0.025050	0.016305	Ball
+2383	ballRivet|C05|guardZ d0.08 r47 cap0.0150	7	K	E	0.014900	0.005869	Ball
+2386	ballRivet|C05|guardZ d0.08 r47 cap0.0225	7	K	E	0.022400	0.013207	Ball
+2401	ballRivet|C05|guardZ d0.10 unrot cap0.0100	7	K	E	0.010000	0.002608	Ball
+2404	ballRivet|C05|guardZ d0.10 unrot cap0.0200	7	K	E	0.020000	0.010435	Ball
+2419	ballRivet|C05|guardZ d0.10 z45 cap0.0050	7	K	E	0.005000	0.000652	Ball
+2422	ballRivet|C05|guardZ d0.10 z45 cap0.0175	7	K	E	0.017500	0.007989	Ball
+2425	ballRivet|C05|guardZ d0.10 z45 cap0.0250	7	K	E	0.025000	0.016305	Ball
+2440	ballRivet|C05|guardZ d0.10 xy30 cap0.0150	7	K	E	0.015025	0.005869	Ball
+2443	ballRivet|C05|guardZ d0.10 xy30 cap0.0225	7	K	E	0.022475	0.013207	Ball
+2458	ballRivet|C05|guardZ d0.10 r47 cap0.0100	7	K	E	0.010100	0.002608	Ball
+2461	ballRivet|C05|guardZ d0.10 r47 cap0.0200	7	K	E	0.019875	0.010435	Ball
+2476	ballRivet|C05|guardZ d0.14 unrot cap0.0050	7	K	E	0.005000	0.000652	Ball
+2479	ballRivet|C05|guardZ d0.14 unrot cap0.0175	7	K	E	0.017500	0.007989	Ball
+2482	ballRivet|C05|guardZ d0.14 unrot cap0.0250	7	K	E	0.025000	0.016305	Ball
+2497	ballRivet|C05|guardZ d0.14 z45 cap0.0150	7	K	E	0.015000	0.005870	Ball
+2500	ballRivet|C05|guardZ d0.14 z45 cap0.0225	7	K	E	0.022500	0.013207	Ball
+2515	ballRivet|C05|guardZ d0.14 xy30 cap0.0100	7	K	E	0.010050	0.002609	Ball
+2518	ballRivet|C05|guardZ d0.14 xy30 cap0.0200	7	K	E	0.020000	0.010435	Ball
+2533	ballRivet|C05|guardZ d0.14 r47 cap0.0050	7	K	E	0.005000	0.000652	Ball
+2536	ballRivet|C05|guardZ d0.14 r47 cap0.0175	7	K	E	0.017400	0.007989	Ball
+2539	ballRivet|C05|guardZ d0.14 r47 cap0.0250	7	K	E	0.024950	0.016305	Ball
+2556	ballRivet|C05|guardX d0.08 unrot cap0.0200	7	K	E	0.019975	0.010435	Ball
+2574	ballRivet|C05|guardX d0.08 z45 cap0.0175	7	K	E	0.017475	0.007989	Ball
+2592	ballRivet|C05|guardX d0.08 xy30 cap0.0150	7	K	E	0.015000	0.005869	Ball
+2610	ballRivet|C05|guardX d0.08 r47 cap0.0100	7	K	E	0.010100	0.002608	Ball
+2628	ballRivet|C05|guardX d0.10 unrot cap0.0050	7	K	E	0.004975	0.000652	Ball
+2634	ballRivet|C05|guardX d0.10 unrot cap0.0250	7	K	E	0.025050	0.016305	Ball
+2652	ballRivet|C05|guardX d0.10 z45 cap0.0225	7	K	E	0.022425	0.013207	Ball
+2670	ballRivet|C05|guardX d0.10 xy30 cap0.0200	7	K	E	0.019925	0.010435	Ball
+2688	ballRivet|C05|guardX d0.10 r47 cap0.0175	7	K	E	0.017425	0.007989	Ball
+2706	ballRivet|C05|guardX d0.14 unrot cap0.0150	7	K	E	0.015050	0.005870	Ball
+2724	ballRivet|C05|guardX d0.14 z45 cap0.0100	7	K	E	0.009925	0.002609	Ball
+2742	ballRivet|C05|guardX d0.14 xy30 cap0.0050	7	K	E	0.005075	0.000652	Ball
+2748	ballRivet|C05|guardX d0.14 xy30 cap0.0250	7	K	E	0.025075	0.016305	Ball
+2766	ballRivet|C05|guardX d0.14 r47 cap0.0225	7	K	E	0.022375	0.013207	Ball
+2781	ballRivet|C05|bladeZ d0.08 unrot cap0.0100	8	K	E	0.010000	0.002608	Ball
+2783	ballRivet|C05|bladeZ d0.08 unrot cap0.0175	8	K	E	0.017500	0.007989	Ball
+2785	ballRivet|C05|bladeZ d0.08 unrot cap0.0225	8	K	E	0.022500	0.013207	Ball
+2799	ballRivet|C05|bladeZ d0.08 z45 cap0.0050	8	K	E	0.005000	0.000652	Ball
+2801	ballRivet|C05|bladeZ d0.08 z45 cap0.0150	8	K	E	0.015000	0.005869	Ball
+2803	ballRivet|C05|bladeZ d0.08 z45 cap0.0200	8	K	E	0.020000	0.010435	Ball
+2805	ballRivet|C05|bladeZ d0.08 z45 cap0.0250	8	K	E	0.025000	0.016305	Ball
+2819	ballRivet|C05|bladeZ d0.08 xy30 cap0.0100	8	K	E	0.010050	0.002608	Ball
+2821	ballRivet|C05|bladeZ d0.08 xy30 cap0.0175	8	K	E	0.017525	0.007989	Ball
+2823	ballRivet|C05|bladeZ d0.08 xy30 cap0.0225	8	K	E	0.022475	0.013207	Ball
+2837	ballRivet|C05|bladeZ d0.08 r47 cap0.0050	8	K	E	0.005000	0.000652	Ball
+2839	ballRivet|C05|bladeZ d0.08 r47 cap0.0150	8	K	E	0.014900	0.005869	Ball
+2841	ballRivet|C05|bladeZ d0.08 r47 cap0.0200	8	K	E	0.019875	0.010435	Ball
+2843	ballRivet|C05|bladeZ d0.08 r47 cap0.0250	8	K	E	0.024950	0.016305	Ball
+2857	ballRivet|C05|bladeZ d0.10 unrot cap0.0100	8	K	E	0.010000	0.002608	Ball
+2859	ballRivet|C05|bladeZ d0.10 unrot cap0.0175	8	K	E	0.017500	0.007989	Ball
+2861	ballRivet|C05|bladeZ d0.10 unrot cap0.0225	8	K	E	0.022500	0.013207	Ball
+2875	ballRivet|C05|bladeZ d0.10 z45 cap0.0050	8	K	E	0.005000	0.000652	Ball
+2877	ballRivet|C05|bladeZ d0.10 z45 cap0.0150	8	K	E	0.015000	0.005869	Ball
+2879	ballRivet|C05|bladeZ d0.10 z45 cap0.0200	8	K	E	0.020000	0.010435	Ball
+2881	ballRivet|C05|bladeZ d0.10 z45 cap0.0250	8	K	E	0.025000	0.016305	Ball
+2895	ballRivet|C05|bladeZ d0.10 xy30 cap0.0100	8	K	E	0.010050	0.002608	Ball
+2897	ballRivet|C05|bladeZ d0.10 xy30 cap0.0175	8	K	E	0.017525	0.007989	Ball
+2899	ballRivet|C05|bladeZ d0.10 xy30 cap0.0225	8	K	E	0.022475	0.013207	Ball
+2913	ballRivet|C05|bladeZ d0.10 r47 cap0.0050	8	K	E	0.005000	0.000652	Ball
+2915	ballRivet|C05|bladeZ d0.10 r47 cap0.0150	8	K	E	0.014900	0.005869	Ball
+2917	ballRivet|C05|bladeZ d0.10 r47 cap0.0200	8	K	E	0.019875	0.010435	Ball
+2919	ballRivet|C05|bladeZ d0.10 r47 cap0.0250	8	K	E	0.024950	0.016305	Ball
+2933	ballRivet|C05|bladeZ d0.14 unrot cap0.0100	8	K	E	0.010000	0.002609	Ball
+2935	ballRivet|C05|bladeZ d0.14 unrot cap0.0175	8	K	E	0.017500	0.007989	Ball
+2937	ballRivet|C05|bladeZ d0.14 unrot cap0.0225	8	K	E	0.022500	0.013207	Ball
+2951	ballRivet|C05|bladeZ d0.14 z45 cap0.0050	8	K	E	0.005000	0.000652	Ball
+2953	ballRivet|C05|bladeZ d0.14 z45 cap0.0150	8	K	E	0.015000	0.005870	Ball
+2955	ballRivet|C05|bladeZ d0.14 z45 cap0.0200	8	K	E	0.020000	0.010435	Ball
+2957	ballRivet|C05|bladeZ d0.14 z45 cap0.0250	8	K	E	0.025000	0.016305	Ball
+2971	ballRivet|C05|bladeZ d0.14 xy30 cap0.0100	8	K	E	0.010050	0.002609	Ball
+2973	ballRivet|C05|bladeZ d0.14 xy30 cap0.0175	8	K	E	0.017525	0.007989	Ball
+2975	ballRivet|C05|bladeZ d0.14 xy30 cap0.0225	8	K	E	0.022475	0.013207	Ball
+2989	ballRivet|C05|bladeZ d0.14 r47 cap0.0050	8	K	E	0.005000	0.000652	Ball
+2991	ballRivet|C05|bladeZ d0.14 r47 cap0.0150	8	K	E	0.014900	0.005870	Ball
+2993	ballRivet|C05|bladeZ d0.14 r47 cap0.0200	8	K	E	0.019875	0.010435	Ball
+2995	ballRivet|C05|bladeZ d0.14 r47 cap0.0250	8	K	E	0.024950	0.016305	Ball
+3012	ballRivet|C05|hiltZ d0.10 unrot cap0.0200	7	K	E	0.020000	0.010435	Ball
+3030	ballRivet|C05|hiltZ d0.10 z45 cap0.0175	7	K	E	0.017500	0.007989	Ball
+3048	ballRivet|C05|hiltZ d0.10 xy30 cap0.0150	7	K	E	0.015025	0.005869	Ball
+3066	ballRivet|C05|hiltZ d0.10 r47 cap0.0100	7	K	E	0.010100	0.002608	Ball
+3084	ballRivet|C05|hiltZ d0.14 unrot cap0.0050	7	K	E	0.005000	0.000652	Ball
+3090	ballRivet|C05|hiltZ d0.14 unrot cap0.0250	7	K	E	0.025000	0.016305	Ball
+3108	ballRivet|C05|hiltZ d0.14 z45 cap0.0225	7	K	E	0.022500	0.013207	Ball
+3126	ballRivet|C05|hiltZ d0.14 xy30 cap0.0200	7	K	E	0.020000	0.010435	Ball
+3144	ballRivet|C05|hiltZ d0.14 r47 cap0.0175	7	K	E	0.017400	0.007989	Ball
+3162	ballRivet|C05|hiltZ d0.20 unrot cap0.0150	7	K	E	0.015000	0.005870	Ball
+3180	ballRivet|C05|hiltZ d0.20 z45 cap0.0100	7	K	E	0.010000	0.002609	Ball
+3198	ballRivet|C05|hiltZ d0.20 xy30 cap0.0050	7	K	E	0.004925	0.000652	Ball
+3204	ballRivet|C05|hiltZ d0.20 xy30 cap0.0250	7	K	E	0.025050	0.016306	Ball
+3222	ballRivet|C05|hiltZ d0.20 r47 cap0.0225	7	K	E	0.022400	0.013207	Ball
+3337	cylRivet|C05|blade r0.03 tilt0 poke0.0000	9	K	E	0.000000	0.000000	Cylinder
+3403	cylRivet|C05|blade r0.08 tilt0 poke0.0000	9	K	E	0.000000	0.000000	Cylinder
+3499	cylRib|C05|blade r0.03 psi22.50 height0.002	7	K	E	0.027975	0.012784	Cylinder
+3616	cylRib|C05|guard r0.02 psi22.50 height0.002	7	K	E	0.027299	0.012479	Cylinder
+3694	cylRib|C05|guard r0.05 psi22.50 height0.002	7	K	E	0.025775	0.011788	Cylinder
+3773	plateEdge|C05|blade w0.5 k0.6 l1.0 poke0.0000	7	K	E	0.000000	0.000000	Block
+3812	plateEdge|C05|blade w0.5 k0.8 l1.0 poke0.0000	7	K	E	0.000000	0.000000	Block
+3851	plateEdge|C05|blade w0.8 k0.6 l1.0 poke0.0000	7	K	E	0.000000	0.000000	Block
+3890	plateEdge|C05|blade w0.8 k0.8 l1.0 poke0.0000	7	K	E	0.000000	0.000000	Block
+3929	plateEdge|C05|blade w1.0 k0.6 l1.0 poke0.0000	7	K	E	0.000000	0.000000	Block
+3968	plateEdge|C05|blade w1.0 k0.8 l1.0 poke0.0000	7	K	E	0.000000	0.000000	Block
+4009	plateEdge|C05|guard w0.5 k0.6 l1.0 poke0.0000	7	K	E	0.000000	0.000000	Block
+4051	plateEdge|C05|guard w0.5 k0.8 l1.0 poke0.0000	7	K	E	0.000000	0.000000	Block
+4093	plateEdge|C05|guard w0.8 k0.6 l1.0 poke0.0000	7	K	E	0.000000	0.000000	Block
+4135	plateEdge|C05|guard w0.8 k0.8 l1.0 poke0.0000	7	K	E	0.000000	0.000000	Block
+4219	plateEdge|C05|guard w1.0 k0.8 l1.0 poke0.0000	7	K	E	0.000000	0.000000	Block
+4250	plateTilt|C05|tilt4 poke0.002	7	K	E	0.017028	0.017025	Block
+4287	bevel|C05|a0.02 b0.08 height0.030	7	K	E	0.016799	0.016769	Wedge
+4330	bevel|C05|a0.05 b0.03 height0.020	7	K	E	0.015600	0.015572	Wedge
+4363	laminate|C05|k0.02 wf1.0 proud-0.0200 capfalse	9	K	E	0.000000	0.000000	Block
+4365	laminate|C05|k0.02 wf1.0 proud-0.0100 capfalse	8	K	E	0.000000	0.000000	Block
+4367	laminate|C05|k0.02 wf1.0 proud-0.0050 capfalse	7	K	E	0.000000	0.000000	Block
+4368	laminate|C05|k0.02 wf1.0 proud-0.0050 captrue	10	K	E	0.000000	0.000000	Block
+4370	laminate|C05|k0.02 wf1.0 proud0.0000 captrue	9	K	E	0.000000	0.000000	Block
+4372	laminate|C05|k0.02 wf1.0 proud0.0030 captrue	8	K	E	0.000000	0.000000	Block
+4374	laminate|C05|k0.02 wf1.0 proud0.0050 captrue	7	K	E	0.000000	0.000000	Block
+4375	laminate|C05|k0.02 wf1.0 proud0.0075 capfalse	9	K	E	0.016824	0.016824	Block
+4377	laminate|C05|k0.02 wf1.0 proud0.0100 capfalse	8	K	E	0.000000	0.000000	Block
+4379	laminate|C05|k0.02 wf1.0 proud0.0150 capfalse	7	K	E	0.000000	0.000000	Block
+4381	laminate|C05|k0.02 wf1.0 proud0.0200 capfalse	8	K	E	0.000000	0.000000	Block
+4383	laminate|C05|k0.03 wf1.0 proud-0.0200 capfalse	9	K	E	0.000000	0.000000	Block
+4385	laminate|C05|k0.03 wf1.0 proud-0.0100 capfalse	8	K	E	0.000000	0.000000	Block
+4387	laminate|C05|k0.03 wf1.0 proud-0.0050 capfalse	7	K	E	0.000000	0.000000	Block
+4388	laminate|C05|k0.03 wf1.0 proud-0.0050 captrue	10	K	E	0.000000	0.000000	Block
+4390	laminate|C05|k0.03 wf1.0 proud0.0000 captrue	9	K	E	0.000000	0.000000	Block
+4392	laminate|C05|k0.03 wf1.0 proud0.0030 captrue	8	K	E	0.000000	0.000000	Block
+4394	laminate|C05|k0.03 wf1.0 proud0.0050 captrue	7	K	E	0.000000	0.000000	Block
+4396	laminate|C05|k0.03 wf1.0 proud0.0075 captrue	7	K	E	0.000000	0.000000	Block
+4398	laminate|C05|k0.03 wf1.0 proud0.0100 captrue	8	K	E	0.000000	0.000000	Block
+4400	laminate|C05|k0.03 wf1.0 proud0.0150 captrue	9	K	E	0.000000	0.000000	Block
+4403	wrapRings|C05|n3 extra0.01 gap0.0010	2	K	E	0.001950	0.001962	Cylinder
+4409	wrapRings|C05|n3 extra0.01 gap0.0075	2	K	E	0.014700	0.014713	Cylinder
+4420	wrapRings|C05|n3 extra0.02 gap0.0050	2	K	E	0.009800	0.009809	Cylinder
+4431	wrapRings|C05|n3 extra0.04 gap0.0030	2	K	E	0.005900	0.001270	Cylinder
+4437	wrapRings|C05|n3 extra0.04 gap0.0125	2	K	E	0.024500	0.019906	Cylinder
+4447	wrapRings|C05|n4 extra0.01 gap0.0060	2	K	E	0.017675	0.017656	Cylinder
+4460	wrapRings|C05|n4 extra0.02 gap0.0060	2	K	E	0.017675	0.017656	Cylinder
+4473	wrapRings|C05|n4 extra0.04 gap0.0060	2	K	E	0.017675	0.010733	Cylinder
+4485	wrapRings|C05|n5 extra0.01 gap0.0050	2	K	E	0.019600	0.019618	Cylinder
+4507	wrapRings|C05|n5 extra0.04 gap0.0010	2	K	E	0.003950	0.000000	Cylinder
+4520	pommelInBlock|C05|nut unrot cap0.0050	7	K	E	0.005075	0.000652	Ball
+4526	pommelInBlock|C05|nut unrot cap0.0250	7	K	E	0.024950	0.016305	Ball
+4544	pommelInBlock|C05|nut xy30 cap0.0225	7	K	E	0.022525	0.013207	Ball
+4562	pommelInBlock|C05|nut r47 cap0.0200	7	K	E	0.020000	0.010435	Ball
+4578	wedgeInGuard|C05|Wedge 0.12 0.12 0.16 spin0 height0.030	8	K	E	0.009349	0.009357	Wedge
+4588	wedgeInGuard|C05|Wedge 0.12 0.12 0.16 spin30 height0.030	7	K	E	0.015598	0.015570	Wedge
+4626	wedgeInGuard|C05|Wedge 0.10 0.25 0.10 spin0 height0.750	7	K	E	0.000000	0.000000	Wedge
+4637	wedgeInGuard|C05|CornerWedge 0.12 0.12 0.16 spin0 height0.020	7	K	E	0.000250	0.000257	CornerWedge
+4640	wedgeInGuard|C05|CornerWedge 0.12 0.12 0.16 spin0 height0.075	7	K	E	0.002750	0.002776	CornerWedge
+4643	wedgeInGuard|C05|CornerWedge 0.12 0.12 0.16 spin0 height0.200	7	K	E	0.012698	0.012676	CornerWedge
+4648	wedgeInGuard|C05|CornerWedge 0.12 0.12 0.16 spin30 height0.030	8	K	E	0.000850	0.000875	CornerWedge
+4651	wedgeInGuard|C05|CornerWedge 0.12 0.12 0.16 spin30 height0.100	8	K	E	0.007074	0.007138	CornerWedge
+4686	wedgeInGuard|C05|CornerWedge 0.10 0.25 0.10 spin0 height0.750	8	K	E	0.000000	0.000000	CornerWedge
+4717	rod|C05|grip Cylinder d0.04 poke-0.0020	7	K	E	0.000000	0.000000	Cylinder
+4739	rod|C05|guard Block d0.04 poke0.0010	7	K	E	0.000000	0.000000	Block
+4745	rod|C05|guard Block d0.04 poke0.0300	7	K	E	0.000000	0.000000	Block
+4751	rod|C05|guard Block d0.06 poke0.0050	7	K	E	0.000000	0.000000	Block
+4757	rod|C05|guard Cylinder d0.04 poke-0.0020	7	K	E	0.000000	0.000000	Cylinder
+4763	rod|C05|guard Cylinder d0.04 poke0.0150	7	K	E	0.000000	0.000000	Cylinder
+4769	rod|C05|guard Cylinder d0.06 poke0.0010	7	K	E	0.000000	0.000000	Cylinder
+4775	rod|C05|guard Cylinder d0.06 poke0.0300	7	K	E	0.000000	0.000000	Cylinder
+4779	ballRivet|C06|guardZ d0.08 unrot cap0.0150	11	K	E	0.015000	0.005869	Ball
+4782	ballRivet|C06|guardZ d0.08 unrot cap0.0225	11	K	E	0.022500	0.013207	Ball
+4797	ballRivet|C06|guardZ d0.08 z45 cap0.0100	11	K	E	0.010000	0.002608	Ball
+4800	ballRivet|C06|guardZ d0.08 z45 cap0.0200	11	K	E	0.020000	0.010435	Ball
+4815	ballRivet|C06|guardZ d0.08 xy30 cap0.0050	11	K	E	0.004900	0.000652	Ball
+4818	ballRivet|C06|guardZ d0.08 xy30 cap0.0175	11	K	E	0.017525	0.007989	Ball
+4821	ballRivet|C06|guardZ d0.08 xy30 cap0.0250	11	K	E	0.025050	0.016305	Ball
+4836	ballRivet|C06|guardZ d0.08 r47 cap0.0150	11	K	E	0.014900	0.005869	Ball
+4839	ballRivet|C06|guardZ d0.08 r47 cap0.0225	11	K	E	0.022400	0.013207	Ball
+4854	ballRivet|C06|guardZ d0.10 unrot cap0.0100	11	K	E	0.010000	0.002608	Ball
+4857	ballRivet|C06|guardZ d0.10 unrot cap0.0200	11	K	E	0.020000	0.010435	Ball
+4872	ballRivet|C06|guardZ d0.10 z45 cap0.0050	11	K	E	0.005000	0.000652	Ball
+4875	ballRivet|C06|guardZ d0.10 z45 cap0.0175	11	K	E	0.017500	0.007989	Ball
+4878	ballRivet|C06|guardZ d0.10 z45 cap0.0250	11	K	E	0.025000	0.016305	Ball
+4893	ballRivet|C06|guardZ d0.10 xy30 cap0.0150	11	K	E	0.015025	0.005869	Ball
+4896	ballRivet|C06|guardZ d0.10 xy30 cap0.0225	11	K	E	0.022475	0.013207	Ball
+4911	ballRivet|C06|guardZ d0.10 r47 cap0.0100	11	K	E	0.010100	0.002608	Ball
+4914	ballRivet|C06|guardZ d0.10 r47 cap0.0200	11	K	E	0.019875	0.010435	Ball
+4929	ballRivet|C06|guardZ d0.14 unrot cap0.0050	11	K	E	0.005000	0.000652	Ball
+4932	ballRivet|C06|guardZ d0.14 unrot cap0.0175	11	K	E	0.017500	0.007989	Ball
+4935	ballRivet|C06|guardZ d0.14 unrot cap0.0250	11	K	E	0.025000	0.016305	Ball
+4950	ballRivet|C06|guardZ d0.14 z45 cap0.0150	11	K	E	0.015000	0.005870	Ball
+4953	ballRivet|C06|guardZ d0.14 z45 cap0.0225	11	K	E	0.022500	0.013207	Ball
+4968	ballRivet|C06|guardZ d0.14 xy30 cap0.0100	11	K	E	0.010050	0.002609	Ball
+4971	ballRivet|C06|guardZ d0.14 xy30 cap0.0200	11	K	E	0.020000	0.010435	Ball
+4986	ballRivet|C06|guardZ d0.14 r47 cap0.0050	11	K	E	0.005000	0.000652	Ball
+4989	ballRivet|C06|guardZ d0.14 r47 cap0.0175	11	K	E	0.017400	0.007989	Ball
+4992	ballRivet|C06|guardZ d0.14 r47 cap0.0250	11	K	E	0.024950	0.016305	Ball
+5009	ballRivet|C06|guardX d0.08 unrot cap0.0200	11	K	E	0.019975	0.010435	Ball
+5027	ballRivet|C06|guardX d0.08 z45 cap0.0175	11	K	E	0.017475	0.007989	Ball
+5045	ballRivet|C06|guardX d0.08 xy30 cap0.0150	11	K	E	0.015000	0.005869	Ball
+5063	ballRivet|C06|guardX d0.08 r47 cap0.0100	11	K	E	0.010100	0.002608	Ball
+5081	ballRivet|C06|guardX d0.10 unrot cap0.0050	11	K	E	0.004975	0.000652	Ball
+5087	ballRivet|C06|guardX d0.10 unrot cap0.0250	11	K	E	0.025050	0.016305	Ball
+5105	ballRivet|C06|guardX d0.10 z45 cap0.0225	11	K	E	0.022425	0.013207	Ball
+5123	ballRivet|C06|guardX d0.10 xy30 cap0.0200	11	K	E	0.019925	0.010435	Ball
+5141	ballRivet|C06|guardX d0.10 r47 cap0.0175	11	K	E	0.017425	0.007989	Ball
+5159	ballRivet|C06|guardX d0.14 unrot cap0.0150	11	K	E	0.015050	0.005870	Ball
+5177	ballRivet|C06|guardX d0.14 z45 cap0.0100	11	K	E	0.009925	0.002609	Ball
+5195	ballRivet|C06|guardX d0.14 xy30 cap0.0050	11	K	E	0.005075	0.000652	Ball
+5201	ballRivet|C06|guardX d0.14 xy30 cap0.0250	11	K	E	0.025075	0.016305	Ball
+5219	ballRivet|C06|guardX d0.14 r47 cap0.0225	11	K	E	0.022375	0.013207	Ball
+5595	cylRivet|C06|blade r0.05 tilt0 poke0.0000	11	K	E	0.000000	0.000000	Cylinder
+5659	cylRib|C06|blade r0.02 psi0.00 height0.002	11	K	E	0.027400	0.012494	Cylinder
+5815	cylRib|C06|guard r0.02 psi0.00 height0.002	11	K	E	0.027625	0.012604	Cylinder
+5893	cylRib|C06|guard r0.05 psi0.00 height0.002	11	K	E	0.026425	0.012070	Cylinder
+5986	plateEdge|C06|blade w0.5 k0.6 l0.8 poke0.0000	11	K	E	0.000000	0.000000	Block
+6028	plateEdge|C06|blade w0.5 k0.8 l0.8 poke0.0000	11	K	E	0.000000	0.000000	Block
+6070	plateEdge|C06|blade w0.8 k0.6 l0.8 poke0.0000	11	K	E	0.000000	0.000000	Block
+6112	plateEdge|C06|blade w0.8 k0.8 l0.8 poke0.0000	11	K	E	0.000000	0.000000	Block
+6182	plateEdge|C06|blade w1.0 k0.8 l0.6 poke0.0000	11	K	E	0.000000	0.000000	Block
+6238	plateEdge|C06|guard w0.5 k0.6 l0.8 poke0.0000	11	K	E	0.000000	0.000000	Block
+6280	plateEdge|C06|guard w0.5 k0.8 l0.8 poke0.0000	11	K	E	0.000000	0.000000	Block
+6322	plateEdge|C06|guard w0.8 k0.6 l0.8 poke0.0000	11	K	E	0.000000	0.000000	Block
+6364	plateEdge|C06|guard w0.8 k0.8 l0.8 poke0.0000	11	K	E	0.000000	0.000000	Block
+6434	plateEdge|C06|guard w1.0 k0.8 l0.6 poke0.0000	11	K	E	0.000000	0.000000	Block
+6499	plateTilt|C06|tilt8 poke0.000	11	K	E	0.000000	0.000000	Block
+6551	bevel|C06|a0.03 b0.05 height0.020	11	K	E	0.012499	0.012501	Wedge
+6595	bevel|C06|a0.05 b0.08 height0.020	11	K	E	0.012399	0.012439	Wedge
+6610	wrapRings|C06|n3 extra0.01 gap0.0050	2	K	E	0.015049	0.012956	Cylinder
+6622	wrapRings|C06|n3 extra0.02 gap0.0040	2	K	E	0.012949	0.010871	Cylinder
+6634	wrapRings|C06|n3 extra0.04 gap0.0030	2	K	E	0.010849	0.003884	Cylinder
+6645	wrapRings|C06|n4 extra0.01 gap0.0010	2	K	E	0.007724	0.005661	Cylinder
+6659	wrapRings|C06|n4 extra0.02 gap0.0020	2	K	E	0.010874	0.008787	Cylinder
+6673	wrapRings|C06|n4 extra0.04 gap0.0030	2	K	E	0.013974	0.004558	Cylinder
+6685	wrapRings|C06|n5 extra0.01 gap0.0020	2	K	E	0.012899	0.010872	Cylinder
+6700	wrapRings|C06|n5 extra0.02 gap0.0040	2	K	E	0.021249	0.019209	Cylinder
+6715	wrapRings|C06|n5 extra0.04 gap0.0060	2	K	E	0.029599	0.017738	Cylinder
+6728	pommelInBlock|C06|housing unrot cap0.0225	1	K	E	0.022500	0.013208	Ball
+6746	pommelInBlock|C06|housing xy30 cap0.0200	1	K	E	0.020000	0.010436	Ball
+6764	pommelInBlock|C06|housing r47 cap0.0175	1	K	E	0.017500	0.007990	Ball
+6781	wedgeInGuard|C06|Wedge 0.12 0.12 0.16 spin0 height0.030	11	K	E	0.015223	0.015225	Wedge
+6840	wedgeInGuard|C06|CornerWedge 0.12 0.12 0.16 spin0 height0.020	11	K	E	0.000250	0.000275	CornerWedge
+6843	wedgeInGuard|C06|CornerWedge 0.12 0.12 0.16 spin0 height0.075	11	K	E	0.003850	0.003871	CornerWedge
+6850	wedgeInGuard|C06|CornerWedge 0.12 0.12 0.16 spin30 height0.020	11	K	E	0.000250	0.000275	CornerWedge
+6853	wedgeInGuard|C06|CornerWedge 0.12 0.12 0.16 spin30 height0.075	11	K	E	0.003850	0.003871	CornerWedge
+6863	wedgeInGuard|C06|CornerWedge 0.20 0.15 0.10 spin0 height0.075	11	K	E	0.004000	0.004084	CornerWedge
+6873	wedgeInGuard|C06|CornerWedge 0.20 0.15 0.10 spin30 height0.075	11	K	E	0.004000	0.004084	CornerWedge
+6920	rod|C06|grip Cylinder d0.04 poke-0.0020	11	K	E	0.000000	0.000000	Cylinder
+6950	rod|C06|guard Block d0.06 poke-0.0020	11	K	E	0.000000	0.000000	Block
+6980	ballRivet|C09|guardZ d0.08 unrot cap0.0050	19	K	E	0.005000	0.000652	Ball
+6983	ballRivet|C09|guardZ d0.08 unrot cap0.0175	19	K	E	0.017500	0.007989	Ball
+6986	ballRivet|C09|guardZ d0.08 unrot cap0.0250	19	K	E	0.025000	0.016305	Ball
+7001	ballRivet|C09|guardZ d0.08 z45 cap0.0150	19	K	E	0.015000	0.005869	Ball
+7004	ballRivet|C09|guardZ d0.08 z45 cap0.0225	19	K	E	0.022500	0.013207	Ball
+7019	ballRivet|C09|guardZ d0.08 xy30 cap0.0100	19	K	E	0.010050	0.002608	Ball
+7022	ballRivet|C09|guardZ d0.08 xy30 cap0.0200	19	K	E	0.020000	0.010435	Ball
+7037	ballRivet|C09|guardZ d0.08 r47 cap0.0050	19	K	E	0.005000	0.000652	Ball
+7040	ballRivet|C09|guardZ d0.08 r47 cap0.0175	19	K	E	0.017400	0.007989	Ball
+7043	ballRivet|C09|guardZ d0.08 r47 cap0.0250	19	K	E	0.024950	0.016305	Ball
+7058	ballRivet|C09|guardZ d0.10 unrot cap0.0150	19	K	E	0.015000	0.005869	Ball
+7061	ballRivet|C09|guardZ d0.10 unrot cap0.0225	19	K	E	0.022500	0.013207	Ball
+7076	ballRivet|C09|guardZ d0.10 z45 cap0.0100	19	K	E	0.010000	0.002608	Ball
+7079	ballRivet|C09|guardZ d0.10 z45 cap0.0200	19	K	E	0.020000	0.010435	Ball
+7094	ballRivet|C09|guardZ d0.10 xy30 cap0.0050	19	K	E	0.004925	0.000652	Ball
+7097	ballRivet|C09|guardZ d0.10 xy30 cap0.0175	19	K	E	0.017525	0.007989	Ball
+7100	ballRivet|C09|guardZ d0.10 xy30 cap0.0250	19	K	E	0.025050	0.016305	Ball
+7115	ballRivet|C09|guardZ d0.10 r47 cap0.0150	19	K	E	0.014900	0.005869	Ball
+7118	ballRivet|C09|guardZ d0.10 r47 cap0.0225	19	K	E	0.022400	0.013207	Ball
+7151	ballRivet|C09|guardZ d0.14 z45 cap0.0050	19	K	E	0.029425	0.019309	Ball
+7208	ballRivet|C09|guardX d0.08 unrot cap0.0050	19	K	E	0.000000	0.000000	Ball
+7214	ballRivet|C09|guardX d0.08 unrot cap0.0250	19	K	E	0.000000	0.000000	Ball
+7220	ballRivet|C09|guardX d0.08 unrot cap0.0900	19	K	E	0.000000	0.000000	Ball
+7226	ballRivet|C09|guardX d0.08 unrot cap0.3000	19	K	E	0.000000	0.000000	Ball
+7232	ballRivet|C09|guardX d0.08 z45 cap0.0225	19	K	E	0.000000	0.000000	Ball
+7238	ballRivet|C09|guardX d0.08 z45 cap0.0750	19	K	E	0.000000	0.000000	Ball
+7244	ballRivet|C09|guardX d0.08 z45 cap0.2500	19	K	E	0.000000	0.000000	Ball
+7250	ballRivet|C09|guardX d0.08 xy30 cap0.0200	19	K	E	0.000000	0.000000	Ball
+7256	ballRivet|C09|guardX d0.08 xy30 cap0.0600	19	K	E	0.000000	0.000000	Ball
+7262	ballRivet|C09|guardX d0.08 xy30 cap0.2000	19	K	E	0.000000	0.000000	Ball
+7268	ballRivet|C09|guardX d0.08 r47 cap0.0175	19	K	E	0.000000	0.000000	Ball
+7274	ballRivet|C09|guardX d0.08 r47 cap0.0500	19	K	E	0.000000	0.000000	Ball
+7280	ballRivet|C09|guardX d0.08 r47 cap0.1500	19	K	E	0.000000	0.000000	Ball
+7286	ballRivet|C09|guardX d0.10 unrot cap0.0150	19	K	E	0.000000	0.000000	Ball
+7292	ballRivet|C09|guardX d0.10 unrot cap0.0400	19	K	E	0.000000	0.000000	Ball
+7298	ballRivet|C09|guardX d0.10 unrot cap0.1250	19	K	E	0.000000	0.000000	Ball
+7304	ballRivet|C09|guardX d0.10 z45 cap0.0100	19	K	E	0.000000	0.000000	Ball
+7310	ballRivet|C09|guardX d0.10 z45 cap0.0300	19	K	E	0.000000	0.000000	Ball
+7316	ballRivet|C09|guardX d0.10 z45 cap0.1000	19	K	E	0.000000	0.000000	Ball
+7322	ballRivet|C09|guardX d0.10 xy30 cap0.0050	19	K	E	0.000000	0.000000	Ball
+7328	ballRivet|C09|guardX d0.10 xy30 cap0.0250	19	K	E	0.000000	0.000000	Ball
+7334	ballRivet|C09|guardX d0.10 xy30 cap0.0900	19	K	E	0.000000	0.000000	Ball
+7340	ballRivet|C09|guardX d0.10 xy30 cap0.3000	19	K	E	0.011350	0.008200	Ball
+7346	ballRivet|C09|guardX d0.10 r47 cap0.0225	19	K	E	0.000000	0.000000	Ball
+7352	ballRivet|C09|guardX d0.10 r47 cap0.0750	19	K	E	0.000000	0.000000	Ball
+7358	ballRivet|C09|guardX d0.10 r47 cap0.2500	19	K	E	0.005025	0.002013	Ball
+7364	ballRivet|C09|guardX d0.14 unrot cap0.0200	19	K	E	0.000000	0.000000	Ball
+7370	ballRivet|C09|guardX d0.14 unrot cap0.0600	19	K	E	0.000000	0.000000	Ball
+7376	ballRivet|C09|guardX d0.14 unrot cap0.2000	19	K	E	0.018950	0.013810	Ball
+7384	ballRivet|C09|guardX d0.14 z45 cap0.0225	19	K	E	0.000000	0.000000	Ball
+7390	ballRivet|C09|guardX d0.14 z45 cap0.0750	19	K	E	0.000000	0.000000	Ball
+7398	ballRivet|C09|guardX d0.14 xy30 cap0.0050	19	K	E	0.000000	0.000000	Ball
+7404	ballRivet|C09|guardX d0.14 xy30 cap0.0250	19	K	E	0.000000	0.000000	Ball
+7410	ballRivet|C09|guardX d0.14 xy30 cap0.0900	19	K	E	0.000200	0.000000	Ball
+7418	ballRivet|C09|guardX d0.14 r47 cap0.0100	19	K	E	0.000000	0.000000	Ball
+7424	ballRivet|C09|guardX d0.14 r47 cap0.0300	19	K	E	0.000000	0.000000	Ball
+7430	ballRivet|C09|guardX d0.14 r47 cap0.1000	19	K	E	0.001100	0.000000	Ball
+7688	cylRivet|C09|guard r0.03 tilt20 poke0.0000	19	K	E	0.009460	0.009295	Cylinder
+7798	cylRivet|C09|blade r0.05 tilt0 poke0.0000	20	K	E	0.000000	0.000000	Cylinder
+7914	cylRib|C09|blade r0.03 psi11.25 height0.002	19	K	E	0.028025	0.012802	Cylinder
+8070	cylRib|C09|guard r0.03 psi11.25 height0.002	19	K	E	0.025300	0.011568	Cylinder
+8148	cylRib|C09|guard r0.08 psi11.25 height0.002	19	K	E	0.021375	0.009780	Cylinder
+8178	plateEdge|C09|blade w0.5 k0.6 l0.6 poke0.0030	19	K	E	0.000000	0.000000	Block
+8184	plateEdge|C09|blade w0.5 k0.6 l0.6 poke0.0200	19	K	E	0.000000	0.000003	Block
+8193	plateEdge|C09|blade w0.5 k0.6 l0.8 poke0.0050	19	K	E	0.000000	0.000000	Block
+8202	plateEdge|C09|blade w0.5 k0.6 l1.0 poke-0.0050	19	K	E	0.000000	0.000000	Block
+8208	plateEdge|C09|blade w0.5 k0.6 l1.0 poke0.0075	19	K	E	0.000000	0.000000	Block
+8217	plateEdge|C09|blade w0.5 k0.8 l0.6 poke0.0000	19	K	E	0.000000	0.000000	Block
+8223	plateEdge|C09|blade w0.5 k0.8 l0.6 poke0.0100	19	K	E	0.000000	0.000003	Block
+8235	plateEdge|C09|blade w0.5 k0.8 l0.8 poke0.0050	19	K	E	0.000000	0.000000	Block
+8247	plateEdge|C09|blade w0.5 k0.8 l1.0 poke0.0020	19	K	E	0.000000	0.000000	Block
+8259	plateEdge|C09|blade w0.8 k0.6 l0.6 poke0.0000	19	K	E	0.000000	0.000000	Block
+8265	plateEdge|C09|blade w0.8 k0.6 l0.6 poke0.0100	19	K	E	0.000000	0.000000	Block
+8274	plateEdge|C09|blade w0.8 k0.6 l0.8 poke0.0010	19	K	E	0.000000	0.000000	Block
+8280	plateEdge|C09|blade w0.8 k0.6 l0.8 poke0.0125	19	K	E	0.000000	0.000000	Block
+8289	plateEdge|C09|blade w0.8 k0.6 l1.0 poke0.0020	19	K	E	0.000000	0.000000	Block
+8295	plateEdge|C09|blade w0.8 k0.6 l1.0 poke0.0150	19	K	E	0.000000	0.000000	Block
+8304	plateEdge|C09|blade w0.8 k0.8 l0.6 poke0.0030	19	K	E	0.000000	0.000000	Block
+8316	plateEdge|C09|blade w0.8 k0.8 l0.8 poke0.0010	19	K	E	0.000000	0.000000	Block
+8328	plateEdge|C09|blade w0.8 k0.8 l1.0 poke-0.0050	19	K	E	0.000000	0.000000	Block
+8334	plateEdge|C09|blade w0.8 k0.8 l1.0 poke0.0075	19	K	E	0.000000	0.000000	Block
+8346	plateEdge|C09|blade w1.0 k0.6 l0.6 poke0.0030	19	K	E	0.000000	0.000000	Block
+8352	plateEdge|C09|blade w1.0 k0.6 l0.6 poke0.0200	19	K	E	0.000000	0.000002	Block
+8361	plateEdge|C09|blade w1.0 k0.6 l0.8 poke0.0050	19	K	E	0.000000	0.000000	Block
+8370	plateEdge|C09|blade w1.0 k0.6 l1.0 poke-0.0050	19	K	E	0.000000	0.000000	Block
+8376	plateEdge|C09|blade w1.0 k0.6 l1.0 poke0.0075	19	K	E	0.000000	0.000000	Block
+8385	plateEdge|C09|blade w1.0 k0.8 l0.6 poke0.0000	19	K	E	0.000000	0.000000	Block
+8391	plateEdge|C09|blade w1.0 k0.8 l0.6 poke0.0100	19	K	E	0.000000	0.000002	Block
+8403	plateEdge|C09|blade w1.0 k0.8 l0.8 poke0.0050	19	K	E	0.000000	0.000000	Block
+8415	plateEdge|C09|blade w1.0 k0.8 l1.0 poke0.0020	19	K	E	0.000000	0.000000	Block
+8427	plateEdge|C09|guard w0.5 k0.6 l0.6 poke0.0000	19	K	E	0.000000	0.000000	Block
+8469	plateEdge|C09|guard w0.5 k0.8 l0.6 poke0.0000	19	K	E	0.000000	0.000000	Block
+8511	plateEdge|C09|guard w0.8 k0.6 l0.6 poke0.0000	19	K	E	0.000000	0.000000	Block
+8553	plateEdge|C09|guard w0.8 k0.8 l0.6 poke0.0000	19	K	E	0.000000	0.000000	Block
+8609	plateEdge|C09|guard w1.0 k0.6 l0.8 poke0.0000	19	K	E	0.000000	0.000000	Block
+8696	plateTilt|C09|tilt2 poke0.000	19	K	E	0.000000	0.000000	Block
+8721	bevel|C09|a0.02 b0.03 height0.030	20	K	E	0.019474	0.019475	Wedge
+8742	bevel|C09|a0.02 b0.08 height0.020	20	K	E	0.011199	0.011182	Wedge
+8764	bevel|C09|a0.03 b0.05 height0.020	20	K	E	0.012699	0.012702	Wedge
+8776	bevel|C09|a0.03 b0.08 height0.030	20	K	E	0.017574	0.017617	Wedge
+8808	bevel|C09|a0.05 b0.08 height0.020	20	K	E	0.012749	0.012759	Wedge
+8845	wrapRings|C09|n3 extra0.04 gap0.0010	4	K	E	0.000000	0.000000	Cylinder
+8846	wrapRings|C09|n3 extra0.04 gap0.0020	6	K	E	0.000000	0.000000	Cylinder
+8848	wrapRings|C09|n3 extra0.04 gap0.0040	4	K	E	0.000000	0.000000	Cylinder
+8850	wrapRings|C09|n3 extra0.04 gap0.0060	4	K	E	0.000000	0.000000	Cylinder
+8852	wrapRings|C09|n3 extra0.04 gap0.0100	4	K	E	0.000000	0.000000	Cylinder
+8854	wrapRings|C09|n3 extra0.04 gap0.0150	4	K	E	0.000000	0.000000	Cylinder
+8856	wrapRings|C09|n3 extra0.04 gap0.0300	4	K	E	0.000000	0.000000	Cylinder
+8858	wrapRings|C09|n4 extra0.01 gap0.0010	3	K	E	0.020130	0.017985	Cylinder
+8885	wrapRings|C09|n4 extra0.04 gap0.0020	3	K	E	0.022230	0.015933	Cylinder
+8886	wrapRings|C09|n4 extra0.04 gap0.0030	6	K	E	0.000000	0.000000	Cylinder
+8889	wrapRings|C09|n4 extra0.04 gap0.0060	4	K	E	0.000000	0.000000	Cylinder
+8892	wrapRings|C09|n4 extra0.04 gap0.0125	4	K	E	0.000000	0.000000	Cylinder
+8895	wrapRings|C09|n4 extra0.04 gap0.0300	4	K	E	0.000000	0.000000	Cylinder
+8923	wrapRings|C09|n5 extra0.04 gap0.0010	5	K	E	0.000000	0.000000	Cylinder
+8925	wrapRings|C09|n5 extra0.04 gap0.0030	3	K	E	0.024230	0.017261	Cylinder
+8929	wrapRings|C09|n5 extra0.04 gap0.0075	5	K	E	0.000000	0.000000	Cylinder
+8935	wrapRings|C09|n5 extra0.04 gap0.0500	5	K	E	0.000000	0.000000	Cylinder
+8941	pommelInBlock|C09|housing unrot cap0.0225	1	K	E	0.000000	0.000000	Ball
+8955	pommelInBlock|C09|housing xy30 cap0.0050	1	K	E	0.000000	0.000000	Ball
+8961	pommelInBlock|C09|housing xy30 cap0.0250	1	K	E	0.001250	0.000000	Ball
+8975	pommelInBlock|C09|housing r47 cap0.0100	1	K	E	0.000000	0.000000	Ball
+8981	pommelInBlock|C09|housing r47 cap0.0300	1	K	E	0.006075	0.000150	Ball
+9064	wedgeInGuard|C09|CornerWedge 0.12 0.12 0.16 spin30 height0.030	19	K	E	0.000950	0.000951	CornerWedge
+9067	wedgeInGuard|C09|CornerWedge 0.12 0.12 0.16 spin30 height0.100	19	K	E	0.009799	0.009857	CornerWedge
+9153	rod|C09|guard Block d0.04 poke-0.0020	19	K	E	0.000000	0.000000	Block
+9175	rod|C09|guard Cylinder d0.04 poke0.0010	19	K	E	0.012325	0.011420	Cylinder
+9193	ballRivet|F1|guardZ d0.08 unrot cap0.0050	6	K	E	0.005000	0.000652	Ball
+9196	ballRivet|F1|guardZ d0.08 unrot cap0.0175	6	K	E	0.017500	0.007989	Ball
+9199	ballRivet|F1|guardZ d0.08 unrot cap0.0250	6	K	E	0.025000	0.016305	Ball
+9214	ballRivet|F1|guardZ d0.08 z45 cap0.0150	6	K	E	0.015000	0.005869	Ball
+9217	ballRivet|F1|guardZ d0.08 z45 cap0.0225	6	K	E	0.022500	0.013207	Ball
+9232	ballRivet|F1|guardZ d0.08 xy30 cap0.0100	6	K	E	0.010050	0.002608	Ball
+9235	ballRivet|F1|guardZ d0.08 xy30 cap0.0200	6	K	E	0.020000	0.010435	Ball
+9250	ballRivet|F1|guardZ d0.08 r47 cap0.0050	6	K	E	0.005000	0.000652	Ball
+9253	ballRivet|F1|guardZ d0.08 r47 cap0.0175	6	K	E	0.017400	0.007989	Ball
+9256	ballRivet|F1|guardZ d0.08 r47 cap0.0250	6	K	E	0.024950	0.016305	Ball
+9271	ballRivet|F1|guardZ d0.10 unrot cap0.0150	6	K	E	0.015000	0.005869	Ball
+9274	ballRivet|F1|guardZ d0.10 unrot cap0.0225	6	K	E	0.022500	0.013207	Ball
+9289	ballRivet|F1|guardZ d0.10 z45 cap0.0100	6	K	E	0.010000	0.002608	Ball
+9292	ballRivet|F1|guardZ d0.10 z45 cap0.0200	6	K	E	0.020000	0.010435	Ball
+9307	ballRivet|F1|guardZ d0.10 xy30 cap0.0050	6	K	E	0.004925	0.000652	Ball
+9310	ballRivet|F1|guardZ d0.10 xy30 cap0.0175	6	K	E	0.017525	0.007989	Ball
+9313	ballRivet|F1|guardZ d0.10 xy30 cap0.0250	6	K	E	0.025050	0.016305	Ball
+9328	ballRivet|F1|guardZ d0.10 r47 cap0.0150	6	K	E	0.014900	0.005869	Ball
+9331	ballRivet|F1|guardZ d0.10 r47 cap0.0225	6	K	E	0.022400	0.013207	Ball
+9346	ballRivet|F1|guardZ d0.14 unrot cap0.0100	6	K	E	0.010000	0.002609	Ball
+9349	ballRivet|F1|guardZ d0.14 unrot cap0.0200	6	K	E	0.020000	0.010435	Ball
+9364	ballRivet|F1|guardZ d0.14 z45 cap0.0050	6	K	E	0.005000	0.000652	Ball
+9367	ballRivet|F1|guardZ d0.14 z45 cap0.0175	6	K	E	0.017500	0.007989	Ball
+9370	ballRivet|F1|guardZ d0.14 z45 cap0.0250	6	K	E	0.025000	0.016305	Ball
+9385	ballRivet|F1|guardZ d0.14 xy30 cap0.0150	6	K	E	0.015025	0.005870	Ball
+9388	ballRivet|F1|guardZ d0.14 xy30 cap0.0225	6	K	E	0.022475	0.013207	Ball
+9403	ballRivet|F1|guardZ d0.14 r47 cap0.0100	6	K	E	0.010100	0.002609	Ball
+9406	ballRivet|F1|guardZ d0.14 r47 cap0.0200	6	K	E	0.019875	0.010435	Ball
+9421	ballRivet|F1|guardX d0.08 unrot cap0.0050	6	K	E	0.004975	0.000652	Ball
+9427	ballRivet|F1|guardX d0.08 unrot cap0.0250	6	K	E	0.025050	0.016305	Ball
+9445	ballRivet|F1|guardX d0.08 z45 cap0.0225	6	K	E	0.022425	0.013207	Ball
+9463	ballRivet|F1|guardX d0.08 xy30 cap0.0200	6	K	E	0.019925	0.010435	Ball
+9481	ballRivet|F1|guardX d0.08 r47 cap0.0175	6	K	E	0.017425	0.007989	Ball
+9499	ballRivet|F1|guardX d0.10 unrot cap0.0150	6	K	E	0.015050	0.005869	Ball
+9517	ballRivet|F1|guardX d0.10 z45 cap0.0100	6	K	E	0.009925	0.002608	Ball
+9535	ballRivet|F1|guardX d0.10 xy30 cap0.0050	6	K	E	0.005075	0.000652	Ball
+9541	ballRivet|F1|guardX d0.10 xy30 cap0.0250	6	K	E	0.025075	0.016305	Ball
+9559	ballRivet|F1|guardX d0.10 r47 cap0.0225	6	K	E	0.022375	0.013207	Ball
+9577	ballRivet|F1|guardX d0.14 unrot cap0.0200	6	K	E	0.019975	0.010435	Ball
+9595	ballRivet|F1|guardX d0.14 z45 cap0.0175	6	K	E	0.017475	0.007989	Ball
+9613	ballRivet|F1|guardX d0.14 xy30 cap0.0150	6	K	E	0.015000	0.005870	Ball
+9631	ballRivet|F1|guardX d0.14 r47 cap0.0100	6	K	E	0.010100	0.002609	Ball
+9877	ballRivet|F1|hiltZ d0.10 unrot cap0.0050	6	K	E	0.005000	0.000652	Ball
+9883	ballRivet|F1|hiltZ d0.10 unrot cap0.0250	6	K	E	0.025000	0.016305	Ball
+9901	ballRivet|F1|hiltZ d0.10 z45 cap0.0225	6	K	E	0.022500	0.013207	Ball
+9919	ballRivet|F1|hiltZ d0.10 xy30 cap0.0200	6	K	E	0.020000	0.010435	Ball
+9937	ballRivet|F1|hiltZ d0.10 r47 cap0.0175	6	K	E	0.017400	0.007989	Ball
+9955	ballRivet|F1|hiltZ d0.14 unrot cap0.0150	6	K	E	0.015000	0.005870	Ball
+9973	ballRivet|F1|hiltZ d0.14 z45 cap0.0100	6	K	E	0.010000	0.002609	Ball
+9991	ballRivet|F1|hiltZ d0.14 xy30 cap0.0050	6	K	E	0.004925	0.000652	Ball
+9997	ballRivet|F1|hiltZ d0.14 xy30 cap0.0250	6	K	E	0.025050	0.016305	Ball
+10015	ballRivet|F1|hiltZ d0.14 r47 cap0.0225	6	K	E	0.022400	0.013207	Ball
+10131	cylRivet|F1|guard r0.03 tilt20 poke0.0010	6	K	E	0.014637	0.014429	Cylinder
+10239	cylRivet|F1|blade r0.05 tilt0 poke0.0000	8	K	E	0.000000	0.000000	Cylinder
+10329	cylRib|F1|blade r0.02 psi22.50 height0.002	6	K	E	0.028174	0.012872	Cylinder
+10485	cylRib|F1|guard r0.02 psi22.50 height0.002	6	K	E	0.027750	0.012680	Cylinder
+10563	cylRib|F1|guard r0.05 psi22.50 height0.002	6	K	E	0.026774	0.012246	Cylinder
+10641	cylRib|F1|grip r0.02 psi22.50 height0.002	6	K	E	0.027675	0.012646	Cylinder
+10719	cylRib|F1|grip r0.05 psi22.50 height0.002	6	K	E	0.026600	0.012167	Cylinder
+10785	plateEdge|F1|blade w0.5 k0.6 l0.8 poke-0.0050	6	K	E	0.000000	0.000000	Block
+10827	plateEdge|F1|blade w0.5 k0.8 l0.8 poke-0.0050	6	K	E	0.000000	0.000000	Block
+10869	plateEdge|F1|blade w0.8 k0.6 l0.8 poke-0.0050	6	K	E	0.000000	0.000000	Block
+10911	plateEdge|F1|blade w0.8 k0.8 l0.8 poke-0.0050	6	K	E	0.000000	0.000000	Block
+10968	plateEdge|F1|blade w1.0 k0.6 l1.0 poke0.0000	6	K	E	0.000000	0.000000	Block
+11037	plateEdge|F1|guard w0.5 k0.6 l0.8 poke-0.0050	6	K	E	0.000000	0.000000	Block
+11079	plateEdge|F1|guard w0.5 k0.8 l0.8 poke-0.0050	6	K	E	0.000000	0.000000	Block
+11121	plateEdge|F1|guard w0.8 k0.6 l0.8 poke-0.0050	6	K	E	0.000000	0.000000	Block
+11163	plateEdge|F1|guard w0.8 k0.8 l0.8 poke-0.0050	6	K	E	0.000000	0.000000	Block
+11220	plateEdge|F1|guard w1.0 k0.6 l1.0 poke0.0000	6	K	E	0.000000	0.000000	Block
+11291	plateTilt|F1|tilt4 poke0.000	6	K	E	0.000000	0.000000	Block
+11318	bevel|F1|a0.02 b0.05 height0.020	6	K	E	0.011900	0.011881	Wedge
+11330	bevel|F1|a0.02 b0.08 height0.030	6	K	E	0.016799	0.016781	Wedge
+11352	bevel|F1|a0.03 b0.05 height0.030	6	K	E	0.019099	0.019063	Wedge
+11373	bevel|F1|a0.05 b0.03 height0.020	6	K	E	0.015599	0.015586	Wedge
+11396	bevel|F1|a0.05 b0.08 height0.030	6	K	E	0.019199	0.019153	Wedge
+11407	laminate|F1|k0.02 wf1.0 proud-0.0200 captrue	7	K	E	0.000000	0.000000	Block
+11409	laminate|F1|k0.02 wf1.0 proud-0.0100 captrue	7	K	E	0.000000	0.000000	Block
+11411	laminate|F1|k0.02 wf1.0 proud-0.0050 captrue	7	K	E	0.000000	0.000000	Block
+11413	laminate|F1|k0.02 wf1.0 proud0.0000 captrue	7	K	E	0.000000	0.000000	Block
+11416	laminate|F1|k0.02 wf1.0 proud0.0050 capfalse	6	K	E	0.000000	0.000000	Block
+11419	laminate|F1|k0.02 wf1.0 proud0.0075 captrue	6	K	E	0.000000	0.000000	Block
+11422	laminate|F1|k0.02 wf1.0 proud0.0150 capfalse	6	K	E	0.000000	0.000000	Block
+11425	laminate|F1|k0.02 wf1.0 proud0.0200 captrue	6	K	E	0.000000	0.000000	Block
+11470	laminate|F1|k0.03 wf1.0 proud-0.0050 capfalse	8	K	E	0.000000	0.000000	Block
+11488	laminate|F1|k0.03 wf1.5 proud-0.0100 capfalse	4	K	E	0.000698	0.000697	Block
+11494	laminate|F1|k0.03 wf1.5 proud0.0030 capfalse	4	K	E	0.000698	0.000697	Block
+11500	laminate|F1|k0.03 wf1.5 proud0.0100 capfalse	4	K	E	0.000698	0.000697	Block
+11506	laminate|F1|k0.03 wf2.0 proud-0.0200 capfalse	4	K	E	0.000698	0.000697	Block
+11512	laminate|F1|k0.03 wf2.0 proud0.0000 capfalse	4	K	E	0.000698	0.000692	Block
+11518	laminate|F1|k0.03 wf2.0 proud0.0075 capfalse	4	K	E	0.000698	0.000692	Block
+11524	laminate|F1|k0.03 wf2.0 proud0.0200 capfalse	4	K	E	0.000698	0.000692	Block
+11647	pommelInBlock|F1|housing unrot cap0.0200	1	K	E	0.020075	0.010436	Ball
+11665	pommelInBlock|F1|housing xy30 cap0.0175	1	K	E	0.017425	0.007990	Ball
+11683	pommelInBlock|F1|housing r47 cap0.0150	1	K	E	0.015050	0.005870	Ball
+11700	wedgeInGuard|F1|Wedge 0.12 0.12 0.16 spin0 height0.020	7	K	E	0.010049	0.010100	Wedge
+11711	wedgeInGuard|F1|Wedge 0.12 0.12 0.16 spin30 height0.030	7	K	E	0.015223	0.015225	Wedge
+11730	wedgeInGuard|F1|Wedge 0.20 0.15 0.10 spin30 height0.020	7	K	E	0.013125	0.013132	Wedge
+11761	wedgeInGuard|F1|CornerWedge 0.12 0.12 0.16 spin0 height0.030	7	K	E	0.000625	0.000619	CornerWedge
+11764	wedgeInGuard|F1|CornerWedge 0.12 0.12 0.16 spin0 height0.100	7	K	E	0.006849	0.006882	CornerWedge
+11771	wedgeInGuard|F1|CornerWedge 0.12 0.12 0.16 spin30 height0.030	7	K	E	0.000625	0.000619	CornerWedge
+11774	wedgeInGuard|F1|CornerWedge 0.12 0.12 0.16 spin30 height0.100	7	K	E	0.006849	0.006882	CornerWedge
+11781	wedgeInGuard|F1|CornerWedge 0.20 0.15 0.10 spin0 height0.030	7	K	E	0.000600	0.000653	CornerWedge
+11784	wedgeInGuard|F1|CornerWedge 0.20 0.15 0.10 spin0 height0.100	7	K	E	0.007174	0.007261	CornerWedge
+11791	wedgeInGuard|F1|CornerWedge 0.20 0.15 0.10 spin30 height0.030	7	K	E	0.000600	0.000653	CornerWedge
+11794	wedgeInGuard|F1|CornerWedge 0.20 0.15 0.10 spin30 height0.100	7	K	E	0.007174	0.007261	CornerWedge
+11831	rod|F1|grip Block d0.06 poke0.0000	6	K	E	0.000000	0.000000	Block
+11861	rod|F1|guard Block d0.04 poke0.0000	6	K	E	0.000000	0.000000	Block
+11891	rod|F1|guard Cylinder d0.06 poke0.0000	6	K	E	0.000000	0.000000	Cylinder
+11902	ballRivet|F2|guardZ d0.08 unrot cap0.0150	6	K	E	0.015000	0.005869	Ball
+11905	ballRivet|F2|guardZ d0.08 unrot cap0.0225	6	K	E	0.022500	0.013207	Ball
+11920	ballRivet|F2|guardZ d0.08 z45 cap0.0100	6	K	E	0.010000	0.002608	Ball
+11923	ballRivet|F2|guardZ d0.08 z45 cap0.0200	6	K	E	0.020000	0.010435	Ball
+11938	ballRivet|F2|guardZ d0.08 xy30 cap0.0050	6	K	E	0.004900	0.000652	Ball
+11941	ballRivet|F2|guardZ d0.08 xy30 cap0.0175	6	K	E	0.017525	0.007989	Ball
+11944	ballRivet|F2|guardZ d0.08 xy30 cap0.0250	6	K	E	0.025050	0.016305	Ball
+11959	ballRivet|F2|guardZ d0.08 r47 cap0.0150	6	K	E	0.014900	0.005869	Ball
+11962	ballRivet|F2|guardZ d0.08 r47 cap0.0225	6	K	E	0.022400	0.013207	Ball
+11977	ballRivet|F2|guardZ d0.10 unrot cap0.0100	6	K	E	0.010000	0.002608	Ball
+11980	ballRivet|F2|guardZ d0.10 unrot cap0.0200	6	K	E	0.020000	0.010435	Ball
+11995	ballRivet|F2|guardZ d0.10 z45 cap0.0050	6	K	E	0.005000	0.000652	Ball
+11998	ballRivet|F2|guardZ d0.10 z45 cap0.0175	6	K	E	0.017500	0.007989	Ball
+12001	ballRivet|F2|guardZ d0.10 z45 cap0.0250	6	K	E	0.025000	0.016305	Ball
+12016	ballRivet|F2|guardZ d0.10 xy30 cap0.0150	6	K	E	0.015025	0.005869	Ball
+12019	ballRivet|F2|guardZ d0.10 xy30 cap0.0225	6	K	E	0.022475	0.013207	Ball
+12034	ballRivet|F2|guardZ d0.10 r47 cap0.0100	6	K	E	0.010100	0.002608	Ball
+12037	ballRivet|F2|guardZ d0.10 r47 cap0.0200	6	K	E	0.019875	0.010435	Ball
+12052	ballRivet|F2|guardZ d0.14 unrot cap0.0050	6	K	E	0.005000	0.000652	Ball
+12055	ballRivet|F2|guardZ d0.14 unrot cap0.0175	6	K	E	0.017500	0.007989	Ball
+12058	ballRivet|F2|guardZ d0.14 unrot cap0.0250	6	K	E	0.025000	0.016305	Ball
+12073	ballRivet|F2|guardZ d0.14 z45 cap0.0150	6	K	E	0.015000	0.005870	Ball
+12076	ballRivet|F2|guardZ d0.14 z45 cap0.0225	6	K	E	0.022500	0.013207	Ball
+12091	ballRivet|F2|guardZ d0.14 xy30 cap0.0100	6	K	E	0.010050	0.002609	Ball
+12094	ballRivet|F2|guardZ d0.14 xy30 cap0.0200	6	K	E	0.020000	0.010435	Ball
+12109	ballRivet|F2|guardZ d0.14 r47 cap0.0050	6	K	E	0.005000	0.000652	Ball
+12112	ballRivet|F2|guardZ d0.14 r47 cap0.0175	6	K	E	0.017400	0.007989	Ball
+12115	ballRivet|F2|guardZ d0.14 r47 cap0.0250	6	K	E	0.024950	0.016305	Ball
+12133	ballRivet|F2|guardX d0.08 unrot cap0.0225	5	K	E	0.022500	0.013207	Ball
+12151	ballRivet|F2|guardX d0.08 z45 cap0.0200	5	K	E	0.020025	0.010435	Ball
+12169	ballRivet|F2|guardX d0.08 xy30 cap0.0175	5	K	E	0.017450	0.007989	Ball
+12187	ballRivet|F2|guardX d0.08 r47 cap0.0150	5	K	E	0.015000	0.005869	Ball
+12205	ballRivet|F2|guardX d0.10 unrot cap0.0100	5	K	E	0.010100	0.002608	Ball
+12223	ballRivet|F2|guardX d0.10 z45 cap0.0050	5	K	E	0.005000	0.000652	Ball
+12229	ballRivet|F2|guardX d0.10 z45 cap0.0250	5	K	E	0.024975	0.016305	Ball
+12247	ballRivet|F2|guardX d0.10 xy30 cap0.0225	5	K	E	0.022525	0.013207	Ball
+12265	ballRivet|F2|guardX d0.10 r47 cap0.0200	5	K	E	0.019925	0.010435	Ball
+12283	ballRivet|F2|guardX d0.14 unrot cap0.0175	5	K	E	0.017550	0.007989	Ball
+12301	ballRivet|F2|guardX d0.14 z45 cap0.0150	5	K	E	0.015050	0.005870	Ball
+12319	ballRivet|F2|guardX d0.14 xy30 cap0.0100	5	K	E	0.010100	0.002609	Ball
+12337	ballRivet|F2|guardX d0.14 r47 cap0.0050	5	K	E	0.004975	0.000652	Ball
+12343	ballRivet|F2|guardX d0.14 r47 cap0.0250	5	K	E	0.024950	0.016305	Ball
+12357	ballRivet|F2|bladeZ d0.08 unrot cap0.0100	7	K	E	0.010000	0.002608	Ball
+12359	ballRivet|F2|bladeZ d0.08 unrot cap0.0175	7	K	E	0.017500	0.007989	Ball
+12361	ballRivet|F2|bladeZ d0.08 unrot cap0.0225	7	K	E	0.022500	0.013207	Ball
+12375	ballRivet|F2|bladeZ d0.08 z45 cap0.0050	7	K	E	0.005000	0.000652	Ball
+12377	ballRivet|F2|bladeZ d0.08 z45 cap0.0150	7	K	E	0.015000	0.005869	Ball
+12379	ballRivet|F2|bladeZ d0.08 z45 cap0.0200	7	K	E	0.020000	0.010435	Ball
+12381	ballRivet|F2|bladeZ d0.08 z45 cap0.0250	7	K	E	0.025000	0.016305	Ball
+12395	ballRivet|F2|bladeZ d0.08 xy30 cap0.0100	7	K	E	0.010050	0.002608	Ball
+12397	ballRivet|F2|bladeZ d0.08 xy30 cap0.0175	7	K	E	0.017525	0.007989	Ball
+12399	ballRivet|F2|bladeZ d0.08 xy30 cap0.0225	7	K	E	0.022475	0.013207	Ball
+12413	ballRivet|F2|bladeZ d0.08 r47 cap0.0050	7	K	E	0.005000	0.000652	Ball
+12415	ballRivet|F2|bladeZ d0.08 r47 cap0.0150	7	K	E	0.014900	0.005869	Ball
+12417	ballRivet|F2|bladeZ d0.08 r47 cap0.0200	7	K	E	0.019875	0.010435	Ball
+12419	ballRivet|F2|bladeZ d0.08 r47 cap0.0250	7	K	E	0.024950	0.016305	Ball
+12589	ballRivet|F2|hiltZ d0.10 unrot cap0.0225	5	K	E	0.022500	0.013207	Ball
+12607	ballRivet|F2|hiltZ d0.10 z45 cap0.0200	5	K	E	0.020000	0.010435	Ball
+12625	ballRivet|F2|hiltZ d0.10 xy30 cap0.0175	5	K	E	0.017525	0.007989	Ball
+12643	ballRivet|F2|hiltZ d0.10 r47 cap0.0150	5	K	E	0.014900	0.005869	Ball
+12661	ballRivet|F2|hiltZ d0.14 unrot cap0.0100	5	K	E	0.010000	0.002609	Ball
+12679	ballRivet|F2|hiltZ d0.14 z45 cap0.0050	5	K	E	0.005000	0.000652	Ball
+12685	ballRivet|F2|hiltZ d0.14 z45 cap0.0250	5	K	E	0.025000	0.016305	Ball
+12703	ballRivet|F2|hiltZ d0.14 xy30 cap0.0225	5	K	E	0.022475	0.013207	Ball
+12721	ballRivet|F2|hiltZ d0.14 r47 cap0.0200	5	K	E	0.019875	0.010435	Ball
+12739	ballRivet|F2|hiltZ d0.20 unrot cap0.0175	5	K	E	0.017500	0.007990	Ball
+12757	ballRivet|F2|hiltZ d0.20 z45 cap0.0150	5	K	E	0.015000	0.005870	Ball
+12775	ballRivet|F2|hiltZ d0.20 xy30 cap0.0100	5	K	E	0.010050	0.002609	Ball
+12793	ballRivet|F2|hiltZ d0.20 r47 cap0.0050	5	K	E	0.005000	0.000652	Ball
+12799	ballRivet|F2|hiltZ d0.20 r47 cap0.0250	5	K	E	0.024950	0.016306	Ball
+12913	cylRivet|F2|blade r0.03 tilt0 poke0.0000	7	K	E	0.000000	0.000000	Cylinder
+12979	cylRivet|F2|blade r0.08 tilt0 poke0.0000	7	K	E	0.000000	0.000000	Cylinder
+13075	cylRib|F2|blade r0.03 psi22.50 height0.002	5	K	E	0.028000	0.012802	Cylinder
+13231	cylRib|F2|guard r0.03 psi22.50 height0.002	5	K	E	0.027175	0.012423	Cylinder
+13309	cylRib|F2|guard r0.08 psi22.50 height0.002	5	K	E	0.025474	0.011574	Cylinder
+13387	cylRib|F2|grip r0.03 psi22.50 height0.002	5	K	E	0.027424	0.012534	Cylinder
+13465	cylRib|F2|grip r0.08 psi22.50 height0.002	5	K	E	0.025925	0.011834	Cylinder
+13507	plateEdge|F2|blade w0.5 k0.6 l1.0 poke0.0000	5	K	E	0.000000	0.000000	Block
+13549	plateEdge|F2|blade w0.5 k0.8 l1.0 poke0.0000	5	K	E	0.000000	0.000000	Block
+13591	plateEdge|F2|blade w0.8 k0.6 l1.0 poke0.0000	5	K	E	0.000000	0.000000	Block
+13633	plateEdge|F2|blade w0.8 k0.8 l1.0 poke0.0000	5	K	E	0.000000	0.000000	Block
+13717	plateEdge|F2|blade w1.0 k0.8 l1.0 poke0.0000	5	K	E	0.000000	0.000000	Block
+13759	plateEdge|F2|guard w0.5 k0.6 l1.0 poke0.0000	5	K	E	0.000000	0.000000	Block
+13801	plateEdge|F2|guard w0.5 k0.8 l1.0 poke0.0000	5	K	E	0.000000	0.000000	Block
+13843	plateEdge|F2|guard w0.8 k0.6 l1.0 poke0.0000	5	K	E	0.000000	0.000000	Block
+13885	plateEdge|F2|guard w0.8 k0.8 l1.0 poke0.0000	5	K	E	0.000000	0.000000	Block
+13969	plateEdge|F2|guard w1.0 k0.8 l1.0 poke0.0000	5	K	E	0.000000	0.000000	Block
+14014	bevel|F2|a0.02 b0.03 height0.020	6	K	E	0.012999	0.012981	Wedge
+14026	bevel|F2|a0.02 b0.05 height0.030	6	K	E	0.017800	0.017819	Wedge
+14047	bevel|F2|a0.03 b0.03 height0.020	6	K	E	0.014074	0.014081	Wedge
+14069	bevel|F2|a0.03 b0.08 height0.020	6	K	E	0.011724	0.011743	Wedge
+14091	bevel|F2|a0.05 b0.05 height0.020	6	K	E	0.014049	0.014043	Wedge
+14113	laminate|F2|k0.02 wf1.0 proud-0.0200 capfalse	6	K	E	0.000000	0.000000	Block
+14115	laminate|F2|k0.02 wf1.0 proud-0.0100 capfalse	6	K	E	0.000000	0.000000	Block
+14117	laminate|F2|k0.02 wf1.0 proud-0.0050 capfalse	6	K	E	0.000000	0.000000	Block
+14119	laminate|F2|k0.02 wf1.0 proud0.0000 capfalse	6	K	E	0.000000	0.000000	Block
+14121	laminate|F2|k0.02 wf1.0 proud0.0030 capfalse	6	K	E	0.000000	0.000000	Block
+14124	laminate|F2|k0.02 wf1.0 proud0.0050 captrue	6	K	E	0.000000	0.000000	Block
+14127	laminate|F2|k0.02 wf1.0 proud0.0100 capfalse	6	K	E	0.000000	0.000000	Block
+14130	laminate|F2|k0.02 wf1.0 proud0.0150 captrue	6	K	E	0.000000	0.000000	Block
+14173	laminate|F2|k0.03 wf1.0 proud-0.0200 capfalse	6	K	E	0.000000	0.000000	Block
+14175	laminate|F2|k0.03 wf1.0 proud-0.0100 capfalse	6	K	E	0.000000	0.000000	Block
+14177	laminate|F2|k0.03 wf1.0 proud-0.0050 capfalse	6	K	E	0.000000	0.000000	Block
+14179	laminate|F2|k0.03 wf1.0 proud0.0000 capfalse	6	K	E	0.000000	0.000000	Block
+14181	laminate|F2|k0.03 wf1.0 proud0.0030 capfalse	6	K	E	0.000000	0.000000	Block
+14184	laminate|F2|k0.03 wf1.0 proud0.0050 captrue	6	K	E	0.000000	0.000000	Block
+14187	laminate|F2|k0.03 wf1.0 proud0.0100 capfalse	6	K	E	0.000000	0.000000	Block
+14190	laminate|F2|k0.03 wf1.0 proud0.0150 captrue	6	K	E	0.000000	0.000000	Block
+14234	wrapRings|F2|n3 extra0.01 gap0.0020	2	K	E	0.003600	0.003637	Block
+14240	wrapRings|F2|n3 extra0.01 gap0.0100	2	K	E	0.018200	0.018182	Block
+14251	wrapRings|F2|n3 extra0.02 gap0.0060	2	K	E	0.010900	0.010910	Block
+14262	wrapRings|F2|n3 extra0.04 gap0.0040	2	K	E	0.007250	0.007272	Block
+14273	wrapRings|F2|n4 extra0.01 gap0.0020	2	K	E	0.005600	0.005455	Block
+14286	wrapRings|F2|n4 extra0.02 gap0.0020	2	K	E	0.005600	0.005455	Block
+14299	wrapRings|F2|n4 extra0.04 gap0.0020	2	K	E	0.005600	0.005454	Block
+14312	wrapRings|F2|n5 extra0.01 gap0.0020	2	K	E	0.007350	0.007274	Block
+14326	wrapRings|F2|n5 extra0.02 gap0.0030	2	K	E	0.010950	0.010910	Block
+14340	wrapRings|F2|n5 extra0.04 gap0.0040	2	K	E	0.014400	0.014545	Block
+14354	pommelInBlock|F2|nut unrot cap0.0200	5	K	E	0.020075	0.010436	Ball
+14370	pommelInBlock|F2|nut xy30 cap0.0175	5	K	E	0.017425	0.007990	Ball
+14386	pommelInBlock|F2|nut r47 cap0.0150	5	K	E	0.015050	0.005870	Ball
+14401	wedgeInGuard|F2|Wedge 0.12 0.12 0.16 spin0 height0.020	6	K	E	0.010049	0.010100	Wedge
+14412	wedgeInGuard|F2|Wedge 0.12 0.12 0.16 spin30 height0.030	6	K	E	0.015224	0.015225	Wedge
+14431	wedgeInGuard|F2|Wedge 0.20 0.15 0.10 spin30 height0.020	6	K	E	0.013125	0.013132	Wedge
+14462	wedgeInGuard|F2|CornerWedge 0.12 0.12 0.16 spin0 height0.030	6	K	E	0.000625	0.000619	CornerWedge
+14465	wedgeInGuard|F2|CornerWedge 0.12 0.12 0.16 spin0 height0.100	6	K	E	0.006849	0.006882	CornerWedge
+14472	wedgeInGuard|F2|CornerWedge 0.12 0.12 0.16 spin30 height0.030	6	K	E	0.000625	0.000619	CornerWedge
+14475	wedgeInGuard|F2|CornerWedge 0.12 0.12 0.16 spin30 height0.100	6	K	E	0.006849	0.006882	CornerWedge
+14482	wedgeInGuard|F2|CornerWedge 0.20 0.15 0.10 spin0 height0.030	6	K	E	0.000600	0.000653	CornerWedge
+14485	wedgeInGuard|F2|CornerWedge 0.20 0.15 0.10 spin0 height0.100	6	K	E	0.007174	0.007261	CornerWedge
+14492	wedgeInGuard|F2|CornerWedge 0.20 0.15 0.10 spin30 height0.030	6	K	E	0.000600	0.000653	CornerWedge
+14495	wedgeInGuard|F2|CornerWedge 0.20 0.15 0.10 spin30 height0.100	6	K	E	0.007174	0.007261	CornerWedge
+14532	rod|F2|grip Block d0.06 poke0.0000	5	K	E	0.000000	0.000000	Block
+14562	rod|F2|guard Block d0.04 poke0.0000	5	K	E	0.000000	0.000000	Block
+14592	rod|F2|guard Cylinder d0.06 poke0.0000	5	K	E	0.000000	0.000000	Cylinder
+14603	ballRivet|F3|guardZ d0.08 unrot cap0.0150	9	K	E	0.015000	0.005869	Ball
+14606	ballRivet|F3|guardZ d0.08 unrot cap0.0225	9	K	E	0.022500	0.013207	Ball
+14621	ballRivet|F3|guardZ d0.08 z45 cap0.0100	9	K	E	0.010000	0.002608	Ball
+14624	ballRivet|F3|guardZ d0.08 z45 cap0.0200	9	K	E	0.020000	0.010435	Ball
+14639	ballRivet|F3|guardZ d0.08 xy30 cap0.0050	9	K	E	0.004900	0.000652	Ball
+14642	ballRivet|F3|guardZ d0.08 xy30 cap0.0175	9	K	E	0.017525	0.007989	Ball
+14645	ballRivet|F3|guardZ d0.08 xy30 cap0.0250	9	K	E	0.025050	0.016305	Ball
+14660	ballRivet|F3|guardZ d0.08 r47 cap0.0150	9	K	E	0.014900	0.005869	Ball
+14663	ballRivet|F3|guardZ d0.08 r47 cap0.0225	9	K	E	0.022400	0.013207	Ball
+14832	ballRivet|F3|guardX d0.08 unrot cap0.0175	8	K	E	0.000000	0.000000	Ball
+14838	ballRivet|F3|guardX d0.08 unrot cap0.0500	8	K	E	0.000000	0.000000	Ball
+14844	ballRivet|F3|guardX d0.08 unrot cap0.1500	8	K	E	0.000000	0.000000	Ball
+14850	ballRivet|F3|guardX d0.08 z45 cap0.0150	8	K	E	0.000000	0.000000	Ball
+14856	ballRivet|F3|guardX d0.08 z45 cap0.0400	8	K	E	0.000000	0.000000	Ball
+14862	ballRivet|F3|guardX d0.08 z45 cap0.1250	8	K	E	0.000000	0.000000	Ball
+14868	ballRivet|F3|guardX d0.08 xy30 cap0.0100	8	K	E	0.000000	0.000000	Ball
+14874	ballRivet|F3|guardX d0.08 xy30 cap0.0300	8	K	E	0.000000	0.000000	Ball
+14880	ballRivet|F3|guardX d0.08 xy30 cap0.1000	8	K	E	0.000000	0.000000	Ball
+14886	ballRivet|F3|guardX d0.08 r47 cap0.0050	8	K	E	0.000000	0.000000	Ball
+14892	ballRivet|F3|guardX d0.08 r47 cap0.0250	8	K	E	0.000000	0.000000	Ball
+14898	ballRivet|F3|guardX d0.08 r47 cap0.0900	8	K	E	0.000000	0.000000	Ball
+14904	ballRivet|F3|guardX d0.08 r47 cap0.3000	8	K	E	0.000000	0.000000	Ball
+15691	cylRib|F3|guard r0.03 psi11.25 height0.002	8	K	E	0.027350	0.012484	Cylinder
+15823	plateEdge|F3|blade w0.5 k0.6 l1.0 poke-0.0050	8	K	E	0.000000	0.000000	Block
+15865	plateEdge|F3|blade w0.5 k0.8 l1.0 poke-0.0050	8	K	E	0.000000	0.000000	Block
+15907	plateEdge|F3|blade w0.8 k0.6 l1.0 poke-0.0050	8	K	E	0.000000	0.000000	Block
+15949	plateEdge|F3|blade w0.8 k0.8 l1.0 poke-0.0050	8	K	E	0.000000	0.000000	Block
+16020	plateEdge|F3|blade w1.0 k0.8 l0.8 poke0.0000	8	K	E	0.000000	0.000000	Block
+16075	plateEdge|F3|guard w0.5 k0.6 l1.0 poke-0.0050	8	K	E	0.000000	0.000000	Block
+16117	plateEdge|F3|guard w0.5 k0.8 l1.0 poke-0.0050	8	K	E	0.000000	0.000000	Block
+16159	plateEdge|F3|guard w0.8 k0.6 l1.0 poke-0.0050	8	K	E	0.000000	0.000000	Block
+16201	plateEdge|F3|guard w0.8 k0.8 l1.0 poke-0.0050	8	K	E	0.000000	0.000000	Block
+16272	plateEdge|F3|guard w1.0 k0.8 l0.8 poke0.0000	8	K	E	0.000000	0.000000	Block
+16331	bevel|F3|a0.02 b0.03 height0.020	8	K	E	0.013000	0.012994	Wedge
+16343	bevel|F3|a0.02 b0.05 height0.030	8	K	E	0.017824	0.017838	Wedge
+16376	bevel|F3|a0.03 b0.05 height0.030	8	K	E	0.019099	0.019084	Wedge
+16434	laminate|F3|k0.02 wf1.0 proud-0.0050 capfalse	10	K	E	0.000000	0.000000	Block
+16452	laminate|F3|k0.02 wf1.5 proud-0.0100 capfalse	6	K	E	0.000124	0.000136	Block
+16458	laminate|F3|k0.02 wf1.5 proud0.0030 capfalse	6	K	E	0.000124	0.000136	Block
+16464	laminate|F3|k0.02 wf1.5 proud0.0100 capfalse	6	K	E	0.000050	0.000058	Block
+16470	laminate|F3|k0.02 wf2.0 proud-0.0200 capfalse	6	K	E	0.000075	0.000078	Block
+16476	laminate|F3|k0.02 wf2.0 proud0.0000 capfalse	6	K	E	0.000000	0.000000	Block
+16482	laminate|F3|k0.02 wf2.0 proud0.0075 capfalse	6	K	E	0.000000	0.000000	Block
+16488	laminate|F3|k0.02 wf2.0 proud0.0200 capfalse	6	K	E	0.000000	0.000000	Block
+16494	laminate|F3|k0.03 wf1.0 proud-0.0050 capfalse	10	K	E	0.000000	0.000000	Block
+16512	laminate|F3|k0.03 wf1.5 proud-0.0100 capfalse	6	K	E	0.000025	0.000019	Block
+16518	laminate|F3|k0.03 wf1.5 proud0.0030 capfalse	6	K	E	0.000025	0.000019	Block
+16524	laminate|F3|k0.03 wf1.5 proud0.0100 capfalse	6	K	E	0.000025	0.000019	Block
+16530	laminate|F3|k0.03 wf2.0 proud-0.0200 capfalse	6	K	E	0.000000	0.000000	Block
+16536	laminate|F3|k0.03 wf2.0 proud0.0000 capfalse	6	K	E	0.000000	0.000000	Block
+16542	laminate|F3|k0.03 wf2.0 proud0.0075 capfalse	6	K	E	0.000000	0.000000	Block
+16548	laminate|F3|k0.03 wf2.0 proud0.0200 capfalse	6	K	E	0.000000	0.000000	Block
+16576	wrapRings|F3|n3 extra0.04 gap0.0010	2	K	E	0.019251	0.014059	Cylinder
+16602	wrapRings|F3|n4 extra0.02 gap0.0010	2	K	E	0.020351	0.017170	Cylinder
+16641	wrapRings|F3|n5 extra0.02 gap0.0010	2	K	E	0.021301	0.018206	Cylinder
+16669	pommelInBlock|F3|housing unrot cap0.0150	1	K	E	0.014925	0.005870	Ball
+16687	pommelInBlock|F3|housing xy30 cap0.0100	1	K	E	0.009975	0.002609	Ball
+16705	pommelInBlock|F3|housing r47 cap0.0050	1	K	E	0.004975	0.000652	Ball
+16711	pommelInBlock|F3|housing r47 cap0.0250	1	K	E	0.025025	0.016306	Ball
+16885	rod|F3|guard Block d0.04 poke0.0000	8	K	E	0.000000	0.000000	Block
+16915	rod|F3|guard Cylinder d0.06 poke0.0000	8	K	E	0.000000	0.000000	Cylinder
+16926	ballRivet|F4|guardZ d0.08 unrot cap0.0150	7	K	E	0.015000	0.005869	Ball
+16929	ballRivet|F4|guardZ d0.08 unrot cap0.0225	7	K	E	0.022500	0.013207	Ball
+16944	ballRivet|F4|guardZ d0.08 z45 cap0.0100	7	K	E	0.010000	0.002608	Ball
+16947	ballRivet|F4|guardZ d0.08 z45 cap0.0200	7	K	E	0.020000	0.010435	Ball
+16962	ballRivet|F4|guardZ d0.08 xy30 cap0.0050	7	K	E	0.004900	0.000652	Ball
+16965	ballRivet|F4|guardZ d0.08 xy30 cap0.0175	7	K	E	0.017525	0.007989	Ball
+16968	ballRivet|F4|guardZ d0.08 xy30 cap0.0250	7	K	E	0.025050	0.016305	Ball
+16983	ballRivet|F4|guardZ d0.08 r47 cap0.0150	7	K	E	0.014900	0.005869	Ball
+16986	ballRivet|F4|guardZ d0.08 r47 cap0.0225	7	K	E	0.022400	0.013207	Ball
+17001	ballRivet|F4|guardZ d0.10 unrot cap0.0100	7	K	E	0.010000	0.002608	Ball
+17004	ballRivet|F4|guardZ d0.10 unrot cap0.0200	7	K	E	0.020000	0.010435	Ball
+17019	ballRivet|F4|guardZ d0.10 z45 cap0.0050	7	K	E	0.005000	0.000652	Ball
+17022	ballRivet|F4|guardZ d0.10 z45 cap0.0175	7	K	E	0.017500	0.007989	Ball
+17025	ballRivet|F4|guardZ d0.10 z45 cap0.0250	7	K	E	0.025000	0.016305	Ball
+17040	ballRivet|F4|guardZ d0.10 xy30 cap0.0150	7	K	E	0.015025	0.005869	Ball
+17043	ballRivet|F4|guardZ d0.10 xy30 cap0.0225	7	K	E	0.022475	0.013207	Ball
+17058	ballRivet|F4|guardZ d0.10 r47 cap0.0100	7	K	E	0.010100	0.002608	Ball
+17061	ballRivet|F4|guardZ d0.10 r47 cap0.0200	7	K	E	0.019875	0.010435	Ball
+17076	ballRivet|F4|guardZ d0.14 unrot cap0.0050	7	K	E	0.005000	0.000652	Ball
+17079	ballRivet|F4|guardZ d0.14 unrot cap0.0175	7	K	E	0.017500	0.007989	Ball
+17082	ballRivet|F4|guardZ d0.14 unrot cap0.0250	7	K	E	0.025000	0.016305	Ball
+17097	ballRivet|F4|guardZ d0.14 z45 cap0.0150	7	K	E	0.015000	0.005870	Ball
+17100	ballRivet|F4|guardZ d0.14 z45 cap0.0225	7	K	E	0.022500	0.013207	Ball
+17115	ballRivet|F4|guardZ d0.14 xy30 cap0.0100	7	K	E	0.010050	0.002609	Ball
+17118	ballRivet|F4|guardZ d0.14 xy30 cap0.0200	7	K	E	0.020000	0.010435	Ball
+17133	ballRivet|F4|guardZ d0.14 r47 cap0.0050	7	K	E	0.005000	0.000652	Ball
+17136	ballRivet|F4|guardZ d0.14 r47 cap0.0175	7	K	E	0.017400	0.007989	Ball
+17139	ballRivet|F4|guardZ d0.14 r47 cap0.0250	7	K	E	0.024950	0.016305	Ball
+17157	ballRivet|F4|guardX d0.08 unrot cap0.0225	6	K	E	0.022500	0.013207	Ball
+17175	ballRivet|F4|guardX d0.08 z45 cap0.0200	6	K	E	0.020025	0.010435	Ball
+17193	ballRivet|F4|guardX d0.08 xy30 cap0.0175	6	K	E	0.017450	0.007989	Ball
+17211	ballRivet|F4|guardX d0.08 r47 cap0.0150	6	K	E	0.015000	0.005869	Ball
+17229	ballRivet|F4|guardX d0.10 unrot cap0.0100	6	K	E	0.010100	0.002608	Ball
+17247	ballRivet|F4|guardX d0.10 z45 cap0.0050	6	K	E	0.005000	0.000652	Ball
+17253	ballRivet|F4|guardX d0.10 z45 cap0.0250	6	K	E	0.024975	0.016305	Ball
+17271	ballRivet|F4|guardX d0.10 xy30 cap0.0225	6	K	E	0.022525	0.013207	Ball
+17289	ballRivet|F4|guardX d0.10 r47 cap0.0200	6	K	E	0.019925	0.010435	Ball
+17307	ballRivet|F4|guardX d0.14 unrot cap0.0175	6	K	E	0.017550	0.007989	Ball
+17325	ballRivet|F4|guardX d0.14 z45 cap0.0150	6	K	E	0.015050	0.005870	Ball
+17343	ballRivet|F4|guardX d0.14 xy30 cap0.0100	6	K	E	0.010100	0.002609	Ball
+17361	ballRivet|F4|guardX d0.14 r47 cap0.0050	6	K	E	0.004975	0.000652	Ball
+17367	ballRivet|F4|guardX d0.14 r47 cap0.0250	6	K	E	0.024950	0.016305	Ball
+17381	ballRivet|F4|bladeZ d0.08 unrot cap0.0100	8	K	E	0.010000	0.002608	Ball
+17383	ballRivet|F4|bladeZ d0.08 unrot cap0.0175	8	K	E	0.017500	0.007989	Ball
+17385	ballRivet|F4|bladeZ d0.08 unrot cap0.0225	8	K	E	0.022500	0.013207	Ball
+17399	ballRivet|F4|bladeZ d0.08 z45 cap0.0050	8	K	E	0.005000	0.000652	Ball
+17401	ballRivet|F4|bladeZ d0.08 z45 cap0.0150	8	K	E	0.015000	0.005869	Ball
+17403	ballRivet|F4|bladeZ d0.08 z45 cap0.0200	8	K	E	0.020000	0.010435	Ball
+17405	ballRivet|F4|bladeZ d0.08 z45 cap0.0250	8	K	E	0.025000	0.016305	Ball
+17419	ballRivet|F4|bladeZ d0.08 xy30 cap0.0100	8	K	E	0.010050	0.002608	Ball
+17421	ballRivet|F4|bladeZ d0.08 xy30 cap0.0175	8	K	E	0.017525	0.007989	Ball
+17423	ballRivet|F4|bladeZ d0.08 xy30 cap0.0225	8	K	E	0.022475	0.013207	Ball
+17437	ballRivet|F4|bladeZ d0.08 r47 cap0.0050	8	K	E	0.005000	0.000652	Ball
+17439	ballRivet|F4|bladeZ d0.08 r47 cap0.0150	8	K	E	0.014900	0.005869	Ball
+17441	ballRivet|F4|bladeZ d0.08 r47 cap0.0200	8	K	E	0.019875	0.010435	Ball
+17443	ballRivet|F4|bladeZ d0.08 r47 cap0.0250	8	K	E	0.024950	0.016305	Ball
+17457	ballRivet|F4|bladeZ d0.10 unrot cap0.0100	8	K	E	0.010000	0.002608	Ball
+17459	ballRivet|F4|bladeZ d0.10 unrot cap0.0175	8	K	E	0.017500	0.007989	Ball
+17461	ballRivet|F4|bladeZ d0.10 unrot cap0.0225	8	K	E	0.022500	0.013207	Ball
+17475	ballRivet|F4|bladeZ d0.10 z45 cap0.0050	8	K	E	0.005000	0.000652	Ball
+17477	ballRivet|F4|bladeZ d0.10 z45 cap0.0150	8	K	E	0.015000	0.005869	Ball
+17479	ballRivet|F4|bladeZ d0.10 z45 cap0.0200	8	K	E	0.020000	0.010435	Ball
+17481	ballRivet|F4|bladeZ d0.10 z45 cap0.0250	8	K	E	0.025000	0.016305	Ball
+17495	ballRivet|F4|bladeZ d0.10 xy30 cap0.0100	8	K	E	0.010050	0.002608	Ball
+17497	ballRivet|F4|bladeZ d0.10 xy30 cap0.0175	8	K	E	0.017525	0.007989	Ball
+17499	ballRivet|F4|bladeZ d0.10 xy30 cap0.0225	8	K	E	0.022475	0.013207	Ball
+17513	ballRivet|F4|bladeZ d0.10 r47 cap0.0050	8	K	E	0.005000	0.000652	Ball
+17515	ballRivet|F4|bladeZ d0.10 r47 cap0.0150	8	K	E	0.014900	0.005869	Ball
+17517	ballRivet|F4|bladeZ d0.10 r47 cap0.0200	8	K	E	0.019875	0.010435	Ball
+17519	ballRivet|F4|bladeZ d0.10 r47 cap0.0250	8	K	E	0.024950	0.016305	Ball
+17533	ballRivet|F4|bladeZ d0.14 unrot cap0.0100	8	K	E	0.010000	0.002609	Ball
+17535	ballRivet|F4|bladeZ d0.14 unrot cap0.0175	8	K	E	0.017500	0.007989	Ball
+17537	ballRivet|F4|bladeZ d0.14 unrot cap0.0225	8	K	E	0.022500	0.013207	Ball
+17551	ballRivet|F4|bladeZ d0.14 z45 cap0.0050	8	K	E	0.005000	0.000652	Ball
+17553	ballRivet|F4|bladeZ d0.14 z45 cap0.0150	8	K	E	0.015000	0.005870	Ball
+17555	ballRivet|F4|bladeZ d0.14 z45 cap0.0200	8	K	E	0.020000	0.010435	Ball
+17557	ballRivet|F4|bladeZ d0.14 z45 cap0.0250	8	K	E	0.025000	0.016305	Ball
+17571	ballRivet|F4|bladeZ d0.14 xy30 cap0.0100	8	K	E	0.010050	0.002609	Ball
+17573	ballRivet|F4|bladeZ d0.14 xy30 cap0.0175	8	K	E	0.017525	0.007989	Ball
+17575	ballRivet|F4|bladeZ d0.14 xy30 cap0.0225	8	K	E	0.022475	0.013207	Ball
+17589	ballRivet|F4|bladeZ d0.14 r47 cap0.0050	8	K	E	0.005000	0.000652	Ball
+17591	ballRivet|F4|bladeZ d0.14 r47 cap0.0150	8	K	E	0.014900	0.005870	Ball
+17593	ballRivet|F4|bladeZ d0.14 r47 cap0.0200	8	K	E	0.019875	0.010435	Ball
+17595	ballRivet|F4|bladeZ d0.14 r47 cap0.0250	8	K	E	0.024950	0.016305	Ball
+17613	ballRivet|F4|hiltZ d0.10 unrot cap0.0225	6	K	E	0.022500	0.013207	Ball
+17631	ballRivet|F4|hiltZ d0.10 z45 cap0.0200	6	K	E	0.020000	0.010435	Ball
+17649	ballRivet|F4|hiltZ d0.10 xy30 cap0.0175	6	K	E	0.017525	0.007989	Ball
+17667	ballRivet|F4|hiltZ d0.10 r47 cap0.0150	6	K	E	0.014900	0.005869	Ball
+17685	ballRivet|F4|hiltZ d0.14 unrot cap0.0100	6	K	E	0.010000	0.002609	Ball
+17703	ballRivet|F4|hiltZ d0.14 z45 cap0.0050	6	K	E	0.005000	0.000652	Ball
+17709	ballRivet|F4|hiltZ d0.14 z45 cap0.0250	6	K	E	0.025000	0.016305	Ball
+17727	ballRivet|F4|hiltZ d0.14 xy30 cap0.0225	6	K	E	0.022475	0.013207	Ball
+17745	ballRivet|F4|hiltZ d0.14 r47 cap0.0200	6	K	E	0.019875	0.010435	Ball
+17763	ballRivet|F4|hiltZ d0.20 unrot cap0.0175	6	K	E	0.017500	0.007990	Ball
+17781	ballRivet|F4|hiltZ d0.20 z45 cap0.0150	6	K	E	0.015000	0.005870	Ball
+17799	ballRivet|F4|hiltZ d0.20 xy30 cap0.0100	6	K	E	0.010050	0.002609	Ball
+17817	ballRivet|F4|hiltZ d0.20 r47 cap0.0050	6	K	E	0.005000	0.000652	Ball
+17823	ballRivet|F4|hiltZ d0.20 r47 cap0.0250	6	K	E	0.024950	0.016306	Ball
+17863	cylRivet|F4|guard r0.03 tilt20 poke0.0020	6	K	E	0.019242	0.018862	Cylinder
+17970	cylRivet|F4|blade r0.05 tilt0 poke0.0000	7	K	E	0.000000	0.000000	Cylinder
+18047	cylRib|F4|blade r0.02 psi11.25 height0.002	6	K	E	0.028100	0.012850	Cylinder
+18125	cylRib|F4|blade r0.05 psi11.25 height0.002	6	K	E	0.027699	0.012648	Cylinder
+18203	cylRib|F4|guard r0.02 psi11.25 height0.002	6	K	E	0.027074	0.012381	Cylinder
+18281	cylRib|F4|guard r0.05 psi11.25 height0.002	6	K	E	0.025300	0.011571	Cylinder
+18398	cylRib|F4|grip r0.03 psi11.25 height0.002	6	K	E	0.027350	0.012484	Cylinder
+18476	cylRib|F4|grip r0.08 psi11.25 height0.002	6	K	E	0.025625	0.011717	Cylinder
+18530	plateEdge|F4|blade w0.5 k0.6 l1.0 poke-0.0050	6	K	E	0.000000	0.000000	Block
+18572	plateEdge|F4|blade w0.5 k0.8 l1.0 poke-0.0050	6	K	E	0.000000	0.000000	Block
+18614	plateEdge|F4|blade w0.8 k0.6 l1.0 poke-0.0050	6	K	E	0.000000	0.000000	Block
+18656	plateEdge|F4|blade w0.8 k0.8 l1.0 poke-0.0050	6	K	E	0.000000	0.000000	Block
+18727	plateEdge|F4|blade w1.0 k0.8 l0.8 poke0.0000	6	K	E	0.000000	0.000000	Block
+18782	plateEdge|F4|guard w0.5 k0.6 l1.0 poke-0.0050	6	K	E	0.000000	0.000000	Block
+18824	plateEdge|F4|guard w0.5 k0.8 l1.0 poke-0.0050	6	K	E	0.000000	0.000000	Block
+18866	plateEdge|F4|guard w0.8 k0.6 l1.0 poke-0.0050	6	K	E	0.000000	0.000000	Block
+18908	plateEdge|F4|guard w0.8 k0.8 l1.0 poke-0.0050	6	K	E	0.000000	0.000000	Block
+18979	plateEdge|F4|guard w1.0 k0.8 l0.8 poke0.0000	6	K	E	0.000000	0.000000	Block
+19023	plateTilt|F4|tilt4 poke0.001	6	K	E	0.009718	0.009701	Block
+19060	bevel|F4|a0.02 b0.08 height0.020	6	K	E	0.011199	0.011178	Wedge
+19094	bevel|F4|a0.03 b0.08 height0.030	6	K	E	0.017575	0.017608	Wedge
+19137	laminate|F4|k0.02 wf1.0 proud-0.0200 capfalse	7	K	E	0.000000	0.000000	Block
+19139	laminate|F4|k0.02 wf1.0 proud-0.0100 capfalse	7	K	E	0.000000	0.000000	Block
+19141	laminate|F4|k0.02 wf1.0 proud-0.0050 capfalse	7	K	E	0.000000	0.000000	Block
+19143	laminate|F4|k0.02 wf1.0 proud0.0000 capfalse	7	K	E	0.000000	0.000000	Block
+19145	laminate|F4|k0.02 wf1.0 proud0.0030 capfalse	7	K	E	0.000000	0.000000	Block
+19148	laminate|F4|k0.02 wf1.0 proud0.0050 captrue	7	K	E	0.000000	0.000000	Block
+19151	laminate|F4|k0.02 wf1.0 proud0.0100 capfalse	7	K	E	0.000000	0.000000	Block
+19154	laminate|F4|k0.02 wf1.0 proud0.0150 captrue	7	K	E	0.000000	0.000000	Block
+19158	laminate|F4|k0.02 wf1.5 proud-0.0200 captrue	9	K	E	0.017979	0.017982	Block
+19164	laminate|F4|k0.02 wf1.5 proud0.0000 captrue	9	K	E	0.017535	0.017540	Block
+19182	laminate|F4|k0.02 wf2.0 proud-0.0050 captrue	9	K	E	0.017657	0.017648	Block
+19198	laminate|F4|k0.03 wf1.0 proud-0.0200 captrue	6	K	E	0.000000	0.000000	Block
+19200	laminate|F4|k0.03 wf1.0 proud-0.0100 captrue	6	K	E	0.000000	0.000000	Block
+19202	laminate|F4|k0.03 wf1.0 proud-0.0050 captrue	6	K	E	0.000000	0.000000	Block
+19204	laminate|F4|k0.03 wf1.0 proud0.0000 captrue	6	K	E	0.000000	0.000000	Block
+19206	laminate|F4|k0.03 wf1.0 proud0.0030 captrue	7	K	E	0.000000	0.000000	Block
+19209	laminate|F4|k0.03 wf1.0 proud0.0075 capfalse	7	K	E	0.000000	0.000000	Block
+19212	laminate|F4|k0.03 wf1.0 proud0.0100 captrue	7	K	E	0.000000	0.000000	Block
+19215	laminate|F4|k0.03 wf1.0 proud0.0200 capfalse	7	K	E	0.000000	0.000000	Block
+19260	wrapRings|F4|n3 extra0.01 gap0.0040	2	K	E	0.007950	0.007921	Block
+19271	wrapRings|F4|n3 extra0.02 gap0.0020	2	K	E	0.003950	0.003961	Block
+19277	wrapRings|F4|n3 extra0.02 gap0.0100	2	K	E	0.019850	0.019802	Block
+19288	wrapRings|F4|n3 extra0.04 gap0.0060	2	K	E	0.011800	0.011881	Block
+19299	wrapRings|F4|n4 extra0.01 gap0.0040	2	K	E	0.011900	0.011882	Block
+19312	wrapRings|F4|n4 extra0.02 gap0.0040	2	K	E	0.011900	0.011882	Block
+19325	wrapRings|F4|n4 extra0.04 gap0.0040	2	K	E	0.011900	0.011881	Block
+19338	wrapRings|F4|n5 extra0.01 gap0.0040	2	K	E	0.015700	0.015842	Block
+19352	wrapRings|F4|n5 extra0.02 gap0.0050	2	K	E	0.019700	0.019803	Block
+19374	pommelInBlock|F4|nut unrot cap0.0050	6	K	E	0.005075	0.000652	Ball
+19380	pommelInBlock|F4|nut unrot cap0.0250	6	K	E	0.024950	0.016305	Ball
+19398	pommelInBlock|F4|nut xy30 cap0.0225	6	K	E	0.022525	0.013207	Ball
+19416	pommelInBlock|F4|nut r47 cap0.0200	6	K	E	0.020000	0.010435	Ball
+19432	wedgeInGuard|F4|Wedge 0.12 0.12 0.16 spin0 height0.030	7	K	E	0.000000	0.000000	Wedge
+19435	wedgeInGuard|F4|Wedge 0.12 0.12 0.16 spin0 height0.100	7	K	E	0.000000	0.000000	Wedge
+19438	wedgeInGuard|F4|Wedge 0.12 0.12 0.16 spin0 height0.300	7	K	E	0.000000	0.000000	Wedge
+19479	wedgeInGuard|F4|Wedge 0.10 0.25 0.10 spin0 height0.500	7	K	E	0.000000	0.000000	Wedge
+19490	wedgeInGuard|F4|Wedge 0.10 0.25 0.10 spin30 height0.750	7	K	E	0.000000	0.000000	Wedge
+19493	wedgeInGuard|F4|CornerWedge 0.12 0.12 0.16 spin0 height0.050	7	K	E	0.000000	0.000000	CornerWedge
+19496	wedgeInGuard|F4|CornerWedge 0.12 0.12 0.16 spin0 height0.150	7	K	E	0.000000	0.000000	CornerWedge
+19499	wedgeInGuard|F4|CornerWedge 0.12 0.12 0.16 spin0 height0.500	7	K	E	0.000000	0.000000	CornerWedge
+19502	wedgeInGuard|F4|CornerWedge 0.12 0.12 0.16 spin30 height0.030	7	K	E	0.019748	0.019766	CornerWedge
+19549	wedgeInGuard|F4|CornerWedge 0.10 0.25 0.10 spin30 height0.500	7	K	E	0.000000	0.000000	CornerWedge
+19562	rod|F4|grip Block d0.06 poke0.0000	6	K	E	0.000000	0.000000	Block
+19592	rod|F4|guard Block d0.04 poke0.0000	6	K	E	0.000000	0.000000	Block
+19598	rod|F4|guard Block d0.04 poke0.0200	6	K	E	0.000000	0.000000	Block
+19604	rod|F4|guard Block d0.06 poke0.0020	6	K	E	0.000000	0.000000	Block
+19610	rod|F4|guard Block d0.06 poke0.0400	6	K	E	0.000000	0.000000	Block
+19616	rod|F4|guard Cylinder d0.04 poke0.0100	6	K	E	0.000000	0.000000	Cylinder
+19622	rod|F4|guard Cylinder d0.06 poke0.0000	6	K	E	0.000000	0.000000	Cylinder
+19628	rod|F4|guard Cylinder d0.06 poke0.0200	6	K	E	0.000000	0.000000	Cylinder
+19632	ballRivet|F5|guardZ d0.08 unrot cap0.0100	7	K	E	0.010000	0.002608	Ball
+19635	ballRivet|F5|guardZ d0.08 unrot cap0.0200	7	K	E	0.020000	0.010435	Ball
+19650	ballRivet|F5|guardZ d0.08 z45 cap0.0050	7	K	E	0.005000	0.000652	Ball
+19653	ballRivet|F5|guardZ d0.08 z45 cap0.0175	7	K	E	0.017500	0.007989	Ball
+19656	ballRivet|F5|guardZ d0.08 z45 cap0.0250	7	K	E	0.025000	0.016305	Ball
+19671	ballRivet|F5|guardZ d0.08 xy30 cap0.0150	7	K	E	0.015025	0.005869	Ball
+19674	ballRivet|F5|guardZ d0.08 xy30 cap0.0225	7	K	E	0.022475	0.013207	Ball
+19689	ballRivet|F5|guardZ d0.08 r47 cap0.0100	7	K	E	0.010100	0.002608	Ball
+19692	ballRivet|F5|guardZ d0.08 r47 cap0.0200	7	K	E	0.019875	0.010435	Ball
+19707	ballRivet|F5|guardZ d0.10 unrot cap0.0050	7	K	E	0.005000	0.000652	Ball
+19710	ballRivet|F5|guardZ d0.10 unrot cap0.0175	7	K	E	0.017500	0.007989	Ball
+19713	ballRivet|F5|guardZ d0.10 unrot cap0.0250	7	K	E	0.025000	0.016305	Ball
+19728	ballRivet|F5|guardZ d0.10 z45 cap0.0150	7	K	E	0.015000	0.005869	Ball
+19731	ballRivet|F5|guardZ d0.10 z45 cap0.0225	7	K	E	0.022500	0.013207	Ball
+19746	ballRivet|F5|guardZ d0.10 xy30 cap0.0100	7	K	E	0.010050	0.002608	Ball
+19749	ballRivet|F5|guardZ d0.10 xy30 cap0.0200	7	K	E	0.020000	0.010435	Ball
+19764	ballRivet|F5|guardZ d0.10 r47 cap0.0050	7	K	E	0.005000	0.000652	Ball
+19767	ballRivet|F5|guardZ d0.10 r47 cap0.0175	7	K	E	0.017400	0.007989	Ball
+19770	ballRivet|F5|guardZ d0.10 r47 cap0.0250	7	K	E	0.024950	0.016305	Ball
+19785	ballRivet|F5|guardZ d0.14 unrot cap0.0150	7	K	E	0.015000	0.005870	Ball
+19788	ballRivet|F5|guardZ d0.14 unrot cap0.0225	7	K	E	0.022500	0.013207	Ball
+19803	ballRivet|F5|guardZ d0.14 z45 cap0.0100	7	K	E	0.010000	0.002609	Ball
+19806	ballRivet|F5|guardZ d0.14 z45 cap0.0200	7	K	E	0.020000	0.010435	Ball
+19821	ballRivet|F5|guardZ d0.14 xy30 cap0.0050	7	K	E	0.004925	0.000652	Ball
+19824	ballRivet|F5|guardZ d0.14 xy30 cap0.0175	7	K	E	0.017525	0.007989	Ball
+19827	ballRivet|F5|guardZ d0.14 xy30 cap0.0250	7	K	E	0.025050	0.016305	Ball
+19842	ballRivet|F5|guardZ d0.14 r47 cap0.0150	7	K	E	0.014900	0.005870	Ball
+19845	ballRivet|F5|guardZ d0.14 r47 cap0.0225	7	K	E	0.022400	0.013207	Ball
+19862	ballRivet|F5|guardX d0.08 unrot cap0.0175	6	K	E	0.017550	0.007989	Ball
+19880	ballRivet|F5|guardX d0.08 z45 cap0.0150	6	K	E	0.015050	0.005869	Ball
+19898	ballRivet|F5|guardX d0.08 xy30 cap0.0100	6	K	E	0.010100	0.002608	Ball
+19916	ballRivet|F5|guardX d0.08 r47 cap0.0050	6	K	E	0.004975	0.000652	Ball
+19922	ballRivet|F5|guardX d0.08 r47 cap0.0250	6	K	E	0.024950	0.016305	Ball
+19940	ballRivet|F5|guardX d0.10 unrot cap0.0225	6	K	E	0.022500	0.013207	Ball
+19958	ballRivet|F5|guardX d0.10 z45 cap0.0200	6	K	E	0.020025	0.010435	Ball
+19976	ballRivet|F5|guardX d0.10 xy30 cap0.0175	6	K	E	0.017450	0.007989	Ball
+19994	ballRivet|F5|guardX d0.10 r47 cap0.0150	6	K	E	0.015000	0.005869	Ball
+20012	ballRivet|F5|guardX d0.14 unrot cap0.0100	6	K	E	0.010100	0.002609	Ball
+20030	ballRivet|F5|guardX d0.14 z45 cap0.0050	6	K	E	0.005000	0.000652	Ball
+20036	ballRivet|F5|guardX d0.14 z45 cap0.0250	6	K	E	0.024975	0.016305	Ball
+20054	ballRivet|F5|guardX d0.14 xy30 cap0.0225	6	K	E	0.022525	0.013207	Ball
+20072	ballRivet|F5|guardX d0.14 r47 cap0.0200	6	K	E	0.019925	0.010435	Ball
+20318	ballRivet|F5|hiltZ d0.10 unrot cap0.0175	6	K	E	0.017500	0.007989	Ball
+20336	ballRivet|F5|hiltZ d0.10 z45 cap0.0150	6	K	E	0.015000	0.005869	Ball
+20354	ballRivet|F5|hiltZ d0.10 xy30 cap0.0100	6	K	E	0.010050	0.002608	Ball
+20372	ballRivet|F5|hiltZ d0.10 r47 cap0.0050	6	K	E	0.005000	0.000652	Ball
+20378	ballRivet|F5|hiltZ d0.10 r47 cap0.0250	6	K	E	0.024950	0.016305	Ball
+20396	ballRivet|F5|hiltZ d0.14 unrot cap0.0225	6	K	E	0.022500	0.013207	Ball
+20414	ballRivet|F5|hiltZ d0.14 z45 cap0.0200	6	K	E	0.020000	0.010435	Ball
+20432	ballRivet|F5|hiltZ d0.14 xy30 cap0.0175	6	K	E	0.017525	0.007989	Ball
+20450	ballRivet|F5|hiltZ d0.14 r47 cap0.0150	6	K	E	0.014900	0.005870	Ball
+20566	cylRivet|F5|guard r0.03 tilt20 poke-0.0020	6	K	E	0.016285	0.016042	Cylinder
+20611	cylRivet|F5|guard r0.08 tilt0 poke0.0000	6	K	E	0.000000	0.000000	Cylinder
+20710	cylRivet|F5|blade r0.08 tilt0 poke0.0000	8	K	E	0.000000	0.000000	Cylinder
+20806	cylRib|F5|blade r0.03 psi22.50 height0.002	6	K	E	0.028049	0.012817	Cylinder
+20962	cylRib|F5|guard r0.03 psi22.50 height0.002	6	K	E	0.027424	0.012534	Cylinder
+21040	cylRib|F5|guard r0.08 psi22.50 height0.002	6	K	E	0.025925	0.011834	Cylinder
+21118	cylRib|F5|grip r0.03 psi22.50 height0.002	6	K	E	0.027300	0.012484	Cylinder
+21196	cylRib|F5|grip r0.08 psi22.50 height0.002	6	K	E	0.025600	0.011717	Cylinder
+21238	plateEdge|F5|blade w0.5 k0.6 l1.0 poke0.0000	6	K	E	0.000000	0.000000	Block
+21280	plateEdge|F5|blade w0.5 k0.8 l1.0 poke0.0000	6	K	E	0.000000	0.000000	Block
+21322	plateEdge|F5|blade w0.8 k0.6 l1.0 poke0.0000	6	K	E	0.000000	0.000000	Block
+21364	plateEdge|F5|blade w0.8 k0.8 l1.0 poke0.0000	6	K	E	0.000000	0.000000	Block
+21448	plateEdge|F5|blade w1.0 k0.8 l1.0 poke0.0000	6	K	E	0.000000	0.000000	Block
+21490	plateEdge|F5|guard w0.5 k0.6 l1.0 poke0.0000	6	K	E	0.000000	0.000000	Block
+21532	plateEdge|F5|guard w0.5 k0.8 l1.0 poke0.0000	6	K	E	0.000000	0.000000	Block
+21574	plateEdge|F5|guard w0.8 k0.6 l1.0 poke0.0000	6	K	E	0.000000	0.000000	Block
+21616	plateEdge|F5|guard w0.8 k0.8 l1.0 poke0.0000	6	K	E	0.000000	0.000000	Block
+21700	plateEdge|F5|guard w1.0 k0.8 l1.0 poke0.0000	6	K	E	0.000000	0.000000	Block
+21745	bevel|F5|a0.02 b0.03 height0.020	7	K	E	0.012999	0.012985	Wedge
+21757	bevel|F5|a0.02 b0.05 height0.030	7	K	E	0.017825	0.017824	Wedge
+21778	bevel|F5|a0.03 b0.03 height0.020	7	K	E	0.014075	0.014085	Wedge
+21800	bevel|F5|a0.03 b0.08 height0.020	7	K	E	0.011724	0.011748	Wedge
+21822	bevel|F5|a0.05 b0.05 height0.020	7	K	E	0.014075	0.014050	Wedge
+21844	laminate|F5|k0.02 wf1.0 proud-0.0200 capfalse	7	K	E	0.000000	0.000000	Block
+21846	laminate|F5|k0.02 wf1.0 proud-0.0100 capfalse	7	K	E	0.000000	0.000000	Block
+21848	laminate|F5|k0.02 wf1.0 proud-0.0050 capfalse	7	K	E	0.000000	0.000000	Block
+21850	laminate|F5|k0.02 wf1.0 proud0.0000 capfalse	7	K	E	0.000000	0.000000	Block
+21852	laminate|F5|k0.02 wf1.0 proud0.0030 capfalse	7	K	E	0.000000	0.000000	Block
+21855	laminate|F5|k0.02 wf1.0 proud0.0050 captrue	7	K	E	0.000000	0.000000	Block
+21858	laminate|F5|k0.02 wf1.0 proud0.0100 capfalse	7	K	E	0.000000	0.000000	Block
+21861	laminate|F5|k0.02 wf1.0 proud0.0150 captrue	7	K	E	0.000000	0.000000	Block
+21905	laminate|F5|k0.03 wf1.0 proud-0.0200 captrue	9	K	E	0.000000	0.000000	Block
+21911	laminate|F5|k0.03 wf1.0 proud0.0000 captrue	9	K	E	0.000000	0.000000	Block
+21929	laminate|F5|k0.03 wf1.5 proud-0.0050 captrue	4	K	E	0.000000	0.000000	Block
+21935	laminate|F5|k0.03 wf1.5 proud0.0050 captrue	4	K	E	0.000000	0.000000	Block
+21941	laminate|F5|k0.03 wf1.5 proud0.0150 captrue	4	K	E	0.000000	0.000000	Block
+21947	laminate|F5|k0.03 wf2.0 proud-0.0100 captrue	4	K	E	0.000000	0.000000	Block
+21953	laminate|F5|k0.03 wf2.0 proud0.0030 captrue	4	K	E	0.000000	0.000000	Block
+21959	laminate|F5|k0.03 wf2.0 proud0.0100 captrue	4	K	E	0.000000	0.000000	Block
+22082	pommelInBlock|F5|housing unrot cap0.0100	1	K	E	0.009900	0.002609	Ball
+22100	pommelInBlock|F5|housing xy30 cap0.0050	1	K	E	0.004950	0.000652	Ball
+22106	pommelInBlock|F5|housing xy30 cap0.0250	1	K	E	0.025100	0.016306	Ball
+22124	pommelInBlock|F5|housing r47 cap0.0225	1	K	E	0.022475	0.013208	Ball
+22148	wedgeInGuard|F5|Wedge 0.12 0.12 0.16 spin30 height0.020	6	K	E	0.010049	0.010100	Wedge
+22159	wedgeInGuard|F5|Wedge 0.20 0.15 0.10 spin0 height0.030	6	K	E	0.019699	0.019743	Wedge
+22198	wedgeInGuard|F5|CornerWedge 0.12 0.12 0.16 spin0 height0.020	6	K	E	0.000250	0.000275	CornerWedge
+22201	wedgeInGuard|F5|CornerWedge 0.12 0.12 0.16 spin0 height0.075	6	K	E	0.003850	0.003871	CornerWedge
+22208	wedgeInGuard|F5|CornerWedge 0.12 0.12 0.16 spin30 height0.020	6	K	E	0.000250	0.000275	CornerWedge
+22211	wedgeInGuard|F5|CornerWedge 0.12 0.12 0.16 spin30 height0.075	6	K	E	0.003850	0.003871	CornerWedge
+22218	wedgeInGuard|F5|CornerWedge 0.20 0.15 0.10 spin0 height0.020	6	K	E	0.000250	0.000290	CornerWedge
+22221	wedgeInGuard|F5|CornerWedge 0.20 0.15 0.10 spin0 height0.075	6	K	E	0.004000	0.004084	CornerWedge
+22228	wedgeInGuard|F5|CornerWedge 0.20 0.15 0.10 spin30 height0.020	6	K	E	0.000250	0.000290	CornerWedge
+22231	wedgeInGuard|F5|CornerWedge 0.20 0.15 0.10 spin30 height0.075	6	K	E	0.004000	0.004084	CornerWedge
+22258	rod|F5|grip Block d0.04 poke-0.0020	6	K	E	0.000000	0.000000	Block
+22288	rod|F5|grip Cylinder d0.06 poke-0.0020	6	K	E	0.000000	0.000000	Cylinder
+22318	rod|F5|guard Cylinder d0.04 poke-0.0020	6	K	E	0.000000	0.000000	Cylinder
+22679	lamHilt|hilt|w1.0 l2.0 c0.025 k0.02 proud0.000 captrue	7	K	E	0.019117	0.019126	Block
+22761	lamHilt|hilt|w1.0 l3.0 c0.050 k0.02 proud-0.010 captrue	7	K	E	0.019665	0.019671	Block
+22817	lamHilt|hilt|w1.1 l2.0 c0.050 k0.02 proud-0.010 captrue	7	K	E	0.017727	0.017735	Block
+22873	lamHilt|hilt|w1.1 l3.0 c0.050 k0.02 proud-0.010 captrue	7	K	E	0.017877	0.017883	Block
+22929	lamHilt|hilt|w1.2 l2.0 c0.050 k0.02 proud-0.010 captrue	7	K	E	0.016829	0.016834	Block
+22983	lamHilt|hilt|w1.2 l3.0 c0.050 k0.02 proud-0.020 captrue	7	K	E	0.017012	0.017007	Block
+26388	fuller|w0.4 L2.0 t0.08 c0.015 g0.01 at0.2 one	4	K	E	0.019899	0.019858	Block
+26466	fuller|w0.4 L2.0 t0.08 c0.030 g0.01 at0.0 one	4	K	E	0.019899	0.019858	Block
+26477	fuller|w0.4 L2.0 t0.08 c0.030 g0.01 at0.6 one	4	K	E	0.019899	0.019858	Block
+26554	fuller|w0.4 L2.0 t0.08 c0.050 g0.01 at0.4 one	4	K	E	0.019899	0.019858	Block
+26631	fuller|w0.6 L2.5 t0.02 c0.015 g0.01 at0.2 one	4	K	E	0.015791	0.015813	Block
+26714	fuller|w0.6 L2.5 t0.02 c0.030 g0.01 at0.0 one	4	K	E	0.015827	0.015813	Block
+26725	fuller|w0.6 L2.5 t0.02 c0.030 g0.01 at0.6 one	4	K	E	0.015827	0.015813	Block
+26807	fuller|w0.6 L2.5 t0.02 c0.050 g0.01 at0.4 one	4	K	E	0.015791	0.015813	Block
+26889	fuller|w0.6 L2.5 t0.04 c0.015 g0.01 at0.2 one	4	K	E	0.015187	0.015209	Block
+26972	fuller|w0.6 L2.5 t0.04 c0.030 g0.01 at0.0 one	4	K	E	0.015187	0.015209	Block
+26983	fuller|w0.6 L2.5 t0.04 c0.030 g0.01 at0.6 one	4	K	E	0.015222	0.015209	Block
+27065	fuller|w0.6 L2.5 t0.04 c0.050 g0.01 at0.4 one	4	K	E	0.015222	0.015209	Block
+27147	fuller|w0.6 L2.5 t0.08 c0.015 g0.01 at0.2 one	4	K	E	0.014110	0.014130	Block
+27230	fuller|w0.6 L2.5 t0.08 c0.030 g0.01 at0.0 one	4	K	E	0.014110	0.014130	Block
+27241	fuller|w0.6 L2.5 t0.08 c0.030 g0.01 at0.6 one	4	K	E	0.014142	0.014130	Block
+27323	fuller|w0.6 L2.5 t0.08 c0.050 g0.01 at0.4 one	4	K	E	0.014142	0.014130	Block
+27405	fuller|w0.6 L2.0 t0.02 c0.015 g0.01 at0.2 one	4	K	E	0.015724	0.015735	Block
+27488	fuller|w0.6 L2.0 t0.02 c0.030 g0.01 at0.0 one	4	K	E	0.015747	0.015735	Block
+27499	fuller|w0.6 L2.0 t0.02 c0.030 g0.01 at0.6 one	4	K	E	0.015769	0.015735	Block
+27581	fuller|w0.6 L2.0 t0.02 c0.050 g0.01 at0.4 one	4	K	E	0.015724	0.015735	Block
+27663	fuller|w0.6 L2.0 t0.04 c0.015 g0.01 at0.2 one	4	K	E	0.015097	0.015107	Block
+27746	fuller|w0.6 L2.0 t0.04 c0.030 g0.01 at0.0 one	4	K	E	0.015119	0.015107	Block
+27757	fuller|w0.6 L2.0 t0.04 c0.030 g0.01 at0.6 one	4	K	E	0.015140	0.015107	Block
+27839	fuller|w0.6 L2.0 t0.04 c0.050 g0.01 at0.4 one	4	K	E	0.015097	0.015107	Block
+27921	fuller|w0.6 L2.0 t0.08 c0.015 g0.01 at0.2 one	4	K	E	0.013982	0.013991	Block
+28004	fuller|w0.6 L2.0 t0.08 c0.030 g0.01 at0.0 one	4	K	E	0.014002	0.013991	Block
+28015	fuller|w0.6 L2.0 t0.08 c0.030 g0.01 at0.6 one	4	K	E	0.014022	0.013991	Block
+28097	fuller|w0.6 L2.0 t0.08 c0.050 g0.01 at0.4 one	4	K	E	0.013982	0.013991	Block
+28179	fuller|w0.8 L2.5 t0.02 c0.015 g0.01 at0.2 one	4	K	E	0.011966	0.011955	Block
+28264	fuller|w0.8 L2.5 t0.02 c0.030 g0.01 at0.0 one	4	K	E	0.011939	0.011955	Block
+28275	fuller|w0.8 L2.5 t0.02 c0.030 g0.01 at0.6 one	4	K	E	0.011952	0.011955	Block
+28359	fuller|w0.8 L2.5 t0.02 c0.050 g0.01 at0.4 one	4	K	E	0.011939	0.011955	Block
+28443	fuller|w0.8 L2.5 t0.04 c0.015 g0.01 at0.2 one	4	K	E	0.011595	0.011585	Block
+28528	fuller|w0.8 L2.5 t0.04 c0.030 g0.01 at0.0 one	4	K	E	0.011569	0.011585	Block
+28539	fuller|w0.8 L2.5 t0.04 c0.030 g0.01 at0.6 one	4	K	E	0.011582	0.011585	Block
+28623	fuller|w0.8 L2.5 t0.04 c0.050 g0.01 at0.4 one	4	K	E	0.011569	0.011585	Block
+28707	fuller|w0.8 L2.5 t0.08 c0.015 g0.01 at0.2 one	4	K	E	0.010919	0.010910	Block
+28792	fuller|w0.8 L2.5 t0.08 c0.030 g0.01 at0.0 one	4	K	E	0.010895	0.010910	Block
+28803	fuller|w0.8 L2.5 t0.08 c0.030 g0.01 at0.6 one	4	K	E	0.010907	0.010910	Block
+28887	fuller|w0.8 L2.5 t0.08 c0.050 g0.01 at0.4 one	4	K	E	0.010895	0.010910	Block
+28971	fuller|w0.8 L2.0 t0.02 c0.015 g0.01 at0.2 one	4	K	E	0.011922	0.011896	Block
+29056	fuller|w0.8 L2.0 t0.02 c0.030 g0.01 at0.0 one	4	K	E	0.011888	0.011896	Block
+29067	fuller|w0.8 L2.0 t0.02 c0.030 g0.01 at0.6 one	4	K	E	0.011922	0.011896	Block
+29151	fuller|w0.8 L2.0 t0.02 c0.050 g0.01 at0.4 one	4	K	E	0.011871	0.011896	Block
+29235	fuller|w0.8 L2.0 t0.04 c0.015 g0.01 at0.2 one	4	K	E	0.011532	0.011507	Block
+29320	fuller|w0.8 L2.0 t0.04 c0.030 g0.01 at0.0 one	4	K	E	0.011499	0.011507	Block
+29331	fuller|w0.8 L2.0 t0.04 c0.030 g0.01 at0.6 one	4	K	E	0.011532	0.011507	Block
+29415	fuller|w0.8 L2.0 t0.04 c0.050 g0.01 at0.4 one	4	K	E	0.011483	0.011507	Block
+29499	fuller|w0.8 L2.0 t0.08 c0.015 g0.01 at0.2 one	4	K	E	0.010824	0.010800	Block
+29584	fuller|w0.8 L2.0 t0.08 c0.030 g0.01 at0.0 one	4	K	E	0.010793	0.010800	Block
+29595	fuller|w0.8 L2.0 t0.08 c0.030 g0.01 at0.6 one	4	K	E	0.010824	0.010800	Block
+29679	fuller|w0.8 L2.0 t0.08 c0.050 g0.01 at0.4 one	4	K	E	0.010778	0.010800	Block
+29762	fuller|w1.0 L2.5 t0.02 c0.015 g0.01 at0.1 twin	4	K	E	0.019184	0.019221	Block
+29768	fuller|w1.0 L2.5 t0.02 c0.015 g0.01 at0.4 twin	4	K	E	0.019250	0.019221	Block
+29774	fuller|w1.0 L2.5 t0.02 c0.015 g0.01 at0.7 twin	4	K	E	0.019195	0.019221	Block
+29784	fuller|w1.0 L2.5 t0.02 c0.015 g0.02 at0.5 one	4	K	E	0.019217	0.019222	Block
+29852	fuller|w1.0 L2.5 t0.02 c0.030 g0.01 at0.2 one	4	K	E	0.009608	0.009611	Block
+29858	fuller|w1.0 L2.5 t0.02 c0.030 g0.01 at0.5 one	4	K	E	0.009608	0.009611	Block
+29864	fuller|w1.0 L2.5 t0.02 c0.030 g0.02 at0.0 one	4	K	E	0.019217	0.019222	Block
+29875	fuller|w1.0 L2.5 t0.02 c0.030 g0.02 at0.6 one	4	K	E	0.019195	0.019222	Block
+29942	fuller|w1.0 L2.5 t0.02 c0.050 g0.01 at0.2 twin	4	K	E	0.019206	0.019221	Block
+29948	fuller|w1.0 L2.5 t0.02 c0.050 g0.01 at0.5 twin	4	K	E	0.019217	0.019221	Block
+29954	fuller|w1.0 L2.5 t0.02 c0.050 g0.02 at0.1 one	4	K	E	0.019228	0.019222	Block
+29966	fuller|w1.0 L2.5 t0.02 c0.050 g0.02 at0.7 one	4	K	E	0.019217	0.019222	Block
+30032	fuller|w1.0 L2.5 t0.04 c0.015 g0.01 at0.3 one	4	K	E	0.009343	0.009356	Block
+30038	fuller|w1.0 L2.5 t0.04 c0.015 g0.01 at0.6 one	4	K	E	0.009354	0.009356	Block
+30045	fuller|w1.0 L2.5 t0.04 c0.015 g0.02 at0.2 one	4	K	E	0.018696	0.018712	Block
+30116	fuller|w1.0 L2.5 t0.04 c0.030 g0.01 at0.0 one	4	K	E	0.009364	0.009356	Block
+30122	fuller|w1.0 L2.5 t0.04 c0.030 g0.01 at0.3 twin	4	K	E	0.018686	0.018712	Block
+30128	fuller|w1.0 L2.5 t0.04 c0.030 g0.01 at0.6 twin	4	K	E	0.018696	0.018712	Block
+30136	fuller|w1.0 L2.5 t0.04 c0.030 g0.02 at0.3 one	4	K	E	0.018718	0.018712	Block
+30206	fuller|w1.0 L2.5 t0.04 c0.050 g0.01 at0.1 one	4	K	E	0.009332	0.009356	Block
+30212	fuller|w1.0 L2.5 t0.04 c0.050 g0.01 at0.4 one	4	K	E	0.009375	0.009356	Block
+30218	fuller|w1.0 L2.5 t0.04 c0.050 g0.01 at0.7 one	4	K	E	0.009343	0.009356	Block
+30227	fuller|w1.0 L2.5 t0.04 c0.050 g0.02 at0.4 one	4	K	E	0.018707	0.018712	Block
+30296	fuller|w1.0 L2.5 t0.08 c0.015 g0.01 at0.1 twin	4	K	E	0.017735	0.017769	Block
+30302	fuller|w1.0 L2.5 t0.08 c0.015 g0.01 at0.4 twin	4	K	E	0.017795	0.017769	Block
+30308	fuller|w1.0 L2.5 t0.08 c0.015 g0.01 at0.7 twin	4	K	E	0.017745	0.017769	Block
+30318	fuller|w1.0 L2.5 t0.08 c0.015 g0.02 at0.5 one	4	K	E	0.017765	0.017770	Block
+30386	fuller|w1.0 L2.5 t0.08 c0.030 g0.01 at0.2 one	4	K	E	0.008883	0.008885	Block
+30392	fuller|w1.0 L2.5 t0.08 c0.030 g0.01 at0.5 one	4	K	E	0.008883	0.008885	Block
+30398	fuller|w1.0 L2.5 t0.08 c0.030 g0.02 at0.0 one	4	K	E	0.017765	0.017770	Block
+30409	fuller|w1.0 L2.5 t0.08 c0.030 g0.02 at0.6 one	4	K	E	0.017745	0.017770	Block
+30476	fuller|w1.0 L2.5 t0.08 c0.050 g0.01 at0.2 twin	4	K	E	0.017755	0.017769	Block
+30482	fuller|w1.0 L2.5 t0.08 c0.050 g0.01 at0.5 twin	4	K	E	0.017765	0.017769	Block
+30488	fuller|w1.0 L2.5 t0.08 c0.050 g0.02 at0.1 one	4	K	E	0.017775	0.017770	Block
+30500	fuller|w1.0 L2.5 t0.08 c0.050 g0.02 at0.7 one	4	K	E	0.017765	0.017770	Block
+30566	fuller|w1.0 L2.0 t0.02 c0.015 g0.01 at0.3 one	4	K	E	0.009543	0.009563	Block
+30572	fuller|w1.0 L2.0 t0.02 c0.015 g0.01 at0.6 one	4	K	E	0.009571	0.009563	Block
+30579	fuller|w1.0 L2.0 t0.02 c0.015 g0.02 at0.2 one	4	K	E	0.019127	0.019126	Block
+30650	fuller|w1.0 L2.0 t0.02 c0.030 g0.01 at0.0 one	4	K	E	0.009571	0.009563	Block
+30656	fuller|w1.0 L2.0 t0.02 c0.030 g0.01 at0.3 twin	4	K	E	0.019087	0.019126	Block
+30662	fuller|w1.0 L2.0 t0.02 c0.030 g0.01 at0.6 twin	4	K	E	0.019155	0.019126	Block
+30670	fuller|w1.0 L2.0 t0.02 c0.030 g0.02 at0.3 one	4	K	E	0.019141	0.019126	Block
+30740	fuller|w1.0 L2.0 t0.02 c0.050 g0.01 at0.1 one	4	K	E	0.009571	0.009563	Block
+30746	fuller|w1.0 L2.0 t0.02 c0.050 g0.01 at0.4 one	4	K	E	0.009584	0.009563	Block
+30752	fuller|w1.0 L2.0 t0.02 c0.050 g0.01 at0.7 one	4	K	E	0.009557	0.009563	Block
+30761	fuller|w1.0 L2.0 t0.02 c0.050 g0.02 at0.4 one	4	K	E	0.019127	0.019126	Block
+30830	fuller|w1.0 L2.0 t0.04 c0.015 g0.01 at0.1 twin	4	K	E	0.018613	0.018585	Block
+30836	fuller|w1.0 L2.0 t0.04 c0.015 g0.01 at0.4 twin	4	K	E	0.018613	0.018585	Block
+30842	fuller|w1.0 L2.0 t0.04 c0.015 g0.01 at0.7 twin	4	K	E	0.018573	0.018585	Block
+30852	fuller|w1.0 L2.0 t0.04 c0.015 g0.02 at0.5 one	4	K	E	0.018599	0.018585	Block
+30920	fuller|w1.0 L2.0 t0.04 c0.030 g0.01 at0.2 one	4	K	E	0.009286	0.009292	Block
+30926	fuller|w1.0 L2.0 t0.04 c0.030 g0.01 at0.5 one	4	K	E	0.009300	0.009292	Block
+30932	fuller|w1.0 L2.0 t0.04 c0.030 g0.02 at0.0 one	4	K	E	0.018599	0.018585	Block
+30943	fuller|w1.0 L2.0 t0.04 c0.030 g0.02 at0.6 one	4	K	E	0.018573	0.018585	Block
+31010	fuller|w1.0 L2.0 t0.04 c0.050 g0.01 at0.2 twin	4	K	E	0.018573	0.018585	Block
+31016	fuller|w1.0 L2.0 t0.04 c0.050 g0.01 at0.5 twin	4	K	E	0.018613	0.018585	Block
+31022	fuller|w1.0 L2.0 t0.04 c0.050 g0.02 at0.1 one	4	K	E	0.018573	0.018585	Block
+31034	fuller|w1.0 L2.0 t0.04 c0.050 g0.02 at0.7 one	4	K	E	0.018586	0.018585	Block
+31100	fuller|w1.0 L2.0 t0.08 c0.015 g0.01 at0.3 one	4	K	E	0.008776	0.008794	Block
+31106	fuller|w1.0 L2.0 t0.08 c0.015 g0.01 at0.6 one	4	K	E	0.008802	0.008794	Block
+31113	fuller|w1.0 L2.0 t0.08 c0.015 g0.02 at0.2 one	4	K	E	0.017590	0.017589	Block
+31184	fuller|w1.0 L2.0 t0.08 c0.030 g0.01 at0.0 one	4	K	E	0.008802	0.008794	Block
+31190	fuller|w1.0 L2.0 t0.08 c0.030 g0.01 at0.3 twin	4	K	E	0.017553	0.017589	Block
+31196	fuller|w1.0 L2.0 t0.08 c0.030 g0.01 at0.6 twin	4	K	E	0.017616	0.017589	Block
+31204	fuller|w1.0 L2.0 t0.08 c0.030 g0.02 at0.3 one	4	K	E	0.017603	0.017589	Block
+31274	fuller|w1.0 L2.0 t0.08 c0.050 g0.01 at0.1 one	4	K	E	0.008802	0.008794	Block
+31280	fuller|w1.0 L2.0 t0.08 c0.050 g0.01 at0.4 one	4	K	E	0.008814	0.008794	Block
+31286	fuller|w1.0 L2.0 t0.08 c0.050 g0.01 at0.7 one	4	K	E	0.008789	0.008794	Block
+31295	fuller|w1.0 L2.0 t0.08 c0.050 g0.02 at0.4 one	4	K	E	0.017590	0.017589	Block
+31961	ribbed|w1.2 L1.5 k0.02 edges true g0.02 at0.264 one	4	K	E	0.015883	0.015857	Block
+32029	ribbed|w1.2 L1.5 k0.04 edges true g0.02 at0.264 one	4	K	E	0.015433	0.015409	Block
+32097	ribbed|w1.2 L2.5 k0.02 edges true g0.02 at0.264 one	4	K	E	0.016075	0.016070	Block
+32165	ribbed|w1.2 L2.5 k0.04 edges true g0.02 at0.264 one	4	K	E	0.015697	0.015692	Block
+32247	wall|depth0.3 width1.2 L2.5 slit0.02 at-0.200	4	K	E	0.015807	0.015815	Block
+32316	wall|depth0.1 width1.2 L2.5 slit0.02 at-0.267	4	K	E	0.016324	0.016320	Block
+32726	cage|r0.10 k6 open0.10 roll0.0	4	K	E	0.006325	0.002656	Ball
+32732	cage|r0.10 k6 open0.40 roll0.0	4	K	E	0.000000	0.000000	Ball
+32762	cage|r0.18 k6 open0.30 roll0.0	4	K	E	0.000000	0.000000	Ball
+32784	cage|r0.28 k6 open0.30 roll0.0	4	K	E	0.000000	0.000000	Ball
+32804	grille|0.6 x 1.2 x 0.02 4 x 4 f0.9	8	K	E	0.004625	0.004663	Block
+32822	grille|0.6 x 1.2 x 0.08 2 x 4 f0.9	8	K	E	0.003975	0.003993	Block
+32840	grille|0.6 x 1.2 x 0.08 6 x 4 f0.9	8	K	E	0.004150	0.004109	Block
+32855	grille|0.6 x 2.8 x 0.02 4 x 2 f0.9	7	K	E	0.012499	0.012500	Block
+32864	grille|0.6 x 2.8 x 0.02 6 x 2 f0.9	7	K	E	0.008325	0.008333	Block
+32873	grille|0.6 x 2.8 x 0.08 2 x 2 f0.9	7	K	E	0.010000	0.010000	Block
+32881	grille|0.6 x 2.8 x 0.08 4 x 2 f0.7	7	K	E	0.014999	0.015000	Block
+32887	grille|0.6 x 2.8 x 0.08 4 x 8 f0.7	7	K	E	0.014999	0.015000	Block
+32891	grille|0.6 x 2.8 x 0.08 6 x 2 f0.9	8	K	E	0.004308	0.004278	Block
+32896	grille|0.6 x 2.8 x 0.08 6 x 8 f0.7	7	K	E	0.010000	0.010000	Block
+32909	grille|1.0 x 1.2 x 0.02 4 x 2 f0.9	8	K	E	0.004748	0.004723	Block
+32927	grille|1.0 x 1.2 x 0.08 2 x 2 f0.9	8	K	E	0.004190	0.004179	Block
+32945	grille|1.0 x 1.2 x 0.08 6 x 2 f0.9	8	K	E	0.004313	0.004300	Block
+32960	grille|1.0 x 2.8 x 0.02 2 x 8 f0.9	8	K	E	0.004782	0.004781	Block
+32972	grille|1.0 x 2.8 x 0.02 6 x 2 f0.9	8	K	E	0.004850	0.004839	Block
+32981	grille|1.0 x 2.8 x 0.08 2 x 2 f0.9	8	K	E	0.004467	0.004430	Block
+32990	grille|1.0 x 2.8 x 0.08 4 x 2 f0.9	8	K	E	0.004494	0.004470	Block
+32999	grille|1.0 x 2.8 x 0.08 6 x 2 f0.9	7	K	E	0.005550	0.005555	Block
+33005	grille|1.0 x 2.8 x 0.08 6 x 8 f0.9	7	K	E	0.002775	0.002778	Block
+33010	tiled|0.6 x 1.2 x 0.02 tiles 1 x 2 hair 0.001	10	K	E	0.000400	0.000397	Block
+33016	tiled|0.6 x 1.2 x 0.02 tiles 1 x 4 hair 0.001	12	K	E	0.001200	0.001190	Block
+33022	tiled|0.6 x 1.2 x 0.02 tiles 2 x 2 hair 0.001	12	K	E	0.001175	0.001183	Block
+33028	tiled|0.6 x 1.2 x 0.02 tiles 2 x 4 hair 0.001	16	K	E	0.001975	0.001975	Block
+33034	tiled|0.6 x 1.2 x 0.02 tiles 3 x 2 hair 0.001	14	K	E	0.002000	0.001982	Block
+33040	tiled|0.6 x 1.2 x 0.02 tiles 3 x 4 hair 0.001	20	K	E	0.002800	0.002773	Block
+33046	tiled|0.6 x 1.2 x 0.02 tiles 4 x 2 hair 0.001	16	K	E	0.002775	0.002769	Block
+33052	tiled|0.6 x 1.2 x 0.02 tiles 4 x 4 hair 0.001	24	K	E	0.003575	0.003558	Block
+33058	tiled|0.6 x 1.2 x 0.08 tiles 1 x 2 hair 0.001	10	K	E	0.000375	0.000347	Block
+33064	tiled|0.6 x 1.2 x 0.08 tiles 1 x 4 hair 0.001	12	K	E	0.001050	0.001041	Block
+33070	tiled|0.6 x 1.2 x 0.08 tiles 2 x 2 hair 0.001	12	K	E	0.001050	0.001035	Block
+33076	tiled|0.6 x 1.2 x 0.08 tiles 2 x 4 hair 0.001	16	K	E	0.001725	0.001728	Block
+33082	tiled|0.6 x 1.2 x 0.08 tiles 3 x 2 hair 0.001	14	K	E	0.001775	0.001735	Block
+33088	tiled|0.6 x 1.2 x 0.08 tiles 3 x 4 hair 0.001	20	K	E	0.002450	0.002427	Block
+33094	tiled|0.6 x 1.2 x 0.08 tiles 4 x 2 hair 0.001	16	K	E	0.002450	0.002423	Block
+33100	tiled|0.6 x 1.2 x 0.08 tiles 4 x 4 hair 0.001	24	K	E	0.003125	0.003113	Block
+33104	tiled|0.6 x 2.8 x 0.02 tiles 1 x 1 hair 0.005	7	K	E	0.000000	0.000000	Block
+33107	tiled|0.6 x 2.8 x 0.02 tiles 1 x 2 hair 0.005	7	K	E	0.000000	0.000000	Block
+33110	tiled|0.6 x 2.8 x 0.02 tiles 1 x 3 hair 0.005	7	K	E	0.000000	0.000000	Block
+33113	tiled|0.6 x 2.8 x 0.02 tiles 1 x 4 hair 0.005	7	K	E	0.000000	0.000000	Block
+33116	tiled|0.6 x 2.8 x 0.02 tiles 2 x 1 hair 0.005	7	K	E	0.004175	0.004166	Block
+33119	tiled|0.6 x 2.8 x 0.02 tiles 2 x 2 hair 0.005	7	K	E	0.004175	0.004166	Block
+33122	tiled|0.6 x 2.8 x 0.02 tiles 2 x 3 hair 0.005	7	K	E	0.004175	0.004166	Block
+33125	tiled|0.6 x 2.8 x 0.02 tiles 2 x 4 hair 0.005	7	K	E	0.004175	0.004166	Block
+33128	tiled|0.6 x 2.8 x 0.02 tiles 3 x 1 hair 0.005	7	K	E	0.000000	0.000000	Block
+33131	tiled|0.6 x 2.8 x 0.02 tiles 3 x 2 hair 0.005	7	K	E	0.000000	0.000000	Block
+33134	tiled|0.6 x 2.8 x 0.02 tiles 3 x 3 hair 0.005	7	K	E	0.000000	0.000000	Block
+33137	tiled|0.6 x 2.8 x 0.02 tiles 3 x 4 hair 0.005	7	K	E	0.000000	0.000000	Block
+33140	tiled|0.6 x 2.8 x 0.02 tiles 4 x 1 hair 0.005	7	K	E	0.004175	0.004166	Block
+33143	tiled|0.6 x 2.8 x 0.02 tiles 4 x 2 hair 0.005	7	K	E	0.004175	0.004166	Block
+33146	tiled|0.6 x 2.8 x 0.02 tiles 4 x 3 hair 0.005	7	K	E	0.004175	0.004166	Block
+33149	tiled|0.6 x 2.8 x 0.02 tiles 4 x 4 hair 0.005	7	K	E	0.004175	0.004166	Block
+33152	tiled|0.6 x 2.8 x 0.08 tiles 1 x 1 hair 0.005	7	K	E	0.000000	0.000000	Block
+33155	tiled|0.6 x 2.8 x 0.08 tiles 1 x 2 hair 0.005	7	K	E	0.000000	0.000000	Block
+33158	tiled|0.6 x 2.8 x 0.08 tiles 1 x 3 hair 0.005	7	K	E	0.000000	0.000000	Block
+33161	tiled|0.6 x 2.8 x 0.08 tiles 1 x 4 hair 0.005	7	K	E	0.000000	0.000000	Block
+33164	tiled|0.6 x 2.8 x 0.08 tiles 2 x 1 hair 0.005	7	K	E	0.001700	0.001667	Block
+33167	tiled|0.6 x 2.8 x 0.08 tiles 2 x 2 hair 0.005	7	K	E	0.001700	0.001667	Block
+33170	tiled|0.6 x 2.8 x 0.08 tiles 2 x 3 hair 0.005	7	K	E	0.001700	0.001667	Block
+33173	tiled|0.6 x 2.8 x 0.08 tiles 2 x 4 hair 0.005	7	K	E	0.001700	0.001667	Block
+33176	tiled|0.6 x 2.8 x 0.08 tiles 3 x 1 hair 0.005	7	K	E	0.000000	0.000000	Block
+33179	tiled|0.6 x 2.8 x 0.08 tiles 3 x 2 hair 0.005	7	K	E	0.000000	0.000000	Block
+33182	tiled|0.6 x 2.8 x 0.08 tiles 3 x 3 hair 0.005	7	K	E	0.000000	0.000000	Block
+33185	tiled|0.6 x 2.8 x 0.08 tiles 3 x 4 hair 0.005	7	K	E	0.000000	0.000000	Block
+33188	tiled|0.6 x 2.8 x 0.08 tiles 4 x 1 hair 0.005	7	K	E	0.001700	0.001667	Block
+33191	tiled|0.6 x 2.8 x 0.08 tiles 4 x 2 hair 0.005	7	K	E	0.001700	0.001667	Block
+33194	tiled|0.6 x 2.8 x 0.08 tiles 4 x 3 hair 0.005	7	K	E	0.001700	0.001667	Block
+33197	tiled|0.6 x 2.8 x 0.08 tiles 4 x 4 hair 0.005	7	K	E	0.001700	0.001667	Block
+33202	tiled|1.0 x 1.2 x 0.02 tiles 1 x 2 hair 0.001	10	K	E	0.000407	0.000402	Block
+33208	tiled|1.0 x 1.2 x 0.02 tiles 1 x 4 hair 0.001	12	K	E	0.001221	0.001206	Block
+33214	tiled|1.0 x 1.2 x 0.02 tiles 2 x 2 hair 0.001	12	K	E	0.000904	0.000880	Block
+33220	tiled|1.0 x 1.2 x 0.02 tiles 2 x 4 hair 0.001	16	K	E	0.001718	0.001683	Block
+33226	tiled|1.0 x 1.2 x 0.02 tiles 3 x 2 hair 0.001	14	K	E	0.001356	0.001365	Block
+33232	tiled|1.0 x 1.2 x 0.02 tiles 3 x 4 hair 0.001	20	K	E	0.002170	0.002168	Block
+33238	tiled|1.0 x 1.2 x 0.02 tiles 4 x 2 hair 0.001	16	K	E	0.001854	0.001843	Block
+33244	tiled|1.0 x 1.2 x 0.02 tiles 4 x 4 hair 0.001	24	K	E	0.002668	0.002645	Block
+33250	tiled|1.0 x 1.2 x 0.08 tiles 1 x 2 hair 0.001	10	K	E	0.000368	0.000363	Block
+33256	tiled|1.0 x 1.2 x 0.08 tiles 1 x 4 hair 0.001	12	K	E	0.001104	0.001090	Block
+33262	tiled|1.0 x 1.2 x 0.08 tiles 2 x 2 hair 0.001	12	K	E	0.000818	0.000795	Block
+33268	tiled|1.0 x 1.2 x 0.08 tiles 2 x 4 hair 0.001	16	K	E	0.001553	0.001521	Block
+33274	tiled|1.0 x 1.2 x 0.08 tiles 3 x 2 hair 0.001	14	K	E	0.001226	0.001234	Block
+33280	tiled|1.0 x 1.2 x 0.08 tiles 3 x 4 hair 0.001	20	K	E	0.001962	0.001960	Block
+33286	tiled|1.0 x 1.2 x 0.08 tiles 4 x 2 hair 0.001	16	K	E	0.001676	0.001666	Block
+33292	tiled|1.0 x 1.2 x 0.08 tiles 4 x 4 hair 0.001	24	K	E	0.002412	0.002391	Block
+33296	tiled|1.0 x 2.8 x 0.02 tiles 1 x 1 hair 0.005	7	K	E	0.000000	0.000000	Block
+33299	tiled|1.0 x 2.8 x 0.02 tiles 1 x 2 hair 0.005	7	K	E	0.000000	0.000000	Block
+33302	tiled|1.0 x 2.8 x 0.02 tiles 1 x 3 hair 0.005	7	K	E	0.000000	0.000000	Block
+33305	tiled|1.0 x 2.8 x 0.02 tiles 1 x 4 hair 0.005	7	K	E	0.000000	0.000000	Block
+33308	tiled|1.0 x 2.8 x 0.02 tiles 2 x 1 hair 0.005	7	K	E	0.004175	0.004166	Block
+33311	tiled|1.0 x 2.8 x 0.02 tiles 2 x 2 hair 0.005	7	K	E	0.004175	0.004166	Block
+33314	tiled|1.0 x 2.8 x 0.02 tiles 2 x 3 hair 0.005	7	K	E	0.004175	0.004166	Block
+33317	tiled|1.0 x 2.8 x 0.02 tiles 2 x 4 hair 0.005	7	K	E	0.004175	0.004166	Block
+33320	tiled|1.0 x 2.8 x 0.02 tiles 3 x 1 hair 0.005	7	K	E	0.000000	0.000000	Block
+33323	tiled|1.0 x 2.8 x 0.02 tiles 3 x 2 hair 0.005	7	K	E	0.000000	0.000000	Block
+33326	tiled|1.0 x 2.8 x 0.02 tiles 3 x 3 hair 0.005	7	K	E	0.000000	0.000000	Block
+33329	tiled|1.0 x 2.8 x 0.02 tiles 3 x 4 hair 0.005	7	K	E	0.000000	0.000000	Block
+33332	tiled|1.0 x 2.8 x 0.02 tiles 4 x 1 hair 0.005	7	K	E	0.004175	0.004166	Block
+33335	tiled|1.0 x 2.8 x 0.02 tiles 4 x 2 hair 0.005	7	K	E	0.004175	0.004166	Block
+33338	tiled|1.0 x 2.8 x 0.02 tiles 4 x 3 hair 0.005	7	K	E	0.004175	0.004166	Block
+33341	tiled|1.0 x 2.8 x 0.02 tiles 4 x 4 hair 0.005	7	K	E	0.004175	0.004166	Block
+33344	tiled|1.0 x 2.8 x 0.08 tiles 1 x 1 hair 0.005	7	K	E	0.000000	0.000000	Block
+33347	tiled|1.0 x 2.8 x 0.08 tiles 1 x 2 hair 0.005	7	K	E	0.000000	0.000000	Block
+33350	tiled|1.0 x 2.8 x 0.08 tiles 1 x 3 hair 0.005	7	K	E	0.000000	0.000000	Block
+33353	tiled|1.0 x 2.8 x 0.08 tiles 1 x 4 hair 0.005	7	K	E	0.000000	0.000000	Block
+33356	tiled|1.0 x 2.8 x 0.08 tiles 2 x 1 hair 0.005	7	K	E	0.001700	0.001667	Block
+33359	tiled|1.0 x 2.8 x 0.08 tiles 2 x 2 hair 0.005	7	K	E	0.001700	0.001667	Block
+33362	tiled|1.0 x 2.8 x 0.08 tiles 2 x 3 hair 0.005	7	K	E	0.001700	0.001667	Block
+33365	tiled|1.0 x 2.8 x 0.08 tiles 2 x 4 hair 0.005	7	K	E	0.001700	0.001667	Block
+33368	tiled|1.0 x 2.8 x 0.08 tiles 3 x 1 hair 0.005	7	K	E	0.000000	0.000000	Block
+33371	tiled|1.0 x 2.8 x 0.08 tiles 3 x 2 hair 0.005	7	K	E	0.000000	0.000000	Block
+33374	tiled|1.0 x 2.8 x 0.08 tiles 3 x 3 hair 0.005	7	K	E	0.000000	0.000000	Block
+33377	tiled|1.0 x 2.8 x 0.08 tiles 3 x 4 hair 0.005	7	K	E	0.000000	0.000000	Block
+33380	tiled|1.0 x 2.8 x 0.08 tiles 4 x 1 hair 0.005	7	K	E	0.001700	0.001667	Block
+33383	tiled|1.0 x 2.8 x 0.08 tiles 4 x 2 hair 0.005	7	K	E	0.001700	0.001667	Block
+33386	tiled|1.0 x 2.8 x 0.08 tiles 4 x 3 hair 0.005	7	K	E	0.001700	0.001667	Block
+33389	tiled|1.0 x 2.8 x 0.08 tiles 4 x 4 hair 0.005	7	K	E	0.001700	0.001667	Block

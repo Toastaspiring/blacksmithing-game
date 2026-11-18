@@ -1,0 +1,9 @@
+UNITS bset:curvedGrip:8:3: 35 designs, new median 5785, p99 33618, max 33618 | old median 5028, p99 8164, max 8164 (0 s)
+      33618 units (old    7721)  n10 cleaned  1  n6 ext0.040 gap0.0005 bend4 [bset-curvedGrip]
+      24757 units (old    6619)  n 8 cleaned  0  n4 ext0.040 gap0.0030 bend4 [bset-curvedGrip]
+      20647 units (old    8164)  n 9 cleaned  0  n5 ext0.040 gap0.0060 bend4 [bset-curvedGrip]
+      20570 units (old    4851)  n 7 cleaned  1  n3 ext0.040 gap0.0010 bend4 [bset-curvedGrip]
+      12673 units (old    6926)  n10 cleaned  0  n6 ext0.040 gap0.0120 bend4 [bset-curvedGrip]
+      10460 units (old    3132)  n 7 cleaned  0  n3 ext0.020 gap0.0005 bend4 [bset-curvedGrip]
+       8166 units (old    6242)  n10 cleaned  0  n6 ext0.020 gap0.0060 bend4 [bset-curvedGrip]
+       7577 units (old    3027)  n 7 cleaned  0  n3 ext0.020 gap0.0120 bend4 [bset-curvedGrip]

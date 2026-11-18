@@ -1,0 +1,9 @@
+UNITS bset:fuller:8:3: 696 designs, new median 3522, p99 4424, max 4467 | old median 6206, p99 9736, max 10058 (3 s)
+       4467 units (old    9332)  n13 cleaned  1  w1.0 L2.5 t0.04 c0.050 g0.01 at0.2 twin [bset-fuller]
+       4454 units (old    8750)  n13 cleaned  1  w1.0 L2.5 t0.02 c0.050 g0.01 at0.3 twin [bset-fuller]
+       4444 units (old    9333)  n13 cleaned  1  w1.0 L2.5 t0.08 c0.050 g0.01 at0.1 twin [bset-fuller]
+       4440 units (old    9228)  n13 cleaned  1  w1.0 L2.0 t0.04 c0.050 g0.01 at0.3 twin [bset-fuller]
+       4428 units (old    8760)  n13 cleaned  1  w1.0 L2.0 t0.08 c0.050 g0.01 at0.2 twin [bset-fuller]
+       4426 units (old    9740)  n13 cleaned  1  w1.0 L2.0 t0.02 c0.050 g0.01 at0.4 twin [bset-fuller]
+       4424 units (old    9253)  n13 cleaned  1  w1.0 L2.5 t0.08 c0.050 g0.01 at0.5 twin [bset-fuller]
+       4422 units (old    9754)  n13 cleaned  0  w0.4 L2.0 t0.08 c0.050 g0.01 at0.4 twin [bset-fuller]

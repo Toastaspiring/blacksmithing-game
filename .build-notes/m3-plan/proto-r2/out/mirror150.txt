@@ -1,0 +1,4 @@
+X mirror images: 19 fixtures and 150 Gen designs (TestRng 0x5EED0008), rank order, stride
+  design vs mirror image       tier flips 0; D 0.0069 (gen#136); G 0.0069 (gen#136); Ha.Asymmetry 0.0000 (gen#66); Ha.EdgeLength 0.0064 (gen#31); Ha.Thinness 0.0172 (gen#136); Ha.Volume 0.0000 (C06); Sh.Asymmetry 0.0000 (gen#66); Sh.EdgeLength 0.0064 (gen#31); Sh.Thinness 0.0003 (gen#47); Sm.Volume 0.0000 (C06)
+  EdgeLength largest relative change 0.2942% (gen#31 6.935592/11 pts vs 6.915188/9 pts); raster within 1e-12 on 169, not on 0 
+3.9 s

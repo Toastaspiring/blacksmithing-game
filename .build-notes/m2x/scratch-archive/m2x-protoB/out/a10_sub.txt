@@ -1,0 +1,28 @@
+-- D per fixture: as built | lifted | quota
+-- C09 + 0.03: part order and a copy under each budget
+false Sm 0.0005 N, Ha 0.3237 H, Sh 0.2064 H
+    part 13 first: Sm 0.0005 N, Ha 0.3241 H, Sh 0.2064 H
+    copy of 13 first: Sm 0.0005 N, Ha 0.3241 H, Sh 0.2064 H
+    part 15 first: Sm 0.0005 N, Ha 0.3237 H, Sh 0.2064 H
+    copy of 15 first: Sm 0.0005 N, Ha 0.3237 H, Sh 0.2064 H
+    part 16 first: Sm 0.0005 N, Ha 0.3241 H, Sh 0.2064 H
+    copy of 16 first: Sm 0.0005 N, Ha 0.3241 H, Sh 0.2064 H
+lift Sm 0.0005 N, Ha 0.3237 H, Sh 0.2064 H
+    part 13 first: Sm 0.0005 N, Ha 0.3241 H, Sh 0.2064 H
+    copy of 13 first: Sm 0.0005 N, Ha 0.3241 H, Sh 0.2064 H
+    part 15 first: Sm 0.0005 N, Ha 0.3237 H, Sh 0.2064 H
+    copy of 15 first: Sm 0.0005 N, Ha 0.3237 H, Sh 0.2064 H
+    part 16 first: Sm 0.0005 N, Ha 0.3241 H, Sh 0.2064 H
+    copy of 16 first: Sm 0.0005 N, Ha 0.3241 H, Sh 0.2064 H
+quota Sm 0.0005 N, Ha 0.3237 H, Sh 0.2064 H
+    part 13 first: Sm 0.0005 N, Ha 0.3241 H, Sh 0.2064 H
+    copy of 13 first: Sm 0.0005 N, Ha 0.3241 H, Sh 0.2064 H
+    part 15 first: Sm 0.0005 N, Ha 0.3237 H, Sh 0.2064 H
+    copy of 15 first: Sm 0.0005 N, Ha 0.3237 H, Sh 0.2064 H
+    part 16 first: Sm 0.0005 N, Ha 0.3241 H, Sh 0.2064 H
+    copy of 16 first: Sm 0.0005 N, Ha 0.3241 H, Sh 0.2064 H
+-- 200 random orders of C09: the spread of D under each budget
+false: Sm [0.0001, 0.0001] Ha [0.3170, 0.3190] Sh [0.1904, 0.1904]
+lift: Sm [0.0001, 0.0001] Ha [0.3170, 0.3190] Sh [0.1904, 0.1904]
+quota: Sm [0.0001, 0.0001] Ha [0.3170, 0.3190] Sh [0.1904, 0.1904]
+-- dumprun a10_sub: 632 designs, 38.4 s

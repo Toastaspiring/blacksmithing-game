@@ -1,0 +1,9 @@
+UNITS bset:chamfer:8:3: 1887 designs, new median 2199, p99 11550, max 11627 | old median 2487, p99 11303, max 12323 (6 s)
+      11627 units (old   11303)  n19 cleaned  1  C09 CornerWedge a0.03 b0.03 sink0.005 turn5 side-1 [bset-chamfer]
+      11608 units (old   11065)  n19 cleaned  1  C09 CornerWedge a0.05 b0.03 sink0.020 turn1 side-1 [bset-chamfer]
+      11604 units (old   10998)  n19 cleaned  1  C09 CornerWedge a0.03 b0.03 sink0.005 turn7 side-1 [bset-chamfer]
+      11598 units (old   11447)  n19 cleaned  1  C09 CornerWedge a0.03 b0.06 sink0.020 turn5 side-1 [bset-chamfer]
+      11594 units (old   10392)  n19 cleaned  1  C09 CornerWedge a0.02 b0.06 sink0.010 turn5 side-1 [bset-chamfer]
+      11593 units (old   10649)  n19 cleaned  1  C09 CornerWedge a0.03 b0.03 sink0.010 turn5 side-1 [bset-chamfer]
+      11593 units (old   10624)  n19 cleaned  1  C09 CornerWedge a0.03 b0.03 sink0.002 turn1 side-1 [bset-chamfer]
+      11591 units (old    9750)  n19 cleaned  1  C09 CornerWedge a0.08 b0.03 sink0.040 turn1 side-1 [bset-chamfer]

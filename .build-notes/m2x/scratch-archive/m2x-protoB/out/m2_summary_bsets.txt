@@ -1,0 +1,33 @@
+M2 b_sets (12 families, in full): 64111 designs from bset-ballRivet 9144, bset-bead 264, bset-chamfer 15096, bset-comb 16, bset-curvedGrip 280, bset-fuller 5568, bset-oddPoke 4348, bset-pinRivet 2500, bset-sunkRod 10080, bset-thinPart 10240, bset-tiltPlate 6435, bset-wall 140
+  shape          parts   fine | false Enclosed at true >= 2.5/3/5/7.5/10/15/20 % | false kept at true < 1.5/1/0.5/0.25 %
+  Block         267214   9182 | new cleaned   5651 FE 0/0/0/0/0/0/0              | FK 1/0/0/0
+                     0      0 | old cleaned   5657 FE 0/0/0/0/0/0/0              | FK 0/0/0/0
+  Wedge         117922   1828 | new cleaned   1615 FE 0/0/0/0/0/0/0              | FK 0/0/0/0
+                     0      0 | old cleaned   1617 FE 0/0/0/0/0/0/0              | FK 0/0/0/0
+  CornerWedge    11135   1991 | new cleaned   1581 FE 0/0/0/0/0/0/0              | FK 0/0/0/0
+                     0      0 | old cleaned   1611 FE 2/2/0/0/0/0/0              | FK 0/0/0/0
+  Cylinder       84852   1251 | new cleaned    579 FE 0/0/0/0/0/0/0              | FK 0/0/0/0
+                     0      0 | old cleaned    556 FE 6/6/0/0/0/0/0              | FK 21/15/10/5
+  Ball           89521    798 | new cleaned    324 FE 59/2/0/0/0/0/0             | FK 0/0/0/0
+                     0      0 | old cleaned    298 FE 72/34/20/18/12/5/0         | FK 4/0/0/0
+  ALL           570644  15050 | new cleaned   9750 FE 59/2/0/0/0/0/0             | FK 1/0/0/0
+                     0      0 | old cleaned   9739 FE 80/42/20/18/12/5/0         | FK 25/15/10/5
+  worst false Enclosed (new): true 3.505% read 1.132%  d0.10 gap0.05 t1 [bset-bead] part 5 Ball Bead
+  worst false Enclosed (new): true 3.475% read 1.618%  F3 #68 Block t0.030 [bset-oddPoke] part 4 Ball QuillonL
+  worst false Enclosed (new): true 2.515% read 1.521%  C05 d0.12 f-0.95 x0.00 y-0.5 t2 [bset-ballRivet] part 7 Ball Rivet
+  worst false Enclosed (new): true 2.515% read 1.367%  F4 d0.08 f-0.95 x0.00 y0.3 t3 [bset-ballRivet] part 6 Ball Rivet
+  worst false Enclosed (new): true 2.515% read 0.950%  C05 d0.10 f-0.95 x0.00 y0.3 t2 [bset-ballRivet] part 7 Ball Rivet
+  worst false Enclosed (new): true 2.515% read 1.167%  C05 d0.10 f-0.95 x0.25 y0.3 t2 [bset-ballRivet] part 7 Ball Rivet
+  worst false kept (new): true 1.3999% read 2.433%  C02 Arming (Iron) #454 Block t0.004 [bset-oddPoke] part 7 Block Poke
+  worst false Enclosed (old): true 18.585% read 19.261%  d0.50 gap0.20 t1 [bset-bead] part 5 Ball Bead
+  worst false Enclosed (old): true 18.258% read 18.876%  d0.40 gap0.20 t1 [bset-bead] part 5 Ball Bead
+  worst false Enclosed (old): true 17.740% read 18.244%  d0.30 gap0.20 t1 [bset-bead] part 5 Ball Bead
+  worst false Enclosed (old): true 16.708% read 17.018%  d0.20 gap0.20 t1 [bset-bead] part 5 Ball Bead
+  worst false Enclosed (old): true 15.527% read 15.516%  d0.14 gap0.20 t1 [bset-bead] part 5 Ball Bead
+  worst false Enclosed (old): true 14.055% read 13.693%  d0.10 gap0.20 t1 [bset-bead] part 5 Ball Bead
+  worst false kept (old): true 0.2025% read 0.204%  n4 ext0.002 gap0.0005 bend0 [bset-curvedGrip] part 2 Cylinder Grip
+  worst false kept (old): true 0.2025% read 0.204%  n4 ext0.005 gap0.0005 bend0 [bset-curvedGrip] part 2 Cylinder Grip
+  worst false kept (old): true 0.2025% read 0.204%  n4 ext0.010 gap0.0005 bend0 [bset-curvedGrip] part 2 Cylinder Grip
+  worst false kept (old): true 0.2025% read 0.204%  n4 ext0.020 gap0.0005 bend0 [bset-curvedGrip] part 2 Cylinder Grip
+  worst false kept (old): true 0.2025% read 0.204%  n4 ext0.040 gap0.0005 bend0 [bset-curvedGrip] part 2 Cylinder Grip
+  worst false kept (old): true 0.4050% read 0.408%  n4 ext0.002 gap0.0010 bend0 [bset-curvedGrip] part 2 Cylinder Grip

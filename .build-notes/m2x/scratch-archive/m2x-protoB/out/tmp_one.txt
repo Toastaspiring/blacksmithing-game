@@ -1,0 +1,2 @@
+COVERLOG the 12 patches, copies or no copies                                    pin 0.022222 exact 0.029155 truth 0.029149
+RESULT pass=1 fail=0 skip=0 files=50 time=0.04s

@@ -1,0 +1,4 @@
+M1 fuzz:150:13 (model cyl 32 ball 4 canonical): 150 designs, 1952 parts, 42943 facets, 201.5 s
+  largest |share difference| per part 1.79e-13  (fuzz13#98 part 9 (CornerWedge): exact 0.464517197427 brute 0.464517197427)
+  largest |difference| per facet, of its area 6.93e-13  (fuzz13#98 part 9 (CornerWedge) facet 2: exact 0.00285724901191 brute 0.00285724901191 area 0.00480496)
+  parts by |share difference|: <1e-12 1952, <1e-10 0, <1e-8 0, <1e-6 0, <1e-4 0, more 0

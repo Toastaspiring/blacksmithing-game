@@ -1,0 +1,5 @@
+F1   Z offsets 0.01, -0.037: chains bit-identical; |Δ bladeArea| 0, |Δ bladeMeanThickness| 0
+F3   Z offsets 0.01, -0.037: chains bit-identical; |Δ bladeArea| 0, |Δ bladeMeanThickness| 0
+F5   Z offsets 0.01, -0.037: chains bit-identical; |Δ bladeArea| 0, |Δ bladeMeanThickness| 0
+C02  Z offsets 0.01, -0.037: chains bit-identical; |Δ bladeArea| 0, |Δ bladeMeanThickness| 0
+C06  Z offsets 0.01, -0.037: chains bit-identical; |Δ bladeArea| 0, |Δ bladeMeanThickness| 0

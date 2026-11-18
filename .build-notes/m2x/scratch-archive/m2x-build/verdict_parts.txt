@@ -1,0 +1,553 @@
+=====helpers
+local function shareOf(list: { any }, i: number): number
+	local _, _, hider = Oracle.flags(list)
+	return Oracle.measure(list, i, hider, Oracle.COARSE_POINTS)
+end
+
+-- A smaller copy of a part about its centroid, inside it whatever its shape.
+local function shrunk(host: any, f: number, id: number, slot: string): any
+	local P = H.prepare(host)
+	return H.part(id, slot, host.shape, "Iron", { P.gx + f * (host.pos[1] - P.gx), P.gy + f * (host.pos[2] - P.gy), P.gz + f * (host.pos[3] - P.gz) },
+		host.rot, { host.size[1] * f, host.size[2] * f, host.size[3] * f })
+end
+
+-- The next free slot, Blade first (fill need not show where it stands).
+local function slotFor(parts: { any }): string
+	local MAX: { [string]: number } = { Blade = 12, Guard = 8, Grip = 6, Pommel = 4 }
+	local count: { [string]: number } = { Blade = 0, Guard = 0, Grip = 0, Pommel = 0 }
+	for _, p in ipairs(parts) do
+		count[p.slot] += 1
+	end
+	for _, slot in ipairs({ "Blade", "Guard", "Grip", "Pommel" }) do
+		if count[slot] < MAX[slot] then
+			return slot
+		end
+	end
+	error("no slot left")
+end
+
+-- One filler that cannot cover anything its host does not: well inside a part, Dust anywhere, or an exact copy (in front of its
+-- original a copy would be the original, and so it would in a slot whose name comes first: `copies` says whether it may come).
+local function fillerFor(rng: Rng, K: { any }, id: number, slot: string, copies: boolean): any
+	local host = rng:pick(K)
+	local kind = rng:int(1, 5)
+	if kind == 5 then
+		local d = rng:range(0.02, 0.0575)
+		return H.part(id, slot, rng:pick({ "Block", "Ball", "Wedge", "Cylinder" }), "Iron", { rng:range(-0.7, 0.7), rng:range(0.1, 4.9), rng:range(-0.25, 0.25) },
+			H.randomQuat(rng), { d, d, d })
+	elseif kind == 4 and copies and slot >= host.slot then
+		local copy = Drafts.deepCopy(host)
+		copy.id, copy.slot = id, slot
+		return copy
+	elseif kind == 3 and host.shape == "Block" then
+		-- turned, half its diagonal under half the host's least size
+		local P = H.prepare(host)
+		local d = math.min(host.size[1], host.size[2], host.size[3]) * rng:range(0.15, 0.4)
+		return H.part(id, slot, rng:pick({ "Block", "Wedge", "CornerWedge", "Cylinder", "Ball" }), "Iron", { P.gx, P.gy, P.gz }, H.randomQuat(rng), { d, d, d })
+	end
+	return shrunk(host, if rng:float() < 0.5 then rng:range(0.1, 0.6) else rng:range(0.6, 0.97), id, slot)
+end
+
+-- A large design: C09 as it stands, or P1 less a third or a half of its parts, whose kept parts are past N_SURF_WORK all the same.
+local function largeDesign(rng: Rng): any
+	if rng:float() < 0.7 then
+		return H.ornate()
+	end
+	local base = H.p1()
+	for _ = 1, rng:int(8, 12) do
+		table.remove(base.parts, rng:int(1, #base.parts))
+	end
+	for i, p in ipairs(base.parts) do
+		p.id = i
+	end
+	return base
+end
+
+local function randomFill(rng: Rng, copies: boolean): any
+	local base = largeDesign(rng)
+	local filled = Drafts.deepCopy(base)
+	local count = rng:int(1, 24 - #base.parts)
+	for k = 1, count do
+		table.insert(filled.parts, fillerFor(rng, base.parts, 100 + k, slotFor(filled.parts), copies))
+	end
+	return { base = base, filled = filled, count = count }
+end
+
+local function fillLeavesKept(count: number)
+	local ornate = Sampling.exposure(H.prepared(H.ornate()))
+	Prop.check(count, function(rng: Rng): any
+		return randomFill(rng, true)
+	end, function(c: any)
+		local before = if c.base.name == "C09" then ornate else Sampling.exposure(H.prepared(c.base))
+		local after = Sampling.exposure(H.prepared(c.filled))
+		A.eq(#after.cleaned, #before.cleaned + c.count, "all the fill is cleaned")
+		A.eq(after.surfSamples, before.surfSamples, "and not measured")
+		A.eq(after.subSampled, before.subSampled, "and uses none of the sub-grid budget")
+		H.sameKeptMeasure(after, before, #c.base.parts)
+	end)
+end
+
+=====indep1
+	-- ── independence: a verdict depends on the part and on what covers it ─────────────────────────────────────────
+
+	-- { width, length, thickness, x } in C09's blade. The old rule cleaned each with 0–5 hidden blocks: Hard to Normal.
+	local PLATES = { { 0.12, 2, 0.05, -0.03 }, { 0.09, 2, 0.04, -0.05 }, { 0.10, 2, 0.05, -0.04 }, { 0.08, 2, 0.04, -0.05 }, { 0.06, 2, 0.03, -0.07 },
+		{ 0.06, 1, 0.03, -0.07 } }
+	t.it("§5 hidden blocks cannot clean a plate that shows: C09 + a plate that shows 17–27 %, with and without fill", function()
+		local SLOTS = { "Guard", "Guard", "Guard", "Blade", "Blade", "Blade" }
+		for _, plate in ipairs(PLATES) do
+			local base = H.ornate()
+			table.insert(base.parts, H.part(50, "Blade", "Block", "Iron", { plate[4], 2.6, 0 }, H.I, { plate[1], plate[2], plate[3] }))
+			local core = base.parts[12]
+			local index = #base.parts
+			local list = H.prepared(base)
+			local what = "plate " .. plate[1] .. " × " .. plate[2]
+			local before = Sampling.exposure(list)
+			A.deepEq(before.cleaned, {}, what .. " is kept with the rest")
+			A.within(shareOf(list, index), 0.17, 0.27, what .. " shows")
+			for n = 1, #SLOTS do
+				local filled = Drafts.deepCopy(base)
+				for k = 1, n do
+					local g = 0.8 - 0.01 * k
+					table.insert(filled.parts, H.part(100 + k, SLOTS[k], "Block", "Iron", core.pos, core.rot, { core.size[1] * g, core.size[2] * g, core.size[3] * g }))
+				end
+				local after = Sampling.exposure(H.prepared(filled))
+				A.eq(#after.cleaned, n, what .. ": only the fill is cleaned, n = " .. n)
+				H.sameKeptMeasure(after, before, #base.parts)
+			end
+		end
+	end)
+
+	t.it("§5 a Dust hairline hides nothing: a laminated blade's core stays kept with a speck along its rim", function()
+		local y = 1.45 + 2.5 / 2
+		local base = H.core("laminated", {
+			H.part(1, "Pommel", "Ball", "Iron", { 0, 0.3, 0 }, H.I, { 0.3, 0.3, 0.3 }),
+			H.part(2, "Grip", "Cylinder", "Iron", { 0, 0.88, 0 }, H.Z90, { 0.9, 0.16, 0.16 }),
+			H.part(3, "Guard", "Block", "Iron", { 0, 1.4, 0 }, H.I, { 1.1, 0.16, 0.3 }),
+			H.part(4, "Blade", "Block", "Iron", { 0, y, 0.035 }, H.I, { 1.2, 2.5, 0.05 }),
+			H.part(5, "Blade", "Block", "Iron", { 0, y, -0.035 }, H.I, { 1.2, 2.5, 0.05 }),
+			H.part(6, "Blade", "Block", "Steel", { 0, y, 0 }, H.I, { 1.2, 2.5, 0.02 }),
+		})
+		local before = Sampling.exposure(H.prepared(base))
+		A.truthy(before.kept[6], "the core is kept")
+		local filled = Drafts.deepCopy(base)
+		table.insert(filled.parts, H.part(7, "Blade", "Block", "Iron", { 0.6095, 2.7, 0 }, H.I, { 0.019, 0.5, 0.02 }))
+		local list = H.prepared(filled)
+		local after = Sampling.exposure(list)
+		A.deepEq(after.cleaned, { { partId = 7, reason = "Dust" } })
+		A.eq(after.surfSamples, before.surfSamples)
+		H.sameKeptMeasure(after, before, 6)
+	end)
+
+	-- The channel a budget leaves: hidden copies stand near every sample of X, so each sample would pay for them. With no
+	-- budget there is nothing to use up. X pokes out of F4's blade, on either side of its threshold.
+	t.it("§4.4 hidden copies inside a part use up nothing: the same verdict with 3, 9 and 18 of them", function()
+		local F4 = H.f("F4")
+		local host = F4.parts[4]
+		local size = { host.size[1] * 0.95, host.size[2] * 0.95, host.size[3] * 0.5 }
+		local function designOf(poke: number, n: number): any
+			local design = Drafts.deepCopy(F4)
+			local X = H.part(50, "Blade", "Block", "Iron", { host.pos[1], host.pos[2] - (host.size[2] / 2 - size[2] / 2 + poke), host.pos[3] }, host.rot, size)
+			table.insert(design.parts, X)
+			for k = 1, n do
+				table.insert(design.parts, shrunk(X, 0.985 - 0.012 * k, 100 + k, slotFor(design.parts)))
+			end
+			return design
+		end
+		local index = #F4.parts + 1
+		local kept = Sampling.exposure(H.prepared(designOf(0.0747, 0)))
+		A.truthy(kept.kept[index], "kept at this poke")
+		local cleaned = Sampling.exposure(H.prepared(designOf(0.001, 0)))
+		A.falsy(cleaned.kept[index], "cleaned at that one")
+		for _, n in ipairs({ 3, 9, 18 }) do
+			local after = Sampling.exposure(H.prepared(designOf(0.0747, n)))
+			A.eq(#after.cleaned, n, "only the copies are cleaned, n = " .. n)
+			H.sameKeptMeasure(after, kept, index)
+			H.sameKeptMeasure(Sampling.exposure(H.prepared(designOf(0.001, n))), cleaned, index)
+		end
+	end)
+
+	t.it("§5 random fill around a large design: kept parts bit-identical, 40 designs", function()
+		fillLeavesKept(40)
+	end)
+	t.slow("§5 random fill around a large design: kept parts bit-identical, FUZZ_N_VALID designs", function()
+		fillLeavesKept(Tol.FUZZ_N_VALID)
+	end)
+
+	-- The candidates' order is the parts' order, so any order of the fill shuffles what each verdict tries first.
+	local function shuffled(rng: Rng, list: { any }): { any }
+		local out = table.clone(list)
+		for i = #out, 2, -1 do
+			local j = rng:int(1, i)
+			out[i], out[j] = out[j], out[i]
+		end
+		return out
+	end
+
+	t.it("§4.4 the hider-first order changes no bit: any order of the fill, before or among the kept parts, 20 designs", function()
+		Prop.check(20, function(rng: Rng): any
+			local c = randomFill(rng, false)
+			local fill = shuffled(rng, { table.unpack(c.filled.parts, #c.base.parts + 1) })
+			-- the kept parts in their order, the fill anywhere among them
+			local parts: { any } = {}
+			local a, b = 1, 1
+			while a <= #c.base.parts or b <= #fill do
+				if b > #fill or (a <= #c.base.parts and rng:float() < 0.5) then
+					table.insert(parts, c.base.parts[a])
+					a += 1
+				else
+					table.insert(parts, fill[b])
+					b += 1
+				end
+			end
+			return { base = c.base, parts = parts, count = #fill }
+		end, function(c: any)
+			local before = Sampling.exposure(H.prepared(c.base))
+			local after = Sampling.exposure(H.prepared({ parts = c.parts }))
+			A.eq(#after.cleaned, #before.cleaned + c.count, "all the fill is cleaned")
+			local position: { [number]: number } = {}
+			for i, p in ipairs(c.parts) do
+				position[p.id] = i
+			end
+			A.eq(after.hSurf, before.hSurf)
+			A.eq(after.surfSamples, before.surfSamples)
+			for i, p in ipairs(c.base.parts) do
+				local at = position[p.id]
+				A.eq(after.kept[at], before.kept[i], "part " .. i .. "'s verdict")
+				A.eq(after.exposedKept[at], before.exposedKept[i], "part " .. i .. "'s area")
+				for j, q in ipairs(c.base.parts) do
+					A.eq(after.contact[at][position[q.id]], before.contact[i][j], "contact " .. i .. ", " .. j)
+				end
+			end
+		end)
+	end)
+
+=====indep2
+	-- The verdict, the measure and its budgets go by the solids. Any order of a design's parts, the same parts by id, to the bit: past
+	-- N_SUB_WORK too, on the large designs.
+	local function sameInAnyOrder(parts: { any }, order: { any })
+		local a, b = Sampling.exposure(H.prepared({ parts = parts })), Sampling.exposure(H.prepared({ parts = order }))
+		A.eq(a.hSurf, b.hSurf)
+		A.eq(a.surfSamples, b.surfSamples)
+		A.eq(a.subSampled, b.subSampled)
+		local position: { [number]: number } = {}
+		for i, p in ipairs(order) do
+			position[p.id] = i
+		end
+		for i, p in ipairs(parts) do
+			local at = position[p.id]
+			A.eq(a.kept[i], b.kept[at], "part " .. p.id .. "'s verdict")
+			A.eq(a.exposedKept[i], b.exposedKept[at], "part " .. p.id .. "'s area")
+			for j, q in ipairs(parts) do
+				A.eq(a.contact[i][j], b.contact[at][position[q.id]], "contact " .. p.id .. ", " .. q.id)
+			end
+		end
+	end
+
+	t.it("§4.4 ids play no part: any order of a design's parts, 20 designs and 5 past N_SUB_WORK", function()
+		Prop.check(20, function(rng: Rng): any
+			local design = H.anyDesign(rng)
+			return { parts = design.parts, order = shuffled(rng, design.parts) }
+		end, function(c: any)
+			sameInAnyOrder(c.parts, c.order)
+		end)
+		Prop.check(5, function(rng: Rng): any
+			local design = largeDesign(rng)
+			return { parts = design.parts, order = shuffled(rng, design.parts) }
+		end, function(c: any)
+			sameInAnyOrder(c.parts, c.order)
+		end)
+	end)
+
+	-- A real blade, a plate wholly inside it flush with a face. By id the plate kept the face and the blade, its faces all taken,
+	-- read nothing: solid in mass, hollow in D. The larger part keeps the face, whatever the ids.
+	t.it("§4.4 flush plates inside a real blade are the ones cleaned, whatever their ids", function()
+		local checked = 0
+		for _, name in ipairs({ "F1", "F5", "F4", "F3" }) do
+			local design = H.f(name)
+			local main = 0
+			for i, p in ipairs(design.parts) do
+				if p.slot == "Blade" and (main == 0 or H.prepare(p).volume > H.prepare(design.parts[main]).volume) then
+					main = i
+				end
+			end
+			local h = design.parts[main]
+			local tz = math.min(0.02, h.size[3] / 3)
+			local tx = math.min(0.02, h.size[1] / 3)
+			local before = Sampling.exposure(H.prepared(design))
+			local skin = {
+				H.part(101, "Guard", "Block", "Iron", { h.pos[1], h.pos[2], h.pos[3] + (h.size[3] - tz) / 2 }, h.rot, { h.size[1], h.size[2], tz }),
+				H.part(102, "Guard", "Block", "Iron", { h.pos[1], h.pos[2], h.pos[3] - (h.size[3] - tz) / 2 }, h.rot, { h.size[1], h.size[2], tz }),
+				H.part(103, "Pommel", "Block", "Iron", { h.pos[1] + (h.size[1] - tx) / 2, h.pos[2], h.pos[3] }, h.rot, { tx, h.size[2], h.size[3] }),
+				H.part(104, "Pommel", "Block", "Iron", { h.pos[1] - (h.size[1] - tx) / 2, h.pos[2], h.pos[3] }, h.rot, { tx, h.size[2], h.size[3] }),
+			}
+			if h.shape == "Block" and h.rot[4] == 1 then
+				checked += 1
+				local first: { any } = table.clone(skin)
+				for _, p in ipairs(design.parts) do
+					table.insert(first, p)
+				end
+				local after = Sampling.exposure(H.prepared({ parts = first }))
+				for k = 1, 4 do
+					A.falsy(after.kept[k], name .. ": plate " .. k .. " is cleaned, the blade keeps its faces")
+				end
+				for i = 1, #design.parts do
+					A.eq(after.kept[4 + i], before.kept[i], name .. " part " .. i)
+					A.eq(after.exposedKept[4 + i], before.exposedKept[i], name .. " part " .. i .. " measures as without them")
+				end
+			end
+		end
+		A.truthy(checked >= 3, "main blades that are upright Blocks: " .. checked)
+	end)
+
+	-- An exact copy hides nothing and takes nothing, in front of its original or in another slot, while the original's slot's name
+	-- comes first (a copy in one that comes before it is no more than relabelling the part).
+	t.it("§4.4 an exact copy changes nothing: first or last, in a slot that comes later, in another material", function()
+		for _, name in ipairs({ "F1", "F3", "F4" }) do
+			local design = H.f(name)
+			local before = Sampling.exposure(H.prepared(design))
+			for i, p in ipairs(design.parts) do
+				if p.slot == "Blade" then
+					local later = Drafts.deepCopy(p)
+					later.id, later.slot = 200, "Guard"
+					local other = Drafts.deepCopy(p)
+					other.id, other.material = 201, "Tin" -- a name that comes after any of them
+					local first: { any } = { later, other }
+					for _, q in ipairs(design.parts) do
+						table.insert(first, q)
+					end
+					local after = Sampling.exposure(H.prepared({ parts = first }))
+					A.deepEq({ after.kept[1], after.kept[2] }, { false, false }, name .. " part " .. i .. ": the copies are cleaned")
+					for j = 1, #design.parts do
+						A.eq(after.exposedKept[2 + j], before.exposedKept[j], name .. " part " .. j)
+					end
+				end
+			end
+		end
+		-- among copies of one slot and material the lowest index stays; a copy of a part in a slot whose name comes after it loses
+		local a = H.solid(1, "Block", { 0, 2, 0 }, H.I, { 0.2, 0.2, 0.2 }, "Guard")
+		local b = H.solid(2, "Block", { 0, 2, 0 }, H.I, { 0.2, 0.2, 0.2 }, "Blade")
+		A.deepEq(Sampling.exposure(H.prepared({ parts = { a, b } })).cleaned, { { partId = 1, reason = "Enclosed" } })
+		A.deepEq(Sampling.exposure(H.prepared({ parts = { b, a } })).cleaned, { { partId = 1, reason = "Enclosed" } })
+	end)
+
+=====ranked
+	t.it("§4.4 Sampling.ranked: the larger first, then by where it stands, |x| before x, whatever the order", function()
+		local function row(parts: { any }): { number }
+			local out: { number } = {}
+			local _, order = Sampling.ranked(H.prepared({ parts = parts }))
+			for i, p in ipairs(order) do
+				out[i] = p.id
+			end
+			return out
+		end
+		local big = H.solid(1, "Block", { 0, 3, 0 }, H.I, { 0.4, 0.4, 0.4 })
+		local low = H.solid(2, "Block", { 0.3, 1, 0 }, H.I, { 0.2, 0.2, 0.2 })
+		local middle = H.solid(3, "Block", { 0.1, 2, 0 }, H.I, { 0.2, 0.2, 0.2 })
+		local right = H.solid(4, "Block", { 0.3, 2, 0 }, H.I, { 0.2, 0.2, 0.2 })
+		local left = H.solid(5, "Block", { -0.3, 2, 0 }, H.I, { 0.2, 0.2, 0.2 })
+		local back = H.solid(6, "Block", { -0.3, 2, -0.1 }, H.I, { 0.2, 0.2, 0.2 })
+		local want = { 1, 2, 3, 6, 5, 4 }
+		A.deepEq(row({ big, low, middle, right, left, back }), want)
+		A.deepEq(row({ back, left, right, middle, low, big }), want)
+		-- the same volume and place: the half extents, then the turn
+		local wedge = H.solid(1, "Wedge", { 0, 2, 0 }, H.I, { 0.4, 0.2, 0.2 })
+		local block = H.solid(2, "Block", { 0, 2, 0 }, H.I, { 0.2, 0.2, 0.2 })
+		A.deepEq(row({ wedge, block }), { 2, 1 })
+		local wide = H.solid(1, "Block", { 0, 2, 0 }, H.I, { 0.4, 0.1, 0.2 })
+		local deep = H.solid(2, "Block", { 0, 2, 0 }, H.I, { 0.2, 0.1, 0.4 })
+		A.deepEq(row({ wide, deep }), { 2, 1 })
+		local tall = H.solid(3, "Block", { 0, 2, 0 }, H.I, { 0.2, 0.2, 0.2 })
+		local turned = H.solid(4, "Block", { 0, 2, 0 }, H.axisAngle(0, 1, 0, 30), { 0.2, 0.2, 0.2 })
+		A.deepEq(row({ tall, turned }), row({ turned, tall }))
+		-- a copy: by the slot's name, the material's, then the index
+		local function copy(id: number, slot: string, material: string): any
+			return H.part(id, slot, "Block", material, { 0, 2, 0 }, H.I, { 0.2, 0.2, 0.2 })
+		end
+		A.deepEq(row({ copy(1, "Guard", "Iron"), copy(2, "Blade", "Iron") }), { 2, 1 })
+		A.deepEq(row({ copy(1, "Blade", "Steel"), copy(2, "Blade", "Iron") }), { 2, 1 })
+		A.deepEq(row({ copy(1, "Blade", "Iron"), copy(2, "Blade", "Iron") }), { 1, 2 })
+		local rank = Sampling.ranked(H.prepared({ parts = { low, big } }))
+		A.deepEq(rank, { 2, 1 }, "rank per part")
+	end)
+
+=====s5
+	-- The designs of §17.2's reading rows: blades whose cover parts leave slits. The hilt and the frame are common; a core or a filler
+	-- stands between 2 cheeks.
+	local function hiltFor(guard: number): { any }
+		return {
+			H.part(1, "Pommel", "Ball", "Iron", { 0, 0.3, 0 }, H.I, { 0.3, 0.3, 0.3 }),
+			H.part(2, "Grip", "Cylinder", "Iron", { 0, 0.88, 0 }, H.Z90, { 0.9, 0.16, 0.16 }),
+			H.part(3, "Guard", "Block", "Iron", { 0, 1.4, 0 }, H.I, { guard, 0.16, 0.3 }),
+		}
+	end
+
+	local function withIds(parts: { any }): { any }
+		for i, p in ipairs(parts) do
+			p.id = i
+		end
+		return parts
+	end
+
+	local function cheeks(c: number, k: number, g: number, oneFace: boolean): ({ any }, number)
+		local L, w = 2, 1
+		local y = 1.45 + L / 2
+		local parts = hiltFor(1.1)
+		local sw = (w - g) / 2
+		local at = g / 2 + sw / 2
+		table.insert(parts, H.part(0, "Blade", "Block", "Iron", { at, y, k / 2 + c / 2 }, H.I, { sw, L, c }))
+		table.insert(parts, H.part(0, "Blade", "Block", "Iron", { -at, y, k / 2 + c / 2 }, H.I, { sw, L, c }))
+		if oneFace then
+			table.insert(parts, H.part(0, "Blade", "Block", "Iron", { 0, y, -k / 2 - c / 2 }, H.I, { w, L, c }))
+		else
+			table.insert(parts, H.part(0, "Blade", "Block", "Iron", { at, y, -k / 2 - c / 2 }, H.I, { sw, L, c }))
+			table.insert(parts, H.part(0, "Blade", "Block", "Iron", { -at, y, -k / 2 - c / 2 }, H.I, { sw, L, c }))
+		end
+		table.insert(parts, H.part(0, "Blade", "Block", "Iron", { 0, 1.45 + L + 0.02, 0 }, H.I, { w + 0.08, 0.04, k + 2 * c }))
+		table.insert(parts, H.part(0, "Blade", "Block", "Iron", { w / 2 + 0.02, y, 0 }, H.I, { 0.04, L, k + 2 * c }))
+		table.insert(parts, H.part(0, "Blade", "Block", "Iron", { -w / 2 - 0.02, y, 0 }, H.I, { 0.04, L, k + 2 * c }))
+		return parts, y
+	end
+
+	local function core(y: number, k: number, slot: string): any
+		return H.part(0, slot, "Block", "Iron", { 0, y, 0 }, H.I, { 1, 2, k })
+	end
+
+	-- A CornerWedge with its apex at (ax, ay, az), its long axis along Z, standing in the far cheek.
+	local function pin(ax: number, ay: number, az: number, b: number, h: number): any
+		local Sq = math.sqrt(0.5)
+		return H.part(0, "Guard", "CornerWedge", "Iron", { ax - b / 2, ay - b / 2, az - h / 2 }, { Sq, 0, 0, Sq }, { b, h, b })
+	end
+
+	t.it("§5 a hairline keeps no filler: a core behind a slit 0.00001 wide through its patches' centres is cleaned, K + F measures as K", function()
+		local K, y = cheeks(0.05, 0.02, 0.00001, false)
+		withIds(K)
+		local filled = Drafts.deepCopy(K)
+		table.insert(filled, core(y, 0.02, "Guard"))
+		withIds(filled)
+		local list = H.prepared({ parts = filled })
+		A.near(shareOf(list, #filled), 0, 0.0005, "it hardly shows")
+		local after = Sampling.exposure(list)
+		A.deepEq(after.cleaned, { { partId = #filled, reason = "Enclosed" } }, "a credit on the centre kept it")
+		H.sameKeptMeasure(after, Sampling.exposure(H.prepared({ parts = K })), #K)
+	end)
+
+	t.it("§5 pins cannot clean a kept core: 3 wedges at its reading points, poking or 1e-8 under, whatever their ids", function()
+		for _, def in ipairs({ { 0.05, 0.0125, 0.082, 0.12 }, { 0.08, -1e-8, 0.098, 0.14 } }) do
+			local c, above, h, b = def[1], def[2], def[3], def[4]
+			local K, y = cheeks(c, 0.02, 0.08, true)
+			local plain = table.clone(K)
+			table.insert(plain, core(y, 0.02, "Guard"))
+			withIds(plain)
+			A.deepEq(Sampling.exposure(H.prepared({ parts = plain })).cleaned, {}, "kept alone")
+			local pinned = {}
+			for _, yc in ipairs({ 1.65, 2.05, 2.45 }) do
+				table.insert(pinned, pin(0, yc, 0.01 + above, b, h))
+			end
+			for _, p in ipairs(plain) do
+				table.insert(pinned, Drafts.deepCopy(p))
+			end
+			withIds(pinned)
+			local e = Sampling.exposure(H.prepared({ parts = pinned }))
+			A.truthy(e.kept[#pinned], "the core is still kept, " .. c)
+		end
+	end)
+
+	t.it("§5 a fuller is seen: a core under cover strips, a groove or a twin, kept by what shows, cleaned by what does not", function()
+		local function fuller(w: number, t: number, c: number, gaps: { { number } }): ({ any }, number)
+			local L = 2.5
+			local y = 1.45 + L / 2
+			local parts = hiltFor(1.1)
+			table.insert(parts, H.part(0, "Blade", "Block", "Iron", { 0, y, 0 }, H.I, { w, L, t }))
+			local index = #parts
+			local a = -w / 2
+			local cuts: { { number } } = {}
+			for _, g in ipairs(gaps) do
+				table.insert(cuts, { a, g[1] })
+				a = g[2]
+			end
+			table.insert(cuts, { a, w / 2 })
+			for s = -1, 1, 2 do
+				for _, st in ipairs(cuts) do
+					table.insert(parts, H.part(0, "Blade", "Block", "Iron", { (st[1] + st[2]) / 2, y, s * (t / 2 + c / 2) }, H.I, { st[2] - st[1], L, c }))
+				end
+			end
+			table.insert(parts, H.part(0, "Guard", "Block", "Iron", { 0, 1.45 + L + 0.02, 0 }, H.I, { w + 0.08, 0.04, t + 2 * c }))
+			table.insert(parts, H.part(0, "Guard", "Block", "Iron", { w / 2 + 0.02, y, 0 }, H.I, { 0.04, L, t + 2 * c }))
+			table.insert(parts, H.part(0, "Guard", "Block", "Iron", { -w / 2 - 0.02, y, 0 }, H.I, { 0.04, L, t + 2 * c }))
+			return withIds(parts), index
+		end
+		local function check(parts: { any }, i: number, share: number, kept: boolean, what: string)
+			local list = H.prepared({ parts = parts })
+			A.near(shareOf(list, i), share, 0.002, what .. " shows")
+			A.eq(Sampling.exposure(list).kept[i], kept, what)
+		end
+		local p, i = fuller(0.3, 0.04, 0.03, { { -0.005 + 0.09, 0.005 + 0.09 } })
+		check(p, i, 0.0285, true, "core 0.3, a groove 0.01")
+		p, i = fuller(0.2, 0.04, 0.03, { { -0.06, -0.04 }, { 0.04, 0.06 } })
+		check(p, i, 0.162, true, "core 0.2, twin 0.02 between where sub-columns stood")
+		p, i = fuller(0.2, 0.02, 0.05, { { -0.075, -0.025 }, { 0.025, 0.075 } })
+		check(p, i, 0.4459, true, "core 0.2, twin 0.05")
+		p, i = fuller(0.8, 0.08, 0.03, { { -0.005, 0.005 } })
+		check(p, i, 0.0111, false, "core 0.8, a groove 0.01 through the patch centres")
+	end)
+
+	t.it("§5 a comb is seen: 7 stripes on one face of a blade that shows 20 %", function()
+		local w, L, t = 1.2, 2.5, 0.2
+		local y = 1.48 + L / 2
+		local parts = hiltFor(1.1)
+		table.insert(parts, H.part(0, "Blade", "Block", "Iron", { 0, y, 0 }, H.I, { w, L, t }))
+		local index = #parts
+		-- spacing 0.32: 4 columns of half-width 0.15; a stripe over each boundary's near lines and over each centre's
+		local hw, extra = 0.15, 0.0005
+		local function stripe(a: number, b: number)
+			table.insert(parts, H.part(0, "Blade", "Block", "Iron", { (a + b) / 2, y, t / 2 + 0.015 }, H.I, { b - a, L, 0.03 }))
+		end
+		for k = 0, 4 do
+			local bx = -w / 2 + k * 2 * hw
+			stripe(math.max(-w / 2, bx - 0.25 * hw - extra), math.min(w / 2, bx + 0.25 * hw + extra))
+		end
+		for k = 0, 3 do
+			local cx = -w / 2 + (2 * k + 1) * hw
+			stripe(cx - 0.25 * hw - extra, cx + 0.25 * hw + extra)
+		end
+		table.insert(parts, H.part(0, "Guard", "Block", "Iron", { 0, y, -t / 2 - 0.015 }, H.I, { w, L, 0.03 }))
+		table.insert(parts, H.part(0, "Guard", "Block", "Iron", { 0, y + L / 2 + 0.02, 0 }, H.I, { w + 0.08, 0.04, t + 0.06 }))
+		table.insert(parts, H.part(0, "Guard", "Block", "Iron", { w / 2 + 0.02, y, 0 }, H.I, { 0.04, L, t + 0.06 }))
+		table.insert(parts, H.part(0, "Guard", "Block", "Iron", { -w / 2 - 0.02, y, 0 }, H.I, { 0.04, L, t + 0.06 }))
+		local list = H.prepared({ parts = withIds(parts) })
+		A.within(shareOf(list, index), 0.15, 0.25, "the slits show")
+		A.truthy(Sampling.exposure(list).kept[index], "the blade is kept")
+	end)
+
+=====ladder
+	t.it("§4.9 the measure's ladder: exactly N_SURF_WORK fits", function()
+		local e = H.plantedSampling({ N_SURF_WORK = 96 }).exposure(H.prepared({ parts = { H.solid(1, "Block", { 0, 2, 0 }, H.I, { 0.32, 0.32, 0.32 }) } }))
+		A.eq(e.hSurf, 0.08, "a cube 0.32 alone: 96 samples at 0.08")
+	end)
+
+=====floor
+	t.it("§4.4 a part exactly on the Dust floor hides like any other", function()
+		local side = 0.125 -- a power of 2, so the volume comes back exact
+		local thick = Geo.MIN_PART_VOLUME / (side * side)
+		-- a plate on a slab, between 4 walls, all smaller than it: only its top shows, the floor part lies on it, taller than the probe
+		local function around(lid: any?): { any }
+			local parts = {
+				H.solid(1, "Block", { 0, -0.01, 0 }, H.I, { side, 0.02, side }),
+				H.solid(2, "Block", { 0, -0.0275, 0 }, H.I, { side, 0.015, side }),
+				H.solid(3, "Block", { side / 2 + 0.01, -0.03, 0 }, H.I, { 0.02, 0.06, 0.2 }),
+				H.solid(4, "Block", { -side / 2 - 0.01, -0.03, 0 }, H.I, { 0.02, 0.06, 0.2 }),
+				H.solid(5, "Block", { 0, -0.03, side / 2 + 0.01 }, H.I, { 0.2, 0.06, 0.02 }),
+				H.solid(6, "Block", { 0, -0.03, -side / 2 - 0.01 }, H.I, { 0.2, 0.06, 0.02 }),
+			}
+			if lid then
+				table.insert(parts, lid)
+			end
+			return parts
+		end
+		local on = H.solid(7, "Block", { 0, thick / 2, 0 }, H.I, { side, thick, side })
+		A.eq(H.prepare(on).volume, Geo.MIN_PART_VOLUME, "exactly the floor")
+		A.truthy(thick > Geo.HIDE_OFFSET, "over the probe")
+		A.truthy(keptOf(H.prepared({ parts = around() }), 1), "its top shows")
+		A.falsy(keptOf(H.prepared({ parts = around(on) }), 1), "the top is under it: Enclosed")
+	end)

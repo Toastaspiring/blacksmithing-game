@@ -1,0 +1,7 @@
+as built: Sm 0.0005 N, Ha 0.3237 H, Sh 0.2064 H
+part 13 first (valid true): Sm 0.0005 N, Ha 0.3241 H, Sh 0.2064 H
+part 14 first (valid true): Sm 0.0005 N, Ha 0.3237 H, Sh 0.2064 H
+part 15 first (valid true): Sm 0.0005 N, Ha 0.3237 H, Sh 0.2064 H
+part 16 first (valid true): Sm 0.0005 N, Ha 0.3241 H, Sh 0.2064 H
+cleaned 0
+-- dumprun a9_ids: 5 designs, 0.7 s

@@ -1,0 +1,5 @@
+uclimb_1 best 2563294 units                                new longest gap  1.080 ms (4004 checkpoints) | old  0.518 ms ( 511)
+uclimb_2 best 2792974 units                                new longest gap  0.824 ms (4262 checkpoints) | old  0.482 ms ( 648)
+uclimb_3 best 3135028 units                                new longest gap  0.998 ms (4400 checkpoints) | old  0.448 ms ( 547)
+uclimb_4 best 2699876 units                                new longest gap  0.937 ms (4147 checkpoints) | old  0.354 ms ( 707)
+GAPS corpus_uclimb_best.json: 4 designs; median of the per-design longest gap: new 0.968 ms, old 0.465 ms; largest: new 1.080, old 0.518

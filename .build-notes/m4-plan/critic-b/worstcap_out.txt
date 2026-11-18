@@ -1,0 +1,1 @@
+path pts 858, travel 28500 ms; decode + replay + checks median: honest 1476 samples 3.31 ms; decode cap 2048 samples 3.68 ms (x1.11)

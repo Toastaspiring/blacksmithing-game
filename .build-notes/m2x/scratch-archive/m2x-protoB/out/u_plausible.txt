@@ -1,0 +1,9 @@
+UNITS plausible:4:1: 8087 designs, new median 3206, p99 18662, max 51942 | old median 3092, p99 10890, max 21098 (26 s)
+      51942 units (old   21098)  n23 cleaned  1  wrapRings|C09|n5 extra0.04 gap0.0040 [plausible-wrapRings]
+      49917 units (old   16791)  n23 cleaned  1  wrapRings|C09|n5 extra0.04 gap0.0100 [plausible-wrapRings]
+      48511 units (old   15002)  n22 cleaned  2  wrapRings|C09|n4 extra0.04 gap0.0030 [plausible-wrapRings]
+      47428 units (old   15002)  n22 cleaned  2  wrapRings|C09|n4 extra0.04 gap0.0075 [plausible-wrapRings]
+      44302 units (old   13025)  n21 cleaned  3  wrapRings|C09|n3 extra0.04 gap0.0060 [plausible-wrapRings]
+      44302 units (old   14647)  n21 cleaned  3  wrapRings|C09|n3 extra0.04 gap0.0020 [plausible-wrapRings]
+      43755 units (old   17171)  n23 cleaned  0  wrapRings|C09|n5 extra0.02 gap0.0050 [plausible-wrapRings]
+      43755 units (old   17177)  n23 cleaned  0  wrapRings|C09|n5 extra0.02 gap0.0010 [plausible-wrapRings]

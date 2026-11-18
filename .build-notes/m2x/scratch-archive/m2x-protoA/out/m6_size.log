@@ -1,0 +1,11 @@
+== old reading (base/src/shared/Physics/Sampling.luau)
+flatShown, lineShown, shownArea, sidePoint, hiddenByNear + verdict loop lines  372  code  338  comment   23
+its constants (VERDICT_CORNER, STRIP_*, LINES_AGREE, LINE_NOTHING) lines    5  code    5  comment    0
+its header paragraph                                           lines   13  code    0  comment   13
+total                                                          lines  390  code  343  comment   36
+== new reading
+Cover.luau (whole module: model, clipping, subtraction, shown) lines  742  code  631  comment   76
+  of which the 32-direction table moved from Sampling          lines   23  code   20  comment    2
+Sampling verdict loop calling Cover                            lines   43  code   39  comment    3
+  Cover: the model (3 options)                                 lines  225  code  204  comment   11
+  Cover: clipping, subtraction, shown                          lines  408  code  374  comment   23

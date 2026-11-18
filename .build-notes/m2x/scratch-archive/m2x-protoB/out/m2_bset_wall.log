@@ -1,0 +1,3 @@
+  bset:wall:1:0: 50 / 140 designs, 3 s
+  bset:wall:1:0: 100 / 140 designs, 7 s
+M2 bset:wall:1:0 -> m2_bset_wall.jsonl: 140 designs, 10 s

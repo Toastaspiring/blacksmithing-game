@@ -1,0 +1,12 @@
+worst_P climbV_4#1         old verdict here   34.76 ms, recorded  16.42 ms: x2.12 | new (base) here   53.08 ms ->   25.1 ms unloaded est.; exposure old  57.68 new  73.91 ->   34.9 est.
+worst_P climbL_2#4         old verdict here   45.82 ms, recorded  20.61 ms: x2.22 | new (base) here   51.61 ms ->   23.2 ms unloaded est.; exposure old  66.38 new  77.90 ->   35.0 est.
+worst_P climbL_2#3         old verdict here   45.65 ms, recorded  21.70 ms: x2.10 | new (base) here   58.23 ms ->   27.7 ms unloaded est.; exposure old  65.71 new  86.95 ->   41.3 est.
+worst_P climbV_4#2         old verdict here   36.14 ms, recorded  15.75 ms: x2.29 | new (base) here   48.28 ms ->   21.0 ms unloaded est.; exposure old  59.32 new  72.52 ->   31.6 est.
+worst_P climbV_3#2         old verdict here   34.36 ms, recorded  13.82 ms: x2.49 | new (base) here   35.55 ms ->   14.3 ms unloaded est.; exposure old  51.24 new  59.56 ->   24.0 est.
+worst_P climbV_3#1         old verdict here   34.20 ms, recorded  15.29 ms: x2.24 | new (base) here   54.22 ms ->   24.2 ms unloaded est.; exposure old  57.24 new  69.84 ->   31.2 est.
+worst_P climbV_3#3         old verdict here   31.37 ms, recorded  14.48 ms: x2.17 | new (base) here   45.57 ms ->   21.0 ms unloaded est.; exposure old  57.45 new  76.61 ->   35.4 est.
+worst_P climbL_1#1         old verdict here   74.13 ms, recorded  30.58 ms: x2.42 | new (base) here  103.72 ms ->   42.8 ms unloaded est.; exposure old  99.22 new 128.78 ->   53.1 est.
+worst_P climbL_3#1         old verdict here   63.53 ms, recorded  27.54 ms: x2.31 | new (base) here  157.11 ms ->   68.1 ms unloaded est.; exposure old  82.99 new 173.10 ->   75.0 est.
+worst_P climbL_2#1         old verdict here   65.79 ms, recorded  30.73 ms: x2.14 | new (base) here  199.87 ms ->   93.4 ms unloaded est.; exposure old  89.04 new 206.64 ->   96.5 est.
+worst_P clampedP#1         old verdict here   14.76 ms, recorded   5.76 ms: x2.56 | new (base) here   11.05 ms ->    4.3 ms unloaded est.; exposure old  39.56 new  32.97 ->   12.9 est.
+load factor: median 2.24, min 2.10, max 2.56 over 11 designs

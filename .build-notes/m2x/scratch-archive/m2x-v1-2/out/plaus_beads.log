@@ -1,0 +1,20 @@
+beads d 0.12 overlap 80%                   975591.1 units  canonical true  valid false TooComplex
+beads d 0.16 overlap 80%                   968715.9 units  canonical true  valid false TooComplex
+beads d 0.20 overlap 80%                   844481.6 units  canonical true  valid false TooComplex
+beads d 0.24 overlap 80%                   832845.6 units  canonical true  valid false TooComplex
+beads d 0.16 overlap 75%                   536620.8 units  canonical true  valid true 
+beads d 0.12 overlap 75%                   533918.8 units  canonical true  valid true 
+beads d 0.24 overlap 75%                   514873.4 units  canonical true  valid true 
+beads d 0.20 overlap 75%                   511964.2 units  canonical true  valid true 
+beads d 0.16 overlap 70%                   353614.5 units  canonical true  valid true 
+beads d 0.12 overlap 70%                   334785.1 units  canonical true  valid true 
+beads d 0.20 overlap 70%                   317736.0 units  canonical true  valid true 
+beads d 0.24 overlap 70%                   315531.9 units  canonical true  valid true 
+beads d 0.16 overlap 60%                   203665.9 units  canonical true  valid true 
+beads d 0.24 overlap 60%                   192982.2 units  canonical true  valid true 
+beads d 0.12 overlap 60%                   191257.9 units  canonical true  valid true 
+beads d 0.20 overlap 60%                   188411.1 units  canonical true  valid true 
+beads d 0.20 overlap 50%                   150109.0 units  canonical true  valid true 
+beads d 0.24 overlap 50%                   146376.0 units  canonical true  valid true 
+beads d 0.16 overlap 50%                   134795.2 units  canonical true  valid true 
+beads d 0.12 overlap 50%                   119943.4 units  canonical true  valid true 

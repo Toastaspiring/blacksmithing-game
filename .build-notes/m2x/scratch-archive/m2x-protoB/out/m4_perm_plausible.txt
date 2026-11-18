@@ -1,0 +1,11 @@
+  100 designs, 300 orders, 0 differ, 5 s
+  200 designs, 600 orders, 0 differ, 10 s
+  300 designs, 900 orders, 0 differ, 20 s
+  400 designs, 1200 orders, 0 differ, 23 s
+  500 designs, 1500 orders, 0 differ, 27 s
+  600 designs, 1800 orders, 0 differ, 31 s
+  700 designs, 2100 orders, 0 differ, 35 s
+  800 designs, 2400 orders, 0 differ, 44 s
+  900 designs, 2700 orders, 0 differ, 52 s
+  1000 designs, 3000 orders, 0 differ, 61 s
+M4 perm plausible:32:7: 1011 designs x 3 orders = 3033 cases, 0 differ in any bit (kept, cleaned, reads, exposedKept, contact, budgets), 62 s

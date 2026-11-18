@@ -1,0 +1,60 @@
+worst_P#1 climbV_4#1                                       n24 | new verdict   49.49 ms  236905 u, exposure   72.90 ms | old verdict  36.92 ms 138009 u, exposure  57.74 ms | cleaned 5/6
+worst_P#2 climbL_2#4                                       n24 | new verdict   52.62 ms  250058 u, exposure   76.69 ms | old verdict  48.85 ms 176255 u, exposure  69.12 ms | cleaned 7/11
+worst_P#3 climbL_2#3                                       n24 | new verdict   49.84 ms  231027 u, exposure   73.52 ms | old verdict  53.63 ms 182881 u, exposure  78.86 ms | cleaned 7/8
+worst_P#4 climbV_4#2                                       n24 | new verdict   44.84 ms  212380 u, exposure   68.21 ms | old verdict  38.21 ms 133978 u, exposure  62.42 ms | cleaned 8/8
+worst_P#5 climbV_3#2                                       n24 | new verdict   31.58 ms  158629 u, exposure   57.22 ms | old verdict  34.01 ms 114981 u, exposure  53.08 ms | cleaned 4/5
+worst_P#6 climbV_3#1                                       n24 | new verdict   38.97 ms  181931 u, exposure   62.80 ms | old verdict  35.37 ms 122574 u, exposure  63.22 ms | cleaned 8/10
+worst_P#7 climbV_3#3                                       n24 | new verdict   46.02 ms  213166 u, exposure   74.13 ms | old verdict  35.07 ms 121803 u, exposure  65.61 ms | cleaned 9/9
+worst_P#8 climbL_1#1                                       n24 | new verdict   94.85 ms  530762 u, exposure  121.67 ms | old verdict  69.70 ms 430815 u, exposure  99.46 ms | cleaned 9/10
+worst_P#9 climbL_3#1                                       n24 | new verdict  121.88 ms  804687 u, exposure  152.77 ms | old verdict  67.56 ms 573157 u, exposure  89.55 ms | cleaned 10/12
+worst_P#10 climbL_2#1                                      n24 | new verdict  109.24 ms  699241 u, exposure  136.62 ms | old verdict  70.02 ms 444753 u, exposure  82.71 ms | cleaned 16/16
+worst_P#11 clampedP#1                                      n24 | new verdict    7.11 ms   28048 u, exposure   29.47 ms | old verdict  13.14 ms  45109 u, exposure  35.25 ms | cleaned 0/0
+worst_P_clamped#1 P.2#2                                    n24 | new verdict    6.75 ms   28048 u, exposure   31.85 ms | old verdict  15.30 ms  45109 u, exposure  39.24 ms | cleaned 0/0
+worst_P_clamped#2 P.21#2                                   n24 | new verdict    5.46 ms   16358 u, exposure   30.93 ms | old verdict  17.41 ms  47046 u, exposure  42.76 ms | cleaned 8/8
+worst_P_clamped#3 P.2#5                                    n24 | new verdict    6.50 ms   24882 u, exposure   29.58 ms | old verdict  10.61 ms  35701 u, exposure  35.42 ms | cleaned 0/0
+worst_P_clamped#4 P.21#1                                   n24 | new verdict    9.65 ms   44008 u, exposure   30.87 ms | old verdict   9.86 ms  35397 u, exposure  31.05 ms | cleaned 1/1
+worst_P_clamped#5 P.21#5                                   n24 | new verdict    9.58 ms   44097 u, exposure   29.98 ms | old verdict  10.80 ms  35489 u, exposure  32.61 ms | cleaned 1/1
+worst_P_clamped#6 P.2#3                                    n24 | new verdict    9.72 ms   44097 u, exposure   30.68 ms | old verdict  11.44 ms  35489 u, exposure  30.17 ms | cleaned 1/1
+worst_P_clamped#7 P.21#3                                   n24 | new verdict   11.14 ms   44097 u, exposure   33.98 ms | old verdict  10.52 ms  35489 u, exposure  34.54 ms | cleaned 1/1
+worst_P_clamped#8 P.4#4                                    n24 | new verdict    3.87 ms    9138 u, exposure   16.85 ms | old verdict  19.09 ms  54610 u, exposure  31.40 ms | cleaned 22/22
+worst_P_clamped#9 P.23#1 (M2)                              n24 | new verdict    5.70 ms   18510 u, exposure   24.61 ms | old verdict  23.16 ms  74754 u, exposure  40.35 ms | cleaned 21/21
+worst_P_clamped#10 P.12#1 (M2)                             n24 | new verdict    7.26 ms   21678 u, exposure   24.63 ms | old verdict  23.46 ms  73322 u, exposure  39.30 ms | cleaned 21/21
+worst_P_clamped#11 P.11#1 (M2)                             n24 | new verdict  111.12 ms  616959 u, exposure  129.26 ms | old verdict  24.09 ms 194682 u, exposure  44.25 ms | cleaned 4/4
+worst_P_clamped#12 P.12#4 (M2)                             n24 | new verdict    3.91 ms   12605 u, exposure   20.88 ms | old verdict  18.00 ms  58880 u, exposure  33.60 ms | cleaned 21/21
+d_climb_1#1                                                n24 | new verdict   43.69 ms  261103 u, exposure   66.26 ms | old verdict  38.92 ms 178483 u, exposure  63.43 ms | cleaned 17/17
+d_climb_1#2                                                n24 | new verdict   90.62 ms  528124 u, exposure  112.17 ms | old verdict  50.83 ms 328175 u, exposure  75.00 ms | cleaned 19/18
+d_climb_1#3                                                n24 | new verdict   38.65 ms  201684 u, exposure   76.24 ms | old verdict  41.36 ms 191537 u, exposure  70.59 ms | cleaned 12/16
+d_climb_1#4                                                n24 | new verdict   31.13 ms  189658 u, exposure   54.65 ms | old verdict  34.78 ms 123172 u, exposure  55.21 ms | cleaned 8/8
+d_climb_1#5                                                n24 | new verdict   37.97 ms  246118 u, exposure   55.33 ms | old verdict  38.59 ms 159429 u, exposure  55.23 ms | cleaned 16/16
+d_climb_2#1                                                n24 | new verdict   74.49 ms  451160 u, exposure   97.83 ms | old verdict  44.93 ms 284953 u, exposure  70.63 ms | cleaned 11/13
+d_climb_2#2                                                n24 | new verdict   42.43 ms  244609 u, exposure   68.98 ms | old verdict  39.65 ms 283380 u, exposure  60.12 ms | cleaned 12/14
+d_climb_2#3                                                n24 | new verdict   72.36 ms  413302 u, exposure   88.71 ms | old verdict  38.61 ms 265827 u, exposure  59.47 ms | cleaned 11/9
+d_climb_2#4                                                n24 | new verdict   24.93 ms  129036 u, exposure   40.47 ms | old verdict  37.05 ms 128823 u, exposure  56.81 ms | cleaned 17/17
+d_climb_2#5                                                n24 | new verdict   41.58 ms  245002 u, exposure   57.58 ms | old verdict  34.37 ms 119526 u, exposure  45.22 ms | cleaned 9/11
+d_climb_3#1                                                n24 | new verdict   34.67 ms  181931 u, exposure   56.50 ms | old verdict  34.12 ms 122574 u, exposure  56.08 ms | cleaned 8/10
+d_climb_3#2                                                n24 | new verdict   29.38 ms  158629 u, exposure   52.96 ms | old verdict  29.26 ms 114981 u, exposure  51.10 ms | cleaned 4/5
+d_climb_3#3                                                n24 | new verdict   39.43 ms  213166 u, exposure   64.18 ms | old verdict  31.49 ms 121803 u, exposure  56.55 ms | cleaned 9/9
+d_climb_3#4                                                n24 | new verdict  138.91 ms  840987 u, exposure  167.60 ms | old verdict  50.14 ms 382528 u, exposure  83.39 ms | cleaned 17/16
+d_climb_3#5                                                n24 | new verdict  149.11 ms  949218 u, exposure  170.75 ms | old verdict  56.18 ms 487995 u, exposure  80.63 ms | cleaned 18/14
+d_climb_4#1                                                n24 | new verdict   44.60 ms  236905 u, exposure   68.71 ms | old verdict  37.41 ms 138009 u, exposure  57.40 ms | cleaned 5/6
+d_climb_4#2                                                n24 | new verdict   39.35 ms  212380 u, exposure   59.96 ms | old verdict  34.97 ms 133978 u, exposure  57.75 ms | cleaned 8/8
+d_climb_4#3                                                n24 | new verdict   29.34 ms  162906 u, exposure   56.09 ms | old verdict  24.43 ms  94042 u, exposure  48.21 ms | cleaned 6/6
+d_climb_4#4                                                n24 | new verdict  266.85 ms 1686065 u, exposure  279.22 ms | old verdict  56.86 ms 629760 u, exposure  79.82 ms | cleaned 17/17
+d_climb_4#5                                                n24 | new verdict   18.29 ms   90308 u, exposure   34.29 ms | old verdict  29.45 ms 109877 u, exposure  47.40 ms | cleaned 19/19
+d_climb_5#1                                                n24 | new verdict   43.16 ms  244377 u, exposure   68.17 ms | old verdict  44.37 ms 185408 u, exposure  65.12 ms | cleaned 17/17
+d_climb_5#2                                                n24 | new verdict   45.55 ms  217432 u, exposure   75.45 ms | old verdict  38.76 ms 132972 u, exposure  68.40 ms | cleaned 7/7
+d_climb_5#3                                                n24 | new verdict   38.01 ms  182407 u, exposure   70.70 ms | old verdict  59.43 ms 218512 u, exposure  96.64 ms | cleaned 14/15
+d_climb_5#4                                                n24 | new verdict   35.05 ms  162985 u, exposure   61.81 ms | old verdict  32.94 ms 115102 u, exposure  63.70 ms | cleaned 4/5
+d_climb_5#5                                                n24 | new verdict  123.31 ms  720989 u, exposure  135.27 ms | old verdict  61.19 ms 424843 u, exposure  83.09 ms | cleaned 17/15
+d_climb_6#1                                                n24 | new verdict   62.36 ms  290588 u, exposure   83.24 ms | old verdict  48.63 ms 171067 u, exposure  68.17 ms | cleaned 17/17
+d_climb_6#2                                                n24 | new verdict   28.28 ms  146378 u, exposure   45.55 ms | old verdict  32.84 ms 125031 u, exposure  52.60 ms | cleaned 10/10
+d_climb_6#3                                                n24 | new verdict   33.87 ms  214514 u, exposure   62.19 ms | old verdict  41.62 ms 135886 u, exposure  67.17 ms | cleaned 19/19
+d_hand#1 rods d 0.15 L 4.8 spread 0.01                     n24 | new verdict  279.24 ms 1578192 u, exposure  304.93 ms | old verdict  59.59 ms 526480 u, exposure  90.06 ms | cleaned 9/9
+d_hand#2 rods d 0.10 L 4.8 spread 0.01                     n24 | new verdict  262.04 ms 1459043 u, exposure  295.50 ms | old verdict  52.34 ms 502862 u, exposure  88.06 ms | cleaned 9/8
+d_hand#3 rods d 0.08 L 4.8 spread 0.01                     n24 | new verdict  254.49 ms 1416956 u, exposure  275.15 ms | old verdict  50.06 ms 493412 u, exposure  86.11 ms | cleaned 8/8
+d_hand#4 rods d 0.15 L 3.5 spread 0.01                     n24 | new verdict  251.56 ms 1523048 u, exposure  262.17 ms | old verdict  50.74 ms 511755 u, exposure  80.08 ms | cleaned 9/8
+d_hand#5 rods d 0.10 L 3.5 spread 0.01                     n24 | new verdict  208.93 ms 1329688 u, exposure  247.80 ms | old verdict  48.30 ms 501062 u, exposure  91.10 ms | cleaned 8/8
+attacks#1 crossings, blade 0.30 x 2.60, cheeks 0.03        n14 | new verdict    1.82 ms    4666 u, exposure   17.84 ms | old verdict   2.01 ms   7854 u, exposure  18.26 ms | cleaned 1/0
+attacks#2 crossings, slits 0.001 wide                      n14 | new verdict    1.90 ms    4658 u, exposure   16.03 ms | old verdict   2.08 ms   7854 u, exposure  19.44 ms | cleaned 1/0
+attacks#3 a step of 1e-5, blade 1 x 2, cheeks 0.05         n14 | new verdict    1.78 ms    4861 u, exposure   15.81 ms | old verdict   2.22 ms   8436 u, exposure  17.52 ms | cleaned 1/0
+attacks#4 windows between the lines, blade 1 x 2, ribs 0.0 n24 | new verdict    3.43 ms   11672 u, exposure   16.66 ms | old verdict   3.52 ms  14550 u, exposure  16.74 ms | cleaned 0/1

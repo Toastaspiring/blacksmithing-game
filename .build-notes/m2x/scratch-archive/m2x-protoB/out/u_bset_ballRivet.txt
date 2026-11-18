@@ -1,0 +1,9 @@
+UNITS bset:ballRivet:8:3: 1143 designs, new median 3456, p99 16580, max 17754 | old median 2211, p99 8920, max 9208 (4 s)
+      17754 units (old    8898)  n19 cleaned  0  C09 d0.40 f-0.50 x0.00 y0.3 t1 [bset-ballRivet]
+      17311 units (old    8891)  n19 cleaned  0  C09 d0.40 f-0.30 x0.03 y-0.5 t2 [bset-ballRivet]
+      17156 units (old    8906)  n19 cleaned  0  C09 d0.40 f-0.60 x0.03 y-0.5 t2 [bset-ballRivet]
+      17139 units (old    8815)  n19 cleaned  0  C09 d0.25 f-0.50 x0.00 y0.3 t1 [bset-ballRivet]
+      17065 units (old    8817)  n19 cleaned  0  C09 d0.20 f-0.30 x0.00 y0.3 t1 [bset-ballRivet]
+      16916 units (old    8895)  n19 cleaned  0  C09 d0.40 f-0.50 x0.03 y0.3 t3 [bset-ballRivet]
+      16912 units (old    8829)  n19 cleaned  0  C09 d0.20 f-0.60 x0.00 y0.3 t1 [bset-ballRivet]
+      16778 units (old    8809)  n19 cleaned  0  C09 d0.30 f-0.30 x0.03 y0.3 t3 [bset-ballRivet]

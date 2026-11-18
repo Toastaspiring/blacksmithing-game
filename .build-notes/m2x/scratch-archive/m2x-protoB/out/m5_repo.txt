@@ -1,0 +1,45 @@
+F1                                                         n 5 | new verdict    0.64 ms    1659 u, exposure    4.06 ms | old verdict   0.37 ms   1213 u, exposure   3.23 ms | cleaned 0/0
+F2                                                         n 4 | new verdict    0.44 ms     290 u, exposure    3.77 ms | old verdict   0.29 ms   1001 u, exposure   4.07 ms | cleaned 0/0
+F3                                                         n 7 | new verdict    1.50 ms    5930 u, exposure    4.53 ms | old verdict   0.67 ms   2652 u, exposure   3.03 ms | cleaned 0/0
+F4                                                         n 5 | new verdict    0.59 ms     380 u, exposure    7.80 ms | old verdict   0.43 ms   1221 u, exposure   8.54 ms | cleaned 0/0
+F5                                                         n 5 | new verdict    0.67 ms    1659 u, exposure    2.92 ms | old verdict   0.37 ms   1213 u, exposure   2.89 ms | cleaned 0/0
+A01                                                        n 4 | new verdict    0.29 ms     290 u, exposure    2.77 ms | old verdict   0.27 ms   1052 u, exposure   3.06 ms | cleaned 0/0
+A02                                                        n 4 | new verdict    0.40 ms     291 u, exposure    3.51 ms | old verdict   0.28 ms   1001 u, exposure   3.34 ms | cleaned 0/0
+A03                                                        n 4 | new verdict    0.40 ms     557 u, exposure    2.72 ms | old verdict   0.27 ms   1009 u, exposure   2.68 ms | cleaned 0/0
+A04                                                        n 4 | new verdict    0.44 ms     297 u, exposure    3.54 ms | old verdict   0.28 ms    878 u, exposure   4.10 ms | cleaned 0/0
+A05a                                                       n 4 | new verdict    0.33 ms     297 u, exposure    2.98 ms | old verdict   0.25 ms    894 u, exposure   3.08 ms | cleaned 0/0
+A05b                                                       n 4 | new verdict    0.31 ms     297 u, exposure    3.03 ms | old verdict   0.25 ms    894 u, exposure   3.07 ms | cleaned 0/0
+A06                                                        n 5 | new verdict    0.39 ms     350 u, exposure    2.72 ms | old verdict   0.29 ms   1223 u, exposure   2.82 ms | cleaned 0/0
+A07a                                                       n 5 | new verdict    0.37 ms     356 u, exposure    2.87 ms | old verdict   0.31 ms   1265 u, exposure   2.98 ms | cleaned 0/0
+A07b                                                       n 5 | new verdict    0.39 ms     350 u, exposure    2.86 ms | old verdict   0.31 ms   1225 u, exposure   3.10 ms | cleaned 0/0
+A08a                                                       n 3 | new verdict    0.26 ms     196 u, exposure    1.51 ms | old verdict   0.18 ms    699 u, exposure   1.82 ms | cleaned 0/0
+A08b                                                       n 4 | new verdict    0.33 ms     290 u, exposure    2.86 ms | old verdict   0.25 ms   1001 u, exposure   3.25 ms | cleaned 0/0
+A09a                                                       n 3 | new verdict    0.27 ms     214 u, exposure    1.95 ms | old verdict   0.20 ms    776 u, exposure   1.87 ms | cleaned 0/0
+A09b                                                       n 3 | new verdict    0.27 ms     196 u, exposure    1.77 ms | old verdict   0.18 ms    718 u, exposure   1.80 ms | cleaned 0/0
+A09c                                                       n 3 | new verdict    0.30 ms     212 u, exposure    2.21 ms | old verdict   0.20 ms    745 u, exposure   2.55 ms | cleaned 0/0
+A11-size2-AtMin                                            n 4 | new verdict    0.27 ms     256 u, exposure    1.93 ms | old verdict   0.24 ms    942 u, exposure   2.04 ms | cleaned 0/0
+A11-size1-AtMax                                            n 4 | new verdict    0.52 ms     310 u, exposure    4.21 ms | old verdict   0.30 ms    996 u, exposure   3.94 ms | cleaned 0/0
+A11-pos1-AtMax                                             n 4 | new verdict    0.37 ms     256 u, exposure    2.14 ms | old verdict   0.26 ms    976 u, exposure   2.40 ms | cleaned 0/0
+A11-pos3-AtMin                                             n 4 | new verdict    0.26 ms     256 u, exposure    2.05 ms | old verdict   0.24 ms    976 u, exposure   2.27 ms | cleaned 0/0
+A12-Sloppy                                                 n 4 | new verdict    0.41 ms     290 u, exposure    3.20 ms | old verdict   0.29 ms   1001 u, exposure   3.18 ms | cleaned 0/0
+A12-SloppyZ45                                              n 4 | new verdict    0.34 ms     289 u, exposure    3.03 ms | old verdict   0.30 ms   1009 u, exposure   3.39 ms | cleaned 0/0
+A12-InputTolIn                                             n 4 | new verdict    0.31 ms     290 u, exposure    3.10 ms | old verdict   0.27 ms   1001 u, exposure   3.49 ms | cleaned 0/0
+A12-InputTolInLow                                          n 4 | new verdict    0.45 ms     290 u, exposure    3.98 ms | old verdict   0.25 ms   1001 u, exposure   3.49 ms | cleaned 0/0
+A12-NormTolIn                                              n 4 | new verdict    0.31 ms     290 u, exposure    3.34 ms | old verdict   0.26 ms   1001 u, exposure   3.49 ms | cleaned 0/0
+A13                                                        n 5 | new verdict    0.75 ms    1659 u, exposure    3.58 ms | old verdict   0.34 ms   1213 u, exposure   2.92 ms | cleaned 0/0
+A13b                                                       n 5 | new verdict    0.61 ms    1659 u, exposure    3.06 ms | old verdict   0.35 ms   1213 u, exposure   2.76 ms | cleaned 0/0
+A13c                                                       n 5 | new verdict    0.66 ms    1659 u, exposure    3.39 ms | old verdict   0.34 ms   1213 u, exposure   3.31 ms | cleaned 0/0
+A14                                                        n24 | new verdict    0.72 ms    1659 u, exposure    3.37 ms | old verdict   0.47 ms   1213 u, exposure   3.49 ms | cleaned 19/19
+A16                                                        n 7 | new verdict    0.78 ms    1869 u, exposure    4.25 ms | old verdict   0.62 ms   2120 u, exposure   3.88 ms | cleaned 2/2
+A17                                                        n 7 | new verdict    0.41 ms     290 u, exposure    3.24 ms | old verdict   0.29 ms   1001 u, exposure   4.13 ms | cleaned 3/3
+A18d                                                       n 5 | new verdict    0.63 ms    1659 u, exposure    3.79 ms | old verdict   0.34 ms   1213 u, exposure   3.03 ms | cleaned 0/0
+A19-IdAtMax                                                n 4 | new verdict    0.32 ms     290 u, exposure    2.98 ms | old verdict   0.26 ms   1001 u, exposure   3.12 ms | cleaned 0/0
+A19-UnknownFields                                          n 4 | new verdict    0.33 ms     290 u, exposure    2.98 ms | old verdict   0.27 ms   1001 u, exposure   3.41 ms | cleaned 0/0
+A21                                                        n16 | new verdict    1.05 ms    1214 u, exposure    6.14 ms | old verdict   1.19 ms   4432 u, exposure   6.54 ms | cleaned 0/0
+A22a                                                       n 4 | new verdict    0.29 ms     214 u, exposure    1.99 ms | old verdict   0.21 ms    776 u, exposure   1.93 ms | cleaned 1/1
+A22b                                                       n 4 | new verdict    0.30 ms     312 u, exposure    1.90 ms | old verdict   0.34 ms   1364 u, exposure   2.05 ms | cleaned 1/1
+A22c                                                       n 4 | new verdict    0.45 ms     313 u, exposure    2.95 ms | old verdict   0.38 ms   1367 u, exposure   3.19 ms | cleaned 1/1
+A23                                                        n 5 | new verdict    0.51 ms     369 u, exposure    4.50 ms | old verdict   0.35 ms   1309 u, exposure   4.76 ms | cleaned 0/0
+A24                                                        n 4 | new verdict    0.35 ms     296 u, exposure    2.53 ms | old verdict   0.26 ms   1049 u, exposure   2.69 ms | cleaned 0/0
+P1 (PhysicsHelpers.p1)                                     n24 | new verdict   51.29 ms  293232 u, exposure   76.37 ms | old verdict  32.71 ms 106658 u, exposure  51.96 ms | cleaned 9/10
+C09 ornate (PhysicsHelpers.ornate)                         n18 | new verdict    3.28 ms   11113 u, exposure   18.62 ms | old verdict   2.40 ms   8320 u, exposure  17.99 ms | cleaned 0/0

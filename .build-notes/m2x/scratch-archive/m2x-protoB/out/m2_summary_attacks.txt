@@ -1,0 +1,27 @@
+M2 attacks: 1039 designs from attack-a10_sub 632, attack-a11_geo 41, attack-a12_skin 12, attack-a1_hair 48, attack-a20_all 20, attack-a2_real 31, attack-a30_more 40, attack-a3_split 36, attack-a4_pin 8, attack-a5_c09 7, attack-a8_flush 57, attack-a9_ids 5, attack-a_flat 16, attack-a_hand 13, attack-a_lam 14, attack-a_rod 14, attack-a_sheets 8, attack-a_void 16, attack-x_canon 4, attack-x_lattice2 12, attack-x_step 5
+  shape          parts   fine | false Enclosed at true >= 2.5/3/5/7.5/10/15/20 % | false kept at true < 1.5/1/0.5/0.25 %
+  Block           5408    316 | new cleaned    247 FE 0/0/0/0/0/0/0              | FK 0/0/0/0
+                     0      0 | old cleaned    232 FE 2/2/2/2/2/0/0              | FK 19/19/19/17
+  Wedge           4363      1 | new cleaned      1 FE 0/0/0/0/0/0/0              | FK 0/0/0/0
+                     0      0 | old cleaned      1 FE 0/0/0/0/0/0/0              | FK 0/0/0/0
+  CornerWedge       64     18 | new cleaned     18 FE 0/0/0/0/0/0/0              | FK 0/0/0/0
+                     0      0 | old cleaned     18 FE 0/0/0/0/0/0/0              | FK 0/0/0/0
+  Cylinder        3133     14 | new cleaned     10 FE 0/0/0/0/0/0/0              | FK 1/1/1/1
+                     0      0 | old cleaned     10 FE 7/7/7/7/7/7/7              | FK 8/8/6/6
+  Ball            3110      1 | new cleaned      0 FE 0/0/0/0/0/0/0              | FK 0/0/0/0
+                     0      0 | old cleaned      3 FE 3/3/3/3/3/3/2              | FK 0/0/0/0
+  ALL            16078    350 | new cleaned    276 FE 0/0/0/0/0/0/0              | FK 1/1/1/1
+                     0      0 | old cleaned    264 FE 12/12/12/12/12/10/9        | FK 27/27/25/23
+  worst false kept (new): true 0.0112% read 3.806%  a_void#13 [attack-a_void] part 17 Cylinder Rod
+  worst false Enclosed (old): true 47.975% read 50.538%  a_hand#13 [attack-a_hand] part 4 Ball Ball
+  worst false Enclosed (old): true 41.565% read 40.520%  a_hand#2 [attack-a_hand] part 4 Cylinder Rod
+  worst false Enclosed (old): true 40.670% read 40.040%  a_hand#4 [attack-a_hand] part 4 Cylinder Rod
+  worst false Enclosed (old): true 39.443% read 38.997%  a_hand#8 [attack-a_hand] part 4 Cylinder Rod
+  worst false Enclosed (old): true 38.944% read 38.563%  a_hand#10 [attack-a_hand] part 4 Cylinder Rod
+  worst false Enclosed (old): true 33.525% read 35.800%  a_hand#12 [attack-a_hand] part 4 Ball Ball
+  worst false kept (old): true 0.0000% read 0.002%  a_flat#6 [attack-a_flat] part 20 Block Core
+  worst false kept (old): true 0.0000% read 0.002%  x_canon#1 [attack-x_canon] part 4 Block Core
+  worst false kept (old): true 0.0000% read 0.002%  x_lattice2#1 [attack-x_lattice2] part 4 Block Core
+  worst false kept (old): true 0.0000% read 0.002%  x_lattice2#3 [attack-x_lattice2] part 4 Block Core
+  worst false kept (old): true 0.0000% read 0.001%  x_lattice2#7 [attack-x_lattice2] part 4 Block Core
+  worst false kept (old): true 0.0023% read 0.001%  a_flat#10 [attack-a_flat] part 20 Block Core

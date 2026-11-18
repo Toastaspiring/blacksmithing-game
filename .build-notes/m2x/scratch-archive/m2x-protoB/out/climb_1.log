@@ -1,0 +1,5 @@
+  seed 1 evals 250: this run 285898 units (valid true), best 285898, 7 s
+  seed 1 evals 500: this run 1255837 units (valid true), best 1255837, 26 s
+  seed 1 evals 750: this run 2839881 units (valid true), best 2839881, 78 s
+  seed 1 evals 1000: this run 3260665 units (valid true), best 3260665, 144 s
+  seed 1 evals 1250: this run 3509760 units (valid true), best 3509760, 217 s

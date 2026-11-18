@@ -1,0 +1,32 @@
+M2 fuzz: 1991 designs, 14234 parts, 0 design errors, files 2
+== reading old
+  Ball        parts   1075  false Enclosed at >= 2.5/3/5/7.5/10/15/20 %: 0/0/0/0/0/0/0   false kept at < 1.5/1/0.5/0.25 %: 0/0/0/0   highest cleaned 0.00 %, lowest kept 10.100 %
+  Block       parts   7541  false Enclosed at >= 2.5/3/5/7.5/10/15/20 %: 0/0/0/0/0/0/0   false kept at < 1.5/1/0.5/0.25 %: 0/0/0/0   highest cleaned 0.00 %, lowest kept 7.746 %
+  CornerWedge parts   1161  false Enclosed at >= 2.5/3/5/7.5/10/15/20 %: 0/0/0/0/0/0/0   false kept at < 1.5/1/0.5/0.25 %: 0/0/0/0   highest cleaned 0.00 %, lowest kept 19.036 %
+  Cylinder    parts   2842  false Enclosed at >= 2.5/3/5/7.5/10/15/20 %: 0/0/0/0/0/0/0   false kept at < 1.5/1/0.5/0.25 %: 0/0/0/0   highest cleaned 0.00 %, lowest kept 18.222 %
+  Wedge       parts   1615  false Enclosed at >= 2.5/3/5/7.5/10/15/20 %: 0/0/0/0/0/0/0   false kept at < 1.5/1/0.5/0.25 %: 0/0/0/0   highest cleaned 0.00 %, lowest kept 6.874 %
+  ALL         parts  14234  false Enclosed at >= 2.5/3/5/7.5/10/15/20 %: 0/0/0/0/0/0/0   false kept at < 1.5/1/0.5/0.25 %: 0/0/0/0   highest cleaned 0.00 %, lowest kept 6.874 %
+== reading base
+  Ball        parts   1075  false Enclosed at >= 2.5/3/5/7.5/10/15/20 %: 0/0/0/0/0/0/0   false kept at < 1.5/1/0.5/0.25 %: 0/0/0/0   highest cleaned 0.00 %, lowest kept 10.100 %
+  Block       parts   7541  false Enclosed at >= 2.5/3/5/7.5/10/15/20 %: 0/0/0/0/0/0/0   false kept at < 1.5/1/0.5/0.25 %: 0/0/0/0   highest cleaned 0.00 %, lowest kept 7.746 %
+  CornerWedge parts   1161  false Enclosed at >= 2.5/3/5/7.5/10/15/20 %: 0/0/0/0/0/0/0   false kept at < 1.5/1/0.5/0.25 %: 0/0/0/0   highest cleaned 0.00 %, lowest kept 19.036 %
+  Cylinder    parts   2842  false Enclosed at >= 2.5/3/5/7.5/10/15/20 %: 0/0/0/0/0/0/0   false kept at < 1.5/1/0.5/0.25 %: 0/0/0/0   highest cleaned 0.00 %, lowest kept 18.222 %
+  Wedge       parts   1615  false Enclosed at >= 2.5/3/5/7.5/10/15/20 %: 0/0/0/0/0/0/0   false kept at < 1.5/1/0.5/0.25 %: 0/0/0/0   highest cleaned 0.00 %, lowest kept 6.874 %
+  ALL         parts  14234  false Enclosed at >= 2.5/3/5/7.5/10/15/20 %: 0/0/0/0/0/0/0   false kept at < 1.5/1/0.5/0.25 %: 0/0/0/0   highest cleaned 0.00 %, lowest kept 6.874 %
+== reading canon
+  Ball        parts   1075  false Enclosed at >= 2.5/3/5/7.5/10/15/20 %: 0/0/0/0/0/0/0   false kept at < 1.5/1/0.5/0.25 %: 0/0/0/0   highest cleaned 0.00 %, lowest kept 10.100 %
+  Block       parts   7541  false Enclosed at >= 2.5/3/5/7.5/10/15/20 %: 0/0/0/0/0/0/0   false kept at < 1.5/1/0.5/0.25 %: 0/0/0/0   highest cleaned 0.00 %, lowest kept 7.746 %
+  CornerWedge parts   1161  false Enclosed at >= 2.5/3/5/7.5/10/15/20 %: 0/0/0/0/0/0/0   false kept at < 1.5/1/0.5/0.25 %: 0/0/0/0   highest cleaned 0.00 %, lowest kept 19.036 %
+  Cylinder    parts   2842  false Enclosed at >= 2.5/3/5/7.5/10/15/20 %: 0/0/0/0/0/0/0   false kept at < 1.5/1/0.5/0.25 %: 0/0/0/0   highest cleaned 0.00 %, lowest kept 18.222 %
+  Wedge       parts   1615  false Enclosed at >= 2.5/3/5/7.5/10/15/20 %: 0/0/0/0/0/0/0   false kept at < 1.5/1/0.5/0.25 %: 0/0/0/0   highest cleaned 0.00 %, lowest kept 6.874 %
+  ALL         parts  14234  false Enclosed at >= 2.5/3/5/7.5/10/15/20 %: 0/0/0/0/0/0/0   false kept at < 1.5/1/0.5/0.25 %: 0/0/0/0   highest cleaned 0.00 %, lowest kept 6.874 %
+== reading fine
+  Ball        parts   1075  false Enclosed at >= 2.5/3/5/7.5/10/15/20 %: 0/0/0/0/0/0/0   false kept at < 1.5/1/0.5/0.25 %: 0/0/0/0   highest cleaned 0.00 %, lowest kept 10.100 %
+  Block       parts   7541  false Enclosed at >= 2.5/3/5/7.5/10/15/20 %: 0/0/0/0/0/0/0   false kept at < 1.5/1/0.5/0.25 %: 0/0/0/0   highest cleaned 0.00 %, lowest kept 7.746 %
+  CornerWedge parts   1161  false Enclosed at >= 2.5/3/5/7.5/10/15/20 %: 0/0/0/0/0/0/0   false kept at < 1.5/1/0.5/0.25 %: 0/0/0/0   highest cleaned 0.00 %, lowest kept 19.036 %
+  Cylinder    parts   2842  false Enclosed at >= 2.5/3/5/7.5/10/15/20 %: 0/0/0/0/0/0/0   false kept at < 1.5/1/0.5/0.25 %: 0/0/0/0   highest cleaned 0.00 %, lowest kept 18.222 %
+  Wedge       parts   1615  false Enclosed at >= 2.5/3/5/7.5/10/15/20 %: 0/0/0/0/0/0/0   false kept at < 1.5/1/0.5/0.25 %: 0/0/0/0   highest cleaned 0.00 %, lowest kept 6.874 %
+  ALL         parts  14234  false Enclosed at >= 2.5/3/5/7.5/10/15/20 %: 0/0/0/0/0/0/0   false kept at < 1.5/1/0.5/0.25 %: 0/0/0/0   highest cleaned 0.00 %, lowest kept 6.874 %
+  |base read - truth| max by shape (fine-lattice rows): Ball 0.0184, Block 0.0165, CornerWedge 0.0007, Cylinder 0.0280, Wedge 0.0052
+  |canon read - truth| max by shape (fine-lattice rows): Ball 0.0212, Block 0.0213, CornerWedge 0.0007, Cylinder 0.0362, Wedge 0.0052
+  |fine read - truth| max by shape (fine-lattice rows): Ball 0.0062, Block 0.0057, CornerWedge 0.0007, Cylinder 0.0082, Wedge 0.0052

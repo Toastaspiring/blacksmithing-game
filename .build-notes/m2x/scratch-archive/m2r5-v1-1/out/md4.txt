@@ -1,0 +1,7 @@
+4393 designs
+m164: 1159 designs differ, 1 verdicts flip, the largest change of a reading 0.08130 any280 part 12 (Wedge): 0.65961 -> 0.57831
+m165: 1166 designs differ, 0 verdicts flip, the largest change of a reading 0.04581 any1200 part 14 (Wedge): 0.73220 -> 0.77801
+m166: 668 designs differ, 0 verdicts flip, the largest change of a reading 0.06369 any299 part 8 (CornerWedge): 0.15632 -> 0.09263
+m167: 767 designs differ, 0 verdicts flip, the largest change of a reading 0.07154 chamfer C09 CornerWedge a0.08 b0.03 sink0.020 turn3 side1 part 19 (CornerWedge): 0.59855 -> 0.67009
+m168: 777 designs differ, 0 verdicts flip, the largest change of a reading 0.08451 chamfer F3 CornerWedge a0.02 b0.12 sink0.020 turn8 side-1 part 8 (CornerWedge): 0.63365 -> 0.54914
+m169: 472 designs differ, 0 verdicts flip, the largest change of a reading 0.04095 any421 part 10 (CornerWedge): 0.70092 -> 0.65997

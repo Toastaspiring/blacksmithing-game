@@ -1,0 +1,6 @@
+  200 designs, 3438 parts, 0 verdicts differ, 11 s
+  400 designs, 7038 parts, 0 verdicts differ, 22 s
+  600 designs, 10638 parts, 0 verdicts differ, 32 s
+  800 designs, 12871 parts, 0 verdicts differ, 40 s
+  1000 designs, 15632 parts, 0 verdicts differ, 48 s
+M4 mirror dumps:a10_sub,a11_geo,a12_skin,a1_hair,a20_all,a2_real,a30_more,a3_split,a4_pin,a5_c09,a8_flush,a9_ids,a_fill,a_flat,a_hand,a_lam,a_near,a_rod,a_sheets,a_void,x_canon,x_lattice2,x_step: 1039 designs, 16177 parts, 0 verdicts differ from the image's; reads differ in 6263 parts, largest |difference| 0.0871 (a3_split#8 part 6 (Wedge): 0.624331664 / 0.711445246), 50 s

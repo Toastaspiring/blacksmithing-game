@@ -1,0 +1,9 @@
+m2 plausible shard 1/4: 8087 designs, 77106 parts, 316.6 s
+m2 plausible shard 0/4: 8088 designs, 77205 parts, 318.1 s
+m2 plausible shard 2/4: 8087 designs, 77182 parts, 318.4 s
+m2 plausible shard 3/4: 8087 designs, 77108 parts, 319.6 s
+m2 fuzz shard 0/2: 1000 designs, 6744 parts, 14.2 s
+m2 fuzz shard 1/2: 1000 designs, 7490 parts, 16.0 s
+m2 attacks shard 1/2: 705 designs, 10515 parts, 75.9 s
+m2 attacks shard 0/2: 705 designs, 10555 parts, 77.2 s
+ALLDONE

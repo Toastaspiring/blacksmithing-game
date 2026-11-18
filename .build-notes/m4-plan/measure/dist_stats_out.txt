@@ -1,0 +1,144 @@
+cells 48 runs {('HoldZone', 'Normal', 'Iron', 'Elite'): 2000}
+
+# fail rates (score < 0.5): full 2000 and first 400; P(400-run rate outside band) by binomial normal approx
+HoldZone       Normal Iron  Good    fail2000   0.1% first400   0.2% band 0-5% P(out)~0.00e+00
+HoldZone       Normal Iron  Average fail2000   5.3% first400   6.2% band 3-15% P(out)~1.84e-02
+HoldZone       Normal Steel Good    fail2000   0.0% first400   0.0% band 0-5% P(out)~0.00e+00
+HoldZone       Normal Steel Average fail2000   9.0% first400   8.2% band 3-15% P(out)~2.91e-05
+HoldZone       Hard   Iron  Good    fail2000   0.0% first400   0.0% band 0-15% P(out)~0.00e+00
+HoldZone       Hard   Iron  Average fail2000  24.9% first400  25.2% band 15-40% P(out)~2.57e-06
+HoldZone       Hard   Steel Good    fail2000   0.0% first400   0.0% band 0-15% P(out)~0.00e+00
+HoldZone       Hard   Steel Average fail2000  32.3% first400  30.5% band 15-40% P(out)~4.95e-04
+TimingStrike   Normal Iron  Good    fail2000   0.1% first400   0.2% band 0-5% P(out)~0.00e+00
+TimingStrike   Normal Iron  Average fail2000   9.3% first400   8.2% band 3-15% P(out)~5.05e-05
+TimingStrike   Normal Steel Good    fail2000   0.2% first400   0.0% band 0-5% P(out)~0.00e+00
+TimingStrike   Normal Steel Average fail2000  11.7% first400  10.0% band 3-15% P(out)~1.84e-02
+TimingStrike   Hard   Iron  Good    fail2000   1.6% first400   1.0% band 0-15% P(out)~0.00e+00
+TimingStrike   Hard   Iron  Average fail2000  28.9% first400  32.5% band 15-40% P(out)~4.86e-07
+TimingStrike   Hard   Steel Good    fail2000   1.8% first400   2.5% band 0-15% P(out)~0.00e+00
+TimingStrike   Hard   Steel Average fail2000  31.7% first400  33.8% band 15-40% P(out)~1.80e-04
+PrecisionTrace Normal Iron  Good    fail2000   0.0% first400   0.0% band 0-5% P(out)~0.00e+00
+PrecisionTrace Normal Iron  Average fail2000   7.0% first400   6.5% band 3-15% P(out)~9.46e-04
+PrecisionTrace Normal Steel Good    fail2000   0.0% first400   0.0% band 0-5% P(out)~0.00e+00
+PrecisionTrace Normal Steel Average fail2000   7.8% first400   8.5% band 3-15% P(out)~1.72e-04
+PrecisionTrace Hard   Iron  Good    fail2000   0.0% first400   0.0% band 0-15% P(out)~0.00e+00
+PrecisionTrace Hard   Iron  Average fail2000  25.1% first400  24.2% band 15-40% P(out)~1.75e-06
+PrecisionTrace Hard   Steel Good    fail2000   0.0% first400   0.0% band 0-15% P(out)~0.00e+00
+PrecisionTrace Hard   Steel Average fail2000  30.1% first400  30.8% band 15-40% P(out)~8.82e-06
+
+# Iron - Steel mean drop, paired by run index (same pattern/bot seeds); SE for 400 paired runs; STEEL_MEAN_DROP [0.01, 0.08]
+HoldZone       Normal Elite   drop2000 -0.0116 sd_d 0.0549 first400 -0.0136 SE400 0.0027 P(<0.01) 1.000 P(>0.08) 0.0e+00
+HoldZone       Normal Good    drop2000 -0.0011 sd_d 0.0649 first400 -0.0022 SE400 0.0032 P(<0.01) 1.000 P(>0.08) 0.0e+00
+HoldZone       Normal Average drop2000 +0.0158 sd_d 0.0771 first400 +0.0163 SE400 0.0039 P(<0.01) 0.068 P(>0.08) 0.0e+00
+HoldZone       Normal Poor    drop2000 +0.0151 sd_d 0.0844 first400 +0.0117 SE400 0.0042 P(<0.01) 0.112 P(>0.08) 0.0e+00
+HoldZone       Hard   Elite   drop2000 -0.0049 sd_d 0.0609 first400 -0.0082 SE400 0.0030 P(<0.01) 1.000 P(>0.08) 0.0e+00
+HoldZone       Hard   Good    drop2000 +0.0055 sd_d 0.0697 first400 +0.0053 SE400 0.0035 P(<0.01) 0.901 P(>0.08) 0.0e+00
+HoldZone       Hard   Average drop2000 +0.0156 sd_d 0.0752 first400 +0.0096 SE400 0.0038 P(<0.01) 0.068 P(>0.08) 0.0e+00
+HoldZone       Hard   Poor    drop2000 +0.0133 sd_d 0.0780 first400 +0.0132 SE400 0.0039 P(<0.01) 0.202 P(>0.08) 0.0e+00
+TimingStrike   Normal Elite   drop2000 +0.0068 sd_d 0.0672 first400 +0.0062 SE400 0.0034 P(<0.01) 0.830 P(>0.08) 0.0e+00
+TimingStrike   Normal Good    drop2000 +0.0072 sd_d 0.1072 first400 +0.0059 SE400 0.0054 P(<0.01) 0.700 P(>0.08) 0.0e+00
+TimingStrike   Normal Average drop2000 +0.0124 sd_d 0.1407 first400 +0.0079 SE400 0.0070 P(<0.01) 0.365 P(>0.08) 0.0e+00
+TimingStrike   Normal Poor    drop2000 +0.0087 sd_d 0.1260 first400 +0.0043 SE400 0.0063 P(<0.01) 0.581 P(>0.08) 0.0e+00
+TimingStrike   Hard   Elite   drop2000 +0.0022 sd_d 0.0765 first400 +0.0050 SE400 0.0038 P(<0.01) 0.980 P(>0.08) 0.0e+00
+TimingStrike   Hard   Good    drop2000 +0.0058 sd_d 0.1178 first400 +0.0082 SE400 0.0059 P(<0.01) 0.763 P(>0.08) 0.0e+00
+TimingStrike   Hard   Average drop2000 +0.0078 sd_d 0.1310 first400 +0.0057 SE400 0.0065 P(<0.01) 0.631 P(>0.08) 0.0e+00
+TimingStrike   Hard   Poor    drop2000 +0.0061 sd_d 0.1072 first400 +0.0074 SE400 0.0054 P(<0.01) 0.766 P(>0.08) 0.0e+00
+PrecisionTrace Normal Elite   drop2000 +0.0021 sd_d 0.0112 first400 +0.0018 SE400 0.0006 P(<0.01) 1.000 P(>0.08) 0.0e+00
+PrecisionTrace Normal Good    drop2000 +0.0033 sd_d 0.0367 first400 +0.0042 SE400 0.0018 P(<0.01) 1.000 P(>0.08) 0.0e+00
+PrecisionTrace Normal Average drop2000 +0.0090 sd_d 0.1117 first400 +0.0154 SE400 0.0056 P(<0.01) 0.571 P(>0.08) 0.0e+00
+PrecisionTrace Normal Poor    drop2000 +0.0117 sd_d 0.1432 first400 +0.0140 SE400 0.0072 P(<0.01) 0.409 P(>0.08) 0.0e+00
+PrecisionTrace Hard   Elite   drop2000 +0.0020 sd_d 0.0101 first400 +0.0020 SE400 0.0005 P(<0.01) 1.000 P(>0.08) 0.0e+00
+PrecisionTrace Hard   Good    drop2000 +0.0043 sd_d 0.0438 first400 +0.0042 SE400 0.0022 P(<0.01) 0.995 P(>0.08) 0.0e+00
+PrecisionTrace Hard   Average drop2000 +0.0109 sd_d 0.1247 first400 +0.0083 SE400 0.0062 P(<0.01) 0.444 P(>0.08) 0.0e+00
+PrecisionTrace Hard   Poor    drop2000 +0.0106 sd_d 0.1365 first400 +0.0128 SE400 0.0068 P(<0.01) 0.463 P(>0.08) 0.0e+00
+
+# Normal -> Hard mean drop per material/profile, paired by index; TIER_MIN_MEAN_DROP 0.05 for Average, >0 for others
+HoldZone       Iron  Elite   drop2000 +0.0332 first400 +0.0361 SE400 0.0035 P(<= 0.0) 0.00e+00
+HoldZone       Iron  Good    drop2000 +0.0508 first400 +0.0500 SE400 0.0038 P(<= 0.0) 0.00e+00
+HoldZone       Iron  Average drop2000 +0.0645 first400 +0.0622 SE400 0.0042 P(<= 0.05) 2.96e-04
+HoldZone       Iron  Poor    drop2000 +0.0600 first400 +0.0545 SE400 0.0047 P(<= 0.0) 0.00e+00
+HoldZone       Steel Elite   drop2000 +0.0398 first400 +0.0415 SE400 0.0033 P(<= 0.0) 0.00e+00
+HoldZone       Steel Good    drop2000 +0.0574 first400 +0.0575 SE400 0.0038 P(<= 0.0) 0.00e+00
+HoldZone       Steel Average drop2000 +0.0643 first400 +0.0555 SE400 0.0042 P(<= 0.05) 3.12e-04
+HoldZone       Steel Poor    drop2000 +0.0581 first400 +0.0560 SE400 0.0047 P(<= 0.0) 0.00e+00
+TimingStrike   Iron  Elite   drop2000 +0.0566 first400 +0.0585 SE400 0.0037 P(<= 0.0) 0.00e+00
+TimingStrike   Iron  Good    drop2000 +0.0731 first400 +0.0763 SE400 0.0059 P(<= 0.0) 0.00e+00
+TimingStrike   Iron  Average drop2000 +0.0933 first400 +0.1025 SE400 0.0074 P(<= 0.05) 3.00e-09
+TimingStrike   Iron  Poor    drop2000 +0.0763 first400 +0.0691 SE400 0.0068 P(<= 0.0) 0.00e+00
+TimingStrike   Steel Elite   drop2000 +0.0519 first400 +0.0573 SE400 0.0038 P(<= 0.0) 0.00e+00
+TimingStrike   Steel Good    drop2000 +0.0717 first400 +0.0786 SE400 0.0061 P(<= 0.0) 0.00e+00
+TimingStrike   Steel Average drop2000 +0.0887 first400 +0.1002 SE400 0.0074 P(<= 0.05) 9.83e-08
+TimingStrike   Steel Poor    drop2000 +0.0737 first400 +0.0721 SE400 0.0069 P(<= 0.0) 0.00e+00
+PrecisionTrace Iron  Elite   drop2000 +0.0080 first400 +0.0083 SE400 0.0007 P(<= 0.0) 0.00e+00
+PrecisionTrace Iron  Good    drop2000 +0.0257 first400 +0.0253 SE400 0.0020 P(<= 0.0) 0.00e+00
+PrecisionTrace Iron  Average drop2000 +0.0731 first400 +0.0736 SE400 0.0058 P(<= 0.05) 3.55e-05
+PrecisionTrace Iron  Poor    drop2000 +0.0729 first400 +0.0725 SE400 0.0067 P(<= 0.0) 0.00e+00
+PrecisionTrace Steel Elite   drop2000 +0.0080 first400 +0.0084 SE400 0.0007 P(<= 0.0) 0.00e+00
+PrecisionTrace Steel Good    drop2000 +0.0267 first400 +0.0252 SE400 0.0020 P(<= 0.0) 0.00e+00
+PrecisionTrace Steel Average drop2000 +0.0750 first400 +0.0665 SE400 0.0059 P(<= 0.05) 1.30e-05
+PrecisionTrace Steel Poor    drop2000 +0.0718 first400 +0.0713 SE400 0.0068 P(<= 0.0) 0.00e+00
+
+# cell means: 2000 vs first 400; SE400; deviation in SE
+HoldZone       Normal Iron  Elite   mean 0.8581 sd 0.0737 first400 0.8573 SE400 0.0037 z 0.24
+HoldZone       Normal Iron  Good    mean 0.7993 sd 0.0684 first400 0.7950 SE400 0.0034 z 1.26
+HoldZone       Normal Iron  Average mean 0.6146 sd 0.0736 first400 0.6118 SE400 0.0037 z 0.76
+HoldZone       Normal Iron  Poor    mean 0.4809 sd 0.0802 first400 0.4785 SE400 0.0040 z 0.61
+HoldZone       Normal Steel Elite   mean 0.8697 sd 0.0606 first400 0.8709 SE400 0.0030 z 0.38
+HoldZone       Normal Steel Good    mean 0.8004 sd 0.0644 first400 0.7972 SE400 0.0032 z 1.00
+HoldZone       Normal Steel Average mean 0.5988 sd 0.0751 first400 0.5955 SE400 0.0038 z 0.88
+HoldZone       Normal Steel Poor    mean 0.4658 sd 0.0825 first400 0.4668 SE400 0.0041 z 0.25
+HoldZone       Hard   Iron  Elite   mean 0.8250 sd 0.0688 first400 0.8212 SE400 0.0034 z 1.11
+HoldZone       Hard   Iron  Good    mean 0.7485 sd 0.0682 first400 0.7450 SE400 0.0034 z 1.01
+HoldZone       Hard   Iron  Average mean 0.5501 sd 0.0707 first400 0.5496 SE400 0.0035 z 0.13
+HoldZone       Hard   Iron  Poor    mean 0.4209 sd 0.0750 first400 0.4240 SE400 0.0038 z 0.83
+HoldZone       Hard   Steel Elite   mean 0.8299 sd 0.0612 first400 0.8294 SE400 0.0031 z 0.16
+HoldZone       Hard   Steel Good    mean 0.7430 sd 0.0670 first400 0.7397 SE400 0.0033 z 0.97
+HoldZone       Hard   Steel Average mean 0.5345 sd 0.0699 first400 0.5400 SE400 0.0035 z 1.57
+HoldZone       Hard   Steel Poor    mean 0.4077 sd 0.0727 first400 0.4108 SE400 0.0036 z 0.87
+TimingStrike   Normal Iron  Elite   mean 0.8645 sd 0.0489 first400 0.8644 SE400 0.0024 z 0.02
+TimingStrike   Normal Iron  Good    mean 0.7917 sd 0.0793 first400 0.7904 SE400 0.0040 z 0.32
+TimingStrike   Normal Iron  Average mean 0.6482 sd 0.1082 first400 0.6491 SE400 0.0054 z 0.17
+TimingStrike   Normal Iron  Poor    mean 0.3887 sd 0.1168 first400 0.3843 SE400 0.0058 z 0.76
+TimingStrike   Normal Steel Elite   mean 0.8577 sd 0.0498 first400 0.8582 SE400 0.0025 z 0.22
+TimingStrike   Normal Steel Good    mean 0.7845 sd 0.0819 first400 0.7845 SE400 0.0041 z 0.00
+TimingStrike   Normal Steel Average mean 0.6357 sd 0.1094 first400 0.6412 SE400 0.0055 z 0.99
+TimingStrike   Normal Steel Poor    mean 0.3800 sd 0.1172 first400 0.3800 SE400 0.0059 z 0.01
+TimingStrike   Hard   Iron  Elite   mean 0.8079 sd 0.0576 first400 0.8059 SE400 0.0029 z 0.67
+TimingStrike   Hard   Iron  Good    mean 0.7186 sd 0.0906 first400 0.7142 SE400 0.0045 z 0.98
+TimingStrike   Hard   Iron  Average mean 0.5549 sd 0.1035 first400 0.5466 SE400 0.0052 z 1.59
+TimingStrike   Hard   Iron  Poor    mean 0.3125 sd 0.0956 first400 0.3152 SE400 0.0048 z 0.57
+TimingStrike   Hard   Steel Elite   mean 0.8057 sd 0.0581 first400 0.8009 SE400 0.0029 z 1.66
+TimingStrike   Hard   Steel Good    mean 0.7128 sd 0.0919 first400 0.7059 SE400 0.0046 z 1.49
+TimingStrike   Hard   Steel Average mean 0.5471 sd 0.1046 first400 0.5410 SE400 0.0052 z 1.17
+TimingStrike   Hard   Steel Poor    mean 0.3064 sd 0.0978 first400 0.3079 SE400 0.0049 z 0.31
+PrecisionTrace Normal Iron  Elite   mean 0.9570 sd 0.0108 first400 0.9571 SE400 0.0005 z 0.24
+PrecisionTrace Normal Iron  Good    mean 0.8736 sd 0.0271 first400 0.8734 SE400 0.0014 z 0.14
+PrecisionTrace Normal Iron  Average mean 0.6325 sd 0.0835 first400 0.6329 SE400 0.0042 z 0.09
+PrecisionTrace Normal Iron  Poor    mean 0.4048 sd 0.1022 first400 0.4046 SE400 0.0051 z 0.04
+PrecisionTrace Normal Steel Elite   mean 0.9549 sd 0.0109 first400 0.9553 SE400 0.0005 z 0.66
+PrecisionTrace Normal Steel Good    mean 0.8703 sd 0.0275 first400 0.8692 SE400 0.0014 z 0.81
+PrecisionTrace Normal Steel Average mean 0.6236 sd 0.0830 first400 0.6175 SE400 0.0042 z 1.46
+PrecisionTrace Normal Steel Poor    mean 0.3932 sd 0.1029 first400 0.3906 SE400 0.0051 z 0.50
+PrecisionTrace Hard   Iron  Elite   mean 0.9490 sd 0.0126 first400 0.9488 SE400 0.0006 z 0.23
+PrecisionTrace Hard   Iron  Good    mean 0.8479 sd 0.0320 first400 0.8481 SE400 0.0016 z 0.13
+PrecisionTrace Hard   Iron  Average mean 0.5595 sd 0.0924 first400 0.5593 SE400 0.0046 z 0.04
+PrecisionTrace Hard   Iron  Poor    mean 0.3320 sd 0.0991 first400 0.3321 SE400 0.0050 z 0.03
+PrecisionTrace Hard   Steel Elite   mean 0.9469 sd 0.0128 first400 0.9468 SE400 0.0006 z 0.10
+PrecisionTrace Hard   Steel Good    mean 0.8436 sd 0.0341 first400 0.8440 SE400 0.0017 z 0.23
+PrecisionTrace Hard   Steel Average mean 0.5486 sd 0.0958 first400 0.5510 SE400 0.0048 z 0.51
+PrecisionTrace Hard   Steel Poor    mean 0.3213 sd 0.0989 first400 0.3193 SE400 0.0049 z 0.41
+max |z| first400 vs 2000: 1.66
+
+# profile order margins (mean differences, 2000 runs)
+HoldZone       Normal Iron  E-G +0.059 G-A +0.185 A-P +0.134
+HoldZone       Normal Steel E-G +0.069 G-A +0.202 A-P +0.133
+HoldZone       Hard   Iron  E-G +0.077 G-A +0.198 A-P +0.129
+HoldZone       Hard   Steel E-G +0.087 G-A +0.208 A-P +0.127
+TimingStrike   Normal Iron  E-G +0.073 G-A +0.144 A-P +0.259
+TimingStrike   Normal Steel E-G +0.073 G-A +0.149 A-P +0.256
+TimingStrike   Hard   Iron  E-G +0.089 G-A +0.164 A-P +0.242
+TimingStrike   Hard   Steel E-G +0.093 G-A +0.166 A-P +0.241
+PrecisionTrace Normal Iron  E-G +0.083 G-A +0.241 A-P +0.228
+PrecisionTrace Normal Steel E-G +0.085 G-A +0.247 A-P +0.230
+PrecisionTrace Hard   Iron  E-G +0.101 G-A +0.288 A-P +0.228
+PrecisionTrace Hard   Steel E-G +0.103 G-A +0.295 A-P +0.227

@@ -1,0 +1,2 @@
+F3 part 6 (Blade) relabelled Guard: 0.0000 / 0.4423 / 0.6104 → 0.0000 / 0.4423 / 0.0645
+C08 part 4 (Blade) relabelled Guard: 0.1563 / 0.0992 / 0.2487 → 0.1563 / 0.0992 / 0.0000

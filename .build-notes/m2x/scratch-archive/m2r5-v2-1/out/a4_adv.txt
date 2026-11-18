@@ -1,0 +1,45 @@
+  A14 cleaned 19
+  A14 relation d=NonIncreasing to F1: Sm 0.0288/0.0288 Ha 0.1037/0.1037 Sh 0.0989/0.0989
+  A16 cleaned 2
+  A16 relation d=BitIdentical to F1: Sm 0.0288/0.0288 Ha 0.1037/0.1037 Sh 0.0989/0.0989
+  A17 cleaned 3
+  A17 relation d=BitIdentical to F2: Sm 0.0797/0.0797 Ha 0.0176/0.0176 Sh 0.0282/0.0282
+  A22a cleaned 1
+  A22b cleaned 1
+  A22c cleaned 1
+validation 23 cleaned 6 bad 0
+A25 F1 + enclosed 20 deg grip core Sm |dD| 0.0000 Ha |dD| 0.0000 Sh |dD| 0.0000
+A26 F1 ring grip + 40 deg strap Sm |dD| 0.0003 Ha |dD| 0.0011 Sh |dD| 0.0000
+A27 F1 hilt shifted 0.04 in X Sm |dD| 0.0000 Ha |dD| 0.0500 Sh |dD| 0.0000
+X01          kind D bound 0.01  max |dD| 0.0002 cleaned 0 mass 0.8126 / 0.8126
+X01raw       kind D bound 0.05  max |dD| 0.0281 cleaned 0 mass 0.8126 / 0.7929
+X02          kind D bound 0.01  max |dD| 0.0005 cleaned 5 mass 0.8322 / 0.8322
+X03          kind Thinness bound 0.02  max |dD| 0.1440 cleaned 0 mass 3.2327 / 3.2303
+X04a         kind Edge bound 0.02  max |dD| 0.0004 cleaned 0 mass 0.7929 / 0.7929
+X04b         kind Edge bound 0.02  max |dD| 0.0004 cleaned 0 mass 0.7929 / 0.7929
+X04-5-0.004  kind Edge bound 0.02  max |dD| 0.0002 cleaned 0 mass 0.7917 / 0.7929
+X04-5-0.006  kind Edge bound 0.02  max |dD| 0.0007 cleaned 0 mass 0.7911 / 0.7929
+X04-5-0.009  kind Edge bound 0.02  max |dD| 0.0005 cleaned 0 mass 0.7902 / 0.7929
+X04-10-0.004 kind Edge bound 0.02  max |dD| 0.0005 cleaned 0 mass 0.7902 / 0.7929
+X04-10-0.006 kind Edge bound 0.02  max |dD| 0.0007 cleaned 0 mass 0.7889 / 0.7929
+X04-10-0.009 kind Edge bound 0.02  max |dD| 0.0011 cleaned 0 mass 0.7868 / 0.7929
+X04g0.005    kind Edge bound 0.02  max |dD| 0.0000 cleaned 0 mass 0.7929 / 0.7929
+X04g0.010    kind Edge bound 0.02  max |dD| 0.0000 cleaned 0 mass 0.7929 / 0.7929
+X04g0.015    kind Edge bound 0.02  max |dD| 0.0008 cleaned 0 mass 0.7929 / 0.7929
+X04g0.020    kind Edge bound 0.02  max |dD| 0.0045 cleaned 0 mass 0.7929 / 0.7929
+X05+0.002    kind G bound 0.01  max |dD| 0.0007 cleaned 0 mass 0.7923 / 0.7929
+X05+0.004    kind G bound 0.01  max |dD| 0.0002 cleaned 0 mass 0.7917 / 0.7929
+X05+0.006    kind G bound 0.01  max |dD| 0.0007 cleaned 0 mass 0.7911 / 0.7929
+X05+0.009    kind G bound 0.01  max |dD| 0.0005 cleaned 0 mass 0.7902 / 0.7929
+X05-0.005    kind G bound 0.01  max |dD| 0.0000 cleaned 0 mass 0.7929 / 0.7929
+X05-0.020    kind G bound 0.01  max |dD| 0.0007 cleaned 0 mass 0.7929 / 0.7929
+X05-0.050    kind G bound 0.01  max |dD| 0.0000 cleaned 0 mass 0.7929 / 0.7929
+X06-0.00     kind Asym bound 0.02  max |dD| 0.0000 cleaned 0 mass 0.7929 / 0.7929
+X06-0.01     kind Asym bound 0.02  max |dD| 0.0002 cleaned 0 mass 0.7929 / 0.7929
+X06-0.02     kind Asym bound 0.02  max |dD| 0.0198 cleaned 0 mass 0.7929 / 0.7929
+X06-0.03     kind Asym bound 0.02  max |dD| 0.0767 cleaned 0 mass 0.7929 / 0.7929
+X06-0.04     kind Asym bound 0.02  max |dD| 0.1402 cleaned 0 mass 0.7929 / 0.7929
+X06-0.05     kind Asym bound 0.02  max |dD| 0.2041 cleaned 0 mass 0.7929 / 0.7929
+X07a         kind G+mass bound 0.01  max |dD| 0.0004 cleaned 0 mass 0.7929 / 0.7929
+X07b         kind G+mass bound 0.01  max |dD| 0.0005 cleaned 0 mass 0.7929 / 0.7929
+X07c         kind G+mass bound 0.01  max |dD| 0.0007 cleaned 0 mass 0.7928 / 0.7929

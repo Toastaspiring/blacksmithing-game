@@ -1,0 +1,100 @@
+M3 review round 4 -> fix round 4 (2026-11-17)
+
+Fix round 3 (workflow wf_76b6a4bd-a50, 2026-11-16 20:15 -> 2026-11-17 00:02). Results: m3_fixer_3f.json, m3_fixer_3g.json.
+- Fixer F adopted V1's fix4 as a set rule, in Edge.hiddenGap: the part across holds a face's probe, else any part of the
+  caller's set does (Thinness: W; the raster: the striking slot's kept parts). Each crossing point must lie within REACH
+  of the other across, along its face's normal. The bound across is tested first, and every query is charged.
+  - The seam cases now read merged (0.3095 Hard -> 0.1734).
+  - No fixture, generated design, golden or digest moved; 10 ribbed bars moved (no tier). The cost is within noise.
+- Fixer G:
+  - stated the slit's mouth under O10, with a scratch closure (exact on flat faces) to measure it: 45 deg 0.2068 Hard ->
+    0.1833 closed, so the mouth is worth 0.0235 and the tier; at 30 deg only the edge's rim columns see it;
+  - fixed the minors;
+  - found that a mouth also ends chords beside neighbours on 203 plausible designs (already in the figures).
+- Verify: 743/744 each time. Only T-PERF-01 fails, on timing under load.
+Review round 4: m3_v1_adversary_r4.json (pass = false, one major) and m3_v2_numbers_and_text_r4.json (pass = true, six
+minors).
+
+Findings (checked against the code and the fixers' notes by the lead):
+- V1 major: the set rule merges visible air.
+  - Mechanism: nothing asks whether the air between the two crossing points is a gap. At a grazing slant, each probe can
+    be held by a part beside the line while the line crosses an open slot.
+  - The slot sword (F5 + four Blade slabs 3 deg off Z, an open slot 0.15 long between two hidden slits):
+    - Sharpening 0.2728 Hard (r3-base) -> 0.0720 Normal, the edge cut in two;
+    - Thinness' union chord 0.0421 -> 0.2905.
+  - Fixer F's own open issue says the same: 40 joins on 4 plausible ribbed bars cross air that is not within MERGE_GAP of
+    two parts (no value moves there).
+  - The pair rule (r3-base: the part across must hold the probe) cannot do this on flat faces. e's footprint lies in
+    q's face (q holds p's probe) and f's in p's face (p holds q's probe). By convexity, the segment between them is
+    sandwiched between the two faces all along.
+  - V1 tried two sandwich checks, sampling the line REACH apart:
+    - B: a point within REACH of two parts. It still merges channels up to about 2 x REACH across (rails 0.002 off the
+      line: 0.0159).
+    - B2: a point's two least distances sum to <= REACH. It opens fixer F's vee (whose middle the verdict shows) and
+      moves the unit pins.
+    - Both are sampled, and both count "two parts" without asking that they lie on opposite sides of the line. The
+      lead suspects two flush pieces of one layer beside a sample pass both; the fixer checks.
+- V1 minors:
+  - 3 surviving mutants (MH1, MH2: the box tests' 2 x EPS_GEOM; MH6: mergeSorted's run part), with tried tests;
+  - an empty sealed cavity wider than the window reads its walls as plates (F5 as a sealed box, cavity 0.0121: Hammering
+    0.1035 Normal -> 0.5355 Hard): O10's class, text;
+  - a square Block's writing moves SurfaceComplexity on seamed laminates (dG <= 0.0005; M2's): text;
+  - T-PERF-01 under load.
+- V2 minors:
+  - the setbox0 mutant (set only);
+  - O10's closure cost overstated (written lean: x1.085-1.117, about 60 ms, not x1.198 / 66 ms; still past the gate);
+  - E-S2.13's attack designs never walk the set (at 0.01200015 across they do: x1.215);
+  - text slips: §4.1's unqualified "however slantwise"; T-EDG-01's "at least 6 queries" where the test asks 3; 0.1733
+    should be 0.1734;
+  - the mirror clause missing from §5.6 (the walk's world sign, dD <= 0.0621);
+  - timing under load.
+
+Lead decisions (the convergence rule of m3_journal_r3.txt applies: stop patching Thinness' merge rules; the structural
+question goes to the designer, the build's defaults applied):
+H1. Withdraw the set. hiddenGap asks the part across only, both ways. Keep fixer F's form (the bound across first; every
+    normal, box test and sd charged); remove what the set leaves dead.
+    It must be bit-identical to m3-r3-base on the 136 fixtures, the 200 generated designs and the 33,389 plausible
+    designs (V2's m_nosetloop says it is), with goldens and digest unchanged.
+    Check:
+    - the slot sword plays 0.2728 Hard on one chain;
+    - fixer F's 40 non-sandwiched joins are gone;
+    - fixer F's sweeps, neighbours, linesweep and the P3 channel equal r3-base.
+    Check the pair rule's soundness on curved faces (Cylinder side, Ball), and state what holds.
+H2. Tests:
+    - Fixer F's set-only tests flip to pin the pair's answer, or go. The seam and the vee read open: the seam as the named
+      residual, with its figures; the vee as the verdict shows its middle.
+    - Keep the rest.
+    - Add V1's open-slot cases (Edge.spec and Factors.spec) and V1's MH1 / MH6 tests.
+    - Each must fail on its mutant or on fixer F's tree where that is meaningful, and pass on the tree.
+H3. Text: withdraw every "also where a plate is cut flush beside the crossing" (§4.6 row 1, §5.2, §5.5's clause, §5.6,
+    §14.6, the Edge and Factors headers, E-S2.13, fixer F's M3-notes section, marked withdrawn and why).
+    - Name the seam beside a slanted crossing under O11 (flush cuts), at §5's promise and §0.5. Use V1 r3's figures,
+      re-measured: 30 deg at 0.0105, 1 seam 0.2186 Hard and 3 seams 0.3095 Hard against 0.1734; near the window's edge
+      0.2104 Hard; 45 deg, 48 of 49 single seams Hard.
+    - O11's options gain the set rule (tried and withdrawn, with the slot sword) and the sandwich checks B and B2 (their
+      residuals, costed).
+    - State why the pair rule merges nothing the verdict shows on flat faces.
+H4. O11 carries the structural question in one place:
+    - every residual class, each with its largest measured figure: the mouth, the seam, aimed and Wedge re-cuts, thin
+      partners, face ties at TIE, a part's writings, the empty sealed cavity;
+    - option (iii), a measure that follows the solid, as what would close them together, with a cost estimate grounded
+      in the raster's measured cost (no prototype needed);
+    - **[Decision to confirm]**, the default as built.
+H5. Round 4's minors that still hold after H1, each checked first:
+    - V2: O10's lean closure cost; §4.1's qualifier; T-EDG-01's query count, re-measured for the pair; 0.1734; the
+      mirror clause in §5.6; the attack figures, dropped or re-measured with the set gone;
+    - V1: the sealed cavity (O10); a Block's writing (O11, §5.6's Y/Z row, T-DIF-07 (d) stated as tested).
+Round 5 (V1 and V2, then minors) severity, which ends the hunt:
+- Major only for:
+  - a false merge (anything the verdict shows read as solid by Thinness or the edge);
+  - H1 not bit-identical where stated;
+  - a bound or invariance the SPEC states without exception that fails;
+  - a test that cannot fail;
+  - determinism, crash or cost-bound failures.
+- A newly found invisible-construction class in Thinness or the edge is minor, reported with figures and the text that
+  names it (the minors fixer adds it under O10/O11).
+Then: quiet verify, S-PAR-02 in Studio (the digest is unchanged since fix round 2), and the commit.
+Launched 2026-11-17 00:08: workflow wf_17f26b5b-4ce (task wo3xb25zt), script
+workflows\scripts\m3-fix-round4-wf_17f26b5b-4ce.js. Snapshot of the tree after fix round 3: scratch m3-r4-base\repo
+(1,159 files; sha1 prefixes Factors 80949025841b, Edge e8d4cf984ddc, SPEC 57348cae94f8). Resume with scriptPath +
+resumeFromRunId if cut off.

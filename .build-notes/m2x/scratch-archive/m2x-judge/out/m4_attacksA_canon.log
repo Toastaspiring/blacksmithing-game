@@ -1,0 +1,3 @@
+  250 designs: perm runs 750 (bits differ 0, kept differ 0), mirror runs 500 (verdicts differ 0: twins 0, ties 0, defects 0), 14 s
+  500 designs: perm runs 1500 (bits differ 0, kept differ 0), mirror runs 1000 (verdicts differ 0: twins 0, ties 0, defects 0), 23 s
+M4 attacksA every 2 model canon: 670 designs, 9809 parts; 2010 permuted runs: shown bits differ in 0, kept rows in 0; 1340 mirror images: verdicts differ on 0 parts (true twins 0, rank order flipped 0, exact ties 0, unexplained 0); 28 s

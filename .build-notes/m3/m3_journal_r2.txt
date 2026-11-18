@@ -1,0 +1,54 @@
+M3 review round 2 -> fix round 2 (2026-11-16)
+
+Fix round 1 ended with fixer C (lattice Douglas-Peucker; Y shifts keep every edge to the bit; no F/C/X/A fixture moves at
+4 decimals; P1 2 -> 4 chains etc.). Results: m3_fixer_1a/1b/1c.json. Review round 2: m3_v1_adversary_r2.json,
+m3_v2_numbers_and_text_r2.json (both pass = false). Snapshot of the tree after fixer C: scratch m3-r2-base\repo.
+Under load all through (the user's game, Studio): T-PERF-01's timed checks fail under load only; no quiet verify yet.
+
+Findings (checked against the code by the lead):
+- V1 major 1: unionChord merges by the gap's width ALONG the chord (Factors.luau:198 `a <= hi + MERGE_GAP`), the
+  verdict hides by its width ACROSS. A laminate turned 30 deg with a hidden 0.0105 gap: Hammering 0.1318 N -> 0.4095
+  Expert. V1 tried a two-sided oblique merge (m3-v1-2b out\oblique_*.diff): no F/C/X/A value moves, +1.4..8.4 % cost
+  under load.
+- V1 major 2: the aimed flush re-cut. Each part's probes start at c = floor(n/2) of its walk (Factors.luau:460),
+  the first cell of the inner axes; an overhanging plate cut in 6-11 pieces: 0.1075 N -> 0.2141 H / 0.3254 (dG 0.218).
+  O11 quotes the 500-design corpus (0.0379) as if it were the channel's size. Inherent to per-part sampled probes
+  within the budget; V1 tried another start, no help.
+- V1 major 3: M2's hide test is a point probe HIDE_OFFSET along the normal, in the measure (Sampling.exposure,
+  exposedWeight) and in the verdict (Cover's header: "probe n_i.(x + (HIDE_OFFSET + sag_f).n) <= ..."). A flush partner
+  thinner than HIDE_OFFSET lets the probe through: a blade split flush along its X-Z diagonal into two Wedges,
+  C09 Sharpening 0.1904 N -> 0.2225 H. Also ordinary bevels: a Block ranked above a Wedge against its side shows a
+  band HIDE_OFFSET/W of the contact. Only raises SC (only makes a design harder).
+- V2 major: face ties. A probe exactly on another part's face, chord along that face, is decided by rounding; Y alone
+  moves G on 53 of 3,000 designs (six seeds), up to 0.0055; Blocks rewritten (b, a, c) 2 of 3,000, 0.0007. The Gen
+  corpus asserts in T-DIF-07 (a)/(d) fail on 3 of 5 other PROP_BASE_SEEDs. Plus 1 Y shift moving G 0.0001 through
+  M2's sampled round-part overlaps (M2's limit).
+- Minors: FA2/FA8 unpinned (tests tried); a Wedge written its other way moves C09 G 0.0007 (M2's surface samples);
+  X-mirror dD 0.0621 traced (the walk's world sign on an axis along X); E-S2.13 misdates a bit-identity claim and
+  fix round 1's effect beyond the 70 fixtures is unrecorded (164 played tiers on the plausible set, 2 generated,
+  worst valid 4); section 4.1's departures, 16.18's SAMPLE_X/Y, "runs it last" (597th of 732) wrong; Wedge re-cuts
+  0.0521 and 2 flips; timing at its limits under ordinary load (58.9-59.8 ms at 7-26 %; --quick 30.2 s); pins
+  changed without a note; docs.rar untracked in the repo root (leave it out of the commit).
+
+Lead decisions for fix round 2 (fixer D then fixer E, then V1/V2 round 3; scratch m3-fix2d, m3-fix2e, m3-v1-3,
+m3-v2-3; workflow script m3-fix-round2):
+D1. Adopt the oblique two-sided merge in Factors.unionChord and Edge.mergeSorted, checked against the verdict's real
+    hide test at 0-75 deg and against non-facing neighbours. Gate: every 5.5 tier holds and the slowest valid design
+    projected quiet (53.4 ms x the alternating Analyze.run ratio against m3-r2-base) <= 57 ms; else text (O10).
+D2. Face ties decided by geometry: other parts' chords along the probe's line moved by a fixed small generic world
+    vector (owner's chord on the probe's own line), or an exact tie rule inside Factors (M2's Shapes untouched).
+    Gate: every 5.5 tier holds. T-DIF-07 (a)/(d) then assert Thinness and EdgeLength to the bit (G within
+    TOL_G_INVARIANT for M2's overlaps), THIN_TIES goes; tests/Physics passes on six PROP_BASE_SEEDs. Else V2's patch.
+D3. Aimed re-cut: text only (O11, 5's promise, 5.6, 17.2): corpus figures are not bounds; V1's aimed design and
+    mechanism, V2's Wedge re-cuts, re-measured; O11's options costed: as built; a per-part probe floor (scratch
+    variant, measured); a solid-following grid (described).
+D4. FA2, FA8 and the oblique tests. D5. Re-bless with every move explained; text for D's changes.
+E1. Diagonal Wedge split: text (4.4, 5's promise, O10), with V1's figures and the ordinary-bevel band measured on the
+    5.5 fixtures; O10's options: as built; a segment probe in the measure and the verdict (measure variant measured in
+    scratch, verdict described). M2's code unchanged.
+E2-E5. V2's and V1's text minors, timing as measured, README's Status, pins annotated, O-number marks checked.
+Round-3 severity: a named channel at a larger figure than one the SPEC gives as a corpus's or an example's is minor;
+major only where a stated bound or invariance fails, or a channel is unnamed. Then S-PAR-02 in Studio, quiet verify,
+commit (stage files explicitly; docs.rar out).
+Launched 2026-11-16 15:13: workflow wf_e1fbba93-b4b (task w3gbbxqay), script
+workflows\scripts\m3-fix-round2-wf_e1fbba93-b4b.js. Resume with scriptPath + resumeFromRunId if cut off.

@@ -1,0 +1,2 @@
+P1 24 large overlapping tilted blocks                        |dD| 0.0000  #2 Block cleaned true 2.043%  [Sm 1.0000/1.0000 H/H, Ha 0.0000/0.0000 N/N, Sh 0.0086/0.0086 N/N]
+M3 corpus_fixtures.json: 71 designs, rows differ from the truth's in 1, tier flips 0, worst |dD| 0.0000 (), no steps 0, 0 s

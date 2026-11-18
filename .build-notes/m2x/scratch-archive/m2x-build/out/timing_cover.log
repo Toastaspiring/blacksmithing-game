@@ -1,0 +1,17 @@
+TIME      194.5 ms  Physics/Cover › (a) exact on its model, against a brute force: the F fixtures, C09 and the attack designs
+TIME      199.0 ms  Physics/Cover › (a) exact on its model, against a brute force: 40 tangles of overlapping, near-touching parts of every shape
+TIME     2748.8 ms  Physics/Cover › (a) exact on its model: the calibration and regression fixtures, P2–P5, and 600 tangles
+TIME        9.3 ms  Physics/Cover › (b) what shows of the plate under lids, to the 6 decimals E-S2.12 quotes, kept or cleaned
+TIME      148.5 ms  Physics/Cover › (c) the attack designs read their truth: the truth's verdict, the share within the model's band
+TIME       11.0 ms  Physics/Cover › (c) a round copy spun or turned about its own symmetry is hidden by its original, which shows whole
+TIME      541.7 ms  Physics/Cover › (d) any order of the parts: every reading the same bits, tangles and attack designs
+TIME      892.6 ms  Physics/Cover › (d) a mirror image across X or Z reads the original's, part for part: fixtures, C09, attack designs
+TIME      278.2 ms  Physics/Cover › (d) an exact copy first or last, a Dust speck on a face: every other reading the same bits
+TIME       27.5 ms  Physics/Cover › (e) frames the world fixes: a round part spun or turned about its symmetry has its original's model
+TIME       24.4 ms  Physics/Cover › (e) the model of a mirror image is the mirror image of the model, every shape
+TIME        7.7 ms  Physics/Cover › (e) the model as §4.4 words it: the brute force's own construction, its half-spaces' sag, a Ball's 128 triangles
+TIME      213.8 ms  Physics/Cover › (f) the real designs stay at least 2 × under VERDICT_WORK_MAX: F, C and X fixtures, P1–P5
+TIME    57870.0 ms  Physics/Cover › (f) the plausible designs stay at least 2 × under VERDICT_WORK_MAX: all of 20 parts or more, every 4th of the rest
+TIME      490.2 ms  Physics/Cover › (f) a design past the cap: no verdict, TooComplex, answered at once; its units in any order
+TIME      340.2 ms  Physics/Cover › (f) units depend on no order: P1 and the slowest valid designs, the same total in 3 orders
+RESULT pass=16 fail=0 skip=0 files=51 time=64.00s

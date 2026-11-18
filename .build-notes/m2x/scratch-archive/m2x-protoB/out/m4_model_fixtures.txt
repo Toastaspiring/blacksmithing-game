@@ -1,0 +1,6 @@
+M4 model corpus_fixtures.json: 615 parts, 482 bit-exact mirror models, largest |difference| 1.33e-15 (P1 24 large overlapping tilted blocks Block)
+  Cylinder        49 parts,     7 exact, largest 4.51e-17
+  Ball            88 parts,    88 exact, largest 0
+  Wedge           64 parts,    54 exact, largest 5.55e-17
+  Block          400 parts,   333 exact, largest 1.33e-15
+  CornerWedge     14 parts,     0 exact, largest 4.44e-16

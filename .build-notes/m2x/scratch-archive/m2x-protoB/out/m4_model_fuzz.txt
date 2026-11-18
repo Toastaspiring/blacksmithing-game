@@ -1,0 +1,6 @@
+M4 model fuzz:300:3: 3956 parts, 1220 bit-exact mirror models, largest |difference| 1.44e-15 (fuzz3#108 CornerWedge)
+  Cylinder       561 parts,   197 exact, largest 8.33e-17
+  CornerWedge    559 parts,    88 exact, largest 1.44e-15
+  Wedge          607 parts,   252 exact, largest 1.33e-15
+  Block         1673 parts,   682 exact, largest 8.88e-16
+  Ball           556 parts,     1 exact, largest 6.07e-18

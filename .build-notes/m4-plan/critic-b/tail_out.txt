@@ -1,0 +1,8 @@
+Normal n 10000  min 0.00279  q0.0001 0.00288 q0.001 0.00304 q0.01 0.00331 q0.05 0.00360 median 0.00449  below 0.0032 (4x): 47  below 0.0028: 1
+   lognormal         P(one run < 0.0024) 1.13e-06  -> P(min of 10,000 < 0.0024) 0.011
+   skew-normal(log)  P(one run < 0.0024) 9.29e-07  -> P(min of 10,000 < 0.0024) 0.009
+   GPD lowest 2%     P(one run < 0.0024) 0.00e+00  -> P(min of 10,000 < 0.0024) 0.000
+Hard n 10000  min 0.00259  q0.0001 0.00268 q0.001 0.00303 q0.01 0.00338 q0.05 0.00372 median 0.00466  below 0.0032 (4x): 27  below 0.0028: 3
+   lognormal         P(one run < 0.0024) 6.76e-07  -> P(min of 10,000 < 0.0024) 0.007
+   skew-normal(log)  P(one run < 0.0024) 8.78e-07  -> P(min of 10,000 < 0.0024) 0.009
+   GPD lowest 2%     P(one run < 0.0024) 1.10e-05  -> P(min of 10,000 < 0.0024) 0.104

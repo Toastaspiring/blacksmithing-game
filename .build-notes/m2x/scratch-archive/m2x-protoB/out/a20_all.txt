@@ -1,0 +1,13 @@
+hairline: hidden core, true 0.00 %           |dD| 0.0000        K Sm 0.3137 H, Ha 0.4026 H, Sh 0.2586 H | K+ Sm 0.3137 H, Ha 0.4026 H, Sh 0.2586 H
+pins: 3 apices, core true 3.8 %              |dD| 0.0000        K Sm 0.3583 H, Ha 0.0172 N, Sh 0.0603 N | K+ Sm 0.3583 H, Ha 0.0172 N, Sh 0.0603 N
+no poke: 3 apices 1e-8 under, lower ids      |dD| 0.0000        K Sm 0.5322 H, Ha 0.0000 N, Sh 0.0586 N | K+ Sm 0.5322 H, Ha 0.0000 N, Sh 0.0586 N
+F5: 4 flush plates inside, lower ids         |dD| 0.0000        K Sm 0.0288 N, Ha 0.1037 N, Sh 0.0989 N | K+ Sm 0.0288 N, Ha 0.1037 N, Sh 0.0989 N
+C02 Arming (Iron): 4 flush plates inside, lower ids |dD| 0.0000        K Sm 0.0355 N, Ha 0.1137 N, Sh 0.1318 N | K+ Sm 0.0355 N, Ha 0.1137 N, Sh 0.1318 N
+C05: 4 flush plates inside, lower ids        |dD| 0.0000        K Sm 0.5451 H, Ha 0.1363 N, Sh 0.3466 H | K+ Sm 0.5451 H, Ha 0.1363 N, Sh 0.3466 H
+C09 + 0.03: part 15's id first               |dD| 0.0000        K Sm 0.0005 N, Ha 0.3237 H, Sh 0.2064 H | K+ Sm 0.0005 N, Ha 0.3237 H, Sh 0.2064 H
+C09 + 0.03: an exact copy of 15 first        |dD| 0.0000        K Sm 0.0005 N, Ha 0.3237 H, Sh 0.2064 H | K+ Sm 0.0005 N, Ha 0.3237 H, Sh 0.2064 H
+C09: exact copies of 13..17 first            |dD| 0.0009        K Sm 0.0001 N, Ha 0.3170 H, Sh 0.1904 N | K+ Sm 0.0001 N, Ha 0.3179 H, Sh 0.1904 N
+fuller w0.3 L2.5 t0.04 c0.030 g0.03 at0.5 twin |dD| 0.0000        build Sm 0.1269 N, Ha 0.2866 H, Sh 0.0000 N | truth Sm 0.1269 N, Ha 0.2866 H, Sh 0.0000 N | core true 17.20 % read 17.19 % kept
+fuller w0.2 L2.5 t0.04 c0.030 g0.02 at0.5 twin |dD| 0.0000        build Sm 0.0962 N, Ha 0.1151 N, Sh 0.0000 N | truth Sm 0.0962 N, Ha 0.1151 N, Sh 0.0000 N | core true 16.24 % read 16.25 % kept
+fuller w0.8 L2.5 t0.08 c0.030 g0.01 at0.5 one |dD| 0.0000        build Sm 0.2140 H, Ha 0.6906 H, Sh 0.2000 H | truth Sm 0.2140 H, Ha 0.6906 H, Sh 0.2000 H | core true 1.09 % read 1.09 % CLEANED
+-- dumprun a20_all: 20 designs, 3.9 s

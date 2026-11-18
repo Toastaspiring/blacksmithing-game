@@ -1,0 +1,44 @@
+slit 0.08: 3 fillers inside the far cheek and the core, an apex 1e-8 under the core's surface, lower ids (valid true, true)
+  K      Core(Block) true 3.82% read 3.83% kept
+  K + F  Pin(CornerWedge) true 0.00% read 0.00% CLEANED; Pin(CornerWedge) true 0.00% read 0.00% CLEANED; Pin(CornerWedge) true 0.00% read 0.00% CLEANED; Core(Block) true 3.82% read 3.83% kept
+  K: Sm 0.5322 H, Ha 0.0000 N, Sh 0.0586 N | K + F: Sm 0.5322 H, Ha 0.0000 N, Sh 0.0586 N | |dD| 0.0000 
+slit 0.04: 3 fillers inside the far cheek and the core, an apex 1e-8 under the core's surface, lower ids (valid true, true)
+  K      Core(Block) true 1.91% read 1.91% CLEANED
+  K + F  Pin(CornerWedge) true 0.00% read 0.00% CLEANED; Pin(CornerWedge) true 0.00% read 0.00% CLEANED; Pin(CornerWedge) true 0.00% read 0.00% CLEANED; Core(Block) true 1.91% read 1.91% CLEANED
+  K: Sm 0.4852 H, Ha 0.3000 H, Sh 0.2406 H | K + F: Sm 0.4852 H, Ha 0.3000 H, Sh 0.2406 H | |dD| 0.0000 
+C09: Sm 0.0001 N, Ha 0.3170 H, Sh 0.1904 N
+  an exact copy of part  1 (Pommel Ball) as the first part: Sm 0.0001 N, Ha 0.3170 H, Sh 0.1904 N | |dD| 0.0000 
+  an exact copy of part  2 (Pommel Ball) as the first part: Sm 0.0001 N, Ha 0.3170 H, Sh 0.1904 N | |dD| 0.0000 
+  an exact copy of part  3 (Grip Cylinder) as the first part: Sm 0.0001 N, Ha 0.3170 H, Sh 0.1904 N | |dD| 0.0000 
+  an exact copy of part  4 (Grip Cylinder) as the first part: Sm 0.0001 N, Ha 0.3170 H, Sh 0.1904 N | |dD| 0.0000 
+  an exact copy of part  5 (Grip Cylinder) as the first part: Sm 0.0001 N, Ha 0.3170 H, Sh 0.1904 N | |dD| 0.0000 
+  an exact copy of part  6 (Grip Cylinder) as the first part: Sm 0.0001 N, Ha 0.3170 H, Sh 0.1904 N | |dD| 0.0000 
+  an exact copy of part  7 (Guard Block) as the first part: Sm 0.0001 N, Ha 0.3170 H, Sh 0.1904 N | |dD| 0.0000 
+  an exact copy of part  8 (Guard Block) as the first part: Sm 0.0001 N, Ha 0.3170 H, Sh 0.1904 N | |dD| 0.0000 
+  an exact copy of part  9 (Guard Block) as the first part: Sm 0.0001 N, Ha 0.3170 H, Sh 0.1904 N | |dD| 0.0000 
+  an exact copy of part 10 (Guard Ball) as the first part: Sm 0.0001 N, Ha 0.3170 H, Sh 0.1904 N | |dD| 0.0000 
+  an exact copy of part 11 (Guard Ball) as the first part: Sm 0.0001 N, Ha 0.3170 H, Sh 0.1904 N | |dD| 0.0000 
+  an exact copy of part 12 (Blade Block) as the first part: Sm 0.0001 N, Ha 0.3178 H, Sh 0.1904 N | |dD| 0.0008 Hammering
+  an exact copy of part 13 (Blade Wedge) as the first part: Sm 0.0001 N, Ha 0.3175 H, Sh 0.1904 N | |dD| 0.0005 Hammering
+  an exact copy of part 14 (Blade Wedge) as the first part: Sm 0.0001 N, Ha 0.3170 H, Sh 0.1904 N | |dD| 0.0000 
+  an exact copy of part 15 (Blade Wedge) as the first part: Sm 0.0001 N, Ha 0.3170 H, Sh 0.1904 N | |dD| 0.0000 
+  an exact copy of part 16 (Blade Wedge) as the first part: Sm 0.0001 N, Ha 0.3175 H, Sh 0.1904 N | |dD| 0.0005 Hammering
+  an exact copy of part 17 (Blade Wedge) as the first part: Sm 0.0001 N, Ha 0.3170 H, Sh 0.1904 N | |dD| 0.0000 
+  an exact copy of part 18 (Blade Wedge) as the first part: Sm 0.0001 N, Ha 0.3170 H, Sh 0.1904 N | |dD| 0.0000 
+  exact copies of parts 13..17 first: Sm 0.0001 N, Ha 0.3179 H, Sh 0.1904 N | |dD| 0.0009 Hammering
+C09 blade +0.00: Sm 0.0001 N, Ha 0.3170 H, Sh 0.1904 N | copy of 15: Sh 0.1904 N, |dD| 0.0000; copy of 16: Sh 0.1904 N, |dD| 0.0005; copy of 14: Sh 0.1904 N, |dD| 0.0000; copy of 13: Sh 0.1904 N, |dD| 0.0005
+C09 blade +0.02: Sm 0.0004 N, Ha 0.3216 H, Sh 0.1993 N | copy of 15: Sh 0.1993 N, |dD| 0.0000; copy of 16: Sh 0.1993 N, |dD| 0.0004; copy of 14: Sh 0.1993 N, |dD| 0.0000; copy of 13: Sh 0.1993 N, |dD| 0.0004
+C09 blade +0.03: Sm 0.0005 N, Ha 0.3237 H, Sh 0.2064 H | copy of 15: Sh 0.2064 H, |dD| 0.0000; copy of 16: Sh 0.2064 H, |dD| 0.0004; copy of 14: Sh 0.2064 H, |dD| 0.0000; copy of 13: Sh 0.2064 H, |dD| 0.0004
+C09 blade +0.04: Sm 0.0006 N, Ha 0.3258 H, Sh 0.2077 H | copy of 15: Sh 0.2077 H, |dD| 0.0000; copy of 16: Sh 0.2077 H, |dD| 0.0004; copy of 14: Sh 0.2077 H, |dD| 0.0000; copy of 13: Sh 0.2077 H, |dD| 0.0004
+C09 blade +0.05: Sm 0.0008 N, Ha 0.3283 H, Sh 0.2153 H | copy of 15: Sh 0.2153 H, |dD| 0.0000; copy of 16: Sh 0.2153 H, |dD| 0.0004; copy of 14: Sh 0.2153 H, |dD| 0.0000; copy of 13: Sh 0.2153 H, |dD| 0.0004
+C09 blade +0.06: Sm 0.0009 N, Ha 0.3303 H, Sh 0.2166 H | copy of 15: Sh 0.2166 H, |dD| 0.0000; copy of 16: Sh 0.2166 H, |dD| 0.0005; copy of 14: Sh 0.2166 H, |dD| 0.0000; copy of 13: Sh 0.2166 H, |dD| 0.0005
+C09 blade +0.08: Sm 0.0012 N, Ha 0.3345 H, Sh 0.2249 H | copy of 15: Sh 0.2249 H, |dD| 0.0000; copy of 16: Sh 0.2249 H, |dD| 0.0004; copy of 14: Sh 0.2249 H, |dD| 0.0000; copy of 13: Sh 0.2249 H, |dD| 0.0004
+C05 + an inlay flush with the blade, id first; + an exact copy of the blade with a lower id still (valid true, true)
+  K      Inlay(Block) true 0.00% read 0.00% CLEANED
+  K + F  Inlay(Block) true 0.00% read 0.00% CLEANED
+  K: Sm 0.5451 H, Ha 0.1363 N, Sh 0.3466 H | K + F: Sm 0.5451 H, Ha 0.1363 N, Sh 0.3466 H | |dD| 0.0000 
+4 Dust specks over 4 of the core's 5 reading centres (valid true, true)
+  K      Core(Block) true 3.82% read 3.83% kept
+  K + F  Core(Block) true 3.82% read 3.83% kept; Dust(Block) true - read - CLEANED; Dust(Block) true - read - CLEANED; Dust(Block) true - read - CLEANED; Dust(Block) true - read - CLEANED
+  K: Sm 0.5322 H, Ha 0.0000 N, Sh 0.0586 N | K + F: Sm 0.5322 H, Ha 0.0000 N, Sh 0.0586 N | |dD| 0.0000 
+-- dumprun a8_flush: 57 designs, 6.8 s

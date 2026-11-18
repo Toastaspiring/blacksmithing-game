@@ -1,0 +1,5 @@
+ACC plausible every 4 offset 0: 8088 designs, 77205 parts, 21018 differ between the two, 25504 against the truth, 146 s
+  canon         false Enclosed >= 2.5/3/5/7.5/10 %: 121/0/0/0/0 (highest cleaned 2.945%: ballRivet|C09|guardZ d0.14 r47 cap0.0050 part 19 (Ball) read 1.975%)
+                false kept < 1.5/1/0.5/0.25 %: 3/0/0/0 (lowest kept 1.290%: wrapRings|C06|n5 extra0.01 gap0.0020 part 2 (Cylinder) read 2.020%)
+  conservative  false Enclosed >= 2.5/3/5/7.5/10 %: 121/0/0/0/0 (highest cleaned 2.945%: ballRivet|C09|guardZ d0.14 r47 cap0.0050 part 19 (Ball) read 1.975%)
+                false kept < 1.5/1/0.5/0.25 %: 0/0/0/0 (lowest kept 2.002%: fuller|w0.4 L2.5 t0.08 c0.015 g0.01 at0.5 one part 4 (Block) read 2.005%)

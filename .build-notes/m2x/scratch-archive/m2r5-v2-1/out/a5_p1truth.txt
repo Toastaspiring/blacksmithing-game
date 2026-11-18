@@ -1,0 +1,25 @@
+spacing 0.0125
+ 1 Giant1   Pommel  share  8.948%  build kept
+ 2 Giant2   Pommel  share  2.018%  build kept
+ 3 Giant3   Grip    share 10.433%  build kept
+ 4 Giant4   Grip    share  6.895%  build kept
+ 5 Giant5   Guard   share 12.878%  build kept
+ 6 Giant6   Guard   share  0.639%  build CLEANED
+ 7 Giant7   Guard   share  9.117%  build kept
+ 8 Giant8   Guard   share  0.072%  build CLEANED
+ 9 Giant9   Guard   share  5.777%  build kept
+10 Giant10  Guard   share 16.391%  build kept
+11 Giant11  Guard   share  0.771%  build CLEANED
+12 Giant12  Guard   share  0.000%  build CLEANED
+13 Giant13  Blade   share  1.750%  build kept
+14 Giant14  Blade   share 18.339%  build kept
+15 Giant15  Blade   share  1.780%  build kept
+16 Giant16  Blade   share  0.000%  build CLEANED
+17 Giant17  Blade   share  8.562%  build kept
+18 Giant18  Blade   share  0.677%  build CLEANED
+19 Giant19  Blade   share 18.352%  build kept
+20 Giant20  Blade   share  6.731%  build kept
+21 Giant21  Blade   share  2.112%  build kept
+22 Giant22  Blade   share  0.790%  build CLEANED
+23 Giant23  Blade   share  5.522%  build kept
+24 Giant24  Blade   share 31.405%  build kept

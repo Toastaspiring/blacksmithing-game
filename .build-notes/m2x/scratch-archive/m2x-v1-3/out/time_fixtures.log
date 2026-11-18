@@ -1,0 +1,57 @@
+F1                                                       units     2033.1  verdict   0.24  exposure   1.28  run   1.59  gap 0.095 ms
+F2                                                       units      395.6  verdict   0.06  exposure   1.17  run   1.41  gap 0.079 ms
+F3                                                       units    11362.0  verdict   0.87  exposure   1.59  run   1.83  gap 0.091 ms
+F4                                                       units      586.1  verdict   0.08  exposure   2.82  run   3.34  gap 0.198 ms
+F5                                                       units     2033.1  verdict   0.29  exposure   1.66  run   1.61  gap 0.092 ms
+C01 Minimal                                              units      402.6  verdict   0.07  exposure   1.54  run   1.80  gap 0.147 ms
+C02 Arming (Iron)                                        units     2639.1  verdict   0.40  exposure   1.50  run   1.98  gap 0.086 ms
+C02 Arming (Steel)                                       units     2639.1  verdict   0.34  exposure   1.45  run   1.86  gap 0.074 ms
+C04 Rapier (Steel blade)                                 units     3278.5  verdict   0.34  exposure   1.60  run   2.10  gap 0.162 ms
+C05 Cleaver                                              units     1164.8  verdict   0.13  exposure   4.68  run   5.73  gap 0.189 ms
+C06 Sabre (Steel)                                        units     3416.5  verdict   0.58  exposure   2.26  run   2.76  gap 0.110 ms
+C07 Dagger                                               units     2655.2  verdict   0.23  exposure   1.07  run   1.38  gap 0.064 ms
+C08 Greatsword                                           units     2722.2  verdict   0.27  exposure   2.08  run   2.72  gap 0.129 ms
+C09 Ornate (18 parts)                                    units    21954.4  verdict   1.45  exposure   6.95  run   8.22  gap 0.120 ms
+C10 Gamey filler, symmetric                              units     2775.8  verdict   0.40  exposure   4.85  run   5.95  gap 0.313 ms
+C11 Gamey filler, lopsided                               units     3654.4  verdict   0.37  exposure   4.77  run   5.77  gap 0.195 ms
+C12 Arming, blade in 5 overlapping segments              units     3161.1  verdict   0.34  exposure   1.98  run   2.66  gap 0.210 ms
+C13 Arming, guard = half + mirror (+CornerWedges)        units     3259.8  verdict   0.30  exposure   2.13  run   2.82  gap 0.106 ms
+C14 Arming translated (0, +0.27, +0.05)                  units     2639.1  verdict   0.27  exposure   1.54  run   1.97  gap 0.081 ms
+C15 Arming rotated 4 deg about Z at the grip             units     2680.2  verdict   0.27  exposure   1.65  run   2.25  gap 0.108 ms
+P1 24 large overlapping tilted blocks                    units   330993.1  verdict  10.91  exposure  18.36  run  22.35  gap 0.268 ms
+P2 24 rotated cylinders                                  units    26422.2  verdict   1.83  exposure   8.79  run  11.39  gap 0.119 ms
+P3 24 rotated wedges                                     units     8354.4  verdict   0.90  exposure   7.84  run  11.20  gap 0.316 ms
+P4 24 overlapping balls                                  units   175198.5  verdict   9.41  exposure  12.08  run  13.33  gap 0.151 ms
+P5 comb blade (sawtooth, 24 parts)                       units     2973.2  verdict   0.31  exposure   2.28  run   2.70  gap 0.092 ms
+X01 2 blade copies at z +-0.003 (vs union blade 0.066)   units     3623.8  verdict   0.41  exposure   4.49  run   5.47  gap 0.248 ms
+X01raw 2 blade copies at z +-0.003 (vs F5)               units     3623.8  verdict   0.33  exposure   4.44  run   5.45  gap 0.228 ms
+X02 6 blade copies at z = k*0.002 (vs union blade 0.072) units    11348.1  verdict   0.69  exposure   3.40  run   4.72  gap 0.084 ms
+X03 F4 + 0.0003 st3 fin                                  units      677.0  verdict   0.08  exposure   3.09  run   3.61  gap 0.214 ms
+X04a blade from 4 strips                                 units     3551.9  verdict   0.41  exposure   4.12  run   4.29  gap 0.094 ms
+X04b blade from strips, seams at +-0.05 and 0            units     3551.9  verdict   0.42  exposure   3.98  run   4.58  gap 0.106 ms
+X04-5-0.004 5 segments, gaps 0.004                       units     2431.5  verdict   0.36  exposure   1.60  run   1.87  gap 0.090 ms
+X04-5-0.006 5 segments, gaps 0.006                       units     2431.5  verdict   0.32  exposure   1.57  run   1.87  gap 0.136 ms
+X04-5-0.009 5 segments, gaps 0.009                       units     2431.5  verdict   0.26  exposure   1.49  run   1.92  gap 0.091 ms
+X04-10-0.004 10 segments, gaps 0.004                     units     2978.9  verdict   0.40  exposure   1.77  run   2.14  gap 0.090 ms
+X04-10-0.006 10 segments, gaps 0.006                     units     2978.9  verdict   0.38  exposure   1.79  run   2.18  gap 0.098 ms
+X04-10-0.009 10 segments, gaps 0.009                     units     2978.9  verdict   0.36  exposure   1.81  run   2.23  gap 0.150 ms
+X04g0.005 grip nudge 0.005 in X                          units     2033.1  verdict   0.19  exposure   1.27  run   1.57  gap 0.084 ms
+X04g0.010 grip nudge 0.010 in X                          units     2033.1  verdict   0.27  exposure   1.30  run   1.62  gap 0.124 ms
+X04g0.015 grip nudge 0.015 in X                          units     2033.1  verdict   0.22  exposure   1.26  run   1.58  gap 0.096 ms
+X04g0.020 grip nudge 0.020 in X                          units     2033.1  verdict   0.28  exposure   1.27  run   1.55  gap 0.079 ms
+X05+0.002 5 segments, gap 0.002                          units     2431.5  verdict   0.31  exposure   1.54  run   1.91  gap 0.089 ms
+X05+0.004 5 segments, gap 0.004                          units     2431.5  verdict   0.29  exposure   1.55  run   1.91  gap 0.090 ms
+X05+0.006 5 segments, gap 0.006                          units     2431.5  verdict   0.31  exposure   1.52  run   1.88  gap 0.086 ms
+X05+0.009 5 segments, gap 0.009                          units     2431.5  verdict   0.25  exposure   1.57  run   1.89  gap 0.092 ms
+X05-0.005 5 segments, overlap 0.005                      units     2532.0  verdict   0.33  exposure   1.62  run   2.06  gap 0.090 ms
+X05-0.020 5 segments, overlap 0.020                      units     2532.0  verdict   0.31  exposure   1.72  run   2.04  gap 0.122 ms
+X05-0.050 5 segments, overlap 0.050                      units     2532.0  verdict   0.24  exposure   1.69  run   2.21  gap 0.098 ms
+X06-0.00 blade offset 0.00 in X                          units     2033.1  verdict   0.25  exposure   1.25  run   1.55  gap 0.079 ms
+X06-0.01 blade offset 0.01 in X                          units     2033.1  verdict   0.26  exposure   1.28  run   1.57  gap 0.098 ms
+X06-0.02 blade offset 0.02 in X                          units     2033.1  verdict   0.22  exposure   1.24  run   1.54  gap 0.081 ms
+X06-0.03 blade offset 0.03 in X                          units     2033.1  verdict   0.27  exposure   1.30  run   1.54  gap 0.078 ms
+X06-0.04 blade offset 0.04 in X                          units     2033.1  verdict   0.20  exposure   1.25  run   1.56  gap 0.088 ms
+X06-0.05 blade offset 0.05 in X                          units     2033.1  verdict   0.26  exposure   1.29  run   1.59  gap 0.089 ms
+X07a laminate 2 x 0.03 plates                            units     2471.1  verdict   0.25  exposure   2.59  run   3.14  gap 0.103 ms
+X07b laminate 2 x 0.035 plates overlapping 0.01          units     2476.1  verdict   0.30  exposure   2.56  run   3.06  gap 0.104 ms
+X07c 4 segments overlapping 0.07                         units     2418.5  verdict   0.28  exposure   1.64  run   2.11  gap 0.097 ms

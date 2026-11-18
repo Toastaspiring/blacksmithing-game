@@ -1,0 +1,9 @@
+design                                               longest gap between checkpoints / between spend calls, ms (median of 5 runs): old | new
+C09 Ornate (18 parts)                                old 4.358 / 4.317 | new 1.242 / 1.242
+P1 24 large overlapping tilted blocks                old 4.163 / 3.972 | new 4.227 / 4.120
+P4 24 overlapping balls                              old 3.439 / 3.258 | new 4.225 / 4.121
+rods d 0.15 L 4.8 spread 0.01                        old 6.194 / 5.929 | new 33.667 / 32.254
+rods d 0.10 L 4.8 spread 0.01                        old 5.209 / 5.110 | new 9.154 / 9.139
+rods d 0.08 L 4.8 spread 0.01                        old 5.860 / 5.817 | new 14.618 / 14.420
+rods d 0.15 L 3.5 spread 0.01                        old 1.286 / 1.236 | new 6.852 / 6.805
+rods d 0.10 L 3.5 spread 0.01                        old 6.242 / 6.037 | new 13.158 / 13.133

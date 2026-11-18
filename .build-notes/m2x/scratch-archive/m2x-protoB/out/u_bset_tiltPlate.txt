@@ -1,0 +1,9 @@
+UNITS bset:tiltPlate:8:3: 804 designs, new median 2170, p99 2295, max 2324 | old median 2218, p99 2669, max 2926 (2 s)
+       2324 units (old    2669)  n 7 cleaned  0  C08 t0.05 sx0.50 sy0.8 deg2.0 axis110 off0.0 [bset-tiltPlate]
+       2321 units (old    2530)  n 7 cleaned  1  C08 t0.03 sx0.50 sy0.8 deg4.0 axis001 off0.0 [bset-tiltPlate]
+       2318 units (old    2417)  n 7 cleaned  0  C08 t0.03 sx0.50 sy0.8 deg2.0 axis101 off0.5 [bset-tiltPlate]
+       2304 units (old    2523)  n 7 cleaned  0  C08 t0.05 sx0.50 sy0.4 deg4.0 axis101 off0.0 [bset-tiltPlate]
+       2302 units (old    2432)  n 7 cleaned  1  C08 t0.05 sx0.97 sy0.4 deg2.0 axis110 off0.9 [bset-tiltPlate]
+       2300 units (old    2773)  n 7 cleaned  0  C02 Arming (Iron) t0.05 sx0.50 sy0.8 deg1.0 axis101 off0.0 [bset-tiltPlate]
+       2300 units (old    2438)  n 7 cleaned  0  C02 Arming (Iron) t0.02 sx0.80 sy0.8 deg2.0 axis110 off0.0 [bset-tiltPlate]
+       2296 units (old    2508)  n 7 cleaned  1  C08 t0.05 sx0.50 sy0.4 deg2.0 axis110 off0.9 [bset-tiltPlate]

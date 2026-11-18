@@ -1,0 +1,168 @@
+mutants: 910
+25/910 done, 42 s
+50/910 done, 101 s
+75/910 done, 153 s
+100/910 done, 220 s
+125/910 done, 315 s
+150/910 done, 402 s
+175/910 done, 507 s
+200/910 done, 586 s
+225/910 done, 685 s
+250/910 done, 751 s
+275/910 done, 805 s
+300/910 done, 883 s
+325/910 done, 961 s
+350/910 done, 1057 s
+375/910 done, 1159 s
+400/910 done, 1254 s
+425/910 done, 1371 s
+450/910 done, 1486 s
+475/910 done, 1571 s
+500/910 done, 1645 s
+525/910 done, 1728 s
+550/910 done, 1786 s
+575/910 done, 1852 s
+600/910 done, 1908 s
+625/910 done, 1974 s
+650/910 done, 2058 s
+675/910 done, 2124 s
+700/910 done, 2204 s
+725/910 done, 2274 s
+750/910 done, 2367 s
+775/910 done, 2442 s
+800/910 done, 2537 s
+825/910 done, 2628 s
+850/910 done, 2734 s
+875/910 done, 2819 s
+900/910 done, 2907 s
+killed 780, survived 130
+SURVIVED Cover.luau:187 * -> / @40 | local poly: { number } = table.create(3 * n, 0)
+SURVIVED Cover.luau:224 - -> + @40 | local ux, uy, uz = lv[4] - lv[1], lv[5] - lv[2], lv[6] - lv[3]
+SURVIVED Cover.luau:227 < -> <= @94 | if cx * (lv[1] + lv[4] + lv[7]) + cy * (lv[2] + lv[5] + lv[8]) + cz * (lv[3] + lv[6] + lv[9]) < 0 then
+SURVIVED Cover.luau:227 * -> / @6 | if cx * (lv[1] + lv[4] + lv[7]) + cy * (lv[2] + lv[5] + lv[8]) + cz * (lv[3] + lv[6] + lv[9]) < 0 then
+SURVIVED Cover.luau:227 + -> - @15 | if cx * (lv[1] + lv[4] + lv[7]) + cy * (lv[2] + lv[5] + lv[8]) + cz * (lv[3] + lv[6] + lv[9]) < 0 then
+SURVIVED Cover.luau:253 literal 0 -> 1 | inner = 0,
+SURVIVED Cover.luau:262 >= -> > @12 | if pending >= SPEND_EVERY or (all and pending > 0) then
+SURVIVED Cover.luau:262 and -> or @35 | if pending >= SPEND_EVERY or (all and pending > 0) then
+SURVIVED Cover.luau:262 literal 0 -> 1 | if pending >= SPEND_EVERY or (all and pending > 0) then
+SURVIVED Cover.luau:275 literal 1 -> 2 | ey = 1
+SURVIVED Cover.luau:277 literal 1 -> 2 | ex = 1
+SURVIVED Cover.luau:279 literal 1 -> 2 | ez = 1
+SURVIVED Cover.luau:389 < -> <= @6 | if u < u0 then
+SURVIVED Cover.luau:391 > -> >= @10 | elseif u > u1 then
+SURVIVED Cover.luau:394 < -> <= @6 | if v < v0 then
+SURVIVED Cover.luau:396 > -> >= @10 | elseif v > v1 then
+SURVIVED Cover.luau:424 + -> - @42 | local inside: { number } = table.create(n + 2) -- a convex polygon cut once has at most one vertex more
+SURVIVED Cover.luau:425 + -> - @43 | local outside: { number } = table.create(n + 2)
+SURVIVED Cover.luau:460 < -> <= @6 | if s < 0 then
+SURVIVED Cover.luau:471 + -> - @42 | local inside: { number } = table.create(n + 2)
+SURVIVED Cover.luau:501 < -> <= @28 | return pm.total, 0, budget < 0
+SURVIVED Cover.luau:502 < -> <= @14 | elseif budget < 0 then -- the work before it has passed the budget: nothing more is done or reported
+SURVIVED Cover.luau:502 literal 0 -> 1 | elseif budget < 0 then -- the work before it has passed the budget: nothing more is done or reported
+SURVIVED Cover.luau:503 literal 0 -> 1 | return 0, 0, true
+SURVIVED Cover.luau:503 drop statement | return 0, 0, true
+SURVIVED Cover.luau:518 literal 0 -> 1 | local count = 0
+SURVIVED Cover.luau:519 literal 0 -> 1 | local tiny = 0
+SURVIVED Cover.luau:523 > -> >= @12 | if pending > 0 then
+SURVIVED Cover.luau:528 > -> >= @13 | over = done > budget
+SURVIVED Cover.luau:533 >= -> > @12 | if pending >= SPEND_EVERY then
+SURVIVED Cover.luau:534 drop statement | settle()
+SURVIVED Cover.luau:544 > -> >= @12 | if slo[i] > c[i] then
+SURVIVED Cover.luau:545 literal 0 -> 1 | return nil, 0, false -- the whole facet lies outside this line
+SURVIVED Cover.luau:546 > -> >= @16 | elseif shi[i] > c[i] then
+SURVIVED Cover.luau:552 literal 0 -> 1 | return fp, 0, true
+SURVIVED Cover.luau:562 literal 0 -> 1 | return nil, 0, false
+SURVIVED Cover.luau:566 >= -> > @13 | if pending >= SPEND_EVERY then -- a piece cut by many lines (a cap by a Ball's) reports as it goes
+SURVIVED Cover.luau:567 drop statement | settle()
+SURVIVED Cover.luau:569 literal 0 -> 1 | return nil, 0, false
+SURVIVED Cover.luau:569 drop statement | return nil, 0, false
+SURVIVED Cover.luau:590 >= -> > @13 | if pending >= SPEND_EVERY then
+SURVIVED Cover.luau:591 drop statement | settle()
+SURVIVED Cover.luau:593 drop statement | return false
+SURVIVED Cover.luau:616 drop statement | break
+SURVIVED Cover.luau:623 >= -> > @13 | if pending >= SPEND_EVERY then
+SURVIVED Cover.luau:624 drop statement | settle()
+SURVIVED Cover.luau:626 drop statement | return true
+SURVIVED Cover.luau:642 drop statement | break
+SURVIVED Cover.luau:649 >= -> > @13 | if pending >= SPEND_EVERY then
+SURVIVED Cover.luau:650 drop statement | settle()
+SURVIVED Cover.luau:652 drop statement | return true
+SURVIVED Cover.luau:657 drop statement | return false
+SURVIVED Cover.luau:682 * -> / @18 | pending += 2 * UNITS_PER_POLYGON + UNITS_PER_TEST * (#inside + #outside) / 2
+SURVIVED Cover.luau:692 > -> >= @12 | if os > 2 * tiny then
+SURVIVED Cover.luau:692 literal 2 -> 1 | if os > 2 * tiny then
+SURVIVED Cover.luau:704 >= -> > @15 | if pending >= SPEND_EVERY then -- a polygon split by many lines reports as it goes
+SURVIVED Cover.luau:705 drop statement | settle()
+SURVIVED Cover.luau:707 drop statement | return
+SURVIVED Cover.luau:711 >= -> > @14 | if pending >= SPEND_EVERY then
+SURVIVED Cover.luau:712 drop statement | settle()
+SURVIVED Cover.luau:714 drop statement | return
+SURVIVED Cover.luau:722 >= -> > @14 | if pending >= SPEND_EVERY then -- a run of polygons kept whole reports too
+SURVIVED Cover.luau:723 drop statement | settle()
+SURVIVED Cover.luau:740 > -> >= @6 | if s > 2 * tiny then
+SURVIVED Cover.luau:765 * -> / @39 | local fp: { number } = table.create(2 * nv, 0)
+SURVIVED Cover.luau:782 <= -> < @9 | if bx0 <= Q.maxx + o and Q.minx - o <= bx1 and by0 <= Q.maxy + o and Q.miny - o <= by1 and bz0 <= Q.maxz + o
+SURVIVED Cover.luau:782 <= -> < @38 | if bx0 <= Q.maxx + o and Q.minx - o <= bx1 and by0 <= Q.maxy + o and Q.miny - o <= by1 and bz0 <= Q.maxz + o
+SURVIVED Cover.luau:782 <= -> < @53 | if bx0 <= Q.maxx + o and Q.minx - o <= bx1 and by0 <= Q.maxy + o and Q.miny - o <= by1 and bz0 <= Q.maxz + o
+SURVIVED Cover.luau:783 <= -> < @18 | and Q.minz - o <= bz1
+SURVIVED Cover.luau:788 * -> / @41 | local rA, rB = (q.inner + coincident) * INNER_SAFE, (q.inner + EPS) * INNER_SAFE
+SURVIVED Cover.luau:789 > -> >= @9 | if rA > 0 then
+SURVIVED Cover.luau:794 > -> >= @36 | if dx * dx + dy * dy + dz * dz > rA * rA then
+SURVIVED Cover.luau:798 > -> >= @36 | if dx * dx + dy * dy + dz * dz > rB * rB then
+SURVIVED Cover.luau:819 > -> >= @10 | if s > hi then
+SURVIVED Cover.luau:822 < -> <= @10 | if s < lo then
+SURVIVED Cover.luau:835 literal 0 -> 1 | local B, nB, wholeB = nil, 0, false
+SURVIVED Cover.luau:843 drop statement | return shown, done, true
+SURVIVED Cover.luau:856 drop statement | return shown, done, true
+SURVIVED Cover.luau:867 drop statement | return shown, done, true
+SURVIVED Cover.luau:881 >= -> > @11 | if shown >= need then
+SURVIVED Cover.luau:885 >= -> > @12 | if pending >= SPEND_EVERY then
+SURVIVED Cover.luau:886 drop statement | settle()
+SURVIVED Cover.luau:888 drop statement | return shown, done, true
+SURVIVED Sampling.luau:501 < -> <= @15 | return ka[1] < kb[1]
+SURVIVED Sampling.luau:504 < -> <= @16 | return a.slot < b.slot
+SURVIVED Sampling.luau:508 < -> <= @16 | return ka[k] < kb[k]
+SURVIVED Sampling.luau:512 < -> <= @20 | return a.material < b.material
+SURVIVED Sampling.luau:517 < -> <= @16 | return ga[k] < gb[k]
+SURVIVED Sampling.luau:548 < -> <= @16 | return ka[k] < kb[k]
+SURVIVED Sampling.luau:552 < -> <= @16 | return a.slot < b.slot
+SURVIVED Sampling.luau:554 ~= -> == @15 | if a.material ~= b.material then
+SURVIVED Sampling.luau:555 < -> <= @20 | return a.material < b.material
+SURVIVED Sampling.luau:555 drop statement | return a.material < b.material
+SURVIVED Sampling.luau:557 drop statement | return a.index < b.index
+SURVIVED Sampling.luau:590 drop statement | break
+SURVIVED Sampling.luau:602 * -> / @31 | if aabbContains(q, x, y, z, 2 * eps) then
+SURVIVED Sampling.luau:602 literal 2 -> 1 | if aabbContains(q, x, y, z, 2 * eps) then
+SURVIVED Sampling.luau:604 <= -> < @69 | if d0 < -eps or (measureRank[q.index] < measureRank[pIndex] and d0 <= eps) then
+SURVIVED Sampling.luau:608 <= -> < @67 | return aabbContains(q, ox, oy, oz, 2 * eps) and sd(q, ox, oy, oz) <= eps
+SURVIVED Sampling.luau:608 * -> / @38 | return aabbContains(q, ox, oy, oz, 2 * eps) and sd(q, ox, oy, oz) <= eps
+SURVIVED Sampling.luau:608 literal 2 -> 1 | return aabbContains(q, ox, oy, oz, 2 * eps) and sd(q, ox, oy, oz) <= eps
+SURVIVED Sampling.luau:620 * -> / @23 | local m0 = max(tol, 2 * lim)
+SURVIVED Sampling.luau:628 <= -> < @9 | if d0 <= tol then
+SURVIVED Sampling.luau:632 * -> / @35 | if aabbContains(q, ox, oy, oz, 2 * lim) then
+SURVIVED Sampling.luau:635 <= -> < @79 | local hid = d0 < -eps or (measureRank[q.index] < measureRank[p.index] and d0 <= eps) or d1 <= eps
+SURVIVED Sampling.luau:635 <= -> < @93 | local hid = d0 < -eps or (measureRank[q.index] < measureRank[p.index] and d0 <= eps) or d1 <= eps
+SURVIVED Sampling.luau:636 <= -> < @13 | if abs(d0) <= lim or abs(d1) <= lim then
+SURVIVED Sampling.luau:636 <= -> < @31 | if abs(d0) <= lim or abs(d1) <= lim then
+SURVIVED Sampling.luau:648 drop statement | return w
+SURVIVED Sampling.luau:651 < -> <= @29 | if not S.flat[k] or subLeft < 20 * nn then
+SURVIVED Sampling.luau:651 literal 20 -> 21 | if not S.flat[k] or subLeft < 20 * nn then
+SURVIVED Sampling.luau:665 drop statement | break
+SURVIVED Sampling.luau:670 drop statement | break
+SURVIVED Sampling.luau:673 * -> / @8 | work(4 * nn)
+SURVIVED Sampling.luau:673 literal 4 -> 5 | work(4 * nn)
+SURVIVED Sampling.luau:673 drop statement | work(4 * nn)
+SURVIVED Sampling.luau:694 * -> / @9 | work(16 * nn)
+SURVIVED Sampling.luau:694 literal 16 -> 17 | work(16 * nn)
+SURVIVED Sampling.luau:694 drop statement | work(16 * nn)
+SURVIVED Sampling.luau:716 > -> >= @27 | local capped = verdictWork > cap
+SURVIVED Sampling.luau:721 drop statement | break
+SURVIVED Sampling.luau:730 literal 2 -> 1 | local reach = models[i].reach + 2 * eps
+SURVIVED Sampling.luau:736 < -> <= @27 | table.insert(higher, r < own)
+SURVIVED Sampling.luau:746 >= -> > @15 | elseif shown >= need then
+SURVIVED Sampling.luau:756 literal 0 -> 1 | contact[i] = table.create(N, 0)
+SURVIVED Sampling.luau:756 drop statement | contact[i] = table.create(N, 0)
+SURVIVED Sampling.luau:759 literal 0 -> 1 | hSurf = 0,
+SURVIVED Sampling.luau:760 literal 0 -> 1 | surfSamples = 0,
+SURVIVED Sampling.luau:761 literal 0 -> 1 | subSampled = 0,
+SURVIVED Sampling.luau:762 literal 0 -> 1 | exposedKept = table.create(N, 0),

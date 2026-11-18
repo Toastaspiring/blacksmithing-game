@@ -1,0 +1,9 @@
+UNITS corpus_repo.json: 45 designs, new median 297, p99 293232, max 293232 | old median 1009, p99 106658, max 106658 (0 s)
+     293232 units (old  106658)  n24 cleaned  9  P1 (PhysicsHelpers.p1) [repo-P]
+      11113 units (old    8320)  n18 cleaned  0  C09 ornate (PhysicsHelpers.ornate) [repo-C]
+       5930 units (old    2652)  n 7 cleaned  0  F3 [repo-F]
+       1869 units (old    2120)  n 7 cleaned  2  A16 [repo-A]
+       1659 units (old    1213)  n 5 cleaned  0  A13b [repo-A]
+       1659 units (old    1213)  n 5 cleaned  0  A18d [repo-A]
+       1659 units (old    1213)  n 5 cleaned  0  A13c [repo-A]
+       1659 units (old    1213)  n 5 cleaned  0  A13 [repo-A]

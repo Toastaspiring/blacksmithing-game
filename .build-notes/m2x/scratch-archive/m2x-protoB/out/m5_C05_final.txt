@@ -1,0 +1,1 @@
+C05 Cleaver                                                n 6 | new verdict    0.48 ms     803 u, exposure    7.24 ms | old verdict   0.36 ms   1614 u, exposure   6.90 ms | cleaned 0/0

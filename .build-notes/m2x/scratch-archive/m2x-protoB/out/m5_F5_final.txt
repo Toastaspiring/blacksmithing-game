@@ -1,0 +1,1 @@
+F5 StarterSword                                            n 5 | new verdict    0.41 ms    1659 u, exposure    1.78 ms | old verdict   0.18 ms   1213 u, exposure   1.68 ms | cleaned 0/0

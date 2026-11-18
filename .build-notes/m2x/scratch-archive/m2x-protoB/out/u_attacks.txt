@@ -1,0 +1,9 @@
+UNITS dumps:a10_sub,a11_geo,a12_skin,a1_hair,a20_all,a2_real,a30_more,a3_split,a4_pin,a5_c09,a8_flush,a9_ids,a_fill,a_flat,a_hand,a_lam,a_near,a_rod,a_sheets,a_void,x_canon,x_lattice2,x_step: 1039 designs, new median 11113, p99 12248, max 293328 | old median 8312, p99 16864, max 106658 (6 s)
+     293328 units (old  106658)  n24 cleaned  9  a11_geo#35 [attack-a11_geo]
+     293328 units (old  106658)  n24 cleaned  9  a10_sub#21 [attack-a10_sub]
+      41837 units (old   11301)  n24 cleaned  0  a11_geo#38 [attack-a11_geo]
+      41837 units (old   11301)  n24 cleaned  0  a10_sub#24 [attack-a10_sub]
+      31650 units (old   12713)  n24 cleaned  0  a10_sub#22 [attack-a10_sub]
+      31650 units (old   12713)  n24 cleaned  0  a11_geo#36 [attack-a11_geo]
+      13906 units (old    9619)  n19 cleaned  1  a30_more#39 [attack-a30_more]
+      13902 units (old   14587)  n24 cleaned  5  a5_c09#7 [attack-a5_c09]

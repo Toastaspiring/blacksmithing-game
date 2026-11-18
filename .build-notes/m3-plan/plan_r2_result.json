@@ -1,0 +1,121 @@
+{
+ "filesWritten": [
+  "C:\\Users\\louis\\Documents\\RANDOM\\ROBLOX\\.build-notes\\m3-plan\\plan-r2.md",
+  "C:\\Users\\louis\\Documents\\RANDOM\\ROBLOX\\.build-notes\\m3-plan\\proto-r2\\ (flat folder: analyze_build.luau, analyze_gap.luau, SamplingV.luau.txt, copies of S2/v2 analyze/fixtures/shapes/gjk/overlap/num/quat/mirror, and the runners lib, tab, orders, vrank, es29, gorder, contracts, t13, gen, sandwich, sealed, perf, vshare, m3gap, checks, dump_fixtures, p1bits, translate, ztrans, specks, o8, filler .luau)",
+  "C:\\Users\\louis\\Documents\\RANDOM\\ROBLOX\\.build-notes\\m3-plan\\proto-r2\\out\\ (29 outputs: tab, es29_*, orders, vrank, gorder, contracts, t13, cuts, seg300, mirror150, translate, ztrans, sandwich, sealed, specks, o8, filler, perf15, vshare, m3gap, checks, fixtures_literals, p1bits, quick, full .txt)",
+  "C:\\Users\\louis\\AppData\\Local\\Temp\\claude\\C--Users-louis-Documents-RANDOM-ROBLOX\\93ae48b4-72b9-4dc1-aa5d-451af1abf9a0\\scratchpad\\m3-plan-r2\\NOTES.md (plus repo\\ = my copy of the snapshot, proto\\, out\\, part1-4.md drafts)"
+ ],
+ "decisions": [
+  {
+   "id": "D1",
+   "question": "The 2 % rule's own limits in D: a core sandwiched between cheeks that crosses 2 % (§17.2 'Design question for M3'), plus a sealed cavity, flush layers and sheets (§17.2 'What the 2 % rule itself admits'). How should a cleaned part affect Thinness' chords?",
+   "default": "Option 0: cleaned parts are inert in every factor. A cleaned part is in no work set, so Thinness' chord through it stays open, and chords merge gaps up to CONTACT_TOL as §5.2 says. The class is documented with the measured sweep.",
+   "evidence": "Measured on the snapshot through the emulator, rank order, with the build's own verdict. 9 sandwiches, core kept against the same design hollow: 6 tier flips on 4 designs, largest |ΔD| 0.3235 (LAM1). In LAM1, SurfaceComplexity carries +0.2876 of Hammering's +0.3235 and Thinness only +0.0359; SC carries all of Sharpening's +0.2000; Volume moves Smelting −0.0520. The rule's other limits: a closed box gives Smelting 0.1376 → 0.4463; 8 flush layers give Hammering 0.0582 → 0.7000; 14 sheets give |ΔD| 0.3639. No M3-side rule reaches any of these. Option B is unchecked: it would edit M2's measure, and its old numbers (5 flips against 6, up to +23 % cost) came from the prototype's verdict.",
+   "designerCall": true
+  },
+  {
+   "id": "D2",
+   "question": "T-DIF-07(b), flush re-segmentation: assert §14.6's tolerances on general designs (Gen.segmented), or narrow the contract?",
+   "default": "(i) Keep §5.2's stride, walked in measureRanked order. Assert (b) on E-S2.10's F5 cuts (2, 3 and 7 pieces) and on C12 against C02. On Gen.segmented, assert Volume and EdgeLength and only report Thinness, Asymmetry, SurfaceComplexity and G. Record the sensitivity in §5.6 and §17.2. A redesign (ii) is a separate study.",
+   "evidence": "Cuts and C12 vs C02: |Δx| ≤ 7.2e-16 and |ΔG| 0, with the stride and with FINE. On 300 Gen designs (TestRng 0x5EED0007) with the stride: Thinness 0.0591 (#51), Asymmetry 0.0197 (#152), SC 0.0056, G 0.0236, 0 tier flips; Volume and EdgeLength 0. FINE still moves G 0.0191, so the stride is not the main cause: θ and Asymmetry's grid are. These are the same digits as the critique measured.",
+   "designerCall": true
+  },
+  {
+   "id": "D3",
+   "question": "CHECK_UNITS 500 or 250?",
+   "default": "500, as §17.2 now says. M3 charges its loops more finely: raster 1 + 2·#rowBlade + #rowHilt per cell, Douglas–Peucker per split, and Thinness' ownership tests counted.",
+   "evidence": "Quiet machine, median of 15 runs: M2's longest stretch ≤ 0.261 ms on every T-PERF-01 case. M3's emulated stretches reach 0.317 ms (worst valid design 8) with the prototype's charges, and the raster's per-cell charge ends the longest ones at 0.29–0.30 ms.",
+   "designerCall": false
+  },
+  {
+   "id": "D4",
+   "question": "T-EDG-01, T-DIF-12, T-DIF-13 and X08 are named but nowhere defined.",
+   "default": "Definitions are in plan [8]. X08 is defined as aliases of P2, P1 and P5; the 256-point zigzag edge becomes an M4 EdgeChain.",
+   "evidence": "§14.6 near line 3574 ('T-EDG-01, T-DIF-01…13') and E-S8.5 ('10–13 as §14.6') name them without defining them; E-S8.4's X08 row has no construction.",
+   "designerCall": false
+  },
+  {
+   "id": "D5",
+   "question": "measureInvalid when an enabled step's work set is empty.",
+   "default": "Keep the quick-stage and TooComplex stops. Otherwise, with measureInvalid, edge and steps are measured; steps = nil only when an enabled step's work set is empty. Write this into §4.7's comment.",
+   "evidence": "Analyze.run's stops, near lines 367–418 of the snapshot; §4.7 'nil while invalid; TooComplex: cleaned {}'.",
+   "designerCall": false
+  },
+  {
+   "id": "D6",
+   "question": "The digest golden's name, and P4's hitbox margin against §14.7's 0.02.",
+   "default": "tests/golden/parity.bv1.digest.txt via a new Golden.digest. Keep P4 bit-identical to the prototype and exempt it from the margin check.",
+   "evidence": "E-S8.6: '= parity.bv<N>.digest'. P4's margin measures 0.010000000000000009; F3 and C08 measure 0.019999999999999574 and pass at −1e-12.",
+   "designerCall": false
+  },
+  {
+   "id": "D7",
+   "question": "O7's figures once M3 is in: is about 127 ms Studio acceptable for the slowest valid design under VERDICT_WORK_MAX? O7 quotes about 94 ms, which covers M2's phases only.",
+   "default": "Accept. T-PERF-01 asserts ≤ ANALYSIS_LUNE_MAX_MS 60 and S-PERF-01 reports. Update O7, §4.9, §16.10 and §16.32 with the measured totals.",
+   "evidence": "M2 plus emulated M3, median of 15, quiet machine: the slowest valid design (tclimb_3.json #6) takes 48.99 ms Lune, ≈ 127 ms Studio at 2.6×, 11 ms under 60. The verdict alone takes at most 29.13 ms and M2's phases at most 35.36 ms.",
+   "designerCall": true
+  },
+  {
+   "id": "O8",
+   "question": "The label of what shows counts (Sharpening's work set follows slot labels).",
+   "default": "As the SPEC says. T-DIF-09 asserts the current behaviour.",
+   "evidence": "Measured through the emulator: F3 with its blade relabelled Guard plays Sharpening 0.6104 → 0.0645; C08 plays 0.2487 → 0.",
+   "designerCall": true
+  }
+ ],
+ "changesFromPlan": [
+  "The walking order is now Sampling.measureRanked (§17.2), not Sampling.ranked. The two give the same d to 1e-12 on all 64 fixtures but different bits on C01, C10, C11 and P2–P4.",
+  "Edge.profile now takes (list, kept indexed like list, …), the same convention as MassProps.difficultyFrame; Analyze passes byRank and keptByRank, and no MassProps edit is needed.",
+  "Every expected number was re-measured through M2's emulator on the build's exact verdict, not on the old patched prototype. §5.5 and E-S2.9 reproduce character for character in part order. In rank order only C09 moves: Hammering 0.3170 → 0.3186 and Thinness All 0.3858 → 0.3898. X02 against its union blade moves 0.0006 → 0.0010.",
+  "Order dependence measured both ways: part order reproduces §17.2's C09 0.3170–0.3195 (300 orders) and P5 0.1853–0.1902 (60 orders); rank order gives one bit-identical outcome per fixture, including edge and grip point.",
+  "D3 is settled at CHECK_UNITS 500 (§17.2 now says so). M3's own charges are refined from the measured stretches.",
+  "New D7 records that O7's 'about 94 ms Studio' omits M3; with M3 the slowest valid design takes 48.99 ms Lune (≈127 ms Studio).",
+  "D1 now also covers the sealed cavity, flush layers and sheets (re-measured), uses the next free O-number after the M2 fix round's O9 (O10), and replaces the forced-verdict sweep with the build's own verdict. In rows 7–9 the sheet shows 2.05 % and is kept, so the comparison is core kept against hollow. §17.2's '0.34–0.47' is not reproduced.",
+  "D2 is (i), unchanged, with a new O-number (O11) and re-measured numbers.",
+  "WorstP.luau is replaced by WorstDesigns.luau, copied from cover/worst_designs.luau (11 valid and 17 tooComplex designs). T-PERF-01 adds an attached speck next to the floating one.",
+  "T-DIF-04 is fully measured: every fixture case is bit-identical, and so are 100 Gen designs for each filler kind. The Gen.withFiller part was unmeasured before. A14 is confirmed bit-identical to F1.",
+  "T-EDG-01 numbers are measured: the cap case gives 8.2001 (was estimated at ≈ 8.3); Y translation moves points by exactly Δy; Z translation leaves chains bit-identical; the mirror raster is equal on 169 of 169 designs.",
+  "Reference.spec retirements are no longer required, since every comparison still holds; they are optional cleanup after M2's commit. H.p1() is shown to differ from the prototype's P1 bits, so no M3 number is pinned on it.",
+  "The order of work is reorganised for 4 sequential builders (fixtures+Edge; Factors+Difficulty; Analyze+T-DIF+T-PERF; S-PAR-02+SPEC), each with files, tests, required numbers and checks.",
+  "The plan's own sections are written [n.m] so that § always means SPEC.md. An anchor index quotes every cited SPEC and evidence section, with 'near line N of the snapshot'."
+ ],
+ "measurements": [
+  "§5.5 table and all 64 prototype fixtures, d, tiers, EdgeLength, cutIndex and cleaned lists: emulator analyze_build.luau with build=true, in part order and in measureRanked order (tab.luau → tab.txt). Part order equals §5.5 everywhere. Rank order changes only C09 Hammering 0.3170→0.3186 (C09 = 0.0001/0.3186/0.1904).",
+  "E-S2.9 four tables (80 rows), F1–F5 and C01–C15: es29.luau, physics from the snapshot's Analyze.run, the rest from the emulator, diffed against SPEC-evidence. Identical in part order; in rank order only C09 Thinness All 0.3898/0.390 and Hammering 0.3186 change.",
+  "Order dependence: orders.luau with xorshift32 permutations. C09, 300 orders: part order Ha 0.3170–0.3195; rank order gives 1 outcome. P5, 60 orders: part order 0.1853–0.1902; rank order 1 outcome. 31 other fixtures × 100 orders: rank order bit-identical including edge and grip point.",
+  "Sharpening's g with Steps weight order and Quantize vs the emulator's EL,As,SC order: 0 of 192 steps differ (gorder.luau).",
+  "T-DIF-04 fixture cases (C04+9, C09+6, C09 plate ± 5 hidden = 0.2542, X07a+hairline, F5/C02/C05 + 4 flush plates, A14, A16, A17, A25): all bit-identical in rank order (contracts.luau dif04).",
+  "T-DIF-04 Gen: 100 Gen designs × Enclosed/Duplicate/Dust (TestRng 0x5EED0009): all bit-identical, every filler cleaned. T-DIF-05 swap: 100/100 bit-identical (filler.luau).",
+  "T-DIF-06, rank order: F5 blade at 0.050/0.047/0.045 gives Ha 0.1658/0.1895/0.2070 Hard; C02 blade +0.15/+0.20/+0.25 gives Sh 0.1889/0.2056 Hard/0.2314 (contracts sweep).",
+  "T-EDG: F5 has 1 chain 5.4330 with 5 points, (0.080,1.380)→(−0.080,1.380); P5 has 11 chains with main 1.6777; the 0.30-thick blade gives 0; the cap case gives 8.2001 with x=1; X04 gives 12×5.4330 (contracts edge). Z translation leaves chains bit-identical (ztrans.luau).",
+  "T-DIF-01 caps: A24 Thinness 1/1 with Ha 0.4000; Volume x=1 for P1 2.2682, P2 0.9968 and P4 1.2608; F3 Blade SC 2.9804 (contracts caps).",
+  "T-DIF-13, rank order: X01 0.0002, X02 0.0010; X03 ΔTh 0 (Blade +0.00034); X05/X07 |ΔG| 0.0007; X06 oracle error 0.0030; A25 0, A26 0.0011, A27 Sh 0; C10/C11 − C01 Sm +0.0079/+0.0076 (t13.luau).",
+  "T-DIF-07(a): fixtures F1/F5 |Δx| 0.0017, |ΔG| 0.0007, with 3 F3 offsets skipped as out of hitbox (translate.luau); 300 Gen.translated |ΔG| 0.0009, |Δx| 0.0022 (gen.luau seg 300).",
+  "T-DIF-07(b): cuts and C12 vs C02 |Δx| ≤ 7.2e-16, |ΔG| 0 (gen.luau cuts). 300 Gen.segmented with stride: Th 0.0591, As 0.0197, SC 0.0056, G 0.0236; FINE: Th 0.0476, G 0.0191 (gen.luau seg 300).",
+  "T-DIF-08 mirror, 19 fixtures + 150 Gen (TestRng 0x5EED0008): |ΔD| 0.0069 (#136); EL 0.2942 % (Gen #31: 6.935592/11 pts vs 6.915188/9); raster equal on 169/169 (gen.luau mirror 150).",
+  "O8 relabelling: F3 Sh 0.6104→0.0645, C08 0.2487→0 (o8.luau).",
+  "Sandwich, 9 designs, emulator, rank order, build verdict: core kept vs hollow gives 6 flips on 4 designs, max 0.3235 (sandwich.luau).",
+  "Sealed cavity Sm 0.1376→0.4463; 8 layers Ha 0.0582→0.7000; 4 layers Sm 0.6048→0.3223; sheets |ΔD| 0.3280–0.3639 (sealed.luau, part and rank order).",
+  "Specks: P1+speck cleaned E6 E8 E11 E12 E13 E16 E18 E22 D24, d 1/0/0.0048; P2/P3 + speck cleaned D24 only (specks.luau via Analyze.run and the emulator).",
+  "Fixture literals, margins and rotations (dump_fixtures.luau → fixtures_literals.txt): F3/C08 margin 0.019999999999999574, P4 0.010000000000000009; YM90 = {0,−R,0,R} bit for bit.",
+  "H.p1() differs from the prototype P1 in 43 rotation fields; H.ornate() = C09 bit for bit (p1bits.luau).",
+  "T-PERF-01 cases (perf.luau, 15 rounds alternating direction, GC before each run; quiet machine, 1.8–2.9 % busy before and 6.5–13.4 % during including the run's own ~8 %). M2+M3 in ms Lune: F5 4.19, C02 4.80, C05 13.24, C09 13.06, P1 28.52, P2 20.02, P3 17.19, P4 20.65, P5 6.31; P1/P2/P3 + floating speck 26.28/20.79/17.01, + attached 26.80/21.08/17.10; worst valid 23.88–48.99; TooComplex 10.17–23.88. Gaps: M2 ≤ 0.261, M3 emulated ≤ 0.317.",
+  "Verdict share (vshare.luau with a verdict-only Sampling copy, 15 rounds, quiet, 1.6–10.6 % busy, no other Lune), verdict/exposure/run ms: C09 1.41/6.87/8.15; P1 10.95/18.32/21.98; P4 9.40/11.66/13.33; V1 cluster 29.13/31.67/33.31; climbed run max 35.36.",
+  "Where M3's stretches end (m3gap.luau, 9 runs): raster per-cell tick 0.29–0.30 ms on valid 8/9; Thinness probe tick 0.21–0.24; Asymmetry sampling 0.16–0.23.",
+  "Checkpoints added by M3 (checks.luau): F2 41+48=89 (<150), F5 46+55, C05 143+176, C09 204+138, P1 1009+185, P5 70+131.",
+  "Suites on the snapshot copy, quiet: --quick 16.94 s (580 pass, 16 skip); full suite 168.88 s (596 pass).",
+  "Unchecked (carried from plan.md, not re-measured): option B's sweep and cost; the critique's (ii) θ-over-4-axes data point; T-DIF-08's half-and-mirrored Gen designs."
+ ],
+ "openIssues": [
+  "Every number was measured on the m2x-r4-base snapshot. The M2 fix round under way changes how flat faces read against a Ball, which F1–F5's pommels, C09's finials and P4 involve. Re-run tab, es29, orders and contracts on the merged tree before blessing any golden.",
+  "§17.2's 'D jumps 0.34–0.47 whatever the precision' was not reproduced (max 0.3235 on 9 sandwiches) and has no evidence row in E-S2.12. The plan asks builder 4 to replace it.",
+  "New §17.1 rows O10 (D1) and O11 (D2) are numbered on the assumption that the fix round adds O9. Builder 4 must take the next free numbers.",
+  "M3's checkpoint stretches with the prototype's charges reach 0.317 ms, close to the 0.35 limit. The finer charges proposed in the plan are not measured; builder 3 must time T-PERF-01 with the real code.",
+  "With M3 emulated, the slowest valid design takes 48.99 ms Lune (≈127 Studio). It passes the 60 ms guard, but O7's 'about 94 ms' needs updating, which is a designer call (D7).",
+  "Option B and the critique's (ii) data point were not re-measured. Measuring B now would mean patching M2's Sampling measure.",
+  "T-DIF-08's 'Gen swords built half and mirrored' has no generator in Gen and was not measured.",
+  "The --quick budget is an estimate: snapshot 16.94 s plus about 10–13 s for M3's fast cases, close to the 30 s gate. Fast Gen corpora are capped at 20 designs; builder 3 must time it.",
+  "The Studio side of S-PAR-02 (execute_luau time limit, Client data model, the StringValue name of parity.bv1.digest) can only be checked in Studio, which I did not touch."
+ ],
+ "summary": "I wrote plan-r2.md (115 KB), a complete M3 plan that stands without plan.md, and put every script its numbers depend on, with their outputs, in proto-r2/.\n\nAll numbers were re-measured on my own copy of the m2x-r4-base snapshot, through M2's emulator of M3 running on the build's exact verdict.\n\n- **§5.5 and E-S2.9:** in part order the emulator reproduces both exactly, character for character on E-S2.9's 80 rows.\n- **Rank order (§17.2):** walking Sampling.measureRanked changes §5.5 in one cell, C09's Hammering 0.3170 → 0.3186, and E-S2.9's C09 Thinness All 0.3858 → 0.3898.\n- **Order dependence:** in part order, C09's 300 permutations give Hammering 0.3170–0.3195 and P5's 60 give 0.1853–0.1902, as §17.2 says. In rank order every fixture gives one bit-identical outcome, edge and grip point included.\n- **Contracts and invariances:**\n  - T-DIF-04 is bit-identical on every case, including 100 Gen designs per filler kind.\n  - T-DIF-06, T-DIF-13 and the T-EDG items reproduce, and the EdgeLength cap case measures 8.2001.\n  - Translation passes T-DIF-07(a).\n  - Flush re-segmentation fails on general designs to the critique's digits (G 0.0236, still 0.0191 with every sample a probe), but passes exactly on E-S2.10's cuts.\n- **Time budget (quiet machine, median of 15):**\n  - The verdict alone takes at most 29.1 ms and M2's phases at most 35.4 ms.\n  - With M3 emulated, the slowest valid design takes 48.99 ms Lune, 11 ms under the 60 ms guard, and every gap stays ≤ 0.317 ms.\n  - --quick takes 16.94 s and the full suite 168.88 s.\n- **Decisions:**\n  - D1 stays option 0 **[Decision to confirm]** (O10): no M3-side rule reaches the sandwich, sealed cavity, flush layers or sheets; SurfaceComplexity and Volume carry the jump, not Thinness.\n  - D2 stays (i) **[Decision to confirm]** (O11).\n  - D3 is settled at CHECK_UNITS 500, with finer M3 charges.\n  - D4–D6 stand as in plan.md.\n  - New D7 updates O7's figure to include M3.\n- **The rest of the plan:**\n  - the snapshot interface, checked;\n  - the module APIs;\n  - fixtures with literal rows and margins;\n  - test definitions;\n  - the order of work for 4 sequential builders;\n  - the SPEC edits;\n  - risks;\n  - critique.md's points as they stand now;\n  - an anchor index and a measurement index."
+}

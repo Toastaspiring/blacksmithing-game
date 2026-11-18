@@ -1,0 +1,7 @@
+seed 3 evals 158: run best 50.38 ms (667874 units); overall 50.38 ms (667874 units) (16 s)
+seed 3 evals 332: run best 50.34 ms (661234 units); overall 50.38 ms (667874 units) (35 s)
+seed 3 evals 518: run best 51.10 ms (692900 units); overall 51.10 ms (692900 units) (53 s)
+seed 3 evals 735: run best 51.90 ms (670660 units); overall 51.90 ms (670660 units) (77 s)
+seed 3 evals 859: run best 47.79 ms (694833 units); overall 51.90 ms (670660 units) (89 s)
+seed 3 evals 900: run best 43.06 ms (648698 units); overall 51.90 ms (670660 units) (93 s)
+saved out/climb_v1_3.luau

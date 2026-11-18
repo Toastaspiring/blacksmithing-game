@@ -1,0 +1,134 @@
+{
+ "pass": false,
+ "issues": [
+  {
+   "severity": "major",
+   "file": "C:\\Users\\louis\\Documents\\RANDOM\\ROBLOX\\.build-notes\\m3-plan\\plan-r2.md ([8.1] T-EDG-01 item 2; [11] builder 1, 'Numbers that must come out')",
+   "problem": "Item 2 asserts 'E-S2.9's edge and cutIndex columns for F1–F5 and C01–C15, within 5e-4 ([7.1]'s column)'. Both cutIndex columns carry 2 decimals, so a correct Edge fails on 15 of the 20 rows. Full precision on the snapshot (rank order, c_cut.luau): F1 = F5 0.724180 (off its 0.72 by 0.0042), F2 0.425000 (0.0050), F4 0.134375 (0.0044), C02 = C12 = C14 = C15 0.766667 (0.0033), C13 0.765380 (0.0046), C05 0.158369 (0.0016), C06 0.890676 (0.0007), C07 0.313333 (0.0033), C08 0.617500 (0.0025), C10 = C11 0.271528 (0.0015). EdgeLength against E-S2.9's 3 decimals passes, but only just: the worst is 4.8e-4 (C02, C12–C14, 5.643524).",
+   "fix": "Give [7.1]'s cutIndex column to 6 decimals: F1 = F5 0.724180, F2 0.425000, F3 1, F4 0.134375, C01 0.300000, C02 = C12 = C14 = C15 0.766667, C04 1, C05 0.158369, C06 0.890676, C07 0.313333, C08 0.617500, C09 1, C10 = C11 0.271528, C13 0.765380. Then item 2 reads: 'cutIndex within 1e-6 of [7.1]'s 6-decimal column; EdgeLength within 5e-5 of its 4-decimal column'. Make the same change in builder 1's 'Numbers that must come out'."
+  },
+  {
+   "severity": "major",
+   "file": "C:\\Users\\louis\\Documents\\RANDOM\\ROBLOX\\.build-notes\\m3-plan\\plan-r2.md ([8.2] 'The factor-level comparison with the prototype'; builder 2)",
+   "problem": "The plan wants 'Volume, SurfaceComplexity and Joints within Reference.spec's ABS 1e-12' on every shared-verdict fixture, 'since the build's owned volumes differ by up to about 4e-15'. X02 shares the verdict (E6–E10 cleaned on both sides) but fails that check. Against Proto.run(inRankOrder(b), {measureInvalid = true}), X02's SurfaceComplexity raw is 2.188562 against 2.181621 (Δ 0.0069), and its Joints raw is 8.293006 against 8.134159 (Δ 0.159; x 0.2520 against 0.2445). On Sharpening the gaps are SurfaceComplexity Δ 0.00091 and Joints Δ 0.0225. The cause is the measure's grid, not owned volumes: the build picks hSurf over the kept parts (0.04) where the prototype picks it over all parts (0.06). Reference.spec's agreeOn compares the measure only on the calibration, golden and perf sets, so the gap was never pinned. d is unaffected (SurfaceComplexity x is 0 on both sides, and Joints carries no weight). Of the 64 fixtures, only P1 and X02 differ from the pure prototype (c_pure.luau, c_hsurf.luau).",
+   "fix": "In [8.2], replace the Volume/SurfaceComplexity/Joints bullet with: 'Volume within 1e-12 on every shared-verdict fixture. SurfaceComplexity and Joints within 1e-12 where Analyze.run's budget.hSurf equals the prototype's hSurf. Where they differ (X02 0.04 against 0.06, and P1), check them against the build's own exposure, as Reference.spec does: SurfaceComplexity = Σ exposedKept / (6·cbrt(Σ ownedVolume)²) over WorkSet.select, and Joints from exposure.contact and the touching graph.' Also delete 'since the build's owned volumes differ by up to about 4e-15' as the reason."
+  },
+  {
+   "severity": "major",
+   "file": "C:\\Users\\louis\\Documents\\RANDOM\\ROBLOX\\.build-notes\\m3-plan\\plan-r2.md ([8.1] item 6; [8.2] T-DIF-07(a); [7.5]/[7.7]; summary 'Translation passes T-DIF-07(a)')",
+   "problem": "Y translation is exact on the fixtures only. On general designs, Douglas–Peucker on the lattice outline breaks its ties and its 'best > tol' threshold by rounding, and rounding moves with the shifted y. The raster stays identical (bladeArea and mean thickness are equal), but the kept points change.\n- Random Y shifts alone (c_edgetrans.luau; 300 Gen.validSword, TestRng 0x5EED0007): 2 of 300 fail item 6's 'lengths within 1e-12', worst |ΔEdgeLength| 0.00433 (#89: 6.696057 over 11 points → 6.691727 over 10).\n- E-S2.10's Y offsets (c_edgeoff.luau; 150 designs, TestRng 0x5EED0001 = PROP_BASE_SEED, 598 shifted copies): 1 fails, by 0.0238 (#131 at +0.2: 6.450091 over 10 points → 6.426299 over 8).\n- On #131, Sharpening's g moves 0.4580 → 0.4543, so |ΔG| is 0.0037, more than TOL_G_INVARIANT 0.002 (c_g131.luau).\nSo the SPEC's own T-DIF-07(a) bound fails on a correct M3. The plan's '300 Gen.translated: |ΔG| ≤ 0.0009' is a sample that missed these cases. FUZZ_N_VALID's 500 slow designs can hit them, and the stream is fixed, so if it does, the failure repeats on every run. Z shifts alone fail 0 of 300.",
+   "fix": "Choose one of two fixes and write it into [3.2], [8.1] and [8.2].\n(a) Make the outline exact. Run Douglas–Peucker on the integer crack-vertex lattice: vertices (i, j), midpoints at doubled coordinates, tolerance EDGE_SIMPLIFY in cells, compared as squared integers. Convert only the kept points to blueprint XY (x = (i0 + i)·H, y = Y0 + (j0 + j)·H). Y shifts become exact, and so do X mirrors up to the loop's direction. Re-check T-EDG-01 item 2 against the prototype on the 64 fixtures before adopting it.\n(b) Keep the prototype's rule. Item 6 then asserts the Δy point shift and the 1e-12 lengths on F1–F5 and C01–C15 only. On Gen designs it asserts the raster within 1e-12 and EdgeLength within TOL_EDGE_REL, printing the worst. T-DIF-07(a) asserts |ΔG| ≤ TOL_G_INVARIANT on the fixtures and prints it on Gen. Record 'Y translation moves G up to 0.0037 through EdgeLength's simplification (Gen #131, TestRng 0x5EED0001, +0.2)' under §17.1 O11 **[Decision to confirm]**, next to D2's re-segmentation figure."
+  },
+  {
+   "severity": "major",
+   "file": "C:\\Users\\louis\\Documents\\RANDOM\\ROBLOX\\.build-notes\\m3-plan\\plan-r2.md (D1; [7.8] 'Thinness is the minor channel' and \"§17.2's 'D jumps 0.34–0.47' … Not reproduced\"; [10]; [12] §17.2 row)",
+   "problem": "D1's evidence comes from a different family than §17.2's sandwich. The plan's 9 designs have recessed cores under a sheet. §17.2's figure comes from the M2 verifier's proud-core laminate (scratch m2r4-va/c_lam.luau): cheeks w × l × c at z ±(k/2 + c/2) around a Steel core (w + 2p) × l × k. I re-ran that family on the snapshot through the plan's own emulator, in rank order (c_proud.luau; 96 families, sweeping p):\n- The core crosses 2 % 12 times. |ΔD| is 0.27–0.41, with 7 tier flips on 6 crossings. Examples: 0.4070 (w 1.2, l 2.0, c 0.03, k 0.02, cap); 0.4038 with 2 flips; 0.3944; 0.3588.\n- Thinness carries the jump (c_proud2.luau): +0.3122 of Hammering's +0.4070, and all +0.3588 of +0.3588 on w 1.2, l 3.0, c 0.03, k 0.02. SurfaceComplexity takes the rest, and Volume moves Smelting −0.066 to −0.099.\nThe plan's own sandwich.txt also shows, for rows 7–9 K→K+S (core cleaned, 2.05 % sheet kept), |ΔD| 0.3713 with 2 flips; its table leaves this out. So the following are wrong: 'not reproduced', 'Thinness is the minor channel', 'no M3-side rule reaches the sandwich', 'up to about 0.32', and the instruction to drop '0.34–0.47'. A chord rule that merges gaps through cleaned parts would remove most of the jump in this family, but it would let hidden filler between plates lower Thinness, which §5 forbids. That trade-off is the real reason for option 0, and the designer is not shown it.",
+   "fix": "In [7.8], add the proud-core table with the numbers above, and K→K+S for rows 7–9.\nIn D1, keep option 0 as the default under §17.1 O10 **[Decision to confirm]**, and state its reason: 'merging Thinness' chords through cleaned parts removes the Thinness term of the jump (up to 0.36), but gives hidden filler between plates a Thinness channel, against §5'.\nIn [12], keep §17.2's 'D jumps 0.34–0.47' (or write the re-measured 0.27–0.41 from 12 crossings over 96 families) and 'because cleaning it opens the chord in Thinness', adding 'and, for a recessed core, SurfaceComplexity and Volume'. Delete 'up to about 0.32' and the instruction to drop 0.34–0.47."
+  },
+  {
+   "severity": "major",
+   "file": "C:\\Users\\louis\\Documents\\RANDOM\\ROBLOX\\.build-notes\\m3-plan\\plan-r2.md ([11] builder 1 vs builder 3, tests/lib/Tol.luau)",
+   "problem": "Builder 1's Edge.spec uses Tol.TOL_EDGE_REL in T-EDG-01 items 3 and 6, but [11] adds TOL_EDGE_REL to tests/lib/Tol.luau only in builder 3's file list. Tol is a table literal returned frozen (no declared type). Under --!strict, luau-lsp therefore reports the unknown key, so builder 1's `lune run scripts/verify` exits 3, and the case does arithmetic on nil at run time. Builder 1 cannot end green as planned.",
+   "fix": "Move 'tests/lib/Tol.luau | TOL_EDGE_REL 0.02 (E-S8.4's X04 bound)' into builder 1's table. Builder 3 keeps PERF_RUNS, and builder 4 keeps PARITY_*."
+  },
+  {
+   "severity": "major",
+   "file": "C:\\Users\\louis\\Documents\\RANDOM\\ROBLOX\\.build-notes\\m3-plan\\plan-r2.md ([3.2] Charges; [9.4] 'Stretches'; D3; R3)",
+   "problem": "The plan says the finer charges 'bring the raster's stretch toward 0.15–0.2 ms'. They do not. I patched the gap emulator with the plan's charges (9 runs, quiet: CPU 4 %, no other Lune process).\n- The plan's charges: the raster stretch goes 0.293 → 0.273 ms on valid 8 and 0.299 → 0.274 on valid 9.\n- Doubling every raster charge again: 0.253 and 0.260.\n- What actually ends the stretch is the edge's uncharged cell-size ladder, i.e. its work estimate over every row and every blade and hilt part per rung (c_edgegap.luau). It alone takes 0.189 ms (valid 8), 0.215 (valid 9), 0.106 (valid 5) and 0.124 (P1).\n- With 1 unit charged per part tested in each ladder row, the raster stretch falls to 0.078 and 0.077 ms. M3's longest stretch is then Thinness' per-probe charge, at 0.203 and 0.208.\nWith the plan's charges, M3 sits at 0.27–0.30 ms against the 0.35 ms gate, and §4.9 records the 5–20 % load on this shared machine pushing M2's P4 from about 0.16 to 0.37. R3's stated mitigation does not work.",
+   "fix": "In [3.2] Charges, add: 'Ladder: spend(#blade + #hilt) for each row of each rung tried (inside Sampling.ladder's fits); the cell loop as listed.'\nIn [9.4] and R3, replace 'toward 0.15–0.2 ms' with the measured figures: the per-cell charge alone gives 0.273/0.274 ms (valid 8/9); with the ladder charged, 0.078/0.077, and M3's longest becomes Thinness at about 0.21 ms.\nIn D3, cite these numbers."
+  },
+  {
+   "severity": "minor",
+   "file": "C:\\Users\\louis\\Documents\\RANDOM\\ROBLOX\\.build-notes\\m3-plan\\plan-r2.md ([7.2]; tab.txt's P2 'cut 0.02')",
+   "problem": "The emulator's cutIndex uses the prototype's physics frame. On P2 the build's frame differs (Reference.spec's NO_VOTE), and it is the only fixture where it does (c_phys.luau). The build's axis is (−0.707107, 0.707107) against (0, 1), its bladeLength 2.107263 against 2.988013, and its cutIndex 0 against 0.022514. Contact graphs, volume samples and Prepared fields agree on all 64 fixtures.",
+   "fix": "Add a note to [7.2] and [15]: 'tab.txt's cutIndex and physics are the prototype's frame; P2's golden takes the build's cutIndex 0 (axis −45°, bladeLength 2.1073)'."
+  },
+  {
+   "severity": "minor",
+   "file": "C:\\Users\\louis\\Documents\\RANDOM\\ROBLOX\\.build-notes\\m3-plan\\plan-r2.md ([3.5] 'Measured'; [7.4] 'Rank order'; [14] C5)",
+   "problem": "orders.luau hands the emulator L.inRankOrder(permutation). That is the same rank-sorted list for every permutation, so '1 distinct outcome' holds by construction and says nothing about the build. The property does hold, for another reason, which I checked (c_perm.luau). Every M2 output M3 reads is bit-identical by part id over 10 permutations of each of the 64 fixtures: kept, exposedKept, contact rows, ownedVolume, the higher lists, the probes and their spacing, and the aabbOverlap + Gjk.within graph.",
+   "fix": "Replace [7.4]'s rank-order evidence with: 'M2's outputs are permutation-invariant by id (c_perm: 64 fixtures × 10 permutations), so walks in Sampling.measureRanked order are too'. Keep T-DIF-07(c) as the real test."
+  },
+  {
+   "severity": "minor",
+   "file": "C:\\Users\\louis\\Documents\\RANDOM\\ROBLOX\\.build-notes\\m3-plan\\plan-r2.md ([12] §4.1 row)",
+   "problem": "The edit rewrites §4.1's general determinism rule ('sums in part order, then sample order', which covers all of Blueprint/, Physics/ and Pipeline) to 'the measure's rank order'. MassProps.report and physicsFrame keep blueprint-order sums, as the plan itself says in [3.5], so the SPEC would then contradict the build.",
+   "fix": "Write instead: 'sums in part order (Edge's and Factors' walks: the measure's rank order, Sampling.measureRanked), then sample order'."
+  },
+  {
+   "severity": "minor",
+   "file": "C:\\Users\\louis\\Documents\\RANDOM\\ROBLOX\\.build-notes\\m3-plan\\plan-r2.md ([12])",
+   "problem": "[12] has no edit for §5.6's 'CPU attacks' row ('`Analyze.run` 36.0 … P1 31.7 with M3 (≈ 82)'). With M3, the slowest valid design takes 49.0 ms and P1 28.5 (≈ 74).",
+   "fix": "Add a [12] row for §5.6's CPU attacks: '`Analyze.run` with M3 49.0 ms Lune for the slowest valid design (≈ 127 Studio); P1 28.5 (≈ 74)', with D7's [Decision to confirm] (O7)."
+  },
+  {
+   "severity": "minor",
+   "file": "C:\\Users\\louis\\Documents\\RANDOM\\ROBLOX\\.build-notes\\m3-plan\\plan-r2.md ([8.2] T-DIF-08; [11])",
+   "problem": "T-DIF-08's 'Gen swords built half and mirrored with Blueprint/Mirror' is unchecked, and it is in no builder's files. Builder 2 has 'T-DIF-08 (C13)' only. tests/lib/Gen.luau has no such generator, and tests/lib cannot require Mirror. This is §14.12's 'mirrored designs measure symmetric' acceptance item.",
+   "fix": "Give it to builder 2, in Factors.spec: 'validSword; keep the parts with centre x ≥ 0; add Mirror.reflect(p, \"X\") of those with x > 0 under fresh ids; Canonical.draft; assert Asymmetry ≤ TOL_ASYM_ZERO on both sets, 20 designs fast, FUZZ_N_VALID slow'. Measure it once before blessing."
+  },
+  {
+   "severity": "minor",
+   "file": "C:\\Users\\louis\\Documents\\RANDOM\\ROBLOX\\.build-notes\\m3-plan\\plan-r2.md ([8.1] item 6, [8.2] T-DIF-01/04/07/10 vs [9.4], [11])",
+   "problem": "The fast Gen corpora are 40, 50 and 60 designs in [8], but 20 in [9.4] and builder 3's exit. For scale: the existing --quick (16.79 s, quiet) has 457 analyses that reach M3's plug-in spot, and on Gen.validSword M2 takes 1.87 ms and M3 2.76 ms on average. That adds about 1.3 s, so [9.4]'s 30 s gate is not at risk from the old suites.",
+   "fix": "State 20 designs for every fast Gen corpus in [8], to match [9.4]."
+  },
+  {
+   "severity": "minor",
+   "file": "C:\\Users\\louis\\Documents\\RANDOM\\ROBLOX\\.build-notes\\m3-plan\\plan-r2.md ([3.3] Thinness row)",
+   "problem": "The plan writes the share term's fallback as 'Σ_W w if no striking part'. The prototype's rule is 'if no striking-slot probe was taken' (swStrike > 0, v2/analyze.luau near 1420). A set that has striking parts but no owned striking probe gives ref = 0 under the plan's wording, so Thinness = 0, where the prototype uses Σ w.",
+   "fix": "Write: 'Σ over the probes taken: the striking-slot probes' weight, or all probes' weight when none of them is in the striking slot (the prototype's swStrike > 0)'."
+  },
+  {
+   "severity": "minor",
+   "file": "C:\\Users\\louis\\Documents\\RANDOM\\ROBLOX\\.build-notes\\m3-plan\\plan-r2.md ([8.1] item 1; [11] builder 1)",
+   "problem": "Item 1 asserts physics.edgeLength = edge.length. Analyze's phase 6 does not exist until builder 3, so builder 1 cannot check it.",
+   "fix": "Move 'physics.edgeLength = edge.length; cutIndex in physics' to builder 3's Analyze.spec placeholder case (near line 672)."
+  },
+  {
+   "severity": "minor",
+   "file": "C:\\Users\\louis\\Documents\\RANDOM\\ROBLOX\\.build-notes\\m3-plan\\plan-r2.md ([7.2] X03 row; T-DIF-13)",
+   "problem": "A visible 0.0003 stud³ fin on F4 (1.5 × the Dust floor) splits the edge into 2 chains (EdgeLength 5.7237 → 4.7564) and moves Sharpening from 0.3420 Hard to 0.1980 Normal. The plan lists the numbers but does not flag the effect. E-S2.5 records only ΔThinness, and T-DIF-13 asserts only ΔThinness, so the goldens would bless the tier flip without comment.",
+   "fix": "Record it in §5.6 and §17.2 as the effect of the main-chain rule ('a near-dust fin that breaks the main chain moves Sharpening a tier: X03 0.3420 → 0.1980'), and give it to the designer with the comb row's acceptance."
+  },
+  {
+   "severity": "minor",
+   "file": "C:\\Users\\louis\\Documents\\RANDOM\\ROBLOX\\.build-notes\\m3-plan\\plan-r2.md ([8] vs §14.5)",
+   "problem": "§14.5's generic properties for the new public pure functions are not specified anywhere. Missing are P-NOMUT on Edge.profile's list and kept, Factors.measure's ctx and set, and Difficulty.step's factors, and P-ORDER with Steps, Tiers, Materials and CraftPlans rebuilt in shuffled order and planted into Difficulty, Factors and Analyze. [11]'s 'the planted maps gain the same modules' only re-wires Analyze.",
+   "fix": "Add one case per module: P-DET and P-NOMUT (deep-freeze the inputs, run twice, compare by Dump.canonical). Extend P-ORDER (Analyze.spec near 885) to plant shuffled Steps, Tiers and Materials into Difficulty and Factors, and those into Analyze."
+  },
+  {
+   "severity": "minor",
+   "file": "C:\\Users\\louis\\Documents\\RANDOM\\ROBLOX\\.build-notes\\m3-plan\\plan-r2.md ([8.5]; [11] builder 4)",
+   "problem": "Two gaps in S-PAR-02's plan. First, SPar02.spec, the FakeRoblox dry run, analyses about 300 designs per data model (roughly 5 s in all), which exceeds CASE_BUDGET_MS, and it is not marked slow. Second, Parity's 'every canonical A variant' cannot be canonicalized inside tests/fixtures, which may not require src/, and the plan does not say who canonicalizes.",
+   "fix": "Mark SPar02.spec t.slow, or have its fast case run GROUP 'fixtures' only. Have Parity.luau list A variant keys, and have both the Lune spec and the Studio snippet call Blueprint/Canonical.draft on them, dropping those that fail."
+  }
+ ],
+ "verified": [
+  "Copied m2x-r4-base/repo and proto-r2 into C:\\Users\\louis\\AppData\\Local\\Temp\\claude\\C--Users-louis-Documents-RANDOM-ROBLOX\\93ae48b4-72b9-4dc1-aa5d-451af1abf9a0\\scratchpad\\m3-plan-r2-critic (repo, proto). proto's v2 copies and analyze_build.luau are byte-identical to the snapshot's docs/spec/prototypes/S2. My scripts are proto/c_*.luau, analyze_gap2–5.luau and m3gap2/3/5.luau; outputs are in out/. The repo and the plan were not touched. My copy was instrumented once and then restored, and diff confirms it equals the snapshot.",
+  "tab.luau, es29.luau part and rank: outputs identical to the planner's. In part order, the 80 E-S2.9 rows equal SPEC-evidence character for character. In rank order only C09 moves: Thinness(All) 0.3858 → 0.3898 and Hammering 0.3170 → 0.3186. §5.5 reproduces, and C09 Hammering is 0.3186 in rank order.",
+  "contracts.luau (sweep, dif04, edge, caps), t13.luau and sandwich.luau re-run: identical to proto-r2/out, including F5 0.045 → 0.2070 Hard, C02 +0.20 → 0.2056 Hard, the cap case 8.2001, every T-DIF-04 case bit-identical, X06's error 0.0030, and C10/C11 +0.0079/+0.0076.",
+  "Emulator against the build on 64 fixtures in rank order (c_phys): contact graphs, volume samples (bits) and Prepared fields are identical. The physics frame and bladeLength differ only on P2.",
+  "Emulator against the pure prototype in rank order (c_pure): PartCount, Thinness, Asymmetry, EdgeLength and MaterialMix are bit-identical; Volume, SurfaceComplexity and Joints are within 1e-12; d and the edge are equal on every fixture except P1 (its own verdict) and X02 (SurfaceComplexity and Joints, because of the hSurf difference). A25/C10/C11 share hSurf 0.04.",
+  "Permutation invariance of everything M2 hands M3 (c_perm): 64 fixtures × 10 permutations, 0 differences by id.",
+  "Canonical fixed point (c_canon): all 64 fixture cores pass Canonical.draft bit-identically, with ids ascending and slot counts within their maxima. Margins: F3 and C08 0.019999999999999574, P4 0.010000000000000009 (as D6 says).",
+  "T-DIF-03's examples hold (c_q): q(0.19995) = 0.2 → Hard, q(0.199949) = 0.1999 → Normal, q(0.1999999999) = 0.2.",
+  "References checked in the snapshot and found as stated: Analyze.luau's phases and lines 342–461; Sampling.ranked/measureRanked keys; MassProps.ownership's order and difficultyFrame's list-indexed kept; WorkSet.select; Golden (writes only <name>.golden.txt); Tol; Build (no YM90); FakeRoblox (no IsClient, no golden mapping); the sourcemap naming StringValues by stem; Adversarial line 576; Analyze.spec 672/709/726/744–770/774/813/885/944; Reference.spec's NO_VOTE P2 and agreeOn sets; and §4.6, §5, §14, §16.10/18/32, §17, §18.",
+  "Timings on a quiet machine (CPU 2–4 % before and after, no other Lune process), perf.luau 15 rounds: valid 8 48.55 ms (M2 34.88 + M3 13.67; plan 48.99), valid 9 47.45, P1 28.30; M3 gaps 0.300 and 0.299 ms. --quick took 16.79 s for 580 passes (plan 16.94).",
+  "Gap anatomy (9 runs, quiet): prototype charges raster 0.293/0.299 ms; plan charges 0.273/0.274; all raster charges doubled 0.253/0.260; ladder alone 0.189/0.215 (valid 8/9); with the ladder charged, raster 0.078/0.077 and Thinness 0.203/0.208.",
+  "Translation: Z alone, 0 of 300 Gen designs change the edge. Y alone, 2 of 300 do (worst 0.00433). E-S2.10's Y offsets: 1 of 598 shifted copies changes (0.0238, Sharpening |ΔG| 0.0037).",
+  "Proud-core sandwich (c_proud, c_proud2): 96 families, 12 core crossings, |ΔD| 0.27–0.41, 7 flips; Thinness carries 0.31–0.36 of the jump."
+ ],
+ "measurements": [
+  "cutIndex at full precision (rank order): F1 = F5 0.724180, F2 0.425000, F3 1, F4 0.134375, C01 0.300000, C02 = C12 = C14 = C15 0.766667, C04 1, C05 0.158369, C06 0.890676, C07 0.313333, C08 0.617500, C09 1, C10 = C11 0.271528, C13 0.765380, A26 0.507963, P5 0.814442",
+  "P2 in the build: grip axis (−0.707107, 0.707107), bladeLength 2.107263, cutIndex 0 (the emulator's prototype frame gives (0, 1), 2.988013, 0.022514)",
+  "X02, build against prototype (rank order): hSurf 0.04 against 0.06; SurfaceComplexity raw 2.188562 against 2.181621; Joints raw 8.293006 against 8.134159 (x 0.2520 against 0.2445); Sharpening SurfaceComplexity Δ 0.00091, Joints Δ 0.0225; d equal",
+  "Y translation, Douglas–Peucker: Gen #89 (TestRng 0x5EED0007, Y alone) EdgeLength 6.696057 over 11 points → 6.691727 over 10; Gen #131 (TestRng 0x5EED0001, +0.2) 6.450091 over 10 → 6.426299 over 8, Sharpening g 0.4580 → 0.4543 (|ΔG| 0.0037 > TOL_G_INVARIANT 0.002), raster identical",
+  "M3 longest stretch, quiet, median of 9: prototype charges 0.293 (valid 8) and 0.299 (valid 9) ms; plan charges 0.273 and 0.274; plus a ladder charge of #blade + #hilt per row, raster 0.078 and 0.077 and M3's longest (Thinness) 0.203 and 0.208; the edge ladder alone 0.189 / 0.215 / 0.106 / 0.124 ms (valid 8 / 9 / 5, P1)",
+  "Totals with M3 emulated, quiet, median of 15: valid 8 48.55 ms Lune (≈ 126 Studio at 2.6×), valid 9 47.45, P1 28.30",
+  "Proud-core sandwich (scratch m2r4-va/c_lam.luau's family) on the snapshot: core crossings |ΔD| 0.27–0.41 (0.4070 at w 1.2, l 2.0, c 0.03, k 0.02, cap, Thinness +0.3122 of Hammering +0.4070; 0.3588 at w 1.2, l 3.0, c 0.03, k 0.02, all Thinness), 7 tier flips on 6 of 12 crossings",
+  "Plan's own sandwich rows 7–9, K → K+S (core cleaned, 2.05 % sheet kept): |ΔD| up to 0.3713 with 2 flips (0.8 × 2.5 × 0.04, core 0.60)",
+  "Existing --quick: 457 analyses reach M3's plug-in spot; Gen.validSword means: M2 1.87 ms, M3 2.76 ms (100 designs, TestRng 0x5EED0001)"
+ ],
+ "summary": "The plan's own numbers reproduce on my copy of m2x-r4-base:\n- **Emulator outputs:** §5.5 and E-S2.9's 80 rows in part order, the single rank-order change (C09 Hammering 0.3186, Thinness 0.3898), and the contracts, t13 and sandwich outputs all match.\n- **Timings:** valid 8 takes 48.55 ms against the plan's 48.99, on a quiet machine.\n- **References:** the snapshot references check out.\n\nSix problems would still make a builder fail or put false statements into the SPEC:\n1. T-EDG-01 checks cutIndex within 5e-4 against 2-decimal columns, so a correct Edge fails on 15 of 20 rows.\n2. [8.2] compares SurfaceComplexity and Joints with the prototype within 1e-12, which fails on X02. The build picks its measure grid over kept parts only (hSurf 0.04 against 0.06).\n3. Y translation is exact only on the fixtures. On Gen designs, Douglas–Peucker's ties move EdgeLength by up to 0.024 studs, which breaks T-EDG-01 item 6. It also breaks the SPEC's own T-DIF-07(a) bound: |ΔG| 0.0037 against 0.002 on Gen #131 at +0.2.\n4. D1's evidence and its §17.2 rewrite use a different sandwich family. On §17.2's proud-core laminate, the snapshot reproduces jumps of 0.27–0.41, carried by Thinness, so 'drop 0.34–0.47' and 'Thinness is the minor channel' are wrong. The real reason for option 0 is the hidden-filler trade-off.\n5. Builder 1 needs TOL_EDGE_REL, which the plan adds only in builder 3, so builder 1's verify fails.\n6. The finer charges barely move M3's longest stretch (0.293 → 0.273 ms). The uncharged edge-cell ladder causes it, and charging it gives 0.078.\n\nTwelve minor points follow: the stated fixes, test definitions and SPEC edits listed in the issues."
+}

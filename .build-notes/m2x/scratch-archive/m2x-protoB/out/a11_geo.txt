@@ -1,0 +1,4 @@
+-- D as built | in geometric order, where they differ
+C09, 100 orders, geometric: Sm 0.0001 N, Ha 0.3170 H, Sh 0.1904 N, spread 0.000000
+C09 + a copy of part 15 first, geometric: Sm 0.0001 N, Ha 0.3170 H, Sh 0.1904 N
+-- dumprun a11_geo: 41 designs, 6.8 s

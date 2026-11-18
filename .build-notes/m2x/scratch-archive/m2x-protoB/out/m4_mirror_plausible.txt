@@ -1,0 +1,21 @@
+  200 designs, 1511 parts, 0 verdicts differ, 4 s
+  400 designs, 3098 parts, 0 verdicts differ, 10 s
+  600 designs, 4612 parts, 0 verdicts differ, 17 s
+  800 designs, 6920 parts, 0 verdicts differ, 21 s
+  1000 designs, 10314 parts, 0 verdicts differ, 31 s
+  1200 designs, 13552 parts, 0 verdicts differ, 40 s
+  1400 designs, 14836 parts, 0 verdicts differ, 43 s
+  1600 designs, 16110 parts, 0 verdicts differ, 46 s
+  1800 designs, 17236 parts, 0 verdicts differ, 50 s
+  2000 designs, 18887 parts, 0 verdicts differ, 54 s
+  2200 designs, 20502 parts, 0 verdicts differ, 59 s
+  2400 designs, 21752 parts, 0 verdicts differ, 64 s
+  2600 designs, 23143 parts, 0 verdicts differ, 67 s
+  2800 designs, 24445 parts, 0 verdicts differ, 70 s
+  3000 designs, 26319 parts, 0 verdicts differ, 80 s
+  3200 designs, 28617 parts, 0 verdicts differ, 89 s
+  3400 designs, 31017 parts, 0 verdicts differ, 98 s
+  3600 designs, 33421 parts, 0 verdicts differ, 107 s
+  3800 designs, 35783 parts, 0 verdicts differ, 116 s
+  4000 designs, 38173 parts, 0 verdicts differ, 126 s
+M4 mirror plausible:8:3: 4044 designs, 38666 parts, 0 verdicts differ from the image's; reads differ in 8562 parts, largest |difference| 0.313 (bevel|F3|a0.05 b0.08 height0.030 part 8 (Wedge): 0.460830103 / 0.148074338), 128 s

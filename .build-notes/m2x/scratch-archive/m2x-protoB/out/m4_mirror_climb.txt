@@ -1,0 +1,1 @@
+M4 mirror corpus_climb.json: 60 designs, 1410 parts, 0 verdicts differ from the image's; reads differ in 1217 parts, largest |difference| 1.08e-12 (d_hand#3 rods d 0.08 L 4.8 spread 0.01 part 18 (Cylinder): 0.190645975 / 0.190645975), 21 s

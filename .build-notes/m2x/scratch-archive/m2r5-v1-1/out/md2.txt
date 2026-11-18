@@ -1,0 +1,8 @@
+4393 designs
+m74: 551 designs differ, 0 verdicts flip, the largest change of a reading 0.14066 thinPart C09 CornerWedge L2.0 w0.30 proud0.0040 turn16 part 19 (CornerWedge): 0.90848 -> 0.76782
+m77: 0 designs differ, 0 verdicts flip, the largest change of a reading 0.00000 
+m78: 1 designs differ, 0 verdicts flip, the largest change of a reading 0.01110 any902 part 4 (Cylinder): 0.22970 -> 0.21859
+m79: 11 designs differ, 0 verdicts flip, the largest change of a reading 0.02912 any827 part 12 (Cylinder): 0.55639 -> 0.52727
+m80: 0 designs differ, 0 verdicts flip, the largest change of a reading 0.00000 
+m81: 0 designs differ, 0 verdicts flip, the largest change of a reading 0.00000 
+m99: 475 designs differ, 0 verdicts flip, the largest change of a reading 0.06219 thinPart F4 Cylinder L2.0 w0.02 proud0.0150 turn1 part 6 (Cylinder): 0.56372 -> 0.62591

@@ -1,0 +1,9 @@
+UNITS bset:bead:8:3: 33 designs, new median 3459, p99 4712, max 4712 | old median 2354, p99 2712, max 2712 (0 s)
+       4712 units (old    2531)  n 7 cleaned  1  d0.10 gap0.02 t4 [bset-bead]
+       4549 units (old    2712)  n 7 cleaned  1  d0.40 gap0.02 t4 [bset-bead]
+       4465 units (old    2632)  n 7 cleaned  1  d0.20 gap0.02 t4 [bset-bead]
+       3892 units (old    2412)  n 7 cleaned  0  d0.14 gap0.05 t4 [bset-bead]
+       3873 units (old    2665)  n 7 cleaned  0  d0.50 gap0.05 t4 [bset-bead]
+       3776 units (old    2423)  n 7 cleaned  0  d0.10 gap0.10 t4 [bset-bead]
+       3762 units (old    2712)  n 7 cleaned  0  d0.30 gap0.05 t4 [bset-bead]
+       3615 units (old    2420)  n 7 cleaned  0  d0.20 gap0.10 t4 [bset-bead]

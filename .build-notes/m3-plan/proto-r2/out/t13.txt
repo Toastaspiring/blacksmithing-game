@@ -1,0 +1,8 @@
+X01 vs its union blade (0.066): |ΔD| 0.0002 (bound 0.01)
+X02 vs its union blade (0.072): |ΔD| 0.0010 (bound 0.01)
+X03 vs F4: Thinness All 0.000000 → 0.000000, Blade 0.000000 → 0.000340; Hammering +0.0003 (bound ΔThinness 0.02)
+X05 vs F5: |ΔG| max 0.0007 (bound 0.01); X07 vs F5: |ΔG| max 0.0007 (bound 0.01)
+X06 Asymmetry Blade, measured/oracle: 0.00 0.000/0.000, 0.01 0.000/0.000, 0.02 0.040/0.041, 0.03 0.153/0.156, 0.04 0.280/0.282, 0.05 0.408/0.408; max error 0.0030 (bound 0.02)
+A25 vs F1 |ΔD| 0.0000 (bound 0.01); A26 vs its base |ΔD| 0.0011 (0.02); A27 vs F1 Sharpening |ΔD| 0.0000 (0.02), Hammering 0.1037 → 0.1537
+C10 vs C01: Sm +0.0079 Normal, Ha +0.0000 Normal, Sh -0.0125 Normal (§5.6: at most +0.008, all Normal)
+C11 vs C01: Sm +0.0076 Normal, Ha +0.0012 Normal, Sh -0.0039 Normal (§5.6: at most +0.008, all Normal)

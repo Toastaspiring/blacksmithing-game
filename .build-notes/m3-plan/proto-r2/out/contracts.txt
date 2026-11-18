@@ -1,0 +1,40 @@
+== sweep
+F5 blade thickness: Hammering d (tier), Thinness All raw
+  0.060  Ha 0.1037 Normal  Thinness 0.2594
+  0.055  Ha 0.1322 Normal  Thinness 0.3305
+  0.050  Ha 0.1658 Normal  Thinness 0.4144
+  0.047  Ha 0.1895 Normal  Thinness 0.4737
+  0.045  Ha 0.2070 Hard  Thinness 0.5176
+  0.043  Ha 0.2263 Hard  Thinness 0.5657
+C02 blade +dL (size y += dL, pos y += dL/2, tips += dL): Sharpening d (tier), EdgeLength
+  +0.00  Sh 0.1318 Normal  EdgeLength 5.6435
+  +0.15  Sh 0.1889 Normal  EdgeLength 5.9635
+  +0.20  Sh 0.2056 Hard  EdgeLength 6.0435
+  +0.25  Sh 0.2314 Hard  EdgeLength 6.1635
+PartCount (All): C01 4.000, C02 4.600, C04 5.169, C05 6.000, C06 8.486, C07 4.405, C08 5.200, C09 10.160, C10 6.916
+== dif04
+C04 0.075 blade + 9 nested enclosed blocks                 BIT-IDENTICAL | base 0.0000 / 0.1863 / 0.3835 N N H | filled 0.0000 / 0.1863 / 0.3835 N N H cleaned [E8,E9,E10,E11,E12,E13,E14,E15,E16]
+C09 blade 0.05 longer + 6 enclosed blocks                  BIT-IDENTICAL | base 0.0008 / 0.3299 / 0.2153 N H H | filled 0.0008 / 0.3299 / 0.2153 N H H cleaned [E19,E20,E21,E22,E23,E24]
+C09 + plate 0.12 × 2 × 0.05 + 5 hidden blocks            BIT-IDENTICAL | base 0.0009 / 0.3599 / 0.2542 N H H | filled 0.0009 / 0.3599 / 0.2542 N H H cleaned [E20,E21,E22,E23,E24] | C09 alone 0.0001 / 0.3186 / 0.1904 N H N
+X07a + a Dust hairline 0.02 × 0.4 × 0.02 on the seam     BIT-IDENTICAL | base 0.0288 / 0.1035 / 0.0989 N N N | filled 0.0288 / 0.1035 / 0.0989 N N N cleaned [D7]
+F5 + 4 flush plates (Guard ±Z, Pommel ±X), listed first  BIT-IDENTICAL | base 0.0288 / 0.1037 / 0.0989 N N N | filled 0.0288 / 0.1037 / 0.0989 N N N cleaned [E1,E2,E3,E4]
+C02 + 4 flush plates (Guard ±Z, Pommel ±X), listed first BIT-IDENTICAL | base 0.0355 / 0.1137 / 0.1318 N N N | filled 0.0355 / 0.1137 / 0.1318 N N N cleaned [E1,E2,E3,E4]
+C05 + 4 flush plates (Guard ±Z, Pommel ±X), listed first BIT-IDENTICAL | base 0.5451 / 0.1363 / 0.3466 H(Ex) N H | filled 0.5451 / 0.1363 / 0.3466 H(Ex) N H cleaned [E1,E2,E3,E4]
+A14 (19 dust cubes) vs F1                                  BIT-IDENTICAL | base 0.0288 / 0.1037 / 0.0989 N N N | filled 0.0288 / 0.1037 / 0.0989 N N N cleaned [D6,D7,D8,D9,D10,D11,D12,D13,D14,D15,D16,D17,D18,D19,D20,D21,D22,D23,D24]
+A16 (parts enclosed in blade and guard) vs F1              BIT-IDENTICAL | base 0.0288 / 0.1037 / 0.0989 N N N | filled 0.0288 / 0.1037 / 0.0989 N N N cleaned [E6,E7]
+A17 (3 exact blade copies) vs F2                           BIT-IDENTICAL | base 0.0797 / 0.0176 / 0.0282 N N N | filled 0.0797 / 0.0176 / 0.0282 N N N cleaned [E5,E6,E7]
+A25 (enclosed 20° grip core) vs F1                        BIT-IDENTICAL | base 0.0288 / 0.1037 / 0.0989 N N N | filled 0.0288 / 0.1037 / 0.0989 N N N cleaned [E6]
+== edge
+F5: 1 chain(s), main 5.4330, 5 points, first (0.080, 1.380), last (-0.080, 1.380), cell 0.02, cutIndex 0.72
+P5: 11 chains [1.678, 0.552, 0.552, 0.541, 0.541, 0.532, 0.532, 0.521, 0.521, 0.170, 0.170], EdgeLength 1.6777
+F2 with a 0.30-thick blade: EdgeLength 0.0000, 0 chains, valid true
+EdgeLength cap case: valid true, EdgeLength 8.2001, x 1.000 (Sharpening), chains [8.200]
+X04: X04a 5.4330/1, X04b 5.4330/1, X04-5-0.004 5.4330/1, X04-5-0.006 5.4330/1, X04-5-0.009 5.4330/1, X04-10-0.004 5.4330/1, X04-10-0.006 5.4330/1, X04-10-0.009 5.4330/1, X04g0.005 5.4330/1, X04g0.010 5.4330/1, X04g0.015 5.4330/1, X04g0.020 5.4330/1
+== caps
+A24: valid true, Thinness All 1.0000 Blade 1.0000, Hammering 0.4000 Hard
+P1 Volume raw 2.2682 x 1.000
+P2 Volume raw 0.9968 x 1.000
+P4 Volume raw 1.2608 x 1.000
+C05 Volume raw 0.4725 x 0.545
+F4 Volume raw 0.4105 x 0.459
+F3 Blade SurfaceComplexity raw 2.9804 x 1.000

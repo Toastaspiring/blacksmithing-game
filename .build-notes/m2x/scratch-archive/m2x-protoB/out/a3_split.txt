@@ -1,0 +1,97 @@
+F3 split g 0.00001, Guard filler rim 0.002 inside, valid true: F(Block) true 0.01% read 0.01% CLEANED
+    base Sm 0.0000 N, Ha 0.4423 H, Sh 0.6104 H
+    K    Sm 0.0000 N, Ha 0.4429 H, Sh 0.6104 H
+    K+F  Sm 0.0000 N, Ha 0.4429 H, Sh 0.6104 H | |dD| 0.0000 
+F3 split g 0.00001, Guard filler rim 0.004 inside, valid true: F(Block) true 0.02% read 0.01% CLEANED
+    base Sm 0.0000 N, Ha 0.4423 H, Sh 0.6104 H
+    K    Sm 0.0000 N, Ha 0.4429 H, Sh 0.6104 H
+    K+F  Sm 0.0000 N, Ha 0.4429 H, Sh 0.6104 H | |dD| 0.0000 
+F3 split g 0.00001, Blade filler rim 0.002 inside, valid true: F(Block) true 0.01% read 0.01% CLEANED
+    base Sm 0.0000 N, Ha 0.4423 H, Sh 0.6104 H
+    K    Sm 0.0000 N, Ha 0.4429 H, Sh 0.6104 H
+    K+F  Sm 0.0000 N, Ha 0.4429 H, Sh 0.6104 H | |dD| 0.0000 
+F3 split g 0.00001, Blade filler rim 0.004 inside, valid true: F(Block) true 0.02% read 0.01% CLEANED
+    base Sm 0.0000 N, Ha 0.4423 H, Sh 0.6104 H
+    K    Sm 0.0000 N, Ha 0.4429 H, Sh 0.6104 H
+    K+F  Sm 0.0000 N, Ha 0.4429 H, Sh 0.6104 H | |dD| 0.0000 
+C04 split g 0.00001, Guard filler rim 0.002 inside, valid true: F(Block) true 0.01% read 0.01% CLEANED
+    base Sm 0.0000 N, Ha 0.3368 H, Sh 0.4703 H
+    K    Sm 0.0000 N, Ha 0.3363 H, Sh 0.4703 H
+    K+F  Sm 0.0000 N, Ha 0.3363 H, Sh 0.4703 H | |dD| 0.0000 
+C04 split g 0.00001, Guard filler rim 0.004 inside, valid true: F(Block) true 0.01% read 0.01% CLEANED
+    base Sm 0.0000 N, Ha 0.3368 H, Sh 0.4703 H
+    K    Sm 0.0000 N, Ha 0.3363 H, Sh 0.4703 H
+    K+F  Sm 0.0000 N, Ha 0.3363 H, Sh 0.4703 H | |dD| 0.0000 
+C04 split g 0.00001, Blade filler rim 0.002 inside, valid true: F(Block) true 0.01% read 0.01% CLEANED
+    base Sm 0.0000 N, Ha 0.3368 H, Sh 0.4703 H
+    K    Sm 0.0000 N, Ha 0.3363 H, Sh 0.4703 H
+    K+F  Sm 0.0000 N, Ha 0.3363 H, Sh 0.4703 H | |dD| 0.0000 
+C04 split g 0.00001, Blade filler rim 0.004 inside, valid true: F(Block) true 0.01% read 0.01% CLEANED
+    base Sm 0.0000 N, Ha 0.3368 H, Sh 0.4703 H
+    K    Sm 0.0000 N, Ha 0.3363 H, Sh 0.4703 H
+    K+F  Sm 0.0000 N, Ha 0.3363 H, Sh 0.4703 H | |dD| 0.0000 
+C08 split g 0.00001, Guard filler rim 0.002 inside, valid true: F(Block) true 0.00% read 0.00% CLEANED
+    base Sm 0.1563 N, Ha 0.0992 N, Sh 0.2487 H
+    K    Sm 0.1563 N, Ha 0.0992 N, Sh 0.2487 H
+    K+F  Sm 0.1563 N, Ha 0.0992 N, Sh 0.2487 H | |dD| 0.0000 
+C08 split g 0.00001, Guard filler rim 0.004 inside, valid true: F(Block) true 0.01% read 0.00% CLEANED
+    base Sm 0.1563 N, Ha 0.0992 N, Sh 0.2487 H
+    K    Sm 0.1563 N, Ha 0.0992 N, Sh 0.2487 H
+    K+F  Sm 0.1563 N, Ha 0.0992 N, Sh 0.2487 H | |dD| 0.0000 
+C08 split g 0.00001, Blade filler rim 0.002 inside, valid true: F(Block) true 0.00% read 0.00% CLEANED
+    base Sm 0.1563 N, Ha 0.0992 N, Sh 0.2487 H
+    K    Sm 0.1563 N, Ha 0.0992 N, Sh 0.2487 H
+    K+F  Sm 0.1563 N, Ha 0.0992 N, Sh 0.2487 H | |dD| 0.0000 
+C08 split g 0.00001, Blade filler rim 0.004 inside, valid true: F(Block) true 0.01% read 0.00% CLEANED
+    base Sm 0.1563 N, Ha 0.0992 N, Sh 0.2487 H
+    K    Sm 0.1563 N, Ha 0.0992 N, Sh 0.2487 H
+    K+F  Sm 0.1563 N, Ha 0.0992 N, Sh 0.2487 H | |dD| 0.0000 
+C02 Arming (Iron) split g 0.00001, Guard filler rim 0.002 inside, valid true: F(Block) true 0.01% read 0.00% CLEANED
+    base Sm 0.0355 N, Ha 0.1137 N, Sh 0.1318 N
+    K    Sm 0.0355 N, Ha 0.1137 N, Sh 0.1318 N
+    K+F  Sm 0.0355 N, Ha 0.1137 N, Sh 0.1318 N | |dD| 0.0000 
+C02 Arming (Iron) split g 0.00001, Guard filler rim 0.004 inside, valid true: F(Block) true 0.00% read 0.00% CLEANED
+    base Sm 0.0355 N, Ha 0.1137 N, Sh 0.1318 N
+    K    Sm 0.0355 N, Ha 0.1137 N, Sh 0.1318 N
+    K+F  Sm 0.0355 N, Ha 0.1137 N, Sh 0.1318 N | |dD| 0.0000 
+C02 Arming (Iron) split g 0.00001, Blade filler rim 0.002 inside, valid true: F(Block) true 0.01% read 0.00% CLEANED
+    base Sm 0.0355 N, Ha 0.1137 N, Sh 0.1318 N
+    K    Sm 0.0355 N, Ha 0.1137 N, Sh 0.1318 N
+    K+F  Sm 0.0355 N, Ha 0.1137 N, Sh 0.1318 N | |dD| 0.0000 
+C02 Arming (Iron) split g 0.00001, Blade filler rim 0.004 inside, valid true: F(Block) true 0.00% read 0.00% CLEANED
+    base Sm 0.0355 N, Ha 0.1137 N, Sh 0.1318 N
+    K    Sm 0.0355 N, Ha 0.1137 N, Sh 0.1318 N
+    K+F  Sm 0.0355 N, Ha 0.1137 N, Sh 0.1318 N | |dD| 0.0000 
+F5 split g 0.00001, Guard filler rim 0.002 inside, valid true: F(Block) true 0.01% read 0.01% CLEANED
+    base Sm 0.0288 N, Ha 0.1037 N, Sh 0.0989 N
+    K    Sm 0.0288 N, Ha 0.1042 N, Sh 0.0989 N
+    K+F  Sm 0.0288 N, Ha 0.1042 N, Sh 0.0989 N | |dD| 0.0000 
+F5 split g 0.00001, Guard filler rim 0.004 inside, valid true: F(Block) true 0.01% read 0.01% CLEANED
+    base Sm 0.0288 N, Ha 0.1037 N, Sh 0.0989 N
+    K    Sm 0.0288 N, Ha 0.1042 N, Sh 0.0989 N
+    K+F  Sm 0.0288 N, Ha 0.1042 N, Sh 0.0989 N | |dD| 0.0000 
+F5 split g 0.00001, Blade filler rim 0.002 inside, valid true: F(Block) true 0.01% read 0.01% CLEANED
+    base Sm 0.0288 N, Ha 0.1037 N, Sh 0.0989 N
+    K    Sm 0.0288 N, Ha 0.1042 N, Sh 0.0989 N
+    K+F  Sm 0.0288 N, Ha 0.1042 N, Sh 0.0989 N | |dD| 0.0000 
+F5 split g 0.00001, Blade filler rim 0.004 inside, valid true: F(Block) true 0.01% read 0.01% CLEANED
+    base Sm 0.0288 N, Ha 0.1037 N, Sh 0.0989 N
+    K    Sm 0.0288 N, Ha 0.1042 N, Sh 0.0989 N
+    K+F  Sm 0.0288 N, Ha 0.1042 N, Sh 0.0989 N | |dD| 0.0000 
+C05 split g 0.00001, Guard filler rim 0.002 inside, valid true: F(Block) true 0.00% read 0.00% CLEANED
+    base Sm 0.5451 H, Ha 0.1363 N, Sh 0.3466 H
+    K    Sm 0.5451 H, Ha 0.1375 N, Sh 0.3466 H
+    K+F  Sm 0.5451 H, Ha 0.1375 N, Sh 0.3466 H | |dD| 0.0000 
+C05 split g 0.00001, Guard filler rim 0.004 inside, valid true: F(Block) true 0.00% read 0.00% CLEANED
+    base Sm 0.5451 H, Ha 0.1363 N, Sh 0.3466 H
+    K    Sm 0.5451 H, Ha 0.1375 N, Sh 0.3466 H
+    K+F  Sm 0.5451 H, Ha 0.1375 N, Sh 0.3466 H | |dD| 0.0000 
+C05 split g 0.00001, Blade filler rim 0.002 inside, valid true: F(Block) true 0.00% read 0.00% CLEANED
+    base Sm 0.5451 H, Ha 0.1363 N, Sh 0.3466 H
+    K    Sm 0.5451 H, Ha 0.1375 N, Sh 0.3466 H
+    K+F  Sm 0.5451 H, Ha 0.1375 N, Sh 0.3466 H | |dD| 0.0000 
+C05 split g 0.00001, Blade filler rim 0.004 inside, valid true: F(Block) true 0.00% read 0.00% CLEANED
+    base Sm 0.5451 H, Ha 0.1363 N, Sh 0.3466 H
+    K    Sm 0.5451 H, Ha 0.1375 N, Sh 0.3466 H
+    K+F  Sm 0.5451 H, Ha 0.1375 N, Sh 0.3466 H | |dD| 0.0000 
+-- dumprun a3_split: 36 designs, 4.8 s

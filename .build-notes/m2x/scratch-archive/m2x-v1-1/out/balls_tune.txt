@@ -1,0 +1,14 @@
+worst valid 1                units    692796 verdict med  29.16 best  26.30 (42.1 ns/unit)  exposure  39.02  run  44.61
+worst valid 3                units    698006 verdict med  28.42 best  25.78 (40.7 ns/unit)  exposure  37.67  run  42.95
+d 0.58 ax 0.20 dy 0.07550    units    684422 verdict med  34.49 best  33.22 (50.4 ns/unit)  exposure  39.27  run  38.70
+d 0.58 ax 0.10 dy 0.09689    units    698760 verdict med  35.66 best  31.43 (51.0 ns/unit)  exposure  40.60  run  42.28
+d 0.58 ax 0.25 dy 0.06668    units    696112 verdict med  35.20 best  32.88 (50.6 ns/unit)  exposure  38.84  run  39.54
+d 0.54 ax 0.20 dy 0.06833    units    697116 verdict med  36.47 best  33.24 (52.3 ns/unit)  exposure  40.09  run  38.52
+d 0.54 ax 0.10 dy 0.08969    units    691881 verdict med  37.82 best  32.67 (54.7 ns/unit)  exposure  40.34  run  40.54
+d 0.54 ax 0.25 dy 0.05803    units    693422 verdict med  38.07 best  33.11 (54.9 ns/unit)  exposure  40.97  run  40.81
+d 0.50 ax 0.20 dy 0.06098    units    690939 verdict med  36.89 best  32.41 (53.4 ns/unit)  exposure  38.72  run  39.77
+d 0.50 ax 0.10 dy 0.08177    units    699927 verdict med  36.81 best  33.95 (52.6 ns/unit)  exposure  39.97  run  39.54
+d 0.50 ax 0.25 dy 0.05240    units    653213 verdict med  33.39 best  31.39 (51.1 ns/unit)  exposure  36.48  run  36.98
+d 0.46 ax 0.20 dy 0.05297    units    698813 verdict med  36.89 best  32.78 (52.8 ns/unit)  exposure  41.56  run  42.06
+d 0.46 ax 0.10 dy 0.07405    units    683855 verdict med  34.55 best  30.80 (50.5 ns/unit)  exposure  42.68  run  42.78
+d 0.46 ax 0.25 dy 0.05000    units    576017 verdict med  30.16 best  28.52 (52.4 ns/unit)  exposure  34.10  run  34.46

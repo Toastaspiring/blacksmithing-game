@@ -1,0 +1,42 @@
+valid8 (9 runs): longest stretch after the mark, by the line that charged it (median / max ms)
+    edgeProfile:517<740                0.290 / 0.301
+    setFactors:1440<740                0.236 / 0.261
+    volumeSamples:476<740              0.229 / 0.331
+    emitRun:572<740                    0.073 / 0.075
+    edgeProfile:544<740                0.049 / 0.051
+    run:1334<747                       0.045 / 0.049
+valid9 (9 runs): longest stretch after the mark, by the line that charged it (median / max ms)
+    edgeProfile:517<740                0.297 / 0.303
+    setFactors:1440<740                0.231 / 0.272
+    setFactors:1536<740                0.187 / 0.262
+    edgeProfile:544<740                0.090 / 0.119
+    emitRun:572<740                    0.082 / 0.110
+    run:1334<747                       0.031 / 0.043
+valid5 (9 runs): longest stretch after the mark, by the line that charged it (median / max ms)
+    edgeProfile:517<740                0.225 / 0.237
+    setFactors:1440<740                0.205 / 0.287
+    setFactors:1536<740                0.169 / 0.197
+    volumeSamples:476<740              0.156 / 0.165
+    run:1334<747                       0.067 / 0.089
+    edgeProfile:544<740                0.050 / 0.060
+F5 (9 runs): longest stretch after the mark, by the line that charged it (median / max ms)
+    setFactors:1440<740                0.154 / 0.185
+    edgeProfile:517<740                0.108 / 0.128
+    volumeSamples:476<740              0.101 / 0.106
+    emitRun:572<740                    0.092 / 0.097
+    edgeProfile:544<740                0.067 / 0.067
+    run:1334<747                       0.055 / 0.059
+P1 (9 runs): longest stretch after the mark, by the line that charged it (median / max ms)
+    setFactors:1440<740                0.210 / 0.224
+    volumeSamples:476<740              0.200 / 0.231
+    edgeProfile:517<740                0.171 / 0.182
+    setFactors:1536<740                0.158 / 0.191
+    edgeProfile:634<740                0.081 / 0.085
+    edgeProfile:544<740                0.071 / 0.072
+C05 (9 runs): longest stretch after the mark, by the line that charged it (median / max ms)
+    setFactors:1440<740                0.130 / 0.137
+    edgeProfile:517<740                0.119 / 0.177
+    setFactors:1536<740                0.098 / 0.109
+    volumeSamples:476<740              0.071 / 0.124
+    run:1334<747                       0.069 / 0.071
+    emitRun:572<740                    0.067 / 0.071

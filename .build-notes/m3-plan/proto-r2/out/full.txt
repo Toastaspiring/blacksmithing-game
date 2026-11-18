@@ -1,0 +1,4 @@
+start 20:07:04
+RESULT pass=596 fail=0 skip=0 files=51 time=168.88s
+exit 0
+end 20:09:53

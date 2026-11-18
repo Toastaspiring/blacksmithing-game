@@ -1,0 +1,12 @@
+  FAIL  Meta/Runner › T-META-05 pass root exits 0, and --seed reaches the specs' Prop instance (84.1 ms)
+        lune run tests/run -- --root tools/runner-selftest/pass --seed 591835543 exited 2, expected 0; output:
+          FAIL  SelfTest/Pass › shares the runner's Prop and Golden instances (0.1 ms)
+                case 1 runs (replayed under --seed 591835543): expected 1, got 0
+                at tools/runner-selftest/pass/Pass.spec.luau:24
+        HARNESS ERROR: --seed 591835543 matched no property case (a mistyped seed, or a --filter or --quick that leaves its case out)
+        
+        at tests/Meta/Runner.spec.luau:36
+  FAIL  Meta/Runner › TestRng is xorshift32 (13/17/5), seeded reproducibly (0.0 ms)
+        PROP_BASE_SEED stream: expected 591835543, got 1635523509
+        at tests/Meta/Runner.spec.luau:234
+RESULT pass=573 fail=2 skip=0 files=50 time=151.57s

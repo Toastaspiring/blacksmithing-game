@@ -1,0 +1,3 @@
+M1 on A's cons model, attacksA every 4: 335 designs, 4862 parts (0 over the edge limit), 7 s
+  largest |A - brute| 2.61e-13 (v11/a8_flush emu #31 part 19 (Wedge): A 0.733826431243 J 0.733826431243)
+  parts over 1e-9: 0, of which exact ties 0, outside the tie bracket 0 (worst 0 )

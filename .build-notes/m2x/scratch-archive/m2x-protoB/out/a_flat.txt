@@ -1,0 +1,57 @@
+windows: core 1.2 x 1.2 x 0.02, grid 4 x 4, 16 strips [24 parts, valid]
+   Core#8(Block) true 12.066% read 12.065% kept
+   build Sm 0.2337 H, Ha 0.0001 N, Sh 0.0119 N
+   truth Sm 0.2337 H, Ha 0.0001 N, Sh 0.0119 N
+   |dD| 0.0000 
+hair crossings: core 1.2 x 1.2 x 0.02, grid 4 x 4, 2 x 2 = 4 crossings [17 parts, valid]
+   Core#17(Block) true 0.004% read 0.002% CLEANED
+   build Sm 0.2200 H, Ha 0.3008 H, Sh 0.2494 H
+   truth Sm 0.2200 H, Ha 0.3008 H, Sh 0.2494 H
+   |dD| 0.0000 
+   K alone Sm 0.2200 H, Ha 0.3008 H, Sh 0.2494 H | K + core: |dD| 0.0000 
+hair crossings: core 1.2 x 1.2 x 0.02, grid 4 x 4, 2 x 3 = 6 crossings [20 parts, valid]
+   Core#20(Block) true 0.006% read 0.002% CLEANED
+   build Sm 0.2198 H, Ha 0.3008 H, Sh 0.2586 H
+   truth Sm 0.2198 H, Ha 0.3008 H, Sh 0.2586 H
+   |dD| 0.0000 
+   K alone Sm 0.2198 H, Ha 0.3008 H, Sh 0.2586 H | K + core: |dD| 0.0000 
+hair crossings: core 1.2 x 2.0 x 0.02, grid 3 x 5, 2 x 3 = 6 crossings [20 parts, valid]
+   Core#20(Block) true 0.000% read 0.002% CLEANED
+   build Sm 0.3929 H, Ha 0.3322 H, Sh 0.3805 H
+   truth Sm 0.3929 H, Ha 0.3322 H, Sh 0.3805 H
+   |dD| 0.0000 
+   K alone Sm 0.3929 H, Ha 0.3322 H, Sh 0.3805 H | K + core: |dD| 0.0000 
+hair crossings: core 1.2 x 1.2 x 0.20, grid 4 x 4, 2 x 2 = 4 crossings [17 parts, valid]
+   Core#17(Block) true 0.003% read 0.001% CLEANED
+   build Sm 0.2956 H, Ha 0.3008 H, Sh 0.2488 H
+   truth Sm 0.2956 H, Ha 0.3008 H, Sh 0.2488 H
+   |dD| 0.0000 
+   K alone Sm 0.2956 H, Ha 0.3008 H, Sh 0.2488 H | K + core: |dD| 0.0000 
+hair crossings: core 1.2 x 1.2 x 0.40, grid 4 x 4, 3 x 2 = 6 crossings [20 parts, valid]
+   Core#20(Block) true 0.002% read 0.001% CLEANED
+   build Sm 0.3796 H, Ha 0.3008 H, Sh 0.2560 H
+   truth Sm 0.3796 H, Ha 0.3008 H, Sh 0.2560 H
+   |dD| 0.0000 
+   K alone Sm 0.3796 H, Ha 0.3008 H, Sh 0.2560 H | K + core: |dD| 0.0000 
+hair crossings: core 1.2 x 1.2 x 0.40, grid 4 x 4, 3 x 3 = 9 crossings [24 parts, valid]
+   Core#24(Block) true 0.004% read 0.001% CLEANED
+   build Sm 0.3796 H, Ha 0.3008 H, Sh 0.2352 H
+   truth Sm 0.3796 H, Ha 0.3008 H, Sh 0.2352 H
+   |dD| 0.0000 
+   K alone Sm 0.3796 H, Ha 0.3008 H, Sh 0.2352 H | K + core: |dD| 0.0000 
+rows: 4 hairlines on one patch's rows + a needle crossing them [14 parts, valid]
+   Core#14(Block) true 0.008% read 0.002% CLEANED
+   build Sm 0.2198 H, Ha 0.3008 H, Sh 0.2000 H
+   truth Sm 0.2198 H, Ha 0.3008 H, Sh 0.2000 H
+   |dD| 0.0000 
+rows: the same without the needle [13 parts, valid]
+   Core#13(Block) true 0.008% read 0.002% CLEANED
+   build Sm 0.2198 H, Ha 0.3008 H, Sh 0.2000 H
+   truth Sm 0.2198 H, Ha 0.3008 H, Sh 0.2000 H
+   |dD| 0.0000 
+columns: the same design turned 90 degrees [14 parts, valid]
+   Core#14(Block) true 0.000% read 0.002% CLEANED
+   build Sm 0.2200 H, Ha 0.3008 H, Sh 0.2000 H
+   truth Sm 0.2200 H, Ha 0.3008 H, Sh 0.2000 H
+   |dD| 0.0000 
+-- dumprun a_flat: 16 designs, 3.5 s

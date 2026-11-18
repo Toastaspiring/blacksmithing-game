@@ -1,0 +1,14 @@
+M2 fixtures: 71 designs from fx-adversarial 4, fx-calibration 15, fx-golden 5, fx-perf 5, fx-regression 33, fx-validation 9
+  shape          parts   fine | false Enclosed at true >= 2.5/3/5/7.5/10/15/20 % | false kept at true < 1.5/1/0.5/0.25 %
+  Block            395     31 | new cleaned     22 FE 0/0/0/0/0/0/0              | FK 0/0/0/0
+                     0      0 | old cleaned     23 FE 0/0/0/0/0/0/0              | FK 0/0/0/0
+  Wedge             64      0 | new cleaned      0 FE 0/0/0/0/0/0/0              | FK 0/0/0/0
+                     0      0 | old cleaned      0 FE 0/0/0/0/0/0/0              | FK 0/0/0/0
+  CornerWedge       14      0 | new cleaned      0 FE 0/0/0/0/0/0/0              | FK 0/0/0/0
+                     0      0 | old cleaned      0 FE 0/0/0/0/0/0/0              | FK 0/0/0/0
+  Cylinder          49      1 | new cleaned      1 FE 0/0/0/0/0/0/0              | FK 0/0/0/0
+                     0      0 | old cleaned      1 FE 0/0/0/0/0/0/0              | FK 0/0/0/0
+  Ball              88      0 | new cleaned      0 FE 0/0/0/0/0/0/0              | FK 0/0/0/0
+                     0      0 | old cleaned      0 FE 0/0/0/0/0/0/0              | FK 0/0/0/0
+  ALL              610     32 | new cleaned     23 FE 0/0/0/0/0/0/0              | FK 0/0/0/0
+                     0      0 | old cleaned     24 FE 0/0/0/0/0/0/0              | FK 0/0/0/0

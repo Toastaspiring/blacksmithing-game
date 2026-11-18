@@ -1,0 +1,32 @@
+-- a Ball inside C02's grip (Cylinder radius 0.08), radius 0.08 − g
+ball in grip g 0.00200                       valid true  truth   0.000% c | base   0.000% c | canon   0.000% c | fine   0.000% c | B   0.000% | today c
+ball in grip g 0.00100                       valid true  truth   0.000% c | base   0.000% c | canon   0.000% c | fine   0.000% c | B   0.000% | today c
+ball in grip g 0.00060                       valid true  truth   0.000% c | base   0.000% c | canon   0.000% c | fine   0.000% c | B   0.000% | today c
+ball in grip g 0.00040                       valid true  truth   0.000% c | base   0.000% c | canon   0.000% c | fine   0.000% c | B   0.000% | today c
+ball in grip g 0.00030                       valid true  truth   0.000% c | base   0.002% c | canon   0.002% c | fine   0.004% c | B   0.002% | today c
+ball in grip g 0.00020                       valid true  truth   0.000% c | base   0.015% c | canon   0.015% c | fine   0.028% c | B   0.015% | today c
+ball in grip g 0.00010                       valid true  truth   0.000% c | base   0.042% c | canon   0.042% c | fine   0.075% c | B   0.042% | today c
+ball in grip g 0.00003                       valid true  truth   0.000% c | base   0.067% c | canon   0.067% c | fine   0.122% c | B   0.067% | today c
+ball in grip g 0.00001                       valid true  truth   0.000% c | base   0.076% c | canon   0.076% c | fine   0.137% c | B   0.076% | today c
+-- a rod (radius r) sealed in 16 flat walls at gap g from its surface, turned 5.625° about its axis, beside C02's blade
+rod r 0.10 in 16 walls, corner gap 0.0119    valid true  truth   0.000% c | base   8.058% K | canon   8.058% K | fine   8.058% K | B   8.058% | today c  Acanon |dD| 0.2378 TIER  Afine |dD| 0.2378 TIER
+rod r 0.10 in 16 walls, corner gap 0.0118    valid true  truth   0.000% c | base   5.945% K | canon   5.945% K | fine   5.945% K | B   5.945% | today c  Acanon |dD| 0.2377 TIER  Afine |dD| 0.2377 TIER
+rod r 0.10 in 16 walls, corner gap 0.0116    valid true  truth   0.000% c | base   1.720% c | canon   1.720% c | fine   1.720% c | B   1.720% | today c
+rod r 0.10 in 16 walls, corner gap 0.0115    valid true  truth   0.000% c | base   0.000% c | canon   0.000% c | fine   0.000% c | B   0.000% | today c
+rod r 0.10 in 16 walls, corner gap 0.0112    valid true  truth   0.000% c | base   0.000% c | canon   0.000% c | fine   0.000% c | B   0.000% | today c
+rod r 0.10 in 16 walls, corner gap 0.0110    valid true  truth   0.000% c | base   0.000% c | canon   0.000% c | fine   0.000% c | B   0.000% | today c
+rod r 0.10 in 16 walls, corner gap 0.0105    valid true  truth   0.000% c | base   0.000% c | canon   0.000% c | fine   0.000% c | B   0.000% | today c
+rod r 0.10 in 16 walls, corner gap 0.0100    valid true  truth   0.000% c | base   0.000% c | canon   0.000% c | fine   0.000% c | B   0.000% | today c
+rod r 0.20 in 16 walls, corner gap 0.0119    valid true  truth   0.000% c | base   9.534% K | canon   9.534% K | fine   9.534% K | B   9.534% | today c  Acanon |dD| 0.4140  Afine |dD| 0.4140
+rod r 0.20 in 16 walls, corner gap 0.0118    valid true  truth   0.000% c | base   8.429% K | canon   8.429% K | fine   8.429% K | B   8.429% | today c  Acanon |dD| 0.4245  Afine |dD| 0.4245
+rod r 0.20 in 16 walls, corner gap 0.0116    valid true  truth   0.000% c | base   6.219% K | canon   6.219% K | fine   6.219% K | B   6.219% | today c  Acanon |dD| 0.4325  Afine |dD| 0.4325
+rod r 0.20 in 16 walls, corner gap 0.0115    valid true  truth   0.000% c | base   5.115% K | canon   5.115% K | fine   5.115% K | B   5.115% | today c  Acanon |dD| 0.4390  Afine |dD| 0.4390
+rod r 0.20 in 16 walls, corner gap 0.0112    valid true  truth   0.000% c | base   1.800% c | canon   1.800% c | fine   1.800% c | B   1.800% | today c
+rod r 0.20 in 16 walls, corner gap 0.0110    valid true  truth   0.000% c | base   0.000% c | canon   0.000% c | fine   0.000% c | B   0.000% | today c
+rod r 0.20 in 16 walls, corner gap 0.0105    valid true  truth   0.000% c | base   0.000% c | canon   0.000% c | fine   0.000% c | B   0.000% | today c
+rod r 0.20 in 16 walls, corner gap 0.0100    valid true  truth   0.000% c | base   0.000% c | canon   0.000% c | fine   0.000% c | B   0.000% | today c
+-- T-PHY-09: geometric copies turned about their own symmetry
+cylinder spun 37 deg (part 2)                valid false truth   0.000% c | base  41.807% K | canon   0.000% c | fine   0.000% c | B  41.807% | today c
+cylinder spun 37 deg (part 1)                valid false truth 100.000% K | base  58.391% K | canon 100.000% K | fine 100.000% K | B  58.391% | today K
+ball turned 77 deg (part 2)                  valid false truth 100.000% K | base  50.387% K | canon 100.000% K | fine 100.000% K | B  50.387% | today K
+ball turned 77 deg (part 1)                  valid false truth   0.000% c | base  51.218% K | canon   0.000% c | fine   0.000% c | B  51.218% | today c

@@ -1,0 +1,25 @@
+M2 exact verdict, round 4 -> fix round 4 (2026-11-14, evening)
+
+Round 4 verifiers (workflow wf_b2999a59-aba, results in m2x_fixer_r3.json, m2x_v1_r4.json, m2x_v2_r4.json, m2x_serious_r4.json):
+- Round 3's fixes hold (fixAB, rule A, hull rule, fixW, 4 % precision bound). Verify green 596/0/0.
+- V1 major 1: truly hidden round filler in a crease (rods where F5's grip enters a Ball pommel 0.6) reads 6.57 %, kept,
+  Sharpening 0.1827 Normal -> 0.2083 Hard. SPEC's 2.04 % crease figure was read without rule A (stale).
+- V1 major 2: rule (i)'s price on a Ball understated: moved half-spaces meet 0.0452 r past the sphere (not 0.026 r);
+  4 flush studs truly 16.2 % cleaned, Sharpening 0.2047 Hard (truth) -> 0.1907 Normal.
+- V2 major: §5's exception (round filler poking a hair out) had no [Decision to confirm] / O-number. 16 of 20 swords flip.
+- Minors: Wedge material tie (fixW2), maxDist rounding (fixD), CoverBrute axis line + new Cover.spec case, text numbers.
+
+Lead decisions for fix round 4 (workflow wf_2263d132-7b2, task w4m3b6yqr):
+1. Flat facets against a Ball hider: read the Ball's true sphere via the plane's circle, taken as its circumscribed
+   32-gon (sqrt only; world-fixed in-plane frame from n). Replaces rule (i)'s moved half-spaces for Balls only.
+   Fallback if not exact against CoverBrute or moves verdicts away from the truth: keep (i), write V1's numbers.
+2. Remaining band -> new §17.1 O9 [Decision to confirm], default accept for the MVP: (a) round filler poking a hair
+   out / creases can be kept; (b) flat faces within a round model's over are buried (Cylinder 0.0048 r).
+3. fixP (V1's polygon hull) not adopted: partial, fragmentation-dependent. Recorded as tried.
+4. Minors as tried (fixW2 + test, fixD, CoverBrute away + test, V2's text minors incl. README Status S-PAR-01 passed).
+5. Re-pin units; precision on 6 seeds; E-S2.12 "After the fourth verifiers' round".
+Then V1/V2 round 5 (O9 class only an issue if outside what the text states), minors fixer if only minors.
+In parallel: M3 planner writes .build-notes\m3-plan\plan-r2.md (+ proto-r2\), then a critic reviews it.
+
+Snapshot of the tree before fix round 4: scratchpad\m2x-r4-base\repo.
+At commit: S-PAR-01's dependencies vs spar01_hashes.txt (round 4 changes Physics/Cover, Sampling only).

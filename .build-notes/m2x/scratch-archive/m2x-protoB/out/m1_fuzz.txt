@@ -1,0 +1,9 @@
+  200 designs, 2515 parts, worst 2.96e-13, 338.2 s
+  400 designs, 4768 parts, worst 6.06e-13, 618.0 s
+  600 designs, 7344 parts, worst 6.06e-13, 929.0 s
+  800 designs, 9837 parts, worst 6.06e-13, 1226.1 s
+M1 fuzz:800:7 (model cyl 32 ball 4): 800 designs, 9837 parts, 237178 facets, 1226.1 s
+  largest |share difference| per part 6.06e-13  (fuzz7#204 part 1 (Cylinder): exact 0.980727918561 brute 0.980727918561)
+  largest |difference| per facet, of its area 8.86e-13  (fuzz7#340 part 6 (Ball) facet 53: exact 0.0022203064775 brute 0.0022203064775 area 0.00222031)
+  parts by |share difference|: <1e-12 9837, <1e-10 0, <1e-8 0, <1e-6 0, <1e-4 0, more 0
+  lattice (5000 points a part): largest |share difference| 0.0067  (fuzz7#57 part 1 (CornerWedge): exact 0.583637 lattice 0.576917)

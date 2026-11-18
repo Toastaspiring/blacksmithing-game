@@ -1,0 +1,5 @@
+  200 designs, 1400 parts, 0 verdicts differ, 5 s
+  400 designs, 2855 parts, 0 verdicts differ, 9 s
+  600 designs, 4167 parts, 0 verdicts differ, 13 s
+  800 designs, 5922 parts, 0 verdicts differ, 16 s
+M4 mirror bset:ballRivet:10:1: 915 designs, 8091 parts, 0 verdicts differ from the image's; reads differ in 3048 parts, largest |difference| 0.0304 (C02 Arming (Iron) d0.08 f-0.99 x0.00 y-0.5 t2 part 5 (Wedge): 0.683337940 / 0.713738210), 24 s

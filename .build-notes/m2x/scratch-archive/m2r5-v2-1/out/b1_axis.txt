@@ -1,0 +1,2 @@
+fixtures: worst axis diff 0 worst mirror diff 0 designs 76
+all: designs 5076 worst axis diff 0.0000000000000004718447854656915 worst mirror diff 0.0000000000000008881784197001252 no-vote designs 1216

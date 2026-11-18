@@ -1,0 +1,66 @@
+rod r 0.08, 8 slats at 33.5 + 45k [13 parts, valid]
+   Rod#4(Cylinder) true 22.41% read 21.79% kept
+   build Sm 0.1271 N, Ha 0.1458 N, Sh 0.0000 N
+   truth Sm 0.1271 N, Ha 0.1458 N, Sh 0.0000 N
+   |dD| 0.0000 
+rod r 0.08, 16 slats at 22.5k [21 parts, valid]
+   Rod#4(Cylinder) true 41.57% read 40.52% kept
+   build Sm 0.1181 N, Ha 0.4813 H, Sh 0.0000 N
+   truth Sm 0.1181 N, Ha 0.4813 H, Sh 0.0000 N
+   |dD| 0.0000 
+rod r 0.15, 8 slats at 33.5 + 45k [13 parts, valid]
+   Rod#4(Cylinder) true 21.91% read 21.43% kept
+   build Sm 0.3644 H, Ha 0.0547 N, Sh 0.0000 N
+   truth Sm 0.3644 H, Ha 0.0547 N, Sh 0.0000 N
+   |dD| 0.0000 
+rod r 0.15, 16 slats at 22.5k [21 parts, valid]
+   Rod#4(Cylinder) true 40.67% read 40.04% kept
+   build Sm 0.3485 H, Ha 0.0873 N, Sh 0.0000 N
+   truth Sm 0.3485 H, Ha 0.0873 N, Sh 0.0000 N
+   |dD| 0.0000 
+rod r 0.25, 8 slats at 33.5 + 45k [13 parts, valid]
+   Rod#4(Cylinder) true 22.94% read 26.32% kept
+   build Sm 0.9306 H, Ha 0.0430 N, Sh 0.0000 N
+   truth Sm 0.9306 H, Ha 0.0430 N, Sh 0.0000 N
+   |dD| 0.0000 
+rod r 0.25, 16 slats at 22.5k [21 parts, valid]
+   Rod#4(Cylinder) true 41.37% read 40.88% kept
+   build Sm 0.9047 H, Ha 0.0297 N, Sh 0.0000 N
+   truth Sm 0.9047 H, Ha 0.0297 N, Sh 0.0000 N
+   |dD| 0.0000 
+rod r 0.25, wide guard, 8 slats [13 parts, valid]
+   Rod#4(Cylinder) true 21.24% read 24.60% kept
+   build Sm 0.9960 H, Ha 0.0411 N, Sh 0.0000 N
+   truth Sm 0.9960 H, Ha 0.0411 N, Sh 0.0000 N
+   |dD| 0.0000 
+rod r 0.25, wide guard, 16 slats [21 parts, valid]
+   Rod#4(Cylinder) true 39.44% read 39.00% kept
+   build Sm 0.9709 H, Ha 0.0196 N, Sh 0.0000 N
+   truth Sm 0.9709 H, Ha 0.0196 N, Sh 0.0000 N
+   |dD| 0.0000 
+rod r 0.29, wide guard, 8 slats [13 parts, INVALID OutOfHitbox,OutOfHitbox,OutOfHitbox,OutOfHitbox]
+   Rod#4(Cylinder) true 25.53% read 29.17% kept
+   build 
+   truth 
+   |dD| -1.0000 nosteps
+rod r 0.29, wide guard, 16 slats [21 parts, INVALID OutOfHitbox,OutOfHitbox]
+   Rod#4(Cylinder) true 38.94% read 38.56% kept
+   build 
+   truth 
+   |dD| -1.0000 nosteps
+ball d 0.56 at the blade's root, 2 blocks [6 parts, valid]
+   Ball#4(Ball) true 18.99% read 19.71% kept
+   build Sm 0.2832 H, Ha 0.0000 N, Sh 0.0000 N
+   truth Sm 0.2832 H, Ha 0.0000 N, Sh 0.0000 N
+   |dD| 0.0000 
+ball d 0.56 at the blade's root, 4 blocks [8 parts, valid]
+   Ball#4(Ball) true 33.52% read 35.80% kept
+   build Sm 0.2690 H, Ha 0.0000 N, Sh 0.0000 N
+   truth Sm 0.2690 H, Ha 0.0000 N, Sh 0.0000 N
+   |dD| 0.0000 
+ball d 0.56 at the blade's root, 8 blocks [12 parts, valid]
+   Ball#4(Ball) true 47.97% read 50.54% kept
+   build Sm 0.2514 H, Ha 0.0000 N, Sh 0.0000 N
+   truth Sm 0.2514 H, Ha 0.0000 N, Sh 0.0000 N
+   |dD| 0.0000 
+-- dumprun a_hand: 13 designs, 3.1 s

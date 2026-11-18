@@ -1,0 +1,38 @@
+M2 plausible: 32349 designs from plausible-ballRivet 7296, plausible-bevel 891, plausible-comb 16, plausible-cylRib 3432, plausible-cylRivet 1782, plausible-fuller 8352, plausible-lamHilt 672, plausible-laminate 760, plausible-plateC09 10, plausible-plateEdge 4518, plausible-plateTilt 288, plausible-pommelInBlock 507, plausible-ribbed 832, plausible-rod 720, plausible-wall 140, plausible-wedgeInGuard 1080, plausible-wrapRings 1053
+  shape          parts   fine | false Enclosed at true >= 2.5/3/5/7.5/10/15/20 % | false kept at true < 1.5/1/0.5/0.25 %
+  Block         188496   8900 | new cleaned   2446 FE 0/0/0/0/0/0/0              | FK 0/0/0/0
+                     0      0 | old cleaned   2450 FE 0/0/0/0/0/0/0              | FK 0/0/0/0
+  Wedge          32367   1029 | new cleaned    328 FE 0/0/0/0/0/0/0              | FK 0/0/0/0
+                     0      0 | old cleaned    326 FE 0/0/0/0/0/0/0              | FK 0/0/0/0
+  CornerWedge     1080    462 | new cleaned    305 FE 0/0/0/0/0/0/0              | FK 0/0/0/0
+                     0      0 | old cleaned    314 FE 5/4/0/0/0/0/0              | FK 1/0/0/0
+  Cylinder       37268   2065 | new cleaned    615 FE 192/0/0/0/0/0/0            | FK 9/0/0/0
+                     0      0 | old cleaned    620 FE 230/82/0/0/0/0/0           | FK 59/25/6/0
+  Ball           49390   6114 | new cleaned   3630 FE 499/221/0/0/0/0/0          | FK 0/0/0/0
+                     0      0 | old cleaned   2921 FE 144/14/3/0/0/0/0           | FK 3/1/0/0
+  ALL           308601  18570 | new cleaned   7324 FE 691/221/0/0/0/0/0          | FK 9/0/0/0
+                     0      0 | old cleaned   6631 FE 379/100/3/0/0/0/0          | FK 63/26/6/0
+  worst false Enclosed (new): true 3.530% read 1.900%  ballRivet|C09|guardZ d0.14 r47 cap0.0100 [plausible-ballRivet] part 19 Ball Rivet
+  worst false Enclosed (new): true 3.520% read 1.947%  ballRivet|C09|guardZ d0.14 xy30 cap0.0100 [plausible-ballRivet] part 19 Ball Rivet
+  worst false Enclosed (new): true 3.013% read 1.673%  ballRivet|C02|guardZ d0.14 r47 cap0.0300 [plausible-ballRivet] part 7 Ball Rivet
+  worst false Enclosed (new): true 3.013% read 1.673%  ballRivet|C02|guardZ d0.14 r47 cap0.0300 [plausible-ballRivet] part 8 Ball Rivet
+  worst false Enclosed (new): true 3.013% read 1.664%  ballRivet|C02|guardX d0.14 xy30 cap0.0300 [plausible-ballRivet] part 7 Ball Rivet
+  worst false Enclosed (new): true 3.013% read 0.967%  ballRivet|C02|guardX d0.14 r47 cap0.0300 [plausible-ballRivet] part 7 Ball Rivet
+  worst false kept (new): true 1.2899% read 2.020%  wrapRings|C06|n5 extra0.01 gap0.0020 [plausible-wrapRings] part 2 Cylinder Grip
+  worst false kept (new): true 1.2899% read 2.020%  wrapRings|C06|n5 extra0.02 gap0.0020 [plausible-wrapRings] part 2 Cylinder Grip
+  worst false kept (new): true 1.2899% read 2.020%  wrapRings|C06|n5 extra0.04 gap0.0020 [plausible-wrapRings] part 2 Cylinder Grip
+  worst false kept (new): true 1.2949% read 2.020%  wrapRings|C06|n3 extra0.01 gap0.0040 [plausible-wrapRings] part 2 Cylinder Grip
+  worst false kept (new): true 1.2949% read 2.020%  wrapRings|C06|n3 extra0.02 gap0.0040 [plausible-wrapRings] part 2 Cylinder Grip
+  worst false kept (new): true 1.2949% read 2.020%  wrapRings|C06|n3 extra0.04 gap0.0040 [plausible-wrapRings] part 2 Cylinder Grip
+  worst false Enclosed (old): true 6.325% read 7.175%  ballRivet|F3|guardX d0.10 unrot cap0.3000 [plausible-ballRivet] part 8 Ball Rivet
+  worst false Enclosed (old): true 5.280% read 3.855%  ballRivet|C09|guardZ d0.14 z45 cap0.0250 [plausible-ballRivet] part 19 Ball Rivet
+  worst false Enclosed (old): true 5.273% read 3.855%  ballRivet|C09|guardZ d0.14 z45 cap0.0250 [plausible-ballRivet] part 20 Ball Rivet
+  worst false Enclosed (old): true 4.985% read 3.504%  ballRivet|C09|guardZ d0.14 z45 cap0.0225 [plausible-ballRivet] part 19 Ball Rivet
+  worst false Enclosed (old): true 4.983% read 3.504%  ballRivet|C09|guardZ d0.14 z45 cap0.0225 [plausible-ballRivet] part 20 Ball Rivet
+  worst false Enclosed (old): true 4.695% read 3.186%  ballRivet|C09|guardZ d0.14 z45 cap0.0200 [plausible-ballRivet] part 19 Ball Rivet
+  worst false kept (old): true 0.2975% read 0.294%  wrapRings|C05|n4 extra0.01 gap0.0010 [plausible-wrapRings] part 2 Cylinder Grip
+  worst false kept (old): true 0.2975% read 0.294%  wrapRings|C05|n4 extra0.02 gap0.0010 [plausible-wrapRings] part 2 Cylinder Grip
+  worst false kept (old): true 0.2975% read 0.294%  wrapRings|C05|n4 extra0.04 gap0.0010 [plausible-wrapRings] part 2 Cylinder Grip
+  worst false kept (old): true 0.3075% read 0.306%  wrapRings|C02|n4 extra0.01 gap0.0010 [plausible-wrapRings] part 2 Cylinder Grip
+  worst false kept (old): true 0.3075% read 0.306%  wrapRings|C02|n4 extra0.02 gap0.0010 [plausible-wrapRings] part 2 Cylinder Grip
+  worst false kept (old): true 0.3075% read 0.306%  wrapRings|C02|n4 extra0.04 gap0.0010 [plausible-wrapRings] part 2 Cylinder Grip

@@ -1,0 +1,33 @@
+== T-MG-04 cell means: |mean_400 - E-S3.2 mean| <= 4*sd/sqrt(400) + 0.0005, fresh seeds
+  sum over 48 cells 0.0074 (plan: ~3e-3); worst cells: [('2.0e-04', 'TimingStrike/Normal/Steel/Average'), ('2.0e-04', 'PrecisionTrace/Hard/Iron/Average'), ('2.0e-04', 'PrecisionTrace/Normal/Iron/Average'), ('2.0e-04', 'TimingStrike/Hard/Iron/Average')]
+
+== T-MG-04 Q8 fail rates on BOT_RUNS_FAIL = 1000 fresh runs (beta-binomial predictive, Jeffreys prior)
+  HoldZone       Normal Iron  Average rate 0.053  P(out) at 1000: 0.0011 (planner-style 4.8e-04); at 400: 0.0141
+  TimingStrike   Normal Steel Average rate 0.117  P(out) at 1000: 0.0046 (planner-style 4.8e-04); at 400: 0.0286
+  sum over 24 band checks: 0.0057 at 1000 runs (plan: ~1.5e-3); 0.0458 at 400 runs
+
+== T-MG-05 Normal -> Hard drop on T-MG-04's runs (plan: salts per tier, so UNPAIRED 400 vs 400)
+  HoldZone       Iron  Average drop 0.0645  P(fail) unpaired 0.0038 | paired 0.0009 (plan: ~3e-4)
+  HoldZone       Steel Average drop 0.0643  P(fail) unpaired 0.0043 | paired 0.0009 (plan: ~3e-4)
+  PrecisionTrace Iron  Average drop 0.0731  P(fail) unpaired 0.0003 | paired 0.0001 (plan: ~3e-4)
+  PrecisionTrace Steel Average drop 0.0750  P(fail) unpaired 0.0001 | paired 0.0001 (plan: ~3e-4)
+  sum 0.0086
+
+== T-MG-06 Iron - Steel, Average Normal, paired, STEEL_DROP_RUNS fresh seeds
+  HoldZone       drop 0.0158 sd_d 0.0771 n   400: P(<0.01) 0.086 (naive 0.068)  P(<0.005) 0.005 (naive 0.003)  P(<0.002) 0.0006  P(>0.08) 0.0e+00
+  HoldZone       drop 0.0158 sd_d 0.0771 n  4000: P(<0.01) 0.003 (naive 0.000)  P(<0.005) 0.000 (naive 0.000)  P(<0.002) 0.0000  P(>0.08) 0.0e+00
+     the 2,000-run estimate alone: drop 0.0158 +- 0.0017; P(true drop < 0.005) = 0.000
+  TimingStrike   drop 0.0124 sd_d 0.1407 n   400: P(<0.01) 0.377 (naive 0.365)  P(<0.005) 0.168 (naive 0.146)  P(<0.002) 0.0881  P(>0.08) 0.0e+00
+  TimingStrike   drop 0.0124 sd_d 0.1407 n 20000: P(<0.01) 0.232 (naive 0.008)  P(<0.005) 0.012 (naive 0.000)  P(<0.002) 0.0008  P(>0.08) 0.0e+00
+     the 2,000-run estimate alone: drop 0.0124 +- 0.0031; P(true drop < 0.005) = 0.009
+  PrecisionTrace drop 0.0090 sd_d 0.1117 n   400: P(<0.01) 0.565 (naive 0.571)  P(<0.005) 0.257 (naive 0.237)  P(<0.002) 0.1263  P(>0.08) 0.0e+00
+  PrecisionTrace drop 0.0090 sd_d 0.1117 n  4000: P(<0.01) 0.629 (naive 0.715)  P(<0.005) 0.096 (naive 0.012)  P(<0.002) 0.0111  P(>0.08) 0.0e+00
+     the 2,000-run estimate alone: drop 0.0090 +- 0.0025; P(true drop < 0.005) = 0.055
+
+== T-MG-12 fairness bound: per-pattern-mean SD <= total SD of the cell (Average, Iron)
+  HoldZone       Normal total SD 0.0736  (FAIRNESS_MAX_SD 0.08: cannot fail)
+  HoldZone       Hard   total SD 0.0707  (FAIRNESS_MAX_SD 0.08: cannot fail)
+  TimingStrike   Normal total SD 0.1082  (FAIRNESS_MAX_SD 0.08: can fail if patterns carry most of the variance)
+  TimingStrike   Hard   total SD 0.1035  (FAIRNESS_MAX_SD 0.08: can fail if patterns carry most of the variance)
+  PrecisionTrace Normal total SD 0.0835  (FAIRNESS_MAX_SD 0.08: can fail if patterns carry most of the variance)
+  PrecisionTrace Hard   total SD 0.0924  (FAIRNESS_MAX_SD 0.08: can fail if patterns carry most of the variance)

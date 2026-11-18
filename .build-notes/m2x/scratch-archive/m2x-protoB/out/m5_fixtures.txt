@@ -1,0 +1,71 @@
+C01 Minimal                                                n 4 | new verdict    0.66 ms     300 u, exposure    3.92 ms | old verdict   0.33 ms   1057 u, exposure   4.26 ms | cleaned 0/0
+C02 Arming (Iron)                                          n 6 | new verdict    0.77 ms    2090 u, exposure    4.65 ms | old verdict   0.53 ms   1818 u, exposure   3.82 ms | cleaned 0/0
+C02 Arming (Steel)                                         n 6 | new verdict    0.85 ms    2090 u, exposure    4.11 ms | old verdict   0.49 ms   1818 u, exposure   4.24 ms | cleaned 0/0
+C04 Rapier (Steel blade)                                   n 7 | new verdict    1.02 ms    2544 u, exposure    4.01 ms | old verdict   0.62 ms   2250 u, exposure   3.94 ms | cleaned 0/0
+C05 Cleaver                                                n 6 | new verdict    0.76 ms     803 u, exposure   15.06 ms | old verdict   0.55 ms   1614 u, exposure  15.43 ms | cleaned 0/0
+C06 Sabre (Steel)                                          n10 | new verdict    1.37 ms    2451 u, exposure    5.80 ms | old verdict   0.97 ms   2658 u, exposure   5.49 ms | cleaned 0/0
+C07 Dagger                                                 n 6 | new verdict    0.80 ms    2090 u, exposure    3.00 ms | old verdict   0.55 ms   2176 u, exposure   2.87 ms | cleaned 0/0
+C08 Greatsword                                             n 6 | new verdict    0.83 ms    2114 u, exposure    5.38 ms | old verdict   0.52 ms   1754 u, exposure   8.48 ms | cleaned 0/0
+C09 Ornate (18 parts)                                      n18 | new verdict    3.37 ms   11113 u, exposure   16.76 ms | old verdict   2.30 ms   8320 u, exposure  18.22 ms | cleaned 0/0
+C10 Gamey filler, symmetric                                n24 | new verdict    1.51 ms    1659 u, exposure   14.73 ms | old verdict   2.08 ms   6647 u, exposure  14.30 ms | cleaned 4/4
+C11 Gamey filler, lopsided                                 n24 | new verdict    1.52 ms    1889 u, exposure   12.55 ms | old verdict   2.48 ms   7262 u, exposure  14.86 ms | cleaned 4/4
+C12 Arming, blade in 5 overlapping segments                n10 | new verdict    0.96 ms    2415 u, exposure    5.10 ms | old verdict   0.93 ms   2925 u, exposure   4.97 ms | cleaned 0/0
+C13 Arming, guard = half + mirror (+CornerWedges)          n 9 | new verdict    1.02 ms    2370 u, exposure    6.69 ms | old verdict   0.86 ms   2601 u, exposure   5.79 ms | cleaned 0/0
+C14 Arming translated (0, +0.27, +0.05)                    n 6 | new verdict    0.75 ms    2090 u, exposure    3.76 ms | old verdict   0.50 ms   1818 u, exposure   3.80 ms | cleaned 0/0
+C15 Arming rotated 4 deg about Z at the grip               n 6 | new verdict    0.84 ms    2103 u, exposure    4.32 ms | old verdict   0.51 ms   1818 u, exposure   4.17 ms | cleaned 0/0
+F1 ArmingSword                                             n 5 | new verdict    0.65 ms    1659 u, exposure    3.10 ms | old verdict   0.32 ms   1213 u, exposure   3.13 ms | cleaned 0/0
+F2 MinimalSword                                            n 4 | new verdict    0.42 ms     290 u, exposure    2.78 ms | old verdict   0.26 ms   1001 u, exposure   3.19 ms | cleaned 0/0
+F3 Rapier                                                  n 7 | new verdict    1.45 ms    5930 u, exposure    3.32 ms | old verdict   0.62 ms   2652 u, exposure   2.71 ms | cleaned 0/0
+F4 Cleaver                                                 n 5 | new verdict    0.90 ms     380 u, exposure    8.87 ms | old verdict   0.36 ms   1221 u, exposure   8.05 ms | cleaned 0/0
+F5 StarterSword                                            n 5 | new verdict    0.83 ms    1659 u, exposure    4.00 ms | old verdict   0.31 ms   1213 u, exposure   3.55 ms | cleaned 0/0
+A25 F1 + enclosed 20 deg grip core                         n 6 | new verdict    0.74 ms    1772 u, exposure    3.12 ms | old verdict   0.44 ms   1654 u, exposure   3.12 ms | cleaned 1/1
+A26 F1 ring grip + 40 deg strap                            n 9 | new verdict    0.88 ms    2026 u, exposure    5.19 ms | old verdict   0.60 ms   2215 u, exposure   4.97 ms | cleaned 0/0
+A26 base: F1 ring grip                                     n 8 | new verdict    0.83 ms    1878 u, exposure    4.70 ms | old verdict   0.50 ms   2047 u, exposure   4.52 ms | cleaned 0/0
+A27 F1 hilt shifted 0.04 in X                              n 5 | new verdict    0.61 ms    1659 u, exposure    3.46 ms | old verdict   0.34 ms   1213 u, exposure   3.70 ms | cleaned 0/0
+X01 2 blade copies at z +-0.003 (vs union blade 0.066)     n 7 | new verdict    0.94 ms    2470 u, exposure    8.08 ms | old verdict   1.01 ms   4218 u, exposure   8.62 ms | cleaned 1/1
+x                                                          n 5 | new verdict    0.63 ms    1659 u, exposure    2.96 ms | old verdict   0.30 ms   1213 u, exposure   2.95 ms | cleaned 0/0
+X01raw 2 blade copies at z +-0.003 (vs F5)                 n 7 | new verdict    1.00 ms    2470 u, exposure    8.81 ms | old verdict   1.11 ms   4218 u, exposure   8.51 ms | cleaned 1/1
+X02 6 blade copies at z = k*0.002 (vs union blade 0.072)   n11 | new verdict    1.56 ms    5414 u, exposure    9.11 ms | old verdict   4.54 ms  19104 u, exposure  12.58 ms | cleaned 5/5
+X03 F4 + 0.0003 st3 fin                                    n 6 | new verdict    0.83 ms     444 u, exposure    9.20 ms | old verdict   0.40 ms   1353 u, exposure   9.05 ms | cleaned 0/0
+X04a blade from 4 strips                                   n 8 | new verdict    1.29 ms    2365 u, exposure   13.89 ms | old verdict   0.96 ms   2934 u, exposure  10.44 ms | cleaned 0/0
+X04b blade from strips, seams at +-0.05 and 0              n 8 | new verdict    1.10 ms    2370 u, exposure    9.35 ms | old verdict   0.77 ms   2934 u, exposure   9.98 ms | cleaned 0/0
+X04-5-0.004 5 segments, gaps 0.004                         n 9 | new verdict    0.91 ms    1956 u, exposure    3.48 ms | old verdict   0.56 ms   1943 u, exposure   3.58 ms | cleaned 0/0
+X04-5-0.006 5 segments, gaps 0.006                         n 9 | new verdict    0.86 ms    1956 u, exposure    3.59 ms | old verdict   0.53 ms   1943 u, exposure   3.69 ms | cleaned 0/0
+X04-5-0.009 5 segments, gaps 0.009                         n 9 | new verdict    0.91 ms    1956 u, exposure    4.14 ms | old verdict   0.55 ms   1943 u, exposure   4.52 ms | cleaned 0/0
+X04-10-0.004 10 segments, gaps 0.004                       n14 | new verdict    1.26 ms    2287 u, exposure    4.97 ms | old verdict   0.94 ms   2868 u, exposure   4.67 ms | cleaned 0/0
+X04-10-0.006 10 segments, gaps 0.006                       n14 | new verdict    1.56 ms    2287 u, exposure    5.86 ms | old verdict   1.13 ms   2868 u, exposure   5.10 ms | cleaned 0/0
+X04-10-0.009 10 segments, gaps 0.009                       n14 | new verdict    1.21 ms    2287 u, exposure    5.70 ms | old verdict   1.09 ms   2868 u, exposure   5.11 ms | cleaned 0/0
+X04g0.005 grip nudge 0.005 in X                            n 5 | new verdict    0.60 ms    1659 u, exposure    4.60 ms | old verdict   0.31 ms   1213 u, exposure   3.27 ms | cleaned 0/0
+X04g0.010 grip nudge 0.010 in X                            n 5 | new verdict    0.69 ms    1661 u, exposure    3.62 ms | old verdict   0.31 ms   1213 u, exposure   2.97 ms | cleaned 0/0
+X04g0.015 grip nudge 0.015 in X                            n 5 | new verdict    0.56 ms    1662 u, exposure    3.33 ms | old verdict   0.32 ms   1213 u, exposure   3.06 ms | cleaned 0/0
+X04g0.020 grip nudge 0.020 in X                            n 5 | new verdict    0.58 ms    1661 u, exposure    3.27 ms | old verdict   0.31 ms   1213 u, exposure   2.96 ms | cleaned 0/0
+X05+0.002 5 segments, gap 0.002                            n 9 | new verdict    0.93 ms    1956 u, exposure    3.83 ms | old verdict   0.56 ms   1943 u, exposure   3.59 ms | cleaned 0/0
+X05+0.004 5 segments, gap 0.004                            n 9 | new verdict    0.81 ms    1956 u, exposure    3.63 ms | old verdict   0.54 ms   1943 u, exposure   3.56 ms | cleaned 0/0
+X05+0.006 5 segments, gap 0.006                            n 9 | new verdict    0.87 ms    1956 u, exposure    3.65 ms | old verdict   0.51 ms   1943 u, exposure   3.81 ms | cleaned 0/0
+X05+0.009 5 segments, gap 0.009                            n 9 | new verdict    0.87 ms    1956 u, exposure    3.40 ms | old verdict   0.55 ms   1943 u, exposure   3.46 ms | cleaned 0/0
+X05-0.005 5 segments, overlap 0.005                        n 9 | new verdict    0.95 ms    1980 u, exposure    3.84 ms | old verdict   0.52 ms   1975 u, exposure   3.70 ms | cleaned 0/0
+X05-0.020 5 segments, overlap 0.020                        n 9 | new verdict    0.82 ms    1980 u, exposure    3.81 ms | old verdict   0.53 ms   1975 u, exposure   3.70 ms | cleaned 0/0
+X05-0.050 5 segments, overlap 0.050                        n 9 | new verdict    0.94 ms    1980 u, exposure    4.29 ms | old verdict   0.60 ms   2115 u, exposure   4.62 ms | cleaned 0/0
+X06-0.00 blade offset 0.00 in X                            n 5 | new verdict    0.56 ms    1659 u, exposure    3.42 ms | old verdict   0.30 ms   1213 u, exposure   3.29 ms | cleaned 0/0
+X06-0.01 blade offset 0.01 in X                            n 5 | new verdict    0.66 ms    1659 u, exposure    3.06 ms | old verdict   0.32 ms   1213 u, exposure   2.85 ms | cleaned 0/0
+X06-0.02 blade offset 0.02 in X                            n 5 | new verdict    0.59 ms    1659 u, exposure    4.41 ms | old verdict   0.32 ms   1213 u, exposure   3.63 ms | cleaned 0/0
+X06-0.03 blade offset 0.03 in X                            n 5 | new verdict    0.66 ms    1659 u, exposure    3.13 ms | old verdict   0.33 ms   1213 u, exposure   3.60 ms | cleaned 0/0
+X06-0.04 blade offset 0.04 in X                            n 5 | new verdict    0.57 ms    1659 u, exposure    2.92 ms | old verdict   0.32 ms   1213 u, exposure   3.00 ms | cleaned 0/0
+X06-0.05 blade offset 0.05 in X                            n 5 | new verdict    0.61 ms    1659 u, exposure    2.99 ms | old verdict   0.30 ms   1213 u, exposure   3.22 ms | cleaned 0/0
+X07a laminate 2 x 0.03 plates                              n 6 | new verdict    0.75 ms    1840 u, exposure    8.04 ms | old verdict   0.41 ms   1611 u, exposure   6.96 ms | cleaned 0/0
+X07b laminate 2 x 0.035 plates overlapping 0.01            n 6 | new verdict    0.76 ms    1840 u, exposure    7.47 ms | old verdict   0.40 ms   1635 u, exposure   7.70 ms | cleaned 0/0
+X07c 4 segments overlapping 0.07                           n 8 | new verdict    0.92 ms    1904 u, exposure    4.98 ms | old verdict   0.50 ms   1984 u, exposure   5.16 ms | cleaned 0/0
+V-gap: pommel 0.03 below the grip                          n 6 | new verdict    0.72 ms    2026 u, exposure    3.57 ms | old verdict   0.43 ms   1616 u, exposure   3.28 ms | cleaned 0/0
+V-out: tip wedges raised 1.0 (top at 5.30)                 n 6 | new verdict    0.73 ms    1968 u, exposure    2.85 ms | old verdict   0.41 ms   1611 u, exposure   2.95 ms | cleaned 0/0
+V-nogrip                                                   n 5 | new verdict    0.67 ms    1670 u, exposure    2.87 ms | old verdict   0.37 ms   1375 u, exposure   2.68 ms | cleaned 0/0
+V-upside-down                                              n 6 | new verdict    0.79 ms    2090 u, exposure    3.98 ms | old verdict   0.51 ms   1818 u, exposure   3.57 ms | cleaned 0/0
+A22a: only Blade part dust (0.05 cube on the guard)        n 4 | new verdict    0.47 ms    1761 u, exposure    1.79 ms | old verdict   0.26 ms   1002 u, exposure   1.45 ms | cleaned 1/1
+A22b: only Blade part enclosed in the guard                n 4 | new verdict    0.58 ms    1857 u, exposure    2.04 ms | old verdict   0.36 ms   1501 u, exposure   1.56 ms | cleaned 1/1
+A22c: only Grip part enclosed (grip inside a fat pommel)   n 6 | new verdict    0.74 ms    1094 u, exposure    4.26 ms | old verdict   0.60 ms   1846 u, exposure   4.50 ms | cleaned 1/1
+A23: 0.02-thick decorative plate on the blade              n 7 | new verdict    0.87 ms    2170 u, exposure    6.06 ms | old verdict   0.57 ms   2128 u, exposure   5.80 ms | cleaned 0/0
+A24: needle blade 0.02 x 3.0 x 0.02                        n 4 | new verdict    0.59 ms    1843 u, exposure    2.13 ms | old verdict   0.31 ms   1284 u, exposure   1.87 ms | cleaned 0/0
+P1 24 large overlapping tilted blocks                      n24 | new verdict   52.68 ms  293328 u, exposure   69.13 ms | old verdict  29.26 ms 106658 u, exposure  47.36 ms | cleaned 9/10
+P2 24 rotated cylinders                                    n24 | new verdict    9.09 ms   31650 u, exposure   32.58 ms | old verdict   3.58 ms  12713 u, exposure  24.08 ms | cleaned 0/0
+P3 24 rotated wedges                                       n24 | new verdict    2.01 ms    3086 u, exposure   23.28 ms | old verdict   1.69 ms   5322 u, exposure  22.53 ms | cleaned 0/0
+P4 24 overlapping balls                                    n24 | new verdict   10.33 ms   41837 u, exposure   16.79 ms | old verdict   2.09 ms  11301 u, exposure   7.94 ms | cleaned 0/0
+P5 comb blade (sawtooth, 24 parts)                         n15 | new verdict    1.11 ms    2284 u, exposure    5.52 ms | old verdict   0.85 ms   2507 u, exposure   5.57 ms | cleaned 0/0

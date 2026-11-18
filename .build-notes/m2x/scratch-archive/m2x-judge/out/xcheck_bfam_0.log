@@ -1,0 +1,48 @@
+  200 designs, 1400 parts, |A-B|>1e-9 0, A err 0, B err 0, ties 0, 2.1 s
+  400 designs, 2800 parts, |A-B|>1e-9 0, A err 0, B err 0, ties 0, 3.9 s
+  600 designs, 4309 parts, |A-B|>1e-9 0, A err 0, B err 0, ties 0, 6.2 s
+  800 designs, 5509 parts, |A-B|>1e-9 0, A err 0, B err 0, ties 0, 7.1 s
+  1000 designs, 7404 parts, |A-B|>1e-9 0, A err 0, B err 0, ties 0, 8.8 s
+  1200 designs, 10487 parts, |A-B|>1e-9 0, A err 0, B err 0, ties 0, 13.9 s
+  1400 designs, 11877 parts, |A-B|>1e-9 0, A err 0, B err 0, ties 0, 15.0 s
+  1600 designs, 13805 parts, |A-B|>1e-9 0, A err 0, B err 0, ties 0, 17.3 s
+  1800 designs, 15205 parts, |A-B|>1e-9 0, A err 0, B err 0, ties 0, 18.3 s
+  2000 designs, 16677 parts, |A-B|>1e-9 0, A err 0, B err 0, ties 0, 20.0 s
+  2200 designs, 18049 parts, |A-B|>1e-9 0, A err 0, B err 0, ties 0, 21.2 s
+  2400 designs, 19249 parts, |A-B|>1e-9 0, A err 0, B err 0, ties 0, 21.9 s
+  2600 designs, 21780 parts, |A-B|>1e-9 0, A err 0, B err 0, ties 0, 24.8 s
+  2800 designs, 24572 parts, |A-B|>1e-9 0, A err 0, B err 0, ties 0, 28.6 s
+  3000 designs, 25972 parts, |A-B|>1e-9 0, A err 0, B err 0, ties 0, 29.8 s
+  3200 designs, 27372 parts, |A-B|>1e-9 0, A err 0, B err 0, ties 0, 30.5 s
+  3400 designs, 28772 parts, |A-B|>1e-9 0, A err 0, B err 0, ties 0, 31.6 s
+  3600 designs, 30369 parts, |A-B|>1e-9 0, A err 0, B err 0, ties 0, 33.6 s
+  3800 designs, 31655 parts, |A-B|>1e-9 0, A err 0, B err 0, ties 0, 34.2 s
+  4000 designs, 32855 parts, |A-B|>1e-9 0, A err 0, B err 0, ties 0, 34.5 s
+  4200 designs, 34420 parts, |A-B|>1e-9 0, A err 0, B err 0, ties 0, 35.3 s
+  4400 designs, 36916 parts, |A-B|>1e-9 0, A err 0, B err 0, ties 0, 37.5 s
+  4600 designs, 40716 parts, |A-B|>1e-9 1, A err 0, B err 1, ties 0, 42.9 s
+  4800 designs, 42147 parts, |A-B|>1e-9 1, A err 0, B err 1, ties 0, 44.1 s
+  5000 designs, 43477 parts, |A-B|>1e-9 1, A err 0, B err 1, ties 0, 45.3 s
+  5200 designs, 46001 parts, |A-B|>1e-9 1, A err 0, B err 1, ties 0, 48.5 s
+  5400 designs, 47379 parts, |A-B|>1e-9 1, A err 0, B err 1, ties 0, 49.2 s
+  5600 designs, 48598 parts, |A-B|>1e-9 1, A err 0, B err 1, ties 0, 49.4 s
+  5800 designs, 49998 parts, |A-B|>1e-9 1, A err 0, B err 1, ties 0, 50.5 s
+  6000 designs, 51398 parts, |A-B|>1e-9 1, A err 0, B err 1, ties 0, 51.6 s
+  6200 designs, 52798 parts, |A-B|>1e-9 1, A err 0, B err 1, ties 0, 52.6 s
+  6400 designs, 54198 parts, |A-B|>1e-9 1, A err 0, B err 1, ties 0, 53.5 s
+  6600 designs, 55732 parts, |A-B|>1e-9 1, A err 0, B err 1, ties 0, 55.1 s
+  6800 designs, 56984 parts, |A-B|>1e-9 1, A err 0, B err 1, ties 0, 55.6 s
+  7000 designs, 58454 parts, |A-B|>1e-9 1, A err 0, B err 1, ties 0, 56.2 s
+  7200 designs, 61406 parts, |A-B|>1e-9 1, A err 0, B err 1, ties 0, 59.4 s
+  7400 designs, 64230 parts, |A-B|>1e-9 1, A err 0, B err 1, ties 0, 62.1 s
+  7600 designs, 66612 parts, |A-B|>1e-9 1, A err 0, B err 1, ties 0, 63.6 s
+  7800 designs, 68966 parts, |A-B|>1e-9 1, A err 0, B err 1, ties 0, 65.2 s
+  8000 designs, 71256 parts, |A-B|>1e-9 1, A err 0, B err 1, ties 0, 66.9 s
+XCHECK bfam every 4 shard 0/2: 8014 designs, 71368 parts, 67.1 s
+  model area: largest relative difference between A, B, J 5.97e-15; facet matching worst centroid gap 0
+  |A-B| share: <1e-12 71367, <1e-10 0, <1e-9 0, <1e-6 1, <1e-3 0, more 0
+  largest |A-B| 3.54e-08 (b_chamfer C09 Wedge a0.02 b0.12 sink0.005 turn8 side1 part 14 (Wedge): A 0.540165761606 B 0.540165796982)
+  brute force on 71368 parts (0 over the edge limit; 0 differing parts unsettled for that)
+  parts where A is outside the tie bracket by > 1e-9: 0, worst 0 ()
+  parts where B is outside the tie bracket by > 1e-9: 1, worst 3.53e-08 (b_chamfer C09 Wedge a0.02 b0.12 sink0.005 turn8 side1 part 14 (Wedge): A 0.540165762 B 0.540165797 J 0.540165762 tie 4.51e-10)
+  parts with a tie (bracket wider than 1e-9): 0, widest 0 ()

@@ -1,0 +1,11 @@
+C05 Cleaver                                            0    145    0.444    0.040     6.78 valid  [spend<addRectangle<surfaceSamples<exposure -> spend
+C09 Ornate (18 parts)                                  0    183    0.407    0.049     9.34 valid  [phase<run -> spend<exactOverlap<ownership<run]
+F5 StarterSword                                        0     46    0.282    0.038     1.79 valid  [phase<run -> spend<volumeSamples<volumeProbes<run]
+X01raw 2 blade copies at z +-0.003 (vs F5)             0    109    0.532    0.046     4.87 valid  [phase<run -> spend<exactOverlap<ownership<run]
+P1 24 large overlapping tilted blocks                  0    572    0.455    0.047    25.67 valid  [spend<exactOverlap<ownership<run -> spend<sampledOv
+P2 24 rotated cylinders                                0    240    0.252    0.049    12.86 valid  [spend<exposure<run -> spend<exposure<run]
+P3 24 rotated wedges                                   0    254    0.225    0.053    12.93 valid  [spend<lineShown<flatShown<shownArea -> spend<lineSh
+P4 24 overlapping balls                                0    160    0.314    0.035     5.90 valid  [spend<addBall<surfaceSamples<exposure -> spend<ladd
+P5 comb blade (sawtooth, 24 parts)                     0     71    0.203    0.038     2.85 valid  [phase<run -> spend<exactOverlap<ownership<run]
+repo F5                                                0     46    0.134    0.037     1.82 valid  [spend<exposedWeight<exposure<run -> spend<exposure<
+longest gap over all: 0.532 ms

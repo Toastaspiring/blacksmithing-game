@@ -1,0 +1,16 @@
+C01 Minimal                                                n 4 | new verdict    0.65 ms     300 u, exposure    3.52 ms | old verdict   0.29 ms   1057 u, exposure   4.23 ms | cleaned 0/0
+C02 Arming (Iron)                                          n 6 | new verdict    1.23 ms    6518 u, exposure    4.52 ms | old verdict   0.48 ms   1818 u, exposure   3.66 ms | cleaned 0/0
+C02 Arming (Steel)                                         n 6 | new verdict    1.41 ms    6518 u, exposure    5.36 ms | old verdict   0.50 ms   1818 u, exposure   3.74 ms | cleaned 0/0
+C04 Rapier (Steel blade)                                   n 7 | new verdict    1.73 ms    7303 u, exposure    4.85 ms | old verdict   0.63 ms   2250 u, exposure   3.86 ms | cleaned 0/0
+C05 Cleaver                                                n 6 | new verdict    0.68 ms    1169 u, exposure   11.99 ms | old verdict   0.49 ms   1614 u, exposure  12.32 ms | cleaned 0/0
+C06 Sabre (Steel)                                          n10 | new verdict    1.89 ms    6834 u, exposure    6.75 ms | old verdict   0.75 ms   2658 u, exposure   5.36 ms | cleaned 0/0
+C07 Dagger                                                 n 6 | new verdict    1.73 ms    6438 u, exposure    3.81 ms | old verdict   0.58 ms   2176 u, exposure   2.69 ms | cleaned 0/0
+C08 Greatsword                                             n 6 | new verdict    1.34 ms    6496 u, exposure    6.66 ms | old verdict   0.51 ms   1754 u, exposure   5.25 ms | cleaned 0/0
+C09 Ornate (18 parts)                                      n18 | new verdict    7.74 ms   39706 u, exposure   21.15 ms | old verdict   2.03 ms   8320 u, exposure  16.27 ms | cleaned 0/0
+C10 Gamey filler, symmetric                                n24 | new verdict    2.25 ms    1659 u, exposure   11.42 ms | old verdict   2.12 ms   6647 u, exposure  13.74 ms | cleaned 4/4
+C11 Gamey filler, lopsided                                 n24 | new verdict    1.50 ms    1889 u, exposure   12.01 ms | old verdict   2.60 ms   7262 u, exposure  13.08 ms | cleaned 4/4
+C12 Arming, blade in 5 overlapping segments                n10 | new verdict    1.71 ms    6843 u, exposure    5.96 ms | old verdict   0.74 ms   2925 u, exposure   4.59 ms | cleaned 0/0
+C13 Arming, guard = half + mirror (+CornerWedges)          n 9 | new verdict    1.79 ms    6820 u, exposure    5.86 ms | old verdict   0.77 ms   2601 u, exposure   4.82 ms | cleaned 0/0
+C14 Arming translated (0, +0.27, +0.05)                    n 6 | new verdict    1.33 ms    6518 u, exposure    4.22 ms | old verdict   0.49 ms   1818 u, exposure   3.30 ms | cleaned 0/0
+C15 Arming rotated 4 deg about Z at the grip               n 6 | new verdict    1.40 ms    6534 u, exposure    4.62 ms | old verdict   0.47 ms   1818 u, exposure   3.64 ms | cleaned 0/0
+F4 Cleaver                                                 n 5 | new verdict    0.76 ms     380 u, exposure    7.72 ms | old verdict   0.38 ms   1221 u, exposure   6.68 ms | cleaned 0/0

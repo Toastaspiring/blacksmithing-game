@@ -1,0 +1,9 @@
+crossings, blade 0.30 x 2.60, cheeks 0.03: 14 parts, canonical, Analyze.run valid=true, cleaned 1 | Core id 4: true 0.000 %, read 0.002 %, CLEANED | |dD| 0.0000
+   build Sm 0.0551 N, Ha 0.6932 H, Sh 0.3219 H | truth's verdict Sm 0.0551 N, Ha 0.6932 H, Sh 0.3219 H
+crossings, slits 0.001 wide: 14 parts, canonical, Analyze.run valid=true, cleaned 1 | Core id 4: true 0.190 %, read 0.189 %, CLEANED | |dD| 0.0000
+   build Sm 0.0550 N, Ha 0.6932 H, Sh 0.3219 H | truth's verdict Sm 0.0550 N, Ha 0.6932 H, Sh 0.3219 H
+a step of 1e-5, blade 1 x 2, cheeks 0.05: 14 parts, canonical, Analyze.run valid=true, cleaned 1 | Core id 4: true 0.005 %, read 0.002 %, CLEANED | |dD| 0.0000
+   build Sm 0.3137 H, Ha 0.4078 H, Sh 0.2586 H | truth's verdict Sm 0.3137 H, Ha 0.4078 H, Sh 0.2586 H
+windows between the lines, blade 1 x 2, ribs 0.0005 past: 24 parts, canonical, Analyze.run valid=true, cleaned 0 | Core id 4: true 11.524 %, read 11.511 %, kept | |dD| 0.0000
+   build Sm 0.2296 H, Ha 0.3386 H, Sh 0.1573 N | truth's verdict Sm 0.2296 H, Ha 0.3386 H, Sh 0.1573 N
+-- dumprun x_canon: 4 designs, 1.6 s

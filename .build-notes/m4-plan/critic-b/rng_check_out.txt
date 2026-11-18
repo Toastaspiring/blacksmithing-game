@@ -1,0 +1,60 @@
+mul32 double formula vs exact integer product mod 2^32: 300169 pairs, 0 mismatches
+fmix32 double vs integer: 20000 values, 0 mismatches
+Rng.new + 50 nextU32, double formulas vs integer: 2000 streams, 0 mismatches
+OK  fnv1a32 '' 
+OK  fnv1a32 'a' 
+OK  fnv1a32 'foobar' 
+OK  fnv1a32 'TimingStrike.Offsets' 
+OK  fnv1a32 'HoldZone.Target' 
+OK  fnv1a32 'TimingStrike.Tempo' 
+OK  fnv1a32 'PrecisionTrace.Perturb' 
+OK  mul32(0xffffffff,0xffffffff) 
+OK  mul32(0x80000000,0x2) 
+OK  mul32(0x1000193,0x811c9dc5) 
+OK  mul32(0x75bcd15,0x3ade68b1) 
+OK  mul32(0x0,0xffffffff) 
+OK  hashU32(basis,0) 
+OK  hashU32(basis,0xDEADBEEF) 
+OK  raw (1,2,3,4) x10 
+OK  state 1 '' 
+OK  u32x6 1 '' 
+OK  floats 1 '' 
+OK  state 3735928559 '' 
+OK  u32x6 3735928559 '' 
+OK  floats 3735928559 '' 
+OK  state 1 'TimingStrike.Offsets' 
+OK  u32x6 1 'TimingStrike.Offsets' 
+OK  floats 1 'TimingStrike.Offsets' 
+OK  state 3735928559 'TimingStrike.Offsets' 
+OK  u32x6 3735928559 'TimingStrike.Offsets' 
+OK  floats 3735928559 'TimingStrike.Offsets' 
+OK  state 0 '' 
+OK  u32x4 0 '' 
+OK  state 4294967295 '' 
+OK  u32x4 4294967295 '' 
+ALL T-RNG-01 vectors of the plan reproduced from the plan's own text: True
+
+T-RNG-04: top 4 bits, n = 160000, crit 37.70
+  20 streams: max chi2 30.87 at (12648430, 'TimingStrike.Tempo'); failures: []
+  int(1,16) seed 1 tag ''                       chi2 22.50
+  int(1,16) seed 1 tag 'HoldZone.Target'        chi2 9.41
+  int(1,16) seed 1 tag 'TimingStrike.Tempo'     chi2 9.24
+  int(1,16) seed 1 tag 'TimingStrike.Offsets'   chi2 12.15
+  int(1,16) seed 1 tag 'PrecisionTrace.Perturb' chi2 7.62
+  fast n=16000 (1, '') chi2 15.74
+  fast n=16000 (2, '') chi2 16.37
+  fast n=16000 (1, 'HoldZone.Target') chi2 3.44
+
+T-RNG-05: 1000 derived tags + 4 game tags
+  distinct fnv1a32: 1004 of 1004
+  seed 0x0: distinct states 1004, distinct first outputs 1004
+  seed 0x1: distinct states 1004, distinct first outputs 1004
+  seed 0xffffffff: distinct states 1004, distinct first outputs 1004
+
+T-RNG-06: 2-D chi2 on 4x4 (top 2 bits of paired draws), n = 160000
+  37 cases; max 28.20 (seeds 0x3e8,0x3e9 tag 'PrecisionTrace.Perturb'); failures: []
+   high: 28.20 seeds 0x3e8,0x3e9 tag 'PrecisionTrace.Perturb'
+
+overlapping lag-1 statistic = sum lambda_k chi2_1, lambda = [2.0, 2.0, 2.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 0.0, -0.0, -0.0]
+  mean 14.996 (chi2_15: 15), P(stat > 37.70) = 0.00489 (chi2_15: 0.00100)
+  check: simulated chi2_15 tail at 37.70 = 0.00103

@@ -1,0 +1,6 @@
+C02 Arming (Iron) #547 CornerWedge t0.030                    |dD| 0.0043  #7 CornerWedge cleaned true 4.627%  [Sm 0.0355/0.0357 N/N, Ha 0.1137/0.1136 N/N, Sh 0.1318/0.1275 N/N]
+C08 #189 CornerWedge t0.008                                  |dD| 0.0023  #7 CornerWedge cleaned true 3.530%  [Sm 0.1563/0.1563 N/N, Ha 0.0992/0.0992 N/N, Sh 0.2487/0.2510 H/H]
+F4 #224 Wedge t0.008                                         |dD| 0.0001  #6 Wedge cleaned true 2.192%  [Sm 0.4590/0.4590 H/H, Ha 0.1572/0.1573 N/N, Sh 0.3420/0.3421 H/H]
+C06 #400 Cylinder t0.012                                     |dD| 0.0001  #10 Wedge cleaned true 2.022%  [Sm 0.0730/0.0731 N/N, Ha 0.4069/0.4069 H/H, Sh 0.3000/0.3000 H/H]
+C09 #336 Cylinder t0.030                                     |dD| 0.0004  #10 Ball cleaned true 2.430%  [Sm 0.0081/0.0081 N/N, Ha 0.3390/0.3388 H/H, Sh 0.2701/0.2697 H/H]
+M3 bset:oddPoke:1:0: 4348 designs, rows differ from the truth's in 5, tier flips 0, worst |dD| 0.0043 (C02 Arming (Iron) #547 CornerWedge t0.030), no steps 0, 1 s

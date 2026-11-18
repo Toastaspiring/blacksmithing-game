@@ -1,0 +1,7 @@
+HoldZone       Normal mean 0.6196  SD of per-pattern means 0.0463 (gate 0.08)  within-pattern SD 0.0576  between-pattern SD 0.0445  per-pattern means 0.517..0.713
+HoldZone       Hard   mean 0.5559  SD of per-pattern means 0.0510 (gate 0.08)  within-pattern SD 0.0539  between-pattern SD 0.0495  per-pattern means 0.442..0.702
+TimingStrike   Normal mean 0.6587  SD of per-pattern means 0.0220 (gate 0.08)  within-pattern SD 0.1042  between-pattern SD 0.0000  per-pattern means 0.606..0.714
+TimingStrike   Hard   mean 0.5522  SD of per-pattern means 0.0213 (gate 0.08)  within-pattern SD 0.1108  between-pattern SD 0.0000  per-pattern means 0.514..0.614
+PrecisionTrace Normal mean 0.6387  SD of per-pattern means 0.0246 (gate 0.08)  within-pattern SD 0.0725  between-pattern SD 0.0185  per-pattern means 0.595..0.679
+PrecisionTrace Hard   mean 0.5776  SD of per-pattern means 0.0136 (gate 0.08)  within-pattern SD 0.0820  between-pattern SD 0.0000  per-pattern means 0.540..0.601
+(40.2 s)

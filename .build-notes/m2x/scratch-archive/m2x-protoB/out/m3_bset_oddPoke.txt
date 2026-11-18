@@ -1,0 +1,6 @@
+C02 Arming (Iron) #454 Block t0.004                          |dD| 0.0061  #7 Block kept true 1.400%  [Sm 0.0353/0.0355 N/N, Ha 0.1137/0.1137 N/N, Sh 0.1257/0.1318 N/N]
+C08 #532 Block t0.004                                        |dD| 0.0008  #7 Block kept true 1.912%  [Sm 0.1563/0.1563 N/N, Ha 0.0995/0.0992 N/N, Sh 0.2495/0.2487 H/H]
+F3 #68 Block t0.030                                          |dD| 0.0015  #4 Ball cleaned true 3.475%  [Sm 0.0000/0.0000 N/N, Ha 0.4555/0.4547 H/H, Sh 0.7111/0.7096 H/H]
+F3 #692 Cylinder t0.001                                      |dD| 0.0017  #4 Ball cleaned true 2.305%  [Sm 0.0000/0.0000 N/N, Ha 0.5059/0.5042 H/H, Sh 0.7076/0.7076 H/H]
+C09 #336 Cylinder t0.030                                     |dD| 0.0004  #10 Ball cleaned true 2.430%  [Sm 0.0081/0.0081 N/N, Ha 0.3390/0.3388 H/H, Sh 0.2701/0.2697 H/H]
+M3 bset:oddPoke:1:0: 4348 designs, rows differ from the truth's in 5, tier flips 0, worst |dD| 0.0061 (C02 Arming (Iron) #454 Block t0.004), no steps 0, 1 s

@@ -1,0 +1,2 @@
+a_void#13                                                    |dD| 0.0000  #17 Cylinder kept true 0.011%  []
+M3 dumps:a10_sub,a11_geo,a12_skin,a1_hair,a20_all,a2_real,a30_more,a3_split,a4_pin,a5_c09,a8_flush,a9_ids,a_fill,a_flat,a_hand,a_lam,a_near,a_rod,a_sheets,a_void,x_canon,x_lattice2,x_step: 1039 designs, rows differ from the truth's in 1, tier flips 0, worst |dD| 0.0000 (), no steps 1, 0 s

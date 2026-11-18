@@ -1,0 +1,4 @@
+Enclosed  100 designs with filler: bit-identical 100, filler parts kept 0
+Duplicate 100 designs with filler: bit-identical 100, filler parts kept 0
+Dust      100 designs with filler: bit-identical 100, filler parts kept 0
+Iron <-> Steel on every part: 100 of 100 designs bit-identical (steps but the material, and edge)

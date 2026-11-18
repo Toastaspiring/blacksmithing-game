@@ -1,0 +1,47 @@
+start 19:56:22
+15 rounds, medians (ms Lune 0.8.9)
+design                             validation                      M2      M3   M2+M3    x2.6  gapM2  gapM3 checks
+F5                                 valid, 0 cleaned              1.49    2.70    4.19    10.9  0.086  0.205     46
+C02                                valid, 0 cleaned              1.89    2.91    4.80    12.5  0.080  0.132     57
+C05                                valid, 0 cleaned              5.43    7.81   13.24    34.4  0.140  0.128    143
+C09                                valid, 0 cleaned              8.18    4.88   13.06    34.0  0.111  0.100    204
+P1                                 valid, 9 cleaned             22.39    6.13   28.52    74.1  0.231  0.226   1009
+P2                                 valid, 0 cleaned             11.23    8.79   20.02    52.1  0.127  0.165    258
+P3                                 valid, 0 cleaned             10.81    6.39   17.19    44.7  0.119  0.124    256
+P4                                 valid, 0 cleaned             13.91    6.75   20.65    53.7  0.162  0.147    460
+P5                                 valid, 0 cleaned              2.55    3.76    6.31    16.4  0.078  0.184     70
+P1 + floating speck                Disconnected                 20.44    5.85   26.28    68.3  0.251  0.216    902
+P1 + attached speck                valid, 9 cleaned             20.85    5.94   26.80    69.7  0.261  0.215    908
+P2 + floating speck                Disconnected                 10.81    9.99   20.79    54.1  0.106  0.147    246
+P2 + attached speck                valid, 1 cleaned             10.82   10.25   21.08    54.8  0.104  0.149    246
+P3 + floating speck                Disconnected                 10.91    6.10   17.01    44.2  0.133  0.113    262
+P3 + attached speck                valid, 1 cleaned             11.04    6.07   17.10    44.5  0.123  0.113    262
+valid 1 V1 cluster: 24 Bal         valid, 0 cleaned             33.60    5.59   39.19   101.9  0.148  0.120   1474
+valid 2 tclimb_4.json #1           valid, 13 cleaned            30.81    4.96   35.77    93.0  0.134  0.209   1542
+valid 3 tclimb_3.json #3           valid, 0 cleaned             31.81    8.64   40.45   105.2  0.105  0.221   1511
+valid 4 tclimb_2.json #4           valid, 12 cleaned            33.34    6.51   39.85   103.6  0.139  0.228   1590
+valid 5 tclimb_3.json #4           valid, 12 cleaned            27.77    6.21   33.99    88.4  0.144  0.286   1477
+valid 6 tclimb_2.json #6           valid, 13 cleaned            28.49    8.63   37.12    96.5  0.131  0.230   1398
+valid 7 tclimb_2.json #5           valid, 7 cleaned             34.34   11.67   46.01   119.6  0.125  0.266   1436
+valid 8 tclimb_3.json #6           valid, 6 cleaned             35.22   13.76   48.99   127.4  0.179  0.317   1392
+valid 9 tclimb_4.json #5           valid, 2 cleaned             32.50   14.72   47.22   122.8  0.140  0.295   1311
+valid 10 tclimb_4.json #4          valid, 9 cleaned             30.39   12.13   42.52   110.5  0.119  0.268   1283
+valid 11 tclimb_1.json #5          valid, 3 cleaned             18.81    5.07   23.88    62.1  0.163  0.143    899
+past 1 judge judge climb s         BladeNotAboveGrip,TooCompl   13.59    0.00   13.59    35.3  0.076  0.000   1323
+past 2 judge judge climb s         TooComplex                   23.58    0.00   23.58    61.3  0.129  0.000   1336
+past 3 judge judge climb s         TooComplex                   14.97    0.00   14.97    38.9  0.093  0.000   1317
+past 4 judge judge climb s         BladeNotAboveGrip,TooCompl   10.61    0.00   10.61    27.6  0.182  0.000   1237
+past 5 A climb_1 1                 TooComplex                   20.02    0.00   20.02    52.0  0.102  0.000   1349
+past 6 A climb_1 2                 BladeNotAboveGrip,TooCompl   19.47    0.00   19.47    50.6  0.105  0.000   1351
+past 7 A climb_2 1                 TooComplex                   13.80    0.00   13.80    35.9  0.095  0.000   1293
+past 8 A climb_3 1                 TooComplex                   11.81    0.00   11.81    30.7  0.088  0.000   1308
+past 9 A climb_4 1                 TooComplex                   18.87    0.00   18.87    49.1  0.081  0.000   1350
+past 10 A climb_4 2                BladeNotAboveGrip,TooCompl   10.17    0.00   10.17    26.4  0.091  0.000   1280
+past 11 B uclimb uclimb_1 b        BladeNotAboveGrip,TooCompl   22.85    0.00   22.85    59.4  0.109  0.000   1328
+past 12 B uclimb uclimb_2 b        TooComplex                   21.06    0.00   21.06    54.7  0.112  0.000   1322
+past 13 B uclimb uclimb_3 b        TooComplex                   23.88    0.00   23.88    62.1  0.108  0.000   1343
+past 14 B uclimb uclimb_4 b        BladeNotAboveGrip,TooCompl   17.69    0.00   17.69    46.0  0.112  0.000   1302
+past 15 worst_P climbL_1#1         TooComplex                   19.47    0.00   19.47    50.6  0.079  0.000   1333
+past 16 worst_P climbL_3#1         TooComplex                   21.42    0.00   21.42    55.7  0.104  0.000   1322
+past 17 worst_P climbL_2#1         TooComplex                   17.35    0.00   17.35    45.1  0.084  0.000   1340
+end 19:57:04

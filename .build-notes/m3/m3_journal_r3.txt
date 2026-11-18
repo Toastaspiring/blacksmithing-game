@@ -1,0 +1,90 @@
+M3 review round 3 -> fix round 3 (2026-11-16)
+
+Fix round 2 (workflow wf_e1fbba93-b4b, 15:13-20:07). Results: m3_fixer_2d.json, m3_fixer_2e.json.
+- Fixer D:
+  - D1 adopted as the measure's own hide test at the two points where the line crosses (Edge.hiddenGap). V1's two-sided
+    distance rule had merged neighbours that do not face each other.
+  - D2 adopted as an exact tie rule: every other part grown by TIE = 1e-10. Y draws now move G on 0 of 3,000 designs.
+  - D3 text, with O11's options costed. D4 tests. D5 re-blessed only the 5 difficulty and parity goldens.
+- Fixer E: E1 text (thin partners; O10 with the segment probe costed: 197 tiers, x1.19). E2-E5 text and minors.
+- Verify: 735/736. Only T-PERF-01 fails, on timing under load; the tree before this round fails the same way.
+Review round 3: m3_v1_adversary_r3.json and m3_v2_numbers_and_text_r3.json. Both pass = false, one major each.
+Snapshot of the tree after fix round 2: scratch m3-r3-base\repo (1,159 files). sha1 prefixes: Factors b84930f85670,
+Edge 766d9bc620aa, SPEC 9d237ee83a45.
+
+Findings (checked against the code by the lead):
+- V1 major: hiddenGap asks only q, the part the line meets next, whether it holds a face's probe (Edge.luau:159-178).
+  The measure asks every part.
+  - So a flush seam in the far plate beside the crossing reopens the slanted gap, while the verdict hides both faces.
+  - F5's laminate turned 30 deg, 0.0105 apart:
+    - upper plate in 4 flush pieces: 0.3095 Hard (Thinness 0.7457), against 0.1734 merged;
+    - one seam: 0.2186 Hard;
+    - near the window's edge: 0.2104 Hard.
+  - At 45 deg, 48 of 49 single seams play Hard.
+  - V1's fix4 (scratch m3-v1-3\fix4; out\fix4_edge.diff, fix4_factors.diff):
+    - the probe may be held by any part of the list but p, and a part of the list within REACH is looked for first;
+    - each crossing point must lie within REACH of the other across, along its face's normal.
+    - Results: --quick 701/0; goldens and digest unchanged; on the plausible set, 10 of 33,389 move (ribbed bars,
+      |dd| <= 0.0173, no tier); cost within noise.
+    - Narrower variants fail: fix leaves near-edge seams open; fix2 merges a P3 channel.
+- V2 major: a slanted slit opens at the blade's rims.
+  - Mechanism: a chord that enters the slit near a rim leaves through its mouth. hiddenGap has no chord beyond to join,
+    so the chord ends at the hidden face.
+  - F5's blade turned 45 deg and split: Hammering 0.1765 Normal (g 0.005) -> 0.2068 Hard (0.0119); the whole blade
+    plays 0.1497.
+  - Two 0.024 plates 0.0119 apart play 0.2075 Hard, against the outline's solid at 0.1501 Normal. The gap's own share
+    is about 0.04.
+  - Raster at 30 deg: cutIndex 0.7069 -> 0.7381.
+  - §4.6, §5.2, §5.6, T-DIF-04 and O10 say "at any angle", and the channel is not named.
+  - V2 tried the text (m3-v2-3 out\fixS_spec.diff, fixS_evidence.diff); --quick stays green. A code closure (continue
+    the chord through the hidden gap to where the line leaves it) was sketched, not tried.
+  - The lead's reading: an exact closure needs the gap's lateral bound (the mouth plane), which no part carries. A
+    dilation-based one overshoots the mouth by about as much as it closes. So this is the same family as O11's re-cuts:
+    sampled lines through parts are not the solid's outline.
+- Minors:
+  - 15 + 2 behaviour-changing mutants of the round's code survive the suite. V1's V1R3Edge, Normals, Merge and Three
+    specs and V2's three-plate case kill them.
+  - TIE moved the face tie to TIE rather than removing it. A part typed 1e-10 off a face moves 26 of 120 Y shifts, by
+    dG 0.0007: text.
+  - §5.6's 0.0016 is 0.0026 on the diagonal.
+  - The tie rule moved 839 plausible designs, not 850. The whole round's 853 and 53 hold.
+  - E-S2.13's golden sizes are stale, and P5 now has 237 checkpoints.
+  - 53.4 ms and 6.6 ms of headroom are quoted in five places; they are now about 54.8 and 5.2.
+  - Fixer D's notes blame F5's tip for the 45 deg rise; the rise stays without the tip.
+  - T-PERF-01 fails under load: a quiet run is needed before the commit (the lead's).
+
+Lead decisions for fix round 3. Order: fixer F, then fixer G, then V1/V2 round 4. Scratch: m3-fix3f, m3-fix3g,
+m3-v1-4, m3-v2-4.
+F1. Adopt V1's fix4 in Edge.hiddenGap and its callers, after checking it:
+    - the probe is held by any part of the set but its own;
+    - each crossing point lies within REACH of the other across, along its face's normal.
+    Settle what "the set" is in each caller, against the measure's own hiders, and write down why.
+    Re-run the non-facing checks (a rod's edge over a plate, a roof, a corner near a face, V1's fix2 P3 channel) and
+    the 0-75 deg sweep.
+    Gate: §5.5's tiers hold; every move is explained; Analyze.run alternated against m3-r3-base projects <= 57 ms; the
+    adversarial cost (stacks, many parts near crossings) is bounded and charged. Else text.
+F2. Tests: V1's V1R3Seam, Edge, Normals, Merge and Three, and V2's three-plate case (its tolerance per the mouth drift).
+    Each must fail on its mutant or the tree before, and pass on the tree.
+F3. Text for F1: §4.6 row 1, §5.2, §5.6, §14.6 T-DIF-04, the Edge and Factors headers, E-S2.13. Re-bless only if a
+    value moves.
+G1. The slit's mouth: text. V2's tried text, re-measured on the tree after F (§0.5, §5's promise, §4.6 row 1, §5.2,
+    §5.6, O10, E-S2.13), with every "at any angle" made true. O10's options get the mouth:
+    - as built;
+    - the closure, described; if an exact one is found, measured on a scratch variant, not adopted;
+    - O11's solid-following grid (iii), named as what would close mouths, re-cuts and seams together.
+G2. The minors:
+    - V1's TIE-boundary text; §5.6's 0.0016 / 0.0026; 839;
+    - the golden sizes and P5's checkpoints;
+    - the slowest valid design's projection and headroom, re-measured, in O7, §16.32, §17.2 (twice) and §14.11;
+    - M3-notes' tip attribution corrected.
+G3. Read §0.5, §5's promise and §17.1 as a whole: every exception is named at the promise with its O-number.
+
+Round-4 severity: as in round 3. The adversary attacks this round's code and hunts mechanisms outside the named classes:
+hidden gaps and their mouths, flush cuts and re-cuts, thin partners, face ties at TIE, round parts' sampled overlaps, and
+the walk's world sign. A named class at a larger figure or on another shape is minor.
+Convergence: if round 4 still finds a new class in Thinness, the lead stops patching and takes the structural question
+to the designer (O11 (iii), a measure that follows the solid), with the build's defaults applied.
+Then: quiet verify, S-PAR-02 in Studio, and the commit (stage files explicitly; docs.rar stays out).
+Agents now append plain-words [agent] lines to .build-notes\PROGRESS.md (the user's ask of 2026-11-16).
+Launched 2026-11-16 20:15: workflow wf_76b6a4bd-a50 (task wwr2w9fma), script
+workflows\scripts\m3-fix-round3-wf_76b6a4bd-a50.js. Resume with scriptPath + resumeFromRunId if cut off.

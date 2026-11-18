@@ -1,0 +1,9 @@
+UNITS fuzz:1000:11: 1000 designs, new median 4747, p99 30248, max 55466 | old median 4056, p99 13361, max 23031 (4 s)
+      55466 units (old   11929)  n18 cleaned  3  fuzz11#988 [fuzz]
+      48059 units (old   14467)  n21 cleaned  1  fuzz11#702 [fuzz]
+      47238 units (old   12148)  n23 cleaned  2  fuzz11#742 [fuzz]
+      44811 units (old    9236)  n19 cleaned  2  fuzz11#54 [fuzz]
+      40970 units (old   13326)  n21 cleaned  5  fuzz11#202 [fuzz]
+      40202 units (old   10226)  n21 cleaned  2  fuzz11#359 [fuzz]
+      35287 units (old   14570)  n24 cleaned 11  fuzz11#952 [fuzz]
+      31371 units (old    9254)  n22 cleaned  3  fuzz11#331 [fuzz]

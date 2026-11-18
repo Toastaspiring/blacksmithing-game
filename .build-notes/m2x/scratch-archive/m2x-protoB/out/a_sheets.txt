@@ -1,0 +1,21 @@
+laminate gap 0.04: core 0.95 wide + 4 sheets [11 parts, valid]
+   Core#7 true 0.00% (alone 3.91%) read 0.00% CLEANED; Sheet#8 true 1.95% (alone -) read 1.95% CLEANED; Sheet#9 true 0.65% (alone -) read 0.65% CLEANED; Sheet#10 true 0.65% (alone -) read 0.65% CLEANED; Sheet#11 true 0.65% (alone -) read 0.65% CLEANED
+   K alone Sm 0.4814 H, Ha 0.0222 N, Sh 0.0594 N
+   K + F   Sm 0.3774 H, Ha 0.3502 H, Sh 0.2594 H
+   |dD| 0.3280 Hammering TIER FLIP
+laminate gap 0.06: core 0.95 wide + 6 sheets [13 parts, valid]
+   Core#7 true 0.00% (alone 5.69%) read 0.00% CLEANED; Sheet#8 true 1.95% (alone -) read 1.95% CLEANED; Sheet#9 true 0.78% (alone -) read 0.78% CLEANED; Sheet#10 true 0.78% (alone -) read 0.78% CLEANED; Sheet#11 true 0.78% (alone -) read 0.78% CLEANED; Sheet#12 true 0.78% (alone -) read 0.78% CLEANED; Sheet#13 true 0.78% (alone -) read 0.78% CLEANED
+   K alone Sm 0.5346 H, Ha 0.0200 N, Sh 0.0594 N
+   K + F   Sm 0.3786 H, Ha 0.3502 H, Sh 0.2594 H
+   |dD| 0.3302 Hammering TIER FLIP
+laminate gap 0.10: core 0.95 wide + 10 sheets [17 parts, valid]
+   Core#7 true 0.00% (alone 8.98%) read 0.00% CLEANED; Sheet#8 true 1.95% (alone -) read 1.95% CLEANED; Sheet#9 true 0.86% (alone -) read 0.87% CLEANED; Sheet#10 true 0.86% (alone -) read 0.87% CLEANED; Sheet#11 true 0.86% (alone -) read 0.87% CLEANED; Sheet#12 true 0.86% (alone -) read 0.87% CLEANED; Sheet#13 true 0.86% (alone -) read 0.87% CLEANED; Sheet#14 true 0.86% (alone -) read 0.87% CLEANED; Sheet#15 true 0.86% (alone -) read 0.87% CLEANED; Sheet#16 true 0.86% (alone -) read 0.87% CLEANED; Sheet#17 true 0.86% (alone -) read 0.87% CLEANED
+   K alone Sm 0.6410 H, Ha 0.0225 N, Sh 0.0594 N
+   K + F   Sm 0.3811 H, Ha 0.3603 H, Sh 0.2594 H
+   |dD| 0.3378 Hammering TIER FLIP
+laminate gap 0.14: core 0.95 wide + 14 sheets [21 parts, valid]
+   Core#7 true 0.00% (alone 11.92%) read 0.00% CLEANED; Sheet#8 true 1.95% (alone -) read 1.95% CLEANED; Sheet#9 true 0.90% (alone -) read 0.90% CLEANED; Sheet#10 true 0.90% (alone -) read 0.90% CLEANED; Sheet#11 true 0.90% (alone -) read 0.90% CLEANED; Sheet#12 true 0.90% (alone -) read 0.90% CLEANED; Sheet#13 true 0.90% (alone -) read 0.90% CLEANED; Sheet#14 true 0.90% (alone -) read 0.90% CLEANED; Sheet#15 true 0.90% (alone -) read 0.90% CLEANED; Sheet#16 true 0.90% (alone -) read 0.90% CLEANED; Sheet#17 true 0.90% (alone -) read 0.90% CLEANED; Sheet#18 true 0.90% (alone -) read 0.90% CLEANED; Sheet#19 true 0.90% (alone -) read 0.90% CLEANED; Sheet#20 true 0.90% (alone -) read 0.90% CLEANED; Sheet#21 true 0.90% (alone -) read 0.90% CLEANED
+   K alone Sm 0.7474 H, Ha 0.0257 N, Sh 0.0000 N
+   K + F   Sm 0.3835 H, Ha 0.3688 H, Sh 0.2000 H
+   |dD| 0.3639 Smelting TIER FLIP
+-- dumprun a_sheets: 8 designs, 2.5 s

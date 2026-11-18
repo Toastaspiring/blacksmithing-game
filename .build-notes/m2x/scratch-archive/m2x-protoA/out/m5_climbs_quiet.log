@@ -1,0 +1,11 @@
+design (ms Lune, median of 15)                             verdict ms: old base | exposure ms: same | verdict units: same | kept: same
+climb seed 1 #1                                              14.35  219.07 |   29.97  235.07 |   293697  5788672 | 20 20
+climb seed 2 #1                                              15.07  175.90 |   26.43  185.74 |   292226  5591818 | 20 20
+climb seed 3 #1                                              22.37  356.94 |   34.63  346.47 |   301718 16532150 | 13 12
+climb seed 4 #1                                              18.26  188.94 |   31.29  219.56 |   281431  8638262 | 16 17
+design (ms Lune, median of 15)                             verdict ms: old base | exposure ms: same | verdict units: same | kept: same
+rods d 0.15 L 4.8 spread 0.01                                24.64  152.06 |   40.40  168.07 |   526480  3653890 | 15 15
+rods d 0.10 L 4.8 spread 0.01                                21.74  152.40 |   36.92  172.49 |   502862  3705354 | 16 15
+rods d 0.08 L 4.8 spread 0.01                                21.66  154.28 |   36.86  173.22 |   493412  3679166 | 16 16
+rods d 0.15 L 3.5 spread 0.01                                22.25  132.47 |   33.38  143.55 |   511755  3166336 | 16 15
+rods d 0.10 L 3.5 spread 0.01                                21.68  125.83 |   38.45  153.26 |   501062  3033154 | 16 16

@@ -1,0 +1,2 @@
+n4 ext0.040 gap0.0030 bend4                                  |dD| 0.0001  #2 Cylinder kept true 1.722%  [Sm 0.0771/0.0772 N/N, Ha 0.0824/0.0824 N/N, Sh 0.0344/0.0344 N/N]
+M3 bset:curvedGrip:1:0: 280 designs, rows differ from the truth's in 1, tier flips 0, worst |dD| 0.0001 (n4 ext0.040 gap0.0030 bend4), no steps 0, 0 s

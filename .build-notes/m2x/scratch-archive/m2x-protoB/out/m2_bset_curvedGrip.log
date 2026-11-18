@@ -1,0 +1,6 @@
+  bset:curvedGrip:1:0: 50 / 280 designs, 2 s
+  bset:curvedGrip:1:0: 100 / 280 designs, 4 s
+  bset:curvedGrip:1:0: 150 / 280 designs, 6 s
+  bset:curvedGrip:1:0: 200 / 280 designs, 8 s
+  bset:curvedGrip:1:0: 250 / 280 designs, 10 s
+M2 bset:curvedGrip:1:0 -> m2_bset_curvedGrip.jsonl: 280 designs, 12 s

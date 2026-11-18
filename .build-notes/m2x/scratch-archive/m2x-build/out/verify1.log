@@ -1,0 +1,14 @@
+[tools] rojo Rojo 7.7.1
+[tools] luau-lsp 1.70.1
+[tools] lune lune 0.8.9
+[tools] tools/luau-lsp/globalTypes.None.d.luau: 677555 bytes, 2238 declaration blocks
+[sourcemaps] sourcemap.json, test.sourcemap.json
+[T-META-07] ok: 119 files, 707 requires; compared against sourcemap.json 99, test.sourcemap.json 109
+[luau-lsp] pass A: 0 error(s)
+  error   tests/Physics/Analyze.spec.luau:253:79-108: (W0) TypeError: Table type '{| code: string |}' not compatible with type '{| code: string, partId: number |}' because the former is missing field 'partId'
+  error   tests/Physics/Analyze.spec.luau:253:111-133: (W0) TypeError: Table type '{| code: string |}' not compatible with type '{| code: string, partId: number |}' because the former is missing field 'partId'
+  lint    tests/Physics/Analyze.spec.luau:10:7-11: (W0) ImportUnused: Import 'serde' is never used; prefix with '_' to silence
+  error   tests/Physics/Cover.spec.luau:202:5-31: (W0) TypeError: Unknown type used in + operation; consider adding a type annotation to 'pos'
+  lint    tests/Physics/Cover.spec.luau:38:7-9: (W0) LocalUnused: Variable 'EPS' is never used; prefix with '_' to silence
+[luau-lsp] pass B: 3 error(s)
+LUAU-LSP FAILED: 3 error(s), 2 other lint(s) (4.4 s)

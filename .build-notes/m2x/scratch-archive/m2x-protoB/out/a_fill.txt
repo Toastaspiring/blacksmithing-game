@@ -1,0 +1,2 @@
+seed 1: designs 145, nothing of K changes 52 (measure differs 0, ownership differs 0), a fill part kept with K's row unchanged 93, K's row changed 0 (truth flips too 0), order differs 0
+-- dumprun a_fill: 0 designs, 5.5 s

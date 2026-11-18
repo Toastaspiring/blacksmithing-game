@@ -1,0 +1,4 @@
+  FAIL  Physics/Verdict › §4.9 spend reports the reading's work (6.4 ms)
+        a slit under 3 lids: expected 70312, got 70586
+        at tests/Physics/Verdict.spec.luau:862
+RESULT pass=205 fail=1 skip=0 files=50 time=96.88s

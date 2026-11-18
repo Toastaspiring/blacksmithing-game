@@ -1,0 +1,64 @@
+rod r 0.20 in 16 walls turned 0.000, gap 0.0070 [21 parts, valid]: filler true 0.000 %
+   base  read 0.000 % CLEANED | K vs K+F |dD| 0.0000 | reading vs truth |dD| 0.0000
+   canon read 0.000 % CLEANED | K vs K+F |dD| 0.0000 | reading vs truth |dD| 0.0000
+   fine  read 0.000 % CLEANED | K vs K+F |dD| 0.0000 | reading vs truth |dD| 0.0000
+rod r 0.20 in 16 walls turned 5.625, gap 0.0070 [21 parts, valid]: filler true 0.000 %
+   base  read 0.219 % CLEANED | K vs K+F |dD| 0.0000 | reading vs truth |dD| 0.0000
+   canon read 0.219 % CLEANED | K vs K+F |dD| 0.0000 | reading vs truth |dD| 0.0000
+   fine  read 0.219 % CLEANED | K vs K+F |dD| 0.0000 | reading vs truth |dD| 0.0000
+rod r 0.20 in 16 walls turned 0.000, gap 0.0072 [21 parts, valid]: filler true 0.000 %
+   base  read 0.000 % CLEANED | K vs K+F |dD| 0.0000 | reading vs truth |dD| 0.0000
+   canon read 0.000 % CLEANED | K vs K+F |dD| 0.0000 | reading vs truth |dD| 0.0000
+   fine  read 0.000 % CLEANED | K vs K+F |dD| 0.0000 | reading vs truth |dD| 0.0000
+rod r 0.20 in 16 walls turned 5.625, gap 0.0072 [21 parts, valid]: filler true 0.000 %
+   base  read 2.654 % kept | K vs K+F |dD| 0.4712 TIER | reading vs truth |dD| 0.4712 TIER
+   canon read 2.654 % kept | K vs K+F |dD| 0.4712 TIER | reading vs truth |dD| 0.4712 TIER
+   fine  read 2.654 % kept | K vs K+F |dD| 0.4712 TIER | reading vs truth |dD| 0.4712 TIER
+rod r 0.20 in 16 walls turned 0.000, gap 0.0074 [21 parts, valid]: filler true 0.000 %
+   base  read 0.000 % CLEANED | K vs K+F |dD| 0.0000 | reading vs truth |dD| 0.0000
+   canon read 0.000 % CLEANED | K vs K+F |dD| 0.0000 | reading vs truth |dD| 0.0000
+   fine  read 0.000 % CLEANED | K vs K+F |dD| 0.0000 | reading vs truth |dD| 0.0000
+rod r 0.20 in 16 walls turned 5.625, gap 0.0074 [21 parts, valid]: filler true 0.000 %
+   base  read 5.089 % kept | K vs K+F |dD| 0.4712 TIER | reading vs truth |dD| 0.4712 TIER
+   canon read 5.089 % kept | K vs K+F |dD| 0.4712 TIER | reading vs truth |dD| 0.4712 TIER
+   fine  read 5.089 % kept | K vs K+F |dD| 0.4712 TIER | reading vs truth |dD| 0.4712 TIER
+rod r 0.20 in 16 walls turned 0.000, gap 0.0076 [21 parts, valid]: filler true 0.000 %
+   base  read 0.000 % CLEANED | K vs K+F |dD| 0.0000 | reading vs truth |dD| 0.0000
+   canon read 0.000 % CLEANED | K vs K+F |dD| 0.0000 | reading vs truth |dD| 0.0000
+   fine  read 0.000 % CLEANED | K vs K+F |dD| 0.0000 | reading vs truth |dD| 0.0000
+rod r 0.20 in 16 walls turned 5.625, gap 0.0076 [21 parts, valid]: filler true 0.000 %
+   base  read 7.525 % kept | K vs K+F |dD| 0.4713 TIER | reading vs truth |dD| 0.4713 TIER
+   canon read 7.525 % kept | K vs K+F |dD| 0.4713 TIER | reading vs truth |dD| 0.4713 TIER
+   fine  read 7.525 % kept | K vs K+F |dD| 0.4713 TIER | reading vs truth |dD| 0.4713 TIER
+rod r 0.20 in 16 walls turned 0.000, gap 0.0078 [21 parts, valid]: filler true 0.000 %
+   base  read 0.000 % CLEANED | K vs K+F |dD| 0.0000 | reading vs truth |dD| 0.0000
+   canon read 0.000 % CLEANED | K vs K+F |dD| 0.0000 | reading vs truth |dD| 0.0000
+   fine  read 0.000 % CLEANED | K vs K+F |dD| 0.0000 | reading vs truth |dD| 0.0000
+rod r 0.20 in 16 walls turned 5.625, gap 0.0078 [21 parts, valid]: filler true 0.000 %
+   base  read 9.960 % kept | K vs K+F |dD| 0.4712 TIER | reading vs truth |dD| 0.4712 TIER
+   canon read 9.960 % kept | K vs K+F |dD| 0.4712 TIER | reading vs truth |dD| 0.4712 TIER
+   fine  read 9.960 % kept | K vs K+F |dD| 0.4712 TIER | reading vs truth |dD| 0.4712 TIER
+rod r 0.10 in 16 walls turned 0.000, gap 0.0094 [21 parts, valid]: filler true 0.000 %
+   base  read 0.000 % CLEANED | K vs K+F |dD| 0.0000 | reading vs truth |dD| 0.0000
+   canon read 0.000 % CLEANED | K vs K+F |dD| 0.0000 | reading vs truth |dD| 0.0000
+   fine  read 0.000 % CLEANED | K vs K+F |dD| 0.0000 | reading vs truth |dD| 0.0000
+rod r 0.10 in 16 walls turned 5.625, gap 0.0094 [21 parts, valid]: filler true 0.000 %
+   base  read 0.611 % CLEANED | K vs K+F |dD| 0.0000 | reading vs truth |dD| 0.0000
+   canon read 0.611 % CLEANED | K vs K+F |dD| 0.0000 | reading vs truth |dD| 0.0000
+   fine  read 0.611 % CLEANED | K vs K+F |dD| 0.0000 | reading vs truth |dD| 0.0000
+rod r 0.10 in 16 walls turned 0.000, gap 0.0096 [21 parts, valid]: filler true 0.000 %
+   base  read 0.000 % CLEANED | K vs K+F |dD| 0.0000 | reading vs truth |dD| 0.0000
+   canon read 0.000 % CLEANED | K vs K+F |dD| 0.0000 | reading vs truth |dD| 0.0000
+   fine  read 0.000 % CLEANED | K vs K+F |dD| 0.0000 | reading vs truth |dD| 0.0000
+rod r 0.10 in 16 walls turned 5.625, gap 0.0096 [21 parts, valid]: filler true 0.000 %
+   base  read 5.654 % kept | K vs K+F |dD| 0.3000 TIER | reading vs truth |dD| 0.3000 TIER
+   canon read 5.654 % kept | K vs K+F |dD| 0.3000 TIER | reading vs truth |dD| 0.3000 TIER
+   fine  read 5.654 % kept | K vs K+F |dD| 0.3000 TIER | reading vs truth |dD| 0.3000 TIER
+rod r 0.10 in 16 walls turned 0.000, gap 0.0098 [21 parts, valid]: filler true 0.000 %
+   base  read 0.000 % CLEANED | K vs K+F |dD| 0.0000 | reading vs truth |dD| 0.0000
+   canon read 0.000 % CLEANED | K vs K+F |dD| 0.0000 | reading vs truth |dD| 0.0000
+   fine  read 0.000 % CLEANED | K vs K+F |dD| 0.0000 | reading vs truth |dD| 0.0000
+rod r 0.10 in 16 walls turned 5.625, gap 0.0098 [21 parts, valid]: filler true 0.000 %
+   base  read 10.698 % kept | K vs K+F |dD| 0.3000 TIER | reading vs truth |dD| 0.3000 TIER
+   canon read 10.698 % kept | K vs K+F |dD| 0.3000 TIER | reading vs truth |dD| 0.3000 TIER
+   fine  read 10.698 % kept | K vs K+F |dD| 0.3000 TIER | reading vs truth |dD| 0.3000 TIER

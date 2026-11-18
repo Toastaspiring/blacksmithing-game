@@ -1,0 +1,181 @@
+5 KILLED physics the AABB shrunk: a flush surface point refused
+2 KILLED physics only a copy of the part before it
+1 KILLED physics never a copy of the first part
+4 KILLED physics no copies, by the flag
+3 KILLED physics no copies
+6 KILLED physics sd biased
+10 KILLED physics buried only under a lower index
+8 KILLED physics coincidence hides both
+7 KILLED physics the higher index keeps the face
+9 KILLED physics coincidence hides neither
+11 KILLED physics no probe
+15 KILLED physics a flat patch's points all at its centre
+12 KILLED physics probe strictly inside
+14 KILLED physics a Cylinder's side on its tangent plane
+17 KILLED physics all on the middle ring
+18 KILLED physics radial not radial
+19 KILLED physics the centre's normal everywhere: the sub-points on the centre's radius
+22 KILLED physics the last near part never asked
+21 KILLED physics not back on the surface, the radial normal
+23 KILLED physics the first near part never asked
+24 KILLED physics inverted
+26 KILLED physics a swap that loses a part
+27 KILLED physics never hidden
+28 KILLED physics always hidden
+0 SURVIVED  the second part never a copy
+30 KILLED physics e2 forgotten
+31 KILLED physics e1 forgotten
+13 SURVIVED  no AABB test (cost)
+16 SURVIVED  off the axis
+32 KILLED physics half the reach
+20 SURVIVED  back on the surface, the centre's normal for the probe
+35 KILLED physics margin 0
+37 KILLED physics d0 biased
+25 SURVIVED  no hider-first (bits equal, cost only)
+39 KILLED physics no probe at the centre
+40 KILLED physics no coincidence at the centre
+41 KILLED physics no burial at the centre
+29 SURVIVED  no eps: a Ball's lim 0
+42 KILLED physics no probe at the centre
+43 KILLED physics the index reversed at the centre
+45 KILLED physics a swap that loses a candidate
+33 SURVIVED  no tol (a Ball's m0 tiny)
+34 SURVIVED  a large patch's margin only tol
+36 SURVIVED  the sample's AABB tight
+49 KILLED physics everything inside is near (cost)
+38 SURVIVED  the probe's AABB tight
+50 KILLED physics the last near part decides the centre
+51 KILLED physics a far hider ignored
+52 KILLED physics a far hider shows
+54 KILLED physics nothing near: reads nothing
+55 KILLED physics a Ball through patchPoint
+56 KILLED physics a near part never hides a Ball
+44 SURVIVED  no hider-first (bits equal, cost only)
+57 KILLED physics a near part always hides a Ball
+46 SURVIVED  near by the sample alone
+58 KILLED physics never uniform
+59 KILLED physics a corner always shows
+61 KILLED physics corners at 1 in a
+62 KILLED physics corners at 1 in b
+63 KILLED physics no probe at the corners
+64 KILLED physics inverted
+65 KILLED physics only a hidden corner breaks uniformity
+47 SURVIVED  near by the probe alone
+66 KILLED physics only a showing corner breaks uniformity
+67 KILLED physics corners never break uniformity
+48 SURVIVED  near by both
+68 KILLED physics a corner off the surface counts
+71 KILLED physics no rim credit
+72 KILLED physics no spend for the corners
+53 SURVIVED  no near parts: falls through (equivalent?)
+75 KILLED physics the slit rule off
+76 KILLED physics the slit rule off, by the flag
+60 SURVIVED  3 corners
+69 SURVIVED  a curved corner must be on the surface by sd (it is)
+70 SURVIVED  a hidden corner counts as showing (it only gets here when the centre shows)
+73 SURVIVED  the search with one near part (equivalent)
+74 SURVIVED  the search when all show (reads the same?)
+82 KILLED physics inverted
+83 KILLED physics any corner will do
+84 KILLED physics inverted
+77 SURVIVED  the last near part cannot hide all
+85 KILLED physics one part never enough
+86 KILLED physics no spend for the search
+88 KILLED physics a uniform hidden patch shows
+87 KILLED physics never uniform here: every patch on a sub-grid
+89 KILLED physics a uniform showing patch hidden
+78 SURVIVED  the centre not asked
+90 KILLED physics off-surface counted in the denominator
+91 KILLED physics a column missing
+92 KILLED physics a row missing
+93 KILLED physics the diagonal only
+94 KILLED physics off-surface sub-points count
+95 KILLED physics on-surface sub-points refused
+96 KILLED physics a curved patch's sub-points refused
+97 KILLED physics the denominator doubled
+98 KILLED physics no probe at the sub-points
+100 KILLED physics hidden counted twice
+79 SURVIVED  one part: 3 corners
+80 SURVIVED  one part: corners at 1 in a
+103 KILLED physics over 16, not over the surface's
+104 KILLED physics no strip credit: 0 returned
+81 SURVIVED  one part: corners at 1 in b
+105 KILLED physics every partial patch through the credit
+106 KILLED physics any sub-point shows all
+107 KILLED physics no centre credit
+108 KILLED physics centre credit always
+109 KILLED physics centre credit at the rim's
+110 KILLED physics no rim credit
+111 KILLED physics rim credit always
+112 KILLED physics rim credit at the centre's
+113 KILLED physics copies hide
+114 KILLED physics Dust hides
+116 KILLED physics at the floor exactly, Dust
+117 KILLED physics no Dust class
+118 KILLED physics Dust says Enclosed
+119 KILLED physics copies get a verdict
+120 KILLED physics a copy says Dust
+121 KILLED physics a Ball on the Block estimate
+123 KILLED physics one cell fewer
+99 SURVIVED  the centre's normal for the sub-points' probes
+124 KILLED physics the ladder from twice the spacing
+101 SURVIVED  no spend for the sub-grid
+126 KILLED physics 1 cell per triangle edge
+102 SURVIVED  nothing on the surface reads all (dead?)
+127 KILLED physics no spend writing samples
+128 KILLED physics a part its own candidate
+129 KILLED physics copies and Dust are candidates
+130 KILLED physics margin 0: gaps within the probe not seen
+131 KILLED physics margin just the probe
+132 KILLED physics no broad phase (cost)
+133 KILLED physics of 1, not of the area
+134 KILLED physics a head start
+135 KILLED physics no spend per sample
+136 KILLED physics the first sample never read
+137 KILLED physics the last sample never read
+138 KILLED physics only the last sample counts
+140 KILLED physics stops early at half
+115 SURVIVED  at the floor exactly, no hider
+139 KILLED physics no spend per sample, again
+143 KILLED physics inverted
+144 KILLED physics nothing kept
+142 KILLED physics exactly at the threshold: cleaned
+141 KILLED physics no early exit (bits equal, cost only)
+145 KILLED physics Enclosed says Dust
+146 KILLED physics the ladder counts cleaned parts
+147 KILLED physics the ladder counts cleaned candidates
+148 KILLED physics the ladder's margin without h
+152 KILLED physics cleaned parts measured
+150 KILLED physics no spend in the ladder
+149 KILLED physics no candidates in the charge
+122 SURVIVED  an exact division: ceil of rounding
+153 KILLED physics the measure on the verdict's triangle minimum
+154 KILLED physics no spend writing the measure's samples
+155 KILLED physics surfSamples of the last part
+156 KILLED physics cleaned parts hide in the measure
+157 KILLED physics the measure's margin without h
+158 KILLED physics no spend per measure sample
+159 KILLED physics no spend per measure sample, again
+160 KILLED physics the whole area
+161 KILLED physics minCells not on edge a
+125 SURVIVED  strictly under
+163 KILLED physics the measure's triangles at 2 by default
+151 SURVIVED  strictly under
+162 SURVIVED  minCells not on edge b
+164 SURVIVED  a Wedge's +X side at 1
+165 SURVIVED  a Wedge's -X side at 1
+166 SURVIVED  a CornerWedge's x side at 1
+167 SURVIVED  a CornerWedge's z side at 1
+170 KILLED physics Dust votes
+172 KILLED physics at exactly 1.5 no vote
+173 KILLED physics every polyhedron votes
+174 KILLED physics no flip to ey >= 0
+175 KILLED physics the flip keeps ex
+176 KILLED physics the tilt rule off
+178 KILLED physics the tilt in XY, the old rule (a Z handle's XY part)
+179 KILLED physics no vote: 0/0
+180 KILLED physics not normalized
+168 SURVIVED  a CornerWedge's slope at 1
+169 SURVIVED  a CornerWedge's other slope at 1
+171 SURVIVED  a Ball votes
+177 SURVIVED  at exactly 45 no vote

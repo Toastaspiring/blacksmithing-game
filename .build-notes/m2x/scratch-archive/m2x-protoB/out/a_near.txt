@@ -1,0 +1,2 @@
+seed 1: 147 designs with fill that covers nothing: 0 parts' readings moved
+-- dumprun a_near: 0 designs, 5.4 s

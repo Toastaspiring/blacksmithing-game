@@ -1,0 +1,9 @@
+UNITS bset:oddPoke:8:3: 544 designs, new median 2327, p99 12648, max 13246 | old median 2093, p99 8974, max 9182 (2 s)
+      13246 units (old    8739)  n19 cleaned  0  C09 #516 Cylinder t0.030 [bset-oddPoke]
+      13243 units (old    8656)  n19 cleaned  0  C09 #289 Cylinder t0.001 [bset-oddPoke]
+      12869 units (old    8719)  n19 cleaned  0  C09 #268 Wedge t0.008 [bset-oddPoke]
+      12763 units (old    8629)  n19 cleaned  0  C09 #474 Cylinder t0.002 [bset-oddPoke]
+      12741 units (old    8974)  n19 cleaned  0  C09 #145 Block t0.080 [bset-oddPoke]
+      12648 units (old    8631)  n19 cleaned  0  C09 #246 CornerWedge t0.030 [bset-oddPoke]
+      12620 units (old    8958)  n19 cleaned  0  C09 #235 Wedge t0.020 [bset-oddPoke]
+      12492 units (old    8666)  n19 cleaned  0  C09 #214 Cylinder t0.004 [bset-oddPoke]

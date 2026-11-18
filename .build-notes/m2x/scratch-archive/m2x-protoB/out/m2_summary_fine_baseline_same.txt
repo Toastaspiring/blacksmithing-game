@@ -1,0 +1,38 @@
+M2 BASELINE on the same designs: 29936 designs from attack-a10_sub 632, attack-a11_geo 41, attack-a12_skin 12, attack-a1_hair 48, attack-a20_all 20, attack-a2_real 31, attack-a30_more 40, attack-a3_split 36, attack-a4_pin 8, attack-a5_c09 7, attack-a8_flush 57, attack-a9_ids 5, attack-a_flat 16, attack-a_hand 13, attack-a_lam 14, attack-a_rod 14, attack-a_sheets 8, attack-a_void 16, attack-x_canon 4, attack-x_lattice2 12, attack-x_step 5, bset-ballRivet 9144, bset-bead 264, bset-curvedGrip 280, bset-oddPoke 4348, fx-adversarial 4, fx-calibration 15, fx-golden 5, fx-perf 5, fx-regression 33, fx-validation 9, plausible-ballRivet 7296, plausible-cylRib 3432, plausible-cylRivet 1782, plausible-pommelInBlock 507, plausible-rod 720, plausible-wrapRings 1053
+  shape          parts   fine | false Enclosed at true >= 2.5/3/5/7.5/10/15/20 % | false kept at true < 1.5/1/0.5/0.25 %
+  Block         114328    889 | new cleaned    482 FE 0/0/0/0/0/0/0              | FK 1/0/0/0
+                     0      0 | old cleaned    470 FE 2/2/2/2/2/0/0              | FK 19/19/19/17
+  Wedge          50450     57 | new cleaned     24 FE 0/0/0/0/0/0/0              | FK 0/0/0/0
+                     0      0 | old cleaned     26 FE 0/0/0/0/0/0/0              | FK 0/0/0/0
+  CornerWedge     1521     79 | new cleaned     43 FE 0/0/0/0/0/0/0              | FK 0/0/0/0
+                     0      0 | old cleaned     45 FE 2/2/0/0/0/0/0              | FK 0/0/0/0
+  Cylinder       41809   2266 | new cleaned    725 FE 192/0/0/0/0/0/0            | FK 10/1/1/1
+                     0      0 | old cleaned    707 FE 243/95/7/7/7/7/7           | FK 88/48/22/11
+  Ball           61668   6913 | new cleaned   3954 FE 558/223/0/0/0/0/0          | FK 0/0/0/0
+                     0      0 | old cleaned   3222 FE 219/51/26/21/15/8/2        | FK 7/1/0/0
+  ALL           269776  10204 | new cleaned   5228 FE 750/223/0/0/0/0/0          | FK 11/1/1/1
+                     0      0 | old cleaned   4470 FE 466/150/35/30/24/15/9      | FK 114/68/41/28
+  worst false Enclosed (new): true 3.530% read 1.900%  ballRivet|C09|guardZ d0.14 r47 cap0.0100 [plausible-ballRivet] part 19 Ball Rivet
+  worst false Enclosed (new): true 3.520% read 1.947%  ballRivet|C09|guardZ d0.14 xy30 cap0.0100 [plausible-ballRivet] part 19 Ball Rivet
+  worst false Enclosed (new): true 3.505% read 1.132%  d0.10 gap0.05 t1 [bset-bead] part 5 Ball Bead
+  worst false Enclosed (new): true 3.475% read 1.618%  F3 #68 Block t0.030 [bset-oddPoke] part 4 Ball QuillonL
+  worst false Enclosed (new): true 3.013% read 1.673%  ballRivet|C02|guardZ d0.14 r47 cap0.0300 [plausible-ballRivet] part 7 Ball Rivet
+  worst false Enclosed (new): true 3.013% read 1.673%  ballRivet|C02|guardZ d0.14 r47 cap0.0300 [plausible-ballRivet] part 8 Ball Rivet
+  worst false kept (new): true 0.0112% read 3.806%  a_void#13 [attack-a_void] part 17 Cylinder Rod
+  worst false kept (new): true 1.2899% read 2.020%  wrapRings|C06|n5 extra0.01 gap0.0020 [plausible-wrapRings] part 2 Cylinder Grip
+  worst false kept (new): true 1.2899% read 2.020%  wrapRings|C06|n5 extra0.02 gap0.0020 [plausible-wrapRings] part 2 Cylinder Grip
+  worst false kept (new): true 1.2899% read 2.020%  wrapRings|C06|n5 extra0.04 gap0.0020 [plausible-wrapRings] part 2 Cylinder Grip
+  worst false kept (new): true 1.2949% read 2.020%  wrapRings|C06|n3 extra0.01 gap0.0040 [plausible-wrapRings] part 2 Cylinder Grip
+  worst false kept (new): true 1.2949% read 2.020%  wrapRings|C06|n3 extra0.02 gap0.0040 [plausible-wrapRings] part 2 Cylinder Grip
+  worst false Enclosed (old): true 47.975% read 50.538%  a_hand#13 [attack-a_hand] part 4 Ball Ball
+  worst false Enclosed (old): true 41.565% read 40.520%  a_hand#2 [attack-a_hand] part 4 Cylinder Rod
+  worst false Enclosed (old): true 40.670% read 40.040%  a_hand#4 [attack-a_hand] part 4 Cylinder Rod
+  worst false Enclosed (old): true 39.443% read 38.997%  a_hand#8 [attack-a_hand] part 4 Cylinder Rod
+  worst false Enclosed (old): true 38.944% read 38.563%  a_hand#10 [attack-a_hand] part 4 Cylinder Rod
+  worst false Enclosed (old): true 33.525% read 35.800%  a_hand#12 [attack-a_hand] part 4 Ball Ball
+  worst false kept (old): true 0.0000% read 0.002%  a_flat#6 [attack-a_flat] part 20 Block Core
+  worst false kept (old): true 0.0000% read 0.002%  x_canon#1 [attack-x_canon] part 4 Block Core
+  worst false kept (old): true 0.0000% read 0.002%  x_lattice2#1 [attack-x_lattice2] part 4 Block Core
+  worst false kept (old): true 0.0000% read 0.002%  x_lattice2#3 [attack-x_lattice2] part 4 Block Core
+  worst false kept (old): true 0.0000% read 0.001%  x_lattice2#7 [attack-x_lattice2] part 4 Block Core
+  worst false kept (old): true 0.0023% read 0.001%  a_flat#10 [attack-a_flat] part 20 Block Core

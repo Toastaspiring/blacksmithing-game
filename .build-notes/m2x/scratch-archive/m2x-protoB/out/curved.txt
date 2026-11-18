@@ -1,0 +1,52 @@
+cylinder + copy spun 37.000 deg                [cyl 32 ball 4] #1 Cylinder read 58.391% true 100.000%; #2 Cylinder read 41.807% true 0.000%
+cylinder + copy spun 37.000 deg                [cyl 64 ball 8] #1 Cylinder read 58.379% true 100.000%; #2 Cylinder read 41.680% true 0.000%
+cylinder + copy spun 37.000 deg                [cyl 32 ball 4 canon] #1 Cylinder read 100.000% true 100.000%; #2 Cylinder read 0.000% true 0.000%
+cylinder + copy spun 37.000 deg                [cyl 64 ball 8 canon] #1 Cylinder read 100.000% true 100.000%; #2 Cylinder read 0.000% true 0.000%
+cylinder + copy spun 5.625 deg                 [cyl 32 ball 4] #1 Cylinder read 58.408% true 100.000%; #2 Cylinder read 41.834% true 0.000%
+cylinder + copy spun 5.625 deg                 [cyl 64 ball 8] #1 Cylinder read 100.000% true 100.000%; #2 Cylinder read 0.000% true 0.000%
+cylinder + copy spun 5.625 deg                 [cyl 32 ball 4 canon] #1 Cylinder read 100.000% true 100.000%; #2 Cylinder read 0.000% true 0.000%
+cylinder + copy spun 5.625 deg                 [cyl 64 ball 8 canon] #1 Cylinder read 100.000% true 100.000%; #2 Cylinder read 0.000% true 0.000%
+cylinder + copy spun 3.000 deg                 [cyl 32 ball 4] #1 Cylinder read 58.388% true 100.000%; #2 Cylinder read 41.801% true 0.000%
+cylinder + copy spun 3.000 deg                 [cyl 64 ball 8] #1 Cylinder read 58.379% true 100.000%; #2 Cylinder read 41.681% true 0.000%
+cylinder + copy spun 3.000 deg                 [cyl 32 ball 4 canon] #1 Cylinder read 100.000% true 100.000%; #2 Cylinder read 0.000% true 0.000%
+cylinder + copy spun 3.000 deg                 [cyl 64 ball 8 canon] #1 Cylinder read 100.000% true 100.000%; #2 Cylinder read 0.000% true 0.000%
+cylinder + copy spun 1.000 deg                 [cyl 32 ball 4] #1 Cylinder read 58.355% true 100.000%; #2 Cylinder read 41.723% true 0.000%
+cylinder + copy spun 1.000 deg                 [cyl 64 ball 8] #1 Cylinder read 58.389% true 100.000%; #2 Cylinder read 41.646% true 0.000%
+cylinder + copy spun 1.000 deg                 [cyl 32 ball 4 canon] #1 Cylinder read 100.000% true 100.000%; #2 Cylinder read 0.000% true 0.000%
+cylinder + copy spun 1.000 deg                 [cyl 64 ball 8 canon] #1 Cylinder read 100.000% true 100.000%; #2 Cylinder read 0.000% true 0.000%
+ball + copy turned 77 deg                      [cyl 32 ball 4] #1 Ball read 51.218% true 0.000%; #2 Ball read 50.387% true 100.000%
+ball + copy turned 77 deg                      [cyl 64 ball 8] #1 Ball read 50.109% true 0.000%; #2 Ball read 50.308% true 100.000%
+ball + copy turned 77 deg                      [cyl 32 ball 4 canon] #1 Ball read 0.000% true 0.000%; #2 Ball read 100.000% true 100.000%
+ball + copy turned 77 deg                      [cyl 64 ball 8 canon] #1 Ball read 0.000% true 0.000%; #2 Ball read 100.000% true 100.000%
+rod r 0.2 in a sleeve r+0.0005, spun 5.6 deg   [cyl 32 ball 4] #1 Cylinder read 82.559% true 100.000%; #2 Cylinder read 18.046% true 0.000%
+rod r 0.2 in a sleeve r+0.0005, spun 5.6 deg   [cyl 64 ball 8] #1 Cylinder read 100.000% true 100.000%; #2 Cylinder read 0.000% true 0.000%
+rod r 0.2 in a sleeve r+0.0005, spun 5.6 deg   [cyl 32 ball 4 canon] #1 Cylinder read 100.000% true 100.000%; #2 Cylinder read 0.000% true 0.000%
+rod r 0.2 in a sleeve r+0.0005, spun 5.6 deg   [cyl 64 ball 8 canon] #1 Cylinder read 100.000% true 100.000%; #2 Cylinder read 0.000% true 0.000%
+rod r 0.2 in a sleeve r+0.0010, spun 5.6 deg   [cyl 32 ball 4] #1 Cylinder read 100.000% true 100.000%; #2 Cylinder read 0.000% true 0.000%
+rod r 0.2 in a sleeve r+0.0010, spun 5.6 deg   [cyl 64 ball 8] #1 Cylinder read 100.000% true 100.000%; #2 Cylinder read 0.000% true 0.000%
+rod r 0.2 in a sleeve r+0.0010, spun 5.6 deg   [cyl 32 ball 4 canon] #1 Cylinder read 100.000% true 100.000%; #2 Cylinder read 0.000% true 0.000%
+rod r 0.2 in a sleeve r+0.0010, spun 5.6 deg   [cyl 64 ball 8 canon] #1 Cylinder read 100.000% true 100.000%; #2 Cylinder read 0.000% true 0.000%
+rod r 0.2 in a sleeve r+0.0020, spun 5.6 deg   [cyl 32 ball 4] #1 Cylinder read 100.000% true 100.000%; #2 Cylinder read 0.000% true 0.000%
+rod r 0.2 in a sleeve r+0.0020, spun 5.6 deg   [cyl 64 ball 8] #1 Cylinder read 100.000% true 100.000%; #2 Cylinder read 0.000% true 0.000%
+rod r 0.2 in a sleeve r+0.0020, spun 5.6 deg   [cyl 32 ball 4 canon] #1 Cylinder read 100.000% true 100.000%; #2 Cylinder read 0.000% true 0.000%
+rod r 0.2 in a sleeve r+0.0020, spun 5.6 deg   [cyl 64 ball 8 canon] #1 Cylinder read 100.000% true 100.000%; #2 Cylinder read 0.000% true 0.000%
+rod r 0.2 in a sleeve r+0.0040, spun 5.6 deg   [cyl 32 ball 4] #1 Cylinder read 100.000% true 100.000%; #2 Cylinder read 0.000% true 0.000%
+rod r 0.2 in a sleeve r+0.0040, spun 5.6 deg   [cyl 64 ball 8] #1 Cylinder read 100.000% true 100.000%; #2 Cylinder read 0.000% true 0.000%
+rod r 0.2 in a sleeve r+0.0040, spun 5.6 deg   [cyl 32 ball 4 canon] #1 Cylinder read 100.000% true 100.000%; #2 Cylinder read 0.000% true 0.000%
+rod r 0.2 in a sleeve r+0.0040, spun 5.6 deg   [cyl 64 ball 8 canon] #1 Cylinder read 100.000% true 100.000%; #2 Cylinder read 0.000% true 0.000%
+ball r 0.15 in a ball r+0.001, turned 30 deg   [cyl 32 ball 4] #1 Ball read 69.564% true 100.000%; #2 Ball read 31.683% true 0.000%
+ball r 0.15 in a ball r+0.001, turned 30 deg   [cyl 64 ball 8] #1 Ball read 95.916% true 100.000%; #2 Ball read 4.170% true 0.000%
+ball r 0.15 in a ball r+0.001, turned 30 deg   [cyl 32 ball 4 canon] #1 Ball read 100.000% true 100.000%; #2 Ball read 0.000% true 0.000%
+ball r 0.15 in a ball r+0.001, turned 30 deg   [cyl 64 ball 8 canon] #1 Ball read 100.000% true 100.000%; #2 Ball read 0.000% true 0.000%
+ball r 0.15 in a ball r+0.005, turned 30 deg   [cyl 32 ball 4] #1 Ball read 99.300% true 100.000%; #2 Ball read 0.779% true 0.000%
+ball r 0.15 in a ball r+0.005, turned 30 deg   [cyl 64 ball 8] #1 Ball read 100.000% true 100.000%; #2 Ball read 0.000% true 0.000%
+ball r 0.15 in a ball r+0.005, turned 30 deg   [cyl 32 ball 4 canon] #1 Ball read 100.000% true 100.000%; #2 Ball read 0.000% true 0.000%
+ball r 0.15 in a ball r+0.005, turned 30 deg   [cyl 64 ball 8 canon] #1 Ball read 100.000% true 100.000%; #2 Ball read 0.000% true 0.000%
+ball r 0.15 in a ball r+0.010, turned 30 deg   [cyl 32 ball 4] #1 Ball read 100.000% true 100.000%; #2 Ball read 0.000% true 0.000%
+ball r 0.15 in a ball r+0.010, turned 30 deg   [cyl 64 ball 8] #1 Ball read 100.000% true 100.000%; #2 Ball read 0.000% true 0.000%
+ball r 0.15 in a ball r+0.010, turned 30 deg   [cyl 32 ball 4 canon] #1 Ball read 100.000% true 100.000%; #2 Ball read 0.000% true 0.000%
+ball r 0.15 in a ball r+0.010, turned 30 deg   [cyl 64 ball 8 canon] #1 Ball read 100.000% true 100.000%; #2 Ball read 0.000% true 0.000%
+ball r 0.15 in a ball r+0.020, turned 30 deg   [cyl 32 ball 4] #1 Ball read 100.000% true 100.000%; #2 Ball read 0.000% true 0.000%
+ball r 0.15 in a ball r+0.020, turned 30 deg   [cyl 64 ball 8] #1 Ball read 100.000% true 100.000%; #2 Ball read 0.000% true 0.000%
+ball r 0.15 in a ball r+0.020, turned 30 deg   [cyl 32 ball 4 canon] #1 Ball read 100.000% true 100.000%; #2 Ball read 0.000% true 0.000%
+ball r 0.15 in a ball r+0.020, turned 30 deg   [cyl 64 ball 8 canon] #1 Ball read 100.000% true 100.000%; #2 Ball read 0.000% true 0.000%

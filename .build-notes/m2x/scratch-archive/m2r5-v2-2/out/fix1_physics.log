@@ -1,0 +1,10 @@
+  FAIL  Physics/Verdict › §4.4 the lines read a slit wherever it passes: between the points of the patch, and in pairs (137.8 ms)
+        3 + 3 patches a hairline, the one where they cross 1/4: reads at least 0.007264733796296295: expected truthy, got false
+        at tests/Physics/Verdict.spec.luau:559
+  FAIL  Physics/Verdict › §4.9 spend reports the reading's work (7.1 ms)
+        a slit under 3 lids: expected 70312, got 70652
+        at tests/Physics/Verdict.spec.luau:862
+  FAIL  Physics/Verdict › §4.4 what the reading cannot see: a Ball's band between its samples, a window between the lines (33.5 ms)
+        a window: reads at most 0: expected falsy, got true
+        at tests/Physics/Verdict.spec.luau:905
+RESULT pass=203 fail=3 skip=0 files=50 time=86.36s

@@ -1,0 +1,9 @@
+UNITS corpus_climb.json: 60 designs, new median 212380, p99 1686065, max 1686065 | old median 132972, p99 629760, max 629760 (6 s)
+    1686065 units (old  629760)  n24 cleaned 17  d_climb_4#4 [climb-d_climb_4]
+    1578192 units (old  526480)  n24 cleaned  9  d_hand#1 rods d 0.15 L 4.8 spread 0.01 [climb-d_hand]
+    1523048 units (old  511755)  n24 cleaned  9  d_hand#4 rods d 0.15 L 3.5 spread 0.01 [climb-d_hand]
+    1459043 units (old  502862)  n24 cleaned  9  d_hand#2 rods d 0.10 L 4.8 spread 0.01 [climb-d_hand]
+    1416956 units (old  493412)  n24 cleaned  8  d_hand#3 rods d 0.08 L 4.8 spread 0.01 [climb-d_hand]
+    1329688 units (old  501062)  n24 cleaned  8  d_hand#5 rods d 0.10 L 3.5 spread 0.01 [climb-d_hand]
+     949218 units (old  487995)  n24 cleaned 18  d_climb_3#5 [climb-d_climb_3]
+     840987 units (old  382528)  n24 cleaned 17  d_climb_3#4 [climb-d_climb_3]

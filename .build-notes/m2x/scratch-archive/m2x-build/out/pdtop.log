@@ -1,0 +1,61 @@
+designs 33389
+  8923 wrapRings|C09|n5 extra0.04 gap0.0010                         parts  23 units    136032  k%4=3
+  8924 wrapRings|C09|n5 extra0.04 gap0.0020                         parts  23 units    136032  k%4=0
+  8885 wrapRings|C09|n4 extra0.04 gap0.0020                         parts  22 units    124850  k%4=1
+  8884 wrapRings|C09|n4 extra0.04 gap0.0010                         parts  22 units    124850  k%4=0
+  8847 wrapRings|C09|n3 extra0.04 gap0.0030                         parts  21 units    114499  k%4=3
+  8849 wrapRings|C09|n3 extra0.04 gap0.0050                         parts  21 units    114499  k%4=1
+  8846 wrapRings|C09|n3 extra0.04 gap0.0020                         parts  21 units    114499  k%4=2
+  8845 wrapRings|C09|n3 extra0.04 gap0.0010                         parts  21 units    114499  k%4=1
+  8848 wrapRings|C09|n3 extra0.04 gap0.0040                         parts  21 units    114499  k%4=0
+  8850 wrapRings|C09|n3 extra0.04 gap0.0060                         parts  21 units    114499  k%4=2
+  8851 wrapRings|C09|n3 extra0.04 gap0.0075                         parts  21 units    114499  k%4=3
+  8886 wrapRings|C09|n4 extra0.04 gap0.0030                         parts  22 units    111678  k%4=2
+  8887 wrapRings|C09|n4 extra0.04 gap0.0040                         parts  22 units    109775  k%4=3
+  8852 wrapRings|C09|n3 extra0.04 gap0.0100                         parts  21 units    109696  k%4=0
+  8925 wrapRings|C09|n5 extra0.04 gap0.0030                         parts  23 units    109097  k%4=1
+  8888 wrapRings|C09|n4 extra0.04 gap0.0050                         parts  22 units    108484  k%4=0
+  8889 wrapRings|C09|n4 extra0.04 gap0.0060                         parts  22 units    107783  k%4=1
+  8890 wrapRings|C09|n4 extra0.04 gap0.0075                         parts  22 units    106904  k%4=2
+  8926 wrapRings|C09|n5 extra0.04 gap0.0040                         parts  23 units    105290  k%4=2
+  8927 wrapRings|C09|n5 extra0.04 gap0.0050                         parts  23 units    102708  k%4=3
+  8928 wrapRings|C09|n5 extra0.04 gap0.0060                         parts  23 units    101306  k%4=0
+  8853 wrapRings|C09|n3 extra0.04 gap0.0125                         parts  21 units    101299  k%4=1
+  8891 wrapRings|C09|n4 extra0.04 gap0.0100                         parts  22 units    101221  k%4=3
+  8929 wrapRings|C09|n5 extra0.04 gap0.0075                         parts  23 units     99547  k%4=1
+  8854 wrapRings|C09|n3 extra0.04 gap0.0150                         parts  21 units     96704  k%4=2
+  8930 wrapRings|C09|n5 extra0.04 gap0.0100                         parts  23 units     92985  k%4=2
+  8892 wrapRings|C09|n4 extra0.04 gap0.0125                         parts  22 units     91032  k%4=0
+  8855 wrapRings|C09|n3 extra0.04 gap0.0200                         parts  21 units     90961  k%4=3
+  8893 wrapRings|C09|n4 extra0.04 gap0.0150                         parts  22 units     85548  k%4=1
+  8856 wrapRings|C09|n3 extra0.04 gap0.0300                         parts  21 units     85218  k%4=0
+  8931 wrapRings|C09|n5 extra0.04 gap0.0125                         parts  23 units     80914  k%4=3
+  8857 wrapRings|C09|n3 extra0.04 gap0.0500                         parts  21 units     80624  k%4=1
+  8894 wrapRings|C09|n4 extra0.04 gap0.0200                         parts  22 units     78664  k%4=2
+  8914 wrapRings|C09|n5 extra0.02 gap0.0050                         parts  23 units     77471  k%4=2
+  8915 wrapRings|C09|n5 extra0.02 gap0.0060                         parts  23 units     77471  k%4=3
+  8912 wrapRings|C09|n5 extra0.02 gap0.0030                         parts  23 units     77471  k%4=0
+  8911 wrapRings|C09|n5 extra0.02 gap0.0020                         parts  23 units     77471  k%4=3
+  8910 wrapRings|C09|n5 extra0.02 gap0.0010                         parts  23 units     77471  k%4=2
+  8913 wrapRings|C09|n5 extra0.02 gap0.0040                         parts  23 units     77471  k%4=1
+  8916 wrapRings|C09|n5 extra0.02 gap0.0075                         parts  23 units     77471  k%4=0
+parts   5 designs   1690 max units      4146
+parts   6 designs   5970 max units      7896
+parts   7 designs   4957 max units     11215
+parts   8 designs   3484 max units     33496
+parts   9 designs   1989 max units     32094
+parts  10 designs    749 max units     45698
+parts  11 designs   7058 max units     50685
+parts  12 designs    487 max units     55968
+parts  13 designs   4180 max units     34787
+parts  14 designs    135 max units     40066
+parts  15 designs     43 max units     46464
+parts  16 designs     96 max units     21521
+parts  17 designs     98 max units     15631
+parts  18 designs     48 max units     27169
+parts  19 designs   1322 max units     35731
+parts  20 designs    519 max units     41840
+parts  21 designs    438 max units    114499
+parts  22 designs     63 max units    124850
+parts  23 designs     39 max units    136032
+parts  24 designs     24 max units     22189

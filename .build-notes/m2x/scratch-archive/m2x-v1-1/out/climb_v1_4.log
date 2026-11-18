@@ -1,0 +1,6 @@
+seed 4 evals 339: run best 50.60 ms (692548 units); overall 50.60 ms (692548 units) (36 s)
+seed 4 evals 512: run best 44.54 ms (699075 units); overall 50.60 ms (692548 units) (52 s)
+seed 4 evals 745: run best 51.05 ms (683944 units); overall 51.05 ms (683944 units) (76 s)
+seed 4 evals 862: run best 44.86 ms (660854 units); overall 51.05 ms (683944 units) (89 s)
+seed 4 evals 900: run best 36.87 ms (590773 units); overall 51.05 ms (683944 units) (92 s)
+saved out/climb_v1_4.luau

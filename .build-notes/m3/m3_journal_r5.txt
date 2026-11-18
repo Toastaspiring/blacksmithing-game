@@ -1,0 +1,59 @@
+M3 review round 5 -> commit (2026-11-17)
+
+Fix round 4 plus review round 5: workflow wf_17f26b5b-4ce, 2026-11-17 00:08 -> 10:21. Results: m3_fixer_4h.json,
+m3_fixer_4i.json, m3_v1_adversary_r5.json, m3_v2_numbers_and_text_r5.json, m3_fixer_5m.json.
+
+- Fixer H withdrew the set rule. hiddenGap asks the part across only. F's form is kept, and the dead bound at f is
+  removed.
+  - The tree is byte-identical to m3-r3-base on the 136 fixtures, the 200 generated designs and the 33,389 plausible
+    designs. Goldens and digest are unchanged.
+  - The slot sword plays 0.2728 Hard on one chain.
+  - Round faces: 13.9M lines, and no merge across air wider than MERGE_GAP except the named thin partner.
+  - B and B2 both fail on a floor cut flush under the slot (two pieces on one side pass as a sandwich).
+  - The seam is pinned as O11's residual.
+  - Verify: green, 749/749.
+- Fixer I: O11 carries the structural question. It lists the classes (a)-(j) with their largest figures, and option
+  (iii), a solid-following measure, with an estimate. The round-4 minors are applied. Verify: green.
+- V1 r5 and V2 r5 both pass. No blocker or major. The minors:
+  - 7 surviving mutants, killed by tried tests;
+  - stale case counts;
+  - O10's lean closure cost range;
+  - a new edge class, (k): a part flush with the face a line leaves at a slanted hidden gap. Rounding picks which part
+    is asked, and a Z shift moves the edge's thickness. No plausible design shows it;
+  - the Y/Z shift class (j) is much larger than stated (below).
+- Fixer 5m (minors) applied all of them. No value moved and nothing was re-blessed. Verify: green, 749/749 at 0-37 %
+  busy, T-PERF-01's worst valid 9 at 57.55 ms.
+
+The shift finding (V1 r5; mechanism corrected by fixer 5m):
+- A whole design moved 0.037 down Z moves G on 2,081 of 10,883 plausible designs (621 past TOL_G_INVARIANT, up to
+  0.0354) and changes the tier on 11. Moved 0.3317 along Y: 357 designs, 2 tiers.
+- The cause is M2's code, not M3's. M2's own tree (m3-base) gives the same numbers:
+  - Sampling.measureRanked (and the verdict's Sampling.ranked) key on |cz| after volume, cy and |cx|. A Z shift
+    reorders parts of one volume, y and x, and the sub-grid budget is spent in that order. Keyed on cz alone (scratch
+    czrank), only 110 designs and 2 tiers move;
+  - the rest is M2's sampled ownership (a round part's overlaps, or a part under more than MAX_EXACT higher parts,
+    e.g. grille #32977).
+- The SPEC now states it as O11 (j), **[Decision to confirm]**, the default as built.
+- Lead's ruling: this does not block M3. M3 does not change it; it measures and states it. But it is an engineering
+  defect (a whole-sword move is invisible in the game, and it moves tiers), not a design trade-off. So it becomes the
+  next work item after the M3 commit and before M4: a focused shift-invariance task.
+  - First establish from the SPEC which whole-design moves a player can make in the editor (the design frame, the grip
+    anchor, the hitbox) and why the rank keys on |cx| and |cz| (mirror invariance).
+  - Then choose among: normalising the design's position before analysis; re-keying the ranks on the design's own
+    centre; anchoring M2's sampling to the design. Verify it, re-run S-PAR-02 if the digest moves, and commit it on its
+    own.
+  - O11 (j) is then updated.
+
+Next:
+1. The lead's own verify on the final tree.
+2. S-PAR-02 in Studio: Project 215 on Rojo 34873, 3 fresh Play sessions, Server then Client. The digest is unchanged
+   since fix round 2.
+3. Commit M3 (files staged explicitly; docs.rar stays out).
+4. The plain-words decisions for Louis (O7-O11).
+5. The shift-invariance task.
+6. M4.
+
+Done 2026-11-17:
+- Lead verify GREEN, 749/749 (10:24-10:29, about 12 % busy; worst valid 9 at 56.5 ms).
+- S-PAR-02 passed 3 fresh Play sessions, Server and Client each (10:36-10:50); hashes in spar02_hashes.txt.
+- M3 committed as f7ac37d on mvp (50 files, staged explicitly; docs.rar left out). Not pushed.

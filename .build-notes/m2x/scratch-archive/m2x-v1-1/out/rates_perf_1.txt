@@ -1,0 +1,15 @@
+design                                 units    V med   V best  ns/unit  Exp med  Run med    valid
+P1 24 large overlapping tilted blo    330993    15.48    12.93     46.8    23.96    30.59 valid
+P2 24 rotated cylinders                27403     2.73     1.54     99.7    11.51    15.26 valid
+P3 24 rotated wedges                    8405     0.87     0.60    103.0    10.69    15.58 valid
+P4 24 overlapping balls               154857    10.64     8.37     68.7    13.14    15.32 valid
+P5 comb blade (sawtooth, 24 parts)      2973     0.48     0.29    161.9     2.88     3.64 valid
+worst valid 1                         692796    29.08    25.71     42.0    39.06    43.73 valid
+worst valid 2                         661903    28.88    24.61     43.6    37.13    41.87 valid
+worst valid 3                         698006    27.65    25.89     39.6    37.25    41.21 valid
+worst valid 4                         648237    25.21    23.36     38.9    36.47    42.83 valid
+worst valid 5                         643926    25.12    22.80     39.0    39.88    46.88 valid
+worst valid 6                         584854    24.93    21.59     42.6    33.13    39.54 valid
+worst valid 7                         504264    22.01    20.12     43.7    34.90    47.64 valid
+worst valid 8                         547002    22.24    19.58     40.7    31.83    36.74 valid
+V1 ball cluster d0.58 dy0.08          634032    31.71    29.08     50.0    35.30    37.71 valid

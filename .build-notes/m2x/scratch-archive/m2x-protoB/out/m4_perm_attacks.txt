@@ -1,0 +1,11 @@
+  100 designs, 300 orders, 6 differ, 9 s
+  200 designs, 600 orders, 6 differ, 21 s
+  300 designs, 900 orders, 6 differ, 32 s
+  400 designs, 1200 orders, 6 differ, 42 s
+  500 designs, 1500 orders, 6 differ, 53 s
+  600 designs, 1800 orders, 6 differ, 64 s
+  700 designs, 2100 orders, 9 differ, 71 s
+  800 designs, 2400 orders, 14 differ, 78 s
+  900 designs, 2700 orders, 42 differ, 86 s
+  1000 designs, 3000 orders, 85 differ, 94 s
+M4 perm dumps:a10_sub,a11_geo,a12_skin,a1_hair,a20_all,a2_real,a30_more,a3_split,a4_pin,a5_c09,a8_flush,a9_ids,a_fill,a_flat,a_hand,a_lam,a_near,a_rod,a_sheets,a_void,x_canon,x_lattice2,x_step: 1039 designs x 3 orders = 3117 cases, 85 differ in any bit (kept, cleaned, reads, exposedKept, contact, budgets) e.g. a8_flush#56 order 2, 97 s

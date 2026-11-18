@@ -1,0 +1,2 @@
+  50 designs, 1340 variants, 0 other parts changed, 31 s
+M4 dust fuzz:60:5: 60 designs, 1566 variants (each part, first and last), other parts whose read or verdict moved: 0; dust not cleaned as expected: 0, 36 s

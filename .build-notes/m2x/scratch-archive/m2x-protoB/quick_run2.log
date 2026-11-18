@@ -1,0 +1,88 @@
+  FAIL  Physics/Analyze › §4.9 each long loop reaches a checkpoint, at the cadence (83.3 ms)
+        no checkpoint from shownArea: expected truthy, got nil
+        at tests/Physics/Analyze.spec.luau:739
+  FAIL  Physics/Reference › §4.1 M2 equals the prototype on its cost fixtures P1–P5 (227.7 ms)
+        P1 24 large overlapping tilted blocks cleaned: values differ at $[1].partId: 6 ~= 2
+        at tests/Physics/Reference.spec.luau:95
+  FAIL  Physics/Sampling › T-PHY-09 duplicates: a copy turned about its own symmetry axis is the same solid, and Enclosed (0.8 ms)
+        cylinder spun 37° about its axis: values differ at $[1]: missing on the actual side
+        at tests/Physics/Sampling.spec.luau:411
+  FAIL  Physics/Sampling › §4.4 K + F measures as K alone, past N_SURF_WORK: P1, whose kept parts alone are the same 14 (98.6 ms)
+        expected 10, got 9
+        at tests/Physics/Sampling.spec.luau:692
+  FAIL  Physics/Sampling › §4.9 spend reports the verdict's work and the measure's: every rung, sample written and sample tested, each at its own margin (1.1 ms)
+        two kept parts: expected 7644, got 7216
+        at tests/Physics/Sampling.spec.luau:896
+  FAIL  Physics/Sampling › §4.9 spend reports each rung tried, and the measure takes candidates at its own grid's margin, not the base's (2.9 ms)
+        expected 1608, got 1180
+        at tests/Physics/Sampling.spec.luau:918
+  FAIL  Physics/Sampling › §4.9 spend reports a patch's tests: 4 corners per part that hides its centre, then a line's chords, 2 units each (19.9 ms)
+        expected 562, got 103
+        at tests/Physics/Sampling.spec.luau:946
+  FAIL  Physics/Verdict › §4.4 the hider-first order changes no bit: what the verdict reads, every order of 4 candidates (15.4 ms)
+        reads at least the 3 patches: expected truthy, got false
+        at tests/Physics/Verdict.spec.luau:306
+  FAIL  Physics/Verdict › §5 a laminated core that shows 5.54 % is kept: its proud rims are measured (42.5 ms)
+        the strips: reads at least 0.05596019992526158: expected truthy, got false
+        at tests/Physics/Verdict.spec.luau:480
+  FAIL  Physics/Verdict › §4.4 a strip along the rim is measured, on the lines that cross it (17.2 ms)
+        all round: the 12 patches of the ring: reads at most 0.022221944444444443: expected falsy, got true
+        at tests/Physics/Verdict.spec.luau:492
+  FAIL  Physics/Verdict › §4.4 a strip through the centres is measured: a hairline reads a hairline (49.8 ms)
+        through 3 patches: reads at least 0.020833194444444442: expected truthy, got false
+        at tests/Physics/Verdict.spec.luau:525
+  FAIL  Physics/Verdict › §4.4 the lines read a slit wherever it passes: between the points of the patch, and in pairs (125.3 ms)
+        a slit that stops on a patch's rim: reads at least 0.009259166666666667: expected truthy, got false
+        at tests/Physics/Verdict.spec.luau:553
+  FAIL  Physics/Verdict › §4.4 corners at VERDICT_CORNER: the one part must hide them, or the patch is measured (34.1 ms)
+        copy 1: reads at most 0.009215495185694637: expected falsy, got true
+        at tests/Physics/Verdict.spec.luau:599
+  FAIL  Physics/Verdict › §4.4 the one part must hide all 4 corners: a lid with a corner off is measured (26.6 ms)
+        2 lines of 4 cross what shows: reads at most 0.0021701109466022855: expected falsy, got true
+        at tests/Physics/Verdict.spec.luau:629
+  FAIL  Physics/Verdict › §4.4 the one part: asked among all that hide the centre, its corners by probe as well, its centre hidden too (20.4 ms)
+        2 lids: reads at most 0: expected falsy, got true
+        at tests/Physics/Verdict.spec.luau:637
+  FAIL  Physics/Verdict › §4.4 a part reaches a patch on any of its own axes: a lid reads the same turned so that each of them lies along each of the patch's (28.1 ms)
+        turn 1: reads at most 0.019097094907407408: expected falsy, got true
+        at tests/Physics/Verdict.spec.luau:677
+  FAIL  Physics/Verdict › §4.9 spend reports the reading's work (7.1 ms)
+        a slit under 3 lids: expected 70312, got 67552
+        at tests/Physics/Verdict.spec.luau:862
+  FAIL  Physics/Verdict › §4.4 a part whose Block estimate is exactly VERDICT_SAMPLES stays on that rung (0.5 ms)
+        expected 4909, got 4657
+        at tests/Physics/Verdict.spec.luau:885
+  FAIL  Physics/Verdict › §4.4 what the reading cannot see: a Ball's band between its samples, a window between the lines (15.6 ms)
+        and reads nothing: reads at most 0: expected falsy, got true
+        at tests/Physics/Verdict.spec.luau:902
+  FAIL  Physics/Verdict › §4.4 a part is near by the sample or by the probe: two rods at MIN_DIM, either clause alone reads otherwise (6.0 ms)
+        the clause on the probe: reads at least 0.9969970028884093: expected truthy, got false
+        at tests/Physics/Verdict.spec.luau:914
+  FAIL  Physics/Verdict › §4.4 a part that hides a curved patch's 4 corners and not its centre does not hide it all (10.3 ms)
+        the build's reading: reads at least 0.22830150632389962: expected truthy, got false
+        at tests/Physics/Verdict.spec.luau:929
+  FAIL  Physics/Verdict › §4.4 on a Cylinder's side the one part must hide all 4 corners too: a lid with a corner off and a post over it (17.4 ms)
+        what the build reads: reads at least 0.9361979166666674: expected truthy, got false
+        at tests/Physics/Verdict.spec.luau:1006
+  FAIL  Physics/Verdict › §4.4 a strip on a Cylinder's side reads VERDICT_STRIP_CENTRE through a direction, VERDICT_STRIP_RIM by its corners (45.9 ms)
+        2 directions, 5 rows: reads at least 0.05208333333333334: expected truthy, got false
+        at tests/Physics/Verdict.spec.luau:1012
+  FAIL  Physics/Verdict › §4.4 a Cylinder's side has the same test: a narrow arc between its directions shows (54.7 ms)
+        the arc: reads at least 0.052083333333333336: expected truthy, got false
+        at tests/Physics/Verdict.spec.luau:1028
+  FAIL  Physics/Verdict › §4.4 a Cylinder's sub-points are back on the surface: a lid over its top reads as the curve does (35.6 ms)
+        7.5 of 8 directions, 5 rows: reads at least 0.9479166666666666: expected truthy, got false
+        at tests/Physics/Verdict.spec.luau:1039
+  FAIL  Physics/Verdict › §4.4 a thin CornerWedge's tip is seen: triangles have VERDICT_TRIANGLE_CELLS cells per edge (21.5 ms)
+        with 1 cell per edge it reads nothing: expected falsy, got true
+        at tests/Physics/Verdict.spec.luau:1061
+  FAIL  Physics/Verdict › §4.4 a Ball has VERDICT_BALL_NF cells whatever its radius, and its largest sample weighs under 2 % (35.9 ms)
+        d 0.08: a cap: reads at least 0.06568731405745498: expected truthy, got false
+        at tests/Physics/Verdict.spec.luau:1085
+  FAIL  Physics/Verdict › §4.4 Dust hides nothing: a speck over a strip leaves what the verdict reads (17.4 ms)
+        the 12 patches, speck or no speck: reads at most 0.022221944444444443: expected falsy, got true
+        at tests/Physics/Verdict.spec.luau:1104
+  FAIL  Physics/Verdict › §4.4 exact copies hide nothing: a stack of a lid's copies leaves what the verdict reads, and they have no verdict (18.3 ms)
+        the 12 patches, copies or no copies: reads at most 0.022221944444444443: expected falsy, got true
+        at tests/Physics/Verdict.spec.luau:1113
+RESULT pass=532 fail=29 skip=14 files=50 time=15.99s

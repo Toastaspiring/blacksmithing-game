@@ -1,0 +1,4 @@
+uclimb_1 best 2563294 units                                n24 | new verdict  210.85 ms 2561413 u, exposure  226.67 ms | old verdict   8.28 ms 125587 u, exposure  19.51 ms | cleaned 13/12
+uclimb_2 best 2792974 units                                n24 | new verdict  236.48 ms 2790425 u, exposure  245.37 ms | old verdict  11.38 ms 188483 u, exposure  18.68 ms | cleaned 13/13
+uclimb_3 best 3135028 units                                n24 | new verdict  233.58 ms 3113968 u, exposure  242.15 ms | old verdict  10.68 ms 175685 u, exposure  18.45 ms | cleaned 14/12
+uclimb_4 best 2699876 units                                n24 | new verdict  228.93 ms 2698680 u, exposure  239.24 ms | old verdict  13.04 ms 234554 u, exposure  22.13 ms | cleaned 10/10

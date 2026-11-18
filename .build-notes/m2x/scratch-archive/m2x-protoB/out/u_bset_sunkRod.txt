@@ -1,0 +1,9 @@
+UNITS bset:sunkRod:8:3: 1260 designs, new median 2493, p99 12652, max 13500 | old median 2466, p99 9964, max 10921 (4 s)
+      13500 units (old   10655)  n19 cleaned  0  C09 r0.080 L2.0 f-0.40 tilt2.0 spin13 [bset-sunkRod]
+      13080 units (old   10188)  n19 cleaned  0  C09 r0.080 L2.0 f-0.65 tilt4.0 spin13 [bset-sunkRod]
+      12982 units (old   10417)  n19 cleaned  0  C09 r0.080 L2.0 f-0.65 tilt0.0 spin13 [bset-sunkRod]
+      12946 units (old   10508)  n19 cleaned  0  C09 r0.080 L2.0 f-0.95 tilt2.0 spin13 [bset-sunkRod]
+      12941 units (old    9495)  n19 cleaned  0  C09 r0.080 L1.2 f-0.40 tilt1.0 spin13 [bset-sunkRod]
+      12903 units (old   10714)  n19 cleaned  0  C09 r0.080 L2.0 f0.00 tilt1.0 spin13 [bset-sunkRod]
+      12900 units (old    9544)  n19 cleaned  0  C09 r0.080 L1.2 f-0.65 tilt2.0 spin13 [bset-sunkRod]
+      12852 units (old    9513)  n19 cleaned  0  C09 r0.080 L1.2 f-0.80 tilt4.0 spin13 [bset-sunkRod]

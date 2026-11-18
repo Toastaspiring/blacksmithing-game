@@ -1,0 +1,209 @@
+TIME       54.1 ms  Physics/Analyze › T-VAL-01 every A variant with a validation verdict: the exact error list, in fixed order
+TIME       80.1 ms  Physics/Analyze › T-VAL-01 every draft Canonical accepts: its save verdict holds, and analysis never throws
+TIME        0.0 ms  Physics/Analyze › T-VAL-01 the set holds every ValidationCode, with and without a reason
+TIME       12.5 ms  Physics/Analyze › T-VAL-01 A14, A16, A17, A22: the cleaned lists, valid or not
+TIME       14.2 ms  Physics/Analyze › T-VAL-01 A16 and A17: mass, COM, balance and reach bit-identical to their base; A23 and A24: valid, finite
+TIME       54.2 ms  Physics/Analyze › T-VAL-01 Analyze.quick agrees with run on every variant its first stage decides
+TIME        0.2 ms  Physics/Analyze › §4.1 the quick stage stops the pipeline: no measurement, no cleaning, whatever measureInvalid says
+TIME        5.0 ms  Physics/Analyze › §4.2 an invalid design stores the validation only; measureInvalid measures it anyway
+TIME        2.8 ms  Physics/Analyze › §4.2 every full-stage error together, in rule order: V3, V4, V5
+TIME       53.2 ms  Physics/Analyze › §4.2 TooComplex: past the verdicts' cap a design is invalid and unmeasured, before V5, whatever measureInvalid says
+TIME       84.1 ms  Physics/Analyze › T-VAL-02 containment against exact brute force, 1,000 parts around the walls
+TIME        0.5 ms  Physics/Analyze › §4.2 containment is exact: flush with a wall passes, a cylinder's box corners may leave
+TIME        0.0 ms  Physics/Analyze › §4.2 containment is inclusive at exactly EPS_CONTAIN past a wall; one ulp more is out
+TIME        0.0 ms  Physics/Analyze › §4.2 V1: per slot min and max, in the slots' order; an empty design
+TIME        0.2 ms  Physics/Analyze › §4.2 quick's connectivity option: V3 joins the list; the components come back; V1 and V2 do not hide it
+TIME        2.7 ms  Physics/Analyze › §4.2 floating components: closest pair, gap, direction toward the main component (E-S2.10)
+TIME        0.3 ms  Physics/Analyze › §4.2 the main component: the most Grip volume, else the largest volume, else the lowest index
+TIME        1.2 ms  Physics/Analyze › §4.2 errors, components and cleaned lists name part ids, not array indices
+TIME        0.1 ms  Physics/Analyze › §4.2 V3 at the tolerance, through Analyze: 1.2 × CONTACT_TOL is Disconnected, 0.8 × connects
+TIME        1.0 ms  Physics/Analyze › §4.2 contact's broad phase keeps its margin in all six directions and both index orders
+TIME        0.1 ms  Physics/Analyze › §4.2 Snap to touch on a thin pair: the gap and dir are the closest pair's (Gjk's cycle read 0.3307 here)
+TIME        6.8 ms  Physics/Analyze › §4.2 V4: the blade's volume-weighted centroid beyond the grip point along the physics axis
+TIME       11.6 ms  Physics/Analyze › T-VAL-04 F1–F5 are valid and keep every part
+TIME      143.7 ms  Physics/Analyze › T-VAL-04 generated swords are valid, 60 designs
+TIME     1221.1 ms  Physics/Analyze › T-VAL-04 generated swords are valid, FUZZ_N_VALID designs
+TIME      165.6 ms  Physics/Analyze › §4.9 any design inside the hitbox: no throw, finite, consistent, 30 designs
+TIME      811.1 ms  Physics/Analyze › §4.9 any design inside the hitbox: no throw, finite, consistent, PROP_N designs
+TIME        1.9 ms  Physics/Analyze › §4.7 the report: balance version, physics fields, nil edge and steps until M3, per-part arrays in part order
+TIME        4.6 ms  Physics/Analyze › §4.7 every return path carries the balance version
+TIME       26.6 ms  Physics/Analyze › §4.9 budgets: 24 large overlapping blocks stay within every budget
+TIME       81.6 ms  Physics/Analyze › §4.9 checkpoints: between phases and through long loops
+TIME        2.4 ms  Physics/Analyze › §4.9 a checkpoint between phases, whatever the work units say
+TIME       40.6 ms  Physics/Analyze › §4.9 each long loop reaches a checkpoint, at the cadence
+TIME      200.1 ms  Physics/Analyze › §4.9 a checkpoint may raise to cancel; the module keeps nothing and the next run is whole
+TIME       62.9 ms  Physics/Analyze › §4.9 a checkpoint may yield: run in a coroutine, interleaved with another run, gives the same bits
+TIME       47.3 ms  Physics/Analyze › P-DET, P-NOMUT, P-FINITE: frozen fixtures and variants, twice, bit for bit
+TIME       31.0 ms  Physics/Analyze › P-ORDER: Definitions rows rebuilt in shuffled order leave the result bit-identical
+TIME        1.4 ms  Physics/Analyze › a caller bug raises, naming it: an unknown type, a foreign slot, an unknown shape or material
+TIME      632.8 ms  Physics/Analyze › §4.9 worst_designs.luau: every design canonical; the valid ones valid under the cap, the others TooComplex
+TIME      173.9 ms  Physics/Cover › (a) exact on its model, against a brute force: the F fixtures, C09 and the attack designs
+TIME      198.7 ms  Physics/Cover › (a) exact on its model, against a brute force: 40 tangles of overlapping, near-touching parts of every shape
+TIME     2664.1 ms  Physics/Cover › (a) exact on its model: the calibration and regression fixtures, P2–P5, and 600 tangles
+TIME        9.7 ms  Physics/Cover › (b) what shows of the plate under lids, to the 6 decimals E-S2.12 quotes, kept or cleaned
+TIME      143.6 ms  Physics/Cover › (c) the attack designs read their truth: the truth's verdict, the share within the model's band
+TIME       11.3 ms  Physics/Cover › (c) a round copy spun or turned about its own symmetry is hidden by its original, which shows whole
+TIME      527.8 ms  Physics/Cover › (d) any order of the parts: every reading the same bits, tangles and attack designs
+TIME      853.8 ms  Physics/Cover › (d) a mirror image across X or Z reads the original's, part for part: fixtures, C09, attack designs
+TIME      280.4 ms  Physics/Cover › (d) an exact copy first or last, a Dust speck on a face: every other reading the same bits
+TIME       25.6 ms  Physics/Cover › (e) frames the world fixes: a round part spun or turned about its symmetry has its original's model
+TIME       22.9 ms  Physics/Cover › (e) the model of a mirror image is the mirror image of the model, every shape
+TIME        8.1 ms  Physics/Cover › (e) the model as §4.4 words it: the brute force's own construction, its half-spaces' sag, a Ball's 128 triangles
+TIME      194.9 ms  Physics/Cover › (f) the real designs stay at least 2 × under VERDICT_WORK_MAX: F, C and X fixtures, P1–P5
+TIME   191276.1 ms  Physics/Cover › (f) every plausible design stays at least 2 × under VERDICT_WORK_MAX
+TIME      363.7 ms  Physics/Cover › (f) a design past the cap: no verdict, TooComplex, answered at once; its units in any order
+TIME      361.9 ms  Physics/Cover › (f) units depend on no order: P1 and the slowest valid designs, the same total in 3 orders
+TIME        0.1 ms  Physics/Gjk › T-VAL-03 E-S2.3's targeted cases: flush, gaps around CONTACT_TOL, edges, ball on a face, rotated, apex
+TIME      511.3 ms  Physics/Gjk › T-VAL-03 within and distance agree with brute force, 40 random pairs
+TIME     2766.1 ms  Physics/Gjk › T-VAL-03 within and distance agree with brute force, 300 random pairs
+TIME      364.8 ms  Physics/Gjk › T-VAL-03 distance: 6,000 pairs of MIN_DIM to MAX_DIM sides, against the plane at v and alternating projections
+TIME        0.0 ms  Physics/Gjk › T-VAL-03 distance: a thin CornerWedge and a Cylinder 0.0138 apart (the last v of a cycle read 0.3307)
+TIME        0.0 ms  Physics/Gjk › distance: gap and separating vector of closest points; v = pa − pb, so −v moves a toward b
+TIME      109.8 ms  Physics/Gjk › distance is symmetric, and within(tol) holds exactly when distance ≤ tol
+TIME       31.4 ms  Physics/Gjk › the same pair gives the same bits; the module holds no state between calls
+TIME       10.7 ms  Physics/MassProps › T-PHY-02 F1–F5 measure E-S2.9's physics table
+TIME       12.7 ms  Physics/MassProps › T-PHY-03 E-S2.9 = the independent oracle of E-S8.3
+TIME        5.7 ms  Physics/MassProps › §4.5 F2 by hand: the guard line, balance, lengths and the off-axis COM
+TIME        2.2 ms  Physics/MassProps › §4.5 the guard line is the volume-weighted centroid of the Guard parts
+TIME        0.5 ms  Physics/MassProps › §4.5 COM takes the overlap's moment off every axis: an overlap off the design's centre
+TIME        0.7 ms  Physics/MassProps › §4.5 mass = Σ ρ·V_own and COM = Σ ρ·M1_own / M, by hand on a mixed-material design
+TIME       55.0 ms  Physics/MassProps › T-PHY-04 Y/Z translation: mass within TOL_ANALYTIC_REL, COM moves by δ, balance and reach stay
+TIME      169.4 ms  Physics/MassProps › T-PHY-04 Y/Z translation on generated swords, within TOL_MASS_REL and TOL_BALANCE_ABS
+TIME      170.4 ms  Physics/MassProps › T-PHY-05 any rotation keeps mass; about the grip axis, reach and balance too
+TIME        6.1 ms  Physics/MassProps › T-PHY-05 a design tilted in the plane, turned about its own grip axis, keeps reach and balance
+TIME       22.3 ms  Physics/MassProps › T-PHY-06 q ↔ −q on every part: bit-identical
+TIME       10.5 ms  Physics/MassProps › T-PHY-07 density scales mass and leaves COM; a heavier pommel moves the balance toward the hand
+TIME        8.8 ms  Physics/MassProps › T-PHY-08 the physics frame is all Grip parts, the difficulty frame the kept ones with a fixed +Y axis
+TIME        0.1 ms  Physics/MassProps › §4.5 the grip axis: which parts have one, the sign rule, the tilt rule
+TIME        5.3 ms  Physics/MassProps › §4.5 a part past 45° from +Y has no vote: a level crossbar neither tilts the sword nor flips it
+TIME       31.8 ms  Physics/MassProps › §4.5 the physics frame mirrors with the design, level grip parts included (PROP_N)
+TIME        4.7 ms  Physics/MassProps › §4.4 cleaned parts count for mass, COM and the physics frame, never for reach or the blade's length
+TIME        3.7 ms  Physics/MassProps › §4.5 no guard: the guard line is the top of the grip; no kept blade: reach and blade length 0
+TIME        0.2 ms  Physics/MassProps › §4.3 exactOverlap: axis-aligned boxes by hand, a part inside another, disjoint parts, touching parts
+TIME        0.1 ms  Physics/MassProps › §4.5 exactOverlap is exact on slivers, and reports its work
+TIME        0.1 ms  Physics/MassProps › §4.3 exactOverlap: every polyhedron against a huge box gives its analytic volume and centroid
+TIME      139.6 ms  Physics/MassProps › §4.3 exactOverlap against a fine midpoint grid: rotated polyhedra, 1 to 3 higher parts (inclusion–exclusion)
+TIME        4.4 ms  Physics/MassProps › §4.3 near copies 1e-12 away own nothing: mass, COM and balance stay F2's
+TIME        0.4 ms  Physics/MassProps › §4.3 a segment overlapping half another, sides coplanar within 1e-12: the analytic overlap
+TIME       34.2 ms  Physics/MassProps › §4.3 exactOverlap on near copies of every polyhedron, 3e-13 to 3e-11 off: all of the part, 1 to 3 copies (PROP_N)
+TIME       48.2 ms  Physics/MassProps › §4.3 exactOverlap on boxes sharing a frame within 1e-12 to 1e-11: their exact union, 1 to 3 boxes (PROP_N)
+TIME        1.8 ms  Physics/MassProps › §4.3 sampledOverlap: half a ball, a ball lens and half a cylinder against their closed forms
+TIME        8.6 ms  Physics/MassProps › §4.3 ownership: kept parts, then slot rank, then the larger part; an overlap counts once, for its owner
+TIME        6.9 ms  Physics/MassProps › §4.3 the exact path up to MAX_EXACT higher parts, refined sampling beyond it and for round parts
+TIME        8.7 ms  Physics/MassProps › §4.9 cleaned parts cannot coarsen a kept part's overlap sampling: V_own stays bit-identical
+TIME        4.7 ms  Physics/MassProps › §4.9 N_OVERLAP_WORK covers kept and cleaned parts together: cleaned parts share what the kept parts leave
+TIME       21.7 ms  Physics/MassProps › §4.3 exact copies own nothing, exactly, every shape: mass, COM and reach are the base's bits
+TIME       24.0 ms  Physics/MassProps › §4.9 overlap budget: refined cells × (1 + higher parts) stay within N_OVERLAP_WORK on 24 overlapping blocks
+TIME       12.8 ms  Physics/MassProps › T-PHY-10 overlap mass error ≤ 0.5 %: laminates and overlapping segments (X07)
+TIME       23.2 ms  Physics/MassProps › P-NOMUT, P-DET: frozen fixtures measure twice to the same bits
+TIME      363.8 ms  Physics/Reference › §4.1 M2 equals the prototype on its calibration swords
+TIME       89.6 ms  Physics/Reference › §4.1 M2 equals the prototype on its F1–F5
+TIME      317.3 ms  Physics/Reference › §4.1 M2 equals the prototype on its cost fixtures P1–P5
+TIME       87.6 ms  Physics/Reference › §4.4 the verdict cleans what the prototype cleans on its adversarial fixtures and their bases, and its validation cases
+TIME      339.4 ms  Physics/Reference › §4.4 the verdict cleans what the prototype cleans on its regression fixtures X01–X07 and their bases
+TIME       33.4 ms  Physics/Reference › §5 9 enclosed blocks cannot buy Hard: C04 with a 0.075 blade, Normal in the build, Hard in the prototype
+TIME       67.9 ms  Physics/Reference › §5 6 enclosed blocks cannot dodge Hard: C09 with a blade 0.05 longer, Hard in the build, Normal in the prototype
+TIME        0.7 ms  Physics/Reference › PhysicsHelpers.ornate is the prototype's C09, until M3's fixture replaces it
+TIME       31.3 ms  Physics/Reference › §4.3 every surface sample is the prototype's, bit for bit: 5 shapes × 8 sizes
+TIME        0.1 ms  Physics/Reference › §4.1 the unit circle's literals are the prototype's bits, and math.cos and math.sin's
+TIME        0.1 ms  Physics/Sampling › §4.1 the 32-direction unit circle: literal, within 1e-15 of math.cos and math.sin
+TIME        0.0 ms  Physics/Sampling › §4.9 ladder: the first H_LADDER factor that fits, the last when none does
+TIME        0.1 ms  Physics/Sampling › §4.3 volume samples: local X outermost, cell centres, n_k = clamp(ceil(size/h), 2, 48), weight V/count
+TIME       20.2 ms  Physics/Sampling › §4.3 volume samples stay inside and under N_MAX_PART, and their weights sum to V; only analytic V counts
+TIME        0.1 ms  Physics/Sampling › §4.3 the volume samples of a moved part are the same local cells: a 0.01 nudge cannot change the count
+TIME        4.0 ms  Physics/Sampling › §4.9 volumeProbes: kept parts only, within N_VOL_TOTAL, in part order
+TIME        0.1 ms  Physics/Sampling › §4.9 volumeProbes: a part above N_MAX_PART counts as N_MAX_PART while the ladder picks h
+TIME      116.4 ms  Physics/Sampling › §4.3 surface samples: on the surface, unit outward normals, weights summing to the area, every shape
+TIME        5.2 ms  Physics/Sampling › §4.3 surface grids: ceil(edge/h) per edge up to NS_MAX, 8/16/32 cylinder directions, ball faces, flat flags
+TIME        0.0 ms  Physics/Sampling › §4.3 a thin cylinder's caps keep 2 cells per axis, however far below the spacing
+TIME       26.9 ms  Physics/Sampling › §4.4 an isolated part is fully exposed, every shape
+TIME        0.8 ms  Physics/Sampling › §4.4 a flush contact hides the faces across it, on both parts
+TIME        1.2 ms  Physics/Sampling › §4.4 a part on a larger face hides exactly its footprint (the boundary sub-grid works)
+TIME        1.1 ms  Physics/Sampling › §4.4 a curved sample keeps its centre verdict: a half-hidden cylinder's side is a whole number of samples
+TIME        5.3 ms  Physics/Sampling › §4.4 gaps: a gap validation calls connected hides the faces across it, a larger one does not
+TIME        4.3 ms  Physics/Sampling › §4.4 contact areas count up to CONTACT_TOL across a gap
+TIME        2.0 ms  Physics/Sampling › §4.4 coincident faces count once: the higher rank keeps them, whatever the ids; buried samples are hidden
+TIME        0.6 ms  Physics/Sampling › T-PHY-09 cleaning classes are Dust and Enclosed only, Dust first, in part order
+TIME       26.1 ms  Physics/Sampling › T-PHY-09 Enclosed: under ENCLOSED_EXPOSED_MAX of its surface shows, partial overlaps kept
+TIME       14.7 ms  Physics/Sampling › T-PHY-09 duplicates: exact copies are Enclosed and the lowest id kept, every shape, any pose
+TIME        5.0 ms  Physics/Sampling › T-PHY-09 duplicates: a copy turned about its own symmetry axis is the same solid, and Enclosed
+TIME      145.6 ms  Physics/Sampling › T-PHY-09 duplicates on generated swords, 40 designs
+TIME     1951.8 ms  Physics/Sampling › T-PHY-09 duplicates on generated swords, FUZZ_N_VALID designs
+TIME      157.8 ms  Physics/Sampling › T-PHY-09 enclosed filler on generated swords, 40 designs
+TIME      154.6 ms  Physics/Sampling › T-PHY-09 dust filler on generated swords, 40 designs
+TIME     4075.7 ms  Physics/Sampling › T-PHY-09 enclosed and dust filler on generated swords, FUZZ_N_VALID designs each
+TIME        6.9 ms  Physics/Sampling › §4.9 a pile of exact copies: no coarser grid, no budget used, the same areas to the bit
+TIME        6.3 ms  Physics/Sampling › §4.4 the measure: A16 and A17 leave every kept part's exposed area bit-identical
+TIME        2.1 ms  Physics/Sampling › §4.4 the measure on a real overlap: a cleaned part hides nothing, a kept one does
+TIME       35.7 ms  Physics/Sampling › §4.4 the measure on a sword that uses up N_SUB_WORK: hidden parts leave every kept part bit-identical
+TIME       16.6 ms  Physics/Sampling › §4.4 the measure's ladder counts kept parts only: parts that would coarsen it leave every kept part bit-identical
+TIME      349.6 ms  Physics/Sampling › §4.4 the measure's ladder: random fill inside a large design's core, kept parts bit-identical, 40 designs
+TIME     4318.4 ms  Physics/Sampling › §4.4 the measure's ladder: random fill inside a large design's core, kept parts bit-identical, FUZZ_N_VALID designs
+TIME       36.0 ms  Physics/Sampling › §4.4 K + F measures as K alone, past N_SURF_WORK: P1, whose kept parts alone are the same 15
+TIME       15.2 ms  Physics/Sampling › §4.4 K + F measures as K alone, past N_SUB_WORK: C09 + 4 hidden blocks + a speck
+TIME       16.4 ms  Physics/Sampling › §4.4 nothing cleaned, or exact copies only: the measure's ladder is the design's own
+TIME        4.3 ms  Physics/Sampling › §4.4 the verdict uses none of the measure's sub-grid budget
+TIME       53.2 ms  Physics/Sampling › §4.9 surface budget: the ladder keeps samples × (1 + candidates) within N_SURF_WORK, deterministically
+TIME      159.4 ms  Physics/Sampling › §4.9 N_SURF_WORK holds by the estimate: thin cylinders sample about 2 × that
+TIME       11.0 ms  Physics/Sampling › §4.9 sub-grid budget: when spent, a boundary patch keeps its centre verdict; each patch charges it
+TIME        1.9 ms  Physics/Sampling › §4.9 spend reports the verdict's work and the measure's: every rung, model, look, reading and sample, each at its own margin
+TIME        2.7 ms  Physics/Sampling › §4.9 spend reports each rung tried, and the measure takes candidates at its own grid's margin, not the base's
+TIME       35.0 ms  Physics/Sampling › §4.9 spend reports the verdict's work as Cover counts it: a buried plate under a lid, 1 lid or 2
+TIME        3.3 ms  Physics/Sampling › §4.9 spend reports work, and a raising spend stops the call (a checkpoint may cancel)
+TIME       25.5 ms  Physics/Sampling › P-DET, P-NOMUT, P-FINITE: exposure on the frozen fixtures, twice, bit for bit
+TIME        0.0 ms  Physics/Shapes › T-PHY-01 the engine's numbers: mass and CenterOfMass of Studio's probe parts (E-S2.1, Plastic 0.7)
+TIME       40.9 ms  Physics/Shapes › T-PHY-01 Block: Monte Carlo volume and centroid, 10⁵ points
+TIME       41.0 ms  Physics/Shapes › T-PHY-01 Wedge: Monte Carlo volume and centroid, 10⁵ points
+TIME       42.1 ms  Physics/Shapes › T-PHY-01 CornerWedge: Monte Carlo volume and centroid, 10⁵ points
+TIME       40.1 ms  Physics/Shapes › T-PHY-01 Cylinder: Monte Carlo volume and centroid, 10⁵ points
+TIME       41.4 ms  Physics/Shapes › T-PHY-01 Ball: Monte Carlo volume and centroid, 10⁵ points
+TIME        1.9 ms  Physics/Shapes › prepare's analytic areas equal the areas of its faces (polyhedra) and the closed forms
+TIME       25.8 ms  Physics/Shapes › §4.3 sd: sign agrees with §3.2, 1-Lipschitz, a lower bound of the distance outside, exact inside
+TIME        0.8 ms  Physics/Shapes › toWorld and toLocal are inverses
+TIME        2.1 ms  Physics/Shapes › §4.2 exact extents: Shapes.aabb(PartData) = tests/lib/Gen's independent AABB, every shape
+TIME        0.1 ms  Physics/Shapes › §4.2 a cylinder's extents: hx·|u_k| + r·sqrt(1 − u_k²), tighter than its Size box when turned
+TIME        3.1 ms  Physics/Shapes › chord: the ends lie on the surface, the middle inside; a miss stays outside; dilation widens
+TIME        1.1 ms  Physics/Shapes › chord: a dilation d gives exactly sd ≤ d along the line
+TIME        0.0 ms  Physics/Shapes › chord along Z through a blade measures its thickness, and a line along a cylinder's axis its length
+TIME        0.0 ms  Physics/Shapes › chord: every slope moves out by the dilation
+TIME        0.0 ms  Physics/Shapes › chord: a ball's and a cylinder's radius, and a cylinder's caps, move out by the dilation
+TIME        0.0 ms  Physics/Shapes › §4.4 sameSolid: every position, size and rotation component decides, and the shape
+TIME       10.2 ms  Physics/Shapes › §4.2 support: on the surface, and the farthest point along the direction
+TIME        1.9 ms  Physics/Shapes › extentAlong: the projection of the support, equal to the vertices' range for polyhedra
+TIME        5.2 ms  Physics/Shapes › §4.5 maxDist: exact for every shape, against dense sweeps
+TIME        7.5 ms  Physics/Shapes › §4.3 planes: unit normals, the solid is exactly their intersection; Cylinder and Ball have none
+TIME        2.4 ms  Physics/Shapes › §4.3 faces: outward polygons of a closed solid, whose divergence volume and moment are the analytic ones
+TIME        0.3 ms  Physics/Shapes › prepare: q and −q give the same bits, no input is written to, an unknown shape is a bug
+TIME      390.5 ms  Physics/Verdict › §5 hidden blocks cannot clean a plate that shows: C09 + a plate that shows 17–27 %, with and without fill
+TIME       21.3 ms  Physics/Verdict › §5 a Dust hairline hides nothing: a laminated blade's core stays kept with a speck along its rim
+TIME       43.0 ms  Physics/Verdict › §4.4 hidden copies inside a part use up nothing: the same verdict with 3, 9 and 18 of them
+TIME      518.6 ms  Physics/Verdict › §5 random fill around a large design: kept parts bit-identical, 40 designs
+TIME     7437.2 ms  Physics/Verdict › §5 random fill around a large design: kept parts bit-identical, FUZZ_N_VALID designs
+TIME      378.2 ms  Physics/Verdict › §4.4 the order of the fill changes no bit: before or among the kept parts, 20 designs
+TIME       11.3 ms  Physics/Verdict › §4.4 the order of the parts changes no bit: what the verdict reads, every order of 4 candidates
+TIME      247.2 ms  Physics/Verdict › §4.4 ids play no part: any order of a design's parts, 20 designs and 5 past N_SUB_WORK
+TIME       19.5 ms  Physics/Verdict › §4.4 flush plates inside a real blade are the ones cleaned, whatever their ids
+TIME       33.7 ms  Physics/Verdict › §4.4 an exact copy changes nothing: first or last, in a slot that comes later, in another material
+TIME        0.5 ms  Physics/Verdict › §4.4 Sampling.ranked: the larger first, then by where it stands, |x| before x, |z| before z, whatever the order
+TIME        8.9 ms  Physics/Verdict › §5 a laminated core that shows 5.54 % is kept: its proud rims, its ends, its top
+TIME       11.1 ms  Physics/Verdict › §4.4 a strip along the rim shows what it is: all round, on 3 sides, on 1, a hair
+TIME       29.8 ms  Physics/Verdict › §4.4 a slit shows what it is, wherever it passes: its width times its length, a hairline a hairline
+TIME        5.2 ms  Physics/Verdict › §4.4 one part or two: a slit between two hiders shows; a lid with a corner off shows its triangle
+TIME        1.1 ms  Physics/Verdict › §4.4 a part hides by the probe up to HIDE_OFFSET and no further; a lid on a lid changes nothing
+TIME        1.0 ms  Physics/Verdict › §4.4 a part reads the same whatever axes it is built on: a lid turned so that each of its axes lies along each of the plate's
+TIME        4.6 ms  Physics/Verdict › §4.4 a bar across and a window: what shows between parts, however it lies
+TIME        8.7 ms  Physics/Verdict › §4.4 Dust hides nothing: a speck over a strip leaves what the verdict reads
+TIME        7.3 ms  Physics/Verdict › §4.4 exact copies hide nothing: a stack of a lid's copies leaves what the verdict reads, and they have no verdict
+TIME        5.1 ms  Physics/Verdict › §4.4 copies of a blade 0.002 apart: each shows what its neighbours leave of its rim, the last one its face
+TIME        6.1 ms  Physics/Verdict › §4.4 a smaller copy of a wedge inside it reads nothing; a thin CornerWedge's tip reads what stands above its host
+TIME        4.1 ms  Physics/Verdict › §4.4 a Ball between 2 plates: its band is read on its model, within the model's band of the truth
+TIME       17.1 ms  Physics/Verdict › §5 a hairline keeps no filler: a core behind a slit 0.00001 wide is cleaned, K + F measures as K
+TIME       40.4 ms  Physics/Verdict › §5 pins cannot clean a kept core: 3 wedges in its slit, poking or 1e-8 under, whatever their ids
+TIME       37.8 ms  Physics/Verdict › §5 a fuller is seen: a core under cover strips, a groove or a twin, kept by what shows, cleaned by what does not
+TIME        9.5 ms  Physics/Verdict › §5 a comb is seen: 7 stripes on one face of a blade that shows 20 %
+TIME        2.4 ms  Physics/Verdict › §4.9 the measure's ladder: exactly N_SURF_WORK fits
+TIME        2.6 ms  Physics/Verdict › §4.4 a part exactly on the Dust floor hides like any other
+TIME      118.5 ms  Physics/VerdictPrecision › E-S2.11 the oracle against closed forms: caps, arcs, a slot, a sunk plate, a cut wedge, coincident faces, the probe
+TIME     2912.4 ms  Physics/VerdictPrecision › E-S2.11 the oracle against closed forms, 5 whole-design turns, its fine lattice
+TIME    49244.1 ms  Physics/VerdictPrecision › E-S2.12 the verdict against the oracle on a tenth of the plausible families and the attack designs: nothing that shows 3 % cleaned, nothing under 1.9 % kept
+RESULT pass=208 fail=0 skip=0 files=51 time=280.63s

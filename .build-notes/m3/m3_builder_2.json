@@ -1,0 +1,81 @@
+{
+ "summary": "Builder 2 (Factors and Difficulty) is done. The full `lune run scripts/verify` is green: 685 pass, 0 fail, exit 0. Nothing was committed.\n\n**What I built**\n- **Physics/Factors.luau:** the prototype's `setFactors` ported without `%`, walking every set in the measure's rank order. It returns the 8 factors and a budget record. Thinness' share term follows L13. Header marks: O10 (cleaned parts count in no factor) and O11 (re-cutting a part can move G up to 0.0236).\n- **Physics/Difficulty.luau:** quantize, soft OR, governing material, plan steps and the step itself.\n- **tests/Physics/DifficultyHelpers.luau:** builds the factors' inputs the way Analyze's phases hold them, and plays the steps the way phase 6 will.\n- **Factors.spec (21 cases) and Difficulty.spec (14 cases):** T-DIF-01, 02, 03, 05, 06 and 08, the X06 oracle, and L2's comparison with the prototype. Also L16's determinism and no-mutation checks plus a shuffled-Definitions check, and d per step on every fixture.\n- **docs/build/M3-notes.md:** my section.\n\n**Numbers**\n- Against the plan's emulator, every factor and every d is bit-identical on all 64 fixtures.\n- Against the pure prototype (L2): the five order-free factors match bit for bit on the 63 fixtures that share its verdict. Volume agrees within 1.4e-17. SurfaceComplexity agrees within 1.3e-15 where the measure's grid matches.\n- X02's grid differs from the prototype's, so its SurfaceComplexity and Joints are checked against the build's own measure instead; its d still equals the prototype's.\n- d per step matches [7.1]–[7.2] on 70 fixtures (C09's Hammering is 0.3186), and every tier matches the fixture records.\n- T-DIF-06's sweeps come out at 0.2070 and 0.2056 Hard. The X06 oracle error is 0.0030.\n\n**Deviation to note (L11):** the recipe as written fails, with Asymmetry up to 0.60. The generator turns blocks about Y on the plane x = 0, and the recipe leaves them unmirrored. Mirroring those parts too, as the editor's mirror tool does, gives Asymmetry 0 on all 500 designs.\n\n**Timing:** Factors and Difficulty take 1.4–8.1 ms per design. Their longest stretch between checkpoints is 0.200 ms (Thinness' per-probe charge).",
+ "filesWritten": [
+  "C:\\Users\\louis\\Documents\\RANDOM\\ROBLOX\\Blacksmithing Game\\src\\shared\\Physics\\Factors.luau",
+  "C:\\Users\\louis\\Documents\\RANDOM\\ROBLOX\\Blacksmithing Game\\src\\shared\\Physics\\Difficulty.luau",
+  "C:\\Users\\louis\\Documents\\RANDOM\\ROBLOX\\Blacksmithing Game\\tests\\Physics\\DifficultyHelpers.luau",
+  "C:\\Users\\louis\\Documents\\RANDOM\\ROBLOX\\Blacksmithing Game\\tests\\Physics\\Factors.spec.luau",
+  "C:\\Users\\louis\\Documents\\RANDOM\\ROBLOX\\Blacksmithing Game\\tests\\Physics\\Difficulty.spec.luau",
+  "C:\\Users\\louis\\Documents\\RANDOM\\ROBLOX\\Blacksmithing Game\\docs\\build\\M3-notes.md (appended section '## B2 Factors and Difficulty')",
+  "C:\\Users\\louis\\AppData\\Local\\Temp\\claude\\C--Users-louis-Documents-RANDOM-ROBLOX\\93ae48b4-72b9-4dc1-aa5d-451af1abf9a0\\scratchpad\\m3-b2\\NOTES.md",
+  "C:\\Users\\louis\\AppData\\Local\\Temp\\claude\\C--Users-louis-Documents-RANDOM-ROBLOX\\93ae48b4-72b9-4dc1-aa5d-451af1abf9a0\\scratchpad\\m3-b2\\perf15_factors.txt",
+  "C:\\Users\\louis\\AppData\\Local\\Temp\\claude\\C--Users-louis-Documents-RANDOM-ROBLOX\\93ae48b4-72b9-4dc1-aa5d-451af1abf9a0\\scratchpad\\m3-b2\\work\\proto\\b2_cmp.luau, b2_mirror.luau, b2_x06.luau, b2_table.luau, b2_time.luau, b2_perf.luau, b2_seg.luau (measurement scripts; run from work\\repo, a copy of the tree, with proto-r2 beside it)",
+  "C:\\Users\\louis\\AppData\\Local\\Temp\\claude\\C--Users-louis-Documents-RANDOM-ROBLOX\\93ae48b4-72b9-4dc1-aa5d-451af1abf9a0\\scratchpad\\m3-b2\\work\\out\\ (b2_cmp.txt, b2_table.txt, b2_perf15b.txt, tab.txt, tab_dump.txt, verify_full1.txt, verify_full2.txt)"
+ ],
+ "testsAdded": [
+  "Physics/Factors: §5.2 ORDER is FactorId order: Definitions/Validate's and the Sword's refs'",
+  "Physics/Factors: §4.1 cbrt is the prototype's, bit for bit (2000 random inputs), and a cube root to a few ulps",
+  "Physics/Factors: §5.2 norm; the union chord, grown from the probe, gaps up to CONTACT_TOL merged; thinAxis",
+  "Physics/Factors: §5.2 Thinness' share term counts the probes taken (L13)",
+  "Physics/Factors: T-DIF-01 Gen designs, 20 fast, plus PROP_N slow: every factor in range, g, m, d on the 1e-4 grid",
+  "Physics/Factors: T-DIF-01 the caps: A24's Thinness 1 on both sets and Hammering 0.4000 Hard; Volume x 1 on P1, P2, P4; F3 Blade SurfaceComplexity x 1",
+  "Physics/Factors: T-DIF-01 the EdgeLength cap: valid, 8.2001, x 1",
+  "Physics/Factors: T-DIF-06 F5's blade thinned 0.060→0.043 (Hammering Hard from 0.045 at 0.2070); C02's blade +0.15/+0.20/+0.25 (Sharpening Hard from +0.20 at 0.2056); PartCount C01 4 → C10 6.916",
+  "Physics/Factors: T-DIF-08 C13 Asymmetry 0 on both sets; Gen swords built half and mirrored, 20 fast, plus FUZZ_N_VALID slow (L11)",
+  "Physics/Factors: T-DIF-13 X06 against the planted 120-probe oracle (largest error 0.0030, bound 0.02)",
+  "Physics/Factors: [8.2] the prototype's factors in the measure's rank order, 3 cases: calibration + F1–F5 (with C09 Thinness on All 0.3898); A/X fixtures and their bases; P2–P5, plus P1 checked on its own verdict",
+  "Physics/Factors: §4.9 budgets on P1–P5 and the specks; §4.9 thinness, asymmetry and volumeSamples each reach a checkpoint at CHECK_UNITS",
+  "Physics/Factors: P-DET and P-NOMUT for Factors.measure: frozen inputs, run twice, same result for any order of the set",
+  "Physics/Difficulty: T-DIF-02 softOr on the 101 × 101 grid",
+  "Physics/Difficulty: T-DIF-03 the tier boundary is exact (0.1999999999 Normal, 0.2 Hard), q(0.19995) Hard, q(0.199949) Normal; NaN raises; tierRaw never clamped (F3 Expert and Master, P1 Hell)",
+  "Physics/Difficulty: T-DIF-05 C02 Iron vs Steel bit-identical; F1 vs F5 same d; Gen designs with Iron and Steel swapped, 20 fast, plus FUZZ_N_VALID slow",
+  "Physics/Difficulty: §5.1 governing: term, then hardness, then Materials order; nil on an empty set (with planted Materials)",
+  "Physics/Difficulty: §5.1 step: terms in Steps' order, Σw = 1, g = q(Σw·x), m from the material (planted term 0.25), factors copied; caller-bug errors",
+  "Physics/Difficulty: §4.7 planSteps: the enabled steps in plan order; a planted plan (Hammering disabled, Finishing appended) is followed; an unknown type errors",
+  "Physics/Difficulty: P-DET and P-NOMUT for Difficulty.step; P-ORDER with Materials, Steps and Tiers rebuilt in shuffled order and planted into Factors and Difficulty",
+  "Physics/Difficulty: §5.5 and T-DIF-01: on every fixture (F1–F5, C01–C15, A24–A27, X01–X07, P1–P5 and the specks), d per step against [7.1]–[7.2], g = d, the records' tiers, factors in range, F5 at least STARTER_MARGIN below Hard"
+ ],
+ "verifyResult": "[luau-lsp] pass A: 0 error(s)\n[luau-lsp] pass B: 0 error(s)\nRESULT pass=685 fail=0 skip=0 files=57 time=173.60s\nVERIFY GREEN (178.1 s)\nexit 0\n\n(Full `lune run scripts/verify` with the slow cases; machine 4 % busy before and 0 % after, no other Lune process. The previous full run: 685 pass, tests 175.36 s, VERIFY GREEN (179.9 s), exit 0.)",
+ "specEdits": [
+  "None. SPEC.md and SPEC-evidence.md are untouched; the wording they need is listed in openIssues for builder 4."
+ ],
+ "measurements": [
+  "Bit-identity with the plan's emulator (proto-r2 on a scratch copy of the working tree, rank order, b2_cmp.luau): every factor raw and every step d on all 64 fixtures. tab.luau on the copy is identical to the plan's tab.txt. Load about 2 %.",
+  "L2, against the pure prototype in rank order: PartCount, Thinness, Asymmetry, EdgeLength and MaterialMix bit for bit on the 63 fixtures sharing the verdict. Volume agrees within 1.4e-17, and SurfaceComplexity within 1.3e-15 where hSurf agrees.",
+  "L2 continued: X02 (hSurf 0.04 against 0.06) has SurfaceComplexity 0.0069 and Joints 0.159 off the prototype on All (0.00091 and 0.0225 on the Blade), but within 1e-12 of the build's own measure. Its d is equal. P1 keeps its own verdict: d 1 / 0 / 0.0086.",
+  "d per step on every repo fixture (70, including A24 and the six specks) equals [7.1]–[7.2]'s rank-order column, and every played and raw tier equals the fixture records (b2_table.luau).",
+  "d examples: C09 0.0001 / 0.3186 / 0.1904; X02 Hammering 0.0510; A24 0.0281 / 0.4000 / 0.3909; P1–P3 with a speck 1 / 0 / 0.0048, 1 / 0.0674 / 0.0479 and 0.2622 / 0.1759 / 0.1612.",
+  "[7.6] reproduced: F5's blade thinned gives Hammering 0.1037 / 0.1322 / 0.1658 / 0.1895 / 0.2070 (Hard) / 0.2263, Thinness on All 0.2594 → 0.5657. C02's blade lengthened gives Sharpening 0.1889 / 0.2056 (Hard) / 0.2314 and EdgeLength 5.9635 / 6.0435 / 6.1635.",
+  "[7.6] continued: PartCount C01 4 → C10 6.916. Volume caps on P1 2.2682, P2 0.9968, P4 1.2608. F3 Blade SurfaceComplexity 2.9804. EdgeLength cap 8.2001. C09 Thinness on All 0.3898.",
+  "X06 against the 120-probe oracle (Factors and Sampling planted with ASYM_N_MIN 120, ASYM_WORK 1e9, N_MAX_AXIS 400, b2_x06.luau): measured 0 / 0 / 0.0396 / 0.1529 / 0.2804 / 0.4078, oracle 0 / 0 / 0.0413 / 0.1559 / 0.2817 / 0.4075, largest error 0.0030.",
+  "L11 (b2_mirror.luau, PROP_BASE_SEED stream): the literal recipe gives Asymmetry raw up to 0.1563 All / 0.4590 Blade on 20 designs, 0.3296 / 0.6026 on 500. Validsword turns blocks about Y on the plane x = 0: 22 such parts in 20 designs, 465 in 500.",
+  "L11 continued: also mirroring the parts on the plane that are not their own image gives 0 on all 20 and all 500, both sets. 1 of 20 designs had its blade at x < 0.",
+  "T-DIF-07 on Gen designs with the real code (b2_seg.luau, TestRng 0x5EED0007, 300 designs): translated |ΔG| 0.0009 (#270). Segmented |ΔG| 0.0236 (#51), Thinness x 0.0591, Asymmetry 0.0197, no flips. Identical to the plan's seg300.txt.",
+  "Cost (b2_perf.luau, T-PERF-01's cases plus F5, C02, C05, C09; median of 15, odd rounds forward and even backward, full GC per case, inputs outside the timing; load 0–3 %, no other Lune): Factors.measure per distinct set plus Difficulty.step per step take 1.43 ms (F5) to 3.02 (C05).",
+  "Cost continued: P1–P5 1.66–3.93 ms, specks 1.65–3.64, worst valid designs 1.50–8.07 (valid 9).",
+  "Longest stretch between checkpoints at CHECK_UNITS 500 (same runs): F and C fixtures 0.071–0.127 ms, P fixtures 0.048–0.162, worst valid designs 0.060–0.200 (valid 9). Thinness' per-probe charge ends it in 15–16 of 16 runs on every case.",
+  "Suites: quick verify tests 23.74 s (665 pass, 20 skip; builder 1 left 21.31 s). Full verify tests 175.36 s and 173.60 s (685 pass; 162.37 s before), VERIFY 179.9 s and 178.1 s.",
+  "Case times (b2_time.luau, load about 3 %): Factors.spec fast cases about 1.6 s in all (largest 0.45 s), Difficulty.spec fast about 0.9 s (largest 0.53 s). Slow: mirrored swords 500 designs 3.6 s, PROP_N 0.86 s, material swap 500 designs 4.4 s."
+ ],
+ "deviations": [
+  "L11's recipe gains two steps, both measured. First, the parts on the plane x = 0 that are not their own image (Mirror.isSelfSymmetric) are mirrored too, as the editor's mirror copy does (§11.10). Second, a sword with no Blade part at x ≥ 0 is reflected first.",
+  "L11 continued: the literal recipe fails by construction (up to 0.60), because the generator turns blocks about Y on the plane. The assertion is on the normalized Asymmetry (x ≤ TOL_ASYM_ZERO, §16.32's unit 'factor'), which measures 0 on every design.",
+  "FactorContext has no `kept` field: nothing reads it, since a work set holds kept parts only.",
+  "Factors requires Definitions/Materials, which [3.1]'s require list omits: MaterialMix walks Materials.ordered, as [3.3]'s table says. Difficulty requires Physics/Shapes for the Prepared type of governing's parts.",
+  "T-DIF-01's per-fixture range checks run inside Difficulty.spec's single pass over every fixture (with [7.1]–[7.2]'s d and the tiers), so each fixture is measured once (about 0.5 s saved in --quick). Factors.spec keeps the Gen corpora and the caps.",
+  "Charges: per Thinness probe taken, its part's higher parts (the ownership test), plus 2 per set part only where the probe is measured. Per Asymmetry part, the set plus its higher parts for the candidate lists, besides 1 + candidates per sample. The plan charged 2·#set + #higher per probe taken.",
+  "Difficulty.spec adds P-ORDER for Factors and Difficulty, planting reordered Materials, Steps and Tiers modules. L16 places P-ORDER in Analyze.spec, which is builder 3's.",
+  "Factors.thinness and Factors.asymmetry, the test exports, take a set of indices and return (raw, stride, probes) and (raw, spacing, work)."
+ ],
+ "openIssues": [
+  "Builder 3, phase 6: build the FactorContext from parts, Sampling.measureRanked's rank, probes, exposure, owned, graph.touching, edge.length and geometry. Then for each Difficulty.planSteps(core.type) row: set = WorkSet.select(core.parts, kept, worksOn), with steps nil if any set is empty (D5).",
+  "Builder 3, phase 6 continued: Factors.measure(ctx, set, spend) once per selector key with phase() after each, then Difficulty.step(row.step, values, Difficulty.governing(parts, set)). DifficultyHelpers.steps does exactly this without spend, so comparing Analyze.run's steps with it on the fixtures checks the wiring.",
+  "Builder 3: re-export FactorValue from Factors and StepAnalysis from Difficulty. Add the local functions `thinness` and `asymmetry` to Analyze.spec's long-loop names list (Sampling.volumeSamples is already M2's).",
+  "Builder 3: planted maps need, for Factors, Balance, Types, Limits, Materials, MassProps, Sampling and Shapes; for Difficulty, CraftPlans, Types, Materials, Steps, Tiers, Util/Quantize, Factors and Shapes. Difficulty.spec's `reordered` helper can be reused for Analyze.spec's P-ORDER.",
+  "Builder 3: Factors.measure's second value {thinStride, thinProbes, asymSpacing, asymWork} serves P1's budget case near Analyze.spec line 709. Thinness ends M3's longest stretches at about 0.20 ms (worst valid 9, median), under 0.35.",
+  "Builder 4: §5.2's Thinness line '(Σ_W w if no Blade part)' must become L13's rule: the probes taken in the striking slot, or all probes when none is. §14.6 T-DIF-08 needs the extended mirrored-Gen recipe. §1.3 L2 needs Factors → Definitions/Materials and Difficulty → Physics/Shapes.",
+  "Builder 4: Factors.luau's header carries '**[Decision to confirm]** (§17.1 O10)' (cleaned parts inert in every factor, D1) and '(§17.1 O11)' (the stride and θ follow the parts as built, G up to 0.0236, D2). Renumber them if §17.1's new rows get other numbers.",
+  "Lead: M2's verdict and measure: nothing found wrong. X02's grid differs from the prototype's only by M2's documented rule (the measure's grid over kept parts), which L2's check accounts for.",
+  "The fast-suite budget: --quick tests are at 23.74 s before builder 3's Invariance, DifficultyTable and Analyze.spec additions. The plan's gate is 30 s, so builder 3 has about 6 s of room."
+ ]
+}

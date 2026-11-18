@@ -1,0 +1,9 @@
+UNITS corpus_fixtures.json: 71 designs, new median 1956, p99 293328, max 293328 | old median 1943, p99 106658, max 106658 (0 s)
+     293328 units (old  106658)  n24 cleaned  9  P1 24 large overlapping tilted blocks [fx-perf]
+      41837 units (old   11301)  n24 cleaned  0  P4 24 overlapping balls [fx-perf]
+      31650 units (old   12713)  n24 cleaned  0  P2 24 rotated cylinders [fx-perf]
+      11113 units (old    8320)  n18 cleaned  0  C09 Ornate (18 parts) [fx-calibration]
+       5930 units (old    2652)  n 7 cleaned  0  F3 Rapier [fx-golden]
+       5414 units (old   19104)  n11 cleaned  5  X02 6 blade copies at z = k*0.002 (vs union blade 0.072) [fx-regression]
+       3086 units (old    5322)  n24 cleaned  0  P3 24 rotated wedges [fx-perf]
+       2544 units (old    2250)  n 7 cleaned  0  C04 Rapier (Steel blade) [fx-calibration]

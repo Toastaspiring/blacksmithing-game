@@ -1,0 +1,50 @@
+M2 attack corpus (recorded attack designs + worst_P + climbed + attacks.json): 1410 designs, 21070 parts, 0 design errors, files 2
+== reading old
+  Ball        parts   3518  false Enclosed at >= 2.5/3/5/7.5/10/15/20 %: 6/6/6/6/6/6/4   false kept at < 1.5/1/0.5/0.25 %: 0/0/0/0   highest cleaned 47.97 %, lowest kept 34.925 %
+  Block       parts   8405  false Enclosed at >= 2.5/3/5/7.5/10/15/20 %: 4/4/4/4/4/0/0   false kept at < 1.5/1/0.5/0.25 %: 30/30/30/28   highest cleaned 12.07 %, lowest kept 0.000 %
+  CornerWedge parts    319  false Enclosed at >= 2.5/3/5/7.5/10/15/20 %: 1/1/0/0/0/0/0   false kept at < 1.5/1/0.5/0.25 %: 0/0/0/0   highest cleaned 4.15 %, lowest kept 1.597 %
+  Cylinder    parts   4026  false Enclosed at >= 2.5/3/5/7.5/10/15/20 %: 14/14/14/14/14/14/14   false kept at < 1.5/1/0.5/0.25 %: 33/33/20/20   highest cleaned 41.57 %, lowest kept 0.005 %
+  Wedge       parts   4802  false Enclosed at >= 2.5/3/5/7.5/10/15/20 %: 0/0/0/0/0/0/0   false kept at < 1.5/1/0.5/0.25 %: 0/0/0/0   highest cleaned 2.10 %, lowest kept 2.235 %
+  ALL         parts  21070  false Enclosed at >= 2.5/3/5/7.5/10/15/20 %: 25/25/24/24/24/20/18   false kept at < 1.5/1/0.5/0.25 %: 63/63/50/48   highest cleaned 47.97 %, lowest kept 0.000 %
+    false Enclosed: true 47.97 % read -  v12/a_hand emu #26 part 4 (Ball)
+    false Enclosed: true 47.97 % read -  v12/a_hand vsTruth #25 part 4 (Ball)
+    false Enclosed: true 41.57 % read -  v12/a_hand emu #4 part 4 (Cylinder)
+    false Enclosed: true 41.57 % read -  v12/a_hand vsTruth #3 part 4 (Cylinder)
+    false Enclosed: true 40.67 % read -  v12/a_hand emu #8 part 4 (Cylinder)
+    false Enclosed: true 40.67 % read -  v12/a_hand vsTruth #7 part 4 (Cylinder)
+    false kept:     true 0.000 % read -  v2-2 attacks crossings, blade 0.30 x 2.60, cheeks 0.03 part 4 (Block)
+    false kept:     true 0.000 % read -  v12/a_flat emu #10 part 20 (Block)
+    false kept:     true 0.000 % read -  v12/a_flat vsTruth #9 part 20 (Block)
+    false kept:     true 0.000 % read -  v22/x_canon reads #1 part 4 (Block)
+    false kept:     true 0.000 % read -  v22/x_lattice2 valid #1 part 4 (Block)
+    false kept:     true 0.000 % read -  v22/x_lattice2 valid #3 part 4 (Block)
+== reading base
+  Ball        parts   3518  false Enclosed at >= 2.5/3/5/7.5/10/15/20 %: 0/0/0/0/0/0/0   false kept at < 1.5/1/0.5/0.25 %: 0/0/0/0   highest cleaned 0.00 %, lowest kept 18.987 %
+  Block       parts   8405  false Enclosed at >= 2.5/3/5/7.5/10/15/20 %: 0/0/0/0/0/0/0   false kept at < 1.5/1/0.5/0.25 %: 0/0/0/0   highest cleaned 2.00 %, lowest kept 2.017 %
+  CornerWedge parts    319  false Enclosed at >= 2.5/3/5/7.5/10/15/20 %: 0/0/0/0/0/0/0   false kept at < 1.5/1/0.5/0.25 %: 0/0/0/0   highest cleaned 1.94 %, lowest kept 1.947 %
+  Cylinder    parts   4026  false Enclosed at >= 2.5/3/5/7.5/10/15/20 %: 0/0/0/0/0/0/0   false kept at < 1.5/1/0.5/0.25 %: 2/2/2/2   highest cleaned 2.05 %, lowest kept 0.011 %
+  Wedge       parts   4802  false Enclosed at >= 2.5/3/5/7.5/10/15/20 %: 0/0/0/0/0/0/0   false kept at < 1.5/1/0.5/0.25 %: 0/0/0/0   highest cleaned 1.99 %, lowest kept 1.982 %
+  ALL         parts  21070  false Enclosed at >= 2.5/3/5/7.5/10/15/20 %: 0/0/0/0/0/0/0   false kept at < 1.5/1/0.5/0.25 %: 2/2/2/2   highest cleaned 2.05 %, lowest kept 0.011 %
+    false kept:     true 0.011 % read 3.806 %  v12/a_void emu #20 part 17 (Cylinder)
+    false kept:     true 0.011 % read 3.806 %  v12/a_void vsTruth #19 part 17 (Cylinder)
+== reading canon
+  Ball        parts   3518  false Enclosed at >= 2.5/3/5/7.5/10/15/20 %: 0/0/0/0/0/0/0   false kept at < 1.5/1/0.5/0.25 %: 0/0/0/0   highest cleaned 0.00 %, lowest kept 18.987 %
+  Block       parts   8405  false Enclosed at >= 2.5/3/5/7.5/10/15/20 %: 0/0/0/0/0/0/0   false kept at < 1.5/1/0.5/0.25 %: 0/0/0/0   highest cleaned 2.00 %, lowest kept 2.017 %
+  CornerWedge parts    319  false Enclosed at >= 2.5/3/5/7.5/10/15/20 %: 0/0/0/0/0/0/0   false kept at < 1.5/1/0.5/0.25 %: 0/0/0/0   highest cleaned 1.94 %, lowest kept 1.947 %
+  Cylinder    parts   4026  false Enclosed at >= 2.5/3/5/7.5/10/15/20 %: 0/0/0/0/0/0/0   false kept at < 1.5/1/0.5/0.25 %: 2/2/2/2   highest cleaned 2.05 %, lowest kept 0.011 %
+  Wedge       parts   4802  false Enclosed at >= 2.5/3/5/7.5/10/15/20 %: 0/0/0/0/0/0/0   false kept at < 1.5/1/0.5/0.25 %: 0/0/0/0   highest cleaned 1.99 %, lowest kept 1.982 %
+  ALL         parts  21070  false Enclosed at >= 2.5/3/5/7.5/10/15/20 %: 0/0/0/0/0/0/0   false kept at < 1.5/1/0.5/0.25 %: 2/2/2/2   highest cleaned 2.05 %, lowest kept 0.011 %
+    false kept:     true 0.011 % read 3.806 %  v12/a_void emu #20 part 17 (Cylinder)
+    false kept:     true 0.011 % read 3.806 %  v12/a_void vsTruth #19 part 17 (Cylinder)
+== reading fine
+  Ball        parts   3518  false Enclosed at >= 2.5/3/5/7.5/10/15/20 %: 0/0/0/0/0/0/0   false kept at < 1.5/1/0.5/0.25 %: 0/0/0/0   highest cleaned 0.00 %, lowest kept 18.987 %
+  Block       parts   8405  false Enclosed at >= 2.5/3/5/7.5/10/15/20 %: 0/0/0/0/0/0/0   false kept at < 1.5/1/0.5/0.25 %: 0/0/0/0   highest cleaned 2.00 %, lowest kept 2.017 %
+  CornerWedge parts    319  false Enclosed at >= 2.5/3/5/7.5/10/15/20 %: 0/0/0/0/0/0/0   false kept at < 1.5/1/0.5/0.25 %: 0/0/0/0   highest cleaned 1.94 %, lowest kept 1.947 %
+  Cylinder    parts   4026  false Enclosed at >= 2.5/3/5/7.5/10/15/20 %: 0/0/0/0/0/0/0   false kept at < 1.5/1/0.5/0.25 %: 2/2/2/2   highest cleaned 2.05 %, lowest kept 0.011 %
+  Wedge       parts   4802  false Enclosed at >= 2.5/3/5/7.5/10/15/20 %: 0/0/0/0/0/0/0   false kept at < 1.5/1/0.5/0.25 %: 0/0/0/0   highest cleaned 1.99 %, lowest kept 1.982 %
+  ALL         parts  21070  false Enclosed at >= 2.5/3/5/7.5/10/15/20 %: 0/0/0/0/0/0/0   false kept at < 1.5/1/0.5/0.25 %: 2/2/2/2   highest cleaned 2.05 %, lowest kept 0.011 %
+    false kept:     true 0.011 % read 3.806 %  v12/a_void emu #20 part 17 (Cylinder)
+    false kept:     true 0.011 % read 3.806 %  v12/a_void vsTruth #19 part 17 (Cylinder)
+  |base read - truth| max by shape (fine-lattice rows): Ball 0.0256, Block 0.0035, CornerWedge 0.0026, Cylinder 0.0379, Wedge 0.0024
+  |canon read - truth| max by shape (fine-lattice rows): Ball 0.0256, Block 0.0034, CornerWedge 0.0026, Cylinder 0.0379, Wedge 0.0024
+  |fine read - truth| max by shape (fine-lattice rows): Ball 0.0049, Block 0.0034, CornerWedge 0.0026, Cylinder 0.0379, Wedge 0.0024

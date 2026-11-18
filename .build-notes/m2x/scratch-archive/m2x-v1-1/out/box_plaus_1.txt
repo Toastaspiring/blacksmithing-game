@@ -1,0 +1,3 @@
+  cage|r0.28 k4 open0.40 roll0.0 part 4 (Ball): cover 66.0797%, hide test 65.2380%
+  cage|r0.28 k8 open0.40 roll0.0 part 4 (Ball): cover 85.1084%, hide test 84.2668%
+plausible: 8348 designs, 81069 parts; 9 read differently from the hide test (> 1e-9 of the area), 0 verdicts flip; worst 0.0084 of a part: cage|r0.28 k4 open0.40 roll0.0 part 4 (Ball): cover 66.0797%, the model's hide test 65.2380%

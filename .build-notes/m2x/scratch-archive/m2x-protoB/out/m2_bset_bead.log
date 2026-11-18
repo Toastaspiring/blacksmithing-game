@@ -1,0 +1,6 @@
+  bset:bead:1:0: 50 / 264 designs, 2 s
+  bset:bead:1:0: 100 / 264 designs, 4 s
+  bset:bead:1:0: 150 / 264 designs, 6 s
+  bset:bead:1:0: 200 / 264 designs, 7 s
+  bset:bead:1:0: 250 / 264 designs, 9 s
+M2 bset:bead:1:0 -> m2_bset_bead.jsonl: 264 designs, 10 s

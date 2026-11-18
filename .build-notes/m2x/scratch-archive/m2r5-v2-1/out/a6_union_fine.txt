@@ -1,0 +1,20 @@
+P1  union V 2.5286 COM (-0.0025 2.4719 -0.0000) [grid 0.004]
+   build  U 2.2521 (-10.94 %) hOverlap 0.2000 refined 6940 COM (0.0009 2.4576 0.0001) dy -0.0143
+   lifted U 2.4982 (-1.20 %) hOverlap 0.0125 refined 276480 dy -0.0073
+   old    U 2.3288 (-7.90 %) hOverlap 0.2000 dy 0.0422
+P2  union V 1.0428 COM (0.0225 2.5075 -0.0000) [grid 0.004]
+   build  U 0.9968 (-4.41 %) hOverlap 0.0625 refined 8600 COM (0.0239 2.5192 -0.0003) dy 0.0117
+   lifted U 1.0501 (+0.70 %) hOverlap 0.0125 refined 304128 dy -0.0028
+   old    U 0.9968 (-4.41 %) hOverlap 0.0625 dy 0.0117
+P3  union V 0.2799 COM (0.0150 2.0065 0.0117) [grid 0.004]
+   build  U 0.2808 (+0.33 %) hOverlap 0.0250 refined 4608 COM (0.0148 2.0078 0.0137) dy 0.0013
+   lifted U 0.2818 (+0.67 %) hOverlap 0.0125 refined 27648 dy -0.0014
+   old    U 0.2808 (+0.33 %) hOverlap 0.0250 dy 0.0013
+P4  union V 1.3348 COM (0.0003 2.5261 0.0000) [grid 0.004]
+   build  U 1.2608 (-5.54 %) hOverlap 0.0750 refined 7824 COM (-0.0019 2.5163 -0.0000) dy -0.0097
+   lifted U 1.3352 (+0.03 %) hOverlap 0.0125 refined 299520 dy -0.0009
+   old    U 1.2608 (-5.54 %) hOverlap 0.0750 dy -0.0097
+P5  union V 0.1034 COM (-0.0000 1.4457 -0.0003) [grid 0.004]
+   build  U 0.1036 (+0.24 %) hOverlap 0.0125 refined 676 COM (0.0000 1.4481 0.0003) dy 0.0024
+   lifted U 0.1036 (+0.24 %) hOverlap 0.0125 refined 676 dy 0.0024
+   old    U 0.1036 (+0.24 %) hOverlap 0.0125 dy 0.0024

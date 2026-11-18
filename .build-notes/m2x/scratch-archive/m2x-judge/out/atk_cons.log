@@ -1,0 +1,34 @@
+-- the model-channel designs
+ball in grip g 0.00200                       truth   0.000%  canon   0.000%  conservative   0.000%
+ball in grip g 0.00100                       truth   0.000%  canon   0.000%  conservative   0.000%
+ball in grip g 0.00060                       truth   0.000%  canon   0.000%  conservative   0.000%
+ball in grip g 0.00040                       truth   0.000%  canon   0.000%  conservative   0.000%
+ball in grip g 0.00030                       truth   0.000%  canon   0.002%  conservative   0.002%
+ball in grip g 0.00020                       truth   0.000%  canon   0.015%  conservative   0.015%
+ball in grip g 0.00010                       truth   0.000%  canon   0.042%  conservative   0.042%
+ball in grip g 0.00003                       truth   0.000%  canon   0.067%  conservative   0.067%
+ball in grip g 0.00001                       truth   0.000%  canon   0.076%  conservative   0.076%
+rod r 0.10 in 16 walls, corner gap 0.0119    truth   0.000%  canon   8.058%  conservative   0.000%
+rod r 0.10 in 16 walls, corner gap 0.0118    truth   0.000%  canon   5.945%  conservative   0.000%
+rod r 0.10 in 16 walls, corner gap 0.0116    truth   0.000%  canon   1.720%  conservative   0.000%
+rod r 0.10 in 16 walls, corner gap 0.0115    truth   0.000%  canon   0.000%  conservative   0.000%
+rod r 0.10 in 16 walls, corner gap 0.0112    truth   0.000%  canon   0.000%  conservative   0.000%
+rod r 0.10 in 16 walls, corner gap 0.0110    truth   0.000%  canon   0.000%  conservative   0.000%
+rod r 0.10 in 16 walls, corner gap 0.0105    truth   0.000%  canon   0.000%  conservative   0.000%
+rod r 0.10 in 16 walls, corner gap 0.0100    truth   0.000%  canon   0.000%  conservative   0.000%
+rod r 0.20 in 16 walls, corner gap 0.0119    truth   0.000%  canon   9.534%  conservative   0.000%
+rod r 0.20 in 16 walls, corner gap 0.0118    truth   0.000%  canon   8.429%  conservative   0.000%
+rod r 0.20 in 16 walls, corner gap 0.0116    truth   0.000%  canon   6.219%  conservative   0.000%
+rod r 0.20 in 16 walls, corner gap 0.0115    truth   0.000%  canon   5.115%  conservative   0.000%
+rod r 0.20 in 16 walls, corner gap 0.0112    truth   0.000%  canon   1.800%  conservative   0.000%
+rod r 0.20 in 16 walls, corner gap 0.0110    truth   0.000%  canon   0.000%  conservative   0.000%
+rod r 0.20 in 16 walls, corner gap 0.0105    truth   0.000%  canon   0.000%  conservative   0.000%
+rod r 0.20 in 16 walls, corner gap 0.0100    truth   0.000%  canon   0.000%  conservative   0.000%
+cylinder spun 37 deg (part 2)                truth   0.000%  canon   0.000%  conservative   0.000%
+cylinder spun 37 deg (part 1)                truth 100.000%  canon 100.000%  conservative 100.000%
+ball turned 77 deg (part 2)                  truth 100.000%  canon 100.000%  conservative 100.000%
+ball turned 77 deg (part 1)                  truth   0.000%  canon   0.000%  conservative   0.000%
+-- plausible families with round parts, every 6-th design, against the truth
+canon         parts 8644: false Enclosed at true >= 2.5/3/5 %: 94/0/0 (highest cleaned 2.820%); false kept at true < 1.5/1/0.5 %: 1/0/0 (lowest kept 1.290%)
+conservative  parts 8644: false Enclosed at true >= 2.5/3/5 %: 94/0/0 (highest cleaned 2.820%); false kept at true < 1.5/1/0.5 %: 0/0/0 (lowest kept 2.039%)
+61 s

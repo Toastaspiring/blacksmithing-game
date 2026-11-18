@@ -1,0 +1,84 @@
+Cover survivors 83, killed by the new cases 16
+KILLED 502 < -> <= @14 | elseif budget < 0 then -- the work before it has passed the budget: no || Physics/Cover › (f) a reading stops at the first report past its budget, whatever step pas
+KILLED 502 literal 0 -> 1 | elseif budget < 0 then -- the work before it has passed the budget: no || Physics/Cover › (f) a reading stops at the first report past its budget, whatever step pas
+KILLED 503 literal 0 -> 1 | return 0, 0, true || Physics/Cover › (f) a reading entered past the budget does nothing and reports nothing (1.
+KILLED 503 drop statement | return 0, 0, true || Physics/Cover › (f) a reading entered past the budget does nothing and reports nothing (1.
+KILLED 534 drop statement | settle() || Physics/Cover › (f) a plate ringed by 20 Balls reports in stretches of SPEND_EVERY and one
+KILLED 567 drop statement | settle() || Physics/Cover › (f) a plate ringed by 20 Balls reports in stretches of SPEND_EVERY and one
+KILLED 569 drop statement | return nil, 0, false || Physics/Cover › (f) a reading stops at the first report past its budget, whatever step pas
+KILLED 593 drop statement | return false || Physics/Cover › (f) a reading stops at the first report past its budget, whatever step pas
+KILLED 626 drop statement | return true || Physics/Cover › (f) a reading stops at the first report past its budget, whatever step pas
+KILLED 652 drop statement | return true || Physics/Cover › (f) a reading stops at the first report past its budget, whatever step pas
+KILLED 705 drop statement | settle() || Physics/Cover › (f) a plate ringed by 20 Balls reports in stretches of SPEND_EVERY and one
+KILLED 707 drop statement | return || Physics/Cover › (f) a reading stops at the first report past its budget, whatever step pas
+KILLED 843 drop statement | return shown, done, true || Physics/Cover › (f) a reading stops at the first report past its budget, whatever step pas
+KILLED 856 drop statement | return shown, done, true || Physics/Cover › (f) a reading stops at the first report past its budget, whatever step pas
+KILLED 867 drop statement | return shown, done, true || Physics/Cover › (f) a reading stops at the first report past its budget, whatever step pas
+KILLED 888 drop statement | return shown, done, true || Physics/Cover › (f) a reading stops at the first report past its budget, whatever step pas
+LEFT 187 * -> / @40 | local poly: { number } = table.create(3 * n, 0)
+LEFT 224 - -> + @40 | local ux, uy, uz = lv[4] - lv[1], lv[5] - lv[2], lv[6] - lv[3]
+LEFT 227 < -> <= @94 | if cx * (lv[1] + lv[4] + lv[7]) + cy * (lv[2] + lv[5] + lv[8]) + cz * (lv[3] + lv[6] + lv[
+LEFT 227 * -> / @6 | if cx * (lv[1] + lv[4] + lv[7]) + cy * (lv[2] + lv[5] + lv[8]) + cz * (lv[3] + lv[6] + lv[
+LEFT 227 + -> - @15 | if cx * (lv[1] + lv[4] + lv[7]) + cy * (lv[2] + lv[5] + lv[8]) + cz * (lv[3] + lv[6] + lv[
+LEFT 253 literal 0 -> 1 | inner = 0,
+LEFT 262 >= -> > @12 | if pending >= SPEND_EVERY or (all and pending > 0) then
+LEFT 262 and -> or @35 | if pending >= SPEND_EVERY or (all and pending > 0) then
+LEFT 262 literal 0 -> 1 | if pending >= SPEND_EVERY or (all and pending > 0) then
+LEFT 275 literal 1 -> 2 | ey = 1
+LEFT 277 literal 1 -> 2 | ex = 1
+LEFT 279 literal 1 -> 2 | ez = 1
+LEFT 389 < -> <= @6 | if u < u0 then
+LEFT 391 > -> >= @10 | elseif u > u1 then
+LEFT 394 < -> <= @6 | if v < v0 then
+LEFT 396 > -> >= @10 | elseif v > v1 then
+LEFT 424 + -> - @42 | local inside: { number } = table.create(n + 2) -- a convex polygon cut once has at most on
+LEFT 425 + -> - @43 | local outside: { number } = table.create(n + 2)
+LEFT 460 < -> <= @6 | if s < 0 then
+LEFT 471 + -> - @42 | local inside: { number } = table.create(n + 2)
+LEFT 501 < -> <= @28 | return pm.total, 0, budget < 0
+LEFT 518 literal 0 -> 1 | local count = 0
+LEFT 519 literal 0 -> 1 | local tiny = 0
+LEFT 523 > -> >= @12 | if pending > 0 then
+LEFT 528 > -> >= @13 | over = done > budget
+LEFT 533 >= -> > @12 | if pending >= SPEND_EVERY then
+LEFT 544 > -> >= @12 | if slo[i] > c[i] then
+LEFT 545 literal 0 -> 1 | return nil, 0, false -- the whole facet lies outside this line
+LEFT 546 > -> >= @16 | elseif shi[i] > c[i] then
+LEFT 552 literal 0 -> 1 | return fp, 0, true
+LEFT 562 literal 0 -> 1 | return nil, 0, false
+LEFT 566 >= -> > @13 | if pending >= SPEND_EVERY then -- a piece cut by many lines (a cap by a Ball's) reports as
+LEFT 569 literal 0 -> 1 | return nil, 0, false
+LEFT 590 >= -> > @13 | if pending >= SPEND_EVERY then
+LEFT 591 drop statement | settle()
+LEFT 616 drop statement | break
+LEFT 623 >= -> > @13 | if pending >= SPEND_EVERY then
+LEFT 624 drop statement | settle()
+LEFT 642 drop statement | break
+LEFT 649 >= -> > @13 | if pending >= SPEND_EVERY then
+LEFT 650 drop statement | settle()
+LEFT 657 drop statement | return false
+LEFT 682 * -> / @18 | pending += 2 * UNITS_PER_POLYGON + UNITS_PER_TEST * (#inside + #outside) / 2
+LEFT 692 > -> >= @12 | if os > 2 * tiny then
+LEFT 692 literal 2 -> 1 | if os > 2 * tiny then
+LEFT 704 >= -> > @15 | if pending >= SPEND_EVERY then -- a polygon split by many lines reports as it goes
+LEFT 711 >= -> > @14 | if pending >= SPEND_EVERY then
+LEFT 712 drop statement | settle()
+LEFT 714 drop statement | return
+LEFT 722 >= -> > @14 | if pending >= SPEND_EVERY then -- a run of polygons kept whole reports too
+LEFT 723 drop statement | settle()
+LEFT 740 > -> >= @6 | if s > 2 * tiny then
+LEFT 765 * -> / @39 | local fp: { number } = table.create(2 * nv, 0)
+LEFT 782 <= -> < @9 | if bx0 <= Q.maxx + o and Q.minx - o <= bx1 and by0 <= Q.maxy + o and Q.miny - o <= by1 and
+LEFT 782 <= -> < @38 | if bx0 <= Q.maxx + o and Q.minx - o <= bx1 and by0 <= Q.maxy + o and Q.miny - o <= by1 and
+LEFT 782 <= -> < @53 | if bx0 <= Q.maxx + o and Q.minx - o <= bx1 and by0 <= Q.maxy + o and Q.miny - o <= by1 and
+LEFT 783 <= -> < @18 | and Q.minz - o <= bz1
+LEFT 788 * -> / @41 | local rA, rB = (q.inner + coincident) * INNER_SAFE, (q.inner + EPS) * INNER_SAFE
+LEFT 789 > -> >= @9 | if rA > 0 then
+LEFT 794 > -> >= @36 | if dx * dx + dy * dy + dz * dz > rA * rA then
+LEFT 798 > -> >= @36 | if dx * dx + dy * dy + dz * dz > rB * rB then
+LEFT 819 > -> >= @10 | if s > hi then
+LEFT 822 < -> <= @10 | if s < lo then
+LEFT 835 literal 0 -> 1 | local B, nB, wholeB = nil, 0, false
+LEFT 881 >= -> > @11 | if shown >= need then
+LEFT 885 >= -> > @12 | if pending >= SPEND_EVERY then
+LEFT 886 drop statement | settle()

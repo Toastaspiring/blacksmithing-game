@@ -1,0 +1,50 @@
+-- K: cheeks in 2 strips each with a slit g at x = 0, a frame, a hilt, nothing between the cheeks. K + F: F, the core in that gap, its faces behind the cheeks.
+w 1.0 L 2.0 c 0.030 k 0.020 slit 0.00200 valid true: Core(Block) true 0.19% read 0.19% CLEANED
+    K: Sm 0.1922 N, Ha 0.6122 H, Sh 0.2586 H | K + F: Sm 0.1922 N, Ha 0.6122 H, Sh 0.2586 H | |dD| 0.0000 
+w 1.0 L 2.0 c 0.030 k 0.020 slit 0.00100 valid true: Core(Block) true 0.10% read 0.10% CLEANED
+    K: Sm 0.1924 N, Ha 0.6122 H, Sh 0.2586 H | K + F: Sm 0.1924 N, Ha 0.6122 H, Sh 0.2586 H | |dD| 0.0000 
+w 1.0 L 2.0 c 0.030 k 0.020 slit 0.00010 valid true: Core(Block) true 0.01% read 0.01% CLEANED
+    K: Sm 0.1926 N, Ha 0.6122 H, Sh 0.2586 H | K + F: Sm 0.1926 N, Ha 0.6122 H, Sh 0.2586 H | |dD| 0.0000 
+w 1.0 L 2.0 c 0.030 k 0.020 slit 0.00001 valid true: Core(Block) true 0.00% read 0.00% CLEANED
+    K: Sm 0.1926 N, Ha 0.6122 H, Sh 0.2586 H | K + F: Sm 0.1926 N, Ha 0.6122 H, Sh 0.2586 H | |dD| 0.0000 
+w 1.0 L 2.0 c 0.020 k 0.020 slit 0.00200 valid true: Core(Block) true 0.19% read 0.19% CLEANED
+    K: Sm 0.1321 N, Ha 0.6933 H, Sh 0.2586 H | K + F: Sm 0.1321 N, Ha 0.6933 H, Sh 0.2586 H | |dD| 0.0000 
+w 1.0 L 2.0 c 0.020 k 0.020 slit 0.00100 valid true: Core(Block) true 0.10% read 0.10% CLEANED
+    K: Sm 0.1322 N, Ha 0.6933 H, Sh 0.2586 H | K + F: Sm 0.1322 N, Ha 0.6933 H, Sh 0.2586 H | |dD| 0.0000 
+w 1.0 L 2.0 c 0.020 k 0.020 slit 0.00010 valid true: Core(Block) true 0.01% read 0.01% CLEANED
+    K: Sm 0.1323 N, Ha 0.6933 H, Sh 0.2586 H | K + F: Sm 0.1323 N, Ha 0.6933 H, Sh 0.2586 H | |dD| 0.0000 
+w 1.0 L 2.0 c 0.020 k 0.020 slit 0.00001 valid true: Core(Block) true 0.00% read 0.00% CLEANED
+    K: Sm 0.1323 N, Ha 0.6933 H, Sh 0.2586 H | K + F: Sm 0.1323 N, Ha 0.6933 H, Sh 0.2586 H | |dD| 0.0000 
+w 1.0 L 2.0 c 0.050 k 0.020 slit 0.00200 valid true: Core(Block) true 0.19% read 0.19% CLEANED
+    K: Sm 0.3131 H, Ha 0.4026 H, Sh 0.2586 H | K + F: Sm 0.3131 H, Ha 0.4026 H, Sh 0.2586 H | |dD| 0.0000 
+w 1.0 L 2.0 c 0.050 k 0.020 slit 0.00100 valid true: Core(Block) true 0.10% read 0.10% CLEANED
+    K: Sm 0.3134 H, Ha 0.4026 H, Sh 0.2586 H | K + F: Sm 0.3134 H, Ha 0.4026 H, Sh 0.2586 H | |dD| 0.0000 
+w 1.0 L 2.0 c 0.050 k 0.020 slit 0.00010 valid true: Core(Block) true 0.01% read 0.01% CLEANED
+    K: Sm 0.3137 H, Ha 0.4026 H, Sh 0.2586 H | K + F: Sm 0.3137 H, Ha 0.4026 H, Sh 0.2586 H | |dD| 0.0000 
+w 1.0 L 2.0 c 0.050 k 0.020 slit 0.00001 valid true: Core(Block) true 0.00% read 0.00% CLEANED
+    K: Sm 0.3137 H, Ha 0.4026 H, Sh 0.2586 H | K + F: Sm 0.3137 H, Ha 0.4026 H, Sh 0.2586 H | |dD| 0.0000 
+w 1.2 L 2.5 c 0.030 k 0.020 slit 0.00200 valid true: Core(Block) true 0.19% read 0.19% CLEANED
+    K: Sm 0.2808 H, Ha 0.6890 H, Sh 0.4438 H | K + F: Sm 0.2808 H, Ha 0.6890 H, Sh 0.4438 H | |dD| 0.0000 
+w 1.2 L 2.5 c 0.030 k 0.020 slit 0.00100 valid true: Core(Block) true 0.11% read 0.11% CLEANED
+    K: Sm 0.2810 H, Ha 0.6891 H, Sh 0.4438 H | K + F: Sm 0.2810 H, Ha 0.6891 H, Sh 0.4438 H | |dD| 0.0000 
+w 1.2 L 2.5 c 0.030 k 0.020 slit 0.00010 valid true: Core(Block) true 0.04% read 0.04% CLEANED
+    K: Sm 0.2812 H, Ha 0.6891 H, Sh 0.4438 H | K + F: Sm 0.2812 H, Ha 0.6891 H, Sh 0.4438 H | |dD| 0.0000 
+w 1.2 L 2.5 c 0.030 k 0.020 slit 0.00001 valid true: Core(Block) true 0.03% read 0.03% CLEANED
+    K: Sm 0.2812 H, Ha 0.6891 H, Sh 0.4438 H | K + F: Sm 0.2812 H, Ha 0.6891 H, Sh 0.4438 H | |dD| 0.0000 
+w 0.6 L 2.5 c 0.030 k 0.020 slit 0.00200 valid true: Core(Block) true 0.32% read 0.32% CLEANED
+    K: Sm 0.1543 N, Ha 0.6879 H, Sh 0.3344 H | K + F: Sm 0.1543 N, Ha 0.6879 H, Sh 0.3344 H | |dD| 0.0000 
+w 0.6 L 2.5 c 0.030 k 0.020 slit 0.00100 valid true: Core(Block) true 0.16% read 0.16% CLEANED
+    K: Sm 0.1545 N, Ha 0.6879 H, Sh 0.3344 H | K + F: Sm 0.1545 N, Ha 0.6879 H, Sh 0.3344 H | |dD| 0.0000 
+w 0.6 L 2.5 c 0.030 k 0.020 slit 0.00010 valid true: Core(Block) true 0.02% read 0.02% CLEANED
+    K: Sm 0.1547 N, Ha 0.6879 H, Sh 0.3344 H | K + F: Sm 0.1547 N, Ha 0.6879 H, Sh 0.3344 H | |dD| 0.0000 
+w 0.6 L 2.5 c 0.030 k 0.020 slit 0.00001 valid true: Core(Block) true 0.00% read 0.00% CLEANED
+    K: Sm 0.1547 N, Ha 0.6879 H, Sh 0.3344 H | K + F: Sm 0.1547 N, Ha 0.6879 H, Sh 0.3344 H | |dD| 0.0000 
+w 0.8 L 3.0 c 0.020 k 0.020 slit 0.00200 valid true: Core(Block) true 0.24% read 0.24% CLEANED
+    K: Sm 0.1606 N, Ha 0.6857 H, Sh 0.5320 H | K + F: Sm 0.1606 N, Ha 0.6857 H, Sh 0.5320 H | |dD| 0.0000 
+w 0.8 L 3.0 c 0.020 k 0.020 slit 0.00100 valid true: Core(Block) true 0.12% read 0.12% CLEANED
+    K: Sm 0.1608 N, Ha 0.6858 H, Sh 0.5320 H | K + F: Sm 0.1608 N, Ha 0.6858 H, Sh 0.5320 H | |dD| 0.0000 
+w 0.8 L 3.0 c 0.020 k 0.020 slit 0.00010 valid true: Core(Block) true 0.01% read 0.01% CLEANED
+    K: Sm 0.1609 N, Ha 0.6858 H, Sh 0.5320 H | K + F: Sm 0.1609 N, Ha 0.6858 H, Sh 0.5320 H | |dD| 0.0000 
+w 0.8 L 3.0 c 0.020 k 0.020 slit 0.00001 valid true: Core(Block) true 0.00% read 0.00% CLEANED
+    K: Sm 0.1609 N, Ha 0.6858 H, Sh 0.5320 H | K + F: Sm 0.1609 N, Ha 0.6858 H, Sh 0.5320 H | |dD| 0.0000 
+-- dumprun a1_hair: 48 designs, 5.9 s

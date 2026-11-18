@@ -1,0 +1,94 @@
+F1 ArmingSword                                 cleaned 0/0 Sm 0.0288/0.0288 N/N Ha 0.1037/0.1037 N/N Sh 0.0989/0.0989 N/N (D same; factors moved)
+     Sh.Volume raw 0.0253111->0.0253111 x 0.0000->0.0000
+F5 StarterSword                                cleaned 0/0 Sm 0.0288/0.0288 N/N Ha 0.1037/0.1037 N/N Sh 0.0989/0.0989 N/N (D same; factors moved)
+     Sh.Volume raw 0.0253111->0.0253111 x 0.0000->0.0000
+P1 24 large overlapping tilted blocks          cleaned 11/7 Sm 1.0000/1.0000 H/H Ha 0.0000/0.0000 N/N Sh 0.0114/0.0000 N/N <-- D differs
+     Sm.PartCount raw 13->17 x 0.7692->1.0000
+     Sm.SurfaceComplexity raw 1.32502->1.24218 x 0.0000->0.0000
+     Sm.EdgeLength raw 0.206155->0.189737 x 0.0000->0.0000
+     Sm.Joints raw 78->136 x 1.0000->1.0000
+     Sm.Volume raw 2.29796->2.25205 x 1.0000->1.0000
+     Ha.PartCount raw 13->17 x 0.7692->1.0000
+     Ha.SurfaceComplexity raw 1.32502->1.24218 x 0.0000->0.0000
+     Ha.EdgeLength raw 0.206155->0.189737 x 0.0000->0.0000
+     Ha.Joints raw 78->136 x 1.0000->1.0000
+     Ha.Volume raw 2.29796->2.25205 x 1.0000->1.0000
+     Sh.PartCount raw 5->9 x 0.1538->0.4615
+     Sh.Asymmetry raw 0.0227335->0 x 0.0379->0.0000
+     Sh.SurfaceComplexity raw 0.802365->0.715176 x 0.0000->0.0000
+     Sh.EdgeLength raw 0.206155->0.189737 x 0.0000->0.0000
+     Sh.Joints raw 10->36 x 0.3333->1.0000
+     Sh.Volume raw 1.94016->1.93224 x 1.0000->1.0000
+P5 comb blade (sawtooth, 24 parts)             cleaned 0/0 Sm 0.0328/0.0328 N/N Ha 0.1902/0.1902 N/N Sh 0.1202/0.1202 N/N (D same; factors moved)
+     Sh.Volume raw 0.0281911->0.0281911 x 0.0000->0.0000
+A25 F1 + enclosed 20 deg grip core             cleaned 1/1 Sm 0.0288/0.0288 N/N Ha 0.1037/0.1037 N/N Sh 0.0989/0.0989 N/N (D same; factors moved)
+     Sh.Volume raw 0.0253111->0.0253111 x 0.0000->0.0000
+A26 F1 ring grip + 40 deg strap                cleaned 0/0 Sm 0.0471/0.0471 N/N Ha 0.1048/0.1048 N/N Sh 0.0989/0.0989 N/N (D same; factors moved)
+     Sh.Volume raw 0.0253111->0.0253111 x 0.0000->0.0000
+A26 base: F1 ring grip                         cleaned 0/0 Sm 0.0468/0.0468 N/N Ha 0.1037/0.1037 N/N Sh 0.0989/0.0989 N/N (D same; factors moved)
+     Sh.Volume raw 0.0253111->0.0253111 x 0.0000->0.0000
+A27 F1 hilt shifted 0.04 in X                  cleaned 0/0 Sm 0.0288/0.0288 N/N Ha 0.1537/0.1537 N/N Sh 0.0989/0.0989 N/N (D same; factors moved)
+     Sh.Volume raw 0.0253111->0.0253111 x 0.0000->0.0000
+X01 2 blade copies at z +-0.003 (vs union blad cleaned 0/0 Sm 0.0323/0.0323 N/N Ha 0.0756/0.0756 N/N Sh 0.0989/0.0989 N/N (D same; factors moved)
+     Sm.Volume raw 0.10325->0.10325 x 0.0323->0.0323
+     Ha.Volume raw 0.10325->0.10325 x 0.0323->0.0323
+     Sh.SurfaceComplexity raw 2.12115->2.12115 x 0.0000->0.0000
+     Sh.Volume raw 0.0278071->0.0278071 x 0.0000->0.0000
+X01raw 2 blade copies at z +-0.003 (vs F5)     cleaned 0/0 Sm 0.0323/0.0323 N/N Ha 0.0756/0.0756 N/N Sh 0.0989/0.0989 N/N (D same; factors moved)
+     Sm.Volume raw 0.10325->0.10325 x 0.0323->0.0323
+     Ha.Volume raw 0.10325->0.10325 x 0.0323->0.0323
+     Sh.SurfaceComplexity raw 2.12115->2.12115 x 0.0000->0.0000
+     Sh.Volume raw 0.0278071->0.0278071 x 0.0000->0.0000
+X02 6 blade copies at z = k*0.002 (vs union bl cleaned 5/5 Sm 0.0358/0.0358 N/N Ha 0.0526/0.0526 N/N Sh 0.0989/0.0989 N/N (D same; factors moved)
+     Sm.SurfaceComplexity raw 2.18533->2.18856 x 0.0000->0.0000
+     Sm.Joints raw 8.13416->8.29301 x 0.2445->0.2520
+     Ha.SurfaceComplexity raw 2.18533->2.18856 x 0.0000->0.0000
+     Ha.Joints raw 8.13416->8.29301 x 0.2445->0.2520
+     Sh.SurfaceComplexity raw 2.13996->2.14087 x 0.0000->0.0000
+     Sh.Joints raw 1.49128->1.5138 x 0.0000->0.0000
+     Sh.Volume raw 0.0303031->0.0303031 x 0.0000->0.0000
+X04a blade from 4 strips                       cleaned 0/0 Sm 0.0288/0.0288 N/N Ha 0.1041/0.1041 N/N Sh 0.0989/0.0989 N/N (D same; factors moved)
+     Sh.Volume raw 0.0253111->0.0253111 x 0.0000->0.0000
+X04b blade from strips, seams at +-0.05 and 0  cleaned 0/0 Sm 0.0288/0.0288 N/N Ha 0.1041/0.1041 N/N Sh 0.0989/0.0989 N/N (D same; factors moved)
+     Sm.Volume raw 0.100754->0.100754 x 0.0288->0.0288
+     Ha.Volume raw 0.100754->0.100754 x 0.0288->0.0288
+X04-5-0.004 5 segments, gaps 0.004             cleaned 0/0 Sm 0.0286/0.0286 N/N Ha 0.1037/0.1037 N/N Sh 0.0989/0.0989 N/N (D same; factors moved)
+     Sm.Volume raw 0.1006->0.1006 x 0.0286->0.0286
+     Ha.Volume raw 0.1006->0.1006 x 0.0286->0.0286
+     Sh.Volume raw 0.0251575->0.0251575 x 0.0000->0.0000
+X04g0.005 grip nudge 0.005 in X                cleaned 0/0 Sm 0.0288/0.0288 N/N Ha 0.1037/0.1037 N/N Sh 0.0989/0.0989 N/N (D same; factors moved)
+     Sh.Volume raw 0.0253111->0.0253111 x 0.0000->0.0000
+X04g0.010 grip nudge 0.010 in X                cleaned 0/0 Sm 0.0288/0.0288 N/N Ha 0.1037/0.1037 N/N Sh 0.0989/0.0989 N/N (D same; factors moved)
+     Sh.Volume raw 0.0253111->0.0253111 x 0.0000->0.0000
+X04g0.015 grip nudge 0.015 in X                cleaned 0/0 Sm 0.0288/0.0288 N/N Ha 0.1045/0.1045 N/N Sh 0.0989/0.0989 N/N (D same; factors moved)
+     Sh.Volume raw 0.0253111->0.0253111 x 0.0000->0.0000
+X04g0.020 grip nudge 0.020 in X                cleaned 0/0 Sm 0.0288/0.0288 N/N Ha 0.1082/0.1082 N/N Sh 0.0989/0.0989 N/N (D same; factors moved)
+     Sh.Volume raw 0.0253111->0.0253111 x 0.0000->0.0000
+X05+0.004 5 segments, gap 0.004                cleaned 0/0 Sm 0.0286/0.0286 N/N Ha 0.1037/0.1037 N/N Sh 0.0989/0.0989 N/N (D same; factors moved)
+     Sm.Volume raw 0.1006->0.1006 x 0.0286->0.0286
+     Ha.Volume raw 0.1006->0.1006 x 0.0286->0.0286
+     Sh.Volume raw 0.0251575->0.0251575 x 0.0000->0.0000
+X05-0.020 5 segments, overlap 0.020            cleaned 0/0 Sm 0.0288/0.0288 N/N Ha 0.1044/0.1044 N/N Sh 0.0989/0.0989 N/N (D same; factors moved)
+     Sh.Volume raw 0.0253111->0.0253111 x 0.0000->0.0000
+X06-0.00 blade offset 0.00 in X                cleaned 0/0 Sm 0.0288/0.0288 N/N Ha 0.1037/0.1037 N/N Sh 0.0989/0.0989 N/N (D same; factors moved)
+     Sh.Volume raw 0.0253111->0.0253111 x 0.0000->0.0000
+X06-0.01 blade offset 0.01 in X                cleaned 0/0 Sm 0.0288/0.0288 N/N Ha 0.1037/0.1037 N/N Sh 0.0991/0.0991 N/N (D same; factors moved)
+     Sh.Volume raw 0.0253111->0.0253111 x 0.0000->0.0000
+X06-0.02 blade offset 0.02 in X                cleaned 0/0 Sm 0.0288/0.0288 N/N Ha 0.1087/0.1087 N/N Sh 0.1187/0.1187 N/N (D same; factors moved)
+     Sh.Volume raw 0.0253111->0.0253111 x 0.0000->0.0000
+X06-0.03 blade offset 0.03 in X                cleaned 0/0 Sm 0.0288/0.0288 N/N Ha 0.1227/0.1227 N/N Sh 0.1756/0.1756 N/N (D same; factors moved)
+     Sh.Volume raw 0.0253111->0.0253111 x 0.0000->0.0000
+X06-0.04 blade offset 0.04 in X                cleaned 0/0 Sm 0.0288/0.0288 N/N Ha 0.1385/0.1385 N/N Sh 0.2391/0.2391 H/H (D same; factors moved)
+     Sh.Volume raw 0.0253111->0.0253111 x 0.0000->0.0000
+X06-0.05 blade offset 0.05 in X                cleaned 0/0 Sm 0.0288/0.0288 N/N Ha 0.1543/0.1543 N/N Sh 0.3030/0.3030 H/H (D same; factors moved)
+     Sh.Volume raw 0.0253111->0.0253111 x 0.0000->0.0000
+X07a laminate 2 x 0.03 plates                  cleaned 0/0 Sm 0.0288/0.0288 N/N Ha 0.1041/0.1041 N/N Sh 0.0989/0.0989 N/N (D same; factors moved)
+     Sh.Volume raw 0.0253111->0.0253111 x 0.0000->0.0000
+X07b laminate 2 x 0.035 plates overlapping 0.0 cleaned 0/0 Sm 0.0288/0.0288 N/N Ha 0.1042/0.1042 N/N Sh 0.0989/0.0989 N/N (D same; factors moved)
+     Sm.Volume raw 0.100754->0.100754 x 0.0288->0.0288
+     Ha.Volume raw 0.100754->0.100754 x 0.0288->0.0288
+X07c 4 segments overlapping 0.07               cleaned 0/0 Sm 0.0288/0.0288 N/N Ha 0.1044/0.1044 N/N Sh 0.0989/0.0989 N/N (D same; factors moved)
+     Sh.Volume raw 0.0252975->0.0252975 x 0.0000->0.0000
+V-out: tip wedges raised 1.0 (top at 5.30)     no steps (valid false/false)
+V-nogrip                                       no steps (valid false/false)
+69 fixtures with steps, 1 D differ

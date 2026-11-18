@@ -1,0 +1,35 @@
+wrapRings|C02|n3 extra0.04 gap0.0100
+wrapRings|C02|n4 extra0.04 gap0.0075
+wrapRings|C02|n5 extra0.04 gap0.0050
+wrapRings|C02|n5 extra0.04 gap0.0060
+wrapRings|C05|n3 extra0.04 gap0.0125
+wrapRings|C05|n4 extra0.04 gap0.0075
+wrapRings|C05|n5 extra0.04 gap0.0060
+wrapRings|C06|n3 extra0.04 gap0.0100
+wrapRings|C06|n4 extra0.04 gap0.0060
+wrapRings|C06|n4 extra0.04 gap0.0075
+wrapRings|C06|n5 extra0.04 gap0.0050
+wrapRings|C06|n5 extra0.04 gap0.0060
+wrapRings|C09|n3 extra0.04 gap0.0020
+wrapRings|C09|n3 extra0.04 gap0.0030
+wrapRings|C09|n3 extra0.04 gap0.0040
+wrapRings|C09|n4 extra0.04 gap0.0020
+wrapRings|C09|n4 extra0.04 gap0.0030
+wrapRings|C09|n4 extra0.04 gap0.0040
+wrapRings|C09|n5 extra0.04 gap0.0020
+wrapRings|C09|n5 extra0.04 gap0.0030
+wrapRings|C09|n5 extra0.04 gap0.0040
+pommelInBlock|C09|housing unrot cap0.0600
+pommelInBlock|C09|housing xy30 cap0.0600
+pommelInBlock|C09|housing r47 cap0.0600
+rod|C09|guard Cylinder d0.04 poke0.0020
+wrapRings|F3|n3 extra0.04 gap0.0030
+wrapRings|F3|n3 extra0.04 gap0.0040
+wrapRings|F3|n3 extra0.04 gap0.0050
+wrapRings|F3|n4 extra0.04 gap0.0020
+wrapRings|F3|n4 extra0.04 gap0.0030
+wrapRings|F3|n4 extra0.04 gap0.0040
+wrapRings|F3|n5 extra0.04 gap0.0020
+wrapRings|F3|n5 extra0.04 gap0.0030
+cage|r0.10 k6 open0.19 roll0.0
+cage|r0.10 k6 open0.19 roll22.5

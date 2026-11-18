@@ -1,0 +1,36 @@
+M2: geometry core and engine parity (Physics, Mirror, WorkSet, RenderPlan)
+
+- Physics/{Shapes, Gjk, Sampling, MassProps, Analyze}: the five solids,
+  GJK contact, validation V1-V5, owned volumes and mass properties
+- Physics/Cover: the Enclosed verdict read exactly on a polyhedral model
+  of each part, in ranks no id or part order decides, capped at
+  VERDICT_WORK_MAX (past it: TooComplex); the measure reads kept parts
+  only
+- Blueprint/{Mirror, WorkSet}; a minimal ItemRender/{RenderPlan,
+  ItemModelBuilder}; the S-PAR-01 snippet, with a fake engine that runs
+  it and the builder at the gate
+- Tests: T-PHY, T-VAL, T-BP-11/14; Cover against an independent brute
+  force, the verdict against a truth oracle on 33,389 plausible designs,
+  the build against S2's prototype (Reference.spec); fixture A28;
+  T-META-03 bans native code; Balance gains COVER_BALL_GRID and
+  VERDICT_WORK_MAX (fingerprint re-blessed at version 1)
+- Evidence E-S2.11, E-S2.12 and docs/spec/prototypes/S2/{verdict, cover}
+- SPEC: §4.1-4.5 and §4.9 for the per-part verdict, its ranks, the cap
+  (TooComplex, also §4.2, §4.7, §10.3, §11.12) and the 3D grip-axis
+  vote; the test place is Project 215 and its test tree comes out
+  before the first publish (§1.4, §14.10, §14.12)
+- SPEC: three decisions to confirm with defaults, §17.1 O7 (the cap),
+  O8 (slot labels move Sharpening) and O9 (the round-part model band),
+  and new §17.2 S2 rows
+- docs/build/M2-notes.md keeps the open items for later milestones
+
+Independently verified over 10 rounds of two verifiers (3 on the first
+build, 1 extra, 2 on a sampled verdict since replaced, 4 on the exact
+verdict): scripts/verify green (596 tests from a clean copy in round 4,
+601 after fix round 4); Cover agreed with the verifiers' own brute force
+on about 41,000 parts; F1-F5 and C01-C15 physics match E-S2.9 to every
+printed digit; mutation runs in every round (up to 3,309 mutants).
+S-PAR-01 passed 3 fresh Play sessions on 2026-11-14, and no module it
+loads has changed since. [ROUND 5: ...]
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
