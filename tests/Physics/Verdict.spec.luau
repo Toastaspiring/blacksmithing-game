@@ -497,6 +497,15 @@ return Test.suite("Physics/Verdict", function(t)
 		local plus = H.solid(1, "Block", { 0, 2, 0.1 }, H.I, { 0.2, 0.2, 0.2 })
 		local minus = H.solid(2, "Block", { 0, 2, -0.1 }, H.I, { 0.2, 0.2, 0.2 })
 		A.deepEq(row({ plus, minus }), { 2, 1 }, "twins: z decides")
+		-- the height in RANK_Q (the shift fix, §17.1 O11 (j)): twins whose heights differ in the last bit (1.4 + 0.2 beside a
+		-- typed 1.6) tie on it, so where they stand across decides, the −x one first, whatever their ids (by the raw height
+		-- the lower came first, and a move that rounds the two to one height swapped them)
+		A.deepEq(row({ H.solid(1, "Block", { 0.3, 1.4 + 0.2, 0 }, H.I, { 0.2, 0.2, 0.2 }),
+			H.solid(2, "Block", { -0.3, 1.6, 0 }, H.I, { 0.2, 0.2, 0.2 }) }), { 2, 1 }, "twins an ulp apart in height: x decides")
+		-- x and z are not rounded (only the height is, in RANK_Q): of two parts 3e-10 apart along X the one at x 0 comes
+		-- first, whatever their ids
+		A.deepEq(row({ H.solid(1, "Block", { 3e-10, 2, 0 }, H.I, { 0.2, 0.2, 0.2 }),
+			H.solid(2, "Block", { 0, 2, 0 }, H.I, { 0.2, 0.2, 0.2 }) }), { 2, 1 }, "x not rounded: the one at x 0 first")
 		-- the same volume and place: the half extents, then the turn
 		local wedge = H.solid(1, "Wedge", { 0, 2, 0 }, H.I, { 0.4, 0.2, 0.2 })
 		local block = H.solid(2, "Block", { 0, 2, 0 }, H.I, { 0.2, 0.2, 0.2 })
@@ -563,7 +572,8 @@ return Test.suite("Physics/Verdict", function(t)
 	t.it("§4.4 Sampling.measureRanked: the larger, then where it stands, then the slot's name, whatever the order", function()
 		local function row(parts: { any }): { number }
 			local out: { number } = {}
-			local _, order = Sampling.measureRanked(H.prepared({ parts = parts }))
+			local list = H.prepared({ parts = parts })
+			local _, order = Sampling.measureRanked(list, table.create(#list, true))
 			for i, p in ipairs(order) do
 				out[i] = p.id
 			end
@@ -574,12 +584,89 @@ return Test.suite("Physics/Verdict", function(t)
 		A.deepEq(row({ small, large }), { 2, 1 }, "the larger first")
 		local guardLow = H.part(2, "Guard", "Block", "Iron", { 0, 1, 0 }, H.I, { 0.1, 0.1, 0.1 })
 		A.deepEq(row({ small, guardLow }), { 2, 1 }, "of one volume the lower first, whatever the slot")
+		-- from the centre of the parts of its volume and height, whatever their slots: of three at x −0.1, 0 and 0.1
 		local left = H.part(3, "Pommel", "Block", "Iron", { -0.1, 3, 0 }, H.I, { 0.1, 0.1, 0.1 })
-		A.deepEq(row({ left, small }), { 1, 3 }, "|x| before x")
+		local right = H.part(4, "Guard", "Block", "Iron", { 0.1, 3, 0 }, H.I, { 0.1, 0.1, 0.1 })
+		A.deepEq(row({ right, left, small }), { 1, 3, 4 }, "|x| before x")
 		local turned = H.part(2, "Blade", "Block", "Iron", { 0, 3, 0 }, H.axisAngle(0, 1, 0, 30), { 0.1, 0.1, 0.1 })
 		local copy = H.part(3, "Guard", "Block", "Iron", { 0, 3, 0 }, H.I, { 0.1, 0.1, 0.1 })
 		A.deepEq(row({ copy, small, turned }), { 2, 1, 3 }, "the turn before the slot's name, then the slot's name")
 		A.deepEq(row({ copy, turned, small }), row({ small, turned, copy }), "whatever the order")
+		-- the height in RANK_Q: twins whose heights differ in the last bit tie on it and form one tie group, so they rank
+		-- from their centre, the −x one first, whatever their ids (by the raw height the lower came first; grouped on it,
+		-- each ranks alone, its place 0, and the id decides)
+		A.deepEq(row({ H.part(1, "Blade", "Block", "Iron", { 0.3, 1.4 + 0.2, 0 }, H.I, { 0.1, 0.1, 0.1 }),
+			H.part(2, "Blade", "Block", "Iron", { -0.3, 1.6, 0 }, H.I, { 0.1, 0.1, 0.1 }) }), { 2, 1 },
+			"twins an ulp apart in height tie on it: x decides, not the id")
+		A.deepEq(row({ H.part(1, "Blade", "Block", "Iron", { 0.3, 2, 0 }, H.I, { 0.1, 0.1, 0.1 }),
+			H.part(2, "Blade", "Block", "Iron", { -0.3, 1.9999999999999998, 0 }, H.I, { 0.1, 0.1, 0.1 }) }), { 2, 1 },
+			"twins an ulp apart in height: one tie group")
+		-- a place rounds half a RANK_Q away from 0 on either side (q(v) = sign(v)·floor(|v|/RANK_Q + ½)), so a mirror image
+		-- negates it: of three tied parts about x = 0 (their x sum to 0 exactly), 1.5e-9 short of it is 2 steps, 1.2e-9 past
+		-- it 1, 3e-10 past it 0, the nearer first
+		local short = H.part(1, "Blade", "Block", "Iron", { -1.5e-9, 2, 0 }, H.I, { 0.1, 0.1, 0.1 })
+		local past = H.part(2, "Blade", "Block", "Iron", { 1.2e-9, 2, 0 }, H.I, { 0.1, 0.1, 0.1 })
+		local onIt = H.part(3, "Blade", "Block", "Iron", { -(-1.5e-9 + 1.2e-9), 2, 0 }, H.I, { 0.1, 0.1, 0.1 })
+		A.deepEq(row({ short, past, onIt }), { 3, 2, 1 }, "half a step rounds away from 0")
+		-- on either side: twins at x ±5e-10, their centre 0 exactly, are half a step out each way (5e-10 / RANK_Q is 0.5
+		-- exactly), 1 and −1 steps, so they tie on |q| and the −x one comes first (rounded toward 0 on the + side, the +x
+		-- twin would stand at 0 and come first, and its mirror image would not negate it)
+		A.deepEq(row({ H.part(1, "Blade", "Block", "Iron", { 5e-10, 2, 0 }, H.I, { 0.1, 0.1, 0.1 }),
+			H.part(2, "Blade", "Block", "Iron", { -5e-10, 2, 0 }, H.I, { 0.1, 0.1, 0.1 }) }), { 2, 1 },
+			"half a step out on either side rounds away from 0")
+		-- places count in RANK_Q (1e-9) from the ties' centre: three tied parts whose x sum to 0 exactly, 3e-7, −1e-7 and
+		-- −2e-7 off it, are 300, 100 and 200 steps, the nearer first; 4e-10, −2e-10 and −2e-10 off it are all 0, a tie the
+		-- index settles (in steps of 5e-10 the first would be 1 and come last)
+		local far = H.part(1, "Blade", "Block", "Iron", { 3e-7, 2, 0 }, H.I, { 0.1, 0.1, 0.1 })
+		local near = H.part(2, "Blade", "Block", "Iron", { -1e-7, 2, 0 }, H.I, { 0.1, 0.1, 0.1 })
+		local mid = H.part(3, "Blade", "Block", "Iron", { -(3e-7 + -1e-7), 2, 0 }, H.I, { 0.1, 0.1, 0.1 })
+		A.deepEq(row({ far, near, mid }), { 2, 3, 1 }, "1e-7 off, 2e-7 off, then 3e-7 off")
+		local hair = H.part(1, "Blade", "Block", "Iron", { 4e-10, 2, 0 }, H.I, { 0.1, 0.1, 0.1 })
+		local hairOther = H.part(2, "Blade", "Block", "Iron", { -2e-10, 2, 0 }, H.I, { 0.1, 0.1, 0.1 })
+		local hairThird = H.part(3, "Blade", "Block", "Iron", { -(4e-10 + -2e-10), 2, 0 }, H.I, { 0.1, 0.1, 0.1 })
+		A.deepEq(row({ hair, hairOther, hairThird }), { 1, 2, 3 }, "under half a RANK_Q off: a tie, the index")
+		-- the ties are the parts of one volume and one height: twins at x ±0.3, and a part of their volume at another
+		-- height, or of another volume at theirs, at x 0.6, which counted among them would move their centre to x 0.2 and
+		-- put the +x twin first
+		local twinPlus = H.part(1, "Blade", "Block", "Iron", { 0.3, 2, 0 }, H.I, { 0.1, 0.1, 0.1 })
+		local twinMinus = H.part(2, "Blade", "Block", "Iron", { -0.3, 2, 0 }, H.I, { 0.1, 0.1, 0.1 })
+		local higher = H.part(3, "Blade", "Block", "Iron", { 0.6, 3, 0 }, H.I, { 0.1, 0.1, 0.1 })
+		local smaller = H.part(3, "Blade", "Block", "Iron", { 0.6, 2, 0 }, H.I, { 0.05, 0.1, 0.1 })
+		A.deepEq(row({ twinPlus, twinMinus, higher }), { 2, 1, 3 }, "a part of another height is not among the ties")
+		-- of kept parts the place comes before the material (the material first is the cleaned parts' rule alone)
+		A.deepEq(row({ twinPlus, H.part(2, "Blade", "Block", "Steel", { -0.3, 2, 0 }, H.I, { 0.1, 0.1, 0.1 }) }), { 2, 1 },
+			"kept twins of two materials: the −x one first, Steel before Iron")
+		A.deepEq(row({ twinPlus, twinMinus, smaller }), { 2, 1, 3 }, "nor one of another volume")
+		-- the ties' centre is the mean of their centres, not of their centroids: a Wedge 0.25 × 0.5 × 1 turned a quarter
+		-- about Y, of one volume with Blocks 0.25 × 0.25 × 1 at x ∓0.3, has its centroid 1/6 along X from its centre, at
+		-- the centre of the three; it comes first, then the Block at −x
+		local R = 0.70710678118654757
+		local wedge = H.part(1, "Blade", "Wedge", "Iron", { 0, 2, 0 }, { 0, R, 0, R }, { 0.25, 0.5, 1 })
+		local minusX = H.part(2, "Blade", "Block", "Iron", { -0.3, 2, 0 }, H.I, { 0.25, 0.25, 1 })
+		local plusX = H.part(3, "Blade", "Block", "Iron", { 0.3, 2, 0 }, H.I, { 0.25, 0.25, 1 })
+		A.truthy(math.abs(H.prepare(wedge).gx - H.prepare(wedge).cx) > 0.1, "the Wedge's centroid off its centre along X")
+		A.deepEq(row({ plusX, minusX, wedge }), { 1, 2, 3 }, "from the mean of the centres")
+		-- with no part kept, which only measureInvalid reaches, the cleaned parts stand from the origin: the twins at x ±0.3,
+		-- the −x one first (the mean of no kept part's centre, 0 / 0, would rank them by nothing)
+		local none = H.prepared({ parts = { twinPlus, twinMinus } })
+		local _, unkept = Sampling.measureRanked(none, table.create(#none, false))
+		A.deepEq({ unkept[1].id, unkept[2].id }, { 2, 1 }, "no part kept: from the origin, the −x one first")
+		-- the kept parts before the cleaned ones of their volume and height, whatever their materials: kept Steel and Bronze
+		-- at x −0.15 and 0 rank from their own centre, x −0.075, the −x one first, then the cleaned Steel one (the material
+		-- asked of a cleaned part alone, a kept one met before it would be ranked by its material on one side of the
+		-- comparison and by its place on the other)
+		local mixed = H.prepared({ parts = {
+			H.part(1, "Guard", "Block", "Steel", { -0.1, 1.5, 0 }, H.I, { 0.1, 0.1, 0.1 }),
+			H.part(2, "Guard", "Block", "Steel", { -0.15, 1.5, 0.05 }, H.I, { 0.1, 0.1, 0.1 }),
+			H.part(3, "Guard", "Block", "Bronze", { 0, 1.5, -0.05 }, H.I, { 0.1, 0.1, 0.1 }),
+			H.part(4, "Guard", "Block", "Bronze", { -0.15, 1, 0.05 }, H.I, { 0.1, 0.1, 0.1 }),
+		} })
+		local _, byMeasure = Sampling.measureRanked(mixed, { false, true, true, false })
+		local ids: { number } = {}
+		for i, p in ipairs(byMeasure) do
+			ids[i] = p.id
+		end
+		A.deepEq(ids, { 4, 2, 3, 1 }, "the lower first, then the kept ones from their centre, then the cleaned one")
 	end)
 
 	-- §17.1 O8: the label is visible, so the slot decides between parts of one size that coincide. F3's blade, or C08's, again in

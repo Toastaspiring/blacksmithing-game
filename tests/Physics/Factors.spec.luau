@@ -7,9 +7,11 @@
 --   T-DIF-06  real edits move them one way: F5's blade thinned, C02's lengthened, C01 → C10's parts
 --   T-DIF-08  C13, and Gen swords built half and mirrored with Blueprint/Mirror, measure Asymmetry ≤ TOL_ASYM_ZERO
 --   T-DIF-13  X06's Asymmetry against the 120-probe oracle (E-S2.5)
---   [8.2]     the prototype's factors in the measure's rank order on every fixture whose verdict the build shares:
+--   [8.2]     the prototype's factors in the measure's rank order (the verdict's where it cleans a part:
+--             DifficultyHelpers.inRankOrder) on every fixture whose verdict the build shares:
 --             PartCount, Asymmetry, MaterialMix to the bit, Volume within 1e-12, SurfaceComplexity and Joints within
---             1e-12 where the measure's grid is the prototype's, else on the build's own measure (L2); Smelting's g
+--             1e-12 where the measure's grid is the prototype's, else on the build's own measure (L2), as where the
+--             whole-design shift fix's contact and flush rules apply (OWN_CONTACT, OWN_OVERLAP); Smelting's g
 --             and d equal. Thinness and EdgeLength are the build's own (fix round 1: θ on every local axis, the
 --             canonical walk and its lattice pick, gaps merged as the verdict hides them, §5.2; the raster sampled
 --             off its cell centres, §4.6), EdgeLength the edge's to the bit
@@ -75,6 +77,17 @@ local BOTH: { any } = { "All", { "Blade" } }
 -- the build's own chords, walk, pick and raster samples).
 local TO_THE_BIT: { [string]: boolean } = { PartCount = true, Asymmetry = true, MaterialMix = true }
 
+-- [8.2] Two rules of the build's own (the whole-design shift fix, §17.1 O11 (j)), which the prototype leaves to the
+-- rounding of where the design stands. A gap of exactly CONTACT_TOL is contact (§4.2, Sampling.CONTACT_REACH): the
+-- contact rows of these fixtures take the samples that lie at CONTACT_TOL, so their Joints is the build's own
+-- measure's.
+-- A part that only touches another face to face is not above it (§4.3): C04's Cylinder guard owns 1e-6 more than in
+-- the prototype, whose box test let a flush part in (closer to the exact overlap, M3-notes), so its Volume and
+-- SurfaceComplexity are the build's own ownership's.
+local OWN_CONTACT: { [string]: boolean } = { C04 = true, C05 = true, C07 = true, C08 = true, C11 = true, C13 = true,
+	X03 = true, X04b = true, ["X04g0.010"] = true, ["X06-0.01"] = true }
+local OWN_OVERLAP: { [string]: boolean } = { C04 = true }
+
 local function canonicalOf(key: string): any
 	local result = Canonical.draft(Adversarial.variant(key).draft()) :: any
 	A.truthy(result.ok, key .. ": Canonical must accept it, got " .. Dump.short(result))
@@ -89,9 +102,10 @@ local function stepsOf(core: any): { StepAnalysis }
 	return steps
 end
 
--- [8.2] The build's own measure where its grid is not the prototype's (L2): SurfaceComplexity = Σ exposedKept /
--- (6·cbrt(Σ owned volume)²) and Joints from the contact rows and the contact graph, over WorkSet.select's parts.
-local function ownMeasure(m: Measured, selector: any): (number, number)
+-- [8.2] The build's own measure where its grid is not the prototype's (L2), or a rule of its own applies:
+-- SurfaceComplexity = Σ exposedKept / (6·cbrt(Σ owned volume)²), Joints from the contact rows and the contact graph,
+-- and Volume = Σ owned volume, over WorkSet.select's parts.
+local function ownMeasure(m: Measured, selector: any): (number, number, number)
 	local set = D.set(m, selector)
 	local exposure, owned, touching = m.ctx.exposure, m.ctx.owned, m.ctx.touching
 	local area, volume, joints = 0, 0, 0
@@ -110,7 +124,7 @@ local function ownMeasure(m: Measured, selector: any): (number, number)
 		end
 	end
 	local c = Num.cbrt(volume)
-	return area / (6 * c * c), joints
+	return area / (6 * c * c), joints, volume
 end
 
 local function agreeWithPrototype(b: any)
@@ -121,6 +135,8 @@ local function agreeWithPrototype(b: any)
 	local theirs = D.proto(b)
 	A.truthy(mine ~= nil, what .. ": every work set has parts")
 	local sameGrid = m.ctx.exposure.hSurf == theirs.hSurf
+	local tag = string.match(what, "^%S+") :: string
+	local ownContact, ownOverlap = OWN_CONTACT[tag] == true, OWN_OVERLAP[tag] == true
 	A.eq(#mine, #theirs.steps, what .. " steps")
 	for i, s in ipairs(mine) do
 		local t = theirs.steps[i]
@@ -132,10 +148,7 @@ local function agreeWithPrototype(b: any)
 			A.eq(s.tierRaw, t.tierRaw, label .. " tierRaw")
 		end
 		A.eq(s.material, t.material, label .. " material")
-		local area, joints = 0, 0
-		if not sameGrid then
-			area, joints = ownMeasure(m, if s.step == "Sharpening" then { "Blade" } else "All")
-		end
+		local area, joints, volume = ownMeasure(m, if s.step == "Sharpening" then { "Blade" } else "All")
 		for k, v in ipairs(s.factors) do
 			local tv = t.factors[k]
 			local f = v.factor
@@ -147,12 +160,12 @@ local function agreeWithPrototype(b: any)
 				A.eq(v.raw, m.edge.length, label .. " EdgeLength, the edge's")
 			elseif f == "Thinness" then
 				A.truthy(v.raw >= 0 and v.raw <= 1, label .. " Thinness in [0, 1]")
-			elseif f == "Volume" or sameGrid then
-				A.near(v.raw, tv.raw, ABS, label .. " " .. f)
+			elseif f == "Volume" then
+				A.near(v.raw, if ownOverlap then volume else tv.raw, ABS, label .. " Volume")
 			elseif f == "SurfaceComplexity" then
-				A.near(v.raw, area, ABS, label .. " " .. f .. " on the build's own measure")
+				A.near(v.raw, if sameGrid and not ownOverlap then tv.raw else area, ABS, label .. " SurfaceComplexity")
 			else
-				A.near(v.raw, joints, ABS, label .. " " .. f .. " on the build's own measure")
+				A.near(v.raw, if sameGrid and not ownContact then tv.raw else joints, ABS, label .. " " .. f)
 			end
 		end
 	end
@@ -662,6 +675,58 @@ return Test.suite("Physics/Factors", function(t)
 
 	-- E-S2.5's oracle (v2/run.luau's asymOracle): ASYM_N_MIN 120, ASYM_WORK 1e9 and N_MAX_AXIS 400, planted into
 	-- Sampling, whose volumeSamples reads N_MAX_AXIS itself, and into Factors with that Sampling.
+	-- The whole-design shift fix (§17.1 O11 (j)): Asymmetry's work estimate counts the mirror candidates, and a box test
+	-- at exactly reach left a part that far away to the rounding of where the design stands.
+	t.it("§5.2 Asymmetry's mirror candidates take a part exactly reach from a mirrored box, however a move rounds the "
+		.. "gap: its work estimate the same at every move", function()
+			-- a block 0.05 (ASYM_TOL + ASYM_RAMP) under the other's mirror image: tested at reach alone, 0.111 and 0.148
+			-- up Y rounded the gap past it and dropped each from the other's candidates (the estimate 800 → 640)
+			local reach = Dif.ASYM_TOL + Dif.ASYM_RAMP
+			local function estimate(dy: number, gap: number): number
+				local m = D.measured({ parts = {
+					H.solid(1, "Block", { 0.2, 2.1 + dy, 0 }, H.I, { 0.2, 0.2, 0.06 }),
+					H.solid(2, "Block", { -0.2, 2.1 - 0.2 - gap + dy, 0 }, H.I, { 0.2, 0.2, 0.06 }),
+					H.solid(3, "Block", { 0, 1 + dy, 0 }, H.I, { 0.1, 0.6, 0.1 }, "Grip"),
+				} })
+				local _, _, est = Factors.asymmetry(m.ctx, D.set(m, "All"))
+				return est
+			end
+			local atReach = estimate(0, reach)
+			A.truthy(atReach > estimate(0, reach + 0.001), "at reach a candidate, past it none")
+			for k = 1, 4 do
+				A.eq(estimate(0.037 * k, reach), atReach, string.format("moved %g along Y", 0.037 * k))
+			end
+		end)
+
+	t.it("§5.2 Asymmetry's candidates take a part exactly reach from a mirrored box along Z (at every move along Z) "
+		.. "and along X (wherever it stands): its estimate as at a gap 0.001 inside reach", function()
+			local reach = Dif.ASYM_TOL + Dif.ASYM_RAMP
+			local function estimate(a: number, dz: number, gapX: number?, gapZ: number?): number
+				local behind = if gapZ then { -a, 2.1, 0.06 + gapZ + dz } else { -a - 0.2 - (gapX :: number), 2.1, dz }
+				local m = D.measured({ parts = {
+					H.solid(1, "Block", { a, 2.1, dz }, H.I, { 0.2, 0.2, 0.06 }),
+					H.solid(2, "Block", behind, H.I, { 0.2, 0.2, 0.06 }),
+					H.solid(3, "Block", { 0, 1, dz }, H.I, { 0.1, 0.6, 0.1 }, "Grip"),
+				} })
+				local _, _, est = Factors.asymmetry(m.ctx, D.set(m, "All"))
+				return est
+			end
+			local atReach = estimate(0.2, 0, nil, reach)
+			A.truthy(atReach > estimate(0.2, 0, nil, reach + 0.001), "along Z: at reach a candidate, past it none")
+			A.eq(estimate(0.2, 0, nil, reach + 1e-6), estimate(0.2, 0, nil, reach + 0.001), "1e-6 past reach: no candidate")
+			A.eq(estimate(0.2, 0, nil, reach + 5e-9), estimate(0.2, 0, nil, reach + 0.001), "5e-9 past reach: no candidate")
+			-- MIRROR_GUARD (1e-9) pinned from both sides, within 1.5 times it: 1.5e-9 past reach no candidate, 5e-10 past one
+			A.eq(estimate(0.2, 0, nil, reach + 1.5e-9), estimate(0.2, 0, nil, reach + 0.001), "1.5e-9 past reach: no candidate")
+			A.eq(estimate(0.2, 0, nil, reach + 5e-10), atReach, "5e-10 past reach, inside MIRROR_GUARD: a candidate")
+			for k = 1, 8 do
+				A.eq(estimate(0.2, 0.0137 * k, nil, reach), atReach, string.format("moved %g along Z", 0.0137 * k))
+			end
+			for k = 0, 15 do
+				local a = 0.2 + 0.0071 * k
+				A.eq(estimate(a, 0, reach), estimate(a, 0, reach - 0.001), string.format("along X, the part at %g", a))
+			end
+		end)
+
 	t.it("T-DIF-13 X06's Asymmetry on its Blade against the 120-probe oracle: within 0.02, 0.0030 measured", function()
 		local geometry: any, difficulty: any = table.clone(Geo), table.clone(Dif)
 		geometry.N_MAX_AXIS = 400
@@ -791,7 +856,10 @@ return Test.suite("Physics/Factors", function(t)
 	-- review: buried probes, Asymmetry's per-sample and per-part charges uncharged all passed the fast suite). F4's and
 	-- P5's Wedges walk canonicalWalk's rows. Thinness' union chords charge Edge.hiddenGap's queries (fix round 2: F5 on
 	-- All 4801 → 4911, P5 14656 → 14794 and on the Blade 8217 → 8273; fix round 3, a normal first and every box test
-	-- charged: F5 on All → 4921, F4 5600 → 5644, P5 → 14848 and on the Blade → 8351).
+	-- charged: F5 on All → 4921, F4 5600 → 5644, P5 → 14848 and on the Blade → 8351). A part that only touches another
+	-- face to face is above it no more (§4.3, the whole-design shift fix), so the probes and samples that charged one
+	-- unit for it charge none: F5 on All thinness 4921 → 4715, asymmetry 11069 → 9746; F4 5644 → 5564, 19264 → 17849,
+	-- on the Blade 2208 → 2178, 10069 → 9796; P5 14848 → 14642, 21409 → 20086.
 	t.it("§4.9 each loop charges its own units: Thinness', Asymmetry's, the walk's and the samples' by caller", function()
 		local function byCaller(core: any, selector: any): { [string]: number }
 			local m = D.measured(core)
@@ -804,13 +872,13 @@ return Test.suite("Physics/Factors", function(t)
 			return by
 		end
 		local f5, f4, p5 = Blueprints.get("F5").core, Blueprints.get("F4").core, Cost.get("P5").core
-		A.deepEq(byCaller(f5, "All"), { thinness = 4921, asymmetry = 11069, volumeSamples = 2640 }, "F5 All")
+		A.deepEq(byCaller(f5, "All"), { thinness = 4715, asymmetry = 9746, volumeSamples = 2640 }, "F5 All")
 		A.deepEq(byCaller(f5, { "Blade" }), { thinness = 1197, asymmetry = 3685, volumeSamples = 1160 }, "F5 Blade")
-		A.deepEq(byCaller(f4, "All"), { thinness = 5644, canonicalWalk = 272, asymmetry = 19264, volumeSamples = 4856 },
+		A.deepEq(byCaller(f4, "All"), { thinness = 5564, canonicalWalk = 272, asymmetry = 17849, volumeSamples = 4856 },
 			"F4 All")
-		A.deepEq(byCaller(f4, { "Blade" }), { thinness = 2208, canonicalWalk = 272, asymmetry = 10069, volumeSamples = 3536 },
+		A.deepEq(byCaller(f4, { "Blade" }), { thinness = 2178, canonicalWalk = 272, asymmetry = 9796, volumeSamples = 3536 },
 			"F4 Blade")
-		A.deepEq(byCaller(p5, "All"), { thinness = 14848, canonicalWalk = 60, asymmetry = 21409, volumeSamples = 3040 },
+		A.deepEq(byCaller(p5, "All"), { thinness = 14642, canonicalWalk = 60, asymmetry = 20086, volumeSamples = 3040 },
 			"P5 All")
 		A.deepEq(byCaller(p5, { "Blade" }), { thinness = 8351, canonicalWalk = 60, asymmetry = 13965, volumeSamples = 1560 },
 			"P5 Blade")

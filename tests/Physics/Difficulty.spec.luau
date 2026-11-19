@@ -354,8 +354,8 @@ return Test.suite("Physics/Difficulty", function(t)
 		A.eq(planted({ materials = swappedOrder }).difficulty.governing(f1.parts, all), "Steel", "Steel first, Steel")
 	end)
 
-	t.it("§5.1 step: g = q(Σ w·x) over Steps' weights in order, m from the material, the terms, factors copied",
-		function()
+	t.it("§5.1 step: g = q(Σ w·x) over Steps' weights in order, each x on the 1e-9 grid, m from the material, the "
+		.. "terms, factors copied", function()
 			local m = D.measured(Calibration.get("C15").core)
 			for _, row in Difficulty.planSteps("Sword") do
 				local values = D.factors(m, row.worksOn)
@@ -366,7 +366,7 @@ return Test.suite("Physics/Difficulty", function(t)
 				for i, w in weights do
 					local x = D.valueOf(values, w.factor).x
 					A.deepEq(s.terms[i], { factor = w.factor, w = w.w, x = x }, row.step .. " term " .. i)
-					g += w.w * x
+					g += w.w * (math.floor(x * 1e9 + 0.5) / 1e9)
 					sum += w.w
 				end
 				A.near(sum, 1, 1e-12, row.step .. " Σw")
@@ -397,6 +397,21 @@ return Test.suite("Physics/Difficulty", function(t)
 			A.throws(function()
 				Difficulty.step("Hammering", { values[1] }, "Iron")
 			end, "which the factors lack")
+		end)
+
+	-- The whole-design shift fix (§17.1 O11 (j)): a factor's last bits follow the rounding of where a design stands, and
+	-- on a half step of the 1e-4 grid they tipped g (F4 with a plate on its guard, moved along Y: 0.4593 → 0.4592;
+	-- Invariance.spec), so each x goes on the 1e-9 grid inside the sum; the terms keep it as measured.
+	t.it("§5.1 g sums each x on the 1e-9 grid: Volume's x one ulp either side of a half step of the 1e-4 grid gives one "
+		.. "g", function()
+			local function step(x: number): any
+				return Difficulty.step("Smelting", { { factor = "Volume", raw = x, x = x } }, "Iron")
+			end
+			A.eq(step(0.45925).g, 0.4593, "on the half step")
+			A.eq(step(0.45924999999999994).g, 0.4593, "an ulp under it")
+			A.eq(step(0.45924999999999994).terms[1].x, 0.45924999999999994, "the term keeps x")
+			A.eq(step(0.459249996).g, 0.4592, "4e-9 under it, on the 1e-9 grid: under it")
+			A.eq(step(0.4592499996).g, 0.4593, "4e-10 under it, on the 1e-9 grid: on it")
 		end)
 
 	t.it("§4.7 planSteps: the enabled CraftPlans steps in plan order; a planted plan is followed", function()

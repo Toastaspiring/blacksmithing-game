@@ -443,7 +443,7 @@ return Test.suite("Physics/Cover", function(t)
 	-- leave the pucks' caps open, where a cut taking the axes as parallel would stand r·(1 − cos) = 1.4e-8 above the rim,
 	-- past the 2e-10 margins; at 0.0046° they differ by under 1e-10 and decide every test. The caps searched and the units
 	-- are counted to the cap, so that a search charged wrongly, or bounds that leave more caps open, show.
-	t.it("(a) exact on its model, against a brute force: tilted rods in a turned Cylinder, and near its axis", function()
+	t.slow("(a) exact on its model, against a brute force: tilted rods in a turned Cylinder, and near its axis", function()
 		local c1, h1, s1, u1 = tiltedRods(Quat.hemisphere(Quat.normalize(H.axisAngle(1, 2, 3, 37))), { 0.13, 2.07, -0.11 },
 			{ { 2, 0 }, { 60, 0 }, { 90, 0.03 }, { 90, 0.0046 } })
 		local c2, h2, s2, u2 = tiltedRods(H.I, { 0, 2, 0 }, { { 90, 0.03 }, { 90, 0.0046 } })
@@ -1253,7 +1253,7 @@ return Test.suite("Physics/Cover", function(t)
 
 	-- Each stops at the report that passes the cap and reports nothing after it (Cover's header), so it stops within one
 	-- report of the cap, every unit reported.
-	t.it("(f) a design past the cap: no verdict, TooComplex, answered at once, nothing reported after the cap; capped in any order", function()
+	t.slow("(f) a design past the cap: no verdict, TooComplex, answered at once, nothing reported after the cap; capped in any order", function()
 		A.truthy(#Worst.tooComplex >= 6, "designs past the cap: " .. #Worst.tooComplex)
 		local rng = TestRng.new(Prop.baseSeed)
 		for k, d in ipairs(Worst.tooComplex) do

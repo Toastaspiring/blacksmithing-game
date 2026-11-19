@@ -765,7 +765,7 @@ return Test.suite("Physics/Analyze", function(t)
 		-- each work set's Thinness takes at most THICK_BUDGET probes, its Asymmetry fits ASYM_WORK or is on the last rung.
 		-- They are what the report was measured with: the same cell, the same factors.
 		local m = D.measured(H.p1())
-		local _, byRank = Sampling.measureRanked(m.parts)
+		local _, byRank = Sampling.measureRanked(m.parts, m.kept)
 		local keptByRank: { boolean } = {}
 		for r, p in ipairs(byRank) do
 			keptByRank[r] = m.kept[p.index]

@@ -10,7 +10,9 @@
 --   volumeProbes   the volume samples of every kept part at the spacing that fits N_VOL_TOTAL
 --   surfaceSamples a part's surface samples with normals and patch half-vectors e1, e2
 --   ranked         the verdict's order: the larger first, then the slot's name, then the solids (§4.4)
---   measureRanked  the measure's and ownership's order: the larger first, then the solids, then the slot's name (§4.4)
+--   measureRanked  the measure's and ownership's order: the larger first, then the solids, a kept part placed across
+--                  from the centre of the kept parts it ties with, then the slot's name; a cleaned part after the kept
+--                  ones, by its material, then placed from the centre of the kept parts (§4.3, §4.4)
 --   exposure       §4.4: the verdict (Dust and Enclosed cleaning, read by Physics/Cover), then the measure: the kept
 --                  parts' exposed areas and contact areas (SurfaceComplexity and Joints, §5.2)
 --
@@ -20,7 +22,18 @@
 -- beyond holds the probe. The probe is one point: a face flush on a part thinner than HIDE_OFFSET there (a Wedge's
 -- thin edge) shows where that part ranks lower, the coincident rule hiding only the lower part's face (SPEC §4.4,
 -- §17.1 O10). Both ranks put the larger part first and settle every tie by the solids or the slot's name, so a part's
--- id cannot decide anything here.
+-- id decides only between parts the same in every way (their heights, and the measure's places, to RANK_Q). Both count
+-- a part's height in RANK_Q, so twins an ulp apart in height tie on it. The verdict's then reads the world's centre
+-- planes, |x| before x and |z| before z, as M2 had it: no other part can move where a part stands, and a mirror image
+-- across either plane can only swap parts that tie on all of it, but a whole design moved along X or Z can swap near
+-- copies (tied on volume, slot and height) whose midpoint it takes across x = 0 or z = 0 (§17.1 O11 (j)). The measure's
+-- places a kept part across from the centre of the kept parts it ties with on volume and height, in RANK_Q, with no
+-- point of the design's own, so a whole design moved along X, Y or Z keeps its order, a part it does not tie with (a
+-- cleaned one among them) cannot move its place, and a mirror image across either centre plane reverses only the sign
+-- of each place (§4.4, §17.1 O11 (j)). A cleaned part is placed from the centre of every kept part instead, after its
+-- material: of two cleaned parts of one volume and height, which owns their overlap (§4.3) goes by the material, then
+-- by where each stands from that centre, so no hidden part, no id and no whole design's move chooses it, and a turn a
+-- mirror image rewrites only between two that stand at one place.
 --
 -- The verdict comes first, per part, and depends only on the part and on what covers it. Dust: V < MIN_PART_VOLUME, no
 -- samples, hides nothing. An exact copy (Shapes.sameSolid with a higher rank) lies wholly on that part's surface:
@@ -37,7 +50,9 @@
 -- the cap, do not depend on the order of the parts.
 --
 -- Then the measure: every kept part against kept parts only, once, on a ladder and a sub-grid budget of their own, in
--- the measure's rank order (`measureRanked`), which also decides between them who keeps a coincident face. The
+-- the measure's rank order (`measureRanked`, its ties among the kept parts alone, so ranked once the verdicts are in),
+-- which also decides between them who keeps a coincident face. Its contact rows count a sample within CONTACT_REACH of
+-- a part, V3's contact (§4.2). The
 -- prototype's patches and numbers (exposedKept, contact) come from here: a planar sample whose patch may straddle a
 -- hiding boundary is tested at its 4 corners and, if they disagree with its centre, weighted by the exposed fraction of
 -- a 4 × 4 sub-grid, where a sub-point past a triangle's or a cap's rim counts as exposed, as in the prototype. Cleaned
@@ -55,7 +70,7 @@ local Shapes = require("./Shapes")
 
 type Prepared = Shapes.Prepared
 
-local sqrt, abs, max, min, ceil = math.sqrt, math.abs, math.max, math.min, math.ceil
+local sqrt, abs, max, min, floor, ceil = math.sqrt, math.abs, math.max, math.min, math.floor, math.ceil
 local sd, sdLocal, toWorld, aabbContains, aabbOverlap =
 	Shapes.sd, Shapes.sdLocal, Shapes.toWorld, Shapes.aabbContains, Shapes.aabbOverlap
 
@@ -69,6 +84,10 @@ local BLOCK, WEDGE, CORNER, CYLINDER = Shapes.BLOCK, Shapes.WEDGE, Shapes.CORNER
 
 local INSIDE_MARGIN = 1e-9 -- §4.3: a volume sample is kept iff sd < −1e-9
 local UNITS_PER_SAMPLE = 4 -- writing one surface sample costs about this many shape queries (checkpoints only)
+-- numeric guards, not tunables: a design moved whole rounds its coordinates anew, so neither a place nor a gap that
+-- sits exactly on a boundary may be left to rounding (§17.1 O11 (j))
+local RANK_Q = 1e-9 -- §4.4: the ranks count a part's height and place in these, so a moved design keeps its ties
+local CONTACT_REACH = CONTACT_TOL + 1e-9 -- §4.2: a gap of CONTACT_TOL is contact whichever way rounding puts it
 
 -- The unit circle in 32 directions, k = 0…31 (§4.1: literal constants, 17 significant digits, never trigonometry),
 -- Cover's: the verdict's Cylinder model stands on the same 32 directions. T-PHY checks them against math.cos and math.sin.
@@ -130,6 +149,7 @@ local Sampling = {}
 
 Sampling.COS, Sampling.SIN = COS, SIN
 Sampling.INSIDE_MARGIN = INSIDE_MARGIN
+Sampling.RANK_Q, Sampling.CONTACT_REACH = RANK_Q, CONTACT_REACH
 
 -- ── budgets (§4.9) ────────────────────────────────────────────────────────────────────────────────────────────────
 
@@ -472,6 +492,59 @@ end
 
 -- ── exposure and cleaning (§4.4) ──────────────────────────────────────────────────────────────────────────────────
 
+-- A height or place in RANK_Q, rounded half away from 0: odd, so a mirror image's place is its original's negated, and
+-- a design moved whole keeps it, but where it rounds to either side of a half step (heights an ulp apart, which a move
+-- can round to one or apart, round to one step already).
+local function place(v: number): number
+	if v < 0 then
+		return -floor(-v / RANK_Q + 0.5)
+	end
+	return floor(v / RANK_Q + 0.5)
+end
+
+-- The measure's place of each kept part across, from the centre of the kept parts it ties with on the keys before
+-- (keys[1], the volume, and keys[2], the height in RANK_Q): the mean of their centres' x and z, summed in blueprint
+-- order, itself among them. No point of the design's own, so no part it does not tie with moves its place, a whole
+-- design moved keeps it and a mirror image across either centre plane negates it (§4.4, §17.1 O11 (j)). A cleaned
+-- part's, from the centre of every kept part (the origin with none kept, which only measureInvalid reaches): placed
+-- from the cleaned parts it tied with, another hidden part moved it and chose which of two hidden parts owns their
+-- overlap, and with it the mass (§4.3). Writes keys[3..6] = |x|, x, |z|, z in RANK_Q.
+local function acrossTies(parts: { Prepared }, keys: { { number } }, kept: { boolean })
+	local N = #parts
+	local kx, kz, m = 0, 0, 0
+	for j = 1, N do
+		local q = parts[j]
+		if kept[q.index] then
+			kx += q.cx
+			kz += q.cz
+			m += 1
+		end
+	end
+	if m > 0 then
+		kx, kz = kx / m, kz / m
+	end
+	for i = 1, N do
+		local p = parts[i]
+		local kp = keys[p.index]
+		local cx, cz = kx, kz
+		if kept[p.index] then
+			local sx, sz, n = 0, 0, 0
+			for j = 1, N do
+				local q = parts[j]
+				local kq = keys[q.index]
+				if kq[1] == kp[1] and kq[2] == kp[2] and kept[q.index] then
+					sx += q.cx
+					sz += q.cz
+					n += 1
+				end
+			end
+			cx, cz = sx / n, sz / n
+		end
+		local qx, qz = place(p.cx - cx), place(p.cz - cz)
+		kp[3], kp[4], kp[5], kp[6] = abs(qx), qx, abs(qz), qz
+	end
+end
+
 -- The verdict's rank of each part (1 = highest), and the parts in rank order: which of two exact copies survives, the
 -- hiders' order and who keeps a coincident face in a reading. The larger first (a Block's volume from its half extents
 -- sorted, a Wedge's from hy and hz in order, so that the frame and the size that describe one solid decide nothing; a
@@ -479,10 +552,12 @@ end
 -- gives them up to it whatever its label, so filler buys no face. Of two of one volume the name of the slot first: a
 -- label is visible, so of two parts that coincide the one whose slot's name comes first keeps their faces, and an
 -- invisible copy cannot take them, whatever its frame, its size's description or a nudge of its place; a copy a hair
--- larger encloses the part and takes them, as relabelling the part would. Then by where it stands (|cx| before cx, |cz|
--- before cz: a mirror image across either centre plane can only swap parts that tie on all of it), by its half extents
--- (a Block's sorted, a Wedge's hy and hz in order), by the name of its material, then by its half extents as given and
--- its turn; only what is the same in every way falls to the index.
+-- larger encloses the part and takes them, as relabelling the part would. Then by where it stands: its height in
+-- RANK_Q (twins an ulp apart tie on it, however a move rounds them), then |cx| before cx and |cz| before cz from the
+-- world's planes (no other part, hidden or not, moves them; a mirror image across either centre plane can only swap
+-- parts that tie on all of it); then by its half extents (a Block's sorted, a Wedge's hy and hz in order), by the name
+-- of its material, then by its half extents as given and its turn; only what is the same in every way falls to the
+-- index.
 function Sampling.ranked(parts: { Prepared }): ({ number }, { Prepared })
 	local N = #parts
 	local order: { Prepared } = table.create(N)
@@ -502,7 +577,7 @@ function Sampling.ranked(parts: { Prepared }): ({ number }, { Prepared })
 			h2, h3 = min(p.hy, p.hz), max(p.hy, p.hz)
 			v = 4 * p.hx * h2 * h3
 		end
-		keys[p.index] = { -v, p.cy, abs(p.cx), p.cx, abs(p.cz), p.cz, h1, h2, h3 }
+		keys[p.index] = { -v, place(p.cy), abs(p.cx), p.cx, abs(p.cz), p.cz, h1, h2, h3 }
 		given[p.index] = { p.hx, p.hy, p.hz, p.ux, p.uy, p.uz, p.vx, p.vy, p.vz }
 	end
 	table.sort(order, function(a: Prepared, b: Prepared): boolean
@@ -536,12 +611,18 @@ function Sampling.ranked(parts: { Prepared }): ({ number }, { Prepared })
 	return rank, order
 end
 
--- The measure's rank: the larger first, then by where it stands (|cx| before cx, |cz| before cz), then by its half
--- extents and turn as given, then by the names of its slot and material, then the index. Between kept parts it settles
--- who keeps a face they share, who owns an overlap within a slot (§4.3, MassProps) and who spends the measure's sub-grid
--- budget first. It is the rank both had before the verdict's took the slot's name ahead of where a part stands, kept so
--- that the measure, owned volumes and mass move only where a verdict does; Reference.spec hands the prototype its order.
-function Sampling.measureRanked(parts: { Prepared }): ({ number }, { Prepared })
+-- The measure's rank: the larger first, then by its height in RANK_Q, then the kept parts before the cleaned ones (each
+-- reader takes the kept parts alone, and ownership puts them first). Of kept parts, by the place across from the centre
+-- of the kept parts of its volume and height, |x| before x and |z| before z, in RANK_Q, which no cleaned part moves,
+-- then by the half extents and turn as given, then by the names of the slot and the material, then the index: it
+-- settles who keeps a face two of them share, who owns an overlap within a slot (§4.3, MassProps) and who spends the
+-- measure's sub-grid budget first, the rank both had before the verdict's took the slot's name ahead of where a part
+-- stands, kept so that the measure, owned volumes and mass move only where a verdict does (Reference.spec hands the
+-- prototype its order among the kept parts). Of cleaned parts, which own an overlap among themselves in this order, by
+-- the name of the material, then by the place from the centre of every kept part, then by the half extents and turn,
+-- the slot's name and the index: a turn as given, which a mirror image rewrites, comes after where a part stands.
+-- kept: per part index, the verdicts'.
+function Sampling.measureRanked(parts: { Prepared }, kept: { boolean }): ({ number }, { Prepared })
 	local N = #parts
 	local order: { Prepared } = table.create(N)
 	local keys: { { number } } = table.create(N)
@@ -549,11 +630,24 @@ function Sampling.measureRanked(parts: { Prepared }): ({ number }, { Prepared })
 		local p = parts[i]
 		order[i] = p
 		keys[p.index] =
-			{ -p.volume, p.cy, abs(p.cx), p.cx, abs(p.cz), p.cz, p.hx, p.hy, p.hz, p.ux, p.uy, p.uz, p.vx, p.vy, p.vz }
+			{ -p.volume, place(p.cy), 0, 0, 0, 0, p.hx, p.hy, p.hz, p.ux, p.uy, p.uz, p.vx, p.vy, p.vz }
 	end
+	acrossTies(parts, keys, kept)
 	table.sort(order, function(a: Prepared, b: Prepared): boolean
 		local ka, kb = keys[a.index], keys[b.index]
-		for k = 1, #ka do
+		for k = 1, 2 do
+			if ka[k] ~= kb[k] then
+				return ka[k] < kb[k]
+			end
+		end
+		local keptA = kept[a.index]
+		if keptA ~= kept[b.index] then
+			return keptA
+		end
+		if not keptA and a.material ~= b.material then
+			return a.material < b.material
+		end
+		for k = 3, #ka do
 			if ka[k] ~= kb[k] then
 				return ka[k] < kb[k]
 			end
@@ -586,7 +680,7 @@ function Sampling.exposure(parts: { Prepared }, spend: Spend?): Exposure
 	local tol = CONTACT_TOL
 
 	local rank, byRank = Sampling.ranked(parts)
-	local measureRank, byMeasureRank = Sampling.measureRanked(parts)
+	local measureRank: { number }, byMeasureRank: { Prepared } = {}, {} -- once the verdicts are in (its ties are kept)
 
 	-- exact copies of a higher-ranked part: Enclosed, never sampled, no candidate for anyone. A copy in another slot does not
 	-- stand next to its original, so every part above with the same centre is asked
@@ -618,8 +712,8 @@ function Sampling.exposure(parts: { Prepared }, spend: Spend?): Exposure
 		return aabbContains(q, ox, oy, oz, 2 * eps) and sd(q, ox, oy, oz) <= eps
 	end
 
-	-- The exposed part of sample k's area, as the prototype weighs it. contactRow collects the area within CONTACT_TOL per
-	-- part.
+	-- The exposed part of sample k's area, as the prototype weighs it. contactRow collects the area within
+	-- CONTACT_REACH per part.
 	local function exposedWeight(p: Prepared, S: SurfaceSamples, k: number, cand: { Prepared },
 		contactRow: { number }): number
 		local x, y, z, w = S.x[k], S.y[k], S.z[k], S.w[k]
@@ -627,7 +721,7 @@ function Sampling.exposure(parts: { Prepared }, spend: Spend?): Exposure
 		local ox, oy, oz = x + delta * nx, y + delta * ny, z + delta * nz
 		local e1x, e1y, e1z, e2x, e2y, e2z = S.e1x[k], S.e1y[k], S.e1z[k], S.e2x[k], S.e2y[k], S.e2z[k]
 		local lim = sqrt(e1x * e1x + e1y * e1y + e1z * e1z) + sqrt(e2x * e2x + e2y * e2y + e2z * e2z) + eps
-		local m0 = max(tol, 2 * lim)
+		local m0 = max(CONTACT_REACH, 2 * lim)
 		local nn = 0
 		local hiddenFar, hiddenNear = false, false
 		for c = 1, #cand do
@@ -635,7 +729,7 @@ function Sampling.exposure(parts: { Prepared }, spend: Spend?): Exposure
 			local d0, d1 = math.huge, math.huge
 			if aabbContains(q, x, y, z, m0) then
 				d0 = sd(q, x, y, z)
-				if d0 <= tol then
+				if d0 <= CONTACT_REACH then
 					contactRow[q.index] += w
 				end
 			end
@@ -779,8 +873,9 @@ function Sampling.exposure(parts: { Prepared }, spend: Spend?): Exposure
 	end
 
 	-- the measure: the kept parts, against kept parts only, on a ladder (samples × (1 + candidate parts) within
-	-- N_SURF_WORK) and a sub-grid budget of their own, in the measure's rank order. It runs whatever was cleaned, so a
-	-- hidden part anywhere cannot reach a kept part's area or contact rows.
+	-- N_SURF_WORK) and a sub-grid budget of their own, in the measure's rank order, placed among kept parts. It runs
+	-- whatever was cleaned, so a hidden part anywhere cannot reach a kept part's area or contact rows.
+	measureRank, byMeasureRank = Sampling.measureRanked(parts, kept)
 	local hSurf = Sampling.ladder(Geo.H_SURF, function(h: number): boolean
 		local est = 0
 		for i = 1, N do

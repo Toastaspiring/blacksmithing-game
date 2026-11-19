@@ -9,8 +9,9 @@
 --                      part dragged out of the hitbox must not hide what floats.
 --   run(core, opts)    the whole pipeline (§4.1):
 --     1 prepare, QUICK        V1 slot counts, V2 containment; errors stop here, whatever measureInvalid says
---     2 V3, V4                the contact graph (AABB broad phase, then GJK within CONTACT_TOL) and the blade's side of
---                             the grip, in the frame of every Grip part (MassProps.validationFrame): no verdict yet
+--     2 V3, V4                the contact graph (AABB broad phase, then GJK within CONTACT_TOL + 1e-9: a gap of exactly
+--                             CONTACT_TOL connects however a whole-design move rounds it) and the blade's side of the
+--                             grip, in the frame of every Grip part (MassProps.validationFrame): no verdict yet
 --     3 exposure, CLEAN, V5   a required slot keeps a kept part; invalid stops here unless opts.measureInvalid. Verdicts
 --                             past VERDICT_WORK_MAX stop it before V5 as TooComplex, measured never: there is no verdict
 --     4 MASS PROPERTIES       owned volumes, mass, COM, the physics frame and guard line of the kept parts (§4.5: a
@@ -102,7 +103,7 @@ export type AnalyzeOptions = { checkpoint: (() -> ())?, measureInvalid: boolean?
 
 local sqrt = math.sqrt
 
-local CONTACT_TOL = Limits.CONTACT_TOL
+local CONTACT_REACH = Sampling.CONTACT_REACH -- CONTACT_TOL + 1e-9: a gap of CONTACT_TOL connects however it rounds
 local EPS_CONTAIN = Limits.EPS_CONTAIN
 
 local CHECK_UNITS = 500 -- §16.18: checkpoint cadence, not outcome-affecting
@@ -174,7 +175,7 @@ end
 -- ── V3: the contact graph ─────────────────────────────────────────────────────────────────────────────────────────
 
 type Connectivity = {
-	touching: { { boolean } }, -- touching[i][j]: parts i and j are within CONTACT_TOL (Joints, §5.2)
+	touching: { { boolean } }, -- touching[i][j]: parts i and j are within CONTACT_REACH (Joints, §5.2)
 	errors: { ValidationError }, -- Disconnected per part outside the main component, in part order
 	components: { FloatingComponent }, -- by lowest part index
 }
@@ -198,8 +199,8 @@ local function connectivity(parts: { Prepared }, gripSlot: DT.SlotId, spend: Spe
 		local a = parts[i]
 		for j = i + 1, N do
 			local b = parts[j]
-			if Shapes.aabbOverlap(a, b, CONTACT_TOL) then
-				if (Gjk.within(a, b, CONTACT_TOL)) then
+			if Shapes.aabbOverlap(a, b, CONTACT_REACH) then
+				if (Gjk.within(a, b, CONTACT_REACH)) then
 					touching[i][j], touching[j][i] = true, true
 					local ri, rj = root(i), root(j)
 					if ri < rj then -- the lowest index is each component's root
@@ -442,7 +443,7 @@ function Analyze.run(core: Schema.BlueprintCore, opts: AnalyzeOptions?): Analysi
 
 	-- 6 the difficulty frame and the EDGE, walking the parts in the measure's rank order (§17.2), kept indexed alike
 	local N = #parts
-	local rank, byRank = Sampling.measureRanked(parts)
+	local rank, byRank = Sampling.measureRanked(parts, kept)
 	local keptByRank: { boolean } = table.create(N, false)
 	for r = 1, N do
 		keptByRank[r] = kept[byRank[r].index]

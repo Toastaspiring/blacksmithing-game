@@ -753,6 +753,14 @@ return Test.suite("Physics/MassProps", function(t)
 				A.rel(MassProps.exactOverlap(p, { other }), p.volume / 2, 1e-3, "half of it")
 			end
 		end
+		-- CLIP_EPS (1e-12) from both sides: a Block whose face lies 1.3e-12 past another's loses that sliver to the cut,
+		-- one 7e-13 past it is left whole, as flush
+		local whole = H.prepare(H.solid(3, "Block", { 0, 2, 0 }, H.I, { 0.2, 0.2, 0.2 }))
+		for _, case in ipairs({ { 1.3e-12, 0.04 * 1.3e-12 }, { 7e-13, 0 } }) do
+			local beside = H.prepare(H.solid(4, "Block", { -case[1], 2, 0 }, H.I, { 0.2, 0.2, 0.2 }), 2)
+			A.near(MassProps.exactOverlap(whole, { beside }), whole.volume - case[2], 1e-16,
+				string.format("a face %g past the other's", case[1]))
+		end
 	end)
 
 	t.it("§4.3 exactOverlap on near copies of every polyhedron, 3e-13 to 3e-11 off: all of the part, 1 to 3 copies (PROP_N)", function()
@@ -928,6 +936,80 @@ return Test.suite("Physics/MassProps", function(t)
 		} })
 		A.truthy(round.refinedCells > 0, "a Ball involved: sampled")
 	end)
+
+	-- The whole-design shift fix (§17.1 O11 (j)): a design moved whole rounds its coordinates anew, so what sits exactly
+	-- on a boundary must not be rounding's call.
+	t.it("§4.3 a part that only touches another face to face is above it at no shift; one tangent to a round part is "
+		.. "above it whatever GJK's convergence; a box's cells are no rounding's call", function()
+			-- a Guard bar flush on a Blade block along Z: their boxes 1.7e-18 apart as typed and 0 apart moved 0.037 down
+			-- Z. The box test asks for OVERLAP_TOL of overlap on every axis, so neither asks GJK (at margin 0 the moved
+			-- copy did, and took the blade above the bar)
+			for _, dz in { 0, -0.037 } do
+				local _, _, owned = H.measure({ parts = {
+					blockAt(1, { 0, 2, dz }, { 0.2, 0.6, 0.02 }),
+					blockAt(2, { 0, 2, 0.04 + dz }, { 0.1, 0.4, 0.06 }, nil, "Guard"),
+				} })
+				A.eq(#owned.higher[2], 0, string.format("the bar moved %g along Z: no part above it", dz))
+			end
+			-- a Ball tangent to a Cylinder's side 30° from +Y: GJK stops 1.2e-8 to 2.4e-8 above their gap 0 (Physics/Gjk's
+			-- curved pairs), under OVERLAP_TOL, so the Cylinder is above the Ball however the pair is moved (at 1e-9, never)
+			local t = math.rad(30)
+			for k = 0, 4 do
+				local dy, dz = 0.0013 * k, -0.00037 * k
+				local _, _, owned = H.measure({ parts = {
+					H.solid(1, "Cylinder", { 0, 2 + dy, dz }, H.I, { 0.6, 0.16, 0.16 }),
+					H.solid(2, "Ball", { 0.05, 2 + 0.13 * math.cos(t) + dy, 0.13 * math.sin(t) + dz }, H.I, { 0.1, 0.1, 0.1 },
+						"Guard"),
+				} })
+				A.eq(#owned.higher[2], 1, "the tangent Ball moved " .. k .. ": the Cylinder above it")
+			end
+			-- an extent a rounding puts a hair past 4 cells keeps 4 (5 by ceil alone), and a box no thicker than CELL_EPS,
+			-- a hider that only touches p, has none (4 × 4 × 4 at an extent of 1e-17)
+			local p = H.prepare(blockAt(1, { 0, 2, 0 }, { 0.2, 0.2, 0.2 }))
+			local h = Geo.H_OVERLAP
+			local e = 4 * h * (1 + 2 ^ -52)
+			A.truthy(e / h > 4, "the extent a hair past 4 cells")
+			local _, _, _, _, cells = MassProps.sampledOverlap(p, {}, { 0, 0, 0 }, { e, 4 * h, 4 * h }, h)
+			A.eq(cells, 64, "4 cells a side")
+			local _, _, _, _, flat = MassProps.sampledOverlap(p, {}, { 0, 0, 0 }, { 4 * h, 4 * h, 1e-17 }, h)
+			A.eq(flat, 0, "a flat box")
+			local _, _, _, _, nearly = MassProps.sampledOverlap(p, {}, { 0, 0, 0 }, { 4 * h * (1 + 1e-10), 4 * h, 4 * h }, h)
+			A.eq(nearly, 64, "an extent 1e-10 past 4 cells keeps 4")
+			local _, _, _, _, thin = MassProps.sampledOverlap(p, {}, { 0, 0, 0 }, { 4 * h, 4 * h, 1e-10 }, h)
+			A.eq(thin, 0, "a box 1e-10 thick has none")
+			-- and at half CELL_EPS, as the other margins are pinned from below
+			local _, _, _, _, half = MassProps.sampledOverlap(p, {}, { 0, 0, 0 }, { 4 * h * (1 + 1.25e-10), 4 * h, 4 * h }, h)
+			A.eq(half, 64, "an extent 5e-10 cells past 4 keeps 4")
+			local _, _, _, _, halfThin = MassProps.sampledOverlap(p, {}, { 0, 0, 0 }, { 4 * h, 4 * h, 5e-10 }, h)
+			A.eq(halfThin, 0, "a box 5e-10 thick has none")
+			-- past CELL_EPS, the cells as by ceil: 5e-9 of a cell past 4 takes 5, a box 5e-9 thick its cells
+			local past5 = 4 * h * (1 + 1.25e-9)
+			local _, _, _, _, five = MassProps.sampledOverlap(p, {}, { 0, 0, 0 }, { past5, 4 * h, 4 * h }, h)
+			A.eq(five, 80, "an extent 5e-9 cells past 4 takes 5")
+			local _, _, _, _, sheet = MassProps.sampledOverlap(p, {}, { 0, 0, 0 }, { 4 * h, 4 * h, 5e-9 }, h)
+			A.truthy(sheet > 0, "a box 5e-9 thick has cells")
+			-- and under twice CELL_EPS: 1.5e-9 of a cell past 4 takes 5, a box 1.5e-9 thick its cells
+			local past15 = 4 * h * (1 + 3.75e-10)
+			local _, _, _, _, fiveNear = MassProps.sampledOverlap(p, {}, { 0, 0, 0 }, { past15, 4 * h, 4 * h }, h)
+			A.eq(fiveNear, 80, "an extent 1.5e-9 cells past 4 takes 5")
+			local _, _, _, _, sheetNear = MassProps.sampledOverlap(p, {}, { 0, 0, 0 }, { 4 * h, 4 * h, 1.5e-9 }, h)
+			A.truthy(sheetNear > 0, "a box 1.5e-9 thick has cells")
+			local _, _, owned = H.measure({ parts = {
+				blockAt(1, { 0, 2, 0 }, { 0.2, 0.6, 0.02 }),
+				blockAt(2, { 0, 2, 0.04 - 7e-8 }, { 0.1, 0.4, 0.06 }, nil, "Guard"),
+			} })
+			A.eq(#owned.higher[2], 0, "7e-8 of overlap, under OVERLAP_TOL: no part above it")
+			local _, _, past = H.measure({ parts = {
+				blockAt(1, { 0, 2, 0 }, { 0.2, 0.6, 0.02 }),
+				blockAt(2, { 0, 2, 0.04 - 5e-7 }, { 0.1, 0.4, 0.06 }, nil, "Guard"),
+			} })
+			A.eq(#past.higher[2], 1, "5e-7 of overlap, past OVERLAP_TOL: the part above it")
+			local _, _, just = H.measure({ parts = {
+				blockAt(1, { 0, 2, 0 }, { 0.2, 0.6, 0.02 }),
+				blockAt(2, { 0, 2, 0.04 - 1.5e-7 }, { 0.1, 0.4, 0.06 }, nil, "Guard"),
+			} })
+			A.eq(#just.higher[2], 1, "1.5e-7 of overlap, past OVERLAP_TOL: the part above it")
+		end)
 
 	t.it("§4.9 cleaned parts cannot coarsen a kept part's overlap sampling: V_own stays bit-identical", function()
 		local base = H.f("F3") -- two ball quillons overlap the guard: refined sampling at the base spacing

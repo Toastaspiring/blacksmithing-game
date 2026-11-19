@@ -13,6 +13,7 @@ local TestRng = require("../lib/TestRng")
 local Tol = require("../lib/Tol")
 local Drafts = require("../Blueprint/Drafts")
 local Blueprints = require("../fixtures/Blueprints")
+local Cost = require("../fixtures/Cost")
 local H = require("./PhysicsHelpers")
 local Balance = require("../../src/shared/Definitions/Balance")
 local EquipmentTypes = require("../../src/shared/Definitions/EquipmentTypes")
@@ -821,6 +822,24 @@ return Test.suite("Physics/Sampling", function(t)
 		local small = H.plantedSampling({ N_SUB_WORK = 200 }).exposure(list)
 		A.truthy(small.subSampled > 0, "some patches fit")
 		A.truthy(small.subSampled * 20 <= 200, "a patch costs at least 4 + 16 tests: " .. small.subSampled)
+	end)
+
+	-- §4.4: the measure's ties are the kept parts alone, so a cleaned part tied with kept ones on volume and height cannot
+	-- reorder them, which shows where the sub-grid budget runs out between them: P5's first teeth, twins at ±0.14 at
+	-- height 1.6, and a Wedge of their size in the Guard slot hidden in its blade at x 0.02 (which, counted among their
+	-- ties, would move their centre to 0.0067 and put the +x tooth first). At these budgets the teeth's patches straddle the
+	-- budget's end (the hidden Wedge counted: 2 kept parts' exposure 0.00067 apart)
+	t.it("§4.4 a cleaned part reorders no kept part's sub-grid budget: P5 with a tooth hidden in its blade, the budget "
+		.. "running out between its twin teeth", function()
+		local base = Cost.get("P5").core
+		local parts = table.clone(base.parts)
+		table.insert(parts, H.part(16, "Guard", "Wedge", "Iron", { 0.02, 1.6, 0 }, base.parts[7].rot, { 0.08, 0.12, 0.06 }))
+		for _, n in { 3240, 3280 } do
+			local planted = H.plantedSampling({ N_SUB_WORK = n })
+			local hidden = planted.exposure(H.prepared({ parts = parts }))
+			A.falsy(hidden.kept[16], "the Wedge is cleaned")
+			H.sameKeptMeasure(hidden, planted.exposure(H.prepared(base)), #base.parts)
+		end
 	end)
 
 	-- What exposure charges on Blocks when no tested sample has a patch near a hiding boundary (§4.9: a checkpoint can only

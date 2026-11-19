@@ -5,8 +5,9 @@
 -- them (MassProps.difficultyFrame); cutIndex on MassProps' bladeLength.
 --   1 F5 and F1: one chain of 5.4330 from the +X base over the tip to the −X base, cell 0.02, cutIndex 0.724180
 --   2 E-S2.9's edge and cutIndex columns (cutIndex to 6 decimals, L1; fix round 1's values); the prototype's edge in the
---     measure's rank order on every fixture whose verdict the build shares but those the off-centre samples and the
---     merged hidden gaps move (OFF_PROTOTYPE, whose edges T-DIF-12's goldens hold; P1's verdict is the build's own)
+--     measure's rank order (the verdict's where it cleans a part: inRankOrder) on every fixture whose verdict the build
+--     shares but those the off-centre samples and the merged hidden gaps move (OFF_PROTOTYPE, whose edges T-DIF-12's
+--     goldens hold; P1's verdict is the build's own)
 --   3 X04's 12 cases one chain of F5's length (TOL_EDGE_REL)   4 P5's comb: 11 chains
 --   5 the rules: a thick blade has no edge, the EdgeLength cap case, hilt-buried cells, pommel-facing segments and the
 --     gaps bridged, chains' points, lengths and total order, Douglas–Peucker on lattice points (exact: a point at tol
@@ -119,7 +120,7 @@ end
 local function inputs(core: any): ({ Prepared }, { boolean }, { number }, { number })
 	local parts = H.prepared(core)
 	local kept = Sampling.exposure(parts).kept
-	local _, byRank = Sampling.measureRanked(parts)
+	local _, byRank = Sampling.measureRanked(parts, kept)
 	local keptByRank: { boolean } = table.create(#byRank, false)
 	for r, p in ipairs(byRank) do
 		keptByRank[r] = kept[p.index]
@@ -143,16 +144,31 @@ local function cutIndexOf(core: any, e: EdgeProfile): number
 	return Edge.cutIndex(H.measure(core).bladeLength, e.bladeMeanThickness)
 end
 
--- A prototype blueprint with its parts in the measure's rank order, ids kept (Reference.spec's inRankOrder).
+-- A prototype blueprint with its parts in the verdict's rank order, the kept ones among their places in the measure's,
+-- ids kept (Reference.spec's inRankOrder).
 local function inRankOrder(b: any): any
 	local list: { Prepared } = {}
 	for i, part in ipairs(b.parts) do
 		list[i] = Shapes.prepare(part, i)
 	end
-	local _, order = Sampling.measureRanked(list)
+	local kept = Sampling.exposure(list).kept
+	local _, verdictOrder = Sampling.ranked(list)
+	local _, measureOrder = Sampling.measureRanked(list, kept)
+	local keptOrder: { Prepared } = {}
+	for _, p in ipairs(measureOrder) do
+		if kept[p.index] then
+			table.insert(keptOrder, p)
+		end
+	end
 	local parts: { any } = {}
-	for r, p in ipairs(order) do
-		parts[r] = b.parts[p.index]
+	local k = 0
+	for r, p in ipairs(verdictOrder) do
+		local q = p
+		if kept[p.index] then
+			k += 1
+			q = keptOrder[k]
+		end
+		parts[r] = b.parts[q.index]
 	end
 	return { name = b.name, parts = parts }
 end
@@ -196,7 +212,8 @@ local function sameEdge(a: EdgeProfile, b: any, tol: number, what: string)
 	end
 end
 
--- The build's edge against the prototype's in the measure's rank order: the same, or, for OFF_PROTOTYPE, not.
+-- The build's edge against the prototype's, its kept parts in the measure's rank order: the same, or, for OFF_PROTOTYPE,
+-- not.
 local function againstPrototype(b: any)
 	local core: any = { schema = 1, name = b.name, type = "Sword", parts = b.parts }
 	local theirs = Proto.run(inRankOrder(b), { measureInvalid = true })

@@ -3,13 +3,18 @@
 -- frames and lengths. Pure; §4.1's determinism rules apply. Exact for polyhedra. No inertia in the MVP (§4.7, §15.1).
 --
 -- Overlap ownership (§4.3). An overlap counts once, for its owner. Priority: kept parts, then slot rank (§3.7), then the
--- larger part (Sampling.measureRanked, so no id decides). V_own(p) = V_p − V(p ∩ ∪ higher(p)), with the first moment
--- likewise:
+-- larger part (Sampling.measureRanked: a kept part placed among the kept parts it ties with; of two cleaned parts of one
+-- volume and height, the material, then where each stands from the kept parts' centre, so that no hidden part, no id
+-- and no whole-design move decides, and a turn a mirror image rewrites only between two that stand at one place).
+-- V_own(p) = V_p − V(p ∩ ∪ higher(p)), with the first moment likewise, higher(p) the parts above it that overlap it:
+-- boxes that overlap by OVERLAP_TOL or more on every axis, then GJK within OVERLAP_TOL, so two parts flush along a
+-- world axis, whose boxes only meet, are never above each other, whichever way rounding puts their faces; an exact copy
+-- (Shapes.sameSolid) of one already among them is not counted again, since it adds nothing to their union:
 --   exactOverlap    all polyhedra and ≤ MAX_EXACT higher overlapping parts: exact convex clipping, inclusion–exclusion
 --                   over the subsets, volume and moment by tetrahedra
 --   sampledOverlap  otherwise (a Ball or Cylinder involved, or more parts): midpoint sampling of the overlap box in p's
 --                   frame at H_OVERLAP (OVERLAP_N_MIN–OVERLAP_N_MAX cells per axis), coarsened to fit N_OVERLAP_WORK,
---                   kept parts first
+--                   kept parts first, the cleaned parts' jobs sharing what is left at one spacing
 -- An exact copy of a part above it (Shapes.sameSolid) owns nothing, exactly, whatever its shape.
 -- The clipping differs from the prototype's on purpose. Its cut face was made of the vertices found on the plane: a face
 -- 3e-13 to 3e-11 off the plane, some vertices past CLIP_EPS and others within it, got covered twice, and repeated cuts
@@ -20,10 +25,13 @@
 --
 -- Mass (§4.5). U = Σ V_own, M = Σ ρ·V_own, COM = Σ ρ·M1_own / M, in part order; ρ = Definitions/Materials.density.
 -- Physics frame = the kept Grip parts (balance, reach, display pivot), and the guard line the kept Guard parts (else
--- the kept grip's top): a cleaned part counts for mass and COM by what it owns (an enclosed part nothing, dust its own
--- volume) and for the total length, and steers nothing, so no hidden part moves the balance, reach, bladeLength or
--- cutIndex (A25, V2's strap hidden in A26's ring grip). V4 is asked before the verdict, so its frame is every Grip part
--- (validationFrame), as V1–V3 count every part.
+-- the kept grip's top): a cleaned part counts for mass and COM by what it owns (what no kept part holds: an enclosed
+-- part inside a kept one nothing, a filler in a sealed cavity its volume; dust its own volume) and for the total length,
+-- and steers nothing else, not even which of two other cleaned parts owns their overlap, only how another one's is
+-- measured (above it, it joins its higher parts; a sampled overlap of its own draws on the cleaned parts' share of
+-- N_OVERLAP_WORK, §4.3), so no hidden part moves the reach, bladeLength or cutIndex (A25, V2's strap hidden in A26's
+-- ring grip), and the mass and the balance only by what it owns and by that measuring, never G. V4 is asked before the
+-- verdict, so its frame is every Grip part (validationFrame), as V1–V3 count every part.
 -- Difficulty frame = the point of the kept Grip parts, axis fixed at blueprint +Y, consistent with the fixed plane
 -- x = 0: no grip part, visible or hidden, can steer a factor (A25–A27, E-S2.7).
 
@@ -75,7 +83,12 @@ local aabbOverlap, aabbContains = Shapes.aabbOverlap, Shapes.aabbContains
 local Geo = Balance.Geometry
 local MAX_EXACT = Geo.MAX_EXACT
 
-local OVERLAP_TOL = 1e-9 -- parts that merely touch own their whole volume; GJK decides at this gap
+-- numeric guards, not tunables. A design moved whole rounds its coordinates anew (§17.1 O11 (j)): the box test before
+-- GJK leaves out boxes that overlap by less than OVERLAP_TOL on an axis, so parts that only meet face to face are never
+-- above each other whichever way rounding puts the faces, and GJK decides at OVERLAP_TOL, above its own accuracy on a
+-- round pair (about 4e-8, Physics/Gjk), so a part tangent to a Ball or a Cylinder is above it, however GJK converges
+local OVERLAP_TOL = 1e-7 -- parts that merely touch own their whole volume
+local CELL_EPS = 1e-9 -- an overlap box's extent this past a whole number of cells keeps that number; this thin, no cell
 local CLIP_EPS = 1e-12 -- a solid no further than this past a clipping plane does not cross it (rounding of flush parts)
 local INSIDE_MARGIN = Sampling.INSIDE_MARGIN -- §4.3: a cell centre counts iff sd < −1e-9
 
@@ -281,12 +294,14 @@ function MassProps.overlapBox(p: Prepared, H: { Prepared }): (Vec3, Vec3)
 	return lo, hi
 end
 
+-- A box no thicker than CELL_EPS (a hider that only touches p: its extent 0 or a rounding's ±1e-17) has no cell, and
+-- an extent a rounding puts a hair past a whole number of cells keeps that number (§4.3).
 local function cellsPerAxis(lo: Vec3, hi: Vec3, k: number, h: number): number
 	local extent = hi[k] - lo[k]
-	if extent <= 0 then
+	if extent <= CELL_EPS then
 		return 0
 	end
-	return max(Geo.OVERLAP_N_MIN, min(Geo.OVERLAP_N_MAX, ceil(extent / h)))
+	return max(Geo.OVERLAP_N_MIN, min(Geo.OVERLAP_N_MAX, ceil(extent / h - CELL_EPS)))
 end
 
 -- Midpoint sampling of V(p ∩ ∪ H) and its first moment over the box, at spacing h.
@@ -341,7 +356,7 @@ function MassProps.ownership(parts: { Prepared }, kept: { boolean }, rankOf: { [
 		order[i] = parts[i]
 	end
 	-- a total order: kept parts, then slot rank, then the measure's rank
-	local ranked = Sampling.measureRanked(parts)
+	local ranked = Sampling.measureRanked(parts, kept)
 	table.sort(order, function(a: Prepared, b: Prepared): boolean
 		local keptA, keptB = kept[a.index], kept[b.index]
 		if keptA ~= keptB then
@@ -365,10 +380,18 @@ function MassProps.ownership(parts: { Prepared }, kept: { boolean }, rankOf: { [
 		local H: { Prepared } = {}
 		for s = 1, r - 1 do
 			local q = order[s]
-			if aabbOverlap(p, q, 0) then
+			if aabbOverlap(p, q, -OVERLAP_TOL) then
 				work(UNITS_PER_OVERLAP_TEST)
 				if (Gjk.within(p, q, OVERLAP_TOL)) then
-					table.insert(H, q)
+					-- an exact copy of a part already above adds nothing to the union, so a Ctrl+D copy left in place
+					-- changes no part's count of higher parts, its overlap box or the cleaned parts' budget
+					local again = false
+					for t = 1, #H do
+						again = again or Shapes.sameSolid(q, H[t])
+					end
+					if not again then
+						table.insert(H, q)
+					end
 				end
 			end
 		end

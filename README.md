@@ -114,17 +114,40 @@ Build checklist (SPEC §1.4):
 
 ## Status
 
-**Build phase.** M0 (toolchain, project files, runner, test library, verify, T-META-01…08 on stubs) is built. M1,
-the data contracts (SPEC §18), is built: `Definitions/*` with `Manifest` and `Validate`, `Util/Quantize`,
+**Build phase.** M0 (toolchain, project files, runner, test library, verify, T-META-01…08 on stubs) is built. M1, the
+data contracts (SPEC §18), is built: `Definitions/*` with `Manifest` and `Validate`, `Util/Quantize`,
 `Blueprint/{Schema, Canonical, Quat, Names, Views}`, and the fixtures F1–F5 and A01–A24. T-DEF, T-UTIL,
-T-BP-01…05/12/13, T-UD-01 and T-BAL-01/02 pass. M2, the geometry core, is built and passes its Lune exit tests:
-T-PHY, T-VAL and T-BP-11/14, with `lune run scripts/verify` green. Its Enclosed verdict is exact on a polyhedral model of
-each part, capped at `VERDICT_WORK_MAX` (SPEC §4.4, E-S2.12). S-PAR-01 (`tests/studio/e2e/S-PAR-01.luau`), engine
-parity of the five shapes, passed in 3 fresh Play sessions of the test place (SPEC §14.10) on 2026-11-14. M3,
-difficulty, is built: its Lune exit tests T-EDG-01 and T-DIF-01…13 pass, with S2's §5 table blessed for every fixture
-from `Analyze.run` (SPEC §5.5, T-DIF-12), and `lune run scripts/verify` is green with 749 tests. T-PERF-01's timings
-need a quiet machine (SPEC §14.11): the slowest valid design takes about 57 ms against the 60 ms guard, and under this
+T-BP-01…05/12/13, T-UD-01 and T-BAL-01/02 pass. M2, the geometry core, is built and passes its Lune exit tests: T-PHY,
+T-VAL and T-BP-11/14, with `lune run scripts/verify` green. Its Enclosed verdict is exact on a polyhedral model of each
+part, capped at `VERDICT_WORK_MAX` (SPEC §4.4, E-S2.12). S-PAR-01 (`tests/studio/e2e/S-PAR-01.luau`), engine parity of
+the five shapes, passed in 3 fresh Play sessions of the test place (SPEC §14.10) on 2026-11-14. M3, difficulty, is
+built: its Lune exit tests T-EDG-01 and T-DIF-01…13 pass, with S2's §5 table blessed for every fixture from
+`Analyze.run` (SPEC §5.5, T-DIF-12), and `lune run scripts/verify` was green with 749 tests. T-PERF-01's timings need a
+quiet machine (SPEC §14.11): the slowest valid design takes about 57 ms against the 60 ms guard, and under this
 machine's ordinary load it fails on timing alone. Its open design calls are SPEC §17.1 O7, O10 and O11, which asks the
-structural question, whether to measure the solid itself (`docs/build/M3-notes.md`). S-PAR-02
-(`tests/studio/e2e/S-PAR-02.luau`), the first Lune = Studio Server = Studio Client digest of `Analyze.run`, M3's Studio
-exit (SPEC §18), passed in 3 fresh Play sessions of the test place on 2026-11-17, both data models in each.
+structural question, whether to measure the solid itself (`docs/build/M3-notes.md`), and O12 since the shift fix.
+S-PAR-02 (`tests/studio/e2e/S-PAR-02.luau`), the first Lune = Studio Server = Studio Client digest of `Analyze.run`,
+M3's Studio exit (SPEC §18), passed in 3 fresh Play sessions of the test place on 2026-11-17, both data models in each.
+After M3, the whole-design shift fix (SPEC §17.1 O11 (j), E-S2.14) is built in the working tree, not yet committed: both
+ranks count a part's height in `RANK_Q`, the verdict's reads where a part stands from the world's centre planes again,
+as at M3's commit, and the measure's places each kept part across from the centre of the kept parts it ties with and a
+hidden part from the centre of the kept parts, after its material, so that no hidden part, part id or whole-design move
+chooses which of two hidden parts owns their overlap, and with it the mass and balance shown (a mirror image only for
+twins of one material exactly about that centre, or for two parts at one place that their turn or a CornerWedge's size
+orders, as at M3's commit; its rounds 3 and 4, after review rounds 1 to 3), an exact copy of a part already among
+another part's higher parts is not counted there again (its round 5), so where the design stays valid, of a part and its
+Ctrl+D copy left in place the one that comes later in SPEC §4.3's priority adds nothing: a copy that comes after its
+original changes nothing measured, and one that comes before it takes its original's place, as its original given the
+copy's slot and material would (its round 6, after review round 5, changed only text and that rule's test, and its
+rounds 7 to 10, after review rounds 6 to 9, only text). A hidden part can still change how another hidden part's overlap
+is measured, which moves the mass and balance shown by a sampling difference and never G, as at M3's commit (SPEC §4.3).
+Its five numeric guards leave each boundary of a moved design's rounding at a value only typing reaches, so a sword
+moved whole along Y or Z plays every step the same, to the bit, on every fixture and generated or plausible design
+measured; near copies of a part that such a move carries across the centre plane can still swap which copy the verdict
+keeps, as at M3's commit (SPEC §17.1 O11 (j)). `lune run scripts/verify` is green with its 776 tests on a quiet machine
+(at its round 10, 10–36 % busy, median 14 %); its timings need one (SPEC §14.11): under this machine's ordinary load
+T-PERF-01 fails, and at 37–94 % busy one case's 2 s budget too. S-PAR-02's digest moved (Joints on 11 fixtures, C04's
+and C11's owned volumes), so it ran again in Studio before the commit: it passed 3 fresh Play sessions on round 5's code
+on 2026-11-19, and rounds 6 to 10 change none of the files it reads. The fix brings three design calls: O11 (j), those
+near copies, O12, a sword moved along X reads as moved, its symmetry and edge standing on the plane x = 0, and O11 (l),
+a mirror image can read otherwise than its original.

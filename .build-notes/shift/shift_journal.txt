@@ -259,3 +259,285 @@ MIRROR_GUARD; pin_guards_15.diff (1.5x pins) makes it true. Minors: pin_quantxz.
 Lead's provisional ruling: neither major is the verdict's near-copy tie, so the convergence rule does not trigger:
 fix round 4 = repair (B) + the three pin diffs + text, then a short re-review. Waiting for V1 (shift workflow) first.
 Paused for the usage limit at 20:51: shift workflow (V1, V2-A) and the M4 build stopped; resume both from their NOTES.md.
+
+[01:35 2026-11-19] RULING on review round 3 (shift_v1_r3.json, shift_v2a_r3.json = V2's own instance, shift_v2_r3.json =
+the restarted copy; V2's two instances shared shift-v2-3 and agree). Louis moved .build-notes into the repo and committed
+it (078df1c, on top of f7ac37d); every path below is the repo's .build-notes.
+All three agree: the verdict now ranks exactly as at f7ac37d (height in RANK_Q); hidden duplicates, near copies, mirror
+images, ids and Y/Z moves hold; the residual swaps f7ac37d's cases. So the convergence rule does not trigger: no major is
+the verdict's near-copy tie. Two majors stand, both small:
+ A. The MEASURE's ties group cleaned parts with cleaned parts (acrossTies tests kept[q] == kept[p]), and
+    MassProps.ownership orders cleaned parts by that rank: a hidden part (a Ctrl+D copy, a buried speck) decides which
+    of two hidden overlapping parts owns the overlap, so the mass and balance shown move (F2 sealed box: -0.000135 kg,
+    balance -0.000236; V1's near copies -2.0e-4 kg). A regression since round 2; f7ac37d unchanged.
+    DECISION: V2's repair (B), shift-v2-3/out/fix_cleaned_noplace.diff: a cleaned part gets no place in the measure's
+    rank, and a kept part's tie centre is taken over kept parts only. Among tied cleaned parts the material, then the
+    index, decides; that split moves no mass, COM or balance (same density, same region), only per-part ownedVolume,
+    which nothing shows. Name it in §4.3 as the one place an id decides, with that reason. (B) over V1's (A, world
+    places for cleaned parts) because (B) is also invariant under whole-design moves; both are byte for byte round 3 on
+    every corpus. Pin: shift-v2-3/out/pin_hidden_ownership.diff.
+ B. §14.6 / E-S2.14 / M3-notes say each guard is pinned between its value and twice it; false for CELL_EPS,
+    CONTACT_REACH and MIRROR_GUARD. DECISION: adopt shift-v2-3/out/pin_guards_15.diff (1.5x pins), so the sentence
+    is true.
+Minors taken: pin_quantxz.diff (x and z not rounded); V1's sub-1e-9 rank pins (its var/fw); the text minors (the
+near-copy class at other figures, 'in count, not case for case', Joints and owned volumes with the kept flags, mirror
+images line for line but X02's), and the plain-words file.
+--quick: V2 measured 30.5-30.7 s at 4-33 % load for both round 2 and round 3, over §14.1's 30 s. Fixer Y measures it
+quiet (the machine is at 12 % tonight) and, past 30 s quiet, moves the heaviest fast cases the shift fix added to t.slow
+as §14.1's rule says, naming each. (M4's handoff raises the gate to 35 s later; not in this commit.)
+Round 4 = fixer Y (code, pins, text in one), then V1 and V2 on round 4 (snapshot before it: scratch shift-r3), then the
+minors. After it: the lead's quiet verify, S-PAR-02 in Studio (3 sessions), the commit (with .build-notes changes).
+
+[06:45 2026-11-19] Round 4 results so far (the usage limit cut the workflow at about 04:12; resumed 06:35 as task
+wuoll8e39, same run wf_7320c322-bea). Fixer Y: done, verify green (775 pass, 12-51 % load); report in shift_fixer_y.json.
+Y deviated from Y1 with measurements: V2's repair (B) as given let ids move the mass of sampled overlaps (2.05e-4 kg on a
+Ctrl+D build of two Dust Balls) and let a Z mirror move the mass of the editor's mirror copies (1.4e-6 kg); Y's form puts
+the material first, then each cleaned part's place from the KEPT parts' centre, before the turn; byte for byte round 3
+on 37,725 designs and on the mirror images. Accepted (it is (B)'s intent without the two regressions Y measured).
+V1: pass = false (shift_v1_r4.json). The rule holds. Two majors, both about what the text claims:
+ A. A hidden part still moves the mass and balance shown (never G) by changing how ANOTHER hidden part's overlap is
+    measured: it joins that part's higher set H (exact clipping -> sampling, or past MAX_EXACT), grows the sampled box,
+    and draws on the cleaned parts' shared N_OVERLAP_WORK. M2's class (f7ac37d has its own cases), but round 4's text
+    denies it, and a Ctrl+D copy left in place moves plausible wrapRings|C09|n4 (#8871) by +5.64 g where f7ac37d does
+    not. V1's Fix A: leave an exact copy (Shapes.sameSolid) out of H; 0 corpus change, cost x1.0034, closes every
+    Ctrl+D case (12,217 copies). V2's notes (cut off at step 28) found the class's largest: a filled sealed box plus a
+    Ball buried in the pommel moves the filler's owned volume 0.0118 -> 0.0172 and the mass by +42 g of 1.32 kg.
+ B. Text: 'no turn a mirror image rewrites decides' and the 'only' in §4.4/README are false for parts at one place
+    ordered by their turn (crossed Dust Cylinders: 1.4e-5 kg; as on f7ac37d).
+ Minors: 10 behaviour-changing mutants survive; pins tried for each (shift-v1-4/out/pins_round4.diff).
+Where this matters (checked in SPEC §8): mass feeds Damage through F_mass and the balance point feeds the Balance stat,
+but 'Stats never feed Q or rarity' (§8 header) and T in Q sums kept parts only. So hidden parts never move G, a tier, Q
+or rarity; they can nudge two shown stats by sampling error, which a player can tune as freely with a visible part.
+PRELIMINARY ruling, pending V2's report: take Fix A and its pin, V1's pins, V2's pins; correct the text (§4.3-§4.5,
+§5.6, §8.1's inputs if needed, §17.2's hidden-parts row, README, MassProps' header) to say hidden parts move the mass and
+balance only by what they own and by how they have another hidden part's overlap measured, with the figures, and that
+G, tiers, Q and rarity never move. An engineering residual on shown stats, not a design call: no decision mark.
+Round 5 = one fixer, then V1 and V2 with a convergence severity (majors: Fix A not byte for byte, a false sentence, a
+test that cannot fail, determinism, crash or cost; new classes in M2's hidden-overlap measurement are minor, named).
+
+[07:05 2026-11-19] RULING on review round 4 (shift_v1_r4.json, shift_v2_r4.json; V2 resumed from its notes at 06:35
+and finished 06:52). Both fail round 4 on the same two majors, both about what the text claims; the code holds: round 4
+reads round 3's every output byte for byte on 37,725 designs and their mirror images, hidden copies, ids and moves no
+longer choose a hidden overlap's owner, goldens and the parity digest are unchanged, verify from a clean copy is green
+(775 pass, 4-35 % load), T-PERF-01 alone passes 5 of 5 with no other Lune (57.2-59.1 ms), cost is noise.
+ A. Hidden parts move the mass and balance shown through how another hidden part's overlap is measured (higher sets,
+    exact clipping vs sampling, the cleaned parts' one shared spacing hCleaned): +42 g of 1.32 kg on V2's sealed box
+    with a Ball buried in the pommel (a narrow band of filler sizes, 0.256-0.264), +5.6 g on plausible #8871 by a
+    Ctrl+D copy (f7ac37d: 0 on that design; f7ac37d has its own, pommelInBlock|C09). Rare on real designs: 0 of 824
+    hidden exact copies, 0 of 1,011 buried Dust Balls, 5 of 12,217 Ctrl+D copies.
+    DECISION: take V1's fix A (an exact copy, Shapes.sameSolid, of a part already in H is not added to H): the union is
+    unchanged, so it changes only the measuring; V1 measured no corpus change, x1.0034, and every Ctrl+D copy closed
+    (the regression against f7ac37d on #8871 with it). Do NOT take a per-job cleaned budget (V2's F1 moves 757 plausible
+    masses by up to 54 g). The budget channel stays as an engineering residual of M2's sampled measure, named in text
+    with its figures: G, every tier, Q and rarity never move (§8: stats never feed Q or rarity; T sums kept parts only);
+    the mass and the balance point shown move, and with them the Damage and Balance stats (§8.2), by a measuring
+    difference a visible part could make as freely. No decision mark: not a design call.
+ B. Text: a turn as given, which a mirror image rewrites, decides between parts that stand at one place (a Dust Cylinder
+    and its Ctrl+D copy turned: 2.4e-5 kg in either image; kept crossed Cylinders 1.4e-5), as at f7ac37d. DECISION: V2's
+    text (out/textfix_all_r4.diff) merged with V1's wording, every 'only' list corrected.
+Minors taken: V2's pins (pin_v2_r4.diff: the Iron box + copy case, the ids pin's Z image, the mirror pin's X image) and
+V1's (pins_round4.diff: measureRanked with no part kept, the kept/cleaned split, kept twins of two materials; CELL_EPS
+from below at 5e-10; CLIP_EPS 1.3e-12 / 7e-13), merged without duplicates, plus fix A's own Ctrl+D pin; V2's §4.4 rank
+wording ('after the kept ones of their volume and height'); --quick: re-time quiet and move heaviest fast cases to
+t.slow until it reads 29 s or less quiet (the margin the noise needs), each named; the L1 row of §14.1 keeps its rule
+and today's figures only, its timing history moving to M3-notes.
+Snapshot before round 5: scratch shift-r4\repo (tar of the working tree without .git, docs.rar and .build-notes;
+plain words in shift-r4\plain-words). Round 5 = fixer Z, then V1 and V2 with a convergence severity: majors only for
+fix A moving any corpus value, golden or the digest; a false sentence in what the shift fix wrote; a pin that passes on
+its mutant; a regression round 5 brings against round 4 or f7ac37d for an editor-reachable input; determinism, crash or
+cost. New members of the named classes (M2's hidden-overlap measuring, near copies, O10, O11, O12) are minor.
+After it: the lead's quiet verify, S-PAR-02 in Studio (3 sessions), the commit (with the .build-notes changes).
+
+[2026-11-19 09:15] RULING on review round 5 (reports shift_fixer_z.json, shift_v1_r5.json, shift_v2_r5.json)
+The code holds and is FINAL. Fix A reads round 4 byte for byte on 37,725 designs and their mirror images. No Ctrl+D
+copy left in place moves anything. The 13 named mutants are killed. Fixer Z's quiet verify was green (07:55-08:00,
+776 pass, T-PERF-01 passed). --quick reads 27.8-28.4 s quiet, and the cost is noise.
+Both reviewers fail round 5 on text only: false sentences round 5 wrote.
+ 1. "An exact copy joins no higher set" holds only in its original's slot. Relabelled into a slot that outranks the
+    original's, the copy joins the higher sets its original is below, as the original relabelled would (+2.4 g on V1's
+    box; the same on round 4 and f7ac37d).
+ 2. V1's speck figures (+1.2e-3, +2.6e-3 kg) are placed in V2's box. They were measured in V1's own box (hsteer2;
+    they hold at 0.02, the 0.015 specks being under MIN_DIM). In V2's box a speck moves the mass only by what it owns.
+ 3. f7ac37d's Ctrl+D figure covers half the sweep: 38 copies on 19 designs, up to 6.9 g.
+ 4. The filler band is about 0.2555-0.2655 (V1's band.luau; V2's 0.001 grid agrees), not 0.256-0.264.
+ 5. The 1,011 buried Dust Balls move no OTHER part's owned volume. On 8 of them the Ball owns 8.1e-6, and the mass
+    moves +6.4e-5 kg.
+Minors, all taken:
+ - V1's pin (shift-v1-5\out\pins_round5.diff), which kills 5 more dedupe mutants.
+ - Evidence counts: 22,243 of the 24,221 copies were measured; the 824 copies are up to 3 cleaned parts a design.
+ - The CornerWedge member of the mirror class (§4.4, README, §5.6, the plain words).
+ - Timings fail only under load: nothing to do beyond the lead's quiet verify.
+DECISION: round 6 is text plus that one test, and no code.
+ - To converge, SPEC §4.3 and §17.2 keep only:
+   - the mechanism;
+   - what never moves (G, tiers, Q, rarity) and why;
+   - the exact-copy rule, scoped to the original's slot;
+   - one illustration, the sealed box, scoped to its build;
+   - "rare on real designs (E-S2.14)".
+   No sweep figure and no only/none/nothing claim stays in the SPEC.
+ - E-S2.14, M3-notes and the plain words carry every figure, each with its experiment, its sample, what it compared and
+   who measured it. Merge V1's out\text_round5.diff with V2's out\textfix5.diff, taking the band from V1.
+ - Snapshot shift-r5 first.
+ - Then V1 and V2 judge only the changed sentences and the pin. A major is only: a changed sentence that is false, a
+   merge error, the pin passing on a named mutant, or any code, golden or digest change. Anything else is minor.
+ - S-PAR-02 may run on round 5's code meanwhile, since round 6 changes no source. Then the lead's quiet verify and the
+   commit.
+NOT DONE when the usage limit hit (09:15): the shift-r5 snapshot, round 6's workflow, S-PAR-02, the commit.
+
+[2026-11-19 18:22] S-PAR-02 passed 3 fresh Play sessions, Server and Client, on round 5's code, 18:17-18:21, Project 215
+on Rojo 34873. Each data model reproduced the golden digest: fixtures 136 / 425,675 / 892272501, generated 200 /
+709,366 / 611215233. Studio had round 4's MassProps and Sampling until Louis reconnected the plugin (17:50 listing);
+after that, all 63 synced files equalled the repo's (length and fnv1a32). The record is in spar02_hashes_r5.txt.
+Round 6 may not change any of those files; the lead checks their sha1 against the record before the commit.
+
+[2026-11-19 19:50] RULING on review round 6 (shift_fixer_aa.json, shift_v1_r6.json, shift_v2_r6.json)
+The code and the test are final and right.
+ - src/, the goldens and the digest are round 5's byte for byte, and the 76 S-PAR-02 files are unchanged.
+ - The pin equals V1's and kills all six named mutants.
+ - verify is green (fixer AA, 18:48-18:53, 776), and --quick reads 28.7-29.8 s at about 20 % load.
+Both reviewers fail round 6 on text again: the copy rule's scope and two summaries.
+ 1. "In its original's slot" scopes the rule by slot but not by material. A copy painted a material whose name comes
+    first (Iron before Steel) comes before its hidden original and takes its share, as painting the original would.
+    V1: +2.36e-4 kg on V2's box with a Steel filler; f7ac37d the same.
+ 2. E-S2.14's item (1), "only in its original's slot", is false the other way: a copy in a slot its original's
+    outranks is left out too. V2: S3's filler 18 copied into the Grip or the Pommel moves nothing. The same words also
+    describe the sameSlot mutant in the tests bullet and in M3-notes, a merge error.
+ 3. Two summaries repeat "no Ctrl+D copy left in place changes anything", against the relabel example a few lines on.
+ 4. "The 22,243 keep the design valid" is false: 615 of them are on 105 grille and tiled designs that are invalid
+    without any copy.
+Minors:
+ - §5.6's and §17.1 O11's near-copy none-claims (13,522 cases) become pointers to E-S2.14.
+ - README and the plain words still say S-PAR-02 "runs again"; it has passed.
+ - M3-notes' "right after" becomes "after".
+ - The MassProps comment (V1 #5) overstates the same rule. It waits for M4's merge, since round 7 may not touch src/
+   (S-PAR-02's record).
+ - --quick reads about 29.5 s at about 20 % load: the lead re-times it quiet.
+WHY THIS KEEPS FAILING. Each round restates fix A's consequence as a list of cases: the slot, then the slot and the
+material, then lower slots. Each list misses a case of §4.4's rank. For cleaned parts the rank goes by material, then
+place, then half extents and turn, then slot, then index; kept parts come first. The code's rule is about the rank,
+not about slots or materials.
+DECISION: round 7 states the rule by the rank alone, in one canonical sentence. It is used verbatim (in the plain
+words, faithfully) wherever the copy rule appears, and the measured cases move to E-S2.14 as labelled examples.
+SPEC §4.3: "An exact copy of a part already among another part's higher parts is not counted there again (above). So
+where the design stays valid (§4.2), of a part and its Ctrl+D copy left in place the one that comes later in the
+measure's rank (§4.4) adds nothing: a copy that comes after its original changes nothing measured, and one that comes
+before it takes its original's place, as its original given the copy's slot and material would (E-S2.14 has measured
+examples of both)."
+ - The summaries quote the sweep literally (V1's text); the 22,243 split is V2's.
+ - Every tried minor goes in except the MassProps comment, which waits for M4's merge.
+Round 7's severity, a merge check. A blocker or major is only:
+ (a) a reviewer's round-6 correction missing or applied wrongly;
+ (b) the canonical sentence false against the code or a measurement;
+ (c) two sentences that contradict each other;
+ (d) any change to src/, the goldens, the digest or the 76 S-PAR-02 files.
+Everything else is minor and goes to a list for after the commit. Snapshot: scratch shift-r6 (checked identical).
+After round 7: the lead's quiet verify and --quick re-time, the sha1 check against spar02_hashes_r5.txt, the commit.
+Round 7 launched at 19:44: workflow wf_59f3aa0d-9d6 (task wg2rxn4ng), fixer AB then V1 and V2 merge check.
+
+[2026-11-19 20:55] RULING on review round 7 (wf_59f3aa0d-9d6; reports shift_fixer_ab.json, shift_v1_r7.json,
+shift_v2_r7.json)
+What holds.
+ - (d): src/, tests/, the goldens, the digest and the 76 S-PAR-02 files are unchanged (sha1sum -c: 76 OK, both
+   reviewers). --quick: 720 pass (fixer 27.06 s at 15 %, V1 27.68 s at 13 %, V2 27.69 s at about 10 %).
+ - Every round-6 issue is closed as the ruling said (both reviewers).
+ - Fixer AB departed from my canonical sentence in one phrase, and rightly. I CONFIRM it: "the one that comes later
+   in the priority above (kept parts, then slot rank, then the measure's rank of §4.4)" (§4.3), "in §4.3's priority"
+   elsewhere. My phrase "the measure's rank (§4.4)" was false across slots: on 9 of V1's 28 measured copies and 33 of
+   V2's 717, by up to 2.7 g. AB's phrase holds on all of them, on the tree and on f7ac37d.
+Both reviewers fail the round on the same major, (b) and (c): four case summaries that leave out whether the original
+is kept or hidden. For a kept part the verdict picks which of a part and its copy shows by the slot's NAME (Blade,
+Grip, Guard, Pommel), and §4.3's priority puts kept parts first; for a hidden part the slot's RANK decides.
+ - E-S2.14 l.2330 and the plain words l.678 (both new in round 7): "a copy in a less important slot changes nothing".
+   False for a kept original: F2's kept Guard part copied into the Grip is the one the verdict keeps; the balance goes
+   -0.057 -> -0.157, exactly part 3 relabelled Grip.
+ - The plain words l.651 (round 6): the opposite case, false the same way for a kept Grip part.
+ - SPEC §4.4 l.996 (older than the shift fix; f7ac37d has it): "a copy in a slot whose name comes after its
+   original's is cleaned and changes nothing". False for a hidden part: a hidden Grip filler's copy in the Guard is
+   cleaned yet takes the filler's place (-2.39 g).
+DECISION: no fixer. Both reviewers tried the same words in copies, so the lead merged them (scratch shift-lead-8):
+ - SPEC: V1's text, i.e. "a copy of a kept part in a slot whose name comes after ..." and "... relabelling the part (a
+   hidden part's exact copy: §4.3)", plus V1 minor 5, §4.3's "(an exact copy aside, below)".
+ - E-S2.14: "a hidden part's copy" (both), V1 minor 3 "takes its place", and the two "to the bit" claims bounded (V1
+   minor 4 / V2 minor 2; V2's wording at l.2347: the mass and the owned volumes to the bit, the balance within 5e-16).
+ - Plain words: "of a hidden piece" twice (both), and V2 minor 3's sentence on which of a visible piece and its copy
+   stays visible.
+ Checks: the word diff against shift-r7 is exactly the union of the reviewers' words; rows, pipes and marks are
+ unchanged; no changed line is over 120 columns; no CR or control character. README and M3-notes are unchanged.
+Snapshot of round 7 before the merge: scratch shift-r7 (repo\ and plain-words\), checked identical.
+ROUND 8, two read-only verifiers in parallel:
+ - V1 checks the round-8 diff alone against shift-r7: each changed sentence against the code and the measurements,
+   the merge, nothing else changed, and every "to the bit" claim in the copy-rule passages.
+ - V2 closes the class: every sentence in the five texts that says what a copy changes, or which of a part and its
+   copy shows or counts, is listed and checked against the code and the measurements (V2's 717-case sweep, AB's
+   keptcopy, V1's rank7).
+Severity: a major is only a round-8 change that is false or is not the reviewers' tried words; a sentence about copies
+false against the code or a measurement; two such sentences that contradict each other; any change to src/, tests/,
+the goldens, the digest or the 76 files; rows, pipes, marks, a changed line over 120, CR. Everything else is minor.
+CONVERGENCE RULE: a round-8 major whose tried fix is a scope word or a pointer of the same kind (kept, hidden, §4.3)
+is applied by the lead with the mechanical checks, without another round. Only a fault of another kind reopens one.
+Still waiting for M4's merge (src/ frozen): MassProps.ownership's comment and T-DIF-04's case name overstate the rule
+(fixer AB's open issue).
+Round 8 launched at 20:55: workflow wf_60329df9-ad2 (task wx2hsb0s1), V1 diff check and V2 class sweep in parallel.
+
+[2026-11-19 21:40] RULING on review round 8 (wf_60329df9-ad2; reports shift_v1_r8.json, shift_v2_r8.json)
+What holds.
+ - The round-8 merge is exactly the union of the round-7 reviewers' tried words and nothing else (V1, word diff).
+ - (d): src/, tests/, the goldens and the digest are unchanged, and the 76 files match (both). Layout checks pass.
+ - V2 closed the class: it classed all 531 copy-related sentences of the five texts (scratch shift-v2-8\NOTES.md).
+   The canonical rule holds on 210 new cases on top of round 7's 717, and V1's re-run of copyrule7 reproduces the 717.
+Three majors, each tried by its reviewer with the mechanical checks:
+ 1. V1: E-S2.14 l.2280-2282, round 8's own bound "the balance within 3e-16" fails on V1's fixa build (specks 0.015):
+    +4.44e-16. Fix: 5e-16, the bound the same sentence already uses for S3.
+ 2. V2: SPEC §4.4 l.996-999, "a copy of a kept part ... a hair lower or a hair smaller, is cleaned and changes
+    nothing". Since the shift fix's guard 2 (OVERLAP_TOL 1e-7), such a near copy owns a sliver of its own (F3's blade
+    5e-8 lower: +9.62e-10 kg; F2's guard: +6.3e-8 kg). Every other part's flag and owned volume, and every step, are
+    as built (96 cases). Fix: "changes no other part", as the sentence's own parenthesis says.
+ 3. V2: "a part that encloses another by any margin is what shows" (§4.4 l.1001, §17.1 O8, §17.2's O8 row) is false
+    for a hidden enclosed part (S4's filler: the encloser stays hidden). Fix: "encloses a kept part", which holds on
+    all 36 kept cases.
+DECISION. Major 3 is the round-7 kind, so the convergence rule applies it. Majors 1 and 2 are of another kind (a bound
+and a scope phrase), so by the rule they reopen a round. Round 9 is one narrow verifier. Before it, the lead applied
+(scratch shift-lead-9) the three majors in the reviewers' tried words, plus two tried narrowings: V1's minor "here"
+(E-S2.14's material example is to the bit only on the builds it lists) and V2's minor 5 (the plain words drop
+"exactly": the balance differs in its last bits). Snapshot of round 8: scratch shift-r8, checked identical.
+Round 9's severity: a changed sentence false against the code or a measurement; a merge error; anything else changed
+(src/, tests/, the goldens, the digest, the 76 files, any other text); layout. A fault in one of the two minor edits
+reverts that edit and nothing more. Everything else is minor, for after the commit.
+Minors for after the commit:
+ - one reading for "no hidden part chooses who owns another hidden part's overlap" in §4.3 (with round 8's aside),
+   §4.4 l.1142, §17.2 l.4942 and README l.134-135 (V1 r8, V2 r8 minor 4): the aside names only exact copies, a near
+   copy does the same, and wording by the order ("through its own place") fits all four;
+ - §4.4's second clause is about a copy of one volume (V2 minor 3);
+ - plain words l.687: "and in one slot iron before steel" (V2 minor 6);
+ - the T-DIF-04/05 summaries say "plain duplicates" (plain words l.274, evidence l.3822; V2 minor 7);
+ - with M4's merge: MassProps.ownership's comment and T-DIF-04's case name.
+After round 9: the lead's quiet verify and --quick re-time, the sha1 check, the commit.
+Round 9 launched at 21:34: workflow wf_10f166c6-50e (task wvm9btmyg), one checker on the seven edits.
+[2026-11-19 21:36] Usage limit: the lead stopped round 9's checker (task wvm9btmyg, run wf_10f166c6-50e) before it
+reported. (The ruling above, labelled 21:40, was written at about 21:33.) The seven round-9 edits are in the working
+tree; snapshot of round 8: scratch shift-r8. TO RESUME: Workflow with its unchanged script
+(workflows\scripts\shift-fix-round9-wf_10f166c6-50e.js) and resumeFromRunId wf_10f166c6-50e; the checker carries on
+from scratch shift-chk-9\NOTES.md. Then the quiet verify, the sha1 check and the commit (draft message:
+scratch shift-lead-9\commit_msg_draft.txt). Not started: the plain-words decisions document (O4, O7-O14).
+[2026-11-19 23:05] Resumed round 9's checker (task w0p0vs0i5, run wf_10f166c6-50e, from shift-chk-9's notes).
+
+[2026-11-19 23:34] RULING on round 9 (wf_10f166c6-50e; report shift_chk_r9.json)
+Six of the seven edits hold, each measured by the checker: 2-4 (a part enclosing a kept part shows, 2,380 cases;
+F3's Sharpening 0.0645, C08's 0), 5 (the balance -2.22e-16 on S4 and +4.44e-16 on fixa, under 5e-16), 6 (the three
+builds to the bit) and 7 (it only narrows). The diff is exactly the seven edits; src/, tests/, scripts/ and tools/
+are identical to round 8; sha1sum -c 76 OK; the layout checks pass.
+One major, in edit 1: "is cleaned and changes no other part" is false in the sealed-box builds. A near copy of a
+kept wall (turned, described another way, 1e-12 or 5e-8 lower) adds a sampled job that coarsens the hidden parts'
+shared spacing (S4: filler 18 +3.254e-4 owned, the mass +2.561 g) or pushes a filler past MAX_EXACT (S3: -3.148e-4
+kg). This is §4.3's own mechanism for hidden parts. Kept parts and steps never move (7,270 cleaned copies).
+DECISION: the checker's tried scope word, "changes no kept part", applied under the convergence rule. It holds by
+construction (ownership measures the kept parts first, among themselves and with their own budget, and the measure
+and the factors read kept parts only) and on every measured case. Layout checked; snapshot before it: scratch
+shift-r9\SPEC.md.
+THE SHIFT FIX'S TEXT HAS CONVERGED. Minors for after the commit, added to the 21:40 list:
+ - §4.4 "a hair smaller" means inside its original: a Wedge or CornerWedge cut by 1e-4 in every size turns its slope,
+   pokes out and is kept (12 cases in the checker's builds, 92 in the fixtures);
+ - §4.4 "exactly as relabelling the part it encloses would" holds for the verdicts and tiers, but the numbers follow
+   the encloser's own size (C15's crossbar in the Blade: Sharpening 0.3404 against 0.5329, both Hard).
+NEXT: the lead's quiet verify and --quick re-time, the sha1 check, a factual history line for rounds 8 and 9 (README
+Status, E-S2.14's opening, M3-notes, the plain words), then the commit.

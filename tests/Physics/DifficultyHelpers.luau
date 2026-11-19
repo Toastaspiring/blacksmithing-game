@@ -4,7 +4,7 @@
 -- invalid design can be measured too, and each module can be tested on its own; Analyze.run plays the same steps.
 --   measured(core)      the FactorContext and what it came from: the parts, the verdict and the measure
 --                       (Sampling.exposure), ownership, the volume probes, the measure's rank, the contact graph as V3
---                       builds it (boxes within CONTACT_TOL, then Gjk.within), the edge on the parts in the measure's
+--                       builds it (boxes within CONTACT_REACH, then Gjk.within), the edge on the parts in the measure's
 --                       rank order, in the difficulty frame (MassProps.difficultyFrame)
 --   set(m, sel)         a work set's part indices, WorkSet.select's ("All" or a list of slots)
 --   factors(m, sel)     the 8 FactorValues of a work set
@@ -13,8 +13,8 @@
 --   inRange             T-DIF-01 on a step list: every x in [0, 1], every raw finite and ≥ 0, Thinness' and
 --                       Asymmetry's at most 1, the factors in FactorId order; g, m and d on the 1e-4 grid
 --   stepOf, valueOf     a step of a list by id; a factor of a list by id
---   inRankOrder, proto  a prototype blueprint with its parts in the measure's rank order, ids kept (Reference.spec's),
---                       and the prototype's run on it, measureInvalid
+--   inRankOrder, proto  a prototype blueprint with its parts in the verdict's rank order, the kept ones in the
+--                       measure's, ids kept (Reference.spec's), and the prototype's run on it, measureInvalid
 --   analyzeRequires     Physics/Analyze's requires as it names them: the real modules, but where a spec plants its own
 --   plantedPhysics      MassProps, Factors, Difficulty and Analyze anew on planted Definitions (Materials, Steps,
 --                       Tiers, CraftPlans; Drafts.planted), each handed the planted modules below it: P-ORDER, a
@@ -66,7 +66,7 @@ export type Measured = {
 
 local SWORD: any = EquipmentTypes.get("Sword")
 local GEOMETRY = SWORD.geometry
-local CONTACT_TOL = Limits.CONTACT_TOL
+local CONTACT_REACH = Sampling.CONTACT_REACH
 
 local D = {}
 
@@ -80,7 +80,7 @@ local function rankOfSlot(): { [string]: number }
 	return out
 end
 
--- V3's contact graph: parts i and j within CONTACT_TOL.
+-- V3's contact graph: parts i and j within CONTACT_REACH (CONTACT_TOL + 1e-9).
 local function touchingOf(parts: { Prepared }): { { boolean } }
 	local N = #parts
 	local touching: { { boolean } } = table.create(N)
@@ -90,7 +90,7 @@ local function touchingOf(parts: { Prepared }): { { boolean } }
 	for i = 1, N - 1 do
 		for j = i + 1, N do
 			local a, b = parts[i], parts[j]
-			if Shapes.aabbOverlap(a, b, CONTACT_TOL) and (Gjk.within(a, b, CONTACT_TOL)) then
+			if Shapes.aabbOverlap(a, b, CONTACT_REACH) and (Gjk.within(a, b, CONTACT_REACH)) then
 				touching[i][j], touching[j][i] = true, true
 			end
 		end
@@ -108,7 +108,7 @@ function D.measured(core: any): Measured
 	local kept = exposure.kept
 	local owned = MassProps.ownership(parts, kept, rankOfSlot())
 	local probes = Sampling.volumeProbes(parts, kept)
-	local rank, byRank = Sampling.measureRanked(parts)
+	local rank, byRank = Sampling.measureRanked(parts, kept)
 	local keptByRank: { boolean } = table.create(#byRank, false)
 	for r, p in ipairs(byRank) do
 		keptByRank[r] = kept[p.index]
@@ -198,15 +198,32 @@ function D.valueOf(values: { FactorValue }, id: string): FactorValue
 	return A.fail("no factor " .. id)
 end
 
+-- The prototype's lower index keeps a coincident face, in its verdict and in its measure alike, where the build's
+-- verdict ranks from the world's planes and its measure from the kept parts' ties (§4.4): the parts in the verdict's
+-- rank order, the kept ones among their places in the measure's (Reference.spec's).
 function D.inRankOrder(b: any): any
 	local list: { Prepared } = {}
 	for i, part in ipairs(b.parts) do
 		list[i] = Shapes.prepare(part, i)
 	end
-	local _, order = Sampling.measureRanked(list)
+	local kept = Sampling.exposure(list).kept
+	local _, verdictOrder = Sampling.ranked(list)
+	local _, measureOrder = Sampling.measureRanked(list, kept)
+	local keptOrder: { Prepared } = {}
+	for _, p in ipairs(measureOrder) do
+		if kept[p.index] then
+			table.insert(keptOrder, p)
+		end
+	end
 	local parts: { any } = {}
-	for r, p in ipairs(order) do
-		parts[r] = b.parts[p.index]
+	local k = 0
+	for r, p in ipairs(verdictOrder) do
+		local q = p
+		if kept[p.index] then
+			k += 1
+			q = keptOrder[k]
+		end
+		parts[r] = b.parts[q.index]
 	end
 	return { name = b.name, parts = parts }
 end

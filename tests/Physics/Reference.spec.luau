@@ -10,7 +10,9 @@
 -- nearly coplanar with a cut stay right (it moves these cases by about 1e-15). Only two of these cases meet those rules in a
 -- number compared here, P1 and P2, listed below (of the prototype's calibration swords only C10 and C11 clean a Grip part:
 -- two Dust specks, a mirrored pair at the grip's height, which leave its frame to the bit), and a design with cleaned parts
--- counts its measure's samples on the kept parts alone: anything else that moves fails. The
+-- counts its measure's samples on the kept parts alone; and the whole-design shift fix's rule (§4.3, §17.1 O11 (j)), a
+-- part that only touches another face to face is never above it, which C04's volume and seven fixtures' refined cells
+-- meet, listed below too: anything else that moves fails. The
 -- prototype fills its 32 directions from math.cos and math.sin when it loads, so a libm that rounds differently from the one the
 -- literals were generated with would show up here first.
 -- The prototype keeps its own copy of the budgets: a retune of Balance.Geometry (§4.9's fallback, say) ends what this spec
@@ -64,17 +66,44 @@ local ALONG_AXIS: { [string]: boolean } = {
 local WEIGHED: { [string]: boolean } = { mass = true, volume = true, balance = true, balanceFromHand = true, comOffAxis = true }
 local GUARD_LINE: { [string]: boolean } = { guardPos = true, bladeLength = true }
 
+-- A part that only touches another face to face is never above it (§4.3), where the prototype's box test took one in by
+-- the rounding of where it stands (the whole-design shift fix). The jobs such a part made, which sampled no volume, are
+-- gone, so these fixtures' refined cells are fewer than the prototype's; and C04's Cylinder guard, whose sampled box no
+-- longer stretches to its flush neighbour, owns 1e-6 more (0.0075577, nearer the exact 0.0075563 than the prototype's
+-- 0.0075587): what weighs its ownership is the build's own, pinned here; nothing else moves.
+local FLUSH_CELLS: { [string]: number } = { C04 = 1184, C06 = 676, C09 = 4240, F1 = 0, F3 = 490, F5 = 0, P5 = 0 }
+local OWN_OVERLAP: { [string]: { [string]: number } } = {
+	C04 = { mass = 0.41503823546504404, volume = 0.052816758392563883, balance = 0.23880220757492199,
+		balanceFromHand = 0.71443373836522017, comY = 1.4844337383652202 },
+}
+
 -- The prototype's lower index keeps a coincident face, owns an overlap and spends a budget first, where the build's higher rank
--- in the measure does: on the parts in the measure's rank order the two rules are one.
+-- does: the verdict's in its verdict, ranked from the world's planes, and the measure's in its measure, the kept parts placed
+-- from their ties' centre (§4.4). On the parts in the verdict's rank order, the kept ones among their places in the
+-- measure's, the two rules are one.
 local function inRankOrder(b: any): any
 	local list: { any } = {}
 	for i, part in ipairs(b.parts) do
 		list[i] = Shapes.prepare(part, i)
 	end
-	local _, order = Sampling.measureRanked(list)
+	local kept = Sampling.exposure(list).kept
+	local _, verdictOrder = Sampling.ranked(list)
+	local _, measureOrder = Sampling.measureRanked(list, kept)
+	local keptOrder: { any } = {}
+	for _, p in ipairs(measureOrder) do
+		if kept[p.index] then
+			table.insert(keptOrder, p)
+		end
+	end
 	local parts: { any } = {}
-	for r, p in ipairs(order) do
-		parts[r] = b.parts[p.index]
+	local k = 0
+	for r, p in ipairs(verdictOrder) do
+		local q = p
+		if kept[p.index] then
+			k += 1
+			q = keptOrder[k]
+		end
+		parts[r] = b.parts[q.index]
 	end
 	return { name = b.name, parts = parts }
 end
@@ -95,8 +124,10 @@ local function agreeOn(blueprints: { any })
 		local theirs = Proto.run(inRankOrder(b), { measureInvalid = true })
 		local inOrder = Proto.run(b, { measureInvalid = true })
 		local tag = string.sub(what, 1, 2)
+		local fixture = string.match(what, "^%S+") :: string
 		local _, exposure, owned = H.measure(core)
 		local ownVerdict = OWN_VERDICT[tag]
+		local ownOverlap = OWN_OVERLAP[fixture]
 		A.deepEq(mine.cleaned, ownVerdict or byId(theirs.cleaned), what .. " cleaned")
 		A.eq(mine.validation.ok, inOrder.validation.ok, what .. " verdict")
 		A.deepEq(mine.validation.errors, inOrder.validation.errors, what .. " errors")
@@ -120,12 +151,16 @@ local function agreeOn(blueprints: { any })
 		end
 		local p: any, q: any = mine.physics, theirs.physics
 		for _, field in ipairs(PHYSICS) do
-			if not (NO_VOTE[tag] and ALONG_AXIS[field]) and not (ownVerdict and (WEIGHED[field] or GUARD_LINE[field])) then
+			if ownOverlap and ownOverlap[field] then
+				A.near(p[field], ownOverlap[field], 1e-15, what .. " " .. field .. ", the build's own")
+			elseif not (NO_VOTE[tag] and ALONG_AXIS[field]) and not (ownVerdict and (WEIGHED[field] or GUARD_LINE[field])) then
 				A.near(p[field], q[field], ABS, what .. " " .. field)
 			end
 		end
 		for k = 1, 3 do
-			if not ownVerdict then
+			if ownOverlap and k == 2 then
+				A.near(p.com[k], ownOverlap.comY, 1e-15, what .. " COM y, the build's own")
+			elseif not ownVerdict then
 				A.near(p.com[k], q.com[k], ABS, what .. " COM")
 			end
 			A.near(p.gripPoint[k], q.gripPoint[k], ABS, what .. " grip point")
@@ -183,7 +218,11 @@ local function agreeOn(blueprints: { any })
 		if #mine.cleaned == 0 then
 			A.eq(exposure.subSampled, theirs.subSampled, what .. " patches sub-gridded")
 			A.eq(owned.hOverlap, theirs.hOverlap, what .. " hOverlap")
-			A.eq(owned.refinedCells, theirs.refinedCells, what .. " refined cells")
+			local flush = FLUSH_CELLS[fixture]
+			if flush then
+				A.truthy(theirs.refinedCells > flush, what .. " the prototype samples a flush part's job too")
+			end
+			A.eq(owned.refinedCells, flush or theirs.refinedCells, what .. " refined cells")
 		end
 		-- SurfaceComplexity (§5.2, M3) reads exposedKept over the owned volume, on a step's work set
 		for _, step in ipairs(if ownVerdict then {} else theirs.steps or {}) do
@@ -196,7 +235,17 @@ local function agreeOn(blueprints: { any })
 						volume += owned.ownedVolume[i]
 					end
 					local c = Num.cbrt(volume)
-					A.near(area / (6 * c * c), factor.raw, ABS, what .. " " .. step.step .. " surface complexity")
+					local want = factor.raw
+					if ownOverlap then -- the build's own ownership: its own step's factor
+						for _, s in ipairs(mine.steps or {}) do
+							for _, f in ipairs(if s.step == step.step then s.factors else {}) do
+								if f.factor == "SurfaceComplexity" then
+									want = f.raw
+								end
+							end
+						end
+					end
+					A.near(area / (6 * c * c), want, ABS, what .. " " .. step.step .. " surface complexity")
 				end
 			end
 		end

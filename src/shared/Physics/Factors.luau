@@ -65,8 +65,9 @@
 -- Asymmetry, about the fixed plane x = 0. Each part's own volume samples, ASYM_N_MIN along a local axis with
 -- |axis·X| ≥ ASYM_AXIS_X (N_MIN_AXIS otherwise), at H_VOL × the first H_LADDER factor that keeps
 -- Σ min(samples, N_MAX_PART) × (1 + mirror candidates + higher parts in the set) within ASYM_WORK. Its mirror
--- candidates are the set's parts whose box meets its mirrored box widened by ASYM_TOL + ASYM_RAMP. An owned sample s
--- counts c = clamp01((ASYM_TOL + ASYM_RAMP − d)/ASYM_RAMP), d = min over them of sd_q(−s_x, s_y, s_z);
+-- candidates are the set's parts whose box meets its mirrored box widened by ASYM_TOL + ASYM_RAMP + MIRROR_GUARD (one
+-- that far away counts in the estimate however a whole-design move rounds the gap; its samples read it as 0). An owned
+-- sample s counts c = clamp01((ASYM_TOL + ASYM_RAMP − d)/ASYM_RAMP), d = min over them of sd_q(−s_x, s_y, s_z);
 -- Asymmetry = 1 − Σw·c/Σw.
 --
 -- Work (spend; one unit ≈ one shape query): per Thinness probe taken, its part's higher parts (the ownership test) and,
@@ -116,6 +117,7 @@ local TAU_FLOOR = 1e-6 -- numeric guard, not a tunable: σ = L/max(τ, 1e-6)
 local AXIS_TIE = 1e-9 -- numeric guard, not a tunable (Cover's): components this close tie, so last bits cannot pick
 local GOLDEN = 0.6180339887498949 -- (√5 − 1)/2, a literal: the probe pick's step as a share of a part's walk
 local TIE = 1e-10 -- numeric guard, not a tunable: the other parts grow this much in a union chord (face ties, above)
+local MIRROR_GUARD = 1e-9 -- numeric guard, not a tunable: Asymmetry's mirror candidates' box grows this past its reach
 local WALK_ROW = 64 -- samples a Wedge's or a CornerWedge's walk slots between reports to spend (checkpoints only)
 
 local ORDER: { DT.FactorId } =
@@ -602,14 +604,15 @@ local function asymmetry(ctx: FactorContext, W: { Prepared }, inW: { boolean }, 
 	local nW = #W
 	local higher = ctx.owned.higher
 	local reach = Dif.ASYM_TOL + Dif.ASYM_RAMP
+	local wide = reach + MIRROR_GUARD -- the candidates' box: a part at reach exactly is one, however the gap rounds
 	local mirrors: { { Prepared } }, aboves: { { Prepared } } = table.create(nW), table.create(nW)
 	for k = 1, nW do
 		local p = W[k]
 		local mc: { Prepared } = {}
 		for j = 1, nW do
 			local q = W[j]
-			if q.maxx >= -p.maxx - reach and q.minx <= -p.minx + reach and q.maxy >= p.miny - reach
-				and q.miny <= p.maxy + reach and q.maxz >= p.minz - reach and q.minz <= p.maxz + reach
+			if q.maxx >= -p.maxx - wide and q.minx <= -p.minx + wide and q.maxy >= p.miny - wide
+				and q.miny <= p.maxy + wide and q.maxz >= p.minz - wide and q.minz <= p.maxz + wide
 			then
 				table.insert(mc, q)
 			end

@@ -8,9 +8,11 @@
 --   governing  the set's material with the highest (difficultyTerm, hardness), ties by Materials order; nil on an
 --              empty set
 --   planSteps  the type's enabled CraftPlans steps, in plan order (§4.7: steps holds enabled steps only)
---   step       g = q(Σ w·x), the weights of Definitions/Steps summed in their stored order (FactorId order);
---              m = q(the material's difficultyTerm); d = softOr(m, g); tierRaw over all tiers, tier over the enabled
---              (Definitions/Tiers); terms in the weights' order; the 8 factors copied
+--   step       g = q(Σ w·x), the weights of Definitions/Steps summed in their stored order (FactorId order), each x
+--              on the X_GRID inside the sum, so that a factor's last bits (a whole design moved rounds them anew)
+--              cannot tip g's 1e-4 rounding; m = q(the material's difficultyTerm); d = softOr(m, g); tierRaw over all
+--              tiers, tier over the enabled (Definitions/Tiers); terms in the weights' order, their x as measured; the
+--              8 factors copied
 
 local CraftPlans = require("../Definitions/CraftPlans")
 local DT = require("../Definitions/Types")
@@ -35,6 +37,8 @@ export type StepAnalysis = {
 	terms: { { factor: DT.FactorId, w: number, x: number } }, -- the step's weight list (§5)
 	factors: { FactorValue }, -- all 8, FactorId order, on this step's work set
 }
+
+local X_GRID = 1e9 -- numeric guard, not a tunable: G sums each x rounded to 1/X_GRID (§17.1 O11 (j))
 
 local Difficulty = {}
 
@@ -111,7 +115,7 @@ function Difficulty.step(stepId: DT.StepId, factors: { FactorValue }, material: 
 	for i = 1, #weights do
 		local factor: DT.FactorId, w = weights[i].factor, weights[i].w
 		local x = valueOf(factors, factor, stepId)
-		g += w * x
+		g += w * (math.floor(x * X_GRID + 0.5) / X_GRID)
 		terms[i] = { factor = factor, w = w, x = x }
 	end
 	g = Difficulty.q(g)

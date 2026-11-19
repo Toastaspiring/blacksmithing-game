@@ -136,9 +136,11 @@ and the "I" in this document is the lead too.
   plane z = 0 (the middle of the hitbox's thickness), so moving a whole sword along its thickness can reorder them and
   move mass and the measure. This is the fault I am fixing next (last section).
 - **Rule**: a cleaned part still counts for validation (part counts, staying in the hitbox, connection, V4), for mass
-  and the centre of mass by what it owns (an Enclosed part nothing, a Dust speck its own volume) and for the total
-  length. It never counts for the grip frame, the guard line, reach, the blade's length, cutIndex, any factor or the
-  edge. Before, it counted for the grip frame and the guard line.
+  and the centre of mass by what it owns (what no visible part holds: an Enclosed part inside a visible one nothing, a
+  filler in a sealed cavity its volume, a Dust speck its own volume; it can also change how finely another hidden part's
+  shared space is measured, round 5 of the shift fix, below) and for the total length. It never counts for the grip
+  frame, the guard line, reach, the blade's length, cutIndex, any factor or the edge. Before, it counted for the grip
+  frame and the guard line.
 
 ### §4.5 Mass properties
 
@@ -554,9 +556,10 @@ keeps it under O11 as a decision to confirm, with the default "as built"; you ne
 ## Update: the shift fault is fixed
 
 Written after M3 (2026-11-17), when the fix described in the last section was built and measured, and brought up to date
-on 2026-11-18 after the fix's second and third rounds. It is not committed yet: the Studio check that compares Lune with
-Roblox (S-PAR-02) runs again first, because the fix changed some stored results (below). The SPEC now says all of this
-(§4.3, §4.4, §5, §5.6, §17.1 O11 and O12; the evidence in E-S2.14).
+on 2026-11-18 after the fix's second and third rounds and on 2026-11-19 after its fourth to tenth. It is not committed
+yet: the Studio check that compares Lune with Roblox (S-PAR-02) had to run again first, because the fix changed some
+stored results (below); it passed on round 5's code on 2026-11-19 (3 Play sessions), and rounds 6 to 10 changed none of
+the files it reads. The SPEC now says all of this (§4.3, §4.4, §5, §5.6, §17.1 O11 and O12; the evidence in E-S2.14).
 
 ### What changed
 
@@ -591,12 +594,117 @@ Roblox (S-PAR-02) runs again first, because the fix changed some stored results 
   it again (keeping round 2's height fix), while measuring keeps round 2's order, which counts visible parts only. Now
   none of the hidden-copy tricks changes anything (13,522 tries on those 2,644 swords), mirror images keep the same copy
   as at M3, and round 1's three problems stay fixed.
+- **Round 4** (2026-11-19): the reviewers found that a hidden part could still nudge the weight shown, though never the
+  difficulty. When two hidden pieces overlap each other, one of them counts for the shared space, and the order that
+  decided which one could be moved by a third hidden piece, such as a copy made with Ctrl+D: on a test sword with a
+  closed box filled by an iron and a steel piece, that copy moved the mass by 0.135 grams (out of 1.29 kg) and the
+  balance point slightly, and another build moved it by 0.2 grams. At M3 this could not happen. Now a hidden piece is
+  placed in that order from the middle of the visible parts: between two hidden pieces of the same size and height, the
+  material decides, then where each stands from that middle, which no hidden piece, no part number and no slide of the
+  whole sword can change, and a mirror image only in the rare cases below. The reviewers' own repair left that choice to
+  how each piece is turned, then to the part numbers: a mirror image of the whole sword could then swap a piece and its
+  mirror copy, and the order in which two identical hidden pieces were made could move the mass by 0.2 grams on a small
+  test build, so it was changed. Nothing moved on any test, generated or sample sword. Two rare cases are left: two
+  identical hidden pieces of one material placed exactly symmetrically about the middle of the visible parts swap under
+  a mirror image, which can move the mass by a few hundredths of a gram (0.016 grams on a test build), as such pairs
+  about the centre planes did at M3; and so do two pieces that stand at the same place, turned differently (a piece and
+  a Ctrl+D copy of it rotated where it stands), 0.024 grams on a test build, as at M3 (round 5 corrected this note,
+  which said one). The text was corrected where it said a hidden part never moves the weight, and where it said no joint
+  count changed when a whole sword moves (the three stacked-copy test swords do change it, with the same difficulty). To
+  keep the quick test run under its 30 seconds, the 8 slowest checks this fix had added now run only in the full test
+  run, which still runs before every commit.
+- **Round 5** (2026-11-19): the reviewers found that a hidden piece could still change the weight shown, never the
+  difficulty, in a second way: not by choosing which hidden piece counts for a shared space, but by changing how finely
+  that space is measured. The game measures the space hidden pieces share with one common budget of sample points, each
+  hidden piece against the pieces that overlap it and come before it. A copy made with Ctrl+D and left in place did
+  this: on one sample sword such a copy moved the weight shown by 5.6 grams (of 660 grams), which M3 did not do on that
+  sword (it did on 19 others, by up to 6.9 grams: round 6, below). An exact copy sitting on its original adds nothing to
+  what covers a piece, so it is no longer counted twice: on a sword that stays valid, a copy made with Ctrl+D and left
+  in place changes nothing, unless its slot or material puts it ahead of the original in the game's measuring order;
+  then it counts instead of the original, as if the original had been given that slot or material (rounds 6 and 7,
+  below). Of 22,243 such copies made in their original's slot and material that keep the sword within its piece limits
+  (615 of them on 105 sample swords that are invalid anyway, no visible piece left in their blade), one of every part of
+  every fifth sample sword with a hidden piece (counted from two starting swords; 1,978 more put too many pieces in one
+  slot or in the sword, which makes it invalid), none changes anything now (11 did). The rest stays as at M3, now
+  written down: a hidden piece that adds space of its own to measure, such as a ball buried in the pommel, can make the
+  shared budget coarser for the others; on one test sword with a sealed box filled by one piece, that moved the weight
+  shown by 42 grams of 1,320 and the balance point a little, but only for filler pieces in a narrow band of sizes, and
+  on the sample swords tried it moved no other piece's share (824 hidden copies, 1,011 buried balls; on 8 of those
+  swords the buried ball's own share moves the weight by 0.06 grams: round 6, below). It can change only the weight and
+  the balance point shown, and with them the Damage and Balance stats, never the difficulty, a tier, the quality or the
+  rarity. The text also said a mirror image could swap hidden pieces only in one rare case; it can also swap two pieces
+  standing at the same place turned differently, or two corner wedges there whose sizes are swapped (round 6), as at M3
+  (above). Nothing moved on any test, generated or sample sword, and it costs no measurable time. To keep the quick test
+  run inside its time limit with room to spare, six more slow checks now run only in the full test run, which still runs
+  before every commit: four this fix had added and the two slowest of all. On a quiet computer the quick run now takes
+  about 28 seconds, where round 4 took about 29.5 in the same minutes.
+- **Round 6** (2026-11-19): the reviewers found round 5's game code right and final: on all 37,725 test, generated and
+  sample swords, and on the mirror images of the test swords, 200 generated swords and a third of the sample swords, it
+  gives exactly round 4's results, and none of the Ctrl+D copies they measured, left in place in their original's slot
+  and material, changes anything. But five sentences round 5 wrote said more than the measurements show, so this round
+  changed only the text and one test, no game code. The rules now say only how a hidden piece can still change the
+  weight shown (by changing how finely another hidden piece's shared space is measured), that it never changes the
+  difficulty, a tier, the quality or the rarity and why, the copy rule (as round 7 words it, below), one example (the
+  sealed box above, 42 grams of 1,320) and that it is rare on real swords; every count moved to the evidence file, each
+  with the test that measured it, the swords it tried, what it compared and who ran it. What was corrected, with the
+  measurements behind it. First, a copy of a hidden piece given a more important slot than its original's (the order is
+  blade, guard, grip, pommel) counts again among the pieces that cover others, as relabelling the original
+  would: on the first reviewer's test sword, a sealed box with two filler pieces, such a copy moves the weight shown by
+  2.4 grams of 1,289 and leaves the difficulty alone, as at M3 (his test `relabel`, run again by the fixer on this
+  round's code, on round 4's and on M3's). Second, the first reviewer's buried specks moved the weight shown by 1.2 and
+  2.6 grams in a box of his own, not in the second reviewer's (his tests `hsteer2` and, with specks of the smallest size
+  the editor allows, `hsteer3`); in the second reviewer's box they move it only by their own share, 0.0015 and 0.023
+  grams (`specks6b`, `probe6s`). Third, M3 itself moved the weight with Ctrl+D copies on 19 sample swords, by up to 6.9
+  grams, not on 7 by 0.89 grams, which was half the sample: both reviewers copied every part of every fifth sample sword
+  with a hidden piece, counted from two starting swords, on M3's code (`ctrld`). Fourth, the narrow band of filler sizes
+  in the second reviewer's box is about 0.2555 to 0.2655 stud, not 0.256 to 0.264 (the first reviewer's `band`, between
+  the earlier test's steps; the second reviewer's `probe7b`, every 0.001 stud). Fifth, of 1,011 sample swords given a
+  ball buried in their largest visible block, none had another piece's share changed, but on 8 of them the ball itself
+  counts for 0.06 grams, because its own sample points fall a little short of its volume when the shared budget is
+  coarse (both reviewers, `speckall` and `sweepspeck2`; the fixer's `ballcells` shows the shortfall). Two smaller ones:
+  of the 24,221 Ctrl+D copies, the 22,243 that keep the sword within its piece limits were measured (1,978 put too many
+  pieces in one slot or in the sword; 615 of the 22,243 are on 105 sample swords that are invalid even without the copy,
+  no visible piece being left in their blade), and the 824 hidden copies were of up to three hidden pieces a sword (633
+  sample swords holding 872); and a mirror image also swaps two corner wedges standing at the same place with their
+  sizes swapped, which moved the weight shown by 0.004 grams on a test build of the first reviewer's, as at M3
+  (`cwmirror`, run again by the fixer). The copy rule's test gains the first reviewer's cases: it now catches six
+  deliberately broken versions of that rule, five of which slipped through every test he ran on them before. Nothing in
+  the game changed: every stored result and the Studio check's fingerprint are round 5's.
+- **Round 7** (2026-11-19): the reviewers found round 6's game code and test right and final, and four of its sentences
+  wrong. Round 6 had written the copy rule for one case only (a copy left in its original's slot), and each correction
+  tried added cases but missed one: a copy of a hidden steel piece painted iron counts instead of the original, as
+  repainting the original would (0.24 grams on the second reviewer's box with a steel filler; the first reviewer's
+  `material`), and a copy of a hidden piece given a less important slot changes nothing (the second reviewer's
+  `relabel6`). So the rule is now one sentence, the same everywhere: on a sword that stays valid, a copy made with
+  Ctrl+D and left in place changes nothing, unless its slot or material puts it ahead of the original in the game's
+  measuring order; then it counts instead of the original, as if the original had been given that slot or material. That
+  order puts visible pieces first, then the more important slot (blade, guard, grip, pommel), and only then, between
+  hidden pieces of one size and height, iron before steel. The lead's wording named only that last step; measured, it
+  gave the wrong answer for a copy moved to another slot and repainted (an iron copy of a hidden steel piece in a less
+  important slot changes nothing, though iron comes first; a steel copy of a hidden iron piece in the blade counts
+  instead of it, 2.1 grams on the first reviewer's box: the fixer's `rankslot`), so the sentence names the whole order.
+  Of a visible piece and its copy, the one whose slot's name comes first in the alphabet stays visible, so a guard
+  piece's copy relabelled grip takes the guard piece's place. Also corrected: the summaries now say only what was
+  measured (none of the copies the reviewers made in their original's slot and material changes anything); of the 22,243
+  copies measured, 615 are on 105 sample swords that are invalid even without the copy (the second reviewer's
+  `ctrlvalid`); and the notes now say the Studio check passed on round 5's code (3 Play sessions), which rounds 6 and 7
+  leave as it was. Nothing in the game or its tests changed.
+- **Rounds 8 to 10** (2026-11-19): only words, which I applied from what the reviewers had tried and checked in their
+  copies. Their checks confirmed the one-sentence copy rule on every case measured (717, then 210 more), and found a few
+  sentences that still said more than was measured: four summaries that did not say whether the piece copied is visible
+  or hidden (between a visible piece and its copy the slot's name decides, for a hidden piece the slot's importance); a
+  rounding bound that one test build exceeds by a hair; an almost-copy of a visible piece said to change nothing, when
+  it keeps a sliver of its own weight and can change how finely hidden pieces are measured (2.6 grams of 1,289 on the
+  first reviewer's sealed box), though never a visible piece or the difficulty; and a sentence about a piece wrapped in
+  a slightly larger one, true only when the wrapped piece is visible. Nothing in the game, its tests or the files the
+  Studio check reads changed.
 - **What it means for players**: a sword moved whole up, down, forward or back now plays the same. On all 136 test
   swords, 3,200 generated swords and 33,389 sample swords, each moved 15 ways up, down, forward or back (twice of them
-  at random), no difficulty, tier or joint count changed, and which parts count changed only on the three test swords
-  built with stacked, almost identical blade copies (X01, X01raw, X02), as at M3 and with the same difficulty (the 8
-  sideways moves measured with them are O12's, below). It costs no measurable time. Only a position typed to a billionth
-  of a stud can still land exactly on one of the new boundaries; the SPEC names those cases under O11 (j).
+  at random), no difficulty or tier changed; which parts count, and with it the joint count, changed only on the three
+  test swords built with stacked, almost identical blade copies (X01, X01raw, X02), as at M3 and with the same
+  difficulty (the 8 sideways moves measured with them are O12's, below). It costs no measurable time. Only a position
+  typed to a billionth of a stud can still land exactly on one of the new boundaries; the SPEC names those cases under
+  O11 (j).
 - **What moved on swords that are not moved**: some old readings had themselves been decided by rounding. On the test
   swords, no difficulty or tier moved: only the ornate rapier C04's overlap volume (now closer to the exact value) and
   the joint count of 11 test swords (joints do not count for difficulty in the MVP yet). On the sample swords,
@@ -607,7 +715,8 @@ Roblox (S-PAR-02) runs again first, because the fix changed some stored results 
   keeps its middle copy too, and on C11 a row of six touching guard cubes shares its overlaps differently. On the sample
   swords, 43 moved by at most 0.017 against round 1, none a tier, 35 of them back to their reading from before the fix;
   the 29 tier changes counted from before the fix are the same swords. Round 3 put X02 back as it was at M3 (five of its
-  six copies hidden); C11 keeps round 2's change, and nothing else moved against round 2.
+  six copies hidden); C11 keeps round 2's change, and nothing else moved against round 2. Rounds 4 to 10 moved nothing
+  at all on any test, generated or sample sword.
 - **What remains of moves**: two rare cases already named still move when a sword is moved, as before (a face typed
   exactly 1e-10 stud from a probe line, O11 (h); a part flush with the face of a slanted hidden gap, O11 (k)). An
   invalid sword with no counted grip part measures its reach from the build box's origin. A position typed to a
@@ -631,8 +740,9 @@ Roblox (S-PAR-02) runs again first, because the fix changed some stored results 
   game keeps one of the two: 7,288 cases on 1,091 swords). Slid 0.037 stud backwards, which copy counts changes in 482
   cases and difficulty in 359, by up to 0.51, and 83 swords play another tier; slid sideways (the symmetry reading held,
   O12 aside), difficulty moves in up to 1,103 cases, by up to 0.46, and the tier label changes on 24 swords. M3 itself
-  swapped exactly the same cases and moved difficulty in more of them. On the test swords, C09 with a bevel copied 0.001
-  stud front to back plays Sharpening Hard, and Normal once slid back.
+  swapped exactly the same cases and moved difficulty in more of them, though not always on the same cases (on one
+  sample sword slid back 0.037 stud the fix plays Sharpening Normal where M3 played Hard). On the test swords, C09 with
+  a bevel copied 0.001 stud front to back plays Sharpening Hard, and Normal once slid back.
 - **The question**: keep ordering such parts by their distance from the centre planes, or use another rule?
 - **The options**, each tried in the fix's rounds: (i) the centre planes, as built and as at M3: no hidden part can
   choose the copy and a mirror image keeps it, but sliding the whole sword can; (ii) the sword's grip point (round 1): a

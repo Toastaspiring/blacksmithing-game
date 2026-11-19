@@ -12,7 +12,7 @@
 -- stretches against that bound (a collection can pass it there, §4.9), and P1's and the worst valid designs' totals
 -- against 29 ms, §4.9's 75 ms Studio ceiling ÷ 2.6. Run it alone (--filter Physics/Perf) on a quiet machine: other load
 -- reaches the stretches and the totals first, and a larger heap the stretches (the full suite runs it in path order,
--- after 613 of its 749 cases); a failure under load is re-run alone before it counts, and under this machine's ordinary
+-- after 635 of its 772 cases); a failure under load is re-run alone before it counts, and under this machine's ordinary
 -- load (7–61 % busy) the slowest valid design sits at the 60 ms guard (SPEC §14.11).
 
 local luau = require("@lune/luau")

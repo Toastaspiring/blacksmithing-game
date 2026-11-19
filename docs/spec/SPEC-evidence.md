@@ -14,7 +14,7 @@ and refer to `docs/spec/review/findings-all.md`. Section numbers (§N.M) refer t
 ## Contents
 
 1. [Evidence S1](#evidence-s1) (data model, blueprint data, persistence data): [E-S1.1](#e-s11-canonical-form-idempotency-and-the-renormalization-threshold) · [E-S1.2](#e-s12-rotation-matrix-and-the-instance-round-trip) · [E-S1.3](#e-s13-json-storage-precision) · [E-S1.4](#e-s14-size-budget-sizes2luau--sizes2outtxt) · [E-S1.5](#e-s15-names-namesluau--namesv1outtxt-unchanged-by-the-revision) · [E-S1.6](#e-s16-migration-order-migrateluau--migratev1outtxt) · [E-S1.7](#e-s17-material-rows-phase-2-rows-blurbs-and-rationale) · [E-S1.8](#e-s18-mass-display-check-r4a-22) · [E-S1.9](#e-s19-size-guard-thresholds-and-the-per-key-write-limit)
-2. [Evidence S2](#evidence-s2) (geometry and difficulty): [E-S2.1](#e-s21-shapes-against-the-engine) · [E-S2.2](#e-s22-min_dim--002-and-sensitivity-mindim-checksluau) · [E-S2.3](#e-s23-contact) · [E-S2.4](#e-s24-why-no-global-grid) · [E-S2.5](#e-s25-regression-fixtures-base-f5-reg-checksluau) · [E-S2.6](#e-s26-mirror) · [E-S2.7](#e-s27-grip-independent-difficulty-and-the-two-deviations-adv-variantsluau) · [E-S2.8](#e-s28-performance-and-checkpoints-perf-gapsluau) · [E-S2.9](#e-s29-calibration-and-the-full-fixture-tables) · [E-S2.10](#e-s210-validation-invariance-determinism-val-inv-det) · [E-S2.11](#e-s211-the-enclosed-verdict-against-the-truth-verdict) · [E-S2.12](#e-s212-the-exact-verdict-cover) · [E-S2.13](#e-s213-difficulty-as-built-m3)
+2. [Evidence S2](#evidence-s2) (geometry and difficulty): [E-S2.1](#e-s21-shapes-against-the-engine) · [E-S2.2](#e-s22-min_dim--002-and-sensitivity-mindim-checksluau) · [E-S2.3](#e-s23-contact) · [E-S2.4](#e-s24-why-no-global-grid) · [E-S2.5](#e-s25-regression-fixtures-base-f5-reg-checksluau) · [E-S2.6](#e-s26-mirror) · [E-S2.7](#e-s27-grip-independent-difficulty-and-the-two-deviations-adv-variantsluau) · [E-S2.8](#e-s28-performance-and-checkpoints-perf-gapsluau) · [E-S2.9](#e-s29-calibration-and-the-full-fixture-tables) · [E-S2.10](#e-s210-validation-invariance-determinism-val-inv-det) · [E-S2.11](#e-s211-the-enclosed-verdict-against-the-truth-verdict) · [E-S2.12](#e-s212-the-exact-verdict-cover) · [E-S2.13](#e-s213-difficulty-as-built-m3) · [E-S2.14](#e-s214-a-whole-design-moved-the-shift-fix-after-m3)
 3. [Evidence S3](#evidence-s3) (minigames): [E-S3.1](#e-s31-prng-test-vectors-unchanged-module-cross-checked-bit-for-bit-against-the-python-reference-rng_refpy) · [E-S3.2](#e-s32-final-bot-table-distluau-2000-outfinal_tabletxt) · [E-S3.3](#e-s33-full-parameter-columns-and-resolved-values-paramsluau-goldenluau) · [E-S3.4](#e-s34-timingstrike-golden-values-and-grade-bands-goldenluau) · [E-S3.5](#e-s35-precisiontrace-edge-mapping-golden-values-and-costs-costluau-worstluau-goldenluau) · [E-S3.6](#e-s36-determinism-and-codec-detluau) · [E-S3.7](#e-s37-holdzone-why-strokes-hztuneluau-goldenluau) · [E-S3.8](#e-s38-check-margins-and-cheats-checksluau) · [E-S3.9](#e-s39-tuning-log-multisweepluau-sweepluau-2003000-runs-per-setting)
 4. [Evidence S4](#evidence-s4) (crafting and outcome): [E-S4.1](#e-s41-stat-constants-rationale-ranges-placeholders) · [E-S4.2](#e-s42-fixture-inputs-and-outcomes-s2-live-analysis) · [E-S4.3](#e-s43-golden-outcome-cases-t-cr-02-weights-025--040--035-pass--050) · [E-S4.4](#e-s44-γ-gamma_fit-bold-s3s-code-1000-runs-per-cell-600-for-precisiontrace-same-seeds-at-every-x) · [E-S4.5](#e-s45-properties-and-the-recompute-check) · [E-S4.6](#e-s46-sensitivity-thresholds-055--084--104) · [E-S4.7](#e-s47-grid-search-and-the-full-rarity-table-simluau-tune-table) · [E-S4.8](#e-s48-cap-rule-alternatives-r3-05-designer-default-q10--max)
 5. [Evidence S5](#evidence-s5) (server, networking, persistence lifecycle): [E-S5.1](#e-s51-guard-fuzz-and-cost-guard_fuzzluau-libguardluau) · [E-S5.2](#e-s52-session-machine-scenarios-session_scenariosluau-libsessionmachineluau) · [E-S5.3](#e-s53-timing-model-timing_simluau) · [E-S5.4](#e-s54-analysisqueue-arithmetic) · [E-S5.5](#e-s55-rate-limits-ratelimit_simluau-libratelimitluau) · [E-S5.6](#e-s56-rojo-project-verification) · [E-S5.7](#e-s57-payload-sizes-and-paging-payload_sizeluau-s1s-measured-json-sizes) · [E-S5.8](#e-s58-save-cadence-and-datastore-budgets) · [E-S5.9](#e-s59-telemetry-volume-and-field-combinations) · [E-S5.10](#e-s510-alternatives-considered)
@@ -1911,14 +1911,645 @@ would move and cost (SPEC §17.1 O11 (iii); bullet below; scripts in the session
   before M3), F5 112 (108), P5 236 (222), P1 1,252 (1,248), the same after fix round 1; P5 237 since fix round 2 charges
   its hidden-gap queries, and after fix round 3 F2 100, F5 112, P5 237 and P1 1,252 (fixer G's `ckcount`, V2's).
 - **S-PAR-02's Lune digest** (`tests/Physics/Parity.spec`): the fixtures' group 136 designs (43 of the 149 Adversarial
-  variants pass `Canonical.draft`), 425,658 bytes, fnv1a32 60321529; the generated group 200 designs of `PARITY_SEED`
-  0x5EED0002, 709,366 bytes, 611215233; `parity.bv1.digest.txt` 130 bytes (fix round 2 moved 61 fixtures' and 19
-  generated designs' lines, most in Thinness' last digits, the `TIE` growth of a chord that ends on a slanted face; the
-  groups were 425,752 bytes and 3014135086, 709,377 and 410604535; fix round 1 moved 293 of the 336 designs'
-  lines: fixer A's chords, walk and raster 185, then the kept parts' frame 15 fixtures' physics, 3 of them new (A14,
-  A22c, A25), the groups at 424,595 bytes and 2087286482, 709,434 and 2874446443 after those two, then the lattice 247,
-  103 fixtures and 144 generated designs, all but 15 in their edges' last bits; first built: 424,515 bytes, 945249129,
-  1.46 s; 706,909 bytes, 440098388, 0.94 s). The Studio runs are M3's exit (§14.10, §18).
+  variants pass `Canonical.draft`), 425,675 bytes, fnv1a32 892272501 since the shift fix's round 3 (E-S2.14: X02's
+  copies kept as at M3's commit again; 425,707 bytes and 262377556 after its round 2, C11's owned volumes and X02's kept
+  copy; 425,673 bytes and 1001114566 after its first round, 11 fixtures' Joints and C04's owned volume; 425,658 bytes
+  and 60321529 at M3's commit, `f7ac37d`); the generated group 200 designs of `PARITY_SEED` 0x5EED0002, 709,366 bytes,
+  611215233; `parity.bv1.digest.txt` 131 bytes (131 after the shift fix's round 2, 132 after its first round, 130 at
+  M3's commit; M3's fix round 2 moved 61 fixtures' and 19 generated designs' lines, most in Thinness' last digits, the
+  `TIE` growth of a chord that ends on a slanted face; the groups were 425,752 bytes and 3014135086, 709,377 and
+  410604535; fix round 1 moved 293 of the 336 designs' lines: fixer A's chords, walk and raster 185, then the kept
+  parts' frame 15 fixtures' physics, 3 of them new (A14, A22c, A25), the groups at 424,595 bytes and 2087286482, 709,434
+  and 2874446443 after those two, then the lattice 247, 103 fixtures and 144 generated designs, all but 15 in their
+  edges' last bits; first built: 424,515 bytes, 945249129, 1.46 s; 706,909 bytes, 440098388, 0.94 s). The Studio runs
+  are M3's exit (§14.10, §18).
+
+### E-S2.14 A whole design moved: the shift fix (after M3)
+
+M3's review round 5 found that a whole design moved along Z moves G (SPEC §17.1 O11 (j)), and its fix round 5 traced
+most of it to the measure's rank by \|z\|. A whole-design move cannot be seen on a forged item, so the lead ruled it an
+engineering fault, fixed apart from M3 on its tree (`f7ac37d`). The groundwork (a frame analysis and a census, the build
+notes' `shift_frame.json` and `shift_census.json`) found the moves a player makes and every mechanism; fixer S built the
+census's fix R, its six guards, and measured it on every corpus; fixer T measured the X move (§17.1 O12), the mirror
+image (O11 (l)) and a hidden Grip part against the verdict's rank. Its review round 1 (V1, V2) failed the ranks as first
+built, placed from a grip's point with the height raw, on three majors (below); in the fix's round 2 fixer U placed each
+part across from the centre of the parts it ties with and keyed the height in `RANK_Q`, and fixer V measured this text's
+remaining figures on that tree. Its review round 2 (V1, V2) failed the verdict's ties' centre on two majors (below); in
+the fix's round 3 fixer W put the verdict's rank back on the world's centre planes, as at `f7ac37d`, the height kept in
+`RANK_Q`, and fixer X measured this text's remaining figures on that tree. Its review round 3 (V1, V2) found the verdict
+sound and one major in the measure, which placed a cleaned part among the cleaned parts it tied with (below); in the
+fix's round 4 fixer Y placed a cleaned part from the centre of the kept parts instead, after its material, and measured
+it. Its review round 4 (V1, V2) found that rule sound and two majors in what the text claimed (below); in the fix's
+round 5 fixer Z left an exact copy out of a part's higher parts (Reviewer V1's repair), wrote what a hidden part still
+reaches through the measuring and the turn's place in a mirror image, and measured them. Its review round 5 (V1, V2)
+found that code final and five of round 5's sentences false (below); in the fix's round 6 fixer AA, writing no source,
+cut the SPEC's account of what a hidden part reaches through the measuring to its rule, what it never moves and why and
+one example, moved every figure here, scoped, and took V1's pin of fix A. Its review round 6 (V1, V2) found that code
+and pin final and four of round 6's statements false (below); in the fix's round 7 fixer AB, writing no source and no
+test, stated fix A's rule by §4.3's priority alone, in one sentence wherever it appears, its measured cases here as
+examples. Its review rounds 7 and 8 (V1, V2) found that rule sound and some statements broader than what was measured,
+and round 9's checker one more; in the fix's rounds 8 to 10 the lead applied the reviewers' tried words, which say
+whether a statement is about kept or hidden parts or bound it to what was measured (the build notes'
+`shift/shift_journal.txt`). The numbers are the build's, Lune 0.8.9, `Analyze.run` with `measureInvalid`; each step's
+method, tools and load are in `docs/build/M3-notes.md` (the sections after M3's close-out), the scripts in the session's
+Temp scratch (`shift-frame`, `shift-census`, `shift-fix-s`, `shift-fix-t`, the reviewers' `shift-v1-1` and `shift-v2-1`,
+`shift-fix-u`, `shift-fix-v`, `shift-v1-2`, `shift-v2-2`, `shift-fix-w`, `shift-fix-x`, `shift-v1-3`, `shift-v2-3`,
+`shift-fix-y`, `shift-v1-4`, `shift-v2-4`, `shift-fix-z`, `shift-v1-5`, `shift-v2-5`, `shift-fix-aa`, `shift-v1-6`,
+`shift-v2-6`, `shift-fix-ab`, `shift-v1-7`, `shift-v2-7`, `shift-v1-8`, `shift-v2-8`, `shift-chk-9`), which loses
+week-old files. The corpora: the 136 Parity fixtures (the Adversarial drafts `Canonical.draft` refuses dropped),
+Parity's 200 generated designs, the 500 of each of the six `PROP_BASE_SEED` streams and the 33,389 plausible designs of
+`tests/Physics/PlausibleDesigns`.
+
+- **The moves a player makes.** The editor moves a whole design any distance along X, Y and Z (Ctrl+A, a drag, a nudge
+  or a typed position; snapping is the player's), turns it by any angle and flips it across the fixed planes x = 0 and z
+  = 0 (§11.6–§11.10); nothing re-centres a design before analysis (Canonical's C1–C7 touch a position only to turn −0
+  into +0). A forged item renders from its own bounds (§13.7), so none of these moves can be seen on it; the editor
+  shows them against the hitbox, its centre plane x = 0 and the grid on z = 0 (§11.2). The SPEC promised Y and Z
+  invariance but for named classes, mirror invariance but for stated cases, and ids and order to the bit; an X move and
+  a whole-sword turn are real changes, Asymmetry being read about x = 0 and the raster's columns standing on it.
+- **On `f7ac37d`** (the census: 21 moves, ±0.0013, ±0.037, ±0.3317 where the hitbox allows and each design's room less
+  0.001, along X, Y and Z alone, on every corpus): along Z, G moved on up to 5,125 plausible designs (698 past 0.002, 22
+  a played tier, up to 0.0472, laminates; 0.0013 alone 3,978 and 22); along Y on up to 547 (2 a tier, 0.0363); along X,
+  beyond the x = 0 reads, on up to 6,041 (15 a tier, 0.0666; P5's Hammering Hard → Normal at −0.0013); Joints on up to
+  2,527. Fixer S's random Y/Z moves on every 11th plausible design (3,036): G on 272 and 265 (1 a tier, up to 0.0249).
+  Among the fixtures, a Z move swapped which of X01's, X01raw's and X02's near copies is kept.
+- **The mechanisms**, each switched off alone on a scratch variant: the ranks by \|x\| and \|z\| (the verdict's and the
+  measure's: a move reorders parts of one volume and height, and with them who keeps a shared face, who owns an overlap
+  within a slot and who spends the measure's sub-grid budget first; every Z tier and every X tier beyond x = 0; the
+  verdict's, by \|x\| and \|z\| again since the fix's round 3, moves none of the plausible designs, below);
+  `MassProps.ownership`'s box test at margin 0 before GJK at 1e-9, so that rounding decided whether a part that only
+  touches another is above it, which sets the sampled overlap boxes and the global ladder (almost every Y move; a
+  grille's Guard bars 0.00729 → 0.00245 each, exact 0.00762); the overlap cells, ceil(extent/h), at a whole number of
+  cells and on a flat box (C09 at its room along Z: 11.999999999999998 → 12.000000000000002 cells); GJK's tangency on a
+  round pair, about 4e-8, against `OVERLAP_TOL` 1e-9; Asymmetry's candidate box at exactly its reach (wrap rings 0.05
+  out); contact at exactly `CONTACT_TOL` (Joints alone); and G's 1e-4 rounding tipped by a factor's last bits. Moving
+  every design to a normal position first does not close it (rounding breaks exact ties again: 11 laminates still play
+  another tier), and ranking by z alone breaks the mirror image (a key that orders two parts by z alone and is both
+  shift- and mirror-invariant cannot order them).
+- **The fix, six guards** (§4.2–§4.4, §5.1, §5.2; §16.18): (1) both ranks key a part's height as q(y), q(v) =
+  sign(v)·floor(\|v\|/`RANK_Q` + ½), `RANK_Q` = 1e-9; the measure's keys its place as \|q(c − c̄)\| then q(c − c̄) for x
+  and for z, c̄ the mean of the centres of the kept parts tied with it on volume and height (ranked after the verdicts),
+  summed in blueprint order, itself among them (a cleaned part, after the kept ones, by its material, then by its place
+  from the centre of every kept part: round 4), and the verdict's keys \|x\|, x, \|z\|, z from the world's centre
+  planes, as on `f7ac37d` (round 3; the first round placed both from a ref, the verdict's the point of every Grip part,
+  V4's, the measure's that of the kept Grip parts, and kept the height raw; the second placed both from their ties'
+  centre, the verdict's over every part tied with it on volume, slot and height, hidden ones too); (2) `OVERLAP_TOL`
+  1e-9 → 1e-7 and the box test at −`OVERLAP_TOL`; (3) `CELL_EPS` 1e-9: no cell on an axis 1e-9 thick or less, else
+  ceil(extent/h − 1e-9); (4) Asymmetry's candidate box `MIRROR_GUARD` 1e-9 past its reach; (5) G's sum of each x on the
+  1e-9 grid (`X_GRID`); (6) contact at `CONTACT_TOL` + 1e-9 (`CONTACT_REACH`) in V3 and the contact rows. All keep
+  §4.1's rules: + − × ÷ and floor, numeric loops, no state, every sort a strict total order.
+- **Guard 2's sign**, by measurement: where −`OVERLAP_TOL` and +`OVERLAP_TOL` own differently (10,359 designs, 22,146
+  parts: C04, two generated designs and 10,356 plausible), against an exact reference (inclusion–exclusion up to 10
+  higher polyhedra, 20,121 parts) or one sampled 8 × finer per axis (2,019): −`OVERLAP_TOL` closer on 9,947 designs,
+  +`OVERLAP_TOL` on 271, equal on 141, the summed error 0.391 against 4.873; on the exact references −`OVERLAP_TOL` is
+  exact on 19,501 parts (median error 0, +`OVERLAP_TOL`'s 1.3e-4), the fullers exact (2.90 summed the other way), the
+  grilles 0.29 against 1.60. C04's Cylinder guard owns 0.0075577 (0.0075587 the other way and on `f7ac37d`; the
+  reference 0.0075563). GJK on a Ball tangent to a Cylinder's side stops 1.2e-8 to 2.4e-8 above the gap over 301 moves:
+  within 1e-9 never, within 1e-7 always.
+- **A whole design moved on the tree** (the census's 21 moves plus 2 random Y/Z moves inside the hitbox, every design of
+  every corpus; round 1, 6,205 s on 3 lanes, 3–100 % busy, median 45 %; round 2, 5,192 s on 3 and 4 lanes, 6–97 %,
+  median 51 %; round 3, fixer W's, 11,732 s on 3–4 lanes, 18–100 %, median 77 %, the same on all three but where said):
+  along Y, Z and the random moves no G, d, tier or validity moves on any design, nor a kept flag, and with it the
+  PartCount, Joints, SurfaceComplexity and owned volumes it brings, but, on round 3's tree, X01's, X01raw's and X02's,
+  whose blade copies stand about z = 0 (at ±0.037, the rooms along Z and both random moves X01's and X01raw's blade,
+  between its copies, is cleaned, and at −0.0013 and the first random move X02's copy at z 0.002 is kept as well, G the
+  same every time: X01's Joints 12.2682 → 8.2759 and PartCount 6.1756 → 5.1756 with its blade cleaned, X02's 8.2930 →
+  12.2853 and 5.1756 → 6.1756 with the copy kept; round 3's residual, below), but where a move leaves the hitbox (8,439
+  valid copies, 86 invalid ones; A01 enters it; the census's count before, 64,036 and 413, took its X moves in too) and
+  A22c, which has no kept Grip part, so its reach, guard line and balanceFromHand stand on the world origin and move (no
+  factor). The largest deltas, last-bit rounding: Thinness 4.35e-13 (#10341, F1 with a cylinder rib, +0.037 along Z),
+  every other factor under 3.2e-14 (SurfaceComplexity 3.11e-14 on round 2), owned volumes 1.6e-15; on the fixtures,
+  generated and seed designs Volume 2.13e-14, owned volumes 1.95e-14 and the mass 1.63e-13 (worst valid 7, round 2).
+  Along X, with Asymmetry and EdgeLength held as built, G moves on no design, and every other factor moves by rounding
+  alone: Thinness up to 1.09e-12 (#10328, F1 with a cylinder rib, at the hitbox's X edges), every other under 1.6e-14
+  (fixer V on fixer U's census; the same on fixer W's, fixer X's `xdelta` run on it). Under the editor's snapped moves
+  (k·0.05, each coordinate cleaned to 1e-12, §11.8, so each part moves by up to 5e-13 off the exact move; fixer W's on
+  the fixtures, Parity's 200 and every 7th plausible design, and Reviewer V2's +0.15 and −0.35 along Y and +0.1 and
+  −0.05 along Z on the fixtures, Parity's 200, every 4th plausible design and every 5th of the six seed streams, 27,027
+  moves, run again on round 3's tree by fixer X) no G moves, every factor within 1.5e-11 (SurfaceComplexity 1.43e-11,
+  plausible plateTilt\|F3\|tilt4 poke0.005 moved 0.05 along Z; Thinness 1.05e-11, worst valid 10 moved 0.1 along Z; V2's
+  own sweep reads 1.19e-11 and 1.05e-11 on round 2's tree and on this one), the kept flags only X01's and X01raw's. The
+  named classes a move still rounds anew are unchanged (fixer T, V1's scripts on the tree): F5's tip typed 1e-10 over
+  its blade, 26 of 120 Y moves, Thinness 1.66e-3 and G 0.0007 (O11 (h)); F5's laminate turned 30° with five ribs flush
+  under it, the mean thickness 0.063386 as built and 0.064654 at −0.037 along Z (O11 (k)).
+- **As built against `f7ac37d`** (every corpus dumped, then each guard reverted alone on the designs that moved): the
+  fixtures C04 (owned volume 0.0075587 → 0.0075577, M2's volume 0.0528178 → 0.0528168, SurfaceComplexity 2.4989453 →
+  2.4989769, balance 0.2387999 → 0.2388022) and Joints on 11 (C04 6.6552 → 6.4792, C05, C07, C08, C11, C13, X03, X04b,
+  X04g0.010, X06-0.01, A24: the contact rows), no g, d or tier; Parity's 200 generated designs bit for bit, the seeds'
+  3,000 but DEADBEEF#297's owned volumes (no G); the plausible set G on 9,748 designs (up to 0.0371, a grille), 29 a
+  played tier (25 fullers within 0.0016 of 0.2, 4 grilles) and 9 a raw tier only, Joints on 8,608, validity and the kept
+  flags on none. Of the 11,232 that moved otherwise than in Joints, guard 2's sign alone moved 10,793, the cells 101
+  alone and 149 with it, the measure's rank 123 alone (88 by its quantising alone, ribbed bars whose \|x\| tied within
+  1e-17) and 23 with others, G's grid 3 alone and 10 with guard 2, guards 2 and 3's flat box together 24; the verdict's
+  rank, the hidden-Grip rule, `OVERLAP_TOL`'s value and Asymmetry's candidates moved none alone. With +`OVERLAP_TOL`, G
+  would have moved on 703 plausible designs (2 a tier) and C04 not at all.
+- **The fix's round 2** (fixer U, then fixer V's measurements; the trees `shift-r1`, round 1's, and `f7ac37d`). Review
+  round 1 found three majors in round 1's ranks: twins whose heights differ in the last bit (1.4 + 0.2 beside a typed
+  1.6), ordered by the raw height, swapped under a Y move (857 of 20,676 plausible designs so made, 5 a tier, the same
+  on `f7ac37d`); a hidden Grip speck moved the verdict's point, so chose which near copy of a grip is kept and so the
+  measure's point (P5 with its grip copied 4e-8 along +X and a speck at +X: Hammering 0.2167 Hard → 0.1902 Normal; of
+  every 9th plausible design so built, G on 85, 1 a tier; `f7ac37d` none); and parts whose places round to one `RANK_Q`
+  step fell to the ids (P5's grip and a copy 3e-10 apart, its teeth at ±0.1400000004: 0.2167 or 0.1902 by the ids). A
+  1e-9 move of the grip alone moved G on 13.4 % of every third plausible design (Z 1,274, 8 a tier; X 858, 1). Round 2's
+  ranks, as built (above, (1)), close all four: the twins, 0 of the 20,676 under 4 random Y moves and none of the 24
+  fixtures and 35 generated designs that have twins under 8; the speck chain, G and kept flags on none of 93 fixtures
+  and every 9th plausible design (3,598), and P5 0.2167 in all 28 of fixer U's cases (copies 4e-8 to 3e-10 off, specks
+  at the face or inside, a Grip block buried in the pommel, either side); the ids, P5 the same steps either way; the
+  grip's 1e-9 nudge, along Z none of every third plausible design, along X 13, by Asymmetry's last step alone
+  (1.3e-4–3.9e-4, G up to 0.0002; holding Asymmetry and EdgeLength restores all, O12's plane). The height is the raw
+  q(y), not one placed from the grip (Reviewer V1's form): of the 20,676 designs' 64,037 twin pairs, under 200 free
+  drags a design (12.8 million pair-moves) the raw keys split on 4 (3.1e-7 a pair-move) and the grip-relative on none,
+  under 1.5 million snapped moves neither, and those 4 move no G or kept flag on any tree; each form fails a typed
+  sub-1e-9 case of its own (raw: P5's tooth 7 at 1.4 + 0.2, the design moved a typed 0.2000000005 or 0.6000000005 along
+  Y, Hammering 0.2167 → 0.2117; grip-relative: P5's grip typed at 0.7500000005, 0.2117 as built and 0.2167 at all 18
+  snapped moves), and the grip-relative one keeps a point a hidden part moves. As built against round 1: the fixtures
+  C11, whose guard row of six tied 0.09 cubes now ranks from its centre, x 0.3075 (cube 17 owns both its overlaps,
+  0.00030375 → 0.0003645, cube 15 0.000162 → 0.00010125, no factor past 1e-12), and X02, whose 7 blades of one volume,
+  slot and height rank from their centre, copy 3's z (copy 3 kept, copies 1, 2, 4 and 5 cleaned; PartCount 5.1756 →
+  6.1756, SurfaceComplexity 2.1886 → 2.1580, Joints 8.2930 → 12.2853, on the Blade 2.1756 → 3.1756, 2.1409 → 2.0665,
+  1.5138 → 3.7621; g, d and tiers the same); Parity's 200 and the seeds' 3,000 bit for bit; the plausible set G on 43
+  designs (up to 0.0167, no tier, kept flag, owned volume or validity): 36 C09 with a Grip rod off its axis, whose bevel
+  twins round 1 placed from the rod-moved grip point and now from their own centre on z = 0 (35 read `f7ac37d`'s G
+  again, #9142 0.0002 from it), and 7 fullers whose core plate and two walls tie on volume and height and now rank walls
+  first, the sub-grid budget spent in another order (#24143, Hammering 0.1117 → 0.1284). Against `f7ac37d`: G on 9,713
+  plausible designs (round 1 9,748), 29 a played tier and 9 a raw one, as round 1. What it left, each a residual of O11
+  (j) as it then stood: a part the verdict cleans that ties with visible ones on volume, slot and height still counted
+  in their centre (P5 with its grip copied 4e-8 along +X and an exact copy of the copy kept the copy and cleaned the
+  grip, G the same), and an exact copy of the last-ranked part of each tie group, up to three a design, which pulls that
+  part forward, moved no kept flag, G, factor past 1e-12 or edge on the 17 valid fixtures with such a group and room for
+  it (21 copies), 35 of Parity's 200 (35) and 19,968 plausible designs (43,014 copies; fixer V's `hidden`), but review
+  round 2 built near copies that such a copy steered (the fix's round 3, below); fixer T's Grip block hidden off the
+  grip's axis, tied with nothing, moves nothing on X01, X01raw and X02 (round 1: X01's and X01raw's middle copy cleaned,
+  PartCount 6.1756 → 5.1756, SurfaceComplexity 2.1634 → 2.1954, Joints 12.27 → 8.28; one more of X02's kept) nor on the
+  77 valid fixtures, Parity's 200 and 32,656 plausible designs that take one; heights or places that round to one step
+  of `RANK_Q` tied and fell to the index (P5's grip copies 3e-10 apart: the lower id kept); a tie group's centre is
+  summed in blueprint order, its last bits the order's with three or more tied parts (no id shuffle differs but A17's,
+  below); and each guard's own boundary, now at a value only typing reaches (Reviewer V1's `probe10`, the same on round
+  2's tree): F5's guard lowered exactly `OVERLAP_TOL` onto its grip, 2 of 82 Y and Z moves move its owned volume
+  2.56e-9, the mass 2.01e-8 and the balance 5.54e-9, no G (F3's Cylinder grip so overlapped, last bits alone); F5's
+  guard raised to a gap of exactly `CONTACT_TOL` + 1e-9, valid at 5 of the 82 (invalid as built), where at exactly 0.01
+  it is valid at all 82 (`f7ac37d`: 6 of 82 invalid). Whole-design moves on round 2's tree: above. Snapped moves (k·0.05
+  cleaned, along Y and Z; the fixtures, Parity's 200 and every 7th plausible design) and tiny ones (±1e-12 to ±0.001;
+  the fixtures and Parity's 200): no G or kept flag; validity only by the hitbox. Cost: the tree / round 1 per case, 21
+  rounds in each order alternating in one process, 1–12 % busy, median 1.0097 (0.980–1.033), the tree / `f7ac37d` 1.0026
+  (0.982–1.013); the ranks alone 61–70 µs a run against 31–36 µs, 0.05 % of the slowest design.
+- **The fix's round 3** (fixer W, then fixer X's measurements; the trees `shift-r2`, round 2's, `shift-r1` and
+  `f7ac37d`). Review round 2 found two majors in round 2's verdict, each a regression against `f7ac37d`: its ties'
+  centre counted cleaned parts, so an exact copy (Ctrl+D) of the near copy the verdict cleans moved the centre and chose
+  the copy kept (C09 with its core typed 2.3 long and again 0.001 along +X: Sharpening 0.2110 Hard → 0.1967 Normal;
+  plausible #22338, plate 6 again 0.01 along +Z: Hammering 0.1175 Normal → 0.7000 Hard, cutIndex 0.3971 → 0.6200; of
+  every 25th plausible design given such a copy, 2,644 designs and 12,328 cases, G moved on 1,220 designs, up to 0.5825,
+  and a played tier on 71, in 107 cases; Cover's (d), an exact copy first or last, failed on 0x0C0FFEE1, 0x2468ACE0 and
+  0x600DCAFE, Reviewer V2's; the rest Reviewer V1's), and near copies, twins about their own centre, swapped under the
+  mirror (#1940 with its core again 0.002 along Z: its Z image Sharpening 0.1950 Normal → 0.2099 Hard; Reviewer V2).
+  Every rule for the verdict's near copies tried broke whole-design moves, mirror images or robustness to hidden parts
+  (the lead's analysis, `shift_journal.txt`): the world's planes (`f7ac37d`) keep the last two; a grip's point (round 1)
+  let a hidden Grip speck choose; the box of every part but Dust (Reviewer V2's `vby` and Reviewer V1's `vbox`, review
+  round 1) moved with an Enclosed part poking out of it (a Guard bar 0.001 past P5's guard: P5 with its grip copied
+  4e-8, Hammering 0.2167 → 0.1902) and closed neither the grip's nudge nor the ids' case; the ties' centre (round 2) let
+  a hidden copy choose and the mirror swap; counting an exact copy once (Reviewer V2's `dp`, Reviewer V1's `fixc`) still
+  let a copy 0.0005 beyond the near copy (#1940, 0.2099 Hard) or one halfway between them (C09, 0.1967) choose; the
+  signed place alone (Reviewer V1's `fixa`), which no part moves and no move reorders, is reversed by the mirror (X01's
+  and X01raw's Z images keep the other copy, G the same; Cover's sealed rod, its walls tied in its slots, wall 6
+  0.301878 against its X image's 0.301881). So round 3's verdict keys \|x\|, x, \|z\|, z from the world's planes again,
+  the height kept in `RANK_Q` (above, (1)); the measure keeps round 2's rank, its ties kept parts alone. On round 3's
+  tree (fixer W's runs, `shift-fix-w`; fixer X's, `shift-fix-x`): C09's two constructions (that copy again exactly, or
+  the core again 0.0005 along +X) read 0.2110 Hard, copies 19 and 20 cleaned, as on `f7ac37d` and round 1; #22338
+  0.1175, cutIndex 0.3971, its mass and balance as without the copy; #1940 0.1950 Normal, the balance as without it;
+  Reviewer V1's sweep, 2,644 designs and 13,522 cases, no copy swapped and no G (round 2: 3,307 swaps); Reviewer V2's
+  in-place duplicates (`hsteer`) on the fixtures' 22 pairs, Parity's 59 and every 10th plausible design's 800, none
+  (round 2: 5, 19 and 289, G on 3, 5 and 25, 2 tiers), its copy 0.0005 beyond (`hsteer2`) G on one fixture pair alone,
+  where that copy is kept and so shows, as on `f7ac37d`; Reviewer V1's copy halfway (`nearcopy2`, often kept): every
+  50th plausible design's 3,131 cases swap none and move G on 74 cases on 42 designs, up to 0.0820, a played tier on
+  #25907 (3 cases), `f7ac37d` 75 on the same 42 (round 2: 905 on 304, up to 0.5368); Cover (the whole of
+  `Physics/Cover`) passes on the six `PROP_BASE_SEED`s and 0x600DCAFE, and the whole of `tests/Physics` on the six holds
+  every assertion (fixer X, 3 lanes, 1,095 s, 46–100 % busy, median 76 %), failing only on time: T-PERF-01 on all six,
+  Cover (f) on four (its 'answered at once', or the 2 s a case may take) and the 2 s of Cover (a) on 0x0C0FFEE1 and of
+  T-DIF-01 on 0x5EED0001; the near copies' mirror images (fixer W's `ncmirror` on V1's selection, 98 fixture, 47
+  generated and 2,537 plausible cases, each across x = 0 and z = 0) keep the parts `f7ac37d` keeps in every case, and
+  differ from their originals only where C09's bevels, twins about z = 0, share a face with the copies (49 Z images; C09
+  with a bevel copied 0.001 along Z, Sharpening 0.2247 Hard → 0.1863 Normal), on `f7ac37d` alike; #1940's Z image 0.1950
+  Normal. Review round 1's cases stay closed: P5 0.2167 in every speck and nudge case and the same steps in its id case
+  (the grip and a copy 3e-10 off along X: the one at x 0 kept, whatever their ids), tooth 7 at 1.4 + 0.2 0.2167 and
+  unmoved at 41 Y moves, the twins on none of the 20,676 designs, the grip's 1e-9 nudge along Z on none of every third
+  plausible design and along X on 13, Asymmetry's last step alone; and the twins' typed half step (P5 moved a typed
+  0.2000000005 or 0.6000000005 along Y: Hammering 0.2167 → 0.2117), fixer U's 4 free-drag splits (no G, last bits
+  alone), the guards' typed boundaries (`probe10`: 2 of 82, 5 of 82, all 82) read as on round 2 (fixer X). The residual,
+  round 3's and `f7ac37d`'s (O11 (j)): near copies tied on volume, slot and height whose midpoint a whole design's move
+  along Z or X carries across z = 0 or x = 0 swap who keeps the faces they share, and so the copy the verdict keeps.
+  Fixer W's `ncmoves` (Reviewer V1's selection, a part again 0.001 or 0.005 along X or Z where the verdict keeps one of
+  the two, with room for that one part, every 25th plausible design: 7,288 cases on 1,091 designs; each moved ±0.0013
+  and ±0.037 along X and along Z, on the tree and on `f7ac37d`): the kept flags move on exactly the same cases on both
+  trees, down Z 392 and 482 cases (207 designs), along −X 969 and 1,734 (667), along +X 1 and 60 (1 and 16), along +Z
+  none; G on the tree, along X with Asymmetry and EdgeLength held: down Z 0.0013, 316 cases on 132 designs, 296 past
+  0.002, up to 0.1259 (a bevel on C09), a played tier in 147 cases on 75 designs (`f7ac37d` 1,293 on 202, 483, 0.1253,
+  149 on 77); down Z 0.037, 359 on 135, 329, up to 0.5094 (a laminated hilt), 156 on 83 (1,340 on 205, 527, 0.5094, 157
+  on 83); up Z, none (26 on 3 and 84 on 9: `f7ac37d`'s measure ranked by \|z\|); along −X 0.0013, 563 on 512, 182, up to
+  0.4623 (a fuller), a tier played or raw in 17 cases on 16 designs (2,370 on 516, 393, 0.4626, 28 on 20); along −X
+  0.037, 1,103 on 546, 408, 0.4632, 37 on 24 (3,058 on 546, 627, 0.4626, 48 on 28); along +X 0.037, 33 on 12, up to
+  0.0196, 1 (1,785 on 161, 8 on 2); along +X 0.0013, 1 (1,151 on 106). The fixtures' 98 cases: down Z 0.0013 44 swap (4
+  designs), G on 14 (C09 and X02), up to 0.0384, a played tier on C09 with a bevel copied 0.001 along Z (Sharpening Hard
+  → Normal; `f7ac37d` G 18, 0.0383, the same tiers); along −X 0.0013 G on 4, up to 0.0143, C09's core (`f7ac37d` 10,
+  0.0215). The generated designs' 47: the same on both trees, along −X 3 and 4 cases, up to 0.0052 (Gen 200), along Z
+  none. No design of the census's corpora has a pair a move swaps but X01, X01raw and X02. As built against round 2: X02
+  alone (copies 6–10 cleaned again, PartCount 6.1756 → 5.1756, SurfaceComplexity 2.1580 → 2.1886, Joints 12.2853 →
+  8.2930; g, d and tiers the same); Parity's 200, the six seed streams and all 33,389 plausible designs bit for bit;
+  against `f7ac37d`, round 1's and round 2's drift: C04's and C11's owned volumes (C04's Cylinder guard 0.007558654 →
+  0.007557654, C11's cubes 15 and 17 0.000162 → 0.00010125 and 0.00030375 → 0.0003645), Joints on 11 fixtures,
+  DEADBEEF#297's owned volumes, and on the plausible set G on 9,713 designs, up to 0.0371, 29 a played tier and 9 a raw
+  one; no validity or kept flag anywhere. Mirror images of every corpus read as on round 2, line for line, but X02's,
+  which follow its as-built change (copies 6–10 cleaned again, G the same; Reviewer V2's `mdump`); ids: none but A17
+  differs (14,439 designs). Cost (fixer W, `Analyze.run` alternating in one process, the worst valid designs and P1, 21
+  rounds in each order, 34–71 % busy): the tree / round 2 × 0.9976 over both orders (per case 0.961–1.033), the tree /
+  `f7ac37d` × 1.0043 (0.929–1.081); the ranks alone 81–106 µs a run (round 2 94–121, `f7ac37d` 51–61). Tests: 772 cases,
+  T-PERF-01 the 636th; `--quick` 730 pass and 42 skip, 48.87 and 49.57 s at 40–83 % busy, its cases about 0.1 s over
+  round 2's timed one by one in the same minutes.
+- **The fix's round 4** (fixer Y; the trees `shift-r3`, round 3's, and `f7ac37d`). Review round 3 (V1, V2) found the
+  verdict as on `f7ac37d` and one major in the measure, a regression against `f7ac37d` since round 2: its ties' centre
+  grouped cleaned parts with cleaned parts, and `MassProps.ownership` orders cleaned parts by that rank (after the kept
+  ones and the slots), so a hidden part chose which of two hidden overlapping parts owns their overlap, and with it the
+  mass and the balance shown (no G: cleaned parts enter no factor). Reviewer V2's sealed box on F2's blade (walls 0.02,
+  0.3 across), filled by two fillers 0.18 × 0.26 × 0.26 that overlap 0.1, Iron at −x and Steel at +x, both Enclosed: a
+  Ctrl+D copy of the Steel one pulled the centre to x 0.0133 and the overlap to it, owned 0.012168 / 0.005408 → 0.005408
+  / 0.012168, mass 1.29371984 → 1.29358464 kg, balance 0.387402095 → 0.387165618; Reviewer V1's Dust specks 0.05 on F2's
+  guard face, Iron and Steel 0.03 apart, with a third buried in the guard or the Steel one copied, mass −9.0e-7 kg, and
+  his near copies 0.004 apart in a sealed cavity (`cs2`), −2.03e-4 kg, balance −5.6e-5; `f7ac37d` and round 1 none. Both
+  repairs tried read round 3 byte for byte on every corpus: Reviewer V1's, a cleaned part placed from the world's
+  planes, keeps `f7ac37d`'s swap under a move across a plane (his `cs4`, copies about z = 0 moved 0.01 down Z: −1.95e-4
+  kg); Reviewer V2's, a cleaned part with no place, the material then the index deciding, which the lead chose, lets the
+  ids choose, and that moves the mass where the twins' overlap is sampled in one box with another part's (fixer Y's
+  `idtwins`: two Iron Dust Balls 0.07 on F2's guard face, 0.03 apart along Z, one 0.005 into the face, 1.08372 or
+  1.08351 kg and balance −0.056862 or −0.056872 by the ids, the COM by up to 3.8e-5; 0.03 apart along X, the COM's x by
+  2.4e-6, Reviewer V1's `csids`; Cylinders 4.3e-6; Blocks, clipped exactly, their owned volumes alone). V2's repair as
+  given also left mirror copies to their turn, which a mirror image rewrites, before the material: two Dust Wedges or
+  Blocks 0.07, Iron and Steel, the editor's mirror copies across x = 0 overlapping on F2's guard face, turned 30° about
+  Z or 20° about (1, 1, 1), read their Z image's mass 1.2e-6 to 1.44e-6 kg off (fixer Y's `mirtwins`, on V2's repair and
+  on fixer Y's first form, which replaced the index alone; `f7ac37d` and round 3 to the bit), and on that first form the
+  plausible #8742's and #8776's two Enclosed Iron Wedges at x ±0.02 read their Z images' owned volumes 4.3e-19 apart. So
+  round 4 takes V2's repair's material first and places a cleaned part, in place of its turn and the index, from the
+  centre of every kept part, \|q(x − x̄)\| before q(x − x̄), then z, in `RANK_Q` (the origin with no part kept; the
+  cleaned parts ranked after the kept ones, which every reader takes alone, then by material, place, half extents, turn,
+  slot and index): kept parts alone set that centre and it moves with a whole design, so no hidden part, no id and no
+  move chooses, and a turn decides only between parts that stand together (§4.3, §4.4). As built against round 3, every
+  output of `Analyze.run` reads byte for byte on the 136 fixtures, Parity's 200, the six seed streams and two more
+  (4,000) and all 33,389 plausible designs (dumped at 17 digits; fixer Y's dumps of round 3 equal Reviewer V2's). On the
+  probes (fixer Y's `probes_y` on this tree, round 3, `f7ac37d` and V2's repair as given): every hidden copy and buried
+  part leaves every owned volume, the mass and the balance to the bit, and the twins' ids swapped too, but for the
+  balance's last bit where the swap reorders the parts it sums (2.2e-16); moves along Y and Z (free, snapped, at random)
+  leave the mass to the bit, the owned volumes within 8.7e-18 and the balance within 8.9e-16, and along X the same, G
+  moving by Asymmetry and the edge alone (O12); round 3 moves the owned volumes on every hidden case and the mass on
+  most (up to 2.05e-4 kg), and `f7ac37d` under Z moves (V2's box 4.8e-3 kg, by its old box test; V1's `cs4` 1.95e-4).
+  Mirror images: the probes whose twins differ in material, and `mirtwins`' mirror copies of either material, read their
+  original's to the bit, where round 3 and `f7ac37d` move the mass by up to 2.03e-4 kg (twins about their own centre, or
+  about a plane); twins of one material exactly about the kept parts' centre swap their overlap's owner, the residual
+  §4.3 names (V2's box with two Iron fillers about x = 0, the owned volumes alone, as on `f7ac37d`; F2 with a stud at x
+  0.12 and two Dust Balls 0.07 at x 0.004 and 0.044 about the kept parts' centre, x 0.024, one overlapping the stud:
+  owned 4.45e-5, mass 1.61e-5 kg, balance 8.3e-7, round 3 the same, `f7ac37d` none). The near copies' figures (O11 (j),
+  above) stand: the kept parts own first and the walks read kept parts alone, so no G or kept flag follows the cleaned
+  parts' order (#7517, #7017 and #7661 read Reviewer V2's figures on this tree). Text fixed with it: the near-copy class
+  at other figures, `f7ac37d`'s G "in count, not case for case", the Joints and owned volumes that X01's, X01raw's and
+  X02's kept flags bring, and X02's mirror images (above). Cost, tests and goldens: below.
+- **The fix's round 5** (fixer Z; the trees `shift-r4`, round 4's, and `f7ac37d`). Review round 4 (V1, V2) found round
+  4's rule sound and byte for byte round 3's, and two majors in what its text claimed. (A) A hidden part still moves the
+  mass and the balance shown, never G, by how another hidden part's overlap is measured: above that part it joins its
+  higher set H, which takes the overlap from exact clipping to sampling (a round part, or more than `MAX_EXACT`) or
+  grows its sampled box, and a sampled job of its own draws on the cleaned parts' share of `N_OVERLAP_WORK`, one spacing
+  for every cleaned job. Reviewer V2's sealed box (`probe6b`: F2 with an Iron box on its blade's top, walls 0.04, the
+  cavity 0.24, an Iron filler 0.258 across reaching 0.009 into every wall) and an Iron Ball 0.22 buried in F2's pommel,
+  which owns nothing: the filler's owned volume 0.011797 → 0.017174 (exactly 0.013824), the mass 1.32327 → 1.36558 kg,
+  the balance 0.43976 → 0.50856, G the same, on round 4, round 3 and `f7ac37d` alike, and on `probe7`'s grid (fillers
+  0.242–0.280 every 0.002, Balls 0.10–0.28 every 0.01) with fillers 0.256–0.264 across alone (41.3, 42.3, 7.9, 8.1 and
+  5.2 g; a filler 0.265 with a Ball 0.25, −5.3 g; between the grid's points about 0.2555–0.2655, round 6, below);
+  Reviewer V1's specks in a box of his own (`hsteer2`: walls 0.02, two Guard fillers that overlap, one reaching into a
+  wall; a Blade Dust Ball 0.015 buried in that wall on it, owning 8e-8, +1.18e-3 kg; two Block specks there owning
+  nothing, +1.18e-3 too; with the cleaned parts' share at 39,946 of 40,000, a Dust Ball buried in F2's guard, +2.58e-3;
+  specks 0.015 across, under `MIN_DIM`, which `Canonical` refuses, read the same at 0.02, and in V2's box move the mass
+  by what they own alone, round 6, below). A Ctrl+D copy left in place, an exact copy, so moved it on round 4 where
+  `f7ac37d` did not: plausible #8871 (`wrapRings|C09|n4 extra0.02 gap0.0010`), its guard or either Blade Cylinder again
+  in place, 0.659536 → 0.665178 kg, the balance −0.005931, its fully covered Enclosed core's owned volume +0.000717 (the
+  copy among the core's higher parts, 8 → 9, and the cleaned parts' spacing coarser); of every part of every 5th
+  plausible design with a cleaned part copied in place (V1's `ctrld`), from #1 and from #3, 11 copies on 4 designs past
+  1e-12 and 61 in the last bits (`f7ac37d`, from #1, 14 copies on 7 `pommelInBlock|C09` designs, −0.89 g at most, and
+  73; from #3, 24 on 12, up to −6.9 g, and 73, round 6, below); V1's `S3`, a Pommel filler under three higher parts that
+  a copy of one of them made four, sampled: −3.148e-4 kg. (B) Round 4's text said no turn a mirror image rewrites
+  decides and listed the only parts a mirror image swaps, but parts of one volume, height and place tie on every place
+  key, so their turn as given orders them, and the image rewrites it (V2's `probe4`: two Iron Dust Cylinders 0.07 × 0.05
+  crossed at one point on F2's guard face, one along Y and its Ctrl+D copy along Z, swap their owned volumes, 6.94e-5,
+  in either image, the mass 2.38e-5 kg, the balance 1.25e-6; V1's `mirturn`, two crossed at 30° and 70° about Z, the Z
+  image +1.405e-5 kg; kept, an Iron and a Steel Cylinder crossed in the box's cavity, 1.41e-5 kg, and V1's `mirturnk`,
+  two kept Iron Cylinders 0.4 × 0.1 crossed against F2's guard face, Hammering 0.0324 → 0.0321 in the Z image; round 3
+  and `f7ac37d` the same). The lead took V1's repair for (A) and text for the rest and for (B): an exact copy
+  (`Shapes.sameSolid`) of a part already in H is not added to H, since it adds nothing to their union. Checked in the
+  code: kept parts never hold two exact copies (the verdict cleans the lower of any pair), so the kept parts' H, their
+  spacing, their owned volumes, every factor and G cannot move; a cleaned part's H keeps its union, its box and its copy
+  flag, so only its measuring can change (exact where the copy had made it more than `MAX_EXACT`, the cleaned parts'
+  spacing, the units its job reports, which reach the checkpoints alone). As built against round 4, every output of
+  `Analyze.run` reads byte for byte on the 136 fixtures, Parity's 200, the six seed streams and two more (4,000) and all
+  33,389 plausible designs (fixer Y's dumps of round 4's source, which equal mine of `shift-r4` on the fixtures and
+  Parity's 200), and so do the X and Z mirror images of the fixtures, Parity's 200 and plausible 1–11,130 and the id
+  shuffles (A17 alone, as before). Every Ctrl+D copy of every part of every 5th plausible design with a cleaned part,
+  from #1 (12,217 copies on 1,230 designs) and from #3 (12,004 on 1,206), now moves nothing, not even the last bits,
+  wherever it is measured (a copy that takes a slot past its maximum leaves nothing measured: round 6, below); #8871 and
+  the 38 other `wrapRings|C09|n4` designs under a copy of any part (V2's `ctrldone`), none; V1's `S3` and his copies of
+  a wall or a speck (`S5`, `S6`, +2.56e-3 kg on round 4), none. What stays is the residual §4.3 names, an engineering
+  one of M2's sampled measure, as at M3's commit, with no decision mark: V2's sealed box with the Ball in the pommel
+  (+0.042 kg) and V1's specks, as above, on this tree too; on real designs none of 824 hidden exact copies of up to
+  three cleaned parts a design (V2's `sweepdup`, every 10th plausible design from #3, 633 designs holding 872 cleaned
+  parts) moves anything, and none of 1,011 Dust Balls 0.07 at the centre of the largest kept Block with every side over
+  0.09 (`sweepspeck`, every 5th from #2) moves another part's owned volume (on 8 of them the Ball's own share moves the
+  mass, round 6, below). A spacing of its own for each cleaned job (V2's `F1`) closes the Ball but moves 757 of the
+  33,389 plausible masses, by up to 54 g, and X02's by 4.3e-4 kg, so it was not taken. The text now says, in §4.3–§4.5,
+  §5.6 and §17.2's hidden-parts, ids and measure rows, that a hidden part moves the mass and the balance point shown
+  only by what it owns and by how it has another hidden part's overlap measured, and with them the Damage and Balance
+  stats (§8.2), never G, a tier, Q or rarity (stats never feed Q or rarity, and T sums kept parts only), and that a turn
+  as given, which a mirror image rewrites, decides between parts at one place, as at M3's commit; and in §4.4 that the
+  cleaned parts come after the kept ones of their volume and height. Cost, tests and goldens: below.
+- **The fix's round 6** (fixer AA; the trees `shift-r5`, round 5's, `shift-r4` and `f7ac37d`; text and one test, no
+  source). Review round 5 (V1, V2) found round 5's code final (every output of `Analyze.run` round 4's byte for byte on
+  the 37,725 designs and on the X and Z images of the fixtures, Parity's 200 and plausible 1–11,130, no Ctrl+D copy of
+  `ctrld`'s sweep moving anything where it was measured, each named mutant failing on the assertion aimed at it, the
+  cost noise) and five of its sentences false, each scoped here. (1) Fix A does not leave every Ctrl+D copy out of the
+  higher sets. Its rule, as round 7 words it (§4.3): an exact copy of a part already among another part's higher parts
+  is not counted there again, so where the design stays valid, of a part and its Ctrl+D copy left in place the one that
+  comes later in §4.3's priority (kept parts, then slot rank, then the measure's rank of §4.4) adds nothing: a copy that
+  comes after its original changes nothing measured, and one that comes before it takes its original's place, as its
+  original given the copy's slot and material would. A copy that comes after its original, measured: Reviewer V2's
+  `relabel6` (review round 6), on V1's `S3`, his box below with a Pommel filler 21 under its two Guard fillers and wall
+  13, a copy of filler 18 in the Grip or the Pommel slot, nothing on round 5, the mass −3.148e-4 kg, the balance
+  −5.5259e-4 and filler 21's owned volume −4e-5 on round 4, on `f7ac37d` and on the mutant `fixA_sameSlot`, a copy
+  deduped only in its original's slot; Reviewer V1's `material` (review round 6), a Steel copy of V2's Iron filler in
+  its slot (`probe6b`, above), nothing. One that comes before it: V1's `relabel`, on his box below with the fillers 0.23
+  and 0.22 long and two Dust Balls 0.02 in its wall (`S4`, the cleaned parts' share at 39,946 of 40,000): the copy of
+  filler 18 relabelled Blade joins filler 17's higher set, which 18, ranked below 17, is not in, the mass 1.288801 kg
+  +2.3865e-3, the balance +4.1979e-3, G the same, what 18 relabelled Blade gives (the mass to the bit, the balance
+  within 5e-16), on round 5, round 4 and `f7ac37d` alike (fixer AA's run of his script; his `fixa`, with specks 0.015,
+  the same); the same copy in `S3` leaves the mass on round 5 (the balance within 5e-16; −3.148e-4 kg on round 4 and
+  `f7ac37d`); V1's `material`, a Ctrl+D copy of a hidden Steel part painted Iron, in its slot, takes its place, to the
+  bit what the part painted Iron gives here (V2's box with its filler Steel +2.3595e-4 kg, the balance +3.9595e-4;
+  `boxedF2`'s Steel filler 18 +1.0816e-4, `f7ac37d` +1.0140e-4; `S4` with filler 18 Steel +3.2542e-5; G the same; round
+  4 and `f7ac37d` alike). Where §4.3's priority and the measure's rank alone differ, across slots: round 7, below. (2)
+  V1's specks were measured in a box of his own (`hsteer2`, and `hsteer3` at 0.02, the smallest side `Canonical` takes:
+  F2 with an Iron box on its blade's top, walls 0.02, the cavity 0.26, two Iron Guard fillers 0.258 × 0.258 × 0.19 that
+  overlap, the second reaching 0.01 into wall 16): a Blade Dust Ball 0.02 buried in that wall on the filler, owning
+  1.9e-7, +1.1802e-3 kg; two Block specks there, owning nothing, +1.1787e-3 (one alone, nothing); at `S4`, a Dust Ball
+  0.05 buried in F2's guard, +2.5843e-3; the same on round 4 and `f7ac37d` (Reviewer V2's `hsteer2b` alike). In V2's box
+  they move the mass by what they own alone and the filler's owned volume not at all (V1's `specks6b`, fillers
+  0.256–0.264; V2's `probe6s`, 0.25, 0.258 and 0.27): the Dust Ball 0.02 in wall 16 on the filler's poke, owning 1.9e-7,
+  +1.4858e-6 kg; two Block specks there, nothing; a Dust Ball 0.05 in F2's guard, owning 2.95e-6, +2.3215e-5. (3)
+  `f7ac37d`'s Ctrl+D figure covered the sweep from #1 alone; from #3 (V1's `ctrld` on `f7ac37d`, run by both reviewers)
+  it moves 24 copies on 12 designs past 1e-12, two `wedgeInGuard|C05` designs as round 4 does, six `pommelInBlock|C09`,
+  two `laminate|F4` (`k0.02 wf1.5 proud-0.0200 captrue` and `wf2.0`) at −6.908 g, `lamHilt|hilt|w1.2 l3.0 c0.025 k0.02
+  proud0.000 capfalse` at +5.181 g and a grille at +0.787 g, and 73 in the last bits; with #1's 14 on 7 (−0.885 g at
+  most, V2's run) and 73, 38 copies on 19 designs, up to 6.9 g, G on none. (4) The band in V2's box with the Ball 0.22
+  in F2's pommel is about 0.2555–0.2655: V1's `band`, at fillers between and beyond `probe7`'s points, with that Ball
+  and with every Ball 0.10–0.28 owning nothing, 0.2555 +41.09 g, 0.2645 −5.24 g, 0.265 −5.27 g and 0.2655 −5.30 g, and
+  0.240, 0.241, 0.255, 0.281, 0.29 and 0.30 nothing; V2's `probe7b`, fillers 0.240–0.282 every 0.001 and Balls 0.10–0.28
+  every 0.01, 0.256–0.265 moving (7 Ball sizes each) and 0.240–0.255 and 0.266–0.282 not, `f7ac37d` the same over
+  0.250–0.270. (5) The 1,011 buried Dust Balls move no other part's owned volume (V1's `speckall`, every part and the
+  mass compared; V2's `sweepspeck2`, the mass too; G on none), but on 8, six `wrapRings|C09` designs and two cages, the
+  Ball, wholly inside its Block, owns 8.094e-6 and moves the mass +6.37e-5 kg by that: at the cleaned parts' spacing
+  there its box has 4 cells a side, whose 32 midpoints in the Ball undercount it (fixer AA's `ballcells`: 1.715e-4
+  against 1.796e-4, and 0 at 5 and 6 cells, `H_OVERLAP`'s). Its minors: the counts (of `ctrld`'s 24,221 copies on 2,436
+  designs, 1,978 make the design invalid, V1's `ctrlcount`: 1,858 take a slot past its maximum, `SlotTooMany`, so
+  nothing is measured, and 120 the design past `MAX_PARTS`, which only `Canonical` asks, so `ctrld` measured them too,
+  fixer AA's `ctrlcount2`; the 22,243 others keep it within those limits, 21,628 of them on valid designs and 615 on 105
+  `grille` and `tiled` designs that are invalid without any copy, their Blade keeping no kept part (`SlotMissing`),
+  which `ctrld` measured through `measureInvalid`, Reviewer V2's `ctrlvalid`; `sweepdup` copies the first three cleaned
+  parts of each of its 633 designs, which hold 872, 871 copies tried and 824 measured, fixer AA's `dupcount`); the
+  CornerWedge member of the mirror class (O11 (l); V1's `cwmirror`, run again by fixer AA: F2 with kept CornerWedges 0.3
+  × 0.1 × 0.1, Iron, and 0.1 × 0.1 × 0.3, Steel, at one place against its guard's front face, whose image swaps each
+  one's x and z sizes and so their order: they own their overlap the other way in the X and the Z image, 3.814e-4 /
+  3.907e-4 → 5.635e-4 / 2.086e-4, the mass +3.641e-6 kg, the balance +2.5e-7, G the same; both Iron, the mass the same;
+  `f7ac37d` alike); and V1's five mutants of fix A that passed the tests he ran, with his pin (below). So the SPEC
+  (§4.3, §17.2's hidden-parts row) keeps the residual's mechanism, what it moves, what it never moves and why, fix A's
+  rule (round 7 words it by §4.3's priority, below), V2's sealed box as its one example, and that it is rare on real
+  designs; the sweep figures and every claim of none on a sweep are here (above and in the rounds before), scoped; §4.4,
+  §5.6's and §17.2's ids rows and README name the CornerWedge. As built against round 5: no source changed (`src` byte
+  for byte `shift-r5`'s), so nothing measured moves. Tests and goldens: below.
+- **The fix's round 7** (fixer AB; the trees `shift-r6`, round 6's, and `f7ac37d`; text only, no source and no test).
+  Review round 6 (V1, V2) found round 6's code and pin final (`src`, the goldens and the digest round 5's byte for byte,
+  the 76 files S-PAR-02 read unchanged, the pin failing on each of the six named mutants of fix A on the case aimed at
+  it, V2's `scripts/verify` from a clean copy green with 776) and four of its statements false: fix A's rule scoped by
+  the slot alone, where a hidden Steel part's copy painted Iron, in its slot, takes its original's place (V1's
+  `material`, item (1) above); item (1)'s "only in its original's slot", where a hidden part's copy in a slot its
+  original's outranks changes nothing too (V2's `relabel6`), the tests bullet and M3-notes giving the mutant
+  `fixA_sameSlot` the same words; two summaries saying no Ctrl+D copy left in place changes anything, a few lines before
+  a relabelled one that does; and the 22,243 copies said to keep the design valid, 615 of them on 105 designs invalid
+  without any copy (V2's `ctrlvalid`, above). The lead's ruling (the build notes' `shift_journal.txt`, 19:50): each
+  round had stated fix A's consequence as a list of cases, and each list missed a case of the order, so round 7 states
+  it by the order alone, in one sentence used wherever the copy rule appears (§4.3 and §17.2's hidden-parts row in full,
+  §5.6's hidden-cores row and README with their parentheses dropped, item (1) above, M3-notes, and the plain words in
+  plain words), its measured cases labelled as examples in item (1). The ruling's sentence named that order "the
+  measure's rank (§4.4)", but overlaps go by §4.3's priority, kept parts, then slot rank (§3.7), then the measure's rank
+  (`MassProps.ownership`), and across slots the measure's rank alone, whose cleaned parts go by the material's name
+  first and by the slot's name late (Grip before Guard), differs from it three ways (fixer AB's `rankslot`, on V1's
+  `S4`, V2's box and `boxedF2`, every build through `Canonical.draft`; round 6 and `f7ac37d` alike): a hidden Steel
+  part's copy painted Iron in a slot its original's outranks changes nothing (`S4`'s filler 18 in the Grip or the
+  Pommel, V2's box filler in the Guard, `boxedF2`'s filler 18 in the Guard), where the part itself so changed moves the
+  mass +3.2542e-5, +2.3595e-4 and +1.0816e-4 kg (`f7ac37d` +1.0140e-4); `S4`'s Iron filler 18's copy painted Steel in
+  the Blade takes its place, the mass +2.1069e-3 kg, the balance +3.7069e-3, G the same, filler 17's owned volume
+  0.0153097 → 0.0032616 and the copy's 0.0139784, what 18 itself so changed gives (the mass and the owned volumes to the
+  bit, the balance within 5e-16, the parts summed in another order); and a copy of `S4`'s filler 17 in the Grip changes
+  nothing, where 17 itself in the Grip moves the mass +2.3865e-3 kg. So the sentence reads "the priority above (kept
+  parts, then slot rank, then the measure's rank of §4.4)". Kept originals follow it too (fixer AB's `keptcopy`): each
+  of F2's four parts copied into every other slot and material, in the 16 cases where the part itself so changed is
+  measured (round 6 and `f7ac37d` alike), leaves the mass, the balance and G as they were where the verdict cleans the
+  copy, and where it keeps it (a Guard part's copy in the Blade or the Grip, the Pommel's in any other slot, whose
+  slot's name comes first) gives those of the part itself so changed. Also written: the summaries quote the sweep
+  (above), V2's 22,243 split (above), §5.6's and §17.1 O11's near-copy figures replaced by a pointer to the round-3
+  bullet, and README and the plain words say S-PAR-02 passed on round 5's code (3 fresh Play sessions, 2026-11-19),
+  which rounds 6 and 7 leave byte for byte. As built against round 6: no source or test changed (`src` and `tests` byte
+  for byte `shift-r6`'s), so nothing measured moves; `--quick` in the working tree, run once (20:10:14–20:10:42, no
+  other Lune process at its start or end, the machine 12–18 % busy, median 15 %, its own Lune counted): 720 pass, 56
+  skipped, 27.06 s.
+- **Goldens and the digest** (re-blessed under `BALANCE_VERSION` 1, as M1–M3's rounds were, before the first release,
+  §14.9): T-DIF-12's calibration golden C04's 13 leaves above and Joints on C05, C07, C08, C11 and C13; its regression
+  golden Joints on X03, X04b, X04g0.010, X06-0.01 and A24; the cost golden unchanged. S-PAR-02's digest: the fixtures'
+  group 136 designs, 425,658 → 425,673 bytes, fnv1a32 60321529 → 1001114566 (those 11 fixtures' lines); the generated
+  group 200 designs, 709,366 bytes, 611215233, unchanged. `Factors.spec`'s units by caller (a probe or a sample charges
+  a unit per higher part, and a flush part is one no more): F5 on All, Thinness 4921 → 4715 and Asymmetry 11069 → 9746;
+  F4 5644 → 5564 and 19264 → 17849, on the Blade 2208 → 2178 and 10069 → 9796; P5 14848 → 14642 and 21409 → 20086.
+  `Reference.spec`'s refined cells, fewer than the prototype's now that a flush part makes no job: C04 2016 → 1184, C06
+  1352 → 676, C09 5320 → 4240, F1, F5 and P5 676 → 0, F3 1282 → 490. Round 2: the regression golden X02's record (84,808
+  → 84,817 bytes), `parity_designs.bv1` C11's and X02's hashes, the digest's fixtures 425,673 → 425,707 bytes, fnv1a32
+  1001114566 → 262377556 (`parity.bv1.digest.txt` 132 → 131 bytes), the generated group, the calibration and the cost
+  goldens unchanged; `Cover.spec`'s units of the sealed rod 23687.25 → 23662.125 (its 16 walls, tied in two slots, read
+  in their new order). Round 3: the regression golden `shift-r1`'s again byte for byte (84,817 → 84,808 bytes: X02's
+  record, copies 6–10 cleaned), `parity_designs.bv1` X02's hash, the digest's fixtures 425,707 → 425,675 bytes, fnv1a32
+  262377556 → 892272501 (`parity.bv1.digest.txt` 131 bytes), the generated group, the calibration and the cost goldens
+  unchanged; `Cover.spec`'s sealed rod 23687.25 again (its walls in the world planes' order). Round 4: nothing moves,
+  every golden and the digest round 3's byte for byte; round 5 neither, every golden and the digest round 4's byte for
+  byte, nor round 6, which changes no source.
+- **Ids and mirror images, the fix against `f7ac37d`.** Round 1 (fixer S): ids (3 shuffles a design; steps and edge by
+  `Dump.canonical`, kept flags and owned volumes per original part): 0 differ on the 3,200 generated designs and on
+  every 3rd plausible design (11,130) on both trees; A17 on both, whose two exact copies take the index's tie. Mirror
+  images (every part through `Blueprint/Mirror.reflect` across x = 0 and z = 0, then Canonical): the fixtures as on
+  `f7ac37d` but 5 whose images moved Joints there and now read their original (C05, C11, X04g0.010, X06-0.01, X06-0.05),
+  the generated designs line for line; on the plausible set the X images move G on 3,066 (`f7ac37d` 3,115) and the Z
+  images on 3,247 (3,219), the largest the same (0.0849, 0.1174); 16 (X) and 73 (Z) images that read their original on
+  `f7ac37d` do not on the tree and 47 and 19 the other way, where the kept grip stands off a centre plane and the new
+  order meets a mirrored Wedge's samples, which follow its writing (O11 (i); #9113, C09 with an off-axis Grip rod).
+  Round 2 (fixer U): ids, the 109 fixtures with physics, Parity's 200, the seeds' 3,000 and every 3rd plausible design,
+  none differs but A17; the images of Parity's 200 and the seeds' 3,000 read as on both trees, the valid fixtures' X 4
+  and Z 6 as before; on the plausible set X 3,065 images move G (`f7ac37d` 3,115) and Z 3,220 (3,219), the played flips
+  round 1's design for design (`f7ac37d`'s differ by 3 designs each way); against round 1, Joints aside, one Z image
+  (#24771) newly differs from its original and 29 read theirs again; an image's \|ΔG\| grows by more than 0.002 on 2 X
+  and 2 Z images, two fullers whose walls tied with the core plate are twins about their centre (#24177 0.0003 → 0.0144
+  and 0.0149; #24771 0.0066 → 0.0111 and 0 → 0.0118; no tier), and shrinks by as much on 3 and 2. Fixer S's count of
+  images whose \|ΔG\| shrank past 0.002 against `f7ac37d`, 8 (X) and 5 (Z), is at G's 4 decimals; in raw doubles, where
+  3 and 2 shrink by exactly 0.0020, 11 and 7; the tier flips one tree has and not the other, 6 and 4, count the X and Z
+  images whose played or raw tier flips (played alone, 4 step flips on 3 designs each). Round 3 (fixer W): ids, none
+  differs but A17 on the same 14,439 designs; every image of every corpus reads as on round 2, line for line, but X02's
+  (its as-built change, G the same), so the figures above and below stand; near copies' images keep `f7ac37d`'s parts
+  (the fix's round 3, above).
+- **What a mirror image still reads otherwise** (O11 (l); the tree's images, by the weighted factors that moved): under
+  X, of the 3,065 plausible images whose G moves on round 2's tree (1,548 past 0.002, 22 a played tier, 43 a raw tier,
+  up to 0.0849, a fuller), Thinness moves on 2,482 (alone on 1,534: 10 of the tiers), SurfaceComplexity alone on 463 and
+  EdgeLength alone on 119 (up to 0.0021, Douglas–Peucker's tie on the reversed outline); under Z, of 3,220 (904 past
+  0.002, 25 a played tier, up to 0.1174, a Wedge in a guard), SurfaceComplexity alone on 2,446, every tier among them
+  (laminates and laminated hilts 16, fullers 6, ribbed bars 2, a rivet), Thinness alone on 704 (no tier; round 1: 3,066,
+  1,549, 1,535, 464; 3,247, 2,473, 695); the X tiers fullers 16, ribbed bars 4, plate edges 2; every flip, either plane,
+  within 0.033 of the tier line (\|ΔG\| up to 0.0471). The six property streams' 3,000 generated designs: X 514 images
+  (15 a tier, up to 0.2552, Thinness), Z 122 (1); Parity's 200: X 30 (17 past 0.002, Gen 57's tier), Z 6 (up to 0.0053);
+  the 98 valid fixtures X 4 (up to 0.0093), Z 6 (up to 0.0363, P3), no tier. The mechanisms, each measured on a scratch
+  variant: Thinness' canonical walk signs a local axis up the world (+Y, else +X, else +Z), so an axis that lies across
+  the plane points the same way in the image, which walks it from the other end and takes other probes (Gen 57's Wedge
+  tip, turned 90° about Y: Thinness on All 0.6456 → 0.2722, Hammering 0.2589 Hard → 0.1095 Normal), and the stride's
+  phase carries from part to part in the measure's rank, in which parts tied but for the sign of their place, twins
+  about the grip on round 1's tree and about their ties' centre on rounds 2 and 3 (on round 3's, the measure's alone:
+  the verdict's swaps only twins about the plane, as on `f7ac37d`), swap order in the image (below); the same twins
+  spend the sub-grid budget `N_SUB_WORK`, in rank order, the other way round, so it runs out at other patches (plausible
+  #21865, a laminate: SurfaceComplexity 2.4308 → 2.3641, Hammering 0.1689 → 0.1356, Sharpening 0.2077 Hard → 0.1606
+  Normal under the Z mirror; with the budget unlimited, `subwork`, `N_SUB_WORK` × 10,000, both read Hammering 0.2113 and
+  Sharpening 0.2677 Hard, and on the 4,685 plausible designs whose X or Z image moves G on round 2's tree (round 1's
+  4,713 but 28), the Z images moving G 3,220 → 782, SurfaceComplexity alone 2,446 → 14 and up to 0.0006, the Z tiers 25
+  → 0, the X images 3,065 → 2,559, tiers 22 → 16, Thinness's; fixer V, the same variant of round 2's tree); and
+  Douglas–Peucker's ties on the reversed outline (EdgeLength, up to 0.0021). A walk signed from the design's own centre
+  (a scratch variant: a local axis with no Y component pointing away from the kept Grip parts' point, equal axes ordered
+  by \|x\| and \|z\|): of the same 4,685 on round 2's tree, the X images moving G 3,065 → 2,833 (tiers 22 → 20), the Z
+  images 3,220 → 3,191 (25 tiers; round 1, of 4,713: 3,066 → 2,834 and 3,247 → 3,227); Parity's 200, X 30 → 21, Z 6 → 1;
+  the valid fixtures, X 4 → 4, Z 6 → 4 (P3's 0.0363 closed); Gen 57 not at all, its tip centred on the grip's planes,
+  where that sign ties and keeps the world's; as built it moves G on 5 valid fixtures (P5's Hammering 0.2167 Hard →
+  0.1902 Normal, P3's 0.2752 → 0.3115), 5 of Parity's 200 (up to 0.0179) and 114 of the 11,043 valid designs of every
+  third plausible one (no tier, up to 0.0666), the same on both trees. With every volume sample a probe (`allprobes`,
+  `THICK_BUDGET` 1e6, stride 1), Thinness reads every image as its original: of every eighth plausible design whose
+  image moves G with Thinness (364, the same designs on both trees), the X images moving G 311 → 76 and the Z images 198
+  → 105 (106 on round 1), the rest SurfaceComplexity's (the budget) and EdgeLength's (up to 0.0006), no tier (2 before);
+  Parity's 200, X 30 → 3 (EdgeLength, 0.0002), Z 6 → 0; Gen 57 Hammering 0.1874 both (as built 0.2589 and 0.1095). So
+  Thinness' share is the probes' choice, the walk's sign and the stride's phase, which carries from part to part in the
+  rank's order and follows twins swapped in the image.
+- **A Grip part hidden off the grip's axis** (fixer T: a Block half the size of the largest kept Grip Block or Cylinder,
+  inside it and off its axis, under a fresh id, where the Grip slot has room): on round 1's tree it moved the point the
+  verdict's rank read from, not the measure's. Of the fixtures, X01, X01raw and X02, whose blade copies lie 0.003–0.004
+  apart in z, keep the other copy (X01: part 4 kept → cleaned, SurfaceComplexity 2.1634 → 2.1954, Joints 12.27 → 8.28,
+  PartCount one less; X02 the reverse; G the same, SurfaceComplexity under its range there), and worst valid 8 turns
+  `BladeNotAboveGrip` (V4 counts every Grip part, §4.2); the other 89 that take the block read to the bit, C09 among
+  them (T-DIF-04). Parity's 200 generated designs: none moves. Of the valid plausible designs, 32,680 take the block
+  (429 have no kept Grip Block or Cylinder, or a full slot) and none moves. On round 2's tree the block ties with no
+  part and moves nothing (above), nor on round 3's, whose verdict reads no point (fixer W's `hgkept` on X01, X01raw and
+  X02).
+- **A whole design moved along X** (O12; fixer T on round 1's tree, whose census moves rounds 2 and 3 read the same: 16
+  moves on every third plausible design, the 11,043 of 11,130 valid as built, every fixture and Parity's 200 generated
+  designs, as G with Asymmetry, EdgeLength or both held as built): with both held G moves on no design at any move.
+  Moved 1e-6, G moves on 43 plausible designs (up to 0.0012: a plate poking exactly 0.05 out, at Asymmetry's reach,
+  changes its ladder's rung); 0.0001, on 2,553 (23 %), none past 0.002; 0.0005 and 0.0007, 32 and 33 %; −0.0007, 32 %
+  (one tier, by Asymmetry, a step 0.0014 over Hard); 0.0013, 4,347 (40 %, 2,548 past 0.002, 9 a played tier, up to
+  0.0071: the census's 13,129 of 33,389 is no artefact of the raster's 0.0013 sample offset); 0.002, 47 % (10); ±0.005,
+  72 % (39 and 40, up to 0.44 where a chain breaks: a riveted rapier's edge 1 → 4 chains, Sharpening 0.6410 → 0.2237);
+  0.01, 73 % (24); 0.02, every one (76; the edge on 23 alone, its columns a whole cell over); 0.03, every one (1,557 a
+  tier, 14 %); 0.05, every one (4,775, 44 %, up to 0.3079); 0.1, all 10,154 still inside the hitbox (6,865, 68 %); a
+  random move inside the hitbox, 98 % (58 % a tier, up to 0.3694). Asymmetry moves G on 23 % at 0.0001 and on all from
+  0.02; the edge on 1 % at 0.0001, 16 % at 0.0013, 61 % at 0.005–0.01, 0.2 % at 0.02 and 1.4 % at 0.1, whole cells over.
+  The 96 valid fixtures inside the hitbox: 0.0013 moves G on 33 (1 a tier: worst valid 8's two chains are one,
+  Sharpening 0.5217 → 0.7554, as at +0.002, +0.0034 and +0.005, and three at −0.005 and −0.0103); 0.05 on all 89 (55).
+  Parity's 200: 0.0013 on 106 (1 a tier, Gen 98, Sharpening 0.2027 Hard → 0.1931 Normal), 0.05 on all (104).
+- **O12's options as transforms of the analysed copy** (fixer T: the tree reads an X move to the bit but for those two
+  reads, so a copy moved to put the option's reference on x = 0 reads as that option would; analysed with the hitbox
+  widened along X, which only V2 reads): (ii) the kept Grip parts' point: on 21 of the 98 valid fixtures the point is
+  off x = 0, and G moves on 20 (17 past 0.002), 2 a tier (A27: Sharpening 0.0989 Normal → 0.2391 Hard, the blade now
+  read 0.04 off its plane; worst valid 11, Hammering 0.1803 → 0.4389 Hard); on the 33,109 valid plausible designs, 93
+  (none a tier, up to 0.0047, rods set in the grip off its axis); Parity's 200, none; (iii) the centre of every part's
+  extents: 24 valid fixtures off centre, G on 23 (19 past 0.002), 4 a tier (F4 and C05, Sharpening 0.3420 → 0.1636 and
+  0.3466 → 0.1964 Normal; A07a and A27 Normal → Hard; up to 0.1784, F4); plausible 7,787 (24 %), 5,076 a tier, up to
+  0.2214, every flip on a cleaver's base (F4 2,635, C05 2,441), Sharpening Hard → Normal but 8 Hammering, the sabre
+  C06's 2,203 moving without a tier; Parity's 200, 8 (up to 0.0312, no tier); (iii') of the kept parts' extents: the
+  same, plausible 7,779, 5,076 a tier. Each closes the move: the option on a design moved +0.0013 or at random inside
+  the hitbox reads as on the design (every 3rd plausible design and every fixture and generated design tried: G the
+  same, Asymmetry within 1.3e-14; on round 3's tree near copies across x = 0 still swap under (ii), the verdict's rank
+  standing on the plane, O11 (j)).
+- **Cost** (fixer S: `Analyze.run` alternating with `f7ac37d` in one process, a collection before each run, every worst
+  valid design and P1): four runs of 31–61 rounds, 0–22 % busy (medians 4–5 %), the tree / `f7ac37d` 0.9716–1.0104 per
+  round, sums 0.9931–0.9990; per case worst valid 8 × 0.9977, worst valid 5 × 1.0015 the largest: nothing measurable.
+  Worst valid 8, the slowest valid design, reads 57.0–57.9 ms on `f7ac37d` in that harness and 57.1–57.4 ms in T-PERF-01
+  by process, 56.8–59.4 ms on the tree: the 57 ms gate's margin (§14.11) is gone on this machine at this hour whichever
+  tree runs. `--quick` 29.25 and 29.59 s quiet, 716 pass (`f7ac37d` 28.99 s, 707); `scripts/verify` green three times at
+  medians 7–8 % busy (758 pass, worst valid 8 at 57.32–59.41 ms), failed on T-PERF-01's timing alone at medians 31 and
+  40 % (worst valid 5 at 60.84 ms; F2's longest stretch 0.357 ms), and fixer T's two at 28–77 % and 19–82 % (medians
+  57 and 56 %) on C01's and F2's longest stretch, 0.382 and 0.411 ms (no quiet half hour between them). Round 4 (fixer
+  Y, Reviewer V2's `timing3`: the tree, round 3 and `f7ac37d` rotated in one process, 21 rounds in each of two orders,
+  medians 7 and 8 % busy): the tree / round 3 × 1.0008 and × 1.0006 (per case 0.966–1.024), the tree / `f7ac37d` × 0.998
+  and × 0.995; T-PERF-01 alone, twice, at medians 16 % (this run's Lune 8 % of it): pass, worst valid 8 at 57.70 and
+  57.19 ms, the F, C and X fixtures' longest stretch 0.274 and 0.279 ms (C01); `scripts/verify` at 12–51 % (median 17
+  %), green, 775 pass, worst valid 9 at 58.33 ms, F2's longest stretch 0.273 ms. Round 5 (fixer Z, the same `timing3`:
+  the tree, round 4 and `f7ac37d`, 21 rounds in each of two orders, the M4 team's Lune processes not yet running,
+  medians 10 and 18 % busy): the tree / round 4 × 0.995 and × 0.997 (per case 0.947–1.057), the tree / `f7ac37d` × 0.996
+  and × 1.001; `scripts/verify` at 12–43 % (median 17 %), green, 776 pass, worst valid 8 at 57.78 ms, C01's longest
+  stretch 0.273 ms, where twice before, at medians 20 and 23 % with the M4 team's Lune beside it, it failed on
+  T-PERF-01's timing alone (60.28 and 66.41 ms). Round 6 (fixer AA) changes no source; `scripts/verify` in the working
+  tree failed on T-PERF-01's timing alone at 16–89 % and 15–42 % busy (median 22 % each, with Roblox Studio open beside
+  it: worst valid 8 at 62.42 ms, worst valid 9 at 60.88 ms), and was green at 16–36 % (median 22 %), 776 pass, worst
+  valid 8 at 59.165 ms. Rounds 7 to 10 change no source; before the commit the lead's `scripts/verify` failed on
+  T-PERF-01's timing alone at 7–30 % busy (median 16 %, agents writing notes beside it: worst valid 8 at 61.17 ms) and
+  was green at 10–36 % (median 14 %), 776 pass, worst valid 8 at 57.573 ms; `--quick` 720 pass, 56 skip, 28.02 s at
+  13–18 % (median 15 %).
+- **Tests** (`tests/Physics/Invariance.spec` T-DIF-07 (a) to the bit, and a pin for each guard on the design it moved,
+  each failing with its guard alone reverted: §14.6): the ranks, X01 0.037 along ±Z (the verdict's: the kept copy), C09
+  0.0013 along ±Z (the measure's, and its places quantised: SurfaceComplexity 0.00105) and P5 0.0013 along −X (\|x\|:
+  Thinness 0.0662); the hidden Grip part, C09 with a Grip block hidden off its axis (from every Grip part the measure
+  moved 0.3201 → 0.3196); the flush part, C09's pommel housed in a block moved along Y (at margin 0, ten owned volumes);
+  the cells, C09 at the hitbox's Z edges; G's grid, F4 with a plate on its guard moved along Y (0.4593 → 0.4592);
+  contact, C07 ±0.0013 (the contact rows, Joints 0.176) and C02 with a plate on its guard moved along Y (V3, 1.58); and
+  at unit level `MassProps.spec`'s flush bar, tangent Ball, 4 cells at 4 + an ulp and a box 1e-17 thick,
+  `Factors.spec`'s Asymmetry estimate at exactly reach (800 against 640 at 0.111 up Y) and `Difficulty.spec`'s x an ulp
+  either side of 0.45925. Round 2 (fixer U; 769 cases): the twins (P5's tooth 7 at 1.4 + 0.2 moved 0.13, tooth 6 an ulp
+  up moved 0.411, F2's blade again an ulp lower), the speck chain (P5's grip copied 4e-8 and 4e-9 with a Grip speck),
+  the ids (P5's grip copies 3e-10 apart), the grip's 1e-9 nudge, a hidden Blade twin and ownership, a Wedge hidden among
+  P5's teeth (the walks, and the exposure's measure under a planted `N_SUB_WORK`), F2's pommel at exactly `CONTACT_TOL`
+  (V3's broad phase), a Ball pommel so (the contact rows' margin), and Reviewer V1's unit pins (`Verdict.spec`'s ties'
+  centre, half step and `RANK_Q`; `MassProps.spec`'s cells and overlaps; `Difficulty.spec`'s grid; `Factors.spec`'s
+  candidates); 33 mutants of the ranks and guards, each failing the quick suite on an assertion, none on timing alone;
+  round 1's source fails the round-2 pins aimed at it. Round 3 (fixer W; 772 cases): round 2's verdict-centre pins
+  dropped and `f7ac37d`'s back (`Verdict.spec`: \|z\| before z, the image keeping two parts that differ in \|z\|, twins
+  at ±z by z; F5's blade copies 0.002 apart, copies 1–5 cleaned, each reading its strip within 1e-9; X02's fixture, five
+  of six copies cleaned; Cover's sealed rod 23687.25); Reviewer V1's and V2's twin-height pins; the hidden duplicates
+  (C09 with its core 2.3 long and again 0.001 along +X, that copy again or the core again 0.0005 along +X; #1940's
+  laminate on C02, its core again 0.002 along +Z and that copy again) and the mirror (that laminate across z = 0), each
+  failing on round 2's source; X01's whole-design case pins the residual (0.037 along ±Z, the blade between its copies
+  cleaned, every step as built); and from 18 mutants of the ranks (15 failing the suite first), the three survivors
+  pinned (the measure's ties without the height or the volume; `RANK_Q` 5e-10), as are Reviewer V2's four guard-constant
+  survivors (`OVERLAP_TOL` 2e-7, `CELL_EPS` 1e-8, `CONTACT_REACH` + 5e-9, `MIRROR_GUARD` 1e-8), `OVERLAP_TOL` within 1.5
+  times its value, the other three at 5, 3 and 5 times, so that mutants at twice them passed the whole suite (review
+  round 3; round 4 pins each within 1.5 times, below). The prototype's order (`Reference.spec`,
+  `DifficultyHelpers.inRankOrder`, `Edge.spec`) is the verdict's rank order with the kept parts in the measure's, which
+  changes its input on X02 alone. Round 4 (fixer Y; 775 cases, 3 new): the hidden parts' ownership (Reviewer V2's box
+  laid along Z, an Iron and a Steel filler with a Ctrl+D copy, two Iron fillers moved 0.05 down Z), the ids (two Iron
+  Dust Balls along Z) and the mirror copies (Dust Wedges turned 30° about Z, the Z image part by part), each failing on
+  its mutant (round 3's measure, the world's planes for cleaned parts, V2's repair as given, fixer Y's first form, the
+  turn before the place); Reviewer V2's guard pins at 1.5 times, Reviewer V1's at half the guard and his half step on
+  either side, V2's x unrounded, each failing on its mutant (12 mutants, each on the assertion aimed at it); and 8 fast
+  cases moved to `t.slow` for the `--quick` gate (§14.1, §14.6). Round 5 (fixer Z; 776 cases, 1 new): fix A's pin (a box
+  on F2's blade with two Guard fillers and a Pommel filler under them, one Guard filler again in place: every owned
+  volume, the mass and the balance) and the reviewers' round-4 pins merged (V1's Iron box with a copy and moves along
+  ±Z, V2's ids pin's Z image, the mirror pin's X image, V1's measure's rank with no part kept, its kept parts before the
+  cleaned ones and kept twins of two materials, `CELL_EPS` from below at half and `CLIP_EPS` either side), each failing
+  on its mutant (13 mutants, each on the assertion aimed at it); and 6 fast cases moved to `t.slow` for the `--quick`
+  gate (§14.1, §14.6). Round 6 (fixer AA; 776 cases, none new): fix A's pin gains Reviewer V1's cases (his
+  `pins_round5.diff`: the copy relabelled Pommel or in Steel, or a wall again; a Pommel filler in the cavity's corner
+  under two walls, the first again; two Guard fillers at one centre, which is no copy) and fails on each of his six
+  mutants of fix A on the case aimed at it (fix A undone; a new part compared with the higher set's last member alone; a
+  copy deduped only in its original's slot, the mutant `fixA_sameSlot`, or only in its material or only with a cleaned
+  original; a part at a counted part's centre left out), five of which passed `--quick` and `Invariance`, `MassProps`
+  and `Parity` whole before (V1's `mutrun5b`). Round 7 (fixer AB) changes no test.
 
 ---
 
