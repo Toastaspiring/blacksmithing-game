@@ -271,9 +271,9 @@ and the "I" in this document is the lead too.
 - **Rule**: new or rewritten test contracts:
   - T-PHY-08: the physics frame and the guard line come from kept parts.
   - T-DIF-02: the formula that joins the material term and G into d.
-  - T-DIF-04/05: enclosed parts, duplicates, dust and Iron ↔ Steel leave D, the steps and the edge unchanged to the bit;
-    a hidden laminate gap reads as one solid; the flush seam (O11) is pinned, so a change that closes it must update the
-    SPEC.
+  - T-DIF-04/05: enclosed parts, plain duplicates (same slot and material), dust and Iron ↔ Steel leave D, the steps and
+    the edge unchanged to the bit; a hidden laminate gap reads as one solid; the flush seam (O11) is pinned, so a change
+    that closes it must update the SPEC.
   - T-DIF-07, in four parts: moves, flush cuts, ids and order, and one solid typed another way.
   - T-DIF-08 (mirrored designs), T-DIF-12 (every fixture's goldens, from the game's analysis), T-DIF-13 (the regression
     cases' bounds) and T-EDG-01 (the edge's rules, its exactness and its costs).
@@ -684,11 +684,11 @@ the files it reads. The SPEC now says all of this (§4.3, §4.4, §5, §5.6, §1
   important slot changes nothing, though iron comes first; a steel copy of a hidden iron piece in the blade counts
   instead of it, 2.1 grams on the first reviewer's box: the fixer's `rankslot`), so the sentence names the whole order.
   Of a visible piece and its copy, the one whose slot's name comes first in the alphabet stays visible, so a guard
-  piece's copy relabelled grip takes the guard piece's place. Also corrected: the summaries now say only what was
-  measured (none of the copies the reviewers made in their original's slot and material changes anything); of the 22,243
-  copies measured, 615 are on 105 sample swords that are invalid even without the copy (the second reviewer's
-  `ctrlvalid`); and the notes now say the Studio check passed on round 5's code (3 Play sessions), which rounds 6 and 7
-  leave as it was. Nothing in the game or its tests changed.
+  piece's copy relabelled grip takes the guard piece's place, and in one slot iron before steel. Also corrected: the
+  summaries now say only what was measured (none of the copies the reviewers made in their original's slot and material
+  changes anything); of the 22,243 copies measured, 615 are on 105 sample swords that are invalid even without the copy
+  (the second reviewer's `ctrlvalid`); and the notes now say the Studio check passed on round 5's code (3 Play
+  sessions), which rounds 6 and 7 leave as it was. Nothing in the game or its tests changed.
 - **Rounds 8 to 10** (2026-11-19): only words, which I applied from what the reviewers had tried and checked in their
   copies. Their checks confirmed the one-sentence copy rule on every case measured (717, then 210 more), and found a few
   sentences that still said more than was measured: four summaries that did not say whether the piece copied is visible
@@ -778,8 +778,10 @@ the files it reads. The SPEC now says all of this (§4.3, §4.4, §5, §5.6, §1
     Sharpening Hard → Normal). On the sample swords it changes difficulty on 24 % and the tier on 5,076, every one built
     on a cleaver; on the test swords 4 tiers. Done to the saved sword it would no longer be what the player built; done
     to a copy, the editor's centre line would no longer show where symmetry is measured.
-- **Lead's recommendation**: keep the centre line for now (i), and revisit if players slide swords off-centre to get a
-  tier.
+- **Lead's recommendation**: change to (ii), measuring about the grip's centre. The default is (i), as built and as the
+  SPEC you approved has it, and the game keeps it until you decide. One arrow-key press (0.05 stud at the editor's
+  default step) changes the Starter Sword's tier while the forged sword looks the same, and (ii) changed no sample
+  sword's tier; its price is that a hilt built off to one side makes a straight blade read lopsided (A27).
 
 ### O11 (l): a mirror image (new class)
 

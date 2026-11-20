@@ -145,25 +145,25 @@ After M3, the whole-design shift fix (SPEC §17.1 O11 (j), E-S2.14) is built in 
 ranks count a part's height in `RANK_Q`, the verdict's reads where a part stands from the world's centre planes again,
 as at M3's commit, and the measure's places each kept part across from the centre of the kept parts it ties with and a
 hidden part from the centre of the kept parts, after its material, so that no hidden part, part id or whole-design move
-chooses which of two hidden parts owns their overlap, and with it the mass and balance shown (a mirror image only for
-twins of one material exactly about that centre, or for two parts at one place that their turn or a CornerWedge's size
-orders, as at M3's commit; its rounds 3 and 4, after review rounds 1 to 3), an exact copy of a part already among
-another part's higher parts is not counted there again (its round 5), so where the design stays valid, of a part and its
-Ctrl+D copy left in place the one that comes later in SPEC §4.3's priority adds nothing: a copy that comes after its
-original changes nothing measured, and one that comes before it takes its original's place, as its original given the
-copy's slot and material would (its round 6, after review round 5, changed only text and that rule's test, and its
-rounds 7 to 10, after review rounds 6 to 9, only text). A hidden part can still change how another hidden part's overlap
-is measured, which moves the mass and balance shown by a sampling difference and never G, as at M3's commit (SPEC §4.3).
-Its five numeric guards leave each boundary of a moved design's rounding at a value only typing reaches, so a sword
-moved whole along Y or Z plays every step the same, to the bit, on every fixture and generated or plausible design
-measured; near copies of a part that such a move carries across the centre plane can still swap which copy the verdict
-keeps, as at M3's commit (SPEC §17.1 O11 (j)). `lune run scripts/verify` is green with its 776 tests on a quiet machine
-(at its round 10, 10–36 % busy, median 14 %); its timings need one (SPEC §14.11): under this machine's ordinary load
-T-PERF-01 fails, and at 37–94 % busy one case's 2 s budget too. S-PAR-02's digest moved (Joints on 11 fixtures, C04's
-and C11's owned volumes), so it ran again in Studio before the commit: it passed 3 fresh Play sessions on round 5's code
-on 2026-11-19, and rounds 6 to 10 change none of the files it reads. The fix brings three design calls: O11 (j), those
-near copies, O12, a sword moved along X reads as moved, its symmetry and edge standing on the plane x = 0, and O11 (l),
-a mirror image can read otherwise than its original.
+chooses which of two other hidden parts comes first in the order that decides who owns their overlap, and with it the
+mass and balance shown (a mirror image only for twins of one material exactly about that centre, or for two parts at one
+place that their turn or a CornerWedge's size orders, as at M3's commit; its rounds 3 and 4, after review rounds 1, 2
+and 3), an exact copy of a part already among another part's higher parts is not counted there again (its round 5), so
+where the design stays valid, of a part and its Ctrl+D copy left in place the one that comes later in SPEC §4.3's
+priority adds nothing: a copy that comes after its original changes nothing measured, and one that comes before it takes
+its original's place, as its original given the copy's slot and material would (its round 6, after review round 5,
+changed only text and that rule's test, and its rounds 7 to 10, after review rounds 6 to 9, only text). A hidden part
+can still change how another hidden part's overlap is measured, which moves the mass and balance shown by a sampling
+difference and never G, as at M3's commit (SPEC §4.3). Its five numeric guards leave each boundary of a moved design's
+rounding at a value only typing reaches, so a sword moved whole along Y or Z plays every step the same, to the bit, on
+every fixture and generated or plausible design measured; near copies of a part that such a move carries across the
+centre plane can still swap which copy the verdict keeps, as at M3's commit (SPEC §17.1 O11 (j)). `lune run
+scripts/verify` is green with its 776 tests on a quiet machine (at its round 10, 10–36 % busy, median 14 %); its timings
+need one (SPEC §14.11): under this machine's ordinary load T-PERF-01 fails, and at 37–94 % busy one case's 2 s budget
+too. S-PAR-02's digest moved (Joints on 11 fixtures, C04's and C11's owned volumes), so it ran again in Studio before
+the commit: it passed 3 fresh Play sessions on round 5's code on 2026-11-19, and rounds 6 to 10 change none of the files
+it reads. The fix brings three design calls: O11 (j), those near copies, O12, a sword moved along X reads as moved, its
+symmetry and edge standing on the plane x = 0, and O11 (l), a mirror image can read otherwise than its original.
 
 M4, the minigames, is built: `Minigames/*` with the facade and the bots (SPEC §6); T-RNG-01…06 and T-MG-01…16 pass in
 Lune, with L3 and its volume tier (SPEC §14.1: `lune run tests/run -- --volume`, about 18 minutes quiet), and T-PERF-02

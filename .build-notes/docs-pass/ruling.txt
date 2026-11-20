@@ -1,0 +1,21 @@
+Docs pass after M4: the lead's ruling (2026-11-20 04:43)
+==========================================
+
+Run wf_43319bce-7fe (fixer, then checker; reports fixer.json and checker.json here). The fixer applied the seven items
+(the shift fix's post-commit minors from shift_journal.txt's 21:40 entry and round-9 ruling, MassProps.ownership's
+comment, T-DIF-04's case name, and O12's recommendation (ii) in the SPEC and the plain words). The checker passed it:
+the word diff shows only the seven items; every changed sentence re-measured on a copy (option (ii) on all 33,109 valid
+plausible designs: 93 move, no tier); MassProps.luau byte-identical without comments; only T-DIF-04's name changed in
+Invariance.spec and the case passes; layout and list structure intact; --quick 865 pass.
+Its five minors, all taken (four with the checker's tried words, applied from its copies by opcode):
+ 1. §4.3's order sentence: "while the kept set is unchanged (§4.4)" (a hidden part that really covers a kept part
+    cleans it, which moves its place).
+ 2. §4.5 and MassProps.luau's header: the order wording too (comment only).
+ 3. The O12 cell says "applied until you decide", as the SPEC addresses the designer elsewhere.
+ 4. C15's figures: the lead added them to §17.2's O8 row (0.4291 -> 0.3404 Hard enclosed, 0.5329 relabelled, 0.3404
+    grown 1e-12 and relabelled), so §4.4's pointer to §17.2 holds.
+ 5. T-DIF-04's name: its tail now says the two Guard fillers at one centre are no copy.
+Also the fixer's note: README's refill no longer starts a line with "3),".
+Checks: rows, pipes and marks unchanged; MassProps code identical without comments; scripts/verify -- --quick green
+(865 pass, luau-lsp 0 errors). MassProps.luau changes in comments only, so S-PAR-02's run on M4's tree stands; M5's
+commit runs S-PAR-02 again with outcomes.

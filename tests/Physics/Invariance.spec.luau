@@ -786,10 +786,12 @@ return Test.suite("Physics/Invariance", function(t)
 			end
 		end)
 
-	t.it("T-DIF-04 a Ctrl+D copy left in place joins no higher set: F2 with a sealed box on its blade's top, two Guard "
-		.. "fillers that overlap and a Pommel filler under them and a wall, one of the Guard ones again in place, relabelled "
-		.. "Pommel or in Steel, or the wall again; a Pommel filler in the cavity's corner under two walls, the first again; "
-		.. "two Guard fillers at one centre: every owned volume, the mass and the balance", function()
+	t.it("T-DIF-04 a Ctrl+D copy left in place that comes after its original adds nothing (§4.3): "
+		.. "F2 with a sealed box on its blade's top, two Guard fillers that overlap and a Pommel filler "
+		.. "under them and a wall, one of the Guard ones again in place, relabelled Pommel or in Steel, "
+		.. "or the wall again; a Pommel filler in the cavity's corner under two walls, the first again: every "
+		.. "owned volume, the mass and the balance; two Guard fillers at one centre, no copy: the Pommel filler's "
+		.. "share", function()
 			-- the Pommel filler has three higher parts, so its overlap is clipped exactly and it owns the 0.001 of it that lies
 			-- in the cavity's gap; counted among them, the copy made four (MAX_EXACT), sampled in cells 0.0114 across that
 			-- read the gap as covered: it owned 6e-17, mass −3.148e-4 kg, balance −5.53e-4 (f7ac37d the same) (§4.3). An

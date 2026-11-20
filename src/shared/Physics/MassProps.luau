@@ -26,12 +26,13 @@
 -- Mass (§4.5). U = Σ V_own, M = Σ ρ·V_own, COM = Σ ρ·M1_own / M, in part order; ρ = Definitions/Materials.density.
 -- Physics frame = the kept Grip parts (balance, reach, display pivot), and the guard line the kept Guard parts (else
 -- the kept grip's top): a cleaned part counts for mass and COM by what it owns (what no kept part holds: an enclosed
--- part inside a kept one nothing, a filler in a sealed cavity its volume; dust its own volume) and for the total length,
--- and steers nothing else, not even which of two other cleaned parts owns their overlap, only how another one's is
--- measured (above it, it joins its higher parts; a sampled overlap of its own draws on the cleaned parts' share of
--- N_OVERLAP_WORK, §4.3), so no hidden part moves the reach, bladeLength or cutIndex (A25, V2's strap hidden in A26's
--- ring grip), and the mass and the balance only by what it owns and by that measuring, never G. V4 is asked before the
--- verdict, so its frame is every Grip part (validationFrame), as V1–V3 count every part.
+-- part inside a kept one nothing, a filler in a sealed cavity its volume; dust its own volume) and for the total
+-- length, and steers nothing else, not even another part's place in the order that decides who owns an overlap, only
+-- how another hidden part's overlap is measured (above it, it joins its higher parts; a sampled overlap of its own
+-- draws on the cleaned parts' share of N_OVERLAP_WORK, §4.3), so no hidden part moves the reach, bladeLength or
+-- cutIndex (A25, V2's strap hidden in A26's ring grip), and the mass and the balance only by what it owns and by that
+-- measuring, never G. V4 is asked before the verdict, so its frame is every Grip part (validationFrame), as V1–V3 count
+-- every part.
 -- Difficulty frame = the point of the kept Grip parts, axis fixed at blueprint +Y, consistent with the fixed plane
 -- x = 0: no grip part, visible or hidden, can steer a factor (A25–A27, E-S2.7).
 
@@ -383,8 +384,8 @@ function MassProps.ownership(parts: { Prepared }, kept: { boolean }, rankOf: { [
 			if aabbOverlap(p, q, -OVERLAP_TOL) then
 				work(UNITS_PER_OVERLAP_TEST)
 				if (Gjk.within(p, q, OVERLAP_TOL)) then
-					-- an exact copy of a part already above adds nothing to the union, so a Ctrl+D copy left in place
-					-- changes no part's count of higher parts, its overlap box or the cleaned parts' budget
+					-- an exact copy of a part already in H adds nothing to their union, so it is not added again: of a
+					-- part and its copy left in place, the later in §4.3's priority adds nothing (owning 0, below)
 					local again = false
 					for t = 1, #H do
 						again = again or Shapes.sameSolid(q, H[t])

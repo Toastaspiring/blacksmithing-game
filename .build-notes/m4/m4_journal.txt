@@ -207,3 +207,10 @@ plain L3, then scripts/verify -- --volume.
    README Status's minutes and medians), and README's Status says S-PAR-02 ran again and passed. No placeholder left;
    rows, pipes and marks unchanged.
 DECISION: commit M4 ("M4: minigames ..."), explicit staging, docs.rar out; then remove the m4-wt worktree.
+
+[2026-11-20 01:21] COMMITTED M4 as 4ab556c (74 files; docs.rar left out). Removed the m4-wt worktree after checking its 48 changed
+files against HEAD (only the texts and rules files the lead changed on purpose differ). The m4-r3 snapshot stays in scratch.
+NEXT: the docs pass (its own commit, with a checker): the shift fix's minors, MassProps.ownership's comment, T-DIF-04's
+case name, O12's recommendation (ii) in the SPEC and the plain words; then the decisions document to Louis.
+
+[2026-11-20 04:01] Usage limit: the docs pass's checker and the M5 plan's two critics and reviser were cut off before reporting. Resumed both runs (docs pass wf_43319bce-7fe, task w3dyt3cw3: the fixer from cache; M5 plan wf_a5d1d058-712, task w1v9lvl0y: the planner from cache).

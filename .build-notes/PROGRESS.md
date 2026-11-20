@@ -3,25 +3,32 @@
 In plain words, newest first. I add an entry whenever work starts, results come back, I decide something, or I need
 you. Times are local (Paris). At the bottom, the agents doing the work add their own lines as they go, oldest first.
 
-## Where things stand (20 Nov, 00:09)
+## Where things stand (20 Nov, 01:23)
 
-**The "slide a whole sword" fix is done and committed** (`19ed843`, 19 Nov, late). A sword moved whole up, down,
-forward or back now plays the same. Its last text rounds only made sentences say exactly what was measured. The full
-check passed on a quiet machine (776 of 776), and the files the Studio check read are unchanged.
+**M4, the minigames, is done and committed** (`4ab556c`). The three minigames (Smelting, Hammering, Sharpening) are
+built, with the bots that play them, the input recorder and the replay that scores them. Every long statistic came out
+exactly as precomputed on the prototype, the speed test passed, the Studio check passed again, and the full check with
+every long test passed on a quiet machine (980 of 980 in 18 minutes).
 
-**M4, the minigames: merged into the main folder, last steps running.** Its quick tests pass (865), and the long
-statistics all came out exactly as precomputed on the prototype (about 13 minutes of runs). Still to do before its
-commit: the speed test T-PERF-02 (being written and checked now), folding M4's text into the spec (an agent is on it,
-with a checker), then the full check with every long test, on a quiet machine.
+**The "slide a whole sword" fix is committed too** (`19ed843`).
 
-**Your design decisions in plain words are ready**: eleven questions, each with what the game does now and my
-recommendation. I'll send the document once M4 is committed, so its references to the spec are valid. The only change
-I recommend is O12 (measure a sword's symmetry from its grip, so sliding it sideways changes nothing).
+**Your design decisions**: I sent you the plain-words document (`.build-notes/DECISIONS.md`): eleven questions, each
+with what the game does now and my recommendation. The only change I recommend is O12. Nothing waits on your answer.
 
-Nothing is needed from you right now. Both Rojo servers are running.
+**Now:** a small clean-up of the spec's wording (the last small corrections the reviewers listed, and O12's
+recommendation made to agree everywhere), with a checker, as its own commit. Then M5 (crafting and items) starts with
+its plan.
 
 ## 20 Nov
 
+- **04:43** The wording clean-up passed its check and is being committed: O12's recommendation now reads the same
+  in the spec, the plain words and your decisions document, and the reviewers' last small corrections are in. The
+  decisions document goes into the repository with it.
+- **04:01** Back after the usage limit. The wording clean-up's fixer had finished (O12's recommendation now
+  agrees everywhere, the last small corrections applied); its checker is running again. M5's plan is written (crafting
+  and items, nine steps of work); its two critics and the reviser are running again.
+- **01:23** Committed M4 (`4ab556c`) and sent you the decisions document. Started a small wording clean-up of
+  the spec (its own commit, with a checker).
 - **01:20** M4 is finished. Its speed test T-PERF-02 is written and checked (every input rebuilt by the checker,
   every deliberately broken version caught), M4's text is in the spec (all 60 planned edits exact, five small
   contradictions with neighbouring sentences fixed), the Studio check passed again (3 fresh sessions), and the full
@@ -178,14 +185,14 @@ Nothing is needed from you right now. Both Rojo servers are running.
 | M2 | Geometry core: shapes, mass, hidden-part cleaning, Studio parity | Done, commit 7eb9914 (15 Nov) |
 | M3 | Difficulty: the edge, the 8 factors, the tiers | Done, commit f7ac37d (17 Nov) |
 | — | Fix: sliding a whole sword must not change its difficulty | Done, commit 19ed843 (19 Nov) |
-| M4 | Minigames | Built and reviewed; merged, final checks running |
-| M5–M9 | Crafting and items, the world, the server, the client, playtest | After that |
+| M4 | Minigames | Done, commit 4ab556c (20 Nov) |
+| M5–M9 | Crafting and items, the world, the server, the client, playtest | Next: M5's plan |
 
 ## Decisions waiting for you (none urgent)
 
-Eleven questions collect in SPEC.md §17.1 (O4, O7 to O14), each with a default already applied in the game. A
-plain-words document explaining each one, with my recommendation, is written and checked; I'll send it after M4's
-commit. The only change I recommend is O12.
+Eleven questions in SPEC.md §17.1 (O4, O7 to O14), each with a default already applied in the game, explained in plain
+words with my recommendation in `.build-notes/DECISIONS.md`. The only change I recommend is O12. To answer, tell me
+for example "O12: (ii)" or "O4: keep".
 
 ## Where to look for more detail
 
@@ -536,3 +543,21 @@ Each agent appends one line when it starts a step and when it finds or finishes 
 - **00:33** [agent] Checker T-PERF-02: Starting an independent check of the new minigames speed test: whether it builds the exact runs the plan names, times only what it should, uses the right limits and can really fail. I work on copies only; nothing in the game is changed.
 - **00:44** [agent] Checker M4 handoff: Done: the copy of the M4 write-up into the design document, evidence file and README is exact (my own independent copy matches it word for word); five LEAD blanks are the only open numbers; I found five places where the handoff text itself now disagrees with nearby sentences, each with a one-line fix for the lead to decide. Nothing in the project changed.
 - **00:51** [agent] Checker T-PERF-02: Done: the minigames speed test passes my check. I rebuilt every run it times from the plan myself and they match exactly, it times only what it should with the right limits, and five extra breakages of my own were each caught by the right line. Run alone on this computer at 3 to 14 percent busy it passed in under a second. One cosmetic note only: one line is two characters wider than the house layout. Nothing in the game was changed and nothing of mine is left running.
+- **01:23** [agent] Fixer docs: Starting a small wording pass on the design document, the README and two code comments: seven points the reviewers flagged after the shift fix, no game behaviour changes.
+- **01:24** [agent] M5 planner: Starting the plan for the next stage, crafting and items: how finished minigame results turn into a real weapon with its stats, rarity and name. I only read the project and write my plan in my own notes folder; nothing in the game is changed.
+- **01:29** [agent] M5 planner: Read the design document parts for crafting and items and the earlier prototype: the formulas for stats, quality and rarity are fully worked out and the prototype passed all its rarity targets (at least 6 points to spare), so the build mostly ports them. Now reading the existing game code it plugs into.
+- **01:39** [agent] M5 planner: Checked the prototype's numbers against the game as built: the starter sword forged by a good player comes out exactly as the design document says (quality 83, Uncommon, the same six stats), and the rarity targets all hold on the frozen practice scores. So crafting can be built as a straight port with exact expected values to test against.
+- **01:57** [agent] M5 planner: Halfway through writing the plan. Settled how the item is built and checked; one thing to know: the in-Studio check that the game computes the same everywhere will now also cover the minigame scoring and 100 finished swords, using bot runs and saved scores that come out identical on every computer.
+- **02:06** [agent] M5 planner: Finished the plan for crafting and items: every piece to build, the exact results the tests must reproduce (all checked against the game as it is now) and nine steps a builder can check one by one. No balance numbers change. One new question for the designer: after a balance update, how a sword that kept its old rarity should look when its quality score now sits below that rarity. Nothing in the game was changed.
+- **02:07** [agent] M5 plan critic A: Started checking the crafting and items build plan against the approved design document: every crafting rule, test and number it must cover.
+- **02:07** [agent] M5 plan critic B: Starting my review of the crafting and items plan, looking at whether crafted items will come out exactly the same on every machine and whether the planned tests would really catch mistakes.
+- **02:08** [agent] Fixer docs: Done: the seven wording points are fixed in the design document, the README, the evidence file, the plain-words M3 list, one code comment and one test name, each checked against fresh measurements (for example, the grip-based option for a sideways slide still changes no sample sword tier, on all 33,109). Quick tests 865 pass, the T-DIF-04 tests 16 pass, at about 15 percent load. Nothing committed; nothing of mine left running.
+- **02:09** [agent] Checker docs: Started checking the docs pass: comparing every changed file with its copy from before the pass, and re-measuring each changed sentence against the game code.
+- **04:02** [agent] M5 plan critic A: Resumed after an interruption: carrying on checking the crafting and items build plan against the design document, from the notes I saved before.
+- **04:12** [agent] M5 plan critic B: Two findings so far. The quick everyday test run would grow by about 2 to 5 seconds instead of the planned 1.5 at most, because several planned checks re-measure every test sword (about 6 thousandths of a second each, hundreds of times); this would push the run past its 32-second warning line. And the in-Studio check that every computer computes the same would miss a tiny stats difference about 19 times in 20, since it only compares rounded stats; measured: such a difference changes a stored stat on about 1 sword in 2,000. Both have simple fixes, which I am writing up.
+- **04:16** [agent] M5 plan critic A: Checked the plan against the crafting and item rules and the earlier prototype: its expected sword numbers all reproduce (135 of 135 printed values). One finding so far: a small change in how the plan averages metal hardness moves a stored Durability by 0.0001 on about 1 craft in 3,000, harmless for the planned tests but worth stating.
+- **04:22** [agent] M5 plan critic A: Done checking the crafting and items plan for coverage: it covers every crafting rule, test and number, and its expected results reproduce. 14 points for the lead, none blocking: the two that matter most are a quality formula detail that departs from the design document after a future rebalance, and the small averaging change already noted; the rest are missing safety checks and notes. Nothing in the game was changed; nothing of mine is left running.
+- **04:23** [agent] M5 plan critic B: Done. My review of the crafting plan has 11 points, most serious first. The two big ones: the quick everyday test run would grow by 3 to 6 seconds instead of at most 1.5, and one planned check alone would break its own 2-second limit; and the in-Studio check that every computer computes the same should also compare the unrounded steps of the stat formulas, or it misses most tiny differences. I also found that the planned way of averaging the metal values changes a stored stat on about 1 sword in 2,000 compared with the prototype, and that two recompute rules (keeping the recorded step facts, and rescaling step weights) have no test that could fail. Each point comes with a fix. Nothing in the game was changed and none of my test runs is still going.
+- **04:24** [agent] M5 plan reviser: Started revising the crafting-and-items plan with the two reviews (25 points between them); checking each against the rules before taking it.
+- **04:33** [agent] M5 plan reviser: Checked all 25 review points against the design document, the prototype and the code: 22 taken as proposed, 3 adapted. Main changes coming: the quick test run keeps its 1.5-second budget by sharing one set of measured test swords; the in-Studio same-result check will compare unrounded stat steps; the build will copy the prototype metal averaging exactly so the prototype stays a perfect reference.
+- **04:40** [agent] Checker docs: Done checking the wording pass: it holds. Every change is one of the seven points the lead listed, the game code is untouched apart from one comment and one test name, and each corrected sentence held when I measured it again (the grip-based option still changes no sample sword tier on all 33,109, and one arrow-key slide still makes the Starter Sword Hard on two steps). Quick tests 865 pass and the T-DIF-04 tests 16 pass, at about 13 percent busy. Five small optional wording points go to the lead. Nothing committed, nothing of mine left running.

@@ -3943,7 +3943,7 @@ T-PHY-03 maps S2's definition onto these primitives.
   (E-S2.11) · 10 overlap mass error ≤ 0.5 % (X07).
 - **T-DIF** 01 P-RANGE, caps · 02 soft OR: §5.1's formula, its identities, 101 × 101 grid, a planted term · 03
   boundary, NaN errors, `tierRaw` unclamped ·
-  04 enclosed, duplicates and dust bit-identical · 05 Iron ↔ Steel · 06 monotone Thinness, PartCount, EdgeLength ·
+  04 enclosed, plain duplicates and dust bit-identical · 05 Iron ↔ Steel · 06 monotone Thinness, PartCount, EdgeLength ·
   07 invariances · 08 mirrored Asymmetry · 09 step scoping · 10–13 as §14.6 (12 the §5 table's goldens, 13 the
   regression relations). **T-EDG** 01 `Physics/Edge` as §14.6: F5's chain, E-S2.9's edge and cutIndex columns and the
   prototype's edge, X04, P5's comb, §4.6's rules and boundaries, invariance, P1's budgets, each loop's units by caller.
