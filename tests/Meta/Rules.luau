@@ -1,7 +1,8 @@
 --!strict
 -- tests/Meta/Rules.luau — the source rules of SPEC §14.4 as pure functions over (path, source):
---   T-META-01 strict header · T-META-02 purity of src/shared · T-META-03 no transcendental math, no native code ·
---   T-META-04 no float accumulation while iterating a keyed table · T-META-06 no :Reconcile( in src/.
+--   T-META-01 strict header · T-META-02 purity of src/shared · T-META-03 no transcendental math, no native code, no
+--   global that reaches math around the check · T-META-04 no float accumulation while iterating a keyed table, no next
+--   outside an emptiness test · T-META-06 no :Reconcile( in src/.
 -- Token scans skip strings and comments (tests/Meta/Lex). Paths are repo-relative with forward slashes.
 -- Each rule returns a list of Problems; an empty list means the file passes.
 
@@ -581,6 +582,16 @@ end
 -- ── T-META-03 ─────────────────────────────────────────────────────────────────────────────────────────────────
 
 local TRANSCENDENTAL_PREFIXES = { "sin", "cos", "tan", "exp", "log", "pow", "atan", "asin", "acos" }
+-- Globals that reach a library around the `math.` check below, which reads getfenv().math.cos and _G.math.exp as
+-- members (M4's review round 1); no tag allows them. A table key or type field named after one ({ getfenv = 1 },
+-- { rawget: number }) is flagged too; math taken as a value still slips (local m = math, math["cos"]).
+local BANNED_GLOBALS: { [string]: string } = {
+	getfenv = "reaches math around this check, as in getfenv().math.cos",
+	setfenv = "rewrites the globals",
+	_G = "reaches math around this check, as in _G.math.exp",
+	rawget = "reads a library around this check",
+	rawset = "writes a library",
+}
 
 -- Lines carrying a comment that starts with "allow-transcendental: <reason>".
 local function allowedLines(comments: { Lex.Comment }): { [number]: boolean }
@@ -599,6 +610,9 @@ function Rules.transcendental(path: string, src: string): { Problem }
 	local tokens = lexed.tokens
 	local allowed = allowedLines(lexed.comments)
 	for idx, tok in tokens do
+		if tok.kind == "name" and BANNED_GLOBALS[tok.text] and not isMember(tokens, idx) then
+			problem(out, path, tok.line, "uses " .. tok.text .. " (" .. BANNED_GLOBALS[tok.text] .. ", SPEC §4.1)")
+		end
 		if allowed[tok.line] then
 			continue
 		end
@@ -804,9 +818,47 @@ local function accumulates(tokens: { Token }, k: number, start: number, limit: n
 	return false
 end
 
+-- A call of next that is not an emptiness test (`next(t) == nil`, `next(t) ~= nil`, one argument in parentheses) reads
+-- a map's keys in hash order, which a while loop accumulates over as a pairs loop does (M4's review round 1); next{…}
+-- and next 'x' are calls too (M4's review round 2). A local function or local named next that is called is flagged
+-- too; next taken as a value still slips (local f = next, (next)(t)).
+local function nextCalls(path: string, tokens: { Token }, out: { Problem })
+	for idx, tok in tokens do
+		if tok.kind == "name" and tok.text == "next" and not isMember(tokens, idx)
+			and isCallOpener(tokens[idx + 1])
+		then
+			local emptiness = false
+			if isOp(tokens[idx + 1], "(") then
+				local depth, j, oneArg = 0, idx + 1, true
+				while j <= #tokens do
+					local t = tokens[j]
+					if isOp(t, "(") or isOp(t, "[") or isOp(t, "{") then
+						depth += 1
+					elseif isOp(t, ")") or isOp(t, "]") or isOp(t, "}") then
+						depth -= 1
+						if depth == 0 then
+							break
+						end
+					elseif isOp(t, ",") and depth == 1 then
+						oneArg = false
+					end
+					j += 1
+				end
+				local cmp = tokens[j + 1]
+				emptiness = oneArg and (isOp(cmp, "==") or isOp(cmp, "~=")) and isKeyword(tokens[j + 2], "nil")
+			end
+			if not emptiness then
+				problem(out, path, tok.line, "calls next outside an emptiness test (next(t) ~= nil): a map's keys come "
+					.. "in hash order (SPEC §4.1, §6.4)")
+			end
+		end
+	end
+end
+
 function Rules.keyedAccumulation(path: string, src: string): { Problem }
 	local out: { Problem } = {}
 	local tokens = lexOrReport(path, src, out).tokens
+	nextCalls(path, tokens, out)
 	local closeOf = blockEnds(tokens)
 	for forIdx, forTok in tokens do
 		if not isKeyword(forTok, "for") then

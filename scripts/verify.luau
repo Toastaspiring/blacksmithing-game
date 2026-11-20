@@ -1,14 +1,20 @@
 --!strict
 -- scripts/verify.luau — the local gate (SPEC §14.1–§14.4), run from the repo root before every commit to main:
---   lune run scripts/verify [-- --quick]          (Lune 0.8.9: script arguments follow "--")
+--   lune run scripts/verify [-- --quick | --volume]          (Lune 0.8.9: script arguments follow "--")
 -- Stages, each completing before the next:
 --   1 sourcemaps   rojo sourcemap of default.project.json and test.project.json (--include-non-scripts)
 --   2 T-META-07    every string require in a Rojo root resolves to the same module on disk and in both sourcemaps
 --   3 luau-lsp     pass A (roblox platform, test sourcemap, Roblox definitions) over src and tests/studio;
 --                  pass B (standard platform, Lune typedefs through tests/.luaurc) over tests
---   4 tests        lune run tests/run [-- --quick]
+--   4 tests        lune run tests/run [-- --quick | --volume]: the flag is passed through (--quick the L1 run,
+--                  none L3, --volume L3V; §14.1); the two exclude each other, a harness error before any stage
 -- Exit: 0 green · 1 tests failed · 2 harness, sourcemap or T-META-07 · 3 luau-lsp · 4 missing tool. The body runs in
 -- xpcall: an uncaught Lune error would exit 1, the tests' code, so any crash of this script exits 2 instead.
+-- The runner self-test (tests/Meta/Runner.spec) spawns verify to check its arguments, with Test.SELFTEST_CHILD set:
+-- under it verify runs no stage and exits 2 naming the command its tests stage would run, so a test can never run
+-- the whole suite through verify, and a stray variable can never pass the gate. That check comes first after the
+-- arguments, before the repo-root check, so the self-test runs verify from tools/, where a verify that lost it stops
+-- at the repo-root check instead.
 --
 -- luau-lsp's --formatter=plain is its luacheck format, which always exits 0 (AnalyzeCli.cpp, also in 1.56.0 and
 -- 1.67.0), so the diagnostics are parsed here: any TypeError or SyntaxError fails, and so do the lints
@@ -51,16 +57,31 @@ local function main(): never
 	local GlobalTypes = require("../tests/Meta/GlobalTypes")
 	local Requires = require("../tests/Meta/Requires")
 	local Tree = require("../tests/Meta/Tree")
+	local Test = require("../tests/lib/Test")
 
 	-- ── arguments and preconditions ───────────────────────────────────────────────────────────────────────────
 
-	local quick = false
+	local mode: string? = nil -- "--quick" or "--volume", passed through to tests/run
 	for _, a in process.args do
-		if a == "--quick" and not quick then
-			quick = true
+		if (a == "--quick" or a == "--volume") and mode == nil then
+			mode = a
+		elseif (a == "--quick" or a == "--volume") and mode ~= a then
+			finish(2, "HARNESS ERROR: --quick and --volume exclude each other\nusage: lune run scripts/verify [-- --quick "
+				.. "| --volume]")
 		else
-			finish(2, "HARNESS ERROR: unknown or repeated argument " .. a .. "\nusage: lune run scripts/verify [-- --quick]")
+			finish(2, "HARNESS ERROR: unknown or repeated argument " .. a .. "\nusage: lune run scripts/verify [-- --quick "
+				.. "| --volume]")
 		end
+	end
+	-- stage 4's command, built here so the self-test's verify can name it
+	local testArgs = { "run", "tests/run" }
+	if mode then
+		table.insert(testArgs, "--")
+		table.insert(testArgs, mode)
+	end
+	if process.env[Test.SELFTEST_CHILD] then
+		finish(2, "HARNESS ERROR: " .. Test.SELFTEST_CHILD .. " is set, so the runner self-test spawned this verify: "
+			.. 'it runs no stage; the tests stage would run "lune ' .. table.concat(testArgs, " ") .. '"')
 	end
 	for _, f in { "aftman.toml", "default.project.json", "test.project.json", "tests/run.luau" } do
 		if not fs.isFile(f) then
@@ -249,12 +270,7 @@ local function main(): never
 	-- ── 4 tests ───────────────────────────────────────────────────────────────────────────────────────────────
 
 	do
-		local args = { "run", "tests/run" }
-		if quick then
-			table.insert(args, "--")
-			table.insert(args, "--quick")
-		end
-		local run = spawn("lune", args)
+		local run = spawn("lune", testArgs)
 		if run == nil then
 			finish(4, "MISSING TOOL: lune")
 		end
@@ -272,7 +288,7 @@ local function main(): never
 		end
 	end
 
-	return finish(0, "VERIFY GREEN" .. (if quick then " (--quick)" else ""))
+	return finish(0, "VERIFY GREEN" .. (if mode then " (" .. mode .. ")" else ""))
 end
 
 local ok, err = xpcall(main, function(e: any): string

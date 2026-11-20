@@ -25,8 +25,8 @@ src/
     └── Vendor/ProfileStore.project.json                 nested project → vendor/ProfileStore/ProfileStore.luau
 tests/
 ├── run.luau               Lune test runner
-├── lib/                   Test, Assert, Prop, TestRng, Dump, Golden, Tol, Gen (requires nothing in src/: specs
-│                          pass Definitions in); Cheats arrives with M4 (SPEC §14.2)
+├── lib/                   Test, Assert, Prop, TestRng, Dump, Golden, Tol, Gen, Cheats (requires nothing in src/:
+│                          specs pass the modules in)
 ├── Meta/                  T-META-01…08: source rules, require resolver (§1.3 L2 layer order included), runner
 │                          self-test, project check; GlobalTypes and Tools.spec check the luau-lsp definitions file
 ├── Definitions/           T-DEF-00…07 (all 19 modules), T-BAL-01/02 (BalanceGuard)
@@ -36,14 +36,21 @@ tests/
 │                          VerdictPrecision.spec (VisibleOracle, PlausibleDesigns) to the truth; T-EDG-01 (Edge.spec),
 │                          T-DIF (Factors, Difficulty, Invariance, DifficultyTable), T-PERF-01 (Perf.spec, slow);
 │                          S-PAR-02's Lune digest (Parity.spec) and its snippet on a fake Roblox (SPar02.spec)
+├── Minigames/             T-RNG-01…06 (Rng.spec), T-MG-01…16 per module (Params, Checks, the three families,
+│                          Timeline, Input, the facade, Bots), Properties (§14.5), Source (§6.4's whitelist),
+│                          Reference (the bots against S3's prototype and its shipped distributions), Statistics and
+│                          FalsePositives (L3; their t.volume cases L3V), MinigamesHelpers (step inputs, the host loop),
+│                          T-PERF-02 (Perf.spec, slow)
 ├── ItemRender/            RenderPlan and ItemModelBuilder (on a fake Roblox, FakeRoblox), and S-PAR-01's own logic
 ├── fixtures/              Build (shared record helpers), Blueprints (F1–F5), Adversarial (A01–A28), Calibration
-│                          (C01–C15), Regression (X01–X07), Cost (P1–P5, the specks, X08, T-PERF-01's cases),
-│                          WorstDesigns, Parity (S-PAR-02's list): a Rojo root, so Studio tests load them too
+│                          (C01–C15), Regression (X01–X07), Cost (P1–P5, the specks, X08 and its edge, T-PERF-01's
+│                          cases), WorstDesigns, Parity (S-PAR-02's list), Edges (S3's nine reference blade edges),
+│                          MinigameTimelines (24 frozen bot timelines): a Rojo root, so Studio tests load them too
 ├── FixtureSet/            the fixture and Gen specs (not tests/Fixtures, which is tests/fixtures on a
 │                          case-insensitive file system)
 ├── golden/                balance_fingerprint, definition_ids, world_build_list, the §5 table (difficulty_*.bv1),
-│                          S-PAR-02's parity.bv1.digest and parity_designs.bv1 (`--bless` rewrites them: review the diff)
+│                          S-PAR-02's parity.bv1.digest and parity_designs.bv1, minigames.bv1 (T-MG-13) (`--bless`
+│                          rewrites them: review the diff)
 └── studio/                Studio bridge (test place only), e2e snippets (e2e/S-PAR-01, e2e/S-PAR-02), reference
 scripts/verify.luau        the local gate: sourcemaps → T-META-07 → luau-lsp → tests
 tools/                     Roblox definitions for luau-lsp, runner self-test roots (tools/README.md)
@@ -54,7 +61,7 @@ docs/spec/
 │                          S2/cover E-S2.12's (the exact verdict, its cap, worst_designs.luau for T-PERF-01), S2/m3
 │                          E-S2.13's (difficulty as built)
 └── review/                review findings, the lead's verdicts and rulings (RULINGS.md)
-docs/build/                M1–M3 build notes: open items, deviations from the SPEC, what each builder measured
+docs/build/                M1–M4 build notes: open items, deviations from the SPEC, what each builder measured
 vendor/ProfileStore/       vendored ProfileStore (MadStudioRoblox, commit 45c9847, Apache-2.0, never edited)
 ```
 
@@ -62,7 +69,9 @@ The `src/` folders follow SPEC §1.2's module map. M1 filled `src/shared/Definit
 and `Validate` included), `Util/Quantize` and `Blueprint/{Schema, Canonical, Quat, Names, Views}`. M2 added
 `Physics/{Shapes, Gjk, Cover, Sampling, MassProps, Analyze}` (validation, the exact Enclosed verdict and mass
 properties), `Blueprint/{Mirror, WorkSet}` and a minimal `ItemRender/{RenderPlan, ItemModelBuilder}`. M3 added
-`Physics/{Edge, Factors, Difficulty}`, which `Analyze.run` calls for the edge and the steps (SPEC §4.6, §5).
+`Physics/{Edge, Factors, Difficulty}`, which `Analyze.run` calls for the edge and the steps (SPEC §4.6, §5). M4 added
+`Minigames/{Types, Rng, Params, Checks, HoldZone, TimingStrike, PrecisionTrace, Timeline, Input, Minigames, Bots}`:
+the three MVP minigames, their wire format, the input Recorder and the facade the server and client call (SPEC §6).
 `Main.server`, `Main.client` and `Net/Remotes` are still the M0 stubs, the other folders hold `.gitkeep` files, and
 `tests/studio/bridge/` holds the two bridge stubs. Later milestones fill them.
 
@@ -88,14 +97,18 @@ rojo sourcemap test.project.json --include-non-scripts -o test.sourcemap.json
 luau-lsp analyze --platform=roblox --sourcemap=test.sourcemap.json --definitions:@roblox=tools/luau-lsp/globalTypes.None.d.luau --ignore="vendor/**" --formatter=plain src tests/studio
 luau-lsp analyze --platform=standard --ignore="tests/studio/**" --formatter=plain tests
 lune run tests/run -- --quick                                      # pure-module tests without t.slow (L1)
-lune run tests/run                                                 # all tests, statistical ones included (L3)
+lune run tests/run                                                 # all tests but t.volume, statistics included (L3)
+lune run tests/run -- --volume                                     # L3 plus the t.volume statistics (L3V)
 lune run scripts/verify                                            # the gate: sourcemaps → T-META-07 → luau-lsp → tests
 ```
 
-Lune 0.8.9 passes script arguments only after `--`. Runner flags: `--quick`, `--filter <text>`, `--seed <n>`
-(replays one property case), `--bless` (rewrites goldens: review the diff), `--list`, `--root <dir>`. The runner
-exits 0, 1 (a FAIL or an ERROR) or 2 (harness, including a `--filter` that matches no case and a `--seed` that
-replays none); `scripts/verify [-- --quick]` exits 0 green, 1 tests, 2 harness (a crash of verify itself included),
+Lune 0.8.9 passes script arguments only after `--`. Runner flags: `--quick`, `--volume` (also runs the `t.volume`
+cases, which a plain run skips and lists; due at milestone exit, before a playtest and after a change to the minigame
+data, the bots or a pinned config name, SPEC §14.1), `--filter <text>`, `--seed <n>` (replays one property case),
+`--bless` (rewrites goldens: review the diff), `--list`, `--root <dir>`. The runner exits 0, 1 (a FAIL or an ERROR)
+or 2 (harness, including `--quick` with `--volume`, a `--filter` that matches no case and a `--seed` that replays
+none); `scripts/verify [-- --quick | --volume]` passes its flag to the runner and exits 0 green, 1 tests, 2 harness (a
+crash of verify itself included),
 sourcemap or T-META-07, 3 luau-lsp, 4 missing tool, including a `tools/luau-lsp/globalTypes.None.d.luau` that is
 empty, cut or foreign, or that luau-lsp cannot read (checks in [`tools/README.md`](./tools/README.md)). luau-lsp's
 `--formatter=plain` always exits 0, so verify reads its diagnostics: type and syntax errors and the lints
@@ -151,3 +164,12 @@ and C11's owned volumes), so it ran again in Studio before the commit: it passed
 on 2026-11-19, and rounds 6 to 10 change none of the files it reads. The fix brings three design calls: O11 (j), those
 near copies, O12, a sword moved along X reads as moved, its symmetry and edge standing on the plane x = 0, and O11 (l),
 a mirror image can read otherwise than its original.
+
+M4, the minigames, is built: `Minigames/*` with the facade and the bots (SPEC §6); T-RNG-01…06 and T-MG-01…16 pass in
+Lune, with L3 and its volume tier (SPEC §14.1: `lune run tests/run -- --volume`, about 18 minutes quiet), and T-PERF-02
+within its budgets (Lune medians, quiet: `judge` at most 2.45 ms against 8, `prepare` at most 2.47 ms against 5). The
+bots reproduce S3's prototype score for score (4,800 runs) and every fixed-seed statistic is the one precomputed on it
+(`docs/build/M4-notes.md`). M4 has no Studio scenario (SPEC §18), but it changes test files S-PAR-02 reads, so S-PAR-02
+ran again on the merged tree and passed 3 fresh Play sessions (2026-11-20); Lune = Studio parity of the judge is
+S-PAR-02's M5 extension, on the frozen bot timelines. Its open design calls are SPEC §17.1 O4 (Steel's drop floor), O13
+(the combo) and O14 (the live score), each built with its default.

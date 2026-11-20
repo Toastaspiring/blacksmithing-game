@@ -1,0 +1,209 @@
+M4 (Minigames): the lead's journal
+=================================
+
+[2026-11-19 08:05] RULING on review round 1 (workflow wf_f9a64216-771; reports in .build-notes\m4-plan\build\
+wf_f9a64216-771_M4_V1_adversary_r1.json and wf_f9a64216-771_M4_V2_numbers_and_text_r1.json)
+
+Where things stand. Builders 1-4 built slices 1-8 in the worktree (scratch m4-wt, a detached worktree of f7ac37d).
+Both reviewers say the minigame code holds: live = replay on 6,600 runs of V1's own host driver; the PRNG matches an
+independent Python reference on 3,000 streams; every E-S3 vector, golden and hash re-derived by V2 matches; the 24
+frozen timelines judge at the shipped run-1 scores; 15 pinned L3 configurations re-run on the prototype equal the pins;
+judge never threw on 3,600 hostile timelines; no §6.4 rule is broken. verify --quick is green on clean copies (847-852
+pass), plain L3 for M4 passes (170 pass), M4's L1 share is 2.0-2.2 s at 23-45 % load.
+
+Both fail round 1 under L11, with two majors each. I checked each against the worktree (grep): all four are real.
+
+MAJORS (all taken)
+- M1 (V1): the handoff's slice-10 expectation for T-PERF-02 (prepare on Cost.X08_EDGE "0.35 ms") is generate alone.
+  The build's prepare takes 4.04 ms (14 % load), 3.75 of it in the edge hand-off's 8 Douglas-Peucker attempts; the
+  prototype costs the same, so the cost was never measured. That is 81 % of the 5 ms Lune budget and about 10.5 ms
+  projected in Studio, over §10.5's 7 ms. L11: "a number in the handoff that the build does not reproduce".
+  RULING: take V1's split tree (scratch m4-v1-1\out\fix_splittree.diff), with one guard of mine: a node gets children
+  only when its loop found an interior point (imax > a, i.e. dmax >= 0). Why: the old loop starts at dmax = -1,
+  imax = a, and a NaN distance never beats it; the old Douglas-Peucker then leaves the segment whole, while the split
+  tree as written would push (a, b) again forever. With the guard the tree is finite for every input and keeps
+  exactly what the old code keeps. Bit-identity is by construction (a segment's first farthest point does not depend
+  on the tolerance) and V1 checked it on 24,120 hand-offs. Pin it with a test against the prototype's hand-off on
+  chains that go through Douglas-Peucker (counted, required > 0), collinear runs included; quick part small (M4's L1
+  share stays <= 3 s), larger part t.slow. Correct the handoff: T-PERF-02's expectation is "prepare = hand-off +
+  generate", measured with the fix and the load stated, and §10.5's cost table names the hand-off.
+- M2 (V1): the handoff's §6.11 (line ~452) says TimingStrike's decisions lag the frame by max(0, timingOffsetMs). With
+  a negative offset they lead it (at -120 a Miss fires 100.7 ms before T+M, the needle still in the drawn window).
+  L11: "a SPEC statement the handoff would leave false". RULING: V1's corrected text; line ~361 gains "(or lead it,
+  for a negative offset)"; grep the handoff, the notes, headers and comments for the same claim and fix each.
+- M3 (V2): the handoff's §6.4 rule 2 (line 202) says "no other math member", false for the constant math.huge used in
+  TimingStrike, PrecisionTrace and Input, and contrary to the handoff's own T-META-03 row. RULING: V2's text, "no
+  other math member but the constant math.huge".
+- M4 (V2): the handoff (§6.8 note, E-S3.10) and M4-notes B2 finding 3 say the two fire-decay groupings give the same
+  doubles at 600, so "the pin matters only if a retune moves the value". With properly random F they differ in the
+  last bit for 0.10 %, and the regrouped build fails plain L3's parity (Reference, Iron/Normal Elite run 55); the old
+  experiment's LCG kept only 23 fraction bits. The code is right. RULING: V2's four text edits.
+
+MINORS (all taken; the fixer checks each first and rejects, with the reason, any that is wrong)
+- V1 #3, Source.spec's whitelist: add V1's BANNED_GLOBALS (getfenv, setfenv, _G, rawget, rawset) and `next(`, with
+  the planted rows; the spec's header names what still slips (a module-level memo past the export's deep-freeze,
+  printf rounding). T-META-03/04 in tests/Meta/Rules.luau have the same gap, but that file is not M4's (L1): the fixer
+  writes the matching change as a patch in its scratch folder, and the lead applies it in the main tree with M4.
+- The behaviour-changing mutation survivors, each with a test that kills it: V1 #4's seven (H17, A13, A20, A36, S18,
+  B10, B11). B10 and B11 are V2 #4 and #5: take V2's code for those two, V1's for the other five, no duplicates.
+- V1 #5: the cap bounds the trace's record count, not its cost; the costliest arrangement under it is about 2 % above
+  the honest one. Say so in §10.5 / §17.2 S5 and M4-notes, and make slice 10's T-PERF-02 time recordCap records spread
+  over travel, as V1's hostile.luau part 2.
+- V1 #6, CycleStart at GO: text only, "the host plays it at GO and whenever the view's cycle changes, on the raw clock".
+- V1 #7, §10.3 names Timeline.capBytes outside §6.2's facade: S5 makes no direct Timeline call. If judge's TooMany
+  check is O(1) on the buffer length before any per-record work, the text says S5 relies on it; otherwise re-export
+  capBytes from the facade (with a test that it equals Timeline's per family) and the text names that.
+- V1 #8: the T-MG-15 offset report, with V1's figures (0.4790 / 0.6482 / 0.7124 at -35 / 0 / +35), in M4-notes B4
+  and the handoff's E-S3.10.
+- V2 #3: **[Decision to confirm]** before (O13) and (O14) in the four SPEC sentences.
+- V2 #6: the L3V rationale (Reference covers the four human players; the Perfect controllers are pinned by T-MG-11
+  and L3V's T-MG-03). My own L5 "Why" in lead-decisions.md overstates it the same way; it stays as written (a record
+  of the decision) and this entry corrects it.
+- V2 #7 "exceed 37.70" (handoff and Rng.spec); #8 1,479 records; #9 the σ 4 ms rates per strike count; #10 "a few
+  1/16384 u"; #11 README line numbers (the lead re-locates every Old block after the shift fix's commit anyway);
+  #12 the three wording nits.
+
+NEXT. M4 fix round 1 (workflow wf_9e5ea538-4ff, task wp0ang251, launched 08:02): one fixer, then V1 and V2 under a convergence severity, then the
+minors fixer only if no blocker or major stands. Snapshot of the round-1 build: scratch m4-r1\repo (the worktree
+without .git, checked identical). Convergence severity: a blocker or major is only (1) a round-1 major not closed or
+closed inexactly; (2) a false sentence the fix round wrote; (3) a test the fix round added that passes on its named
+mutant; (4) a regression against m4-r1 (any score, hash, golden, fingerprint, frozen-timeline result or precomputed
+outcome that changes, or an existing test weakened); (5) live != replay, a parity break, a §6.4 break, a crash, NaN or
+unbounded cost; (6) M4's L1 share over 3 s quiet. New members of classes already named are minor; nobody hunts them.
+The merge into the main tree, slices 9-11 and the M4 commit still wait for the shift fix's commit (L1, L2).
+
+[2026-11-19 09:15] Usage limit: the lead stopped M4 fix round 1 (wf_9e5ea538-4ff, task wp0ang251) to save the
+allowance. Resume it with its unchanged script and resumeFromRunId wf_9e5ea538-4ff. The fixer carries on from scratch
+m4-fix-1\NOTES.md, and the worktree may hold a half-applied edit, so the fixer checks its notes against the worktree.
+
+[2026-11-19 18:25] RULING on review round 2 (wf_9e5ea538-4ff, resumed at 17:47 after the usage limit; reports in
+.build-notes\m4-plan\build\wf_9e5ea538-4ff_M4_fixer_r1.json, ..._M4_V1_adversary_r2.json, ..._M4_V2_numbers_and_text_r2.json)
+The code holds.
+ - The split tree is bit-identical to round 1's Douglas-Peucker and to the prototype: V1 checked about 234,000
+   simplifications and 32,864 hand-offs, V2 39,600 hand-offs. Ties, collinear runs, repeated points, NaN and +-inf all
+   terminate with the old result.
+ - prepare on X08's zigzag goes from 4.04 to 1.08-1.13 ms.
+ - Every new test kills its named mutant.
+ - Goldens, fingerprint, frozen timelines and Definitions are byte-identical to round 1.
+ - Plain L3 for M4 passes (176); verify --quick is green (852); M4's quick share is 1.83-1.89 s.
+Both reviewers fail round 2 on the same text major. The corrected §10.5 cost cell, E-S3.10's fix-round-1 bullet and
+the M4-notes M1 bullet leave the zigzag out of the reference blades. It is the ninth (E-S3.5's table, Edges.order;
+Cost.X08_EDGE == Edges.zigzag), and its hand-off is the costliest: 0.81 ms in 8 attempts. The saw takes 0.24 ms in 6,
+and the other seven at most 0.02 ms.
+DECISION: take the three-phrase fix: V2's wording for the table cell, V1's for E-S3.10 and the notes. Both reviewers
+tried it, and all 59 Old blocks still occur once.
+Minors taken:
+ - V1 #2: the PrecisionTrace header says the tree costs a fraction of several attempts; where one attempt suffices it
+   costs up to about 3x that attempt, under 0.5 ms on 256 points.
+ - V1 #3: Source.spec also catches next{} and next 'x' (two planted rows); its header names the over-matches and what
+   still slips. The same change goes into the lead's rules_meta.diff.
+ - V2 #2: the test comment says "1 at 6 x speed".
+ - V2 #3: slice 10's judge expectation becomes "near the prototype's 2.59 ms; the build 2.34 ms at 12 % busy".
+NEXT. M4 round 3, a small one. Snapshot m4-r2 (the worktree after round 2, checked identical). One fixer applies the
+above, then one verifier checks only the round-3 diff against m4-r2. Its severity: a changed sentence false, a merge
+error, a test that cannot fail, or anything else changed.
+Then, after the shift fix's commit: the merge into the main tree, slices 9-11, the handoff, the M4 commit.
+
+[2026-11-19 19:20] RULING on round 3 (wf_6bba5532-b9a; reports in .build-notes\m4-plan\build\wf_6bba5532-b9a_*.json)
+The verifier passes the round: no blocker or major.
+ - The zigzag sentence is fixed in its three places. The verifier reproduced the costs: zigzag 0.81 ms in 8 attempts,
+   saw 0.24 in 6, the other seven at most 0.02.
+ - Source.spec's new rows bite, and so does the fixer's rules_meta.diff, which replaces m4-fix-1's.
+ - Only comment lines changed in src/. Goldens, fixtures and Definitions are byte-identical; the 59 Old blocks still
+   occur once each.
+ - verify --quick is green on a clean copy (852); M4's quick share is 1.81-1.94 s.
+The fixer departed from my ruling on the PrecisionTrace header, rightly: both of my figures were false. The tree costs
+up to x46-97 a single attempt, and peeling chains reach 0.514 ms. The verifier confirms the fixer's wording.
+Its one optional minor, the header's split leaving out two attempts, I applied myself (its tried wording; comment only;
+PrecisionTrace quick filter 18 pass) and noted in M4-notes.
+M4's slices 1-8 have CONVERGED. Snapshot: scratch m4-r3\repo, checked identical.
+NEXT, after the shift fix's commit:
+ - patch M4 into the main tree;
+ - apply m4-fix-3\out\rules_meta.diff (git apply -p0);
+ - apply docs/build/M4-handoff.md, reconciled with the shift fix's text;
+ - slices 9-11 (the --volume statistics, T-PERF-02, a quiet full verify), and the milestone's Studio check if §18 asks;
+ - commit M4 and remove the worktree.
+
+[2026-11-19 21:05] MERGE PREP (read-only, scratch m4-merge-prep; nothing in the main tree changed)
+ - The worktree equals m4-r3\repo (diff -rq, .git aside). It modifies 10 tracked files and adds 22 paths (the
+   Minigames modules and tests, Edges and MinigameTimelines fixtures, minigames.bv1 golden, Cheats, runner-selftest
+   folders, M4-notes and M4-handoff).
+ - None of the 10 files (nor tests/Meta/Rules.luau, which rules_meta.diff patches) differs from f7ac37d in the main
+   tree, so the code merge is a plain copy of m4-r3's versions; the shift fix touches none of them.
+ - M4-handoff.md: 59 Old blocks (58 fenced, 1 inline). 58 occur once in the current SPEC, evidence and README. The one
+   that does not is §14.1's L1 row, which the shift fix rewrote, as the handoff foresaw: keep the fix's figures and
+   apply the three numbers (gate 35 s quiet, M4's share 3 s quiet, the t.slow trigger 32 s). The fix's row also has a
+   new "past 29 s the heaviest fast cases" clause and "today 720 pass and 56 skip": reconcile both with L5 at the merge.
+ - The handoff's README Status says M4 has no Studio scenario (§18). But M4 changes tests/lib/Test.luau, Tol.luau,
+   tests/fixtures/Cost.luau and the balance_fingerprint golden, which Studio syncs and S-PAR-02 reads: decide at M4's
+   commit whether S-PAR-02 runs again.
+
+[2026-11-19 23:56] MERGED M4 into the main tree on top of the shift fix's commit 19ed843 (scratch m4-merge-prep\merge_m4.sh):
+the 10 modified files and 22 new paths copied from m4-r3\repo (src/shared/Minigames kept its tracked .gitkeep), then
+m4-fix-3\out\rules_meta.diff applied with git apply -p0 (tests/Meta/Rules.luau and tests/Meta/Source.spec.luau). Each
+copy compared equal. --quick on the merged tree: 865 pass, 113 skip, 0 fail, 30.30 s (77 files; not a quiet timing).
+RULINGS for slice 11's text:
+ - §14.1's L1 row: keep the shift fix's figures and history; L5's gate 35 s quiet with M4's Minigames/ share 3 s, the
+   t.slow trigger 32 s, and the shift fix's "past 29 s the heaviest fast cases" becomes 34 s (one second under the gate,
+   as 29 was under 30).
+ - docs/build/M4-handoff.md stays as the record of the patch, with one header line saying it was applied.
+ - Figures the lead measures go in as placeholders until slices 9-11 give them.
+Launched: the handoff's application (wf_758efdc0-cfc: one applier, text only, then one checker) and slice 9's runs (plain
+L3 and volume, Statistics then FalsePositives, one Lune at a time). Slice 10's T-PERF-02 test is not written yet: it
+follows once slice 9's timings are done, so its builder's Lune runs do not overlap them.
+
+[2026-11-20 00:09] SLICE 9 done in the main tree (scratch m4-slice9; one Lune at a time; the handoff applier, text only, beside it):
+ - plain Statistics: 4 pass, 9 skip, 88.79 s at 11-26 % (median 17); FalsePositives: 3 pass, 12 skip, 11.44 s at 13-28 %.
+ - volume Statistics: 13 pass, 201.41 s at 11-29 % (median 15); volume FalsePositives: 15 pass, 462.05 s at 9-30 %
+   (median 13). M4's volume cases alone about 575 s.
+ - Every printed figure equals the handoff's expected value: T-MG-04/05 (0.51/0.67/0.65; 0.0352/0.0501/0.0052), the
+   T-MG-06 drops (0.0153, 0.0086, 0.0130), T-MG-12 (0.0463/0.0510, 0.0220/0.0213, 0.0246/0.0136), T-MG-10's SDs and
+   exact shares, HoldZone's presses (9/9/8/8/8/8/7/7), the trace's deviations, quantiles and jerks, the true positives.
+Slice 10 launched: T-PERF-02's builder then a checker (scratch m4-slice10\tperf02-wf.js).
+
+[2026-11-20 00:46] RULING on the handoff's application (wf_758efdc0-cfc; reports m4\handoff\applier.json and checker.json)
+The checker rebuilt the application itself from the pre-application texts: SPEC.md and README.md match it word for
+word, and the evidence differs only by the applier's four declared additions. All 60 Old texts are replaced exactly
+(59 fenced, #109 included, plus the inline README line); every insertion is in place; E-S3.10 holds the handoff's four
+sections in order; the L1 row is as ruled; five [LEAD: ...] placeholders and no invented figure; layout clean.
+CONFIRMED the applier's additions: the E-S3.10 heading and Contents link, the fix-round-1 source line, the slices 3-5
+section, and the E-S3.10 T-PERF-02 placeholder.
+The checker's five majors all come from the handoff's own text or stale neighbours, none from the application:
+README's "all tests" for a plain run; §16.32 FP_RUNS_TS "per human profile" (it is per device); §14.6's L3 bullet
+listing L3V cases; §12.10 naming CycleStart an S3 FeedbackEvent (it now comes from the view's cycle); §14.8's Q8 fail
+targets on BOT_RUNS (Average and Good run on BOT_RUNS_FAIL). DECISION: apply each tried fix, with the minors 6 and 8
+to 13 (the L1 row's third "quiet" dropped; the dangling "Golden (b)"; §6.6's End row gains the final push; T-PERF-02's
+row and PT_GENERATE_BUDGET_MS name prepare; the Definition of Done and §18 name the volume tier; the PtTooPrecise
+margin rows gain x3.24; README's tree lists T-PERF-02). Not taken: minor 7's join of two split code lines (the split
+follows §6.2's style). Applied from the checker's fixed copy by opcode (scratch m4-lead-fix); rows, pipes and marks
+unchanged; the only lines over 120 are table rows.
+S-PAR-02: M4 changes tests/lib/Tol.luau, which S-PAR-02 requires, so it runs again in Studio before M4's commit (a
+regression check; M4 itself has no Studio scenario).
+
+[2026-11-20 00:53] S-PAR-02 PASSED 3 fresh Play sessions on the merged tree (Project 215, Studio id 029676a3), Server and Client in
+each: fixtures 136 designs, 425,675 bytes, fnv1a32 892272501; generated 200, 709,366 bytes, 611215233; the digest
+equal to Lune's. Before it, Studio's synced sources matched the repo (78 files under src/shared and tests/lib,
+fixtures and golden: one listing digest, fnv 1322100693, on both sides), M4's files included.
+SLICE 10 (wf_9775b408-35a; reports m4\slice10\builder.json and checker.json): tests/Minigames/Perf.spec.luau, two
+t.slow cases (judge at each family's cap <= REPLAY_BUDGET_MS; prepare <= PT_GENERATE_BUDGET_MS). The checker rebuilt
+every input byte for byte (HoldZone 1,024 records, TimingStrike 512 presses, the trace 1,479 spread and honest as
+hostile.luau part 2, decode's 2,048 refused TooMany; the chain 256 points, 7 E shrinks, no Douglas-Peucker, 8.53 of
+8.55 u), confirmed the method and that only the named calls are timed, and killed five mutants of its own (the
+builder eight). PASS, one cosmetic minor (a 122-column line), whose tried wrap the lead applied.
+NOTED: X08b (P1)'s edge from Analyze.run is a 2-point chain the hand-off refuses as short, so its prepare times
+generate's fallback (about 0.5 ms). The test prints it and does not assert it (the X08 edges are S2's output).
+Slice 11's quiet runs launched (scratch m4-slice11\run11.sh): T-PERF-02 alone twice, --quick, its Minigames/ share,
+plain L3, then scripts/verify -- --volume.
+
+[2026-11-20 01:20] SLICE 11, quiet runs on the merged tree (scratch m4-slice11; no agent running; load 9-23 %, medians 12 %):
+ - T-PERF-02 alone, twice: pass 2, 0.86 and 0.84 s. judge HoldZone 0.376-0.428 ms, TimingStrike 0.155-0.164, the
+   trace spread 2.406-2.448 against honest 2.343-2.352 (x1.027-1.041), decode of 2,048 0.089-0.090; prepare X08a
+   0.123-0.128, X08b 0.503-0.511 (the fallback), X08c 0.142-0.147, X08_EDGE 1.050-1.079, the length-bound chain
+   1.877-1.883 (Iron/Normal) and 2.471-2.473 (Steel/Hard). x2.6 at most 6.43 against 7 ms.
+ - --quick: 865 pass, 115 skip, 29.35 s (10-19 %); its Minigames/ share 1.79 s (140 pass, 59 skip): L1 <= 35, share <= 3.
+ - plain L3 (lune run tests/run): 959 pass, 21 skip, 429.20 s (9-22 %): <= 10 min.
+ - scripts/verify -- --volume: VERIFY GREEN, 980 pass, 0 skip, 1,062.65 s of tests, 1,069.7 s in all (9-23 %): L3V <= 20 min.
+ - The five placeholders filled with these figures (SPEC §14.1's L1 row, E-S3.10's T-PERF-02 bullets, E-S8.7, the
+   README Status's minutes and medians), and README's Status says S-PAR-02 ran again and passed. No placeholder left;
+   rows, pipes and marks unchanged.
+DECISION: commit M4 ("M4: minigames ..."), explicit staging, docs.rar out; then remove the m4-wt worktree.

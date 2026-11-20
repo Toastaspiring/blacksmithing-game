@@ -1,8 +1,9 @@
 --!strict
 -- tests/run.luau — the Lune test runner (SPEC §14.3). Run from the repo root; Lune 0.8.9 passes script arguments
 -- only after "--":
---   lune run tests/run [-- --quick | --filter <text> | --seed <n> | --bless | --list | --root <dir>]
+--   lune run tests/run [-- --quick | --volume | --filter <text> | --seed <n> | --bless | --list | --root <dir>]
 --     --quick          skip t.slow cases (the L1 gate)
+--     --volume         also run the t.volume cases (L3V), which a plain run skips and lists; never with --quick
 --     --filter <text>  run the cases whose "Suite › case" name contains <text> (plain text)
 --     --seed <n>       replay one Prop case seed (printed by a failing property), 0 <= n < 2^32; a seed that
 --                      replays no case is a harness error
@@ -11,10 +12,14 @@
 --     --root <dir>     discover specs under <dir> (repo-relative) instead of tests/ (runner self-test, T-META-05)
 -- Discovery: <root>/**/*.spec.luau except <root>/lib and <root>/studio, in byte-wise path order; each spec returns
 -- one uniquely named Test.suite; each case runs in xpcall and fails past its budget (Tol.CASE_BUDGET_MS, or
--- Tol.SLOW_CASE_BUDGET_MS for t.slow).
--- Exit: 0 all passed · 1 a FAIL (assertion) or an ERROR (crash) · 2 harness: not at the repo root, bad argument,
--- no specs, a spec that fails to load or returns no suite, a duplicate suite, a filter that matches no case, a
--- --seed that replays no property case.
+-- Tol.SLOW_CASE_BUDGET_MS for t.slow). A t.volume case is a slow case: --quick skips it with the others; a plain run
+-- skips it too and prints a SKIP line for it, so the cases L3V adds are named in L3's output.
+-- Exit: 0 all passed · 1 a FAIL (assertion) or an ERROR (crash) · 2 harness: not at the repo root, bad argument
+-- (--quick with --volume included), no specs, a spec that fails to load or returns no suite, a duplicate suite, a
+-- filter that matches no case, a --seed that replays no property case, a root that holds the runner self-test
+-- (Test.SELFTEST_SPEC, so tests/ itself) asked of a runner that self-test spawned (Test.SELFTEST_CHILD set: the
+-- self-test gives each runner a root under tools/runner-selftest/, so such a root means a broken check, and the
+-- runner stops before loading a spec instead of starting the self-test's own suite again).
 
 local fs = require("@lune/fs")
 local process = require("@lune/process")
@@ -33,8 +38,17 @@ end
 
 -- ── arguments ─────────────────────────────────────────────────────────────────────────────────────────────────
 
-type Options = { quick: boolean, filter: string?, seed: number?, bless: boolean, list: boolean, root: string }
-local opts: Options = { quick = false, filter = nil, seed = nil, bless = false, list = false, root = "tests" }
+type Options = {
+	quick: boolean,
+	volume: boolean,
+	filter: string?,
+	seed: number?,
+	bless: boolean,
+	list: boolean,
+	root: string,
+}
+local opts: Options =
+	{ quick = false, volume = false, filter = nil, seed = nil, bless = false, list = false, root = "tests" }
 
 local function normalizeRoot(dir: string): string
 	local d = string.gsub(dir, "\\", "/")
@@ -62,6 +76,8 @@ do
 		end
 		if a == "--quick" then
 			opts.quick = true
+		elseif a == "--volume" then
+			opts.volume = true
 		elseif a == "--bless" then
 			opts.bless = true
 		elseif a == "--list" then
@@ -87,11 +103,14 @@ do
 				opts.root = normalizeRoot(v)
 			end
 		else
-			harness("unknown argument " .. a .. "\nusage: lune run tests/run [-- --quick | --filter <text> | "
+			harness("unknown argument " .. a .. "\nusage: lune run tests/run [-- --quick | --volume | --filter <text> | "
 				.. "--seed <n> | --bless | --list | --root <dir>]")
 		end
 		seen[a] = true
 		i += 1
+	end
+	if opts.quick and opts.volume then
+		harness("--quick and --volume exclude each other: --quick skips every t.slow case, and t.volume cases are slow")
 	end
 end
 
@@ -125,6 +144,15 @@ walk(opts.root, true)
 table.sort(specs, Dump.byteLess)
 if #specs == 0 then
 	harness("no *.spec.luau files under " .. opts.root)
+end
+if process.env[Test.SELFTEST_CHILD] then
+	local held = "/" .. Test.SELFTEST_SPEC
+	for _, path in specs do
+		if string.sub(path, -#held) == held then
+			harness(Test.SELFTEST_CHILD .. " is set, so the runner self-test spawned this runner, and " .. opts.root
+				.. " holds that self-test (" .. path .. "): a self-test runner never starts its own suite again")
+		end
+	end
 end
 
 -- ── load ──────────────────────────────────────────────────────────────────────────────────────────────────────
@@ -203,11 +231,17 @@ for _, entry in suites do
 		end
 		matched += 1
 		if opts.list then
-			print(full .. (if case.slow then "  [slow]" elseif case.skip then "  [skip]" else ""))
+			local tag = if case.volume then "  [volume]" elseif case.slow then "  [slow]" elseif case.skip then "  [skip]" else ""
+			print(full .. tag)
 			continue
 		end
 		if case.skip or (opts.quick and case.slow) then
 			skipped += 1
+			continue
+		end
+		if case.volume and not opts.volume then
+			skipped += 1
+			print("  SKIP  " .. full .. " (t.volume: run with -- --volume)")
 			continue
 		end
 		local c0 = os.clock()
@@ -232,8 +266,8 @@ if opts.filter and matched == 0 then
 	harness("--filter " .. string.format("%q", opts.filter :: string) .. " matched no case")
 end
 if opts.seed ~= nil and not opts.list and Prop.replayed == 0 then
-	harness("--seed " .. tostring(opts.seed) .. " matched no property case (a mistyped seed, or a --filter or "
-		.. "--quick that leaves its case out)")
+	harness("--seed " .. tostring(opts.seed) .. " matched no property case (a mistyped seed, or a --filter, a "
+		.. "--quick or a missing --volume that leaves its case out)")
 end
 if opts.list then
 	print(string.format("LIST cases=%d files=%d", matched, #specs))

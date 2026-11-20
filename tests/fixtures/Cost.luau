@@ -12,7 +12,8 @@
 --                  measureInvalid, §11.13)
 --   X08            E-S8.4's cost cases as aliases: X08a = P2 (24 rotated cylinders), X08b = P1 (24 overlapping
 --                  hitbox-sized blocks), X08c = P5 (the sawtooth blade). Its 256-point zigzag edge is an EdgeChain for
---                  M4's T-PERF-02, not a blueprint
+--                  M4's T-PERF-02, not a blueprint: X08_EDGE, Edges.zigzag (one main chain ±0.30 stud, y 1.48 → 4.88,
+--                  with its grip point and axis)
 --   TPERF          T-PERF-01's cases in order: X08's aliases (P1 once, under both names), P3, P4, the specks, then
 --                  WorstDesigns' valid and TooComplex designs
 --
@@ -23,6 +24,7 @@
 -- bit-identical to the prototype, and tests/FixtureSet/Cost.spec exempts it.
 
 local Build = require("./Build")
+local Edges = require("./Edges")
 local WorstDesigns = require("./WorstDesigns")
 
 type Part = Build.Part
@@ -271,6 +273,7 @@ local Cost = {
 	order = ORDER, -- {"P1", …, "P5", "P1-floating", "P2-floating", "P3-floating", "P1-attached", …}
 	list = LIST, -- the fixtures, in that order
 	X08 = X08, -- alias → fixture id
+	X08_EDGE = Edges.zigzag, -- X08's zigzag edge, for M4's trace generate case (T-PERF-02)
 	TPERF = TPERF,
 }
 

@@ -15,7 +15,7 @@ and refer to `docs/spec/review/findings-all.md`. Section numbers (§N.M) refer t
 
 1. [Evidence S1](#evidence-s1) (data model, blueprint data, persistence data): [E-S1.1](#e-s11-canonical-form-idempotency-and-the-renormalization-threshold) · [E-S1.2](#e-s12-rotation-matrix-and-the-instance-round-trip) · [E-S1.3](#e-s13-json-storage-precision) · [E-S1.4](#e-s14-size-budget-sizes2luau--sizes2outtxt) · [E-S1.5](#e-s15-names-namesluau--namesv1outtxt-unchanged-by-the-revision) · [E-S1.6](#e-s16-migration-order-migrateluau--migratev1outtxt) · [E-S1.7](#e-s17-material-rows-phase-2-rows-blurbs-and-rationale) · [E-S1.8](#e-s18-mass-display-check-r4a-22) · [E-S1.9](#e-s19-size-guard-thresholds-and-the-per-key-write-limit)
 2. [Evidence S2](#evidence-s2) (geometry and difficulty): [E-S2.1](#e-s21-shapes-against-the-engine) · [E-S2.2](#e-s22-min_dim--002-and-sensitivity-mindim-checksluau) · [E-S2.3](#e-s23-contact) · [E-S2.4](#e-s24-why-no-global-grid) · [E-S2.5](#e-s25-regression-fixtures-base-f5-reg-checksluau) · [E-S2.6](#e-s26-mirror) · [E-S2.7](#e-s27-grip-independent-difficulty-and-the-two-deviations-adv-variantsluau) · [E-S2.8](#e-s28-performance-and-checkpoints-perf-gapsluau) · [E-S2.9](#e-s29-calibration-and-the-full-fixture-tables) · [E-S2.10](#e-s210-validation-invariance-determinism-val-inv-det) · [E-S2.11](#e-s211-the-enclosed-verdict-against-the-truth-verdict) · [E-S2.12](#e-s212-the-exact-verdict-cover) · [E-S2.13](#e-s213-difficulty-as-built-m3) · [E-S2.14](#e-s214-a-whole-design-moved-the-shift-fix-after-m3)
-3. [Evidence S3](#evidence-s3) (minigames): [E-S3.1](#e-s31-prng-test-vectors-unchanged-module-cross-checked-bit-for-bit-against-the-python-reference-rng_refpy) · [E-S3.2](#e-s32-final-bot-table-distluau-2000-outfinal_tabletxt) · [E-S3.3](#e-s33-full-parameter-columns-and-resolved-values-paramsluau-goldenluau) · [E-S3.4](#e-s34-timingstrike-golden-values-and-grade-bands-goldenluau) · [E-S3.5](#e-s35-precisiontrace-edge-mapping-golden-values-and-costs-costluau-worstluau-goldenluau) · [E-S3.6](#e-s36-determinism-and-codec-detluau) · [E-S3.7](#e-s37-holdzone-why-strokes-hztuneluau-goldenluau) · [E-S3.8](#e-s38-check-margins-and-cheats-checksluau) · [E-S3.9](#e-s39-tuning-log-multisweepluau-sweepluau-2003000-runs-per-setting)
+3. [Evidence S3](#evidence-s3) (minigames): [E-S3.1](#e-s31-prng-test-vectors-unchanged-module-cross-checked-bit-for-bit-against-the-python-reference-rng_refpy) · [E-S3.2](#e-s32-final-bot-table-distluau-2000-outfinal_tabletxt) · [E-S3.3](#e-s33-full-parameter-columns-and-resolved-values-paramsluau-goldenluau) · [E-S3.4](#e-s34-timingstrike-golden-values-and-grade-bands-goldenluau) · [E-S3.5](#e-s35-precisiontrace-edge-mapping-golden-values-and-costs-costluau-worstluau-goldenluau) · [E-S3.6](#e-s36-determinism-and-codec-detluau) · [E-S3.7](#e-s37-holdzone-why-strokes-hztuneluau-goldenluau) · [E-S3.8](#e-s38-check-margins-and-cheats-checksluau) · [E-S3.9](#e-s39-tuning-log-multisweepluau-sweepluau-2003000-runs-per-setting) · [E-S3.10](#e-s310-m4-as-built)
 4. [Evidence S4](#evidence-s4) (crafting and outcome): [E-S4.1](#e-s41-stat-constants-rationale-ranges-placeholders) · [E-S4.2](#e-s42-fixture-inputs-and-outcomes-s2-live-analysis) · [E-S4.3](#e-s43-golden-outcome-cases-t-cr-02-weights-025--040--035-pass--050) · [E-S4.4](#e-s44-γ-gamma_fit-bold-s3s-code-1000-runs-per-cell-600-for-precisiontrace-same-seeds-at-every-x) · [E-S4.5](#e-s45-properties-and-the-recompute-check) · [E-S4.6](#e-s46-sensitivity-thresholds-055--084--104) · [E-S4.7](#e-s47-grid-search-and-the-full-rarity-table-simluau-tune-table) · [E-S4.8](#e-s48-cap-rule-alternatives-r3-05-designer-default-q10--max)
 5. [Evidence S5](#evidence-s5) (server, networking, persistence lifecycle): [E-S5.1](#e-s51-guard-fuzz-and-cost-guard_fuzzluau-libguardluau) · [E-S5.2](#e-s52-session-machine-scenarios-session_scenariosluau-libsessionmachineluau) · [E-S5.3](#e-s53-timing-model-timing_simluau) · [E-S5.4](#e-s54-analysisqueue-arithmetic) · [E-S5.5](#e-s55-rate-limits-ratelimit_simluau-libratelimitluau) · [E-S5.6](#e-s56-rojo-project-verification) · [E-S5.7](#e-s57-payload-sizes-and-paging-payload_sizeluau-s1s-measured-json-sizes) · [E-S5.8](#e-s58-save-cadence-and-datastore-budgets) · [E-S5.9](#e-s59-telemetry-volume-and-field-combinations) · [E-S5.10](#e-s510-alternatives-considered)
 6. [Evidence S6](#evidence-s6) (client UX: editor, forge UI): [E-S6.1](#e-s61-stage-scale-containment-and-camera-fit-camera_fitluau) · [E-S6.2](#e-s62-ui-scale-and-layout-fit-ui_scaleluau) · [E-S6.3](#e-s63-snap-cleaning-for-any-positive-step-snap_cleanluau) · [E-S6.4](#e-s64-gizmo-jitter-and-the-custom-handles-gizmo_mathluau) · [E-S6.5](#e-s65-euler-display-round-trip-euler_quatluau) · [E-S6.6](#e-s66-history-memory-history_memluau) · [E-S6.7](#e-s67-mirror-exactness-mirrorluau-mirror_quatluau) · [E-S6.8](#e-s68-orthographic-read-back-and-telephoto-fallback-r5a-01) · [E-S6.9](#e-s69-forge-pacing-flow_timingluau) · [E-S6.10](#e-s610-trace-canvas-band-widths-and-mapping) · [E-S6.11](#e-s611-platform-facts-used-creator-docs-checked-in-review) · [E-S6.12](#e-s612-player-facing-copy-initial-uistrings) · [E-S6.13](#e-s613-preview-panel-example-illustrative-values) · [E-S6.14](#e-s614-theme-tokens-initial-values-rgb)
@@ -2702,7 +2702,9 @@ to 52–62 %.
 ### E-S3.8 Check margins and cheats (`checks.luau`)
 
 TimingStrike: 0 flags in 100,000 runs each for Elite at 240 and 60 fps, Good, and Average at 30 fps, at Normal and
-Hard (S8 sizes the 10⁻⁵ claim at 300,000 runs); exact times flagged 100 %; σ 4 ms synthesized input 0 % (score 1.000).
+Hard (S8 sizes the 10⁻⁵ claim at 300,000 runs); exact times flagged 100 %; σ 4 ms synthesized input 0 % of these
+2 × 2,000 runs (score 1.000), about 0.04 % of 12-strike runs (Normal), 0.008 % of 15-strike ones (Hard): their errors
+spread less than 1.5 ms by chance (M4's pinned 2,000 runs, the tiers alternating, flag 2, E-S3.10).
 PrecisionTrace (1,000 runs per row): minimum mean deviation Elite 0.0029–0.0032 u (240 / 60 / 30 fps, 520 or 360 px),
 Good 0.0052–0.0054; minimum mean jerk 0.0038–0.0053 (threshold 0.0002); 0 flags; on-pacer and 200 ms-sparse cheats
 flagged 100 %; 0.004 u white noise 0 % (scores 0.985–0.987). A final-check re-run of 3,000 runs per configuration
@@ -2725,6 +2727,119 @@ Average at 30 fps: at most 9, within §14.8's 10); the exact-state controller pr
   pushes Average's Hard fails above 40 %. The chosen 0.041 / ×0.95 / ×1.05 meets every Q8 band.
 - HoldZone: `strokeGain` × `fullHeat` ≈ 0.6 keeps the profile order (0.4 × 2.4 made Elite score below Good);
   `fullHeat` 2.4 keeps Steel's higher band reachable; zone 0.090 with Hard ×0.96 centres the Average fail rates.
+
+### E-S3.10 M4 as built
+
+From slices 3–5, measured as `docs/build/M4-notes.md` (B2) says:
+
+- The build reproduces E-S3.4's TimingStrike golden (N 12, W 110, core 13.2, M 200, 10971 ms, 0xE2D4F2AE, the
+  worked presses' points and score 0.8084), E-S3.7's HoldZone golden (10 keys, 0x4E2677F2, the 300 ms taps' 0, the
+  stroke curves) and E-S3.5's trace golden and all nine rows of its blade table exactly. On random configurations it
+  matches the prototype's generate, replay and checks bit for bit (TimingStrike's judged errors; HoldZone's
+  unquantized credit, n, T and F; the trace's source, path arrays, hash and unquantized accuracy, pace and coverage
+  sums).
+- The S3 prototype's groupings that differ from the SPEC's pseudo-code: HoldZone's `F − F·(10/fireDecayMs)` and
+  `F − F·10/fireDecayMs` differ in the last bit for 0.10 % of uniformly random F at 600 (1.0 % / 1.8 % at 300 / 550),
+  which the full-precision parity sees in the shipped runs; the trace's travel time is `ceil(L/pacerSpeed·1000/20)·20`.
+- The trace's cross-axis clamp (`E = 0.76/(s·range c)` under 2) never binds on the nine reference blades (the widest
+  0.6 stud: 2.11).
+
+From `docs/build/M4-notes.md` (B3):
+
+- The Recorder's stamps equal the S3 prototype bots' on random frames (12 runs at 30–240 fps: every press at
+  `Bots.stamp`, every trace sample at `ptHuman`'s due rule, the first at t = 0 instead of floor(f₁)); D7's exact clocks
+  give every integer ms up to 60,000, where t/1000 falls short for 372 of them.
+- L6's proof: after GO's record each trace record lies in a later 20 ms slot than the one before, so a Recorder makes at
+  most `floor(durationMs/20) + 1` (1,551 at 31 s) whatever its frames, hitches or focus losses; a property over frame
+  times 1–100 ms with hitches up to 250 ms at the longest MVP step confirms it, and `judge` refuses more.
+- The host loop (§12.5 with the horizon and the final push) finishes as `judge` on random frames, offsets −120…+120,
+  focus losses and inputs after the last frame, in all three families, its live score ending at the score; advancing
+  TimingStrike to the raw frame time with offset +120 turns a judged press into a whiff (E-S3.4's span 1).
+- The codec: one hand-written byte golden per family; every decode reason planted and read; 2,000 garbage values and
+  structured timelines per family never throw.
+
+From `docs/build/M4-notes.md` (B4):
+
+- Parity: `Bots.run` with the prototype's seeds reproduces the first 100 scores of each of the 48 cells of
+  `S3-score-distributions.luau` exactly (4,800 of 4,800), each timeline judged Ok within the judge's caps and the
+  prototype's own session ending on the build's unquantized sums; resolved params (3 families × 2 materials × 5 tiers ×
+  4 x) and pattern arrays (seeds 1–20 per family, tier and material) equal the prototype's to the bit. Every fixed-seed
+  L3 outcome is therefore the prototype's, precomputed before the build (D11).
+- Golden (b), `minigames.bv1`: 144 pattern rows, 12 scripted results and the results of 24 frozen bot timelines
+  (`MinigameTimelines`, 32,187 bytes: HoldZone 246–354 B, TimingStrike 36–44 B, the trace 2,301–4,261 B, its first
+  record the cursor at GO). The libm canary on the build machine: 572967914.
+- The build's per-run costs through the Recorder (44–66 % busy): HoldZone 0.88–1.35 ms (Perfect 1.94), TimingStrike
+  0.12–0.28 ms (Elite@240 0.61), the trace 7.4–8.9 ms (on the pacer 1.96), about 15–30 % over the prototype's.
+- T-MG-03 (1,000 runs per cell): HoldZone Perfect's means 0.9856 / 0.9880 / 0.9659 / 0.9699 (Iron N, Steel N, Iron H,
+  Steel H) and lowest run 0.8828 (floor 0.85), every run flagged `HzInhumanRate`; TimingStrike@60 and the trace 1.0000
+  on every run. T-MG-11 (1,000 per cell): the lowest Perfect@30 run 0.9613 (Hard Steel x = 1; floor 0.95).
+- T-MG-04 (400 runs per cell; 1,000 for Average and Good): every mean within its band (the worst at 0.67 of it), no run
+  flagged, Q8's fail rates inside their bands (the smallest margin 2.3 points, HoldZone Iron/Normal Average 5.3 %).
+  T-MG-05: every profile order holds; Average's Normal → Hard drops 0.068–0.098, the smallest other 0.0052.
+- T-MG-06 (paired): Iron − Steel 0.0153 (HoldZone, 4,000), 0.0086 (TimingStrike, 20,000), 0.0130 (PrecisionTrace,
+  4,000). T-MG-12: the SD of the per-pattern means 0.046 / 0.051 (HoldZone N / H), 0.022 / 0.021 (TimingStrike), 0.025
+  / 0.014 (the trace), against 0.08.
+- T-MG-10 false positives, 0 flagged in every case: TimingStrike 1.2 million runs (the smallest SD of the judged errors
+  2.78 ms at Elite@240 Normal, flag < 1.5; the largest exact share 0.500, flag ≥ 0.90); HoldZone 20,000 (at most 9
+  presses in 1 s, flag 30); the trace's 30 fps / 360 px halves (smallest mean deviation 0.00279 / 0.00259 u, ×3.49 /
+  ×3.24; 0.1 % quantile ×3.8; smallest mean jerk 0.00409 / 0.00404, ×20) and its other devices (×3.55 / ×3.70 / ×6.78).
+- T-MG-10 true positives (2,000 runs each): Exact flagged `TsExactHits` and `TsLowVariance` every time, clamped to the
+  pass line; the trace on the pacer `PtTooPrecise` and `PtTooSmooth` every time, every 200 ms `PtSparse` every time;
+  HoldZone's exact-state Perfect 100 of 100 (up to 50 presses in 1 s) and a 30/s autoclicker 2,000 of 2,000. Accepted
+  (Q17): σ 4 ms TimingStrike noise flagged 2 of 2,000, mean 0.9999; 0.004 u trace noise 0, mean 0.9856.
+- T-MG-15 (1,000 runs per profile and offset): Elite@240 and Good unflagged at every offset −120…+120. The offset
+  offer in the Recorder's terms (the plan's [6.3]): Average Iron/Normal TimingStrike (x = 0.10, salt 1), 2,000 runs,
+  scores 0.6482 at offset 0 (its mean `meanErrMs` +33.5), 0.7124 at +35 (−0.9) and 0.4790 at −35, so the results
+  card's offer `timingOffsetMs += round(meanErrMs)` moves the right way.
+- T-MG-09 (1,000 bot runs per family, the four profiles and Perfect on both tiers and materials): the live session
+  equals the judge on every run, and so does §12.5's host loop replaying the inputs on another device; the timelines'
+  bytes min / mean / max HoldZone 189 / 363 / 1,128 (the exact-state Perfect makes the long ones), TimingStrike 30 /
+  39 / 46, the trace 2,294 / 3,741 / 4,317 (its first record the cursor at GO).
+- The build's L3 times (indications, the machine shared): M4's plain L3 173.33 s at 6–76 % busy; its volume cases
+  573.5 s at 3–27 %.
+- I5's stale lines stay where they are, noted here: `out/golden.txt`'s HoldZone `driftSpeed` 0.2625 predates the Volume
+  term's +0.15 (E-S3.3's 0.2415 is right); `out/det.txt`'s HoldZone bytes 198 / 295 / 408 are another run's (E-S3.6:
+  198 / 293 / 396); v2 `Bots.luau`'s comment "an 800 ms look-ahead" is 300 ms in its code (§16.23); §6.13 and the v2
+  README place the distributions in a `final/` folder that does not exist (they are `v2/out/`). None moves a value M4
+  asserts.
+
+From `docs/build/M4-notes.md` ("Fix round 1"):
+
+- The edge hand-off's Douglas–Peucker attempts share one split tree: each segment's first farthest point is found once,
+  a tolerance keeps the splits whose distance exceeds it from the root down, and a segment splits only when its loop
+  found a farthest point, so a NaN coordinate cannot loop. The sources are the prototype's by construction;
+  `Minigames/PrecisionTrace` pins them (the saw and the zigzag turned 13° and 25 random chains at the slowest and
+  fastest MVP pacer in the quick run, 200 chains at all 12 under `t.slow`), and a probe of 300 random chains (zigzags,
+  walks, combs, straight runs, repeated points, closed loops, up to 300 points) at the 12 pacers gave 3,600 hand-offs,
+  1,050 through Douglas–Peucker, 0 differences. `prepare` on `Cost.X08_EDGE`, E-S3.5's zigzag, takes 1.08–1.09 ms (the
+  hand-off 0.81–0.82, its eight attempts; `generate` 0.24–0.26) at 3–19 % busy, against the round-1 build's 4.05–4.10 ms
+  (its hand-off 3.75–3.80) in the same alternating runs. On the other eight reference blades the hand-off takes ≤ 0.03
+  ms but on the saw (0.25, its six attempts; 0.56 before), and on a 256-point chain at the length bound 0.12 ms (seven E
+  shrinks, no Douglas–Peucker).
+- The trace's record cap bounds the count `judge` replays, not its cost: on the length-bound source, 1,479 records
+  spread over travel cost × 1.017–1.043 the honest timeline's (six runs of 401–1,201 rounds at 34–68 % busy; reviewer
+  V1: × 1.019–1.027 at 7–26 %).
+- TimingStrike's decisions follow the Recorder's horizon, so with a negative timing offset they come early: on E-S3.4's
+  span 1 (T 489, M 200, W 110, the drawn window 379–599 ms), at 60 fps with no press, the live `Miss` fires at 588.3 ms
+  on the raw clock at offset −120, 100.7 ms before T + M with the needle still in the drawn window, and at 655.0 /
+  705.0 / 771.7 / 821.7 ms at −60 / 0 / +60 / +120. The view's `cycle` is 1 from the countdown through cycle 1 (2 from
+  847 ms), so the host plays the first `CycleStart` at GO.
+
+From slice 10 (the lead, 20 Nov): T-PERF-02 (`tests/Minigames/Perf.spec.luau`, `t.slow`) run alone twice on the merged
+tree, medians of 15 rounds in ms Lune; the load was not sampled in the two-second runs, and was 10–19 % in the half
+minute after them.
+
+- `judge` at each family's cap, against `REPLAY_BUDGET_MS` (8): HoldZone Steel/Hard x = 1 with 1,024 records
+  0.376–0.428, TimingStrike Steel/Hard x = 1 with 512 presses 0.155–0.164, the trace at its record cap with 1,479
+  samples spread over travel 2.406–2.448, against 2.343–2.352 on the honest timeline (× 1.027–1.041); decode alone of
+  2,048 samples 0.089–0.090, which `judge` then refuses `TooMany`.
+- `prepare` (the hand-off + `generate`), against `PT_GENERATE_BUDGET_MS` (5): X08a (P2) 0.123–0.128, X08b (P1)
+  0.503–0.511, X08c (P5) 0.142–0.147, `Cost.X08_EDGE` 1.050–1.079 (the hand-off 0.802–0.814, `generate` 0.240–0.258),
+  and the length-bound chain 1.877–1.883 at Iron/Normal x = 0 (0.108–0.109 + 1.766–1.768) and 2.471–2.473 at Steel/Hard
+  x = 1 (0.089–0.090 + 2.366–2.393); HoldZone's and TimingStrike's `generate` at most 0.021. X08b's edge from
+  `Analyze.run` is a 2-point main chain, which the hand-off refuses as short, so its figure is `generate`'s fallback.
+- Times 2.6 against §10.5's 7 ms, the largest are `prepare` on the length-bound chain at Steel/Hard, 6.42–6.43, and the
+  trace's `judge` spread over travel, 6.26–6.36: none past it.
 
 ---
 
@@ -3832,13 +3947,25 @@ T-PHY-03 maps S2's definition onto these primitives.
   07 invariances · 08 mirrored Asymmetry · 09 step scoping · 10–13 as §14.6 (12 the §5 table's goldens, 13 the
   regression relations). **T-EDG** 01 `Physics/Edge` as §14.6: F5's chain, E-S2.9's edge and cutIndex columns and the
   prototype's edge, X04, P5's comb, §4.6's rules and boundaries, invariance, P1's budgets, each loop's units by caller.
-- **T-RNG** 01 vectors from `kat/` (`studies/kat_xorshift32.py`) · 02 determinism · 03 seed validation · 04 χ² over
-  16 buckets < CHI2_CRIT · 05 1,000 derived tags collision-free · 06 independence.
+- **T-RNG** 01 vectors from E-S3.1 (cross-checked against `rng_ref.py`), with the four game tags' FNV-1a values,
+  `mul32` and `hashU32` cases, seeds 0 and 2^32 − 1 and one HoldZone stream's `range`, `int`, `chance` and `sign`
+  (`kat/`'s xorshift32 was S8's stand-in, superseded by S3's xoshiro128\*\*) · 02 determinism, every method, 10,000
+  draws · 03 `Rng.new` refuses a seed that is not a u32 integer · 04 χ² over 16 buckets < CHI2_CRIT, 20 streams
+  (seeds 1, 2, 3, 0xC0FFEE × "" and the four tags) and `int(1, 16)`, n = 160,000 · 05 1,000 derived tags
+  ("T-RNG-05/<i>") and the four game tags: distinct hashes, initial states and first outputs at seeds 0, 1, 2^32 − 1 ·
+  06 independence, 2-D χ² on 4 × 4 cells: the game-tag pairs, seeds s and s + 1, and lag-1 pairs taken
+  non-overlapping (overlapping pairs exceed 37.70 with probability 0.0049, not 0.001). With fixed seeds every χ² is
+  known for an exact port (highest 30.87, 22.50 for `int`, 28.20 for 06).
 - **T-MG** 01 `prepare`/`judge` deterministic, StepSpec complete · 02 `passed` ⇔ Ok ∧ score ≥ pass line · 03
-  solvability · 04 bands, fail rates (L3) · 05 profile order, Normal → Hard drop · 06 Iron − Steel · 07 `Params` =
-  product of modifiers, S3's clamp and quantum · 08 2,000 garbage buffers · 09 live session = `judge` on 1,000 random
-  frame partitions · 10 FP and TP runs (L3) · 11, 13, 14 as §14.6 · 12 fairness · 15 `timingOffsetMs` keeps flag
-  decisions, press times floored at 0 · 16 releases always recorded (focus loss, menu open).
+  solvability (the mean and every run) · 04 bands, fail rates (L3) · 05 profile order, Normal → Hard drop · 06 Iron −
+  Steel · 07 `Params` = product of modifiers, S3's clamp and quantum · 08 2,000 garbage values and structured timelines
+  per family (200 in the quick run), one hand-written byte golden per family, one planted timeline per decode reason,
+  first failure wins, never a throw, through `decode` and `judge` · 09 live session = `judge`: 1,000 bot timelines per
+  family pushed in any order §6.4 rule 7 allows, and their inputs played again through a Recorder and §12.5's host loop
+  on another device · 10 FP runs (L3V) and TP runs (L3), §14.8 · 11, 13, 14 as §14.6 · 12 fairness · 15 `timingOffsetMs`
+  is TimingStrike's alone and shifts every press alike, so the unquantized Exact presses keep `TsLowVariance` at every
+  offset and `TsExactHits` only at \|offset\| ≤ 1; press times floored at 0 · 16 releases always recorded (focus loss,
+  menu open).
 - **T-CR** 01 plan from CraftPlans, work sets non-empty · 02 S4's worked examples · 03 Q monotone, fail factor · 04 d
   grows with D in a tier · 05 exhaustive cap test, 2³ tiers × 11³ scores × 2 materials · 06 failed ≤ passed, timeout
   = 0, stat ranges, Reach = physics reach, ignored parts change nothing, Steel T = 1.02 · 07 outcome block, recompute
@@ -3857,8 +3984,10 @@ T-PHY-03 maps S2's definition onto these primitives.
   helper, R7-15), 10th Hard strike kicks. **T-SES** 01–37 S5's scenarios · 38 the step-outcome table.
 - **Prop** runs PROP_N cases per property from PROP_BASE_SEED; `Gen.validSword` properties use FUZZ_N_VALID designs.
 - **Cheats**: Exact (Perfect timeline, unquantized) · Fast (honest timeline sent before `D − EARLY_TOL_MS`) · Flood
-  (records past the family cap) · Malformed (one per decode reason) · Replay (same step twice; an old timeline on a new
-  seed) · Forged (extra keys, other session id). **Gen**: `validSword`, `garbage`, `withFiller`, `segmented`, `translated`.
+  (records past the family cap, bytes past it, a Trace one record past its judge cap) · Malformed (planted values per
+  decode reason, each reading exactly it) · Replay (same step twice; an old timeline on a new seed, its duration
+  rewritten so the hash refuses it) · Forged (extra keys, other session id). **Gen**: `validSword`, `garbage`,
+  `withFiller`, `segmented`, `translated`.
 
 ### E-S8.6 Studio bridge, scenario assertions, shots, manual steps
 
@@ -3922,9 +4051,17 @@ T-PHY-03 maps S2's definition onto these primitives.
 - `studies/anticheat_bots.luau` (S3 owns the final rules): with 8 strikes and sample SD < 2 ms, Elite (σ 12 ms,
   240 fps) flags 5e-6, Good (σ 25) < 5e-6, an exact cheat 100 %, a σ 3 ms cheat 12 %. Trace SD over ≥ 60 samples
   < 0.5 px: humans 0 / 20,000, on-path cheat 100 %.
-- `BOT_RUNS` 400: SE of a mean ≈ 0.005 (score SD ≈ 0.1); of a 10 % fail rate ≈ 0.015, inside the 3–15 % band. L3
-  total: 3 families × 2 tiers × 2 materials × 6 profiles × 400 ≈ 29,000 runs, plus 4 × 300,000 TimingStrike FP runs
-  (≈ 150 s) and one 20,000-run Trace FP case (≈ 130 s at ≈ 6.5 ms per run): ≈ 7 min, inside 10 min.
+- `BOT_RUNS` 400: SE of a mean ≈ 0.005 (score SD ≈ 0.1); of a 10 % fail rate ≈ 0.015, inside the 3–15 % band. As
+  built (M4, E-S3.10), a bot run through the Recorder, `prepare`, the replay and the checks costs 0.12–0.62 ms in
+  TimingStrike (0.61 at 240 fps), 0.9–1.4 ms in HoldZone and 7.4–8.9 ms in the trace (44–66 % busy). M4's plain L3
+  cases (T-MG-04 with its Q8 extension, T-MG-05, T-MG-09, 11 and 15 slow, the true positives, Reference) take about 3
+  minutes; the volume cases (§14.1's L3V) 9.6 minutes more at 3–27 % busy: T-MG-10's FP runs (TimingStrike's 1.2
+  million 4.9 minutes, the trace's 23,000 2.4, HoldZone's 20,000 0.3), T-MG-03, T-MG-06's paired runs and T-MG-12 1.9.
+  On 20 Nov, in the main tree after the shift fix's commit, the whole plain L3 run (`lune run tests/run`) took 429.2 s,
+  959 pass and 21 skip, at 9–22 % busy (median 12 %), and the whole L3V run (`scripts/verify -- --volume`, every case)
+  1,062.7 s, 980 pass, at 9–23 % (median 12 %). Run alone the same night (slice 9), M4's plain L3 cases took 88.8 s
+  (Statistics) and 11.4 s (FalsePositives) at 11–28 %, and its volume cases 563 s (Statistics' nine 112.6 s,
+  FalsePositives' twelve 450.6 s) at 9–30 %.
 
 ### E-S8.8 Slice and checkpoint arithmetic
 

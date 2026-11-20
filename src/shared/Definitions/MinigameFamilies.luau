@@ -229,6 +229,8 @@ local ROWS: { MinigameFamilyDef } = {
 			{ name = "PT_SMOOTH_MIN_TRIPLETS", value = 150 }, -- moving triplets
 			{ name = "PT_SMOOTH_MEAN_JERK", value = 0.0002 }, -- u; human minimum × 19
 			{ name = "PT_SMOOTH_MIN_MOVE", value = 0.002 }, -- u, a moving triplet's span
+			{ name = "PT_SMOOTH_DT_MIN_MS", value = 10 }, -- ms; a moving triplet's two intervals lie in [min, max]
+			{ name = "PT_SMOOTH_DT_MAX_MS", value = 40 }, -- ms
 			{ name = "PT_TELEPORT_DIST", value = 0.25 }, -- u
 			{ name = "PT_TELEPORT_MAX_DT", value = 40 }, -- ms
 			{ name = "PT_TELEPORT_COUNT", value = 3 }, -- grinding steps

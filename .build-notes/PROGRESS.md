@@ -3,37 +3,35 @@
 In plain words, newest first. I add an entry whenever work starts, results come back, I decide something, or I need
 you. Times are local (Paris). At the bottom, the agents doing the work add their own lines as they go, oldest first.
 
-## Where things stand (19 Nov, 21:34)
+## Where things stand (20 Nov, 00:09)
 
-**M3 is done and committed** (`f7ac37d`). Nothing is needed from you right now. Both Rojo servers are running, and you
-reconnected Studio's plugin at 18:15.
+**The "slide a whole sword" fix is done and committed** (`19ed843`, 19 Nov, late). A sword moved whole up, down,
+forward or back now plays the same. Its last text rounds only made sentences say exactly what was measured. The full
+check passed on a quiet machine (776 of 776), and the files the Studio check read are unchanged.
 
-**The two pieces of work:**
-- **The "slide a whole sword" fix: one last narrow check (round 9).** The code is final and the Studio check passed.
-  Round 8's two checkers confirmed my merge, and one of them read every one of the 531 sentences that mention copies.
-  Apart from three, every one holds. Those three said a little more than was measured: a numeric bound that one
-  test sword exceeds by a hair, an almost-copy said to change "nothing" when it adds a sliver of its own weight (under
-  a ten-thousandth of a gram), and a sentence about a piece wrapping another that is only true when the wrapped piece is
-  visible. The reviewers tried the corrected words; I applied them, and one checker now confirms just those seven
-  small edits. Then my quiet check and the commit.
-- **M4, the minigames: finished and checked, waiting for its turn.** The third and last check passed this evening:
-  the wrong sentence about the slowest test blade is fixed, the four details too, and nothing else moved. M4 now waits
-  for the sliding fix's commit; then it joins the main folder, gets its last long checks (the long statistics, the speed
-  test and the full check on a quiet computer) and its own commit.
+**M4, the minigames: merged into the main folder, last steps running.** Its quick tests pass (865), and the long
+statistics all came out exactly as precomputed on the prototype (about 13 minutes of runs). Still to do before its
+commit: the speed test T-PERF-02 (being written and checked now), folding M4's text into the spec (an agent is on it,
+with a checker), then the full check with every long test, on a quiet machine.
 
-**M4 brings three small designer calls**, with defaults applied until you decide; I'll write them up with the others:
-- **How much harder Steel feels (O4).** The approved spec says an average player should score 1 to 8 points lower in
-  Steel. In hammering it's only about 0.9 points lower. Default: accept half a point as enough and leave the game as
-  tuned. The alternative is to retune hammering's Steel to be a little stricter.
-- **The hammering combo (O13).** Each strike that scores adds one, and a missed or zero-point strike resets it.
-- **The live score while playing (O14).** It shows your average so far, not a bar filling up from zero.
+**Your design decisions in plain words are ready**: eleven questions, each with what the game does now and my
+recommendation. I'll send the document once M4 is committed, so its references to the spec are valid. The only change
+I recommend is O12 (measure a sword's symmetry from its grip, so sliding it sideways changes nothing).
 
-**One question for you stands out, when you're back.** Sliding a whole sword *sideways* still changes its difficulty,
-because the spec measures symmetry and the edge from a fixed centre line. One default arrow-key step (0.05 stud) is
-enough to turn the Starter Sword's Hammering and Sharpening from Normal to Hard. The finished sword looks the same.
-- What the game does now: as the approved spec says (the centre line stays fixed).
-- My recommendation: measure from the sword's own grip instead. On the sample swords that moved 93 designs a little
-  and changed no tier. I'll write it up properly with the other decisions (O12).
+Nothing is needed from you right now. Both Rojo servers are running.
+
+## 20 Nov
+
+- **01:20** M4 is finished. Its speed test T-PERF-02 is written and checked (every input rebuilt by the checker,
+  every deliberately broken version caught), M4's text is in the spec (all 60 planned edits exact, five small
+  contradictions with neighbouring sentences fixed), the Studio check passed again (3 fresh sessions), and the full
+  check with every long test passed on a quiet machine: 980 of 980 in 18 minutes. Committing it now.
+- **00:09** M4's long statistics all passed in the main folder, every figure equal to the one precomputed on the
+  prototype (plain and volume runs, one at a time, at about 15 % load). Launched the writing of M4's speed test
+  T-PERF-02, with a checker after it (`.build-notes/m4/m4_journal.txt`).
+- **23:55 (19 Nov)** Committed the sliding fix (`19ed843`) and merged M4 into the main folder: its files copied over,
+  the small rules patch applied, the quick tests green (865 pass). An agent is folding M4's spec edits into the spec,
+  with a checker.
 
 ## 19 Nov
 
@@ -179,16 +177,15 @@ enough to turn the Starter Sword's Hammering and Sharpening from Normal to Hard.
 | M1 | Data contracts: definitions, the blueprint format, test swords | Done, commit 4c7e9e7 |
 | M2 | Geometry core: shapes, mass, hidden-part cleaning, Studio parity | Done, commit 7eb9914 (15 Nov) |
 | M3 | Difficulty: the edge, the 8 factors, the tiers | Done, commit f7ac37d (17 Nov) |
-| — | Fix: sliding a whole sword must not change its difficulty | Next, before M4 |
-| M4 | Minigames | After that |
+| — | Fix: sliding a whole sword must not change its difficulty | Done, commit 19ed843 (19 Nov) |
+| M4 | Minigames | Built and reviewed; merged, final checks running |
 | M5–M9 | Crafting and items, the world, the server, the client, playtest | After that |
 
 ## Decisions waiting for you (none urgent)
 
-These collect in SPEC.md §17.1 as O7–O11, each with a default already applied. I will list them in plain words
-when M3 is committed. The biggest is O10/O11: invisible cuts and gaps can still change a sword's difficulty in
-deliberately built cases. The options are to accept that, or to switch to a slower measure that follows the solid
-shape.
+Eleven questions collect in SPEC.md §17.1 (O4, O7 to O14), each with a default already applied in the game. A
+plain-words document explaining each one, with my recommendation, is written and checked; I'll send it after M4's
+commit. The only change I recommend is O12.
 
 ## Where to look for more detail
 
@@ -531,3 +528,11 @@ Each agent appends one line when it starts a step and when it finds or finishes 
 - **23:39** [agent] Checker shift: Finished checking the plain-words notes on O11 j, O11 l and O12. Corrected 20 points, the main one being that the spec and the earlier M3 write-up still name keeping the fixed centre line as the lead's O12 recommendation while this log names measuring from the grip; that and a few other open points go to the lead. Nothing in the game was changed.
 - **23:41** [agent] Checker m2: Done. Checked the plain-words pages for O7, O8 and O9 line by line against the spec, the evidence and the lead's notes. The defaults and the lead's recommendations are stated right; I fixed 15 places, among them a Studio time that is only an estimate, a revisit clause credited to the lead that is the spec's wording, and missing facts (455 visible round parts ignored on the sample swords, and a label that can also raise Sharpening a tier). The corrected text is in my scratch folder; nothing in the game folder was touched.
 - **23:43** [agent] Checker o10: Finished checking the O10 note. Every number in it matched the spec and the M3 notes, but it left out four limits the spec accepts (a blade of thin flush layers, a filler sealed in a cavity, a hidden gap raising Sharpening, and a tiny visible fin dropping Sharpening a tier), and it said hidden parts stay out of every measure when they still count for weight and balance. Corrected version saved in my scratch folder; nothing in the game was touched.
+- **23:56** [agent] Applier M4: Starting to copy the M4 write-up changes into the design document, its evidence file and the README; figures the lead still has to measure will be left as visible blanks.
+- **00:09** [agent] Builder T-PERF-02: Starting slice 10: a speed test for the minigames (how fast the server can replay and check a player run, and prepare the tracing game), plus proof it can fail
+- **00:17** [agent] Applier M4: Done: the M4 write-up changes are now in the design document, its evidence file and the README, checked line by line against the handoff; five blanks marked LEAD wait for the lead's timing runs, and the handoff note now says it was applied. Nothing committed and no tests run.
+- **00:19** [agent] Checker M4 handoff: Starting an independent check of how the M4 write-up was copied into the game design document, its evidence file and the README; I only read and compare, nothing in the project is changed.
+- **00:31** [agent] Builder T-PERF-02: Finished slice 10: the minigames speed test is written and passes; on this computer, at 3 to 18 percent busy, checking the longest allowed player run took about 2.4 thousandths of a second (limit 8) and preparing the tracing game at most about 2.5 (limit 5). I broke it on purpose eight ways in a scratch copy and it caught every one. Nothing committed, nothing else changed; the lead still times it on a quiet machine.
+- **00:33** [agent] Checker T-PERF-02: Starting an independent check of the new minigames speed test: whether it builds the exact runs the plan names, times only what it should, uses the right limits and can really fail. I work on copies only; nothing in the game is changed.
+- **00:44** [agent] Checker M4 handoff: Done: the copy of the M4 write-up into the design document, evidence file and README is exact (my own independent copy matches it word for word); five LEAD blanks are the only open numbers; I found five places where the handoff text itself now disagrees with nearby sentences, each with a one-line fix for the lead to decide. Nothing in the project changed.
+- **00:51** [agent] Checker T-PERF-02: Done: the minigames speed test passes my check. I rebuilt every run it times from the plan myself and they match exactly, it times only what it should with the right limits, and five extra breakages of my own were each caught by the right line. Run alone on this computer at 3 to 14 percent busy it passed in under a second. One cosmetic note only: one line is two characters wider than the house layout. Nothing in the game was changed and nothing of mine is left running.

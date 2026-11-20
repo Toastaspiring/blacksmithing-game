@@ -541,3 +541,9 @@ THE SHIFT FIX'S TEXT HAS CONVERGED. Minors for after the commit, added to the 21
    the encloser's own size (C15's crossbar in the Blade: Sharpening 0.3404 against 0.5329, both Hard).
 NEXT: the lead's quiet verify and --quick re-time, the sha1 check, a factual history line for rounds 8 and 9 (README
 Status, E-S2.14's opening, M3-notes, the plain words), then the commit.
+
+[2026-11-19 23:53] COMMITTED the shift fix as 19ed843 (44 files; explicit staging, docs.rar and the m4/m6 notes left out).
+Before it: scripts/verify green, 776 pass, 291.7 s at 10-36 % busy (median 14 %), after one run that failed on T-PERF-01's
+timing alone at 7-30 % (61.17 ms) with the decision writers running; --quick 720 pass 28.02 s; sha1sum -c 76 OK.
+The lead also added factual history lines for rounds 8 to 10 (README Status, E-S2.14's opening and timing bullet,
+M3-notes' new section, the plain words), checked for layout and list structure. NEXT: M4's merge (m4_journal).

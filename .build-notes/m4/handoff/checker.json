@@ -1,0 +1,112 @@
+{
+ "pass": false,
+ "issues": [
+  {
+   "severity": "major",
+   "file": "C:\\Users\\louis\\Documents\\RANDOM\\ROBLOX\\Blacksmithing Game\\README.md",
+   "problem": "Comes from the handoff's own text; the application is exact. Line 99 still says `lune run tests/run   # all tests, statistical ones included (L3)`. Line 100 and lines 104-106 now say a plain run skips the t.volume cases and lists them. 'All tests' is false.",
+   "fix": "Tried on my copy: '# all tests but t.volume, statistics included (L3)' (117 columns). This goes beyond the handoff, so it is the lead's call."
+  },
+  {
+   "severity": "major",
+   "file": "C:\\Users\\louis\\Documents\\RANDOM\\ROBLOX\\Blacksmithing Game\\SPEC.md",
+   "problem": "Comes from the handoff's text; the application is exact. At line 4971, §16.32's FP_RUNS_TS row (the handoff's New kept the f7ac37d unit) still says 'runs per human profile'. §14.8 (lines 4212-4213) now says FP_RUNS_TS runs 'per device of E-S3.8 (Elite@240, Elite@60, Good@60, Average@30; Poor ... is not run)', and E-S8.7 gives 1.2 million (4 × 300,000). So Elite gets 600,000 runs and Poor none, which contradicts 'per human profile'.",
+   "fix": "Tried on my copy: the unit column becomes 'runs per device (§14.8)'."
+  },
+  {
+   "severity": "major",
+   "file": "C:\\Users\\louis\\Documents\\RANDOM\\ROBLOX\\Blacksmithing Game\\SPEC.md",
+   "problem": "Comes from Builder 4's New text. At line 4167, the §14.6 bullet 'L3, each configuration seeded from its pinned name (§14.8): T-MG-03 … T-MG-06 … T-MG-12' puts these cases under L3. §14.1 says L3 'skips the t.volume cases' (line 3899) and lists T-MG-03, T-MG-06's paired runs and T-MG-12 as L3V cases (lines 3900 and 3906-3909). E-S8.5 keeps the two apart: '10 FP runs (L3V) and TP runs (L3)'.",
+   "fix": "Tried on my copy: '- L3 and its volume tier L3V (§14.1: T-MG-03, T-MG-06's paired runs and T-MG-12 are `t.volume`), each configuration seeded …', re-wrapped inside the bullet (10 lines, all at most 120 columns)."
+  },
+  {
+   "severity": "major",
+   "file": "C:\\Users\\louis\\Documents\\RANDOM\\ROBLOX\\Blacksmithing Game\\SPEC.md",
+   "problem": "A neighbour the handoff leaves stale. At lines 3547-3550, §12.10 says its hooks, `CycleStart` among them, are 'fired by the countdown, S3 FeedbackEvents, StepResult, the reveal stamp and buttons'. The new §6.9 says '`CycleStart` comes from the view' (line 1919). The new §12.5 has the host play it at GO and whenever `view.cycle` changes (line 3454). It is no longer an S3 FeedbackEvent.",
+   "fix": "Tried on my copy: '… S3 FeedbackEvents, the view's `cycle` (`CycleStart`, §6.9), StepResult, …', re-wrapped to 3 lines of at most 120 columns."
+  },
+  {
+   "severity": "major",
+   "file": "C:\\Users\\louis\\Documents\\RANDOM\\ROBLOX\\Blacksmithing Game\\SPEC.md",
+   "problem": "A neighbour the handoff leaves stale. At line 4210, the §14.8 Bands bullet says 'the Q8 fail targets, `BOT_RUNS` seeds per cell' (400 seeds). §14.6 (line 4171) and §16.32's new BOT_RUNS_FAIL row (line 4970) run Average's and Good's Q8 fail rates on BOT_RUNS_FAIL instead (1,000 seeds).",
+   "fix": "Tried on my copy: '… table, `BOT_RUNS` seeds per cell, and the Q8 fail targets (Average and Good on `BOT_RUNS_FAIL`); T-CR-09 …', re-wrapped to 3 lines."
+  },
+  {
+   "severity": "minor",
+   "file": "C:\\Users\\louis\\Documents\\RANDOM\\ROBLOX\\Blacksmithing Game\\SPEC.md",
+   "problem": "At line 3897, the L1 row now says 'quiet' three times: '≤ 35 s quiet, of which … ≤ 3 s quiet, on a quiet machine (the gate needs one)'. The applier flagged this. It follows the ruling, which keeps the shift fix's words, and nothing in it is false.",
+   "fix": "Tried on my copy: drop ', on a quiet machine (the gate needs one)', so the text reads '≤ 3 s quiet; past 32 s quiet, …'. That is shift-fix text, so it is the lead's call."
+  },
+  {
+   "severity": "minor",
+   "file": "C:\\Users\\louis\\Documents\\RANDOM\\ROBLOX\\Blacksmithing Game\\SPEC.md",
+   "problem": "Two code lines are split where the handoff's New gives one line each: recordCap at lines 1735-1736 (124 columns as one line) and Test.suite at lines 3945-3946 (136 columns). In each, the trailing comment moved to a tab-indented next line. Only whitespace changed. The ruling's 120-column rule names prose, and the SPEC's code blocks already hold 30 lines over 120 columns. The split matches §6.2's continuation-comment style, so I see no fault.",
+   "fix": "Keeping the split is fine. Optional, tried on my copy: restore the handoff's single lines. Rows and marks stay the same, and only those two code lines exceed 120 columns."
+  },
+  {
+   "severity": "minor",
+   "file": "C:\\Users\\louis\\Documents\\RANDOM\\ROBLOX\\Blacksmithing Game\\SPEC.md",
+   "problem": "A dangling reference in Builder 4's text. At line 4203, the §14.7 MinigameTimelines bullet says 'Golden (b) judges them (§14.9)'. No '(b)' exists anywhere in the SPEC: T-MG-13 at lines 4163-4164 has no parts, and §14.9 does not name the minigames golden. The label comes from the handoff's I2 note.",
+   "fix": "Tried on my copy: '`minigames.bv<N>.golden.txt` (T-MG-13, §14.9) judges them, so no golden …', re-wrapped to 3 lines."
+  },
+  {
+   "severity": "minor",
+   "file": "C:\\Users\\louis\\Documents\\RANDOM\\ROBLOX\\Blacksmithing Game\\SPEC.md",
+   "problem": "At line 1814, the §6.6 End row ('finish, encode, submit') leaves out the final push. The new §6.4 rule 7 (lines 1780-1781) and §12.5 (line 3456) now require it before `finish`. An implementer reading only §6.6 would skip it.",
+   "fix": "Tried on my copy: '| End | `task.delay` to `goClock + durationMs`: push the records made since the last frame (§6.4 rule 7, §12.5), then finish, encode, submit; records past `durationMs` dropped. |'."
+  },
+  {
+   "severity": "minor",
+   "file": "C:\\Users\\louis\\Documents\\RANDOM\\ROBLOX\\Blacksmithing Game\\SPEC.md",
+   "problem": "Two rows still name `generate` alone. §14.11's T-PERF-02 row (line 4279) measures 'Trace `generate` on X08', and §16.32's PT_GENERATE_BUDGET_MS row (line 4990) reads 'Trace pattern generation'. The new §10.5 budgets `prepare` (hand-off + generate), and slice 10 asserts `prepare` against PT_GENERATE_BUDGET_MS. The rows are narrower than §10.5, not false.",
+   "fix": "Tried on my copy: \"Trace `prepare` (the edge hand-off + `generate`, §10.5) on X08's edges\", and the budget's rationale becomes 'Trace `prepare`: the edge hand-off + pattern generation (§10.5)'. These are table rows, so there is no width issue."
+  },
+  {
+   "severity": "minor",
+   "file": "C:\\Users\\louis\\Documents\\RANDOM\\ROBLOX\\Blacksmithing Game\\SPEC.md",
+   "problem": "§14.12's Definition of Done (1) at line 4301 ('`scripts/verify` exits 0 with `t.slow`') and §18's milestone rule at line 5109 ('L0–L2, plus L3 …') do not name the volume tier. §14.1 now makes L3V due at milestone exit and before a playtest.",
+   "fix": "Tried on my copy: '(1) `scripts/verify -- --volume` exits 0.', which needs no re-wrap, and in §18 '…, and L3V when §14.1 makes it due)'."
+  },
+  {
+   "severity": "minor",
+   "file": "C:\\Users\\louis\\Documents\\RANDOM\\ROBLOX\\Blacksmithing Game\\SPEC.md",
+   "problem": "§10.6's PtTooPrecise margin (line 2931) and §16.12's PT_PRECISE row (line 4649) still give '×3.5 (3,000 runs)'. The new §14.8 and §17.2 give ×3.24 on Hard over M4's 10,000 runs. The old figure is true as qualified, but a reader of the margin column misses the new one.",
+   "fix": "Tried on my copy: add \"; ×3.24 on Hard over M4's 10,000, §17.2\" to both rows."
+  },
+  {
+   "severity": "minor",
+   "file": "C:\\Users\\louis\\Documents\\RANDOM\\ROBLOX\\Blacksmithing Game\\README.md",
+   "problem": "The tree's Minigames/ entry (lines 39-42, the handoff's text) has no Perf.spec for T-PERF-02, which slice 10 is adding (tests/Minigames/Perf.spec.luau already exists). The Physics/ entry does list 'T-PERF-01 (Perf.spec, slow)'.",
+   "fix": "Tried on my copy, for slice 11: end line 42 with ',' and add the continuation line '│                          T-PERF-02 (Perf.spec, slow)'."
+  },
+  {
+   "severity": "minor",
+   "file": "C:\\Users\\louis\\Documents\\RANDOM\\ROBLOX\\Blacksmithing Game\\docs\\spec\\SPEC-evidence.md",
+   "problem": "Some additions go beyond the handoff's literal text; each falls within the ruling and the house practice. (a) The E-S3.10 heading '### E-S3.10 M4 as built' and the Contents link (line 18, 764 columns, one list line as for E-S2.13 and E-S2.14). (b) A fourth source line, 'From `docs/build/M4-notes.md` (\"Fix round 1\"):' (line 2806); M4-notes has that section, and without the line the fix-round bullets would read as B4's. (c) The E-S3.10 T-PERF-02 placeholder (lines 2828-2830), from plan-r2 [12]; the ruling lists T-PERF-02's medians. (d) The slices 3-5 section is included although the ruling's list names three sections; the handoff gives it, and fix round 1 cites its fire-decay grouping.",
+   "fix": "No change. The lead should confirm (a) to (d); dropping (c) would leave the README's [medians] as the only T-PERF-02 placeholder."
+  },
+  {
+   "severity": "minor",
+   "file": "C:\\Users\\louis\\Documents\\RANDOM\\ROBLOX\\Blacksmithing Game\\README.md",
+   "problem": "The Status (line 170) keeps the handoff's 'M4 has no Studio scenario (SPEC §18)'. That is true of §18's M4 row. The journal's 21:05 entry leaves to the lead whether S-PAR-02 runs again, because M4 changes Test.luau, Tol.luau, Cost.luau and the fingerprint golden, which Studio syncs.",
+   "fix": "No text change. If S-PAR-02 runs again at M4's commit, add one Status sentence saying so."
+  }
+ ],
+ "verified": [
+  "The pre copies equal HEAD 19ed843's SPEC.md, README.md and SPEC-evidence.md byte for byte (checked with cmp). docs/build/M4-handoff.md differs from its pre copy only by the ruled line 'Applied to SPEC.md, SPEC-evidence.md and README.md at M4's commit; kept as the record of the patch.' and a blank line after it.",
+  "The handoff has 60 Old texts: 59 fenced plus the inline README line 57. The fenced count includes #109's in-line 'In line 4776 (S8's row), old:', which the ruling's '58 fenced + 1 inline' leaves out; it is applied at SPEC.md:5076. Every Old except the L1 row occurs exactly once in the pre texts. The L1 row occurs 0 times because the shift fix rewrote it.",
+  "I made my own application from the pre copies (scripts\\apply_mine.py, 73 steps, each Old asserted once) and compared it to the repo. SPEC.md and README.md match it word for word. SPEC-evidence.md differs only by the applier's 4 declared additions: the Contents link, the fix-round-1 source line, the E-S3.10 T-PERF-02 placeholder and the E-S8.7 placeholder.",
+  "No Old text is left in the repo except #023, #054 and #120, each of which sits inside its own New. Every New occurs once with whitespace normalized; the 4 that Builder 4 later edits (L3V row, T-MG-11, modules list, E-S8.5 T-MG row) appear in their edited form.",
+  "Builder 4's edits on earlier New text are applied: 'T-MG-06's paired runs' in L3V; T-MG-11 replaced; Edges and MinigameTimelines in the modules list plus the new bullet; E-S8.5's 03, 09 and 10.",
+  "Insertions sit where the handoff names them. The L3V paragraph follows the 'Ids:' line. O13 and O14 follow O12, the shift fix's row. The MinigameTimelines bullet follows Edges. The README Minigames/ lines follow the Physics/ block. The README Status paragraph follows the M3 + shift-fix paragraph. E-S3.10 sits after E-S3.9 and before Evidence S4, with its four sections in the handoff's order.",
+  "The L1 row matches the ruling. The gate string is verbatim, 27 became 32, and 29 became 34. It reads 'today [LEAD: …]; at the shift fix's commit 720 pass and 56 skip …', with every figure and the history parenthesis of the shift fix intact.",
+  "There are exactly 5 [LEAD: …] placeholders: SPEC 3897; evidence 2828-2830 and 4048-4049; README 168 and 169. None holds a figure, and no other open marker remains ([N], [medians], TBD). No invented figure: every word outside the placeholders matches the handoff.",
+  "Layout. SPEC table rows went from 1160 to 1172; the +12 are the expected new rows. No row has a wrong pipe count. Decision marks went from 99 to 105, which is the handoff's net +6 (O14 ×3, O13, O4 ×2). The evidence (715 rows, 1 mark) and the README are unchanged in rows and marks. There is no CR, control character, trailing space, prose tab or double blank line. Files are LF with a final newline.",
+  "The only new line over 120 columns is the evidence Contents line (731 to 764), one list line by design. Every re-wrap changes only whitespace and stays inside its New or directly continues it (§6.7, the end of §6.13, §14.6, §14.7, the E-S8.5 T-MG row, one E-S3.10 bullet, the README Status). The SPEC already held 30 code lines over 120 before M4.",
+  "Correctly not applied: Builder 1's parenthetical L3V note, the §16.12 re-bless note, and the slices 9-11 instructions. T-MG-04's Q8 extension stays in plain L3. The shift fix's text is untouched apart from the L1 row; the O12 row and its post-commit minors are unchanged.",
+  "References in the new text resolve: §6.4 rules 2 and 7, §6.9, §6.11, §12.5, §12.8 (trail and tint), §12.2 (live score), §12.7 (combo), §6.14 (bestCombo, which is not persisted, as O13's 'never stored' says), E-S2.13's Cost bullet, and M4-notes B2, B3, B4 and 'Fix round 1'. The code names exist (recordCap, TS_OFFSET_OFFER_MIN_JUDGED, capBytes, horizonMs, since, hashU32, X08_EDGE, SELFTEST_CHILD, PT_SMOOTH_DT_*), as do the tests/Minigames specs, the Edges and MinigameTimelines fixtures, minigames.bv1 and runner-selftest/{nospec, volume, bless, holder}.",
+  "Figures agree across sections: the Steel drops (§6.13, §16.32, O4, §17.2 S3); PtTooPrecise (§14.8, §17.2, E-S3.10); caps of 1,551 and 1,479 (§6.6, §6.7, §10.5, §16.12); FP totals of 1.2 M, 23,000 and 20,000; L3 times in E-S8.7 against E-S3.10; σ 4 ms at 2 of 2,000; the hand-off costs in §10.5 against E-S3.10.",
+  "The fixes were tried on copies (scripts\\tryfix.py). The fixed copy keeps 1172 rows and 105 marks, and adds no line over 120 columns except the two optional restored code lines. The repo is untouched: git diff --stat is still 364+/117-. Nothing was committed, no Lune or test was run, and Studio was not touched."
+ ],
+ "summary": "The applier made no mistakes, but I set pass to false because the lead's severity rule counts five contradictions as major. All five come from the handoff's own text, or from sentences it left untouched; none is an applier mistake.\n\nI built my own copy of the edits from the pre-application texts and compared it with the repo. SPEC.md and README.md match it word for word. SPEC-evidence.md differs only by the applier's four declared additions: the Contents link, the fix-round-1 source line, and two placeholders.\n\nAll 60 Old texts are replaced exactly: the 59 fenced blocks (including #109, which the lead's count of 58 leaves out) plus the inline README line 57. Every insertion sits where the handoff names it, and E-S3.10 has its four sections in the handoff's order. The L1 row matches the ruling: 35 s and 3 s, trigger 32 s, second trigger 34 s, and \"at the shift fix's commit\" before the shift fix's figures. The five [LEAD: …] placeholders are the only open figures, and nothing is invented. Layout checks out: table rows +12 as expected, decision marks +6 as the handoff gives them, no carriage returns, and the only new line over 120 columns is the Contents line.\n\nThe five contradictions:\n- README line 99 says a plain run covers \"all tests\", but the text below it says a plain run skips the t.volume cases.\n- §16.32 counts FP_RUNS_TS \"per human profile\"; §14.8 counts it per device.\n- §14.6's \"L3\" bullet lists T-MG-03, T-MG-06's paired runs and T-MG-12, which §14.1 puts in L3V.\n- §12.10 says S3 FeedbackEvents fire `CycleStart`; it now comes from the view's `cycle`.\n- §14.8 says the Q8 fail targets use `BOT_RUNS` seeds; §14.6 and §16.32 run Average and Good on `BOT_RUNS_FAIL`.\n\nEach has a one-clause fix tried on my copy. Each fix goes beyond the handoff, so the lead decides. The ten minors are listed with their tried fixes.\n\nFiles:\n- Notes: C:\\Users\\louis\\AppData\\Local\\Temp\\claude\\C--Users-louis-Documents-RANDOM-ROBLOX\\93ae48b4-72b9-4dc1-aa5d-451af1abf9a0\\scratchpad\\m4-apply-check\\NOTES.md\n- My application: C:\\Users\\louis\\AppData\\Local\\Temp\\claude\\C--Users-louis-Documents-RANDOM-ROBLOX\\93ae48b4-72b9-4dc1-aa5d-451af1abf9a0\\scratchpad\\m4-apply-check\\mine\n- Fixes tried, as a diff: C:\\Users\\louis\\AppData\\Local\\Temp\\claude\\C--Users-louis-Documents-RANDOM-ROBLOX\\93ae48b4-72b9-4dc1-aa5d-451af1abf9a0\\scratchpad\\m4-apply-check\\fixed\\fixes.diff\n- Scripts: C:\\Users\\louis\\AppData\\Local\\Temp\\claude\\C--Users-louis-Documents-RANDOM-ROBLOX\\93ae48b4-72b9-4dc1-aa5d-451af1abf9a0\\scratchpad\\m4-apply-check\\scripts\n\nThe repo is unchanged. I appended the start and finish lines to PROGRESS.md."
+}

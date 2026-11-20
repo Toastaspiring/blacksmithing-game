@@ -10,7 +10,9 @@ local Tol = {
 	-- property runs (§14.5)
 	PROP_BASE_SEED = 0x5EED0001,
 	PROP_N = 200,
+	PROP_N_FAST = 25, -- the quick run's count for properties that replay whole minigame sessions (M4's L1 share); PROP_N under t.slow
 	FUZZ_N_GARBAGE = 2000,
+	FUZZ_N_STRUCT_FAST = 200, -- the quick run's structured timelines per family (T-MG-08, M4's L1 share); FUZZ_N_GARBAGE under t.slow
 	FUZZ_N_VALID = 500,
 
 	-- physics and difficulty
@@ -31,15 +33,24 @@ local Tol = {
 
 	-- statistics (§14.8)
 	BOT_RUNS = 400,
+	BOT_RUNS_FAIL = 1000, -- T-MG-04's Q8 fail-rate bands (Average, Good): BOT_RUNS' seed list extended (M4's D10)
 	FP_RUNS_TS = 300000,
 	FP_RUNS = 20000,
+	TP_RUNS = 2000, -- T-MG-10's runs per cheat unless named (D10)
 	SOLVABILITY_SEEDS = 1000,
 	PERFECT_MIN_SCORE = 0.98,
 	PERFECT_30FPS_MIN_SCORE = 0.95,
 	PERFECT_HZ_MIN_SCORE = 0.95,
+	PERFECT_HZ_RUN_MIN_SCORE = 0.85, -- T-MG-03: every HoldZone Perfect run (the prototype's lowest: 0.8969, D10)
 	FAIRNESS_MAX_SD = 0.08,
+	FAIRNESS_SEEDS = 100, -- T-MG-12: pattern seeds per family × tier (D10)
+	FAIRNESS_BOT_RUNS = 20, -- T-MG-12: Average runs per pattern seed, their bot seeds shared across patterns (D10)
 	TIER_MIN_MEAN_DROP = 0.05,
-	STEEL_MEAN_DROP = table.freeze({ 0.01, 0.08 }), -- {min, max}
+	-- {min, max}: Average, Normal, Iron − Steel. The floor 0.005 is O4's default (M4's L3), where §16.32 had 0.01:
+	-- hammering's drop is 0.0089 ± 0.0010 **[Decision to confirm]** (§17.1 O4)
+	STEEL_MEAN_DROP = table.freeze({ 0.005, 0.08 }),
+	-- T-MG-06's paired runs per family (D10): the drop's standard error ≈ 0.001 at these sizes
+	STEEL_DROP_RUNS = table.freeze({ HoldZone = 4000, TimingStrike = 20000, PrecisionTrace = 4000 }),
 	CHI2_CRIT = 37.70,
 
 	-- performance (§14.11)

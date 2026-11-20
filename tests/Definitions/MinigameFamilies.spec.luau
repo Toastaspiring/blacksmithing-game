@@ -28,8 +28,9 @@ local FACTOR_ORDER: { DT.FactorId } = {
 }
 -- Minigames/Types' FlagId values, §6.2 order
 local FLAG_IDS = { "HzInhumanRate", "TsLowVariance", "TsExactHits", "PtTooPrecise", "PtTooSmooth", "PtTeleport", "PtSparse" }
-local PT_TRAVEL_MAX_MS = 30000 -- Minigames/PrecisionTrace (§16.22): the travel clamp
-local TS_PERFECT_CORE_MIN_MS = 10 -- Minigames/TimingStrike (§16.21): the full-points core floor
+-- the trace's travel clamp (§16.22) and the full-points core floor (§16.21), from their one source
+local PT_TRAVEL_MAX_MS: number = require("../../src/shared/Minigames/PrecisionTrace").PT_TRAVEL_MAX_MS
+local TS_PERFECT_CORE_MIN_MS: number = require("../../src/shared/Minigames/TimingStrike").TS_PERFECT_CORE_MIN_MS
 
 local function family(id: string): FamilyDef
 	local def = MF.get(id)
@@ -457,8 +458,9 @@ return Test.suite("Definitions/MinigameFamilies", function(t)
 			},
 			PrecisionTrace = {
 				{ "PT_PRECISE_MIN_SAMPLES", 40 }, { "PT_PRECISE_MEAN_DEV", 0.0008 }, { "PT_SMOOTH_MIN_TRIPLETS", 150 },
-				{ "PT_SMOOTH_MEAN_JERK", 0.0002 }, { "PT_SMOOTH_MIN_MOVE", 0.002 }, { "PT_TELEPORT_DIST", 0.25 },
-				{ "PT_TELEPORT_MAX_DT", 40 }, { "PT_TELEPORT_COUNT", 3 }, { "PT_SPARSE_FRAC", 0.5 },
+				{ "PT_SMOOTH_MEAN_JERK", 0.0002 }, { "PT_SMOOTH_MIN_MOVE", 0.002 }, { "PT_SMOOTH_DT_MIN_MS", 10 },
+				{ "PT_SMOOTH_DT_MAX_MS", 40 }, { "PT_TELEPORT_DIST", 0.25 }, { "PT_TELEPORT_MAX_DT", 40 },
+				{ "PT_TELEPORT_COUNT", 3 }, { "PT_SPARSE_FRAC", 0.5 },
 			},
 		}
 		local prefix = { HoldZone = "HZ_", TimingStrike = "TS_", PrecisionTrace = "PT_" }
@@ -477,6 +479,9 @@ return Test.suite("Definitions/MinigameFamilies", function(t)
 		A.truthy((param("TimingStrike", "strikes").min :: number) >= check("TimingStrike", "TS_MIN_JUDGED"),
 			"strikes ≥ TS_MIN_JUDGED")
 		A.truthy(check("TimingStrike", "TS_EXACT_FRAC") <= 1, "a fraction")
+		-- PtTooSmooth's "both dt 10–40 ms" (§10.6): a moving triplet's two intervals lie in [min, max] (M4's D3)
+		A.truthy(check("PrecisionTrace", "PT_SMOOTH_DT_MIN_MS") < check("PrecisionTrace", "PT_SMOOTH_DT_MAX_MS"),
+			"PtTooSmooth's dt bounds")
 		-- humans peak at 9 presses per window (E-S3.8); §14.8 asks for a 3 × margin
 		A.truthy(check("HoldZone", "HZ_RATE_MAX_PRESSES") / 3 >= 9, "HzInhumanRate margin")
 	end)

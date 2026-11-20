@@ -272,6 +272,9 @@ return Test.suite("Meta/Source", function(t)
 				"local y = math.sinh(x)", "local y = x ^ 2", "y ^= 2",
 				"local y = math.sin(x) -- allow-transcendental:", "local y = math.sin(x) -- allow-transcendental",
 				"local f = math.atan -- a reference counts too",
+				"local y = (getfenv() :: any).math.cos(x)", "local env = getfenv()\nlocal y = env.math.exp(x)",
+				"setfenv(1, {})", "local y = _G.math.sin(x)", "local y = rawget(math :: any, 'cos')(x)",
+				"rawset(math :: any, 'k', x)", "local y = _G.math.sin(x) -- allow-transcendental: no tag allows _G",
 			}
 		do
 			expectCaught(Rules.transcendental(AUTH, "--!strict\nlocal x, y = 1, 1\n" .. line .. "\n"), line, "uses ")
@@ -288,7 +291,8 @@ return Test.suite("Meta/Source", function(t)
 			'local b = "x^2 math.sin --!native @native" -- x^2 in a comment, and no --!native here',
 			"local c = math.sqrt(x) * math.abs(-x) + math.floor(x)",
 			"local native = c + 1",
-			"return { a, b, c, native }",
+			"local d = 'getfenv() _G.math.cos' -- rawget(math, 'cos') in a comment",
+			"return { a, b, c, native, d }",
 		}, "\n")
 		expectClean(Rules.transcendental(AUTH, clean), "allowed, strings, comments, exact ops")
 		for _, path in
@@ -332,6 +336,17 @@ return Test.suite("Meta/Source", function(t)
 			expectCaught(Rules.keyedAccumulation(AUTH, "--!strict\nlocal s, t, acc = 0, {}, {0}\n" .. body .. "\n"), body,
 				"accumulates into")
 		end
+		-- next outside an emptiness test: a while loop over a map's keys, or one key taken
+		for _, body in
+			{
+				"local k, v = next(t)\nwhile k ~= nil do\n\ts += v\n\tk, v = next(t, k)\nend",
+				"local k = next(t)", "if next(t) then s = 1 end", "local e = next(t, nil) == nil", "local k = next{}",
+				"local k = next 'x'",
+			}
+		do
+			expectCaught(Rules.keyedAccumulation(AUTH, "--!strict\nlocal s, t, acc = 0, {}, {0}\n" .. body .. "\n"), body,
+				"calls next")
+		end
 	end)
 
 	t.it("T-META-04 allows ordered loops, counters, per-iteration locals and non-arithmetic updates", function()
@@ -348,6 +363,7 @@ return Test.suite("Meta/Source", function(t)
 			"for k, v in sortedPairs(t) do s += v end",
 			"for k, v in pairs(t) do\n\tlocal y = if v then 1 else 2\n\tout[k] = y\nend\ns += 1.5",
 			"for k, v in pairs(t) do names = names .. k end",
+			"if n == 0 and next(t) ~= nil then n = 1 end", "local e = next(t) == nil", "local f = out.next(t)",
 		}
 		for _, body in clean do
 			expectClean(Rules.keyedAccumulation(AUTH, "--!strict\nlocal s, n, m, t, out, str, names = 0, 0, 0, {}, {}, '', ''\n"

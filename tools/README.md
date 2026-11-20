@@ -8,6 +8,10 @@ Build and test tooling (SPEC §1.2, §14.2). Nothing here is synced into the pla
 | `runner-selftest/pass/` | specs that all pass: the runner exits 0 both plainly and with `--seed 591835543` (the first case seed drawn from `PROP_BASE_SEED`, which its two properties replay; an unshared `Prop` instance would replay nothing and exit 2, so this checks the shared instance); with `--seed 1` it exits 2, nothing replayed | T-META-05 (`tests/Meta/Runner.spec.luau`) |
 | `runner-selftest/fail/` | one FAIL (assertion) and one ERROR (crash): the runner exits 1 | T-META-05 |
 | `runner-selftest/broken/` | `syntax/` does not parse, `nosuite/` returns no suite, `duplicate/` repeats a suite name: the runner exits 2 | T-META-05 |
+| `runner-selftest/volume/` | a fast, a slow and a `t.volume` case (SPEC §14.1 L3V): a plain run skips and lists the volume case, `--volume` runs all three (the volume case fails without the flag), `--quick` runs the fast one; `--quick --volume` exits 2 | T-META-05 |
+| `runner-selftest/bless/` | one case that compares a golden of its own in the folder the self-test passes (`BLACKSMITH_BLESS_PROBE_DIR`): a plain run without it exits 1, `--bless` writes it, plain runs then compare | T-META-05 |
+| `runner-selftest/nospec/` | specs only under `lib/` and `studio/`, which discovery skips: the runner exits 2, no specs (a spec it read would fail) | T-META-05 |
+| `runner-selftest/holder/` | a stand-in spec at `Meta/Runner.spec.luau`, where `tests/` holds the runner self-test: a runner the self-test spawns (`BLACKSMITH_SELFTEST_CHILD` set) refuses a root that holds it and exits 2, so the self-test never starts its own suite; run by hand, it passes | T-META-05 |
 | `telemetry_csv.luau` | playtest `[TLM]` lines to CSV (SPEC §14.13, §16.34) | built in M9 |
 
 ## Roblox definitions file
